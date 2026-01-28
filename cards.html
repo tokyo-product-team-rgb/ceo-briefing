@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>CEO Daily Briefing — Jan 28, 2026 — Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e8e5e1;
+      --accent-geo: #1e3a5f;
+      --accent-tech: #6c3ea0;
+      --accent-japan: #c23b22;
+      --accent-market: #0d6e4f;
+      --accent-bottom: #1a1a1a;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 12px;
+      --green: #16a34a;
+      --red: #dc2626;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+      height: 100dvh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    /* ─── PROGRESS BAR ─── */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--border);
+      z-index: 100;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--text);
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* ─── TOP BAR ─── */
+    .top-bar {
+      position: fixed;
+      top: 3px;
+      left: 0;
+      right: 0;
+      height: 44px;
+      background: rgba(250, 250, 249, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      z-index: 90;
+      border-bottom: 1px solid rgba(232, 229, 225, 0.6);
+    }
+
+    .top-bar-title {
+      font-family: var(--serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .top-bar-title.visible { opacity: 1; }
+
+    .top-bar-counter {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .top-bar-link {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .top-bar-link:hover { color: var(--text); }
+
+    /* ─── DECK ─── */
+    .deck {
+      position: fixed;
+      top: 47px;
+      left: 0;
+      right: 0;
+      bottom: 60px;
+      overflow: hidden;
+    }
+
+    .deck-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+    }
+
+    .deck-track.swiping {
+      transition: none;
+    }
+
+    /* ─── CARD SLIDE ─── */
+    .slide {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .slide-inner {
+      width: 100%;
+      max-width: 520px;
+    }
+
+    /* ─── STORY CARD ─── */
+    .story-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      animation: cardIn 0.4s ease both;
+    }
+
+    @keyframes cardIn {
+      from { opacity: 0; transform: scale(0.97) translateY(8px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .card-tag.geo { background: #e8eef5; color: var(--accent-geo); }
+    .card-tag.tech { background: #ede6f6; color: var(--accent-tech); }
+    .card-tag.japan { background: #fce8e5; color: var(--accent-japan); }
+    .card-tag.market { background: #e6f5ef; color: var(--accent-market); }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .card-body strong { color: var(--text); }
+
+    .stat {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .featured-stripe {
+      border-left: 4px solid;
+      padding-left: 20px;
+    }
+
+    .featured-stripe.geo { border-left-color: var(--accent-geo); }
+    .featured-stripe.tech { border-left-color: var(--accent-tech); }
+    .featured-stripe.japan { border-left-color: var(--accent-japan); }
+    .featured-stripe.market { border-left-color: var(--accent-market); }
+
+    /* ─── SECTION DIVIDER CARD ─── */
+    .divider-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 300px;
+      padding: 48px 32px;
+    }
+
+    .divider-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      animation: iconPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes iconPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .divider-title {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .divider-title.geo { color: var(--accent-geo); }
+    .divider-title.tech { color: var(--accent-tech); }
+    .divider-title.japan { color: var(--accent-japan); }
+    .divider-title.market { color: var(--accent-market); }
+    .divider-title.bottom { color: var(--text); }
+
+    .divider-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .divider-count {
+      margin-top: 16px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      opacity: 0.7;
+    }
+
+    /* ─── TITLE CARD ─── */
+    .title-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 380px;
+      padding: 48px 24px;
+    }
+
+    .title-overline {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .title-main {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .title-date {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+
+    .title-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .title-divider {
+      width: 48px;
+      height: 3px;
+      background: var(--text);
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    .title-swipe-hint {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      animation: hintPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes hintPulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    /* ─── BOTTOM LINE CARD ─── */
+    .bottom-line-card {
+      background: var(--text);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .bottom-line-card .card-headline {
+      color: #fff;
+    }
+
+    .bottom-line-card .bl-text {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .bottom-line-card .bl-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    /* ─── MARKETS DATA CARDS ─── */
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .index-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 6px 4px;
+      border-bottom: 2px solid var(--border);
+    }
+    .index-table td {
+      padding: 8px 4px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .index-table tr:last-child td { border-bottom: none; }
+    .idx-name { font-weight: 600; color: var(--text); }
+    .idx-level { font-weight: 700; font-variant-numeric: tabular-nums; }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 380px) {
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .indicator-item {
+      text-align: center;
+      padding: 10px 6px;
+      background: var(--bg);
+      border-radius: 8px;
+    }
+
+    .indicator-value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .indicator-name {
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .indicator-sub {
+      font-size: 0.6rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* ─── YIELD CURVE ─── */
+    .yield-curve-visual {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      gap: 4px;
+      height: 80px;
+      padding: 8px 0;
+      margin-top: 8px;
+    }
+    .yc-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+    }
+    .yc-bar {
+      width: 100%;
+      max-width: 50px;
+      border-radius: 3px 3px 0 0;
+      background: linear-gradient(180deg, var(--accent-market), #1aab7a);
+      transition: height 0.5s ease;
+    }
+    .yc-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .yc-val {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .yield-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .yield-row:last-child { border-bottom: none; }
+    .yield-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .yield-value {
+      font-size: 0.9rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .status-badge.normal { background: #dcfce7; color: #166534; }
+
+    /* ─── HEALTH GAUGE ─── */
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 0 8px;
+    }
+    .health-gauge {
+      position: relative;
+      width: 180px;
+      height: 100px;
+      overflow: hidden;
+    }
+    .gauge-bg {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #dc2626 0deg,
+        #f59e0b 72deg,
+        #facc15 108deg,
+        #22c55e 144deg,
+        #16a34a 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 54px, black 55px);
+      -webkit-mask: radial-gradient(circle at center, transparent 54px, black 55px);
+    }
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 68px;
+      background: var(--text);
+      border-radius: 2px;
+      transform-origin: bottom center;
+      transform: rotate(-90deg);
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: var(--text);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .gauge-score {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 4px;
+    }
+    .gauge-score-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 180px;
+      margin-top: 2px;
+    }
+    .gauge-scale span {
+      font-size: 0.55rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* ─── EVENT TIMELINE ─── */
+    .event-timeline {
+      position: relative;
+      padding-left: 18px;
+    }
+    .event-timeline::before {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent-market), #c8e6d9);
+      border-radius: 1px;
+    }
+    .event-item {
+      position: relative;
+      padding: 4px 0 10px;
+    }
+    .event-item::before {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background: var(--accent-market);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .event-item.today::before {
+      background: var(--accent-market);
+      box-shadow: 0 0 0 3px rgba(13,110,79,0.2);
+    }
+    .event-date {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--accent-market);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .event-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 1px;
+    }
+    .event-detail {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-top: 1px;
+    }
+
+    /* ─── BOTTOM NAV ─── */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: rgba(250, 250, 249, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      z-index: 90;
+    }
+
+    .nav-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .nav-btn:active {
+      transform: scale(0.92);
+      background: var(--bg);
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.25;
+      cursor: default;
+    }
+
+    .nav-btn:disabled:active {
+      transform: none;
+      background: var(--surface);
+    }
+
+    /* ─── SECTION DOTS ─── */
+    .section-dots {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .section-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: all 0.3s;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .section-dot.active {
+      width: 20px;
+      border-radius: 3px;
+      background: var(--text);
+    }
+
+    .section-dot.geo.active { background: var(--accent-geo); }
+    .section-dot.tech.active { background: var(--accent-tech); }
+    .section-dot.japan.active { background: var(--accent-japan); }
+    .section-dot.market.active { background: var(--accent-market); }
+    .section-dot.bottom.active { background: var(--accent-bottom); }
+
+    /* Dot section separators */
+    .dot-sep {
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      opacity: 0.3;
+      margin: 0 1px;
+    }
+
+    /* ─── SCROLLBAR ─── */
+    .slide::-webkit-scrollbar { width: 3px; }
+    .slide::-webkit-scrollbar-track { background: transparent; }
+    .slide::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 2px; }
+
+    /* ─── KEY EVENTS SPLIT ─── */
+    .events-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 440px) {
+      .events-split { grid-template-columns: 1fr; }
+    }
+
+    .events-col-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-market);
+      margin-bottom: 8px;
+    }
+
+    /* ─── FED POLICY BOX ─── */
+    .policy-box {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .policy-box p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <a href="index.html" class="top-bar-link">← Full version</a>
+    <span class="top-bar-title" id="topTitle">CEO Daily Briefing</span>
+    <span class="top-bar-counter" id="topCounter">1 / 30</span>
+  </div>
+
+  <!-- CARD DECK -->
+  <div class="deck" id="deck">
+    <div class="deck-track" id="deckTrack">
+
+      <!-- ═══ CARD 0: TITLE ═══ -->
+      <div class="slide">
+        <div class="slide-inner">
+          <div class="story-card title-card">
+            <div class="title-overline">Intelligence Brief</div>
+            <div class="title-main">CEO Daily Briefing</div>
+            <div class="title-date">Wednesday, January 28, 2026</div>
+            <div class="title-sub">Geopolitics · Tech & VC · Japan · Markets</div>
+            <div class="title-divider"></div>
+            <div class="title-swipe-hint">Swipe to begin →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 1: GEOPOLITICS DIVIDER ═══ -->
+      <div class="slide" data-section="geo">
+        <div class="slide-inner">
+          <div class="story-card divider-card">
+            <div class="divider-icon">🌍</div>
+            <div class="divider-title geo">Geopolitics &amp; Macro</div>
+            <div class="divider-sub">Trade wars, alliances, and power shifts</div>
+            <div class="divider-count">5 stories</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 2: Starmer in Beijing ═══ -->
+      <div class="slide" data-section="geo">
+        <div class="slide-inner">
+          <div class="story-card featured-stripe geo">
+            <span class="card-tag geo">UK–China</span>
+            <h3 class="card-headline">Starmer in Beijing — Seeking Trade Wins as Global Order Shifts</h3>
+            <p class="card-body">UK PM Starmer begins a 3-day visit with Airbus, AstraZeneca &amp; HSBC execs in tow. Seeking trade wins as Trump reshuffles the global order. Analysts say there's a <strong>"very low bar"</strong> for outcomes — but the optics of engagement matter.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 3: India-EU ═══ -->
+      <div class="slide" data-section="geo">
+        <div class="slide-inner">
+          <div class="story-card featured-stripe geo">
+            <span class="card-tag geo">Trade</span>
+            <h3 class="card-headline">India-EU Landmark Trade Deal Signed</h3>
+            <p class="card-body">Tariffs slashed on most goods in the biggest EU trade deal in years, driven by both sides hedging against Trump tariff chaos. <span class="stat">$621B</span> in Asia trade at risk from US national security tariffs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 4: South Korea First Lady ═══ -->
+      <div class="slide" data-section="geo">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag geo">South Korea</span>
+            <h3 class="card-headline">Former First Lady Sentenced</h3>
+            <p class="card-body">Kim Keon Hee gets <span class="stat">20 months</span> for bribery. The luxury handbag scandal that helped bring down the administration reaches its verdict.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 5: Indonesia ═══ -->
+      <div class="slide" data-section="geo">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag geo">Indonesia</span>
+            <h3 class="card-headline">Indonesia Stocks Crash ~9%</h3>
+            <p class="card-body">MSCI froze new inclusions, triggering a sharp selloff. Watch Southeast Asia contagion risk as emerging markets react.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 6: South Korea Investment ═══ -->
+      <div class="slide" data-section="geo">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag geo">Tariffs</span>
+            <h3 class="card-headline">South Korea Fast-Tracking US Investment Bill</h3>
+            <p class="card-body">Seoul accelerates legislation as Trump signals more tariff hikes. A defensive play to preserve trade ties amid escalating protectionism.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 7: TECH DIVIDER ═══ -->
+      <div class="slide" data-section="tech">
+        <div class="slide-inner">
+          <div class="story-card divider-card">
+            <div class="divider-icon">🚀</div>
+            <div class="divider-title tech">Tech &amp; VC</div>
+            <div class="divider-sub">Funding rounds, deals, and infrastructure</div>
+            <div class="divider-count">6 stories</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 8: Ricursive ═══ -->
+      <div class="slide" data-section="tech">
+        <div class="slide-inner">
+          <div class="story-card featured-stripe tech">
+            <span class="card-tag tech">AI Funding</span>
+            <h3 class="card-headline">Ricursive Intelligence — $300M Series A at $4B Valuation</h3>
+            <p class="card-body">An AI lab less than <span class="stat">2 months old</span> raising at a <span class="stat">$4B</span> valuation. The AI funding frenzy isn't slowing down — it's accelerating.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 9: Brex ═══ -->
+      <div class="slide" data-section="tech">
+        <div class="slide-inner">
+          <div class="story-card featured-stripe tech">
+            <span class="card-tag tech">M&A</span>
+            <h3 class="card-headline">Capital One Acquires Brex for $5.15B</h3>
+            <p class="card-body">Less than <strong>HALF</strong> its peak valuation. A sobering signal for fintech unicorns — markdown exits are becoming the norm, not the exception.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 10: Northwood ═══ -->
+      <div class="slide" data-section="tech">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag tech">Space</span>
+            <h3 class="card-headline">Northwood Space — $100M Series B</h3>
+            <p class="card-body">Backed by a16z &amp; Washington Harbour, plus a <span class="stat">$50M</span> gov contract. Satellite-to-Earth comms infrastructure. Space + defense tech remains hot.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 11: Zocks ═══ -->
+      <div class="slide" data-section="tech">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag tech">Vertical AI</span>
+            <h3 class="card-headline">Zocks — $45M Series B</h3>
+            <p class="card-body">Lightspeed &amp; QED back an AI assistant for financial advisors. Vertical AI SaaS continues to attract serious capital.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 12: Cambio ═══ -->
+      <div class="slide" data-section="tech">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag tech">PropTech</span>
+            <h3 class="card-headline">Cambio — $18M at $100M Valuation</h3>
+            <p class="card-body">AI-powered commercial real estate software. Another vertical AI bet, this time in CRE — a sector ripe for disruption.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 13: Malaysia DC ═══ -->
+      <div class="slide" data-section="tech">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag tech">Infrastructure</span>
+            <h3 class="card-headline">Malaysia DC Capacity to Double</h3>
+            <p class="card-body">Data center capacity set to <strong>DOUBLE</strong> by end of 2026. Hyperscaler demand is flowing into Southeast Asia at scale.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 14: JAPAN DIVIDER ═══ -->
+      <div class="slide" data-section="japan">
+        <div class="slide-inner">
+          <div class="story-card divider-card">
+            <div class="divider-icon">🇯🇵</div>
+            <div class="divider-title japan">Japan</div>
+            <div class="divider-sub">Politics, security, and economic shifts</div>
+            <div class="divider-count">6 stories</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 15: Takaichi 100 Days ═══ -->
+      <div class="slide" data-section="japan">
+        <div class="slide-inner">
+          <div class="story-card featured-stripe japan">
+            <span class="card-tag japan">Politics</span>
+            <h3 class="card-headline">PM Takaichi Hits 100-Day Mark</h3>
+            <p class="card-body">A roller coaster tenure. Snap election kicked off in deep winter. TikTok &amp; YouTube Shorts now key election battlegrounds — Japan's political media landscape is shifting fast.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 16: Takaichi Taiwan ═══ -->
+      <div class="slide" data-section="japan">
+        <div class="slide-inner">
+          <div class="story-card featured-stripe japan">
+            <span class="card-tag japan">Security</span>
+            <h3 class="card-headline">Takaichi on Taiwan — Strongest Positioning Yet</h3>
+            <p class="card-body"><em>"Alliance with US would collapse if Japan fled a Taiwan crisis."</em> The strongest positioning yet on cross-strait contingency from a sitting Japanese PM.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 17: Rare Earth ═══ -->
+      <div class="slide" data-section="japan">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag japan">Supply Chain</span>
+            <h3 class="card-headline">Rare Earth De-Chinafy Push</h3>
+            <p class="card-body">Japan accelerating supply chain diversification after Beijing's 2010 ban. A long game — still far from resolved.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 18: Steel ═══ -->
+      <div class="slide" data-section="japan">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag japan">Industry</span>
+            <h3 class="card-headline">US Steel Output Exceeds Japan's</h3>
+            <p class="card-body">First time in <span class="stat">26 years</span>. A symbolic shift in industrial output between the two allies.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 19: LNG Hokkaido ═══ -->
+      <div class="slide" data-section="japan">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag japan">Energy</span>
+            <h3 class="card-headline">LNG Power Plant Eyed in Hokkaido</h3>
+            <p class="card-body">A Japanese utility exploring new LNG capacity in Hokkaido — an energy security play as Japan diversifies its power mix.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 20: USD/JPY ═══ -->
+      <div class="slide" data-section="japan">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag japan">FX</span>
+            <h3 class="card-headline">USD/JPY Watch</h3>
+            <p class="card-body">Trump says dollar "doing great" as Asian currencies jump. FX volatility remains elevated across the region.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 21: MARKETS DIVIDER ═══ -->
+      <div class="slide" data-section="market">
+        <div class="slide-inner">
+          <div class="story-card divider-card">
+            <div class="divider-icon">📈</div>
+            <div class="divider-title market">Markets &amp; Economy</div>
+            <div class="divider-sub">Equities, bonds, indicators, and events</div>
+            <div class="divider-count">6 data cards</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 22: Health Score ═══ -->
+      <div class="slide" data-section="market">
+        <div class="slide-inner">
+          <div class="story-card featured-stripe market" id="healthCard">
+            <span class="card-tag market">Health Score</span>
+            <h3 class="card-headline">Economic Health Composite — Moderately Healthy</h3>
+            <div class="health-gauge-wrap">
+              <div class="health-gauge">
+                <div class="gauge-bg"></div>
+                <div class="gauge-needle" id="gaugeNeedle">
+                  <div class="gauge-dot"></div>
+                </div>
+              </div>
+              <div class="gauge-scale">
+                <span>0</span>
+                <span>50</span>
+                <span>100</span>
+              </div>
+              <div class="gauge-score" id="gaugeScore">0</div>
+              <div class="gauge-score-label">out of 100</div>
+            </div>
+            <div class="indicator-grid">
+              <div class="indicator-item">
+                <div class="indicator-value">4.4%</div>
+                <div class="indicator-name">GDP Growth</div>
+                <div class="indicator-sub chg-pos">▲ Strong</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">4.4%</div>
+                <div class="indicator-name">Unemployment</div>
+                <div class="indicator-sub chg-neg">▲ Elevated</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">2.7%</div>
+                <div class="indicator-name">CPI Inflation</div>
+                <div class="indicator-sub" style="color: var(--text-muted);">● Above Target</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">56.4</div>
+                <div class="indicator-name">Consumer Sent.</div>
+                <div class="indicator-sub chg-neg">▼ Weak</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">51.9</div>
+                <div class="indicator-name">Mfg PMI</div>
+                <div class="indicator-sub chg-pos">▲ Expanding</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">16.2</div>
+                <div class="indicator-name">VIX</div>
+                <div class="indicator-sub chg-pos">● Calm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 23: Equities ═══ -->
+      <div class="slide" data-section="market">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag market">Equities</span>
+            <h3 class="card-headline">S&P 500 at Fresh All-Time High</h3>
+            <p class="card-body" style="margin-bottom: 10px;">S&P 500 hit a new 52-week high of <span class="stat">6,988.82</span> intraday. Nasdaq up nearly 1%, Dow pulled back.</p>
+            <table class="index-table">
+              <thead>
+                <tr>
+                  <th>Index</th>
+                  <th>Level</th>
+                  <th>Chg</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="idx-name">S&P 500</td>
+                  <td class="idx-level">6,978.60</td>
+                  <td class="chg-pos">+0.41%</td>
+                </tr>
+                <tr>
+                  <td class="idx-name">Nasdaq</td>
+                  <td class="idx-level">23,817.10</td>
+                  <td class="chg-pos">+0.91%</td>
+                </tr>
+                <tr>
+                  <td class="idx-name">Dow Jones</td>
+                  <td class="idx-level">49,003.41</td>
+                  <td class="chg-neg">−0.83%</td>
+                </tr>
+                <tr>
+                  <td class="idx-name">Nikkei 225</td>
+                  <td class="idx-level">53,358.71</td>
+                  <td class="chg-pos">+0.05%</td>
+                </tr>
+                <tr>
+                  <td class="idx-name">Hang Seng</td>
+                  <td class="idx-level">27,826.91</td>
+                  <td class="chg-pos">+2.58%</td>
+                </tr>
+                <tr>
+                  <td class="idx-name">KOSPI</td>
+                  <td class="idx-level">5,170.81</td>
+                  <td class="chg-pos">+1.69%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 24: Bonds ═══ -->
+      <div class="slide" data-section="market">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag market">Bonds</span>
+            <h3 class="card-headline">US Treasury Yields &amp; JGB</h3>
+            <div class="yield-curve-visual">
+              <div class="yc-bar-wrap">
+                <div class="yc-val">3.58%</div>
+                <div class="yc-bar" style="height: 42px;"></div>
+                <div class="yc-label">2Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">4.25%</div>
+                <div class="yc-bar" style="height: 52px;"></div>
+                <div class="yc-label">10Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">4.87%</div>
+                <div class="yc-bar" style="height: 62px;"></div>
+                <div class="yc-label">30Y</div>
+              </div>
+            </div>
+            <div style="margin-top: 10px;">
+              <div class="yield-row">
+                <span class="yield-label">2Y–10Y Spread</span>
+                <span class="yield-value chg-pos">+67 bps</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Yield Curve</span>
+                <span class="status-badge normal">Normal</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Japan 10Y JGB</span>
+                <span class="yield-value">2.24%</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">BOJ Policy Rate</span>
+                <span class="yield-value">0.75%</span>
+              </div>
+            </div>
+            <p class="card-body" style="margin-top: 8px; font-size: 0.8rem;">BOJ held at 0.75% in January (8–1 vote). Raised FY2026 GDP forecast to 1.0%. Further hikes expected if inflation stays on track.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 25: Forward-Looking ═══ -->
+      <div class="slide" data-section="market">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag market">Forward-Looking</span>
+            <h3 class="card-headline">Leading Indicators — Mixed Signals</h3>
+            <p class="card-body" style="margin-bottom: 10px;">VIX calm at 16.2, but consumer confidence diverges sharply. Michigan sentiment improving while CB Confidence plunged to 84.5, lowest since 2020.</p>
+            <div class="indicator-grid">
+              <div class="indicator-item">
+                <div class="indicator-value">16.2</div>
+                <div class="indicator-name">VIX</div>
+                <div class="indicator-sub chg-pos">Low Vol</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">84.5</div>
+                <div class="indicator-name">CB Confidence</div>
+                <div class="indicator-sub chg-neg">▼ −9.7 pts</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">56.4</div>
+                <div class="indicator-name">Michigan Sent.</div>
+                <div class="indicator-sub chg-pos">▲ +3.5 pts</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">51.9</div>
+                <div class="indicator-name">S&P Mfg PMI</div>
+                <div class="indicator-sub chg-pos">Expansion</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">47.9</div>
+                <div class="indicator-name">ISM Mfg PMI</div>
+                <div class="indicator-sub chg-neg">Contraction</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">97.9</div>
+                <div class="indicator-name">Leading Index</div>
+                <div class="indicator-sub chg-neg">▼ −0.3 pts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 26: Backward-Looking ═══ -->
+      <div class="slide" data-section="market">
+        <div class="slide-inner">
+          <div class="story-card">
+            <span class="card-tag market">Backward-Looking</span>
+            <h3 class="card-headline">Growth Strong, Jobs Slowing</h3>
+            <p class="card-body" style="margin-bottom: 10px;">GDP surged 4.4% in Q3 — strongest in two years — but jobs creation slowed to just 50K in December.</p>
+            <div class="indicator-grid">
+              <div class="indicator-item">
+                <div class="indicator-value">4.4%</div>
+                <div class="indicator-name">GDP Growth (Q3)</div>
+                <div class="indicator-sub chg-pos">Annualized</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">2.7%</div>
+                <div class="indicator-name">CPI YoY</div>
+                <div class="indicator-sub" style="color: #b45309;">Above Target</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">2.6%</div>
+                <div class="indicator-name">Core CPI</div>
+                <div class="indicator-sub chg-pos">Lowest Since '21</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">4.4%</div>
+                <div class="indicator-name">Unemployment</div>
+                <div class="indicator-sub chg-pos">▼ from 4.5%</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">50K</div>
+                <div class="indicator-name">NFP (Dec)</div>
+                <div class="indicator-sub chg-neg">▼ Very Weak</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">+3.3%</div>
+                <div class="indicator-name">Retail Sales YoY</div>
+                <div class="indicator-sub chg-pos">Healthy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 27: Key Events ═══ -->
+      <div class="slide" data-section="market">
+        <div class="slide-inner">
+          <div class="story-card featured-stripe market">
+            <span class="card-tag market">Key Events</span>
+            <h3 class="card-headline">Economic Calendar</h3>
+            <div class="events-split">
+              <div>
+                <div class="events-col-title">This Week</div>
+                <div class="event-timeline">
+                  <div class="event-item today">
+                    <div class="event-date">Jan 28–29 · TODAY</div>
+                    <div class="event-name">FOMC Meeting</div>
+                    <div class="event-detail">Hold at 3.50–3.75%. Decision Wed 2pm ET.</div>
+                  </div>
+                  <div class="event-item">
+                    <div class="event-date">Jan 29</div>
+                    <div class="event-name">Powell Presser</div>
+                    <div class="event-detail">Watch for independence comments.</div>
+                  </div>
+                  <div class="event-item">
+                    <div class="event-date">Jan 30</div>
+                    <div class="event-name">Q4 GDP Advance</div>
+                    <div class="event-detail">First estimate of Q4 growth.</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="events-col-title">Coming Up</div>
+                <div class="event-timeline">
+                  <div class="event-item">
+                    <div class="event-date">Feb 6</div>
+                    <div class="event-name">January NFP</div>
+                    <div class="event-detail">Dec was weak at 50K.</div>
+                  </div>
+                  <div class="event-item">
+                    <div class="event-date">Feb 12</div>
+                    <div class="event-name">January CPI</div>
+                    <div class="event-detail">Inflation at 2.7% or lower?</div>
+                  </div>
+                  <div class="event-item">
+                    <div class="event-date">Feb · TBD</div>
+                    <div class="event-name">Japan Snap Election</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="policy-box">
+              <p><strong>Fed:</strong> 3 cuts in 2025 (4.50% → 3.75%). Markets price <span class="stat">1 cut in 2026</span> (June likely). <strong>BOJ:</strong> Hiked to <span class="stat">0.75%</span> — highest since 1995.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 28: BOTTOM LINE DIVIDER ═══ -->
+      <div class="slide" data-section="bottom">
+        <div class="slide-inner">
+          <div class="story-card divider-card">
+            <div class="divider-icon">⚡</div>
+            <div class="divider-title bottom">The Bottom Line</div>
+            <div class="divider-sub">What it all means</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ CARD 29: BOTTOM LINE ═══ -->
+      <div class="slide" data-section="bottom">
+        <div class="slide-inner">
+          <div class="story-card bottom-line-card">
+            <div class="bl-icon">⚡</div>
+            <h3 class="card-headline">The Bottom Line</h3>
+            <p class="bl-text">The global trade order is fracturing fast — India-EU deal, UK courting China, everyone hedging against Trump. AI funding remains absurd ($4B for a 2-month-old company). Japan's election cycle + Taiwan posturing = watch closely. Markets are at all-time highs but the floor feels uneven: GDP surging, jobs cratering, consumer confidence plunging — the FOMC decision today and Powell's presser tomorrow are the week's main events.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="bottom-nav">
+    <button class="nav-btn" id="btnPrev" disabled aria-label="Previous">‹</button>
+    <div class="section-dots" id="sectionDots"></div>
+    <button class="nav-btn" id="btnNext" aria-label="Next">›</button>
+  </div>
+
+  <script>
+    // ─── CONFIG ───
+    const track = document.getElementById('deckTrack');
+    const deck = document.getElementById('deck');
+    const slides = Array.from(track.children);
+    const total = slides.length;
+    let current = 0;
+
+    const progressFill = document.getElementById('progressFill');
+    const topTitle = document.getElementById('topTitle');
+    const topCounter = document.getElementById('topCounter');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    const dotsContainer = document.getElementById('sectionDots');
+
+    // Section map for dots
+    const sections = [
+      { key: 'title', start: 0, end: 0, label: '' },
+      { key: 'geo', start: 1, end: 6, label: 'Geopolitics' },
+      { key: 'tech', start: 7, end: 13, label: 'Tech & VC' },
+      { key: 'japan', start: 14, end: 20, label: 'Japan' },
+      { key: 'market', start: 21, end: 27, label: 'Markets' },
+      { key: 'bottom', start: 28, end: 29, label: 'Bottom Line' },
+    ];
+
+    // Build dots
+    sections.forEach((sec, i) => {
+      if (i > 0 && i > 1) {
+        const sep = document.createElement('div');
+        sep.className = 'dot-sep';
+        dotsContainer.appendChild(sep);
+      }
+      const count = sec.end - sec.start + 1;
+      for (let j = 0; j < count; j++) {
+        const dot = document.createElement('div');
+        dot.className = `section-dot ${sec.key}`;
+        dot.dataset.slide = sec.start + j;
+        dot.addEventListener('click', () => goTo(sec.start + j));
+        dotsContainer.appendChild(dot);
+      }
+    });
+
+    const dots = Array.from(dotsContainer.querySelectorAll('.section-dot'));
+
+    // ─── NAVIGATION ───
+    function goTo(index, animate = true) {
+      if (index < 0 || index >= total) return;
+      current = index;
+
+      if (!animate) {
+        track.style.transition = 'none';
+      } else {
+        track.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      }
+
+      track.style.transform = `translateX(-${current * 100}%)`;
+
+      // Progress
+      const pct = total > 1 ? ((current) / (total - 1)) * 100 : 0;
+      progressFill.style.width = pct + '%';
+
+      // Counter
+      topCounter.textContent = `${current + 1} / ${total}`;
+
+      // Top title visibility (hide on card 0)
+      topTitle.classList.toggle('visible', current > 0);
+
+      // Section title in top bar
+      const sec = sections.find(s => current >= s.start && current <= s.end);
+      if (sec && sec.key !== 'title') {
+        topTitle.textContent = sec.label;
+
+        // Update progress fill color
+        const colorMap = {
+          geo: 'var(--accent-geo)',
+          tech: 'var(--accent-tech)',
+          japan: 'var(--accent-japan)',
+          market: 'var(--accent-market)',
+          bottom: 'var(--accent-bottom)',
+        };
+        progressFill.style.background = colorMap[sec.key] || 'var(--text)';
+      }
+
+      // Buttons
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current === total - 1;
+
+      // Dots
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', parseInt(d.dataset.slide) === current);
+      });
+
+      // Trigger gauge animation when health card is shown
+      if (current === 22) animateGauge();
+
+      // Reset scroll on new card
+      const slide = slides[current];
+      if (slide) slide.scrollTop = 0;
+    }
+
+    btnPrev.addEventListener('click', () => goTo(current - 1));
+    btnNext.addEventListener('click', () => goTo(current + 1));
+
+    // ─── KEYBOARD ───
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        goTo(current - 1);
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+        e.preventDefault();
+        goTo(current + 1);
+      }
+    });
+
+    // ─── TOUCH SWIPE ───
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchDeltaX = 0;
+    let isSwiping = false;
+    let isScrolling = null;
+    const SWIPE_THRESHOLD = 50;
+    const SWIPE_VELOCITY_THRESHOLD = 0.3;
+    let touchStartTime = 0;
+
+    deck.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+      touchStartTime = Date.now();
+      touchDeltaX = 0;
+      isScrolling = null;
+      isSwiping = false;
+    }, { passive: true });
+
+    deck.addEventListener('touchmove', (e) => {
+      const dx = e.touches[0].clientX - touchStartX;
+      const dy = e.touches[0].clientY - touchStartY;
+
+      // Determine direction on first significant movement
+      if (isScrolling === null) {
+        if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
+          isScrolling = Math.abs(dy) > Math.abs(dx);
+        }
+        return;
+      }
+
+      // If vertical scroll, let it happen
+      if (isScrolling) return;
+
+      // Horizontal swipe
+      e.preventDefault();
+      isSwiping = true;
+      touchDeltaX = dx;
+
+      // Resistance at edges
+      let resistance = 1;
+      if ((current === 0 && dx > 0) || (current === total - 1 && dx < 0)) {
+        resistance = 0.25;
+      }
+
+      const offset = -(current * 100) + (dx * resistance / deck.offsetWidth) * 100;
+      track.style.transition = 'none';
+      track.style.transform = `translateX(${offset}%)`;
+    }, { passive: false });
+
+    deck.addEventListener('touchend', (e) => {
+      if (!isSwiping) return;
+
+      const elapsed = Date.now() - touchStartTime;
+      const velocity = Math.abs(touchDeltaX) / elapsed;
+
+      if (Math.abs(touchDeltaX) > SWIPE_THRESHOLD || velocity > SWIPE_VELOCITY_THRESHOLD) {
+        if (touchDeltaX > 0) {
+          goTo(current - 1);
+        } else {
+          goTo(current + 1);
+        }
+      } else {
+        // Snap back
+        goTo(current);
+      }
+
+      isSwiping = false;
+    }, { passive: true });
+
+    // ─── GAUGE ANIMATION ───
+    let gaugeAnimated = false;
+    function animateGauge() {
+      if (gaugeAnimated) return;
+      gaugeAnimated = true;
+
+      const needle = document.getElementById('gaugeNeedle');
+      const scoreEl = document.getElementById('gaugeScore');
+      const score = 63;
+      const angle = -90 + (score / 100) * 180;
+
+      setTimeout(() => {
+        needle.style.transform = `rotate(${angle}deg)`;
+        let c = 0;
+        const interval = setInterval(() => {
+          c++;
+          scoreEl.textContent = c;
+          if (c >= score) clearInterval(interval);
+        }, 15);
+      }, 300);
+    }
+
+    // ─── INIT ───
+    goTo(0, false);
+
+    // Force reflow after load
+    requestAnimationFrame(() => {
+      track.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    });
+  </script>
+
+</body>
+</html>
