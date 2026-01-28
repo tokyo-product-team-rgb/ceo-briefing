@@ -20,6 +20,7 @@
       --accent-geo: #1e3a5f;
       --accent-tech: #6c3ea0;
       --accent-japan: #c23b22;
+      --accent-market: #0d6e4f;
       --accent-bottom: #1a1a1a;
       --serif: 'Playfair Display', Georgia, serif;
       --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -27,6 +28,8 @@
       --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
       --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
       --radius: 8px;
+      --green: #16a34a;
+      --red: #dc2626;
     }
 
     html { font-size: 16px; scroll-behavior: smooth; }
@@ -129,6 +132,7 @@
     .section-icon.geo { background: #e8eef5; }
     .section-icon.tech { background: #ede6f6; }
     .section-icon.japan { background: #fce8e5; }
+    .section-icon.market { background: #e6f5ef; }
     .section-icon.bottom { background: #f0f0f0; }
 
     .section-title {
@@ -141,6 +145,7 @@
     .section-title.geo { color: var(--accent-geo); }
     .section-title.tech { color: var(--accent-tech); }
     .section-title.japan { color: var(--accent-japan); }
+    .section-title.market { color: var(--accent-market); }
     .section-title.bottom { color: var(--accent-bottom); }
 
     /* ─── CARDS ─── */
@@ -193,6 +198,7 @@
     .card-tag.geo { background: #e8eef5; color: var(--accent-geo); }
     .card-tag.tech { background: #ede6f6; color: var(--accent-tech); }
     .card-tag.japan { background: #fce8e5; color: var(--accent-japan); }
+    .card-tag.market { background: #e6f5ef; color: var(--accent-market); }
 
     /* ─── FEATURED / LEAD CARD ─── */
     .card.featured {
@@ -202,6 +208,7 @@
     .card.featured.geo { border-left-color: var(--accent-geo); }
     .card.featured.tech { border-left-color: var(--accent-tech); }
     .card.featured.japan { border-left-color: var(--accent-japan); }
+    .card.featured.market { border-left-color: var(--accent-market); }
 
     /* ─── TWO-COL GRID ─── */
     .cards-grid {
@@ -292,6 +299,349 @@
 
     .card-body .stat { font-size: 0.95rem; }
 
+    /* ═══════════════════════════════════════════════
+       MARKETS & ECONOMY — CUSTOM STYLES
+       ═══════════════════════════════════════════════ */
+
+    /* ─── INDEX TABLE ─── */
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .index-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0.5rem 0.6rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .index-table td {
+      padding: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .index-table tr:last-child td { border-bottom: none; }
+    .index-table .idx-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+    .index-table .idx-level {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    /* ─── MINI BAR CHART ─── */
+    .mini-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 32px;
+    }
+    .mini-bar {
+      width: 18px;
+      border-radius: 2px 2px 0 0;
+      transition: height 0.4s ease;
+      position: relative;
+    }
+    .mini-bar.pos { background: var(--green); }
+    .mini-bar.neg { background: var(--red); }
+    .mini-bar-label {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.55rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    /* ─── YIELD TABLE ─── */
+    .yield-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .yield-row:last-child { border-bottom: none; }
+    .yield-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .yield-value {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ─── YIELD CURVE VISUAL ─── */
+    .yield-curve-visual {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      gap: 4px;
+      height: 80px;
+      padding: 0.5rem 0;
+      margin-top: 0.5rem;
+    }
+    .yc-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+    }
+    .yc-bar {
+      width: 100%;
+      max-width: 50px;
+      border-radius: 3px 3px 0 0;
+      background: linear-gradient(180deg, var(--accent-market), #1aab7a);
+      transition: height 0.5s ease;
+    }
+    .yc-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .yc-val {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* ─── HEALTH GAUGE ─── */
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+    .health-gauge {
+      position: relative;
+      width: 200px;
+      height: 110px;
+      overflow: hidden;
+    }
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #dc2626 0deg,
+        #f59e0b 72deg,
+        #facc15 108deg,
+        #22c55e 144deg,
+        #16a34a 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 60px, black 61px);
+      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
+    }
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 75px;
+      background: var(--text);
+      border-radius: 2px;
+      transform-origin: bottom center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--text);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .gauge-score {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 0.25rem;
+    }
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 0.15rem;
+    }
+    .gauge-scale span {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* ─── INDICATOR GRID ─── */
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .indicator-item {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--bg);
+      border-radius: 6px;
+    }
+    .indicator-value {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .indicator-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .indicator-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+
+    /* ─── METHODOLOGY ACCORDION ─── */
+    .methodology-toggle {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-market);
+      cursor: pointer;
+      margin-top: 0.75rem;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .methodology-toggle .arrow {
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    .methodology-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .methodology-content.open {
+      max-height: 500px;
+    }
+    .methodology-content p {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    /* ─── EVENT TIMELINE ─── */
+    .event-timeline {
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    .event-timeline::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent-market), #c8e6d9);
+      border-radius: 1px;
+    }
+    .event-item {
+      position: relative;
+      padding: 0.4rem 0 0.6rem;
+    }
+    .event-item::before {
+      content: '';
+      position: absolute;
+      left: -1.25rem;
+      top: 0.65rem;
+      width: 10px;
+      height: 10px;
+      background: var(--accent-market);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .event-item.past::before {
+      background: var(--text-muted);
+    }
+    .event-item.today::before {
+      background: var(--accent-market);
+      box-shadow: 0 0 0 3px rgba(13,110,79,0.2);
+    }
+    .event-date {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent-market);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .event-item.past .event-date { color: var(--text-muted); }
+    .event-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.1rem;
+    }
+    .event-detail {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 0.05rem;
+    }
+
+    /* ─── STATUS BADGE ─── */
+    .status-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.2em 0.7em;
+      border-radius: 10px;
+    }
+    .status-badge.normal { background: #dcfce7; color: #166534; }
+    .status-badge.caution { background: #fef9c3; color: #854d0e; }
+    .status-badge.alert { background: #fecaca; color: #991b1b; }
+
+    /* ─── THREE-COL GRID ─── */
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      .cards-grid-3 { grid-template-columns: 1fr; }
+    }
+
     /* ─── ANIMATIONS ─── */
     .fade-in {
       opacity: 0;
@@ -340,7 +690,7 @@
       <div class="overline">Intelligence Brief</div>
       <h1>CEO Daily Briefing</h1>
       <div class="edition-date">Wednesday, January 28, 2026</div>
-      <div class="edition-sub">Geopolitics · Tech & VC · Japan</div>
+      <div class="edition-sub">Geopolitics · Tech & VC · Japan · Markets & Economy</div>
       <div class="divider-bar"></div>
     </div>
   </header>
@@ -350,6 +700,7 @@
     <a href="#geopolitics" class="nav-pill">🌍 Geopolitics</a>
     <a href="#tech" class="nav-pill">🚀 Tech & VC</a>
     <a href="#japan" class="nav-pill">🇯🇵 Japan</a>
+    <a href="#markets" class="nav-pill">📈 Markets</a>
     <a href="#bottomline" class="nav-pill">⚡ Bottom Line</a>
   </nav>
 
@@ -493,6 +844,352 @@
       </div>
     </section>
 
+    <!-- ━━━ MARKETS & ECONOMY ━━━ -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <div class="section-icon market">📈</div>
+        <h2 class="section-title market">Markets &amp; Economy</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- ── ECONOMIC HEALTH SCORE ── -->
+        <article class="card featured market fade-in">
+          <span class="card-tag market">Health Score</span>
+          <h3 class="card-headline">Economic Health Composite — Moderately Healthy</h3>
+          <div class="health-gauge-wrap">
+            <div class="health-gauge">
+              <div class="gauge-bg"></div>
+              <div class="gauge-needle" id="gaugeNeedle">
+                <div class="gauge-dot"></div>
+              </div>
+            </div>
+            <div class="gauge-scale">
+              <span>0</span>
+              <span>50</span>
+              <span>100</span>
+            </div>
+            <div class="gauge-score" id="gaugeScore">63</div>
+            <div class="gauge-score-label">out of 100</div>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">4.4%</div>
+              <div class="indicator-name">GDP Growth</div>
+              <div class="indicator-sub chg-pos">▲ Strong</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">4.4%</div>
+              <div class="indicator-name">Unemployment</div>
+              <div class="indicator-sub chg-neg">▲ Elevated</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">2.7%</div>
+              <div class="indicator-name">CPI Inflation</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● Above Target</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">56.4</div>
+              <div class="indicator-name">Consumer Sent.</div>
+              <div class="indicator-sub chg-neg">▼ Weak</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">51.9</div>
+              <div class="indicator-name">Mfg PMI</div>
+              <div class="indicator-sub chg-pos">▲ Expanding</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">16.2</div>
+              <div class="indicator-name">VIX</div>
+              <div class="indicator-sub chg-pos">● Calm</div>
+            </div>
+          </div>
+          <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▸</span> How is this calculated?
+          </div>
+          <div class="methodology-content">
+            <p>Composite of 7 components: <strong>GDP Growth</strong> (20%) — Q3 2025 annualized; <strong>Employment</strong> (20%) — unemployment rate + NFP payrolls; <strong>Inflation</strong> (15%) — CPI vs 2% target; <strong>Consumer Confidence</strong> (15%) — Michigan sentiment; <strong>Manufacturing</strong> (10%) — S&P Global PMI; <strong>Market Conditions</strong> (10%) — equity levels + VIX; <strong>Leading Indicators</strong> (10%) — LEI + yield curve. Each scored 0–100 and weighted. Score of 63 = moderately healthy with notable risks from weak sentiment and slowing jobs.</p>
+          </div>
+        </article>
+
+        <!-- ── EQUITY MARKETS ── -->
+        <article class="card fade-in">
+          <span class="card-tag market">Equities</span>
+          <h3 class="card-headline">Equity Markets — S&P 500 at Fresh All-Time High</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">S&P 500 hit a new 52-week high of <span class="stat">6,988.82</span> intraday. Nasdaq up nearly 1%, Dow pulled back. Nikkei holds above 53K, while Indonesia's IDX cratered 7.6%.</p>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Level</th>
+                <th>Day Chg</th>
+                <th style="text-align:right">52wk Range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">S&P 500</td>
+                <td class="idx-level">6,978.60</td>
+                <td class="chg-pos">+0.41%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">4,835 – 6,989</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nasdaq</td>
+                <td class="idx-level">23,817.10</td>
+                <td class="chg-pos">+0.91%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">14,784 – 24,020</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Dow Jones</td>
+                <td class="idx-level">49,003.41</td>
+                <td class="chg-neg">−0.83%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">36,612 – 49,633</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Russell 2000</td>
+                <td class="idx-level">2,666.70</td>
+                <td class="chg-pos">+0.26%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nikkei 225</td>
+                <td class="idx-level">53,358.71</td>
+                <td class="chg-pos">+0.05%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">TOPIX</td>
+                <td class="idx-level">3,535.49</td>
+                <td class="chg-neg">−0.79%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">2,243 – 3,675</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Hang Seng</td>
+                <td class="idx-level">27,826.91</td>
+                <td class="chg-pos">+2.58%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">KOSPI</td>
+                <td class="idx-level">5,170.81</td>
+                <td class="chg-pos">+1.69%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <!-- ── BOND MARKETS ── -->
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag market">Bonds</span>
+            <h3 class="card-headline">US Treasury Yields</h3>
+            <div class="yield-curve-visual">
+              <div class="yc-bar-wrap">
+                <div class="yc-val">3.58%</div>
+                <div class="yc-bar" style="height: 42px;"></div>
+                <div class="yc-label">2Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">4.25%</div>
+                <div class="yc-bar" style="height: 52px;"></div>
+                <div class="yc-label">10Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">4.87%</div>
+                <div class="yc-bar" style="height: 62px;"></div>
+                <div class="yc-label">30Y</div>
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem;">
+              <div class="yield-row">
+                <span class="yield-label">2Y–10Y Spread</span>
+                <span class="yield-value chg-pos">+67 bps</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Yield Curve</span>
+                <span class="status-badge normal">Normal</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag market">Japan Bonds</span>
+            <h3 class="card-headline">JGB &amp; BOJ Policy</h3>
+            <div style="margin-top: 0.5rem;">
+              <div class="yield-row">
+                <span class="yield-label">Japan 10Y JGB</span>
+                <span class="yield-value">2.24%</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">BOJ Policy Rate</span>
+                <span class="yield-value">0.75%</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Highest Since</span>
+                <span class="yield-value" style="font-size:0.8rem;">Sep 1995</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">JGB vs UST 10Y</span>
+                <span class="yield-value chg-neg" style="font-size:0.85rem;">−201 bps</span>
+              </div>
+            </div>
+            <p class="card-body" style="margin-top:0.5rem; font-size:0.8rem;">BOJ held at 0.75% in January (8–1 vote). Raised FY2026 GDP forecast to 1.0%. Further hikes expected if inflation stays on track.</p>
+          </article>
+        </div>
+
+        <!-- ── FORWARD-LOOKING INDICATORS ── -->
+        <article class="card fade-in">
+          <span class="card-tag market">Forward-Looking</span>
+          <h3 class="card-headline">Leading Indicators — Mixed Signals</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">VIX remains calm at 16.2, but consumer confidence diverges sharply: Michigan sentiment improving (56.4) while CB Confidence plunged to 84.5, the lowest since 2020. PMI holds in expansion territory. LEI continues to edge lower.</p>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">16.2</div>
+              <div class="indicator-name">VIX (Fear Index)</div>
+              <div class="indicator-sub chg-pos">Low Vol</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">84.5</div>
+              <div class="indicator-name">CB Confidence</div>
+              <div class="indicator-sub chg-neg">▼ −9.7 pts</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">56.4</div>
+              <div class="indicator-name">Michigan Sent.</div>
+              <div class="indicator-sub chg-pos">▲ +3.5 pts</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">51.9</div>
+              <div class="indicator-name">S&P Mfg PMI</div>
+              <div class="indicator-sub chg-pos">Expansion</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">47.9</div>
+              <div class="indicator-name">ISM Mfg PMI</div>
+              <div class="indicator-sub chg-neg">Contraction</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">97.9</div>
+              <div class="indicator-name">Leading Index</div>
+              <div class="indicator-sub chg-neg">▼ −0.3 pts</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── BACKWARD-LOOKING INDICATORS ── -->
+        <article class="card fade-in">
+          <span class="card-tag market">Backward-Looking</span>
+          <h3 class="card-headline">Economic Scorecard — Growth Strong, Jobs Slowing</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">GDP surged 4.4% in Q3 — strongest in two years — but jobs creation has slowed to just 50K in December. Inflation at 2.7% remains above the Fed's 2% target. Retail sales healthy at +3.3% YoY.</p>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">4.4%</div>
+              <div class="indicator-name">GDP Growth (Q3)</div>
+              <div class="indicator-sub chg-pos">Annualized</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">2.7%</div>
+              <div class="indicator-name">CPI YoY (Dec)</div>
+              <div class="indicator-sub" style="color: #b45309;">Above Target</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">2.6%</div>
+              <div class="indicator-name">Core CPI (Dec)</div>
+              <div class="indicator-sub chg-pos">Lowest Since '21</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">4.4%</div>
+              <div class="indicator-name">Unemployment</div>
+              <div class="indicator-sub chg-pos">▼ from 4.5%</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">50K</div>
+              <div class="indicator-name">NFP (Dec)</div>
+              <div class="indicator-sub chg-neg">▼ Very Weak</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">+3.3%</div>
+              <div class="indicator-name">Retail Sales YoY</div>
+              <div class="indicator-sub chg-pos">Healthy</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">+2.0%</div>
+              <div class="indicator-name">Industrial Prod.</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">Moderate</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">4.0%</div>
+              <div class="indicator-name">Inflation Expect.</div>
+              <div class="indicator-sub chg-neg">1Y Ahead</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">62.4%</div>
+              <div class="indicator-name">Labor Part. Rate</div>
+              <div class="indicator-sub chg-neg">▼ −0.1 pts</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── KEY EVENTS & POLICY ── -->
+        <article class="card featured market fade-in">
+          <span class="card-tag market">Key Events</span>
+          <h3 class="card-headline">Major Economic Events &amp; Central Bank Calendar</h3>
+          <div class="cards-grid" style="margin-top: 0.75rem;">
+            <div>
+              <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">This Week</h4>
+              <div class="event-timeline">
+                <div class="event-item today">
+                  <div class="event-date">Jan 28–29 · TODAY</div>
+                  <div class="event-name">FOMC Meeting</div>
+                  <div class="event-detail">Expected: Hold at 3.50–3.75%. Decision Wed 2pm ET.</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Jan 29</div>
+                  <div class="event-name">Powell Press Conference</div>
+                  <div class="event-detail">First since grand jury subpoenas. Watch for independence comments.</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Jan 30</div>
+                  <div class="event-name">Q4 GDP Advance</div>
+                  <div class="event-detail">First estimate of Q4 2025 GDP growth.</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">Coming Up</h4>
+              <div class="event-timeline">
+                <div class="event-item">
+                  <div class="event-date">Feb 6</div>
+                  <div class="event-name">January Jobs Report (NFP)</div>
+                  <div class="event-detail">Key read on labor market. Dec was weak at 50K.</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Feb 12</div>
+                  <div class="event-name">January CPI Release</div>
+                  <div class="event-detail">Will inflation stay at 2.7% or break lower?</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Feb · TBD</div>
+                  <div class="event-name">Japan Snap Election</div>
+                  <div class="event-detail">PM Takaichi's LDP fighting to consolidate power.</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Mar</div>
+                  <div class="event-name">BOJ Next Meeting</div>
+                  <div class="event-detail">Markets watching for next rate hike signal.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+            <p class="card-body"><strong>Fed stance:</strong> 3 cuts in 2025 (4.50% → 3.75%). Markets price <span class="stat">1 cut in 2026</span> (June most likely), with a small chance of a second in December. Extended pause expected. &nbsp;<strong>BOJ stance:</strong> Hiked to <span class="stat">0.75%</span> — highest since 1995. Further hikes likely if inflation forecasts hold. FY2026 GDP raised to 1.0%.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
     <!-- ━━━ BOTTOM LINE ━━━ -->
     <section class="section" id="bottomline">
       <div class="bottom-line fade-in">
@@ -500,7 +1197,7 @@
           <div class="section-icon bottom">⚡</div>
           <h2 class="section-title">The Bottom Line</h2>
         </div>
-        <p>The global trade order is fracturing fast — India-EU deal, UK courting China, everyone hedging against Trump. AI funding remains absurd ($4B for a 2-month-old company). Japan's election cycle + Taiwan posturing = watch closely.</p>
+        <p>The global trade order is fracturing fast — India-EU deal, UK courting China, everyone hedging against Trump. AI funding remains absurd ($4B for a 2-month-old company). Japan's election cycle + Taiwan posturing = watch closely. Markets are at all-time highs but the floor feels uneven: GDP surging, jobs cratering, consumer confidence plunging — the FOMC decision today and Powell's presser tomorrow are the week's main events.</p>
       </div>
     </section>
 
@@ -535,6 +1232,38 @@
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
+    });
+
+    // Animate gauge needle on scroll
+    const gaugeNeedle = document.getElementById('gaugeNeedle');
+    const gaugeScore = document.getElementById('gaugeScore');
+    if (gaugeNeedle) {
+      const score = 63;
+      // Map 0-100 to -90deg (left) to +90deg (right)
+      const angle = -90 + (score / 100) * 180;
+      const gaugeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            gaugeNeedle.style.transform = `rotate(${angle}deg)`;
+            // Animate score count-up
+            let current = 0;
+            const interval = setInterval(() => {
+              current++;
+              gaugeScore.textContent = current;
+              if (current >= score) clearInterval(interval);
+            }, 15);
+            gaugeObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      gaugeObserver.observe(gaugeNeedle.closest('.card'));
+    }
+
+    // Methodology toggle arrow rotation
+    document.querySelectorAll('.methodology-toggle .arrow').forEach(arrow => {
+      const style = document.createElement('style');
+      style.textContent = '.arrow.open { transform: rotate(90deg); }';
+      document.head.appendChild(style);
     });
   </script>
 
