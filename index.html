@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Daily Briefing — Jan 28, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e8e5e1;
+      --accent-geo: #1e3a5f;
+      --accent-tech: #6c3ea0;
+      --accent-japan: #c23b22;
+      --accent-bottom: #1a1a1a;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 8px;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ─── HEADER ─── */
+    .masthead {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* ─── MAIN ─── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* ─── SECTION ─── */
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .section-icon.geo { background: #e8eef5; }
+    .section-icon.tech { background: #ede6f6; }
+    .section-icon.japan { background: #fce8e5; }
+    .section-icon.bottom { background: #f0f0f0; }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title.geo { color: var(--accent-geo); }
+    .section-title.tech { color: var(--accent-tech); }
+    .section-title.japan { color: var(--accent-japan); }
+    .section-title.bottom { color: var(--accent-bottom); }
+
+    /* ─── CARDS ─── */
+    .cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2em 0.6em;
+      border-radius: 4px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-tag.geo { background: #e8eef5; color: var(--accent-geo); }
+    .card-tag.tech { background: #ede6f6; color: var(--accent-tech); }
+    .card-tag.japan { background: #fce8e5; color: var(--accent-japan); }
+
+    /* ─── FEATURED / LEAD CARD ─── */
+    .card.featured {
+      border-left: 4px solid;
+      padding-left: 1.5rem;
+    }
+    .card.featured.geo { border-left-color: var(--accent-geo); }
+    .card.featured.tech { border-left-color: var(--accent-tech); }
+    .card.featured.japan { border-left-color: var(--accent-japan); }
+
+    /* ─── TWO-COL GRID ─── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── BOTTOM LINE ─── */
+    .bottom-line {
+      background: var(--text);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 2rem 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .bottom-line .section-header {
+      border-bottom-color: rgba(255,255,255,0.15);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bottom-line .section-icon { background: rgba(255,255,255,0.12); }
+    .bottom-line .section-title { color: #fff; }
+
+    .bottom-line p {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.9);
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ─── NAV PILLS ─── */
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--text);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ─── STAT HIGHLIGHT ─── */
+    .stat {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-body .stat { font-size: 0.95rem; }
+
+    /* ─── ANIMATIONS ─── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1) .card { animation-delay: 0.05s; }
+    .section:nth-child(1) .card:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(1) .card:nth-child(3) { animation-delay: 0.15s; }
+    .section:nth-child(1) .card:nth-child(4) { animation-delay: 0.2s; }
+    .section:nth-child(1) .card:nth-child(5) { animation-delay: 0.25s; }
+
+    .section:nth-child(2) .card { animation-delay: 0.15s; }
+    .section:nth-child(2) .card:nth-child(2) { animation-delay: 0.2s; }
+    .section:nth-child(2) .card:nth-child(3) { animation-delay: 0.25s; }
+    .section:nth-child(2) .card:nth-child(4) { animation-delay: 0.3s; }
+    .section:nth-child(2) .card:nth-child(5) { animation-delay: 0.35s; }
+    .section:nth-child(2) .card:nth-child(6) { animation-delay: 0.4s; }
+
+    .section:nth-child(3) .card { animation-delay: 0.25s; }
+    .section:nth-child(3) .card:nth-child(2) { animation-delay: 0.3s; }
+    .section:nth-child(3) .card:nth-child(3) { animation-delay: 0.35s; }
+    .section:nth-child(3) .card:nth-child(4) { animation-delay: 0.4s; }
+    .section:nth-child(3) .card:nth-child(5) { animation-delay: 0.45s; }
+    .section:nth-child(3) .card:nth-child(6) { animation-delay: 0.5s; }
+
+    /* ─── PRINT ─── */
+    @media print {
+      body { background: #fff; }
+      .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+      .bottom-line { background: #333; }
+      .nav-pills { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ━━━ MASTHEAD ━━━ -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="overline">Intelligence Brief</div>
+      <h1>CEO Daily Briefing</h1>
+      <div class="edition-date">Wednesday, January 28, 2026</div>
+      <div class="edition-sub">Geopolitics · Tech & VC · Japan</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <!-- ━━━ NAV ━━━ -->
+  <nav class="nav-pills">
+    <a href="#geopolitics" class="nav-pill">🌍 Geopolitics</a>
+    <a href="#tech" class="nav-pill">🚀 Tech & VC</a>
+    <a href="#japan" class="nav-pill">🇯🇵 Japan</a>
+    <a href="#bottomline" class="nav-pill">⚡ Bottom Line</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- ━━━ GEOPOLITICS & MACRO ━━━ -->
+    <section class="section" id="geopolitics">
+      <div class="section-header">
+        <div class="section-icon geo">🌍</div>
+        <h2 class="section-title geo">Geopolitics &amp; Macro</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">UK–China</span>
+          <h3 class="card-headline">Starmer in Beijing — Seeking Trade Wins as Global Order Shifts</h3>
+          <p class="card-body">UK PM Starmer begins a 3-day visit with Airbus, AstraZeneca &amp; HSBC execs in tow. Seeking trade wins as Trump reshuffles the global order. Analysts say there's a <strong>"very low bar"</strong> for outcomes — but the optics of engagement matter.</p>
+        </article>
+
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">Trade</span>
+          <h3 class="card-headline">India-EU Landmark Trade Deal Signed</h3>
+          <p class="card-body">Tariffs slashed on most goods in the biggest EU trade deal in years, driven by both sides hedging against Trump tariff chaos. <span class="stat">$621B</span> in Asia trade at risk from US national security tariffs.</p>
+        </article>
+
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag geo">South Korea</span>
+            <h3 class="card-headline">Former First Lady Sentenced</h3>
+            <p class="card-body">Kim Keon Hee gets <span class="stat">20 months</span> for bribery. The luxury handbag scandal that helped bring down the administration reaches its verdict.</p>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag geo">Indonesia</span>
+            <h3 class="card-headline">Stocks Crash ~9%</h3>
+            <p class="card-body">MSCI froze new inclusions, triggering a sharp selloff. Watch Southeast Asia contagion risk as emerging markets react.</p>
+          </article>
+        </div>
+
+        <article class="card fade-in">
+          <span class="card-tag geo">Tariffs</span>
+          <h3 class="card-headline">South Korea Fast-Tracking US Investment Bill</h3>
+          <p class="card-body">Seoul accelerates legislation as Trump signals more tariff hikes. A defensive play to preserve trade ties amid escalating protectionism.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ━━━ TECH & VC ━━━ -->
+    <section class="section" id="tech">
+      <div class="section-header">
+        <div class="section-icon tech">🚀</div>
+        <h2 class="section-title tech">Tech &amp; VC</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured tech fade-in">
+          <span class="card-tag tech">AI Funding</span>
+          <h3 class="card-headline">Ricursive Intelligence — $300M Series A at $4B Valuation</h3>
+          <p class="card-body">An AI lab less than <span class="stat">2 months old</span> raising at a <span class="stat">$4B</span> valuation. The AI funding frenzy isn't slowing down — it's accelerating.</p>
+        </article>
+
+        <article class="card featured tech fade-in">
+          <span class="card-tag tech">M&A</span>
+          <h3 class="card-headline">Capital One Acquires Brex for $5.15B</h3>
+          <p class="card-body">Less than <strong>HALF</strong> its peak valuation. A sobering signal for fintech unicorns — markdown exits are becoming the norm, not the exception.</p>
+        </article>
+
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag tech">Space</span>
+            <h3 class="card-headline">Northwood Space — $100M Series B</h3>
+            <p class="card-body">Backed by a16z &amp; Washington Harbour, plus a <span class="stat">$50M</span> gov contract. Satellite-to-Earth comms infrastructure. Space + defense tech remains hot.</p>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag tech">Vertical AI</span>
+            <h3 class="card-headline">Zocks — $45M Series B</h3>
+            <p class="card-body">Lightspeed &amp; QED back an AI assistant for financial advisors. Vertical AI SaaS continues to attract serious capital.</p>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag tech">PropTech</span>
+            <h3 class="card-headline">Cambio — $18M at $100M Valuation</h3>
+            <p class="card-body">AI-powered commercial real estate software. Another vertical AI bet, this time in CRE — a sector ripe for disruption.</p>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag tech">Infrastructure</span>
+            <h3 class="card-headline">Malaysia DC Capacity to Double</h3>
+            <p class="card-body">Data center capacity set to <strong>DOUBLE</strong> by end of 2026. Hyperscaler demand is flowing into Southeast Asia at scale.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ━━━ JAPAN ━━━ -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <div class="section-icon japan">🇯🇵</div>
+        <h2 class="section-title japan">Japan</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured japan fade-in">
+          <span class="card-tag japan">Politics</span>
+          <h3 class="card-headline">PM Takaichi Hits 100-Day Mark</h3>
+          <p class="card-body">A roller coaster tenure. Snap election kicked off in deep winter. TikTok &amp; YouTube Shorts now key election battlegrounds — Japan's political media landscape is shifting fast.</p>
+        </article>
+
+        <article class="card featured japan fade-in">
+          <span class="card-tag japan">Security</span>
+          <h3 class="card-headline">Takaichi on Taiwan — Strongest Positioning Yet</h3>
+          <p class="card-body"><em>"Alliance with US would collapse if Japan fled a Taiwan crisis."</em> The strongest positioning yet on cross-strait contingency from a sitting Japanese PM.</p>
+        </article>
+
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag japan">Supply Chain</span>
+            <h3 class="card-headline">Rare Earth De-Chinafy Push</h3>
+            <p class="card-body">Japan accelerating supply chain diversification after Beijing's 2010 ban. A long game — still far from resolved.</p>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag japan">Industry</span>
+            <h3 class="card-headline">US Steel Output Exceeds Japan's</h3>
+            <p class="card-body">First time in <span class="stat">26 years</span>. A symbolic shift in industrial output between the two allies.</p>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag japan">Energy</span>
+            <h3 class="card-headline">LNG Power Plant Eyed in Hokkaido</h3>
+            <p class="card-body">A Japanese utility exploring new LNG capacity in Hokkaido — an energy security play as Japan diversifies its power mix.</p>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag japan">FX</span>
+            <h3 class="card-headline">USD/JPY Watch</h3>
+            <p class="card-body">Trump says dollar "doing great" as Asian currencies jump. FX volatility remains elevated across the region.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ━━━ BOTTOM LINE ━━━ -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line fade-in">
+        <div class="section-header">
+          <div class="section-icon bottom">⚡</div>
+          <h2 class="section-title">The Bottom Line</h2>
+        </div>
+        <p>The global trade order is fracturing fast — India-EU deal, UK courting China, everyone hedging against Trump. AI funding remains absurd ($4B for a 2-month-old company). Japan's election cycle + Taiwan posturing = watch closely.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CEO Daily Briefing · Jan 28, 2026 · Curated intelligence for executive decision-makers</p>
+  </footer>
+
+  <script>
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+
+    // Smooth scroll for nav pills
+    document.querySelectorAll('.nav-pill').forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(pill.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
