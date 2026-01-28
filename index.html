@@ -642,6 +642,44 @@
       .cards-grid-3 { grid-template-columns: 1fr; }
     }
 
+    /* ─── SOURCE LINKS ─── */
+    .source-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .source-link:hover {
+      color: var(--text-secondary);
+    }
+    .source-link .src-arrow {
+      font-size: 0.6rem;
+      margin-left: 0.1rem;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .source-link:hover .src-arrow {
+      transform: translate(1px, -1px);
+    }
+    .card-sources {
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--border);
+    }
+    .bottom-line .card-sources {
+      border-top-color: rgba(255,255,255,0.12);
+    }
+    .bottom-line .source-link {
+      color: rgba(255,255,255,0.45);
+    }
+    .bottom-line .source-link:hover {
+      color: rgba(255,255,255,0.7);
+    }
+
     /* ─── ANIMATIONS ─── */
     .fade-in {
       opacity: 0;
@@ -718,12 +756,14 @@
           <span class="card-tag geo">UK–China</span>
           <h3 class="card-headline">Starmer in Beijing — Seeking Trade Wins as Global Order Shifts</h3>
           <p class="card-body">UK PM Starmer begins a 3-day visit with Airbus, AstraZeneca &amp; HSBC execs in tow. Seeking trade wins as Trump reshuffles the global order. Analysts say there's a <strong>"very low bar"</strong> for outcomes — but the optics of engagement matter.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.reuters.com/world/china/uks-starmer-heads-china-repair-ties-he-navigates-tensions-with-us-2026-01-27/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a></div>
         </article>
 
         <article class="card featured geo fade-in">
           <span class="card-tag geo">Trade</span>
           <h3 class="card-headline">India-EU Landmark Trade Deal Signed</h3>
           <p class="card-body">Tariffs slashed on most goods in the biggest EU trade deal in years, driven by both sides hedging against Trump tariff chaos. <span class="stat">$621B</span> in Asia trade at risk from US national security tariffs.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.reuters.com/world/india/india-eu-finalise-landmark-trade-deal-pm-modi-says-2026-01-27/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a></div>
         </article>
 
         <div class="cards-grid">
@@ -731,12 +771,14 @@
             <span class="card-tag geo">South Korea</span>
             <h3 class="card-headline">Former First Lady Sentenced</h3>
             <p class="card-body">Kim Keon Hee gets <span class="stat">20 months</span> for bribery. The luxury handbag scandal that helped bring down the administration reaches its verdict.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.reuters.com/world/asia-pacific/south-korean-court-finds-former-first-lady-kim-keon-hee-guilty-bribery-2026-01-28/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
             <span class="card-tag geo">Indonesia</span>
             <h3 class="card-headline">Stocks Crash ~9%</h3>
             <p class="card-body">MSCI froze new inclusions, triggering a sharp selloff. Watch Southeast Asia contagion risk as emerging markets react.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.bloomberg.com/news/articles/2026-01-28/indonesian-stocks-slump-after-msci-flags-investability-concerns" target="_blank" rel="noopener">Bloomberg <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
 
@@ -744,6 +786,7 @@
           <span class="card-tag geo">Tariffs</span>
           <h3 class="card-headline">South Korea Fast-Tracking US Investment Bill</h3>
           <p class="card-body">Seoul accelerates legislation as Trump signals more tariff hikes. A defensive play to preserve trade ties amid escalating protectionism.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.reuters.com/world/asia-pacific/south-korea-fast-tracks-us-investment-bill-trump-tariff-threat-2026-01-27/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a></div>
         </article>
       </div>
     </section>
@@ -760,12 +803,14 @@
           <span class="card-tag tech">AI Funding</span>
           <h3 class="card-headline">Ricursive Intelligence — $300M Series A at $4B Valuation</h3>
           <p class="card-body">An AI lab less than <span class="stat">2 months old</span> raising at a <span class="stat">$4B</span> valuation. The AI funding frenzy isn't slowing down — it's accelerating.</p>
+          <div class="card-sources"><a class="source-link" href="https://techcrunch.com/2026/01/26/ai-chip-startup-ricursive-hits-4b-valuation-two-months-after-launch/" target="_blank" rel="noopener">TechCrunch <span class="src-arrow">↗</span></a></div>
         </article>
 
         <article class="card featured tech fade-in">
           <span class="card-tag tech">M&A</span>
           <h3 class="card-headline">Capital One Acquires Brex for $5.15B</h3>
           <p class="card-body">Less than <strong>HALF</strong> its peak valuation. A sobering signal for fintech unicorns — markdown exits are becoming the norm, not the exception.</p>
+          <div class="card-sources"><a class="source-link" href="https://techcrunch.com/2026/01/22/capital-one-acquires-brex-for-steep-discount-to-its-peak-valuation-but-early-believers-are-laughing-all-the-way-to-the-bank/" target="_blank" rel="noopener">TechCrunch <span class="src-arrow">↗</span></a></div>
         </article>
 
         <div class="cards-grid">
@@ -773,24 +818,28 @@
             <span class="card-tag tech">Space</span>
             <h3 class="card-headline">Northwood Space — $100M Series B</h3>
             <p class="card-body">Backed by a16z &amp; Washington Harbour, plus a <span class="stat">$50M</span> gov contract. Satellite-to-Earth comms infrastructure. Space + defense tech remains hot.</p>
+            <div class="card-sources"><a class="source-link" href="https://techcrunch.com/2026/01/27/northwood-space-secures-a-100m-series-b-and-a-50m-space-force-contract/" target="_blank" rel="noopener">TechCrunch <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
             <span class="card-tag tech">Vertical AI</span>
             <h3 class="card-headline">Zocks — $45M Series B</h3>
             <p class="card-body">Lightspeed &amp; QED back an AI assistant for financial advisors. Vertical AI SaaS continues to attract serious capital.</p>
+            <div class="card-sources"><a class="source-link" href="https://news.crunchbase.com/fintech/zocks-series-b-funding-lightspeed-qed-2026/" target="_blank" rel="noopener">Crunchbase News <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
             <span class="card-tag tech">PropTech</span>
             <h3 class="card-headline">Cambio — $18M at $100M Valuation</h3>
             <p class="card-body">AI-powered commercial real estate software. Another vertical AI bet, this time in CRE — a sector ripe for disruption.</p>
+            <div class="card-sources"><a class="source-link" href="https://news.crunchbase.com/real-estate-proptech/cambio-series-a-funding-maverick-2026/" target="_blank" rel="noopener">Crunchbase News <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
             <span class="card-tag tech">Infrastructure</span>
             <h3 class="card-headline">Malaysia DC Capacity to Double</h3>
             <p class="card-body">Data center capacity set to <strong>DOUBLE</strong> by end of 2026. Hyperscaler demand is flowing into Southeast Asia at scale.</p>
+            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/Business/Tech/Asia-s-AI-boom/Malaysia-s-data-center-capacity-to-more-than-double-by-end-of-2026" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
       </div>
@@ -808,12 +857,14 @@
           <span class="card-tag japan">Politics</span>
           <h3 class="card-headline">PM Takaichi Hits 100-Day Mark</h3>
           <p class="card-body">A roller coaster tenure. Snap election kicked off in deep winter. TikTok &amp; YouTube Shorts now key election battlegrounds — Japan's political media landscape is shifting fast.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/Politics/Japan-PM-Takaichi-s-100-day-roller-coaster-ride" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
         <article class="card featured japan fade-in">
           <span class="card-tag japan">Security</span>
           <h3 class="card-headline">Takaichi on Taiwan — Strongest Positioning Yet</h3>
           <p class="card-body"><em>"Alliance with US would collapse if Japan fled a Taiwan crisis."</em> The strongest positioning yet on cross-strait contingency from a sitting Japanese PM.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/Politics/Defense/Japan-US-alliance-would-collapse-if-Japan-fled-Taiwan-crisis-PM-Takaichi" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
         <div class="cards-grid">
@@ -821,24 +872,28 @@
             <span class="card-tag japan">Supply Chain</span>
             <h3 class="card-headline">Rare Earth De-Chinafy Push</h3>
             <p class="card-body">Japan accelerating supply chain diversification after Beijing's 2010 ban. A long game — still far from resolved.</p>
+            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/Spotlight/Supply-Chain/Inside-Japan-s-long-battle-to-de-Chinafy-its-rare-earth-supply-chain" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
             <span class="card-tag japan">Industry</span>
             <h3 class="card-headline">US Steel Output Exceeds Japan's</h3>
             <p class="card-body">First time in <span class="stat">26 years</span>. A symbolic shift in industrial output between the two allies.</p>
+            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/Business/Materials/US-steel-production-exceeds-Japan-s-for-first-time-in-26-years" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
             <span class="card-tag japan">Energy</span>
             <h3 class="card-headline">LNG Power Plant Eyed in Hokkaido</h3>
             <p class="card-body">A Japanese utility exploring new LNG capacity in Hokkaido — an energy security play as Japan diversifies its power mix.</p>
+            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/Business/Energy/Japan-utility-weighs-building-LNG-power-plant-in-Hokkaido" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
             <span class="card-tag japan">FX</span>
             <h3 class="card-headline">USD/JPY Watch</h3>
             <p class="card-body">Trump says dollar "doing great" as Asian currencies jump. FX volatility remains elevated across the region.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.reuters.com/markets/currencies/dollar-sinks-four-year-low-trump-shrugs-off-weakness-2026-01-28/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
       </div>
@@ -910,6 +965,7 @@
           <div class="methodology-content">
             <p>Composite of 7 components: <strong>GDP Growth</strong> (20%) — Q3 2025 annualized; <strong>Employment</strong> (20%) — unemployment rate + NFP payrolls; <strong>Inflation</strong> (15%) — CPI vs 2% target; <strong>Consumer Confidence</strong> (15%) — Michigan sentiment; <strong>Manufacturing</strong> (10%) — S&P Global PMI; <strong>Market Conditions</strong> (10%) — equity levels + VIX; <strong>Leading Indicators</strong> (10%) — LEI + yield curve. Each scored 0–100 and weighted. Score of 63 = moderately healthy with notable risks from weak sentiment and slowing jobs.</p>
           </div>
+          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">Data: FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bea.gov/" target="_blank" rel="noopener">BEA <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- ── EQUITY MARKETS ── -->
@@ -977,6 +1033,7 @@
               </tr>
             </tbody>
           </table>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Data: Yahoo Finance <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- ── BOND MARKETS ── -->
@@ -1011,6 +1068,7 @@
                 <span class="status-badge normal">Normal</span>
               </div>
             </div>
+            <div class="card-sources"><a class="source-link" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/" target="_blank" rel="noopener">US Treasury <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
@@ -1035,6 +1093,7 @@
               </div>
             </div>
             <p class="card-body" style="margin-top:0.5rem; font-size:0.8rem;">BOJ held at 0.75% in January (8–1 vote). Raised FY2026 GDP forecast to 1.0%. Further hikes expected if inflation stays on track.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmdeci/index.htm" target="_blank" rel="noopener">Bank of Japan <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
 
@@ -1075,6 +1134,7 @@
               <div class="indicator-sub chg-neg">▼ −0.3 pts</div>
             </div>
           </div>
+          <div class="card-sources"><a class="source-link" href="https://www.conference-board.org/topics/consumer-confidence" target="_blank" rel="noopener">Conference Board <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://fred.stlouisfed.org/series/UMCSENT" target="_blank" rel="noopener">U. Michigan <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- ── BACKWARD-LOOKING INDICATORS ── -->
@@ -1129,6 +1189,7 @@
               <div class="indicator-sub chg-neg">▼ −0.1 pts</div>
             </div>
           </div>
+          <div class="card-sources"><a class="source-link" href="https://www.bea.gov/data/gdp/gross-domestic-product" target="_blank" rel="noopener">BEA <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- ── KEY EVENTS & POLICY ── -->
@@ -1185,6 +1246,7 @@
           <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
             <p class="card-body"><strong>Fed stance:</strong> 3 cuts in 2025 (4.50% → 3.75%). Markets price <span class="stat">1 cut in 2026</span> (June most likely), with a small chance of a second in December. Extended pause expected. &nbsp;<strong>BOJ stance:</strong> Hiked to <span class="stat">0.75%</span> — highest since 1995. Further hikes likely if inflation forecasts hold. FY2026 GDP raised to 1.0%.</p>
           </div>
+          <div class="card-sources"><a class="source-link" href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm" target="_blank" rel="noopener">Bank of Japan <span class="src-arrow">↗</span></a></div>
         </article>
 
       </div>
@@ -1198,6 +1260,7 @@
           <h2 class="section-title">The Bottom Line</h2>
         </div>
         <p>The global trade order is fracturing fast — India-EU deal, UK courting China, everyone hedging against Trump. AI funding remains absurd ($4B for a 2-month-old company). Japan's election cycle + Taiwan posturing = watch closely. Markets are at all-time highs but the floor feels uneven: GDP surging, jobs cratering, consumer confidence plunging — the FOMC decision today and Powell's presser tomorrow are the week's main events.</p>
+        <div class="card-sources"><a class="source-link" href="https://www.reuters.com/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://techcrunch.com/" target="_blank" rel="noopener">TechCrunch <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a></div>
       </div>
     </section>
 
