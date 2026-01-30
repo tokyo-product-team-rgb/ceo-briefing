@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEO デイリーブリーフィング — 2026年1月29日</title>
+  <title>CEOデイリーブリーフィング — 2026年1月30日</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -23,8 +23,8 @@
       --accent-market: #0d6e4f;
       --accent-predict: #b45309;
       --accent-bottom: #1a1a1a;
-      --serif: 'Playfair Display', Georgia, serif;
-      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --serif: 'Noto Serif JP', 'Playfair Display', Georgia, serif;
+      --sans: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
       --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
       --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
@@ -39,7 +39,7 @@
       font-family: var(--sans);
       background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.8;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -48,6 +48,7 @@
       background: var(--surface);
       border-bottom: 1px solid var(--border);
       padding: 0;
+      position: relative;
     }
 
     .masthead-inner {
@@ -69,9 +70,9 @@
 
     .masthead h1 {
       font-family: var(--serif);
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      line-height: 1.1;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.2;
       color: var(--text);
       margin-bottom: 0.5rem;
     }
@@ -126,10 +127,6 @@
 
     .lang-toggle .sep {
       color: var(--border);
-    }
-
-    .masthead {
-      position: relative;
     }
 
     .container {
@@ -207,7 +204,7 @@
       font-family: var(--serif);
       font-size: 1.05rem;
       font-weight: 700;
-      line-height: 1.35;
+      line-height: 1.4;
       margin-bottom: 0.4rem;
       color: var(--text);
     }
@@ -215,7 +212,7 @@
     .card-body {
       font-size: 0.9rem;
       color: var(--text-secondary);
-      line-height: 1.6;
+      line-height: 1.75;
     }
 
     .card-tag {
@@ -274,9 +271,9 @@
 
     .bottom-line p {
       font-family: var(--serif);
-      font-size: 1.1rem;
-      font-style: italic;
-      line-height: 1.75;
+      font-size: 1.05rem;
+      font-style: normal;
+      line-height: 1.9;
       color: rgba(255,255,255,0.9);
     }
 
@@ -305,7 +302,6 @@
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.05em;
-      text-transform: uppercase;
       text-decoration: none;
       padding: 0.4em 1em;
       border-radius: 20px;
@@ -339,7 +335,6 @@
       font-weight: 600;
       font-size: 0.7rem;
       letter-spacing: 0.08em;
-      text-transform: uppercase;
       color: var(--text-muted);
       padding: 0.5rem 0.6rem;
       border-bottom: 2px solid var(--border);
@@ -355,7 +350,7 @@
       color: var(--text);
     }
     .index-table .idx-level {
-      font-family: var(--sans);
+      font-family: 'Inter', var(--sans);
       font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
@@ -389,7 +384,6 @@
       font-size: 0.6rem;
       font-weight: 600;
       color: var(--text-muted);
-      text-transform: uppercase;
     }
     .yc-val {
       font-size: 0.7rem;
@@ -450,14 +444,13 @@
     .gauge-score {
       font-family: var(--serif);
       font-size: 2.4rem;
-      font-weight: 800;
+      font-weight: 900;
       color: var(--text);
       margin-top: 0.25rem;
     }
     .gauge-score-label {
       font-size: 0.75rem;
       font-weight: 600;
-      text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--text-muted);
     }
@@ -489,7 +482,7 @@
       border-radius: 6px;
     }
     .indicator-value {
-      font-family: var(--sans);
+      font-family: 'Inter', var(--sans);
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--text);
@@ -532,7 +525,7 @@
     .methodology-content p {
       font-size: 0.78rem;
       color: var(--text-secondary);
-      line-height: 1.6;
+      line-height: 1.7;
       margin-top: 0.5rem;
     }
 
@@ -576,7 +569,6 @@
       font-size: 0.7rem;
       font-weight: 600;
       color: var(--accent-market);
-      text-transform: uppercase;
       letter-spacing: 0.05em;
     }
     .event-item.past .event-date { color: var(--text-muted); }
@@ -597,7 +589,6 @@
       font-size: 0.65rem;
       font-weight: 700;
       letter-spacing: 0.05em;
-      text-transform: uppercase;
       padding: 0.2em 0.7em;
       border-radius: 10px;
     }
@@ -628,7 +619,7 @@
       color: var(--text-secondary);
     }
     .yield-value {
-      font-family: var(--sans);
+      font-family: 'Inter', var(--sans);
       font-size: 0.95rem;
       font-weight: 700;
       font-variant-numeric: tabular-nums;
@@ -687,15 +678,6 @@
     .section:nth-child(1) .card:nth-child(4) { animation-delay: 0.2s; }
     .section:nth-child(1) .card:nth-child(5) { animation-delay: 0.25s; }
 
-    .section:nth-child(2) .card { animation-delay: 0.15s; }
-    .section:nth-child(2) .card:nth-child(2) { animation-delay: 0.2s; }
-    .section:nth-child(2) .card:nth-child(3) { animation-delay: 0.25s; }
-    .section:nth-child(2) .card:nth-child(4) { animation-delay: 0.3s; }
-
-    .section:nth-child(3) .card { animation-delay: 0.25s; }
-    .section:nth-child(3) .card:nth-child(2) { animation-delay: 0.3s; }
-    .section:nth-child(3) .card:nth-child(3) { animation-delay: 0.35s; }
-
     @media print {
       body { background: #fff; }
       .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
@@ -706,7 +688,7 @@
 </head>
 <body>
 
-  <!-- ━━━ MASTHEAD ━━━ -->
+  <!-- ━━━ マストヘッド ━━━ -->
   <header class="masthead">
     <div class="lang-toggle">
       <a href="index.html">EN</a>
@@ -714,219 +696,232 @@
       <a href="ja.html" class="active">JA</a>
     </div>
     <div class="masthead-inner">
-      <div class="overline">インテリジェンスブリーフ</div>
-      <h1>CEO デイリーブリーフィング</h1>
-      <div class="edition-date">2026年1月30日（木曜日）</div>
-      <div class="edition-sub">日本 · 世界情勢 · マーケット · テクノロジー · 予測</div>
+      <div class="overline">インテリジェンス・ブリーフ</div>
+      <h1>CEOデイリーブリーフィング</h1>
+      <div class="edition-date">2026年1月30日（金）</div>
+      <div class="edition-sub">日本 · 世界各地域 · マーケット＆経済 · 予測</div>
       <div class="divider-bar"></div>
     </div>
   </header>
 
-  <!-- ━━━ NAV ━━━ -->
+  <!-- ━━━ ナビゲーション ━━━ -->
   <nav class="nav-pills">
-    <a href="#geopolitics" class="nav-pill">🌍 Geopolitics</a>
-    <a href="#tech" class="nav-pill">🚀 Tech & VC</a>
-    <a href="#japan" class="nav-pill">🇯🇵 Japan</a>
-    <a href="#markets" class="nav-pill">📈 Markets</a>
-    <a href="#predictions" class="nav-pill">🔮 Predictions</a>
-    <a href="#bottomline" class="nav-pill">⚡ Bottom Line</a>
+    <a href="#japan" class="nav-pill">🇯🇵 日本</a>
+    <a href="#global" class="nav-pill">🌍 世界</a>
+    <a href="#markets" class="nav-pill">📊 マーケット</a>
+    <a href="#predictions" class="nav-pill">🔮 予測</a>
+    <a href="#bottomline" class="nav-pill">⚡ まとめ</a>
   </nav>
 
   <main class="container">
 
-    <!-- ━━━ GEOPOLITICS & MACRO ━━━ -->
-    <section class="section" id="geopolitics">
-      <div class="section-header">
-        <div class="section-icon geo">🌍</div>
-        <h2 class="section-title geo">Geopolitics &amp; Macro</h2>
-      </div>
-
-      <div class="cards">
-        <article class="card featured geo fade-in">
-          <span class="card-tag geo">US Domestic</span>
-          <h3 class="card-headline">Government Shutdown Looms — Democrats Draw Line on ICE Reform</h3>
-          <p class="card-body">Democrats threatening to block DHS funding unless ICE reform measures are implemented, risking a partial government shutdown by Friday. Trump and Schumer reportedly moving toward a possible deal, but it remains fragile. Tom Homan deployed to Minneapolis to oversee immigration crackdown after two fatal shootings by federal agents in under a month. The shutdown showdown comes at a sensitive moment — right after the Fed decision.</p>
-          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cn9zp0nyvxdo" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://apnews.com/article/government-shutdown-dhs-ice" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a></div>
-        </article>
-
-        <article class="card featured geo fade-in">
-          <span class="card-tag geo">Middle East</span>
-          <h3 class="card-headline">Trump Weighs Major Strike on Iran — Nuclear Talks Stalled</h3>
-          <p class="card-body">Multiple sources confirm Trump is actively weighing military strikes on Iran to <strong>inspire renewed protests</strong> and regime pressure, as nuclear discussions show no progress. Seven possible scenarios range from targeted strikes to full regime change. Meanwhile, a US warship has arrived in the Middle East, visibly increasing military posture in the region.</p>
-          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/ce3kenge1k9o" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.reuters.com/world/trump-iran-strikes-protests/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a></div>
-        </article>
-
-        <div class="cards-grid">
-          <article class="card fade-in">
-            <span class="card-tag geo">UK–China</span>
-            <h3 class="card-headline">Starmer Secures Visa-Free Travel Deal with China</h3>
-            <p class="card-body">UK PM announces UK citizens will be able to travel to China visa-free for up to 30 days. Part of a broader charm offensive by Beijing to position itself as a stable partner while Trump alienates allies.</p>
-            <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/live/cly9p5kr2q7t" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a></div>
-          </article>
-
-          <article class="card fade-in">
-            <span class="card-tag geo">China</span>
-            <h3 class="card-headline">China Executes 11 Myanmar Scam Mafia Members</h3>
-            <p class="card-body">Members of the notorious "Ming family" criminal group executed. Ran massive scam centres in Myanmar. A dramatic display of China's crackdown on cross-border cybercrime networks.</p>
-            <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cx2gdrvy9gjo" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.aljazeera.com/news/2026/1/29/china-executes-11-linked-to-myanmar-scam-operations-state-media" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
-          </article>
-        </div>
-
-        <div class="cards-grid">
-          <article class="card fade-in">
-            <span class="card-tag geo">Africa</span>
-            <h3 class="card-headline">Ethiopia: Govt vs Tigrayan Forces Clashes Erupt</h3>
-            <p class="card-body">"Deteriorating" situation causes suspension of flights. Security and diplomatic sources report renewed fighting despite the 2022 peace deal. A major test for the Abiy government.</p>
-            <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/2026/1/29/clashes-between-government-troops-and-tigrayan-forces-erupt-in-ethiopia" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
-          </article>
-
-          <article class="card fade-in">
-            <span class="card-tag geo">Sudan</span>
-            <h3 class="card-headline">Dozens Killed in RSF Drone Attack</h3>
-            <p class="card-body">RSF drone attack in South Kordofan's Dilling town kills dozens, just one day after Sudan's military declared an end to the RSF siege there. The civil war enters a grim new phase.</p>
-            <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/2026/1/29/dozens-killed-in-rsf-drone-attack-in-war-torn-sudans-south-kordofan" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
-          </article>
-        </div>
-
-        <div class="cards-grid">
-          <article class="card fade-in">
-            <span class="card-tag geo">Syria</span>
-            <h3 class="card-headline">Syria Grants Citizenship to Stateless Kurds</h3>
-            <p class="card-body">Interior Minister orders immediate citizenship for all listed as stateless, with Feb 5 deadline for rollout. A major shift following gains against the SDF.</p>
-            <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/2026/1/29/syria-grants-immediate-citizenship-to-kurds-in-wake-of-gains-against-sdf" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
-          </article>
-
-          <article class="card fade-in">
-            <span class="card-tag geo">India</span>
-            <h3 class="card-headline">Court Ruling Rattles Foreign Investors</h3>
-            <p class="card-body">A ruling on a 2018 deal spooks investors — fears it could open old transactions to tax scrutiny. Comes after Ajit Pawar's death left a vacuum in Maharashtra's politics.</p>
-            <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cz9v42ep8n0o" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ━━━ TECH & VC ━━━ -->
-    <section class="section" id="tech">
-      <div class="section-header">
-        <div class="section-icon tech">🚀</div>
-        <h2 class="section-title tech">Tech &amp; VC</h2>
-      </div>
-
-      <div class="cards">
-        <article class="card featured tech fade-in">
-          <span class="card-tag tech">Semiconductors</span>
-          <h3 class="card-headline">Intel Surges 11% — Biggest Single-Day Jump in Months</h3>
-          <p class="card-body">Intel ($48.79) rocketed <span class="stat">+11.07%</span> on heavy volume (180M shares vs 98M avg). Up <span class="stat">+143.78%</span> over the past 52 weeks from its $17.67 low. The turnaround narrative is gaining steam as the company restructures around AI and foundry services. Meanwhile, NVIDIA ($191.52) added +1.59% — valuation at <span class="stat">$4.66 trillion</span>.</p>
-          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/quote/INTC/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-        </article>
-
-        <article class="card featured tech fade-in">
-          <span class="card-tag tech">AI Mega-Rounds</span>
-          <h3 class="card-headline">xAI Raises $20B Series E — Valued at $250B</h3>
-          <p class="card-body">Elon Musk's AI company closed a <span class="stat">$20 billion</span> Series E on January 5, bringing total funding to $37.5B. Valuation up <span class="stat">+279%</span> over the past year. Meanwhile, Anduril raised $500M Series G-1 at $79.6B (Jan 13) for defense tech. The AI + defense capital firehose shows no sign of slowing.</p>
-          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/quote/XAAI.PVT/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-        </article>
-
-        <div class="cards-grid">
-          <article class="card fade-in">
-            <span class="card-tag tech">AI Valuations</span>
-            <h3 class="card-headline">Private AI Giants — Valuations Soaring</h3>
-            <p class="card-body">
-              <strong>OpenAI:</strong> $500B (+153% YoY)<br>
-              <strong>Anthropic:</strong> $354B (+387% YoY)<br>
-              <strong>xAI:</strong> $250B (+279% YoY)<br>
-              <strong>Databricks:</strong> $139B (+101% YoY)<br>
-              AI companies are now rivaling the market caps of major public companies.
-            </p>
-            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/private-companies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-          </article>
-
-          <article class="card fade-in">
-            <span class="card-tag tech">Defense Tech</span>
-            <h3 class="card-headline">Anduril: $79.6B — Defense AI Breakout</h3>
-            <p class="card-body">Just raised $500M Series G-1 on Jan 13. Total funding: $6.95B. Defense and government AI is the hottest sector outside pure-play AI labs. SpaceX ($854.5B) also growing as space + defense converge.</p>
-            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/quote/ANIN.PVT/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-          </article>
-        </div>
-
-        <div class="cards-grid">
-          <article class="card fade-in">
-            <span class="card-tag tech">Fintech</span>
-            <h3 class="card-headline">Stripe at $111B — Ramp at $32.7B</h3>
-            <p class="card-body">Stripe ($110.9B, +59% YoY) surging on a tender offer. Ramp ($32.7B, +163% YoY) raised $300M Series E-3. Fintech is back — B2B financial infrastructure proving its staying power.</p>
-            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/private-companies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-          </article>
-
-          <article class="card fade-in">
-            <span class="card-tag tech">Top Movers</span>
-            <h3 class="card-headline">Notable Stock Moves Today</h3>
-            <p class="card-body">
-              <strong>INTC:</strong> +11.07% ($48.79)<br>
-              <strong>DNN:</strong> +9.39% ($4.31) — uranium play<br>
-              <strong>T (AT&T):</strong> +4.65% ($24.07)<br>
-              <strong>NVDA:</strong> +1.59% ($191.52)<br>
-              <strong>ONDS:</strong> +626% over 52 weeks
-            </p>
-            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/stocks/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ━━━ JAPAN ━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- 🇯🇵 日本（詳細セクション） -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <section class="section" id="japan">
       <div class="section-header">
         <div class="section-icon japan">🇯🇵</div>
-        <h2 class="section-title japan">Japan</h2>
+        <h2 class="section-title japan">日本 — 詳細レポート</h2>
       </div>
 
       <div class="cards">
+
+        <!-- 1. 衆院選 -->
         <article class="card featured japan fade-in">
-          <span class="card-tag japan">Markets</span>
-          <h3 class="card-headline">Nikkei 225 Flat at 53,375 — JGB Yields Creep Higher</h3>
-          <p class="card-body">Nikkei 225 closed at <span class="stat">53,375.60</span> (+0.03%), barely moving as markets digested global crosscurrents. TOPIX gained +0.28% to 3,545. Night futures edged up to 53,420 (+0.20%). The <span class="stat">10Y JGB yield</span> climbed to 2.255% (+2bps), near 30-year highs. USD/JPY at <span class="stat">¥153.27</span> — yen weakening slightly as dollar finds footing despite the weak DXY.</p>
-          <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/markets/worldidx/" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://finance.yahoo.com/quote/%5EN225/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          <span class="card-tag japan">政治・選挙</span>
+          <h3 class="card-headline">衆院選挙戦真っ只中 — 自民党、単独過半数に迫る</h3>
+          <p class="card-body">高市首相の超短期解散による衆院選が真冬の中進行中。日経の最新世論調査によると、<strong>自民党が衆院単独過半数に迫る</strong>勢い ── 2024年の連立敗北からの劇的な巻き返しとなる。東北地方では選挙カーが猛吹雪に苦戦する一方、TikTokやYouTube Shortsが新たな選挙戦の主戦場となり、日本の政治コミュニケーションに世代交代をもたらしている。消費税減税について自民党内では閣僚含む2割が「現状維持」を表明 ── 他党の減税公約とは対照的だ。2月8日投開票の選挙に1285人が立候補した。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/Politics/Japan-Election/japan-s-ldp-aim-of-single-party-lower-house-majority-in-sight-nikkei-poll" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://mainichi.jp/english/articles/20260130/p2a/00m/0na/016000c" target="_blank" rel="noopener">毎日新聞 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.nikkei.com/article/DGXZQOUA296970Z20C26A1000000/" target="_blank" rel="noopener">日本経済新聞 <span class="src-arrow">↗</span></a>
+          </div>
         </article>
 
+        <!-- 2. マーケット・経済 -->
+        <article class="card featured japan fade-in">
+          <span class="card-tag japan">経済・マーケット</span>
+          <h3 class="card-headline">日経平均53,323円で小幅反落 — 円安154円台に</h3>
+          <p class="card-body">日経平均は<span class="stat">53,322.85円</span>（−0.10%）で引け、世界的なリスクオフの中で小幅下落。ドル円は<span class="stat">154.06円</span>（+0.68%）まで円安進行。衆院選の不確実性の中で円の動向に注目が集まる。<strong>日経は4月にアドバンテストの日経225指数内ウェイトを引き下げる</strong>と発表 ── 同銘柄が10%キャップを突破したための大規模リバランスで、パッシブファンドに大きな影響を与える。財務省は1月23日の急激な円高ドル安について<strong>政府・日銀による市場介入はなかった</strong>と発表した。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://finance.yahoo.com/quote/%5EN225/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://asia.nikkei.com/announcements/nikkei-to-lower-advantest-s-weight-in-nikkei-225" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 3. ビジネス・企業 -->
         <div class="cards-grid">
           <article class="card fade-in">
-            <span class="card-tag japan">BOJ</span>
-            <h3 class="card-headline">BOJ Holding at 0.75% — Next Hike Signal Awaited</h3>
-            <p class="card-body">BOJ held at 0.75% in January (8–1 vote). Raised FY2026 GDP forecast to 1.0%. Market consensus points to a March or April hike to 1.00%. JGB 10Y at 2.255% — highest since mid-1990s. The yield gap vs UST 10Y has narrowed to −200bps.</p>
-            <div class="card-sources"><a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmdeci/index.htm" target="_blank" rel="noopener">Bank of Japan <span class="src-arrow">↗</span></a></div>
+            <span class="card-tag japan">ビジネス</span>
+            <h3 class="card-headline">東京建物、データセンター事業に参入 — 大阪で650億円施設</h3>
+            <p class="card-body">不動産デベロッパーの東京建物がシンガポールの専門企業と提携し、大阪に<span class="stat">約650億円</span>規模のデータセンターを建設。AI基盤需要がアジア全域で急増する中、新たな収益源を開拓。日本の不動産セクターがデジタルインフラへ本格シフトしている。</p>
+            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/Business/Technology/Artificial-Intelligence/developer-tokyo-tatemono-to-enter-data-centers-with-650m-osaka-facility" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
-            <span class="card-tag japan">FX</span>
-            <h3 class="card-headline">USD/JPY ¥153.27 — Yen Index Weakens</h3>
-            <p class="card-body">Japanese Yen Index fell −0.66%. EUR/JPY at ¥183.38. AUD/JPY at ¥108.31 (+0.48%). The yen is caught between BOJ tightening expectations and carry-trade demand. Real Estate and high-dividend sectors outperforming domestically.</p>
-            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/quote/JPY%3DX/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+            <span class="card-tag japan">企業</span>
+            <h3 class="card-headline">東電社長、資本提携は「電機や通信も想定」</h3>
+            <p class="card-body">東京電力HDの小早川社長が日経取材で、再建計画で示した外部資本提携について<strong>通信・電機など他産業からの出資も想定</strong>していると明らかに。「エネルギー業界内の水平提携だけでなく、需要家を含めた垂直提携も視野」と語った。事業切り売りはせず、総合力での再編を目指す。</p>
+            <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/article/DGXZQOUC306Y00Q6A130C2000000/" target="_blank" rel="noopener">日本経済新聞 <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
 
+        <!-- 4. 社会・事件 -->
         <article class="card fade-in">
-          <span class="card-tag japan">Domestic</span>
-          <h3 class="card-headline">Japan Domestic Highlights</h3>
-          <p class="card-body">High-dividend stocks outperforming strongly — Nikkei High Dividend 50 up +0.84% today. J-REITs surging with REIT index +0.93%, ESG-REIT +0.94%. Growth market (ex-Mothers) flat at +0.06%. Standard market slightly negative at −0.03%. The "value over growth" rotation continues in Japan, mirroring the global trend.</p>
-          <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/markets/worldidx/" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a></div>
+          <span class="card-tag japan">社会・事件</span>
+          <h3 class="card-headline">羽田空港強盗未遂 — 被害者が香港到着後に再び強盗被害</h3>
+          <p class="card-body">羽田空港で発生した強盗未遂事件の被害者が、香港到着後に再び強盗に遭った可能性があることが判明。香港警察は1人を逮捕。日本人男性が約<span class="stat">5,800万円</span>を奪われた事件と関連が指摘されている。また、違法スカウトのトップの潜伏先から現金170万円が発見 ── 逃走資金とみられる。一連の事件は地下資金フローへの懸念を高めている。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://news.web.nhk.or.jp/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a>
+          </div>
         </article>
+
+        <!-- 5. テック・革新 & 日銀 -->
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag japan">テクノロジー</span>
+            <h3 class="card-headline">Startale、ソニー・SBIとIP保護プラットフォーム構築</h3>
+            <p class="card-body">日本発ブロックチェーンスタートアップのStartale（シンガポール拠点）が、AI悪用防止のためのIP保護プラットフォーム構築を急ぐ。ソニーやSBIとの協業で、日本がWeb3/IP基盤分野でリーダーシップを目指す。ブロックチェーンベースのコンテンツ認証の必要性を強調。</p>
+            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/Spotlight/Cryptocurrencies/blockchain-startup-startale-races-to-create-ip-platform-to-guard-against-ai" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag japan">日銀・債券</span>
+            <h3 class="card-headline">日銀、政策金利0.75%据え置き — 3月利上げ観測</h3>
+            <p class="card-body">日銀は政策金利を0.75%に据え置き。10年物国債利回りは数十年来の高水準付近。市場では<strong>3月または4月に1.00%への利上げ</strong>が有力視されている。衆院選で自民党が圧勝すれば、高市政権が構造改革と金融正常化の双方を推進する余地が広がる。</p>
+            <div class="card-sources"><a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmdeci/index.htm" target="_blank" rel="noopener">日本銀行 <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <!-- 6. 地域・その他 -->
+        <article class="card fade-in">
+          <span class="card-tag japan">地域・経済</span>
+          <h3 class="card-headline">愛知県、県内総生産で大阪府を抜き全国2位の見通し</h3>
+          <p class="card-body">2023年度の名目県内総生産で、愛知県が大阪府を抜いて全国2位になる見通しが明らかに。自動車産業を中心とした製造業の強さが改めて確認された。韓国軍機がエンジン出力低下により航空自衛隊那覇基地に緊急着陸する一幕も。北日本から北陸にかけて来週前半にかけて断続的な降雪が予想され、雪崩への十分な注意が必要とされている。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://news.web.nhk.or.jp/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- ━━━ MARKETS & ECONOMY ━━━ -->
-    <section class="section" id="markets">
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- 🌍 世界各地域 -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="section" id="global">
       <div class="section-header">
-        <div class="section-icon market">📈</div>
-        <h2 class="section-title market">Markets &amp; Economy</h2>
+        <div class="section-icon geo">🌍</div>
+        <h2 class="section-title geo">世界各地域</h2>
       </div>
 
       <div class="cards">
 
-        <!-- ── ECONOMIC HEALTH SCORE ── -->
+        <!-- 北米 -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">北米</span>
+          <h3 class="card-headline">トランプ、ウォーシュ氏をFRB議長に指名 · MSFT −3,600億ドル · 政府閉鎖回避</h3>
+          <p class="card-body">
+            <strong>1. FRB議長後任にウォーシュ氏：</strong>トランプ大統領は元FRB理事でFRB批判派として知られるケビン・ウォーシュ氏を、5月に任期満了のパウエル議長の後任として指名。金利政策の独立性に関する市場の注目が集まる。<br><br>
+            <strong>2. マイクロソフト暴落：</strong>MSFTがAI投資拡大への懸念から<span class="stat">−10.09%（約3,600億ドル）</span>と過去最大級の時価総額消失。一方、アップルはiPhone好調でQ1売上高1,440億ドルの過去最高を記録。<br><br>
+            <strong>3. 政府閉鎖回避：</strong>共和・民主両党が国土安全保障省(DHS)の2週間暫定予算で合意。本格的な予算協議は2月中旬に持ち越し。トランプ氏はJPモルガンを50億ドルで提訴。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/live/ckgx1yldxg4t" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://finance.yahoo.com/quote/MSFT/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- ヨーロッパ -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">ヨーロッパ</span>
+          <h3 class="card-headline">スターマー首相訪中 · EU、IRGCをテロ組織指定 · ウクライナ一時静寂</h3>
+          <p class="card-body">
+            <strong>1. 英中関係リセット：</strong>スターマー首相が訪中し、ビザ免除、医療、グリーンテック、金融分野の合意を取り付けた。中国は英国議員6人への制裁を解除。トランプ大統領は英国の対中関係強化を「非常に危険」と警告。<br><br>
+            <strong>2. EU対イラン：</strong>EUがイラン革命防衛隊(IRGC)をテロ組織に正式指定 ── 米国の最大圧力路線にヨーロッパが接近する大きな外交的エスカレーション。シチリア島では地滑りで1,500人が避難。<br><br>
+            <strong>3. ウクライナ一時停戦：</strong>トランプ大統領がプーチン氏にキーウへの攻撃停止を要請したと主張し、ウクライナは数ヶ月ぶりの静かな夜を経験。ゼレンスキー大統領は一時的な緊張緩和に慎重な姿勢。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/cm2j04lk83zo" target="_blank" rel="noopener">BBC — 英中 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/c4g4yj92kwro" target="_blank" rel="noopener">BBC — ウクライナ <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- アジア（日本除く） -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">アジア（日本除く）</span>
+          <h3 class="card-headline">インドネシア市場混乱 · ミャンマー「偽」選挙 · インドGDP懸念</h3>
+          <p class="card-body">
+            <strong>1. インドネシア危機：</strong>インドネシアの金融規制当局トップと証券取引所CEOが相次いで辞任。MSCIの新規組入れ凍結後に株価が約9%急落。フリーフロート比率15%以上への引き上げで外国投資家の信頼回復を図る。<br><br>
+            <strong>2. ミャンマー選挙：</strong>軍事政権支持の政党が大勝 ── 人権団体や欧米諸国は2021年クーデター以来初の選挙を「見せかけの選挙」と非難。自由でも公正でもない結果が軍政支配を固定化。中国はミャンマー国境沿いの詐欺拠点を運営した犯罪組織11人を迅速に処刑。<br><br>
+            <strong>3. インドの矛盾：</strong>インドはGDP成長率7.3%を見込むが、専門家は消費低迷、銀行ストレス、政治的不確実性など「成長の裏に潜む課題」を指摘。パキスタンではイムラン・カーン元首相だけでなく広く言論弾圧が進行。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/Business/Markets/indonesia-s-financial-regulator-chief-and-bourse-ceo-quit-after-market-rout" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/cn8jprzx4xlo" target="_blank" rel="noopener">BBC — インド <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 中東・アフリカ -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">中東・アフリカ</span>
+          <h3 class="card-headline">米軍イラン近海に展開 · 南ア、イスラエル大使を追放 · ニジェール衝突</h3>
+          <p class="card-body">
+            <strong>1. イラン緊張激化：</strong>トランプ大統領はイランに核計画放棄と抗議者殺害の停止を要求し、応じなければ軍事力行使を示唆。米海軍・空軍の主力部隊がペルシャ湾に展開中 ── 2025年6月の空爆パターンに類似との分析。テヘランは「今回の対応はより劇的になる」と警告。<br><br>
+            <strong>2. 南アフリカ-イスラエル：</strong>南アフリカがイスラエル大使アリエル・シドマン氏を「外交規範違反」として72時間以内の国外退去を命令。ICJ審理進行中の両国関係がさらに悪化。インドの船員を含むタンカーがイランに拿捕され、家族が帰還を求めている。<br><br>
+            <strong>3. ニジェール攻撃：</strong>ニジェールの軍事政権指導者がニアメ空港付近の銃撃・爆発を受け報復を宣言。フランス、ベナン、コートジボワールの関与を非難し、ロシア軍の防衛協力に感謝 ── ワグネルのサヘル地域での影響力が深まる。フェラ・クティがアフリカ人初のグラミー生涯功労賞を受賞。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/cn9z497g4vvo" target="_blank" rel="noopener">BBC — イラン <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.aljazeera.com/news/2026/1/29/how-does-us-military-build-up-off-iran-compare-to-the-june-2025-strikes" target="_blank" rel="noopener">アルジャジーラ <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 中南米 -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">中南米</span>
+          <h3 class="card-headline">パナマ、CKハチソン港湾契約無効化 · ベネズエラ石油改革 · キューバ石油危機</h3>
+          <p class="card-body">
+            <strong>1. パナマ運河港湾：</strong>パナマの裁判所が香港拠点CKハチソンの運河港湾契約を無効化。トランプ大統領が「中国からパナマ運河を取り戻す」と主張したことに続く動き。中国は自国企業の保護を表明。西半球での米中競争の直接的な火種に。<br><br>
+            <strong>2. ベネズエラ石油開放：</strong>ベネズエラが米国の圧力を受け石油セクターへの外資参入法案を承認。民間企業により多くの裁量権を与えるが、改革が十分かは不透明。荒廃した石油都市は米国資金による復興に期待。<br><br>
+            <strong>3. キューバの危機：</strong>キューバの石油残量は「あと15〜20日分」── トランプ大統領が島への石油販売国に関税を課すと脅迫し、人道的・経済的状況が深刻化。ブラジルIBOVESPA指数は−0.84%と下落。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/c338ygzl7meo" target="_blank" rel="noopener">BBC — パナマ <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/ckgnp8n40reo" target="_blank" rel="noopener">BBC — ベネズエラ <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- オセアニア -->
+        <article class="card fade-in">
+          <span class="card-tag geo">オセアニア</span>
+          <h3 class="card-headline">パラオ、トランプ移民受入れ拒否 · 豪州リーダーシップ変動</h3>
+          <p class="card-body">
+            <strong>パラオ：</strong>議会がトランプ大統領による移民再定住計画を阻止 ── 太平洋島嶼国からの米国政策への稀な反発。オーストラリアでは銃撃事件で3人死亡、犯人逃走中。<strong>オーストラリア：</strong>アンドリュー・ヘイスティ氏が自由党党首選への出馬を見送り、アンガス・テイラー氏に道を開いた。ASX 200は世界的なリスクオフで−0.65%下落。ニュージーランドNZX 50は+0.56%と堅調。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/" target="_blank" rel="noopener">AP通信 <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- 📊 マーケット＆経済 -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <div class="section-icon market">📊</div>
+        <h2 class="section-title market">マーケット＆経済</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- ヘルススコア -->
         <article class="card featured market fade-in">
-          <span class="card-tag market">Health Score</span>
-          <h3 class="card-headline">Economic Health Composite — Moderately Healthy</h3>
+          <span class="card-tag market">ヘルススコア</span>
+          <h3 class="card-headline">経済健全性総合指数 — 警戒感上昇</h3>
           <div class="health-gauge-wrap">
             <div class="health-gauge">
               <div class="gauge-bg"></div>
@@ -939,497 +934,494 @@
               <span>50</span>
               <span>100</span>
             </div>
-            <div class="gauge-score" id="gaugeScore">62</div>
-            <div class="gauge-score-label">out of 100</div>
+            <div class="gauge-score" id="gaugeScore">58</div>
+            <div class="gauge-score-label">/ 100点</div>
           </div>
           <div class="indicator-grid">
             <div class="indicator-item">
               <div class="indicator-value">4.4%</div>
-              <div class="indicator-name">GDP Growth (Q3)</div>
-              <div class="indicator-sub chg-pos">▲ Strong</div>
+              <div class="indicator-name">GDP成長率 (Q3)</div>
+              <div class="indicator-sub chg-pos">▲ 堅調</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value">4.4%</div>
-              <div class="indicator-name">Unemployment</div>
-              <div class="indicator-sub chg-neg">▲ Elevated</div>
+              <div class="indicator-name">失業率</div>
+              <div class="indicator-sub chg-neg">▲ 高止まり</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value">2.7%</div>
-              <div class="indicator-name">CPI Inflation</div>
-              <div class="indicator-sub" style="color: var(--text-muted);">● Above Target</div>
+              <div class="indicator-name">CPI インフレ率</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● 目標超</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value">56.4</div>
-              <div class="indicator-name">Consumer Sent.</div>
-              <div class="indicator-sub chg-neg">▼ Weak</div>
+              <div class="indicator-name">消費者信頼感</div>
+              <div class="indicator-sub chg-neg">▼ 弱含み</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value">51.9</div>
-              <div class="indicator-name">Mfg PMI</div>
-              <div class="indicator-sub chg-pos">▲ Expanding</div>
+              <div class="indicator-name">製造業PMI</div>
+              <div class="indicator-sub chg-pos">▲ 拡大</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">16.62</div>
+              <div class="indicator-value">17.87</div>
               <div class="indicator-name">VIX</div>
-              <div class="indicator-sub chg-pos">● Calm</div>
+              <div class="indicator-sub chg-neg">▲ 上昇中</div>
             </div>
           </div>
           <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            <span class="arrow">▸</span> How is this calculated?
+            <span class="arrow">▸</span> 算出方法
           </div>
           <div class="methodology-content">
-            <p>Composite of 7 components: <strong>GDP Growth</strong> (20%) — Q3 2025 annualized; <strong>Employment</strong> (20%) — unemployment rate + NFP payrolls; <strong>Inflation</strong> (15%) — CPI vs 2% target; <strong>Consumer Confidence</strong> (15%) — Michigan sentiment; <strong>Manufacturing</strong> (10%) — S&amp;P Global PMI; <strong>Market Conditions</strong> (10%) — equity levels + VIX; <strong>Leading Indicators</strong> (10%) — LEI + yield curve. Each scored 0–100 and weighted. Score of 62 = moderately healthy with notable risks from shutdown uncertainty, weak jobs, and stalled Fed easing.</p>
+            <p>7つの構成要素の複合指標：<strong>GDP成長率</strong>（20%）── Q3 2025年率換算、<strong>雇用</strong>（20%）── 失業率＋非農業部門雇用者数、<strong>インフレ</strong>（15%）── CPIの2%目標との乖離、<strong>消費者信頼感</strong>（15%）── ミシガン大学指数、<strong>製造業</strong>（10%）── S&P Global PMI、<strong>市場環境</strong>（10%）── 株価水準＋VIX、<strong>先行指標</strong>（10%）── LEI＋イールドカーブ。VIX上昇（+5.9%）、貴金属暴落、仮想通貨下落、広範なリスクオフにより62→58に低下。マイクロソフトの3,600億ドル時価総額消失がAI設備投資への不安を示唆。</p>
           </div>
-          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">Data: FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bea.gov/" target="_blank" rel="noopener">BEA <span class="src-arrow">↗</span></a></div>
+          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a></div>
         </article>
 
-        <!-- ── EQUITY MARKETS ── -->
+        <!-- 株式市場 -->
         <article class="card fade-in">
-          <span class="card-tag market">Equities</span>
-          <h3 class="card-headline">Equity Markets — Flat Session Post-Fed</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;">S&amp;P 500 at <span class="stat">6,978.03</span> — essentially unchanged. Fed held rates at 3.50–3.75% as expected. Markets digesting the decision with minimal reaction. Intel the standout at +11%. Commodities dramatically outperforming equities today. YTD, S&amp;P is +2.35%. DXY at 96.26 (−0.19%).</p>
+          <span class="card-tag market">株式</span>
+          <h3 class="card-headline">株式市場 — テック急落でナスダック下落、欧州は反発</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">まちまちの世界市場。<strong>マイクロソフトの−10%暴落</strong>が米テクセクターを直撃する一方、欧州市場は好決算で堅調。VIXは+5.87%の17.87まで上昇し、不確実性の高まりを反映。S&P 500は<span class="stat">6,969</span>とほぼ横ばい。</p>
           <table class="index-table">
             <thead>
               <tr>
-                <th>Index</th>
-                <th>Level</th>
-                <th>Day %</th>
-                <th>YTD %</th>
+                <th>指数</th>
+                <th>水準</th>
+                <th>日次%</th>
+                <th>年初来%</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="idx-name">S&amp;P 500</td>
-                <td class="idx-level">6,978.03</td>
-                <td class="chg-neg">−0.01%</td>
-                <td class="chg-pos">+2.35%</td>
+                <td class="idx-name">S&P 500</td>
+                <td class="idx-level">6,969.01</td>
+                <td class="chg-neg">−0.13%</td>
+                <td class="chg-pos">+2.18%</td>
               </tr>
               <tr>
-                <td class="idx-name">Nasdaq</td>
-                <td class="idx-level">23,857.45</td>
-                <td class="chg-pos">+0.17%</td>
-                <td class="chg-pos">+1.37%</td>
+                <td class="idx-name">ナスダック</td>
+                <td class="idx-level">23,685.12</td>
+                <td class="chg-neg">−0.72%</td>
+                <td class="chg-pos">+0.64%</td>
               </tr>
               <tr>
-                <td class="idx-name">Dow Jones</td>
-                <td class="idx-level">49,015.60</td>
-                <td class="chg-pos">+0.02%</td>
-                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+                <td class="idx-name">ダウ平均</td>
+                <td class="idx-level">49,071.56</td>
+                <td class="chg-pos">+0.11%</td>
+                <td class="chg-pos">+3.12%</td>
               </tr>
               <tr>
-                <td class="idx-name">Russell 2000</td>
-                <td class="idx-level">2,653.55</td>
-                <td class="chg-neg">−0.49%</td>
-                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+                <td class="idx-name">ラッセル2000</td>
+                <td class="idx-level">2,654.78</td>
+                <td class="chg-pos">+0.05%</td>
+                <td class="chg-pos">+1.50%</td>
               </tr>
               <tr>
-                <td class="idx-name">Nikkei 225</td>
-                <td class="idx-level">53,375.60</td>
-                <td class="chg-pos">+0.03%</td>
-                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+                <td class="idx-name">日経225</td>
+                <td class="idx-level">53,322.85</td>
+                <td class="chg-neg">−0.10%</td>
+                <td class="chg-pos">+3.45%</td>
               </tr>
               <tr>
-                <td class="idx-name">Hang Seng</td>
-                <td class="idx-level">27,968.09</td>
-                <td class="chg-pos">+0.51%</td>
-                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+                <td class="idx-name">ハンセン指数</td>
+                <td class="idx-level">27,387.11</td>
+                <td class="chg-neg">−2.08%</td>
+                <td class="chg-pos">+5.82%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">上海総合</td>
+                <td class="idx-level">4,117.95</td>
+                <td class="chg-neg">−0.96%</td>
+                <td class="chg-pos">+4.10%</td>
               </tr>
               <tr>
                 <td class="idx-name">KOSPI</td>
-                <td class="idx-level">5,221.25</td>
-                <td class="chg-pos">+0.98%</td>
-                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+                <td class="idx-level">5,224.36</td>
+                <td class="chg-pos">+0.06%</td>
+                <td class="chg-pos">+8.20%</td>
               </tr>
               <tr>
                 <td class="idx-name">FTSE 100</td>
-                <td class="idx-level">10,233.99</td>
-                <td class="chg-pos">+0.78%</td>
-                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+                <td class="idx-level">10,224.28</td>
+                <td class="chg-pos">+0.52%</td>
+                <td class="chg-pos">+4.85%</td>
               </tr>
               <tr>
                 <td class="idx-name">DAX</td>
-                <td class="idx-level">24,570.83</td>
-                <td class="chg-neg">−1.02%</td>
-                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+                <td class="idx-level">24,527.01</td>
+                <td class="chg-pos">+0.89%</td>
+                <td class="chg-pos">+8.92%</td>
               </tr>
               <tr>
-                <td class="idx-name">Euro Stoxx 50</td>
-                <td class="idx-level">5,957.86</td>
-                <td class="chg-pos">+0.42%</td>
-                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+                <td class="idx-name">ユーロ・ストックス50</td>
+                <td class="idx-level">5,950.16</td>
+                <td class="chg-pos">+0.99%</td>
+                <td class="chg-pos">+7.15%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">SENSEX</td>
+                <td class="idx-level">82,269.78</td>
+                <td class="chg-neg">−0.36%</td>
+                <td class="chg-neg">−2.10%</td>
               </tr>
             </tbody>
           </table>
-          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Data: Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
         </article>
 
-        <!-- ── COMMODITIES & CRYPTO ── -->
+        <!-- コモディティ & 仮想通貨 -->
         <div class="cards-grid">
           <article class="card fade-in">
-            <span class="card-tag market">Commodities 🔥</span>
-            <h3 class="card-headline">Commodities Explode Higher</h3>
+            <span class="card-tag market">コモディティ 📉</span>
+            <h3 class="card-headline">貴金属暴落 — 金・銀が急反落</h3>
             <div style="margin-top: 0.5rem;">
               <div class="yield-row">
-                <span class="yield-label">Gold</span>
-                <span class="yield-value chg-pos">$5,547.40 (+3.88%)</span>
+                <span class="yield-label">金</span>
+                <span class="yield-value chg-neg">$5,126.80 (−4.26%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Silver</span>
-                <span class="yield-value chg-pos">$118.89 (+4.72%)</span>
+                <span class="yield-label">銀</span>
+                <span class="yield-value chg-neg">$101.61 (−11.21%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Copper</span>
-                <span class="yield-value chg-pos">$6.41 (+8.13%)</span>
+                <span class="yield-label">銅</span>
+                <span class="yield-value chg-neg">$6.06 (−2.24%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Crude Oil (WTI)</span>
-                <span class="yield-value chg-pos">$65.14 (+3.05%)</span>
+                <span class="yield-label">WTI原油</span>
+                <span class="yield-value chg-neg">$65.16 (−0.40%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Brent Crude</span>
-                <span class="yield-value chg-pos">$69.26 (+2.81%)</span>
+                <span class="yield-label">ブレント原油</span>
+                <span class="yield-value chg-neg">$69.26 (−0.47%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Natural Gas</span>
-                <span class="yield-value chg-pos">$3.89 (+4.23%)</span>
+                <span class="yield-label">天然ガス</span>
+                <span class="yield-value chg-neg">$3.854 (−1.63%)</span>
               </div>
             </div>
-            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">Across-the-board commodity rally. Copper +8% is the standout — massive one-day move signaling either industrial demand or supply squeeze. Gold and silver continuing their flight-to-safety surge. Oil rising on Iran tensions.</p>
+            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">前日のコモディティ上昇から一転、激しい反転。銀は<span class="stat">−11.2%</span>と数年来最悪の一日下落。金も最高値圏から−4.3%下落。利益確定とマージンコールが巻き戻しを加速させたと見られる。</p>
             <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/commodities/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
-            <span class="card-tag market">Crypto ⬇️</span>
-            <h3 class="card-headline">Crypto Pulls Back</h3>
+            <span class="card-tag market">仮想通貨 📉</span>
+            <h3 class="card-headline">仮想通貨急落 — BTC 83,000ドル割れ</h3>
             <div style="margin-top: 0.5rem;">
               <div class="yield-row">
-                <span class="yield-label">Bitcoin</span>
-                <span class="yield-value chg-neg">$87,946 (−2.26%)</span>
+                <span class="yield-label">ビットコイン</span>
+                <span class="yield-value chg-neg">$82,683 (−5.91%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Ethereum</span>
-                <span class="yield-value chg-neg">$2,930 (−3.34%)</span>
+                <span class="yield-label">イーサリアム</span>
+                <span class="yield-value chg-neg">$2,737 (−6.54%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Solana</span>
-                <span class="yield-value chg-neg">$122.75 (−3.24%)</span>
+                <span class="yield-label">ソラナ</span>
+                <span class="yield-value chg-neg">$116.12 (−5.19%)</span>
               </div>
               <div class="yield-row">
                 <span class="yield-label">BNB</span>
-                <span class="yield-value chg-neg">$889.27 (−1.76%)</span>
+                <span class="yield-value chg-neg">$836.82 (−5.88%)</span>
               </div>
               <div class="yield-row">
                 <span class="yield-label">XRP</span>
-                <span class="yield-value chg-neg">$1.87 (−2.85%)</span>
+                <span class="yield-value chg-neg">$1.76 (−5.81%)</span>
               </div>
             </div>
-            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">BTC now −14.85% from its $126K ATH. SOL down −47.65% from its 52-wk high of $253. Broad weakness — risk-off in digital assets while safe-haven commodities surge. Capital rotating to hard assets.</p>
+            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">BTCは12.6万ドルの史上最高値から<span class="stat">−34.5%</span>。SOLは高値から−54%。貴金属の巻き戻しと連動して広範な仮想通貨売りが加速。全面的なリスク資産売り圧力が続く。</p>
             <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/crypto/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
 
-        <!-- ── BOND MARKETS ── -->
+        <!-- 債券 & 為替 -->
         <div class="cards-grid">
           <article class="card fade-in">
-            <span class="card-tag market">Bonds</span>
-            <h3 class="card-headline">US Treasury Yields — Fed Holds Steady</h3>
+            <span class="card-tag market">債券</span>
+            <h3 class="card-headline">米国債 — リスクオフで利回り低下</h3>
             <div class="yield-curve-visual">
               <div class="yc-bar-wrap">
                 <div class="yc-val">3.48%</div>
                 <div class="yc-bar" style="height: 40px;"></div>
-                <div class="yc-label">2Y</div>
+                <div class="yc-label">2年</div>
               </div>
               <div class="yc-bar-wrap">
-                <div class="yc-val">3.84%</div>
-                <div class="yc-bar" style="height: 47px;"></div>
-                <div class="yc-label">5Y</div>
+                <div class="yc-val">3.81%</div>
+                <div class="yc-bar" style="height: 46px;"></div>
+                <div class="yc-label">5年</div>
               </div>
               <div class="yc-bar-wrap">
-                <div class="yc-val">4.25%</div>
-                <div class="yc-bar" style="height: 53px;"></div>
-                <div class="yc-label">10Y</div>
+                <div class="yc-val">4.23%</div>
+                <div class="yc-bar" style="height: 52px;"></div>
+                <div class="yc-label">10年</div>
               </div>
               <div class="yc-bar-wrap">
-                <div class="yc-val">4.86%</div>
-                <div class="yc-bar" style="height: 62px;"></div>
-                <div class="yc-label">30Y</div>
+                <div class="yc-val">4.85%</div>
+                <div class="yc-bar" style="height: 61px;"></div>
+                <div class="yc-label">30年</div>
               </div>
             </div>
             <div style="margin-top: 0.75rem;">
               <div class="yield-row">
-                <span class="yield-label">2Y–10Y Spread</span>
-                <span class="yield-value chg-pos">+77 bps</span>
+                <span class="yield-label">2年-10年スプレッド</span>
+                <span class="yield-value chg-pos">+75 bps</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Yield Curve</span>
-                <span class="status-badge normal">Normal</span>
+                <span class="yield-label">イールドカーブ</span>
+                <span class="status-badge normal">正常</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Fed Funds Rate</span>
+                <span class="yield-label">FF金利</span>
                 <span class="yield-value">3.50–3.75%</span>
               </div>
             </div>
-            <div class="card-sources"><a class="source-link" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/" target="_blank" rel="noopener">US Treasury <span class="src-arrow">↗</span></a></div>
+            <div class="card-sources"><a class="source-link" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/" target="_blank" rel="noopener">米財務省 <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
-            <span class="card-tag market">Japan Bonds</span>
-            <h3 class="card-headline">JGB &amp; BOJ Policy</h3>
+            <span class="card-tag market">為替</span>
+            <h3 class="card-headline">ドル小幅高 — 円安進行、新興国通貨下落</h3>
             <div style="margin-top: 0.5rem;">
               <div class="yield-row">
-                <span class="yield-label">Japan 10Y JGB</span>
-                <span class="yield-value">2.255% (+2bps)</span>
+                <span class="yield-label">DXY（ドル指数）</span>
+                <span class="yield-value chg-pos">96.56 (+0.28%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">BOJ Policy Rate</span>
-                <span class="yield-value">0.75%</span>
+                <span class="yield-label">ドル/円</span>
+                <span class="yield-value chg-neg">¥154.06 (+0.68%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">Highest Since</span>
-                <span class="yield-value" style="font-size:0.8rem;">Sep 1995</span>
+                <span class="yield-label">ユーロ/ドル</span>
+                <span class="yield-value chg-neg">$1.1925 (−0.39%)</span>
               </div>
               <div class="yield-row">
-                <span class="yield-label">JGB vs UST 10Y</span>
-                <span class="yield-value chg-neg" style="font-size:0.85rem;">−200 bps</span>
+                <span class="yield-label">ポンド/ドル</span>
+                <span class="yield-value chg-neg">$1.3762 (−0.35%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">ドル/人民元</span>
+                <span class="yield-value">¥6.949 (+0.02%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">ドル/ランド</span>
+                <span class="yield-value chg-neg">15.96 (+1.51%)</span>
               </div>
             </div>
-            <p class="card-body" style="margin-top:0.5rem; font-size:0.8rem;">JGB yields continuing to creep higher. The spread vs US 10Y has narrowed from −250bps a year ago to −200bps now. BOJ expected to continue gradual normalization.</p>
-            <div class="card-sources"><a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmdeci/index.htm" target="_blank" rel="noopener">Bank of Japan <span class="src-arrow">↗</span></a></div>
+            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">ドルが4年来安値から反発。円は選挙不確実性と日銀利上げ観測の間で軟調。南アフリカ・ランドはイスラエルとの外交摩擦を受け最大の下落（−1.51%）。DXYは依然として歴史的低水準付近。</p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/currencies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
 
-        <!-- ── SECTOR PERFORMANCE ── -->
+        <!-- セクター -->
         <article class="card fade-in">
-          <span class="card-tag market">Sectors</span>
-          <h3 class="card-headline">S&amp;P 500 Sector Performance (YTD)</h3>
+          <span class="card-tag market">セクター</span>
+          <h3 class="card-headline">S&P 500セクター別パフォーマンス — テック急落、通信好調</h3>
           <table class="index-table">
             <thead>
               <tr>
-                <th>Sector</th>
-                <th>Weight</th>
-                <th>Day %</th>
-                <th style="text-align:right">YTD Return</th>
+                <th>セクター</th>
+                <th>構成比</th>
+                <th>日次%</th>
+                <th style="text-align:right">年初来%</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="idx-name">Basic Materials</td>
-                <td>3.10%</td>
-                <td class="chg-neg">−0.31%</td>
-                <td style="text-align:right" class="chg-pos">+18.40%</td>
+                <td class="idx-name">通信</td>
+                <td>10.63%</td>
+                <td class="chg-pos">+2.66%</td>
+                <td style="text-align:right" class="chg-pos">+4.21%</td>
               </tr>
               <tr>
-                <td class="idx-name">Energy</td>
-                <td>4.44%</td>
-                <td class="chg-neg">−0.40%</td>
-                <td style="text-align:right" class="chg-pos">+10.49%</td>
+                <td class="idx-name">不動産</td>
+                <td>2.14%</td>
+                <td class="chg-pos">+1.41%</td>
+                <td style="text-align:right" class="chg-pos">+2.50%</td>
               </tr>
               <tr>
-                <td class="idx-name">Industrials</td>
-                <td>8.85%</td>
-                <td class="chg-pos">+0.08%</td>
-                <td style="text-align:right" class="chg-pos">+7.90%</td>
+                <td class="idx-name">エネルギー</td>
+                <td>4.52%</td>
+                <td class="chg-pos">+1.20%</td>
+                <td style="text-align:right" class="chg-pos">+12.26%</td>
               </tr>
               <tr>
-                <td class="idx-name">Consumer Defensive</td>
-                <td>4.82%</td>
-                <td class="chg-pos">+0.02%</td>
-                <td style="text-align:right" class="chg-pos">+5.72%</td>
+                <td class="idx-name">金融</td>
+                <td>14.64%</td>
+                <td class="chg-pos">+0.70%</td>
+                <td style="text-align:right" class="chg-neg">−0.99%</td>
               </tr>
               <tr>
-                <td class="idx-name">Utilities</td>
-                <td>2.10%</td>
-                <td class="chg-neg">−0.78%</td>
-                <td style="text-align:right" class="chg-pos">+2.73%</td>
+                <td class="idx-name">資本財</td>
+                <td>8.89%</td>
+                <td class="chg-pos">+0.46%</td>
+                <td style="text-align:right" class="chg-pos">+8.30%</td>
               </tr>
               <tr>
-                <td class="idx-name">Communication</td>
-                <td>10.35%</td>
-                <td class="chg-pos">+0.14%</td>
-                <td style="text-align:right" class="chg-pos">+1.65%</td>
+                <td class="idx-name">生活必需品</td>
+                <td>4.83%</td>
+                <td class="chg-pos">+0.05%</td>
+                <td style="text-align:right" class="chg-pos">+5.76%</td>
               </tr>
               <tr>
-                <td class="idx-name">Real Estate</td>
-                <td>2.12%</td>
-                <td class="chg-pos">+0.39%</td>
-                <td style="text-align:right" class="chg-pos">+1.47%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">Technology</td>
-                <td>29.99%</td>
-                <td class="chg-pos">+0.02%</td>
-                <td style="text-align:right" class="chg-pos">+1.37%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">Consumer Cyclical</td>
-                <td>10.59%</td>
-                <td style="color: var(--text-muted);">0.00%</td>
-                <td style="text-align:right" class="chg-pos">+1.29%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">Healthcare</td>
+                <td class="idx-name">ヘルスケア</td>
                 <td>9.15%</td>
-                <td class="chg-neg">−0.02%</td>
-                <td style="text-align:right" class="chg-neg">−0.39%</td>
+                <td class="chg-neg">−0.16%</td>
+                <td style="text-align:right" class="chg-neg">−0.53%</td>
               </tr>
               <tr>
-                <td class="idx-name">Financial Services</td>
-                <td>14.48%</td>
-                <td class="chg-neg">−0.22%</td>
-                <td style="text-align:right" class="chg-neg">−1.89%</td>
+                <td class="idx-name">一般消費財</td>
+                <td>10.57%</td>
+                <td class="chg-neg">−0.42%</td>
+                <td style="text-align:right" class="chg-pos">+0.87%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">素材</td>
+                <td>3.08%</td>
+                <td class="chg-neg">−1.18%</td>
+                <td style="text-align:right" class="chg-pos">+17.38%</td>
+              </tr>
+              <tr style="background: #fef2f2;">
+                <td class="idx-name">テクノロジー</td>
+                <td>29.43%</td>
+                <td class="chg-neg">−2.00%</td>
+                <td style="text-align:right" class="chg-neg">−0.69%</td>
               </tr>
             </tbody>
           </table>
-          <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">The value/cyclical rotation accelerates. Basic Materials (+18.4% YTD) and Energy (+10.5%) dominating. Tech (+1.4%) massively underperforming despite being 30% of the index. Financial Services is the only sector in negative YTD territory.</p>
+          <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;"><strong>本日の特徴：</strong>テック（−2.00%）がMSFT暴落で急落 ── 最大構成比（29.4%）セクターの下落。通信（+2.66%）が最も好調。年初来リーダーは素材（+17.4%）とエネルギー（+12.3%）。テクは年初来<em>マイナス</em>の−0.69%。グロースからバリューへのローテーションが加速。</p>
           <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/sectors/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
         </article>
 
-        <!-- ── FX & KEY INDICATORS ── -->
-        <article class="card fade-in">
-          <span class="card-tag market">FX &amp; Key Rates</span>
-          <h3 class="card-headline">Currencies &amp; Key Indicators</h3>
-          <div class="indicator-grid">
-            <div class="indicator-item">
-              <div class="indicator-value">96.26</div>
-              <div class="indicator-name">DXY (Dollar Index)</div>
-              <div class="indicator-sub chg-neg">−0.19%</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">¥153.27</div>
-              <div class="indicator-name">USD/JPY</div>
-              <div class="indicator-sub chg-neg">−0.10%</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">$1.197</div>
-              <div class="indicator-name">EUR/USD</div>
-              <div class="indicator-sub chg-pos">+0.08%</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">16.62</div>
-              <div class="indicator-name">VIX</div>
-              <div class="indicator-sub chg-neg">+1.65%</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">3.58%</div>
-              <div class="indicator-name">13-Wk T-Bill</div>
-              <div class="indicator-sub" style="color: var(--text-muted);">Flat</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">$17.15</div>
-              <div class="indicator-name">USD/MXN</div>
-              <div class="indicator-sub chg-neg">−0.21%</div>
-            </div>
-          </div>
-          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/currencies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-        </article>
-
-        <!-- ── KEY EVENTS ── -->
+        <!-- 経済カレンダー -->
         <article class="card featured market fade-in">
-          <span class="card-tag market">Key Events</span>
-          <h3 class="card-headline">Major Economic Events &amp; Central Bank Calendar</h3>
+          <span class="card-tag market">注目イベント</span>
+          <h3 class="card-headline">経済カレンダー＆中央銀行</h3>
           <div class="cards-grid" style="margin-top: 0.75rem;">
             <div>
-              <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">This Week</h4>
+              <h4 style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">今週</h4>
               <div class="event-timeline">
                 <div class="event-item past">
-                  <div class="event-date">Jan 28–29 · DONE</div>
-                  <div class="event-name">FOMC Decision</div>
-                  <div class="event-detail">Held at 3.50–3.75% as expected. Powell press conf done.</div>
+                  <div class="event-date">1月28-29日 · 完了</div>
+                  <div class="event-name">FOMC政策決定</div>
+                  <div class="event-detail">3.50–3.75%に据え置き（10対2）。インフレ「高止まり」に言及。</div>
                 </div>
                 <div class="event-item today">
-                  <div class="event-date">Jan 30 · TOMORROW</div>
-                  <div class="event-name">Q4 GDP Advance Estimate</div>
-                  <div class="event-detail">First estimate of Q4 2025 GDP. Key data point.</div>
+                  <div class="event-date">1月30日 · 本日</div>
+                  <div class="event-name">Q4 GDP速報値</div>
+                  <div class="event-detail">2025年Q4の初回推計。市場が注視。</div>
+                </div>
+                <div class="event-item today">
+                  <div class="event-date">1月30日 · 本日</div>
+                  <div class="event-name">ウォーシュ氏FRB議長指名</div>
+                  <div class="event-detail">FRB議長交代開始。パウエル議長は5月退任。</div>
                 </div>
                 <div class="event-item">
-                  <div class="event-date">Jan 31</div>
-                  <div class="event-name">Gov't Shutdown Deadline</div>
-                  <div class="event-detail">DHS funding expires. Deal or shutdown Friday.</div>
+                  <div class="event-date">1月31日</div>
+                  <div class="event-name">DHS暫定予算期限</div>
+                  <div class="event-detail">2週間延長で時間確保。本格交渉は2月。</div>
                 </div>
               </div>
             </div>
             <div>
-              <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">Coming Up</h4>
+              <h4 style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">今後の予定</h4>
               <div class="event-timeline">
                 <div class="event-item">
-                  <div class="event-date">Feb 6</div>
-                  <div class="event-name">January Jobs Report (NFP)</div>
-                  <div class="event-detail">Critical after Dec's weak 50K print.</div>
+                  <div class="event-date">2月8日</div>
+                  <div class="event-name">衆議院選挙 投開票</div>
+                  <div class="event-detail">自民党、単独過半数を目指す。</div>
                 </div>
                 <div class="event-item">
-                  <div class="event-date">Feb 12</div>
-                  <div class="event-name">January CPI Release</div>
-                  <div class="event-detail">Will inflation stay at 2.7% or break lower?</div>
+                  <div class="event-date">2月6日</div>
+                  <div class="event-name">米1月雇用統計 (NFP)</div>
+                  <div class="event-detail">12月の弱い5万人増の後、回復が焦点。</div>
                 </div>
                 <div class="event-item">
-                  <div class="event-date">Mar</div>
-                  <div class="event-name">BOJ Next Meeting</div>
-                  <div class="event-detail">Markets pricing possible hike to 1.00%.</div>
+                  <div class="event-date">2月12日</div>
+                  <div class="event-name">米1月CPI発表</div>
+                  <div class="event-detail">インフレ動向がFRBの方向性を決定。</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">3月</div>
+                  <div class="event-name">日銀政策決定会合</div>
+                  <div class="event-detail">選挙結果次第で1.00%への利上げ可能性。</div>
                 </div>
               </div>
             </div>
           </div>
-          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
-            <p class="card-body"><strong>Fed stance:</strong> Held at 3.50–3.75% despite Trump pressure. 3 cuts delivered in 2025. Markets now price <span class="stat">1 cut in 2026</span> (June most likely). Extended pause expected. &nbsp;<strong>BOJ stance:</strong> Holding at <span class="stat">0.75%</span> — highest since 1995. Next hike possible in March if inflation holds. FY2026 GDP forecast raised to 1.0%.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">FRB <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm" target="_blank" rel="noopener">日本銀行 <span class="src-arrow">↗</span></a>
           </div>
-          <div class="card-sources"><a class="source-link" href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm" target="_blank" rel="noopener">Bank of Japan <span class="src-arrow">↗</span></a></div>
         </article>
 
       </div>
     </section>
 
-    <!-- ━━━ PREDICTIONS ━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- 🔮 予測 -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <section class="section" id="predictions">
       <div class="section-header">
         <div class="section-icon predict">🔮</div>
-        <h2 class="section-title predict">Predictions</h2>
+        <h2 class="section-title predict">予測</h2>
       </div>
 
       <div class="cards">
         <article class="card featured predict fade-in">
-          <span class="card-tag predict">Week Ahead</span>
-          <h3 class="card-headline">What to Watch This Week</h3>
+          <span class="card-tag predict">今週の注目</span>
+          <h3 class="card-headline">来週の注目ポイント</h3>
           <p class="card-body">
-            <strong>🔑 Q4 GDP (Jan 30):</strong> The most important data point of the week. Consensus expects moderation from Q3's 4.4% pace. A strong print supports the "no more cuts" narrative; a weak print reopens the door for June easing.<br><br>
-            <strong>⚠️ Government Shutdown (Jan 31):</strong> DHS funding deadline Friday. A shutdown would be disruptive but likely short-lived — both sides signaling willingness to deal. Market impact: modest if brief, but a prolonged closure would hit consumer confidence further.<br><br>
-            <strong>🇮🇷 Iran Tensions:</strong> With Trump actively weighing strikes, oil is pricing in geopolitical risk premium. Watch Brent — a move above $75 would signal the market is pricing in conflict probability. Gold at $5,547 is already in "fear mode."<br><br>
-            <strong>📊 Expected Moves:</strong> S&amp;P 500 likely range-bound (6,920–7,020) pending GDP. VIX slightly elevated at 16.62 — markets sensing more vol ahead. Commodities may continue to outperform if Iran escalation continues.
+            <strong>🇯🇵 衆院選（2月8日）：</strong>日本にとって数年に一度の重要イベント。自民党が単独過半数を獲得すれば、日経平均は2〜3%上昇し、円安がさらに進む可能性。高市首相が構造改革＋財政拡大の信任を得る。結果が期待を下回れば、日経下落・円高のリスク。<br><br>
+            <strong>📊 米1月雇用統計（2月6日）：</strong>12月の弱い5万人増が市場を動揺させた。15万人超の回復があれば景気後退懸念が和らぐ。10万人を下回れば6月利下げが確実視される。<br><br>
+            <strong>🇮🇷 イラン情勢：</strong>米軍増強が継続中。軍事行動があれば原油は即座に80ドル超、金は再び最高値更新の可能性。EUのIRGCテロ指定は外交圧力を強化するが、エスカレーション回避は不透明。現在最大の地政学リスク。<br><br>
+            <strong>💻 MSFT余波：</strong>マイクロソフトの3,600億ドル消失はAI設備投資の持続性に疑問を投げかけた。来週は他のビッグテック銘柄への波及に注目。市場がこれを消化できれば、逆に強気サイン。<br><br>
+            <strong>📈 予想レンジ：</strong>S&P 500は6,900〜7,050。VIX 17.87は不確実性の高まりを示唆。日経は選挙世論調査次第で52,500〜54,500のレンジ。
           </p>
-          <div class="card-sources"><a class="source-link" href="https://www.federalreserve.gov/" target="_blank" rel="noopener">Federal Reserve <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bea.gov/" target="_blank" rel="noopener">BEA <span class="src-arrow">↗</span></a></div>
         </article>
 
         <article class="card featured predict fade-in">
-          <span class="card-tag predict">2026 Outlook</span>
-          <h3 class="card-headline">Year Outlook — Major Themes &amp; Predictions</h3>
+          <span class="card-tag predict">2026年見通し</span>
+          <h3 class="card-headline">年間見通し — 主要テーマ</h3>
           <p class="card-body">
-            <strong>1. The Great Rotation Continues:</strong> Basic Materials (+18.4% YTD) and Energy (+10.5%) are crushing Tech (+1.4%). Value and cyclicals are in the driver's seat. We expect this to persist through H1 as inflation stays sticky and rates remain elevated.<br><br>
-            <strong>2. AI Capital Reaches Escape Velocity:</strong> Private AI valuations (Anthropic $354B, xAI $250B) are approaching public mega-cap territory. The question isn't whether there's a bubble — it's whether the bubble has years left to inflate. We think yes: enterprise AI adoption is still early innings.<br><br>
-            <strong>3. Commodity Supercycle Signals:</strong> Gold at $5,547, copper surging 8% in a day, Basic Materials leading all sectors. Infrastructure spending, defense buildup, and supply constraints are creating structural demand. This isn't just a fear trade — it's a regime change in commodity markets.<br><br>
-            <strong>4. Geopolitical Risk Premium Is Here to Stay:</strong> Iran tensions, Ukraine drone warfare, Ethiopia re-igniting, Sudan civil war — the world is not de-risking. Defense tech (Anduril $79.6B, SpaceX $854.5B) is the investment theme of the decade. Expect elevated oil and gold through 2026.<br><br>
-            <strong>5. Japan's Normalization:</strong> BOJ at 0.75%, JGB 10Y at 2.255%. We expect BOJ to reach 1.25% by year-end. USD/JPY likely to drift toward 145 as the rate differential narrows. J-REITs and high-dividend Japan equities will outperform growth.
+            <strong>1. グレート・ローテーション加速：</strong>素材（年初来+17.4%）とエネルギー（+12.3%）がテック（−0.7%）を圧倒。本日のMSFT暴落がその象徴。インフレの粘着性と高金利が続く中、バリュー株とシクリカル株が主導権を握る。この傾向は上半期まで続くと予想。<br><br>
+            <strong>2. AI現実チェック：</strong>MSFTの−3,600億ドルの日は、AI設備投資の「成果を見せろ」フェーズの始まり。AI基盤に巨額投資する企業は投資家からの厳しい精査に直面する。未公開AI企業（Anthropic 3,543億ドル、xAI 2,501億ドル）も公開市場のセンチメント変化で評価圧力を受ける可能性。<br><br>
+            <strong>3. コモディティ・スーパーサイクル（ボラティリティ付き）：</strong>本日の貴金属暴落はスーパーサイクルの否定ではなく、投機的過熱の解消。金5,100ドル超、銀100ドル超は依然として驚異的な水準。防衛、インフラ、供給制約という構造的需要ドライバーは健在。<br><br>
+            <strong>4. 日本の正常化の年：</strong>自民党が選挙で勝利すれば、日銀は年央までに1.00%、年末には1.25%へ移行する可能性。ドル円は145〜150円レンジに向かう見通し。企業ガバナンス改革のモメンタムで日本株はアウトパフォームが期待される。<br><br>
+            <strong>5. FRB議長交代リスク：</strong>ウォーシュ氏指名は不確実性をもたらす。承認公聴会で独立性vs政治的圧力に関するシグナルに市場は注目。政治的動機による利下げの示唆があれば債券市場が動揺する恐れ。
           </p>
-          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a></div>
+          <div class="card-sources">
+            <a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- ━━━ BOTTOM LINE ━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ⚡ まとめ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <section class="section" id="bottomline">
       <div class="bottom-line fade-in">
         <div class="section-header">
           <div class="section-icon bottom">⚡</div>
-          <h2 class="section-title">The Bottom Line</h2>
+          <h2 class="section-title">まとめ</h2>
         </div>
 
-        <p>Fed holds at 3.50–3.75% despite White House pressure — the central bank's independence remains intact, for now. But the real story today is commodities: copper +8%, gold $5,547, silver +4.7% — a broad-based commodity explosion that dwarfs the flat equity session. This isn't noise; it's a signal. Iran strike speculation is adding an oil risk premium, the government shutdown deadline looms Friday, and crypto is selling off (BTC −2.3%) while hard assets surge. The Great Rotation — from tech to materials, from digital to physical, from growth to value — is the defining trade of early 2026. Tomorrow's Q4 GDP print will determine whether the economy can sustain this without rate cuts.</p>
-        <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.aljazeera.com/news/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a></div>
+        <p>本日は3つの衝突が市場を定義した。第一に、マイクロソフトの3,600億ドル蒸発 ── AI設備投資に対する市場初の「証拠を見せろ」モメント。テクセクターを−2%に引きずり下ろし、年初来マイナスに転落させた。第二に、貴金属の激しい反転：銀が−11.2%暴落、金が−4.3%下落し、前日のユーフォリアを数時間で巻き戻した。第三に、仮想通貨も同調してBTCが83,000ドル割れ（−5.9%）、史上最高値から3分の1を失った。一方、トランプ大統領のFRB批判派ウォーシュ氏のFRB議長指名は、中央銀行の不確実性に新たな章を開く。2月8日の衆院選が来週最大のカタリストとなる可能性 ── 自民党が大勝すれば日経上昇と円安加速が期待され、高市首相は改革の信任を得る。世界はあらゆる資産クラスで同時にリスクの再評価を進めている。身構えよ。</p>
+        <div class="card-sources">
+          <a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp;
+          <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp;
+          <a class="source-link" href="https://www.ft.com/world" target="_blank" rel="noopener">Financial Times <span class="src-arrow">↗</span></a> &nbsp;
+          <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>CEO Daily Briefing · Jan 29, 2026 · Curated intelligence for executive decision-makers</p>
+    <p>CEOデイリーブリーフィング · 2026年1月30日 · 経営者のための厳選インテリジェンス</p>
   </footer>
 
   <script>
@@ -1460,7 +1452,7 @@
     const gaugeNeedle = document.getElementById('gaugeNeedle');
     const gaugeScore = document.getElementById('gaugeScore');
     if (gaugeNeedle) {
-      const score = 62;
+      const score = 58;
       const angle = -90 + (score / 100) * 180;
       const gaugeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
