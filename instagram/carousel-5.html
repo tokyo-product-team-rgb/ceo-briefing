@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1080px; background: #0F172A; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif; color: #F8FAFC; display: flex; flex-direction: column; padding: 80px; overflow: hidden; }
+.tag { display: inline-flex; align-items: center; gap: 10px; background: rgba(59,130,246,0.15); color: #3B82F6; font-size: 20px; font-weight: 600; padding: 10px 22px; border-radius: 8px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; width: fit-content; }
+.headline { font-size: 52px; font-weight: 800; line-height: 1.15; margin-bottom: 56px; letter-spacing: -1px; }
+.highlight { color: #3B82F6; }
+.valuations { display: flex; flex-direction: column; gap: 20px; margin-top: auto; }
+.val-row { display: flex; align-items: center; gap: 24px; background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.12); border-radius: 16px; padding: 28px 36px; }
+.val-name { font-size: 28px; font-weight: 700; flex: 1; }
+.val-amount { font-size: 36px; font-weight: 800; color: #3B82F6; }
+.val-tag { font-size: 16px; color: #64748B; background: #1E293B; padding: 6px 14px; border-radius: 20px; }
+.bottom-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: #3B82F6; }
+.slide-num { position: absolute; top: 40px; right: 60px; font-size: 18px; color: #475569; font-weight: 500; }
+</style></head><body>
+<div class="slide-num">05 / 10</div>
+<div class="tag">💻 Tech & VC</div>
+<div class="headline">Mega Rounds:<br><span class="highlight">Fintech & AI</span> Dominate</div>
+<div class="valuations">
+  <div class="val-row">
+    <div class="val-name">xAI</div>
+    <div class="val-amount">$250B</div>
+    <div class="val-tag">$20B raise</div>
+  </div>
+  <div class="val-row">
+    <div class="val-name">Stripe</div>
+    <div class="val-amount">$111B</div>
+    <div class="val-tag">Payments</div>
+  </div>
+  <div class="val-row">
+    <div class="val-name">Anduril</div>
+    <div class="val-amount">$79.6B</div>
+    <div class="val-tag">Defense AI</div>
+  </div>
+  <div class="val-row">
+    <div class="val-name">Ramp</div>
+    <div class="val-amount">$32.7B</div>
+    <div class="val-tag">Fintech</div>
+  </div>
+</div>
+<div class="bottom-bar"></div>
+</body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1080px; background: #0F172A; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif; color: #F8FAFC; display: flex; flex-direction: column; padding: 80px; overflow: hidden; }
+.tag { display: inline-flex; align-items: center; gap: 10px; background: rgba(59,130,246,0.15); color: #3B82F6; font-size: 20px; font-weight: 600; padding: 10px 22px; border-radius: 8px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; width: fit-content; }
+.headline { font-size: 56px; font-weight: 800; line-height: 1.15; margin-bottom: 48px; letter-spacing: -1px; }
+.highlight { color: #3B82F6; }
+.stat-row { display: flex; gap: 24px; margin-top: auto; }
+.stat-card { flex: 1; background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.15); border-radius: 16px; padding: 32px 24px; text-align: center; }
+.stat-value { font-size: 44px; font-weight: 800; color: #3B82F6; margin-bottom: 8px; }
+.stat-value.green { color: #10B981; }
+.stat-label { font-size: 18px; color: #94A3B8; font-weight: 500; }
+.stat-sub { font-size: 16px; color: #64748B; margin-top: 4px; }
+.bottom-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: #3B82F6; }
+.slide-num { position: absolute; top: 40px; right: 60px; font-size: 18px; color: #475569; font-weight: 500; }
+</style></head><body>
+<div class="slide-num">04 / 10</div>
+<div class="tag">💻 Tech & VC</div>
+<div class="headline">Intel Surges<br><span class="highlight">+11%</span> in a Day</div>
+<div class="stat-row">
+  <div class="stat-card">
+    <div class="stat-value green">+11%</div>
+    <div class="stat-label">Intel</div>
+    <div class="stat-sub">Single-day surge</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$250B</div>
+    <div class="stat-label">xAI Valuation</div>
+    <div class="stat-sub">$20B new raise</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$79.6B</div>
+    <div class="stat-label">Anduril</div>
+    <div class="stat-sub">Defense AI leader</div>
+  </div>
+</div>
+<div class="bottom-bar"></div>
+</body></html>
