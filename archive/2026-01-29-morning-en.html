@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Daily Briefing — Jan 29, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e8e5e1;
+      --accent-geo: #1e3a5f;
+      --accent-tech: #6c3ea0;
+      --accent-japan: #c23b22;
+      --accent-market: #0d6e4f;
+      --accent-predict: #b45309;
+      --accent-bottom: #1a1a1a;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 8px;
+      --green: #16a34a;
+      --red: #dc2626;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .masthead {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .section-icon.geo { background: #e8eef5; }
+    .section-icon.tech { background: #ede6f6; }
+    .section-icon.japan { background: #fce8e5; }
+    .section-icon.market { background: #e6f5ef; }
+    .section-icon.predict { background: #fef3c7; }
+    .section-icon.bottom { background: #f0f0f0; }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title.geo { color: var(--accent-geo); }
+    .section-title.tech { color: var(--accent-tech); }
+    .section-title.japan { color: var(--accent-japan); }
+    .section-title.market { color: var(--accent-market); }
+    .section-title.predict { color: var(--accent-predict); }
+    .section-title.bottom { color: var(--accent-bottom); }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2em 0.6em;
+      border-radius: 4px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-tag.geo { background: #e8eef5; color: var(--accent-geo); }
+    .card-tag.tech { background: #ede6f6; color: var(--accent-tech); }
+    .card-tag.japan { background: #fce8e5; color: var(--accent-japan); }
+    .card-tag.market { background: #e6f5ef; color: var(--accent-market); }
+    .card-tag.predict { background: #fef3c7; color: var(--accent-predict); }
+
+    .card.featured {
+      border-left: 4px solid;
+      padding-left: 1.5rem;
+    }
+    .card.featured.geo { border-left-color: var(--accent-geo); }
+    .card.featured.tech { border-left-color: var(--accent-tech); }
+    .card.featured.japan { border-left-color: var(--accent-japan); }
+    .card.featured.market { border-left-color: var(--accent-market); }
+    .card.featured.predict { border-left-color: var(--accent-predict); }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+
+    .bottom-line {
+      background: var(--text);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 2rem 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .bottom-line .section-header {
+      border-bottom-color: rgba(255,255,255,0.15);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bottom-line .section-icon { background: rgba(255,255,255,0.12); }
+    .bottom-line .section-title { color: #fff; }
+
+    .bottom-line p {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--text);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-body .stat { font-size: 0.95rem; }
+
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .index-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0.5rem 0.6rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .index-table td {
+      padding: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .index-table tr:last-child td { border-bottom: none; }
+    .index-table .idx-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+    .index-table .idx-level {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    .yield-curve-visual {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      gap: 4px;
+      height: 80px;
+      padding: 0.5rem 0;
+      margin-top: 0.5rem;
+    }
+    .yc-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+    }
+    .yc-bar {
+      width: 100%;
+      max-width: 50px;
+      border-radius: 3px 3px 0 0;
+      background: linear-gradient(180deg, var(--accent-market), #1aab7a);
+      transition: height 0.5s ease;
+    }
+    .yc-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .yc-val {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+    .health-gauge {
+      position: relative;
+      width: 200px;
+      height: 110px;
+      overflow: hidden;
+    }
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #dc2626 0deg,
+        #f59e0b 72deg,
+        #facc15 108deg,
+        #22c55e 144deg,
+        #16a34a 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 60px, black 61px);
+      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
+    }
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 75px;
+      background: var(--text);
+      border-radius: 2px;
+      transform-origin: bottom center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--text);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .gauge-score {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 0.25rem;
+    }
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 0.15rem;
+    }
+    .gauge-scale span {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .indicator-item {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--bg);
+      border-radius: 6px;
+    }
+    .indicator-value {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .indicator-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .indicator-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+
+    .methodology-toggle {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-market);
+      cursor: pointer;
+      margin-top: 0.75rem;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .methodology-toggle .arrow {
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    .methodology-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .methodology-content.open {
+      max-height: 500px;
+    }
+    .methodology-content p {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .event-timeline {
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    .event-timeline::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent-market), #c8e6d9);
+      border-radius: 1px;
+    }
+    .event-item {
+      position: relative;
+      padding: 0.4rem 0 0.6rem;
+    }
+    .event-item::before {
+      content: '';
+      position: absolute;
+      left: -1.25rem;
+      top: 0.65rem;
+      width: 10px;
+      height: 10px;
+      background: var(--accent-market);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .event-item.past::before {
+      background: var(--text-muted);
+    }
+    .event-item.today::before {
+      background: var(--accent-market);
+      box-shadow: 0 0 0 3px rgba(13,110,79,0.2);
+    }
+    .event-date {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent-market);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .event-item.past .event-date { color: var(--text-muted); }
+    .event-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.1rem;
+    }
+    .event-detail {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 0.05rem;
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.2em 0.7em;
+      border-radius: 10px;
+    }
+    .status-badge.normal { background: #dcfce7; color: #166534; }
+    .status-badge.caution { background: #fef9c3; color: #854d0e; }
+    .status-badge.alert { background: #fecaca; color: #991b1b; }
+
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      .cards-grid-3 { grid-template-columns: 1fr; }
+    }
+
+    .yield-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .yield-row:last-child { border-bottom: none; }
+    .yield-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .yield-value {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .source-link:hover {
+      color: var(--text-secondary);
+    }
+    .source-link .src-arrow {
+      font-size: 0.6rem;
+      margin-left: 0.1rem;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .source-link:hover .src-arrow {
+      transform: translate(1px, -1px);
+    }
+    .card-sources {
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--border);
+    }
+    .bottom-line .card-sources {
+      border-top-color: rgba(255,255,255,0.12);
+    }
+    .bottom-line .source-link {
+      color: rgba(255,255,255,0.45);
+    }
+    .bottom-line .source-link:hover {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1) .card { animation-delay: 0.05s; }
+    .section:nth-child(1) .card:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(1) .card:nth-child(3) { animation-delay: 0.15s; }
+    .section:nth-child(1) .card:nth-child(4) { animation-delay: 0.2s; }
+    .section:nth-child(1) .card:nth-child(5) { animation-delay: 0.25s; }
+
+    .section:nth-child(2) .card { animation-delay: 0.15s; }
+    .section:nth-child(2) .card:nth-child(2) { animation-delay: 0.2s; }
+    .section:nth-child(2) .card:nth-child(3) { animation-delay: 0.25s; }
+    .section:nth-child(2) .card:nth-child(4) { animation-delay: 0.3s; }
+
+    .section:nth-child(3) .card { animation-delay: 0.25s; }
+    .section:nth-child(3) .card:nth-child(2) { animation-delay: 0.3s; }
+    .section:nth-child(3) .card:nth-child(3) { animation-delay: 0.35s; }
+
+    @media print {
+      body { background: #fff; }
+      .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+      .bottom-line { background: #333; }
+      .nav-pills { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ━━━ MASTHEAD ━━━ -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="overline">Intelligence Brief</div>
+      <h1>CEO Daily Briefing</h1>
+      <div class="edition-date">Thursday, January 29, 2026</div>
+      <div class="edition-sub">Geopolitics · Tech & VC · Japan · Markets & Economy · Predictions</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <!-- ━━━ NAV ━━━ -->
+  <nav class="nav-pills">
+    <a href="#geopolitics" class="nav-pill">🌍 Geopolitics</a>
+    <a href="#tech" class="nav-pill">🚀 Tech & VC</a>
+    <a href="#japan" class="nav-pill">🇯🇵 Japan</a>
+    <a href="#markets" class="nav-pill">📈 Markets</a>
+    <a href="#predictions" class="nav-pill">🔮 Predictions</a>
+    <a href="#bottomline" class="nav-pill">⚡ Bottom Line</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- ━━━ GEOPOLITICS & MACRO ━━━ -->
+    <section class="section" id="geopolitics">
+      <div class="section-header">
+        <div class="section-icon geo">🌍</div>
+        <h2 class="section-title geo">Geopolitics &amp; Macro</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">US Domestic</span>
+          <h3 class="card-headline">Government Shutdown Looms — Democrats Draw Line on ICE Reform</h3>
+          <p class="card-body">Democrats threatening to block DHS funding unless ICE reform measures are implemented, risking a partial government shutdown by Friday. Trump and Schumer reportedly moving toward a possible deal, but it remains fragile. Tom Homan deployed to Minneapolis to oversee immigration crackdown after two fatal shootings by federal agents in under a month. The shutdown showdown comes at a sensitive moment — right after the Fed decision.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cn9zp0nyvxdo" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://apnews.com/article/government-shutdown-dhs-ice" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">Middle East</span>
+          <h3 class="card-headline">Trump Weighs Major Strike on Iran — Nuclear Talks Stalled</h3>
+          <p class="card-body">Multiple sources confirm Trump is actively weighing military strikes on Iran to <strong>inspire renewed protests</strong> and regime pressure, as nuclear discussions show no progress. Seven possible scenarios range from targeted strikes to full regime change. Meanwhile, a US warship has arrived in the Middle East, visibly increasing military posture in the region.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/ce3kenge1k9o" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.reuters.com/world/trump-iran-strikes-protests/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag geo">UK–China</span>
+            <h3 class="card-headline">Starmer Secures Visa-Free Travel Deal with China</h3>
+            <p class="card-body">UK PM announces UK citizens will be able to travel to China visa-free for up to 30 days. Part of a broader charm offensive by Beijing to position itself as a stable partner while Trump alienates allies.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/live/cly9p5kr2q7t" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag geo">China</span>
+            <h3 class="card-headline">China Executes 11 Myanmar Scam Mafia Members</h3>
+            <p class="card-body">Members of the notorious "Ming family" criminal group executed. Ran massive scam centres in Myanmar. A dramatic display of China's crackdown on cross-border cybercrime networks.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cx2gdrvy9gjo" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.aljazeera.com/news/2026/1/29/china-executes-11-linked-to-myanmar-scam-operations-state-media" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag geo">Africa</span>
+            <h3 class="card-headline">Ethiopia: Govt vs Tigrayan Forces Clashes Erupt</h3>
+            <p class="card-body">"Deteriorating" situation causes suspension of flights. Security and diplomatic sources report renewed fighting despite the 2022 peace deal. A major test for the Abiy government.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/2026/1/29/clashes-between-government-troops-and-tigrayan-forces-erupt-in-ethiopia" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag geo">Sudan</span>
+            <h3 class="card-headline">Dozens Killed in RSF Drone Attack</h3>
+            <p class="card-body">RSF drone attack in South Kordofan's Dilling town kills dozens, just one day after Sudan's military declared an end to the RSF siege there. The civil war enters a grim new phase.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/2026/1/29/dozens-killed-in-rsf-drone-attack-in-war-torn-sudans-south-kordofan" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag geo">Syria</span>
+            <h3 class="card-headline">Syria Grants Citizenship to Stateless Kurds</h3>
+            <p class="card-body">Interior Minister orders immediate citizenship for all listed as stateless, with Feb 5 deadline for rollout. A major shift following gains against the SDF.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/2026/1/29/syria-grants-immediate-citizenship-to-kurds-in-wake-of-gains-against-sdf" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag geo">India</span>
+            <h3 class="card-headline">Court Ruling Rattles Foreign Investors</h3>
+            <p class="card-body">A ruling on a 2018 deal spooks investors — fears it could open old transactions to tax scrutiny. Comes after Ajit Pawar's death left a vacuum in Maharashtra's politics.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cz9v42ep8n0o" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ━━━ TECH & VC ━━━ -->
+    <section class="section" id="tech">
+      <div class="section-header">
+        <div class="section-icon tech">🚀</div>
+        <h2 class="section-title tech">Tech &amp; VC</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured tech fade-in">
+          <span class="card-tag tech">Semiconductors</span>
+          <h3 class="card-headline">Intel Surges 11% — Biggest Single-Day Jump in Months</h3>
+          <p class="card-body">Intel ($48.79) rocketed <span class="stat">+11.07%</span> on heavy volume (180M shares vs 98M avg). Up <span class="stat">+143.78%</span> over the past 52 weeks from its $17.67 low. The turnaround narrative is gaining steam as the company restructures around AI and foundry services. Meanwhile, NVIDIA ($191.52) added +1.59% — valuation at <span class="stat">$4.66 trillion</span>.</p>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/quote/INTC/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <article class="card featured tech fade-in">
+          <span class="card-tag tech">AI Mega-Rounds</span>
+          <h3 class="card-headline">xAI Raises $20B Series E — Valued at $250B</h3>
+          <p class="card-body">Elon Musk's AI company closed a <span class="stat">$20 billion</span> Series E on January 5, bringing total funding to $37.5B. Valuation up <span class="stat">+279%</span> over the past year. Meanwhile, Anduril raised $500M Series G-1 at $79.6B (Jan 13) for defense tech. The AI + defense capital firehose shows no sign of slowing.</p>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/quote/XAAI.PVT/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag tech">AI Valuations</span>
+            <h3 class="card-headline">Private AI Giants — Valuations Soaring</h3>
+            <p class="card-body">
+              <strong>OpenAI:</strong> $500B (+153% YoY)<br>
+              <strong>Anthropic:</strong> $354B (+387% YoY)<br>
+              <strong>xAI:</strong> $250B (+279% YoY)<br>
+              <strong>Databricks:</strong> $139B (+101% YoY)<br>
+              AI companies are now rivaling the market caps of major public companies.
+            </p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/private-companies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag tech">Defense Tech</span>
+            <h3 class="card-headline">Anduril: $79.6B — Defense AI Breakout</h3>
+            <p class="card-body">Just raised $500M Series G-1 on Jan 13. Total funding: $6.95B. Defense and government AI is the hottest sector outside pure-play AI labs. SpaceX ($854.5B) also growing as space + defense converge.</p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/quote/ANIN.PVT/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag tech">Fintech</span>
+            <h3 class="card-headline">Stripe at $111B — Ramp at $32.7B</h3>
+            <p class="card-body">Stripe ($110.9B, +59% YoY) surging on a tender offer. Ramp ($32.7B, +163% YoY) raised $300M Series E-3. Fintech is back — B2B financial infrastructure proving its staying power.</p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/private-companies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag tech">Top Movers</span>
+            <h3 class="card-headline">Notable Stock Moves Today</h3>
+            <p class="card-body">
+              <strong>INTC:</strong> +11.07% ($48.79)<br>
+              <strong>DNN:</strong> +9.39% ($4.31) — uranium play<br>
+              <strong>T (AT&T):</strong> +4.65% ($24.07)<br>
+              <strong>NVDA:</strong> +1.59% ($191.52)<br>
+              <strong>ONDS:</strong> +626% over 52 weeks
+            </p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/stocks/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ━━━ JAPAN ━━━ -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <div class="section-icon japan">🇯🇵</div>
+        <h2 class="section-title japan">Japan</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured japan fade-in">
+          <span class="card-tag japan">Markets</span>
+          <h3 class="card-headline">Nikkei 225 Flat at 53,375 — JGB Yields Creep Higher</h3>
+          <p class="card-body">Nikkei 225 closed at <span class="stat">53,375.60</span> (+0.03%), barely moving as markets digested global crosscurrents. TOPIX gained +0.28% to 3,545. Night futures edged up to 53,420 (+0.20%). The <span class="stat">10Y JGB yield</span> climbed to 2.255% (+2bps), near 30-year highs. USD/JPY at <span class="stat">¥153.27</span> — yen weakening slightly as dollar finds footing despite the weak DXY.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/markets/worldidx/" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://finance.yahoo.com/quote/%5EN225/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag japan">BOJ</span>
+            <h3 class="card-headline">BOJ Holding at 0.75% — Next Hike Signal Awaited</h3>
+            <p class="card-body">BOJ held at 0.75% in January (8–1 vote). Raised FY2026 GDP forecast to 1.0%. Market consensus points to a March or April hike to 1.00%. JGB 10Y at 2.255% — highest since mid-1990s. The yield gap vs UST 10Y has narrowed to −200bps.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmdeci/index.htm" target="_blank" rel="noopener">Bank of Japan <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag japan">FX</span>
+            <h3 class="card-headline">USD/JPY ¥153.27 — Yen Index Weakens</h3>
+            <p class="card-body">Japanese Yen Index fell −0.66%. EUR/JPY at ¥183.38. AUD/JPY at ¥108.31 (+0.48%). The yen is caught between BOJ tightening expectations and carry-trade demand. Real Estate and high-dividend sectors outperforming domestically.</p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/quote/JPY%3DX/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <article class="card fade-in">
+          <span class="card-tag japan">Domestic</span>
+          <h3 class="card-headline">Japan Domestic Highlights</h3>
+          <p class="card-body">High-dividend stocks outperforming strongly — Nikkei High Dividend 50 up +0.84% today. J-REITs surging with REIT index +0.93%, ESG-REIT +0.94%. Growth market (ex-Mothers) flat at +0.06%. Standard market slightly negative at −0.03%. The "value over growth" rotation continues in Japan, mirroring the global trend.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/markets/worldidx/" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ━━━ MARKETS & ECONOMY ━━━ -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <div class="section-icon market">📈</div>
+        <h2 class="section-title market">Markets &amp; Economy</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- ── ECONOMIC HEALTH SCORE ── -->
+        <article class="card featured market fade-in">
+          <span class="card-tag market">Health Score</span>
+          <h3 class="card-headline">Economic Health Composite — Moderately Healthy</h3>
+          <div class="health-gauge-wrap">
+            <div class="health-gauge">
+              <div class="gauge-bg"></div>
+              <div class="gauge-needle" id="gaugeNeedle">
+                <div class="gauge-dot"></div>
+              </div>
+            </div>
+            <div class="gauge-scale">
+              <span>0</span>
+              <span>50</span>
+              <span>100</span>
+            </div>
+            <div class="gauge-score" id="gaugeScore">62</div>
+            <div class="gauge-score-label">out of 100</div>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">4.4%</div>
+              <div class="indicator-name">GDP Growth (Q3)</div>
+              <div class="indicator-sub chg-pos">▲ Strong</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">4.4%</div>
+              <div class="indicator-name">Unemployment</div>
+              <div class="indicator-sub chg-neg">▲ Elevated</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">2.7%</div>
+              <div class="indicator-name">CPI Inflation</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● Above Target</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">56.4</div>
+              <div class="indicator-name">Consumer Sent.</div>
+              <div class="indicator-sub chg-neg">▼ Weak</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">51.9</div>
+              <div class="indicator-name">Mfg PMI</div>
+              <div class="indicator-sub chg-pos">▲ Expanding</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">16.62</div>
+              <div class="indicator-name">VIX</div>
+              <div class="indicator-sub chg-pos">● Calm</div>
+            </div>
+          </div>
+          <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▸</span> How is this calculated?
+          </div>
+          <div class="methodology-content">
+            <p>Composite of 7 components: <strong>GDP Growth</strong> (20%) — Q3 2025 annualized; <strong>Employment</strong> (20%) — unemployment rate + NFP payrolls; <strong>Inflation</strong> (15%) — CPI vs 2% target; <strong>Consumer Confidence</strong> (15%) — Michigan sentiment; <strong>Manufacturing</strong> (10%) — S&amp;P Global PMI; <strong>Market Conditions</strong> (10%) — equity levels + VIX; <strong>Leading Indicators</strong> (10%) — LEI + yield curve. Each scored 0–100 and weighted. Score of 62 = moderately healthy with notable risks from shutdown uncertainty, weak jobs, and stalled Fed easing.</p>
+          </div>
+          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">Data: FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bea.gov/" target="_blank" rel="noopener">BEA <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- ── EQUITY MARKETS ── -->
+        <article class="card fade-in">
+          <span class="card-tag market">Equities</span>
+          <h3 class="card-headline">Equity Markets — Flat Session Post-Fed</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">S&amp;P 500 at <span class="stat">6,978.03</span> — essentially unchanged. Fed held rates at 3.50–3.75% as expected. Markets digesting the decision with minimal reaction. Intel the standout at +11%. Commodities dramatically outperforming equities today. YTD, S&amp;P is +2.35%. DXY at 96.26 (−0.19%).</p>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Level</th>
+                <th>Day %</th>
+                <th>YTD %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">S&amp;P 500</td>
+                <td class="idx-level">6,978.03</td>
+                <td class="chg-neg">−0.01%</td>
+                <td class="chg-pos">+2.35%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nasdaq</td>
+                <td class="idx-level">23,857.45</td>
+                <td class="chg-pos">+0.17%</td>
+                <td class="chg-pos">+1.37%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Dow Jones</td>
+                <td class="idx-level">49,015.60</td>
+                <td class="chg-pos">+0.02%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Russell 2000</td>
+                <td class="idx-level">2,653.55</td>
+                <td class="chg-neg">−0.49%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nikkei 225</td>
+                <td class="idx-level">53,375.60</td>
+                <td class="chg-pos">+0.03%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Hang Seng</td>
+                <td class="idx-level">27,968.09</td>
+                <td class="chg-pos">+0.51%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">KOSPI</td>
+                <td class="idx-level">5,221.25</td>
+                <td class="chg-pos">+0.98%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">FTSE 100</td>
+                <td class="idx-level">10,233.99</td>
+                <td class="chg-pos">+0.78%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">DAX</td>
+                <td class="idx-level">24,570.83</td>
+                <td class="chg-neg">−1.02%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Euro Stoxx 50</td>
+                <td class="idx-level">5,957.86</td>
+                <td class="chg-pos">+0.42%</td>
+                <td style="text-align:right; font-size: 0.78rem; color: var(--text-muted);">—</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Data: Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- ── COMMODITIES & CRYPTO ── -->
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag market">Commodities 🔥</span>
+            <h3 class="card-headline">Commodities Explode Higher</h3>
+            <div style="margin-top: 0.5rem;">
+              <div class="yield-row">
+                <span class="yield-label">Gold</span>
+                <span class="yield-value chg-pos">$5,547.40 (+3.88%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Silver</span>
+                <span class="yield-value chg-pos">$118.89 (+4.72%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Copper</span>
+                <span class="yield-value chg-pos">$6.41 (+8.13%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Crude Oil (WTI)</span>
+                <span class="yield-value chg-pos">$65.14 (+3.05%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Brent Crude</span>
+                <span class="yield-value chg-pos">$69.26 (+2.81%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Natural Gas</span>
+                <span class="yield-value chg-pos">$3.89 (+4.23%)</span>
+              </div>
+            </div>
+            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">Across-the-board commodity rally. Copper +8% is the standout — massive one-day move signaling either industrial demand or supply squeeze. Gold and silver continuing their flight-to-safety surge. Oil rising on Iran tensions.</p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/commodities/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag market">Crypto ⬇️</span>
+            <h3 class="card-headline">Crypto Pulls Back</h3>
+            <div style="margin-top: 0.5rem;">
+              <div class="yield-row">
+                <span class="yield-label">Bitcoin</span>
+                <span class="yield-value chg-neg">$87,946 (−2.26%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Ethereum</span>
+                <span class="yield-value chg-neg">$2,930 (−3.34%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Solana</span>
+                <span class="yield-value chg-neg">$122.75 (−3.24%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">BNB</span>
+                <span class="yield-value chg-neg">$889.27 (−1.76%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">XRP</span>
+                <span class="yield-value chg-neg">$1.87 (−2.85%)</span>
+              </div>
+            </div>
+            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">BTC now −14.85% from its $126K ATH. SOL down −47.65% from its 52-wk high of $253. Broad weakness — risk-off in digital assets while safe-haven commodities surge. Capital rotating to hard assets.</p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/crypto/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <!-- ── BOND MARKETS ── -->
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag market">Bonds</span>
+            <h3 class="card-headline">US Treasury Yields — Fed Holds Steady</h3>
+            <div class="yield-curve-visual">
+              <div class="yc-bar-wrap">
+                <div class="yc-val">3.48%</div>
+                <div class="yc-bar" style="height: 40px;"></div>
+                <div class="yc-label">2Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">3.84%</div>
+                <div class="yc-bar" style="height: 47px;"></div>
+                <div class="yc-label">5Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">4.25%</div>
+                <div class="yc-bar" style="height: 53px;"></div>
+                <div class="yc-label">10Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">4.86%</div>
+                <div class="yc-bar" style="height: 62px;"></div>
+                <div class="yc-label">30Y</div>
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem;">
+              <div class="yield-row">
+                <span class="yield-label">2Y–10Y Spread</span>
+                <span class="yield-value chg-pos">+77 bps</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Yield Curve</span>
+                <span class="status-badge normal">Normal</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Fed Funds Rate</span>
+                <span class="yield-value">3.50–3.75%</span>
+              </div>
+            </div>
+            <div class="card-sources"><a class="source-link" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/" target="_blank" rel="noopener">US Treasury <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag market">Japan Bonds</span>
+            <h3 class="card-headline">JGB &amp; BOJ Policy</h3>
+            <div style="margin-top: 0.5rem;">
+              <div class="yield-row">
+                <span class="yield-label">Japan 10Y JGB</span>
+                <span class="yield-value">2.255% (+2bps)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">BOJ Policy Rate</span>
+                <span class="yield-value">0.75%</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Highest Since</span>
+                <span class="yield-value" style="font-size:0.8rem;">Sep 1995</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">JGB vs UST 10Y</span>
+                <span class="yield-value chg-neg" style="font-size:0.85rem;">−200 bps</span>
+              </div>
+            </div>
+            <p class="card-body" style="margin-top:0.5rem; font-size:0.8rem;">JGB yields continuing to creep higher. The spread vs US 10Y has narrowed from −250bps a year ago to −200bps now. BOJ expected to continue gradual normalization.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmdeci/index.htm" target="_blank" rel="noopener">Bank of Japan <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <!-- ── SECTOR PERFORMANCE ── -->
+        <article class="card fade-in">
+          <span class="card-tag market">Sectors</span>
+          <h3 class="card-headline">S&amp;P 500 Sector Performance (YTD)</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Sector</th>
+                <th>Weight</th>
+                <th>Day %</th>
+                <th style="text-align:right">YTD Return</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">Basic Materials</td>
+                <td>3.10%</td>
+                <td class="chg-neg">−0.31%</td>
+                <td style="text-align:right" class="chg-pos">+18.40%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Energy</td>
+                <td>4.44%</td>
+                <td class="chg-neg">−0.40%</td>
+                <td style="text-align:right" class="chg-pos">+10.49%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Industrials</td>
+                <td>8.85%</td>
+                <td class="chg-pos">+0.08%</td>
+                <td style="text-align:right" class="chg-pos">+7.90%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Consumer Defensive</td>
+                <td>4.82%</td>
+                <td class="chg-pos">+0.02%</td>
+                <td style="text-align:right" class="chg-pos">+5.72%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Utilities</td>
+                <td>2.10%</td>
+                <td class="chg-neg">−0.78%</td>
+                <td style="text-align:right" class="chg-pos">+2.73%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Communication</td>
+                <td>10.35%</td>
+                <td class="chg-pos">+0.14%</td>
+                <td style="text-align:right" class="chg-pos">+1.65%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Real Estate</td>
+                <td>2.12%</td>
+                <td class="chg-pos">+0.39%</td>
+                <td style="text-align:right" class="chg-pos">+1.47%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Technology</td>
+                <td>29.99%</td>
+                <td class="chg-pos">+0.02%</td>
+                <td style="text-align:right" class="chg-pos">+1.37%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Consumer Cyclical</td>
+                <td>10.59%</td>
+                <td style="color: var(--text-muted);">0.00%</td>
+                <td style="text-align:right" class="chg-pos">+1.29%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Healthcare</td>
+                <td>9.15%</td>
+                <td class="chg-neg">−0.02%</td>
+                <td style="text-align:right" class="chg-neg">−0.39%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Financial Services</td>
+                <td>14.48%</td>
+                <td class="chg-neg">−0.22%</td>
+                <td style="text-align:right" class="chg-neg">−1.89%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">The value/cyclical rotation accelerates. Basic Materials (+18.4% YTD) and Energy (+10.5%) dominating. Tech (+1.4%) massively underperforming despite being 30% of the index. Financial Services is the only sector in negative YTD territory.</p>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/sectors/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- ── FX & KEY INDICATORS ── -->
+        <article class="card fade-in">
+          <span class="card-tag market">FX &amp; Key Rates</span>
+          <h3 class="card-headline">Currencies &amp; Key Indicators</h3>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">96.26</div>
+              <div class="indicator-name">DXY (Dollar Index)</div>
+              <div class="indicator-sub chg-neg">−0.19%</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">¥153.27</div>
+              <div class="indicator-name">USD/JPY</div>
+              <div class="indicator-sub chg-neg">−0.10%</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">$1.197</div>
+              <div class="indicator-name">EUR/USD</div>
+              <div class="indicator-sub chg-pos">+0.08%</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">16.62</div>
+              <div class="indicator-name">VIX</div>
+              <div class="indicator-sub chg-neg">+1.65%</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">3.58%</div>
+              <div class="indicator-name">13-Wk T-Bill</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">Flat</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">$17.15</div>
+              <div class="indicator-name">USD/MXN</div>
+              <div class="indicator-sub chg-neg">−0.21%</div>
+            </div>
+          </div>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/currencies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- ── KEY EVENTS ── -->
+        <article class="card featured market fade-in">
+          <span class="card-tag market">Key Events</span>
+          <h3 class="card-headline">Major Economic Events &amp; Central Bank Calendar</h3>
+          <div class="cards-grid" style="margin-top: 0.75rem;">
+            <div>
+              <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">This Week</h4>
+              <div class="event-timeline">
+                <div class="event-item past">
+                  <div class="event-date">Jan 28–29 · DONE</div>
+                  <div class="event-name">FOMC Decision</div>
+                  <div class="event-detail">Held at 3.50–3.75% as expected. Powell press conf done.</div>
+                </div>
+                <div class="event-item today">
+                  <div class="event-date">Jan 30 · TOMORROW</div>
+                  <div class="event-name">Q4 GDP Advance Estimate</div>
+                  <div class="event-detail">First estimate of Q4 2025 GDP. Key data point.</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Jan 31</div>
+                  <div class="event-name">Gov't Shutdown Deadline</div>
+                  <div class="event-detail">DHS funding expires. Deal or shutdown Friday.</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">Coming Up</h4>
+              <div class="event-timeline">
+                <div class="event-item">
+                  <div class="event-date">Feb 6</div>
+                  <div class="event-name">January Jobs Report (NFP)</div>
+                  <div class="event-detail">Critical after Dec's weak 50K print.</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Feb 12</div>
+                  <div class="event-name">January CPI Release</div>
+                  <div class="event-detail">Will inflation stay at 2.7% or break lower?</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Mar</div>
+                  <div class="event-name">BOJ Next Meeting</div>
+                  <div class="event-detail">Markets pricing possible hike to 1.00%.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+            <p class="card-body"><strong>Fed stance:</strong> Held at 3.50–3.75% despite Trump pressure. 3 cuts delivered in 2025. Markets now price <span class="stat">1 cut in 2026</span> (June most likely). Extended pause expected. &nbsp;<strong>BOJ stance:</strong> Holding at <span class="stat">0.75%</span> — highest since 1995. Next hike possible in March if inflation holds. FY2026 GDP forecast raised to 1.0%.</p>
+          </div>
+          <div class="card-sources"><a class="source-link" href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm" target="_blank" rel="noopener">Bank of Japan <span class="src-arrow">↗</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ━━━ PREDICTIONS ━━━ -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <div class="section-icon predict">🔮</div>
+        <h2 class="section-title predict">Predictions</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured predict fade-in">
+          <span class="card-tag predict">Week Ahead</span>
+          <h3 class="card-headline">What to Watch This Week</h3>
+          <p class="card-body">
+            <strong>🔑 Q4 GDP (Jan 30):</strong> The most important data point of the week. Consensus expects moderation from Q3's 4.4% pace. A strong print supports the "no more cuts" narrative; a weak print reopens the door for June easing.<br><br>
+            <strong>⚠️ Government Shutdown (Jan 31):</strong> DHS funding deadline Friday. A shutdown would be disruptive but likely short-lived — both sides signaling willingness to deal. Market impact: modest if brief, but a prolonged closure would hit consumer confidence further.<br><br>
+            <strong>🇮🇷 Iran Tensions:</strong> With Trump actively weighing strikes, oil is pricing in geopolitical risk premium. Watch Brent — a move above $75 would signal the market is pricing in conflict probability. Gold at $5,547 is already in "fear mode."<br><br>
+            <strong>📊 Expected Moves:</strong> S&amp;P 500 likely range-bound (6,920–7,020) pending GDP. VIX slightly elevated at 16.62 — markets sensing more vol ahead. Commodities may continue to outperform if Iran escalation continues.
+          </p>
+          <div class="card-sources"><a class="source-link" href="https://www.federalreserve.gov/" target="_blank" rel="noopener">Federal Reserve <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bea.gov/" target="_blank" rel="noopener">BEA <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <article class="card featured predict fade-in">
+          <span class="card-tag predict">2026 Outlook</span>
+          <h3 class="card-headline">Year Outlook — Major Themes &amp; Predictions</h3>
+          <p class="card-body">
+            <strong>1. The Great Rotation Continues:</strong> Basic Materials (+18.4% YTD) and Energy (+10.5%) are crushing Tech (+1.4%). Value and cyclicals are in the driver's seat. We expect this to persist through H1 as inflation stays sticky and rates remain elevated.<br><br>
+            <strong>2. AI Capital Reaches Escape Velocity:</strong> Private AI valuations (Anthropic $354B, xAI $250B) are approaching public mega-cap territory. The question isn't whether there's a bubble — it's whether the bubble has years left to inflate. We think yes: enterprise AI adoption is still early innings.<br><br>
+            <strong>3. Commodity Supercycle Signals:</strong> Gold at $5,547, copper surging 8% in a day, Basic Materials leading all sectors. Infrastructure spending, defense buildup, and supply constraints are creating structural demand. This isn't just a fear trade — it's a regime change in commodity markets.<br><br>
+            <strong>4. Geopolitical Risk Premium Is Here to Stay:</strong> Iran tensions, Ukraine drone warfare, Ethiopia re-igniting, Sudan civil war — the world is not de-risking. Defense tech (Anduril $79.6B, SpaceX $854.5B) is the investment theme of the decade. Expect elevated oil and gold through 2026.<br><br>
+            <strong>5. Japan's Normalization:</strong> BOJ at 0.75%, JGB 10Y at 2.255%. We expect BOJ to reach 1.25% by year-end. USD/JPY likely to drift toward 145 as the rate differential narrows. J-REITs and high-dividend Japan equities will outperform growth.
+          </p>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ━━━ BOTTOM LINE ━━━ -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line fade-in">
+        <div class="section-header">
+          <div class="section-icon bottom">⚡</div>
+          <h2 class="section-title">The Bottom Line</h2>
+        </div>
+
+        <p>Fed holds at 3.50–3.75% despite White House pressure — the central bank's independence remains intact, for now. But the real story today is commodities: copper +8%, gold $5,547, silver +4.7% — a broad-based commodity explosion that dwarfs the flat equity session. This isn't noise; it's a signal. Iran strike speculation is adding an oil risk premium, the government shutdown deadline looms Friday, and crypto is selling off (BTC −2.3%) while hard assets surge. The Great Rotation — from tech to materials, from digital to physical, from growth to value — is the defining trade of early 2026. Tomorrow's Q4 GDP print will determine whether the economy can sustain this without rate cuts.</p>
+        <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.aljazeera.com/news/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CEO Daily Briefing · Jan 29, 2026 · Curated intelligence for executive decision-makers</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.nav-pill').forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(pill.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    const gaugeNeedle = document.getElementById('gaugeNeedle');
+    const gaugeScore = document.getElementById('gaugeScore');
+    if (gaugeNeedle) {
+      const score = 62;
+      const angle = -90 + (score / 100) * 180;
+      const gaugeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            gaugeNeedle.style.transform = `rotate(${angle}deg)`;
+            let current = 0;
+            const interval = setInterval(() => {
+              current++;
+              gaugeScore.textContent = current;
+              if (current >= score) clearInterval(interval);
+            }, 15);
+            gaugeObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      gaugeObserver.observe(gaugeNeedle.closest('.card'));
+    }
+
+    document.querySelectorAll('.methodology-toggle .arrow').forEach(arrow => {
+      const style = document.createElement('style');
+      style.textContent = '.arrow.open { transform: rotate(90deg); }';
+      document.head.appendChild(style);
+    });
+  </script>
+
+</body>
+</html>

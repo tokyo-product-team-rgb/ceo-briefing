@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Daily Briefing — Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e8e5e1;
+      --accent-geo: #1e3a5f;
+      --accent-tech: #6c3ea0;
+      --accent-japan: #c23b22;
+      --accent-market: #0d6e4f;
+      --accent-predict: #b45309;
+      --accent-bottom: #1a1a1a;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 8px;
+      --green: #16a34a;
+      --red: #dc2626;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .masthead {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-toggle a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .lang-toggle a.active {
+      color: var(--text);
+    }
+
+    .lang-toggle a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle .sep {
+      color: var(--border);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--text);
+    }
+
+    .archive-date-group {
+      margin-bottom: 2.5rem;
+    }
+
+    .archive-date-group h2 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .archive-editions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .archive-edition {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1.1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .archive-edition:hover {
+      box-shadow: var(--shadow-sm);
+      border-color: #d0cdc8;
+    }
+
+    .edition-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .badge-morning {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .badge-afternoon {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .edition-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: auto;
+    }
+
+    .edition-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent-geo);
+      text-decoration: none;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.15s ease;
+    }
+
+    .edition-links a:hover {
+      background: rgba(30, 58, 95, 0.08);
+    }
+
+    .edition-links .sep {
+      color: var(--border);
+      font-size: 0.75rem;
+    }
+
+    .edition-label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 600px) {
+      .archive-edition {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .edition-links {
+        margin-left: 0;
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="lang-toggle">
+      <a href="index.html">← Today</a>
+      <span class="sep">|</span>
+      <a href="archive.html" class="active">EN</a>
+      <span class="sep">/</span>
+      <a href="archive-ja.html">JA</a>
+    </div>
+    <div class="overline">CEO Daily Briefing</div>
+    <h1>Archive</h1>
+    <p class="edition-date">All past briefings</p>
+    <div class="divider-bar"></div>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="archive-date-group">
+    <h2>February 3, 2026</h2>
+    <div class="archive-editions">
+      <div class="archive-edition">
+        <span class="edition-badge badge-afternoon">Afternoon</span>
+        <span class="edition-label">Afternoon Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-02-03-afternoon-en.html">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-date-group">
+    <h2>February 2, 2026</h2>
+    <div class="archive-editions">
+      <div class="archive-edition">
+        <span class="edition-badge badge-afternoon">Afternoon</span>
+        <span class="edition-label">Afternoon Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-02-02-afternoon-en.html">EN</a>
+        </div>
+      </div>
+      <div class="archive-edition">
+        <span class="edition-badge badge-morning">Morning</span>
+        <span class="edition-label">Morning Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-02-02-morning-en.html">EN</a>
+          <span class="sep">·</span>
+          <a href="archive/2026-02-02-morning-ja.html">JA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-date-group">
+    <h2>February 1, 2026</h2>
+    <div class="archive-editions">
+      <div class="archive-edition">
+        <span class="edition-badge badge-afternoon">Afternoon</span>
+        <span class="edition-label">Afternoon Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-02-01-afternoon-en.html">EN</a>
+        </div>
+      </div>
+      <div class="archive-edition">
+        <span class="edition-badge badge-morning">Morning</span>
+        <span class="edition-label">Morning Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-02-01-morning-en.html">EN</a>
+          <span class="sep">·</span>
+          <a href="archive/2026-02-01-morning-ja.html">JA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-date-group">
+    <h2>January 31, 2026</h2>
+    <div class="archive-editions">
+      <div class="archive-edition">
+        <span class="edition-badge badge-afternoon">Afternoon</span>
+        <span class="edition-label">Afternoon Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-01-31-afternoon-en.html">EN</a>
+        </div>
+      </div>
+      <div class="archive-edition">
+        <span class="edition-badge badge-morning">Morning</span>
+        <span class="edition-label">Morning Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-01-31-morning-en.html">EN</a>
+          <span class="sep">·</span>
+          <a href="archive/2026-01-31-morning-ja.html">JA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-date-group">
+    <h2>January 30, 2026</h2>
+    <div class="archive-editions">
+      <div class="archive-edition">
+        <span class="edition-badge badge-morning">Morning</span>
+        <span class="edition-label">Morning Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-01-30-morning-en.html">EN</a>
+          <span class="sep">·</span>
+          <a href="archive/2026-01-30-morning-ja.html">JA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-date-group">
+    <h2>January 29, 2026</h2>
+    <div class="archive-editions">
+      <div class="archive-edition">
+        <span class="edition-badge badge-morning">Morning</span>
+        <span class="edition-label">Morning Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-01-29-morning-en.html">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-date-group">
+    <h2>January 28, 2026</h2>
+    <div class="archive-editions">
+      <div class="archive-edition">
+        <span class="edition-badge badge-morning">Morning</span>
+        <span class="edition-label">Initial Edition</span>
+        <div class="edition-links">
+          <a href="archive/2026-01-28-morning-en.html">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>CEO Daily Briefing Archive — AI-generated summaries from trusted sources</p>
+</footer>
+
+</body>
+</html>

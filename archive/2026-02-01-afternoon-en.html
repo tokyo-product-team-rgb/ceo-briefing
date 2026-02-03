@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Daily Briefing — Feb 1, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e8e5e1;
+      --accent-geo: #1e3a5f;
+      --accent-tech: #6c3ea0;
+      --accent-japan: #c23b22;
+      --accent-market: #0d6e4f;
+      --accent-predict: #b45309;
+      --accent-bottom: #1a1a1a;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 8px;
+      --green: #16a34a;
+      --red: #dc2626;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .masthead {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-toggle a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .lang-toggle a.active {
+      color: var(--text);
+    }
+
+    .lang-toggle a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle .sep {
+      color: var(--border);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .section-icon.geo { background: #e8eef5; }
+    .section-icon.tech { background: #ede6f6; }
+    .section-icon.japan { background: #fce8e5; }
+    .section-icon.market { background: #e6f5ef; }
+    .section-icon.predict { background: #fef3c7; }
+    .section-icon.bottom { background: #f0f0f0; }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title.geo { color: var(--accent-geo); }
+    .section-title.tech { color: var(--accent-tech); }
+    .section-title.japan { color: var(--accent-japan); }
+    .section-title.market { color: var(--accent-market); }
+    .section-title.predict { color: var(--accent-predict); }
+    .section-title.bottom { color: var(--accent-bottom); }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2em 0.6em;
+      border-radius: 4px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-tag.geo { background: #e8eef5; color: var(--accent-geo); }
+    .card-tag.tech { background: #ede6f6; color: var(--accent-tech); }
+    .card-tag.japan { background: #fce8e5; color: var(--accent-japan); }
+    .card-tag.market { background: #e6f5ef; color: var(--accent-market); }
+    .card-tag.predict { background: #fef3c7; color: var(--accent-predict); }
+
+    .card.featured {
+      border-left: 4px solid;
+      padding-left: 1.5rem;
+    }
+    .card.featured.geo { border-left-color: var(--accent-geo); }
+    .card.featured.tech { border-left-color: var(--accent-tech); }
+    .card.featured.japan { border-left-color: var(--accent-japan); }
+    .card.featured.market { border-left-color: var(--accent-market); }
+    .card.featured.predict { border-left-color: var(--accent-predict); }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+
+    .bottom-line {
+      background: var(--text);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 2rem 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .bottom-line .section-header {
+      border-bottom-color: rgba(255,255,255,0.15);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bottom-line .section-icon { background: rgba(255,255,255,0.12); }
+    .bottom-line .section-title { color: #fff; }
+
+    .bottom-line p {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--text);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-body .stat { font-size: 0.95rem; }
+
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .index-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0.5rem 0.6rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .index-table td {
+      padding: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .index-table tr:last-child td { border-bottom: none; }
+    .index-table .idx-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+    .index-table .idx-level {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    .yield-curve-visual {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      gap: 4px;
+      height: 80px;
+      padding: 0.5rem 0;
+      margin-top: 0.5rem;
+    }
+    .yc-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+    }
+    .yc-bar {
+      width: 100%;
+      max-width: 50px;
+      border-radius: 3px 3px 0 0;
+      background: linear-gradient(180deg, var(--accent-market), #1aab7a);
+      transition: height 0.5s ease;
+    }
+    .yc-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .yc-val {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+    .health-gauge {
+      position: relative;
+      width: 200px;
+      height: 110px;
+      overflow: hidden;
+    }
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #dc2626 0deg,
+        #f59e0b 72deg,
+        #facc15 108deg,
+        #22c55e 144deg,
+        #16a34a 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 60px, black 61px);
+      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
+    }
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 75px;
+      background: var(--text);
+      border-radius: 2px;
+      transform-origin: bottom center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--text);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .gauge-score {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 0.25rem;
+    }
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 0.15rem;
+    }
+    .gauge-scale span {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .indicator-item {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--bg);
+      border-radius: 6px;
+    }
+    .indicator-value {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .indicator-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .indicator-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+
+    .methodology-toggle {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-market);
+      cursor: pointer;
+      margin-top: 0.75rem;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .methodology-toggle .arrow {
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    .methodology-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .methodology-content.open {
+      max-height: 500px;
+    }
+    .methodology-content p {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .event-timeline {
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    .event-timeline::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent-market), #c8e6d9);
+      border-radius: 1px;
+    }
+    .event-item {
+      position: relative;
+      padding: 0.4rem 0 0.6rem;
+    }
+    .event-item::before {
+      content: '';
+      position: absolute;
+      left: -1.25rem;
+      top: 0.65rem;
+      width: 10px;
+      height: 10px;
+      background: var(--accent-market);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .event-item.past::before {
+      background: var(--text-muted);
+    }
+    .event-item.today::before {
+      background: var(--accent-market);
+      box-shadow: 0 0 0 3px rgba(13,110,79,0.2);
+    }
+    .event-date {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent-market);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .event-item.past .event-date { color: var(--text-muted); }
+    .event-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.1rem;
+    }
+    .event-detail {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 0.05rem;
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.2em 0.7em;
+      border-radius: 10px;
+    }
+    .status-badge.normal { background: #dcfce7; color: #166534; }
+    .status-badge.caution { background: #fef9c3; color: #854d0e; }
+    .status-badge.alert { background: #fecaca; color: #991b1b; }
+
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      .cards-grid-3 { grid-template-columns: 1fr; }
+    }
+
+    .yield-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .yield-row:last-child { border-bottom: none; }
+    .yield-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .yield-value {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .source-link:hover {
+      color: var(--text-secondary);
+    }
+    .source-link .src-arrow {
+      font-size: 0.6rem;
+      margin-left: 0.1rem;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .source-link:hover .src-arrow {
+      transform: translate(1px, -1px);
+    }
+    .card-sources {
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--border);
+    }
+    .bottom-line .card-sources {
+      border-top-color: rgba(255,255,255,0.12);
+    }
+    .bottom-line .source-link {
+      color: rgba(255,255,255,0.45);
+    }
+    .bottom-line .source-link:hover {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1) .card { animation-delay: 0.05s; }
+    .section:nth-child(1) .card:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(1) .card:nth-child(3) { animation-delay: 0.15s; }
+    .section:nth-child(1) .card:nth-child(4) { animation-delay: 0.2s; }
+    .section:nth-child(1) .card:nth-child(5) { animation-delay: 0.25s; }
+
+    @media print {
+      body { background: #fff; }
+      .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+      .bottom-line { background: #333; }
+      .nav-pills { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ━━━ MASTHEAD ━━━ -->
+  <header class="masthead">
+    <div class="lang-toggle">
+      <a href="index.html" class="active">EN</a>
+      <span class="sep">/</span>
+      <a href="ja.html">JA</a>
+    </div>
+    <div class="masthead-inner">
+      <div class="overline">Afternoon Intelligence Brief</div>
+      <h1>CEO Daily Briefing</h1>
+      <div class="edition-date">Sunday, February 1, 2026</div>
+      <div class="edition-sub">Japan · Global by Region · Markets & Economy · Predictions</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <!-- ━━━ NAV ━━━ -->
+  <nav class="nav-pills">
+    <a href="#japan" class="nav-pill">🇯🇵 Japan</a>
+    <a href="#global" class="nav-pill">🌍 Global</a>
+    <a href="#markets" class="nav-pill">📊 Markets</a>
+    <a href="#predictions" class="nav-pill">🔮 Predictions</a>
+    <a href="#bottomline" class="nav-pill">⚡ Bottom Line</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- 🇯🇵 JAPAN (IN-DEPTH) -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <div class="section-icon japan">🇯🇵</div>
+        <h2 class="section-title japan">Japan — In Depth</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- 1. Starmer-Takaichi Summit -->
+        <article class="card featured japan fade-in">
+          <span class="card-tag japan">Diplomacy</span>
+          <h3 class="card-headline">UK PM Starmer Meets Takaichi in Tokyo — "Strongest Relationship in Decades"</h3>
+          <p class="card-body">UK Prime Minister Keir Starmer visited Tokyo and met PM Sanae Takaichi at the PM's Office, declaring the UK-Japan relationship the "strongest in decades" and inviting her to his Chequers country estate. The two leaders agreed to strengthen trade, security, and Indo-Pacific defense partnerships — driven by shared concerns over China's regional assertiveness and a desire to diversify away from US dependence under Trump. <strong>The timing is a strategic gift to Takaichi:</strong> a high-profile diplomatic victory just 7 days before the Feb. 8 election, reinforcing her image as a capable international leader. Analyst Jeffrey Hall (Kanda University) noted the visit is "doing her an enormous favour" right in the middle of her campaign. Starmer's East Asia tour concluded with £2.2B in export deals secured from China, plus visa-free travel and the lifting of Chinese sanctions on British MPs.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/c78egr5v5gmo" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 2. Panda Farewell -->
+        <article class="card featured japan fade-in">
+          <span class="card-tag japan">China-Japan Relations</span>
+          <h3 class="card-headline">Japan Says Goodbye to Its Last Pandas — First Time Without Pandas in 50 Years</h3>
+          <p class="card-body">Thousands gathered at Tokyo's Ueno Zoo today for the final public viewing of twin pandas Xiao Xiao and Lei Lei before their return to China on Tuesday. <strong>Japan will have no pandas for the first time since 1972</strong> — when China first sent the bears as a diplomatic gift to mark the normalization of ties. The departure is a direct consequence of the bilateral breakdown over PM Takaichi's hawkish Taiwan comments, which enraged Beijing and triggered mutual travel warnings, postponed Japanese film releases in China, and now the symbolic withdrawal of panda diplomacy. Chinese Foreign Ministry spokesperson Guo Jiakun coldly invited Japanese fans to "come visit them in China." One devoted fan who has taken 10 million panda photos said: "I never imagined there would come a day when pandas would be gone from Japan." The loss is deeply felt culturally — pandas are national celebrities here.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/article/japan-china-pandas-ueno-zoo-return-diplomacy-9cf7aff53bc94e03f651eb48eee7f7b8" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 3. Election Campaign -->
+        <article class="card featured japan fade-in">
+          <span class="card-tag japan">Election 2026</span>
+          <h3 class="card-headline">One Week to Election Day — Campaign Officially Launches Tuesday</h3>
+          <p class="card-body">With parliament dissolved on Friday, Japan enters the final stretch before the <strong>Feb. 8 general election</strong>. The 12-day campaign officially starts Tuesday. PM Takaichi — who dissolved the lower house just three months after taking office — is betting her political future on this gamble, telling reporters she is "staking my career as prime minister" on the result. Her 70% approval rating gives the LDP strong momentum, but the party still carries baggage from the political funds scandal and its break with longtime coalition partner Komeito (which left over Takaichi's hawkish ideology). Her new partner, the right-wing Japan Innovation Party, shares her vision for a stronger military, male-only imperial succession, and nuclear reactor restarts. The opposition remains fragmented — no single party can mount a serious challenge.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/article/japan-politics-takaichi-parliament-dissolution-election-74e9b32eb12a6f9823242255b92150b2" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 4. TEPCO & Pokémon -->
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag japan">Nuclear Energy</span>
+            <h3 class="card-headline">TEPCO Reactor Shut Down Hours After Historic Restart</h3>
+            <p class="card-body">The No. 6 reactor at TEPCO's Kashiwazaki-Kariwa plant — the world's largest nuclear facility — was shut back down just hours after restarting for the first time since the 2011 Fukushima disaster. <strong>A control rod malfunction triggered an alarm</strong> after only 52 of 205 rods were removed. Plant chief Inagaki said it "won't be resolved in a couple of days." The embarrassing setback undermines Takaichi's push to accelerate nuclear restarts to meet surging electricity demand — the restart was politically symbolic for both TEPCO's rehabilitation and Japan's energy independence strategy.</p>
+            <div class="card-sources"><a class="source-link" href="https://apnews.com/article/japan-nuclear-fukushima-tepco-kashiwazakikariwa-e1a784da67f73aaf616413b543ae539d" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag japan">China-Japan Tensions</span>
+            <h3 class="card-headline">Pokémon Yasukuni Fallout Deepens</h3>
+            <p class="card-body">The Pokémon Company's cancellation of a card game event at the controversial Yasukuni Shrine continues to ripple through China-Japan relations. China's People's Daily warned that brands ignoring history "will be abandoned," while the Global Times praised Chinese netizens for forcing the cancellation. <strong>The incident has become a proxy battlefield in the broader Taiwan-driven diplomatic freeze</strong> — with cultural, commercial, and diplomatic channels all deteriorating simultaneously. Two Japanese film releases in China remain postponed, and mutual travel warnings are still in effect.</p>
+            <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cdjn0nmnjmwo" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <!-- 5. Markets -->
+        <article class="card featured japan fade-in">
+          <span class="card-tag japan">Markets & FX</span>
+          <h3 class="card-headline">Nikkei Flat at 53,323 — Yen Slides to ¥154.78 as Dollar Firms Broadly</h3>
+          <p class="card-body">Nikkei 225 closed Friday at <span class="stat">53,322.85</span> (−0.10%), essentially flat as Japanese investors remained cautious ahead of the election and amid a global risk-off mood triggered by Friday's historic precious metals crash. The bigger story is the yen: USD/JPY climbed to <span class="stat">¥154.78</span> (+1.15%), its sharpest daily slide in weeks — driven by a strengthening dollar after Trump's credible Kevin Warsh Fed chair nomination reduced expectations of aggressive rate cuts. The yen is now approaching the psychologically critical ¥155 level that could trigger BOJ/MOF verbal or actual intervention. <strong>Weekend markets are closed; futures indicate flat-to-slightly-lower open Monday</strong> as traders digest the precious metals fallout.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://finance.yahoo.com/quote/%5EN225/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 6. Japan 5th Straight Trade Deficit -->
+        <article class="card fade-in">
+          <span class="card-tag japan">Economy</span>
+          <h3 class="card-headline">Japan Records 5th Straight Yearly Trade Deficit — Structural Shift Deepens</h3>
+          <p class="card-body">Japan posted its fifth consecutive annual trade deficit, driven by stubbornly high energy import costs (exacerbated by the weak yen making dollar-denominated oil and gas more expensive) and slowing exports to China amid the bilateral diplomatic freeze. The persistent deficits mark a structural shift for a country that once ran enormous surpluses — reflecting both demographic decline reducing industrial output and the post-Fukushima energy import dependency. Trump's tariff threats add another headwind, as Takaichi navigates pressure from Washington to spend more on defense while managing a fragile domestic recovery.</p>
+          <div class="card-sources"><a class="source-link" href="https://apnews.com/article/japan-trump-trade-economy-tariffs-takaichi-a26b35639a1a25fb144e73995bbe4bdf" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- 🌍 GLOBAL BY CONTINENT -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="section" id="global">
+      <div class="section-header">
+        <div class="section-icon geo">🌍</div>
+        <h2 class="section-title geo">Global by Region</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- NORTH AMERICA -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">North America</span>
+          <h3 class="card-headline">Ukraine Talks "Productive" · ICE Raids Transform Chicago · Poilievre Cements Leadership</h3>
+          <p class="card-body">
+            <strong>1. Ukraine Peace Talks Advancing:</strong> US envoy Steve Witkoff called Saturday's meeting with Russia's Kirill Dmitriev in Florida "productive and constructive" — a signal that Trump's team is making headway in brokering a Ukraine deal, driven by Trump's desire for a diplomatic win before midterms. A second round of US-mediated Russia-Ukraine talks in Abu Dhabi is expected next week. Trump announced Putin agreed to halt energy infrastructure attacks during the cold snap — though the Kremlin says the "truce" expires Sunday, precisely when −20°C temperatures hit Ukraine. The energy pause may be more PR than substance.<br><br>
+            <strong>2. ICE Raids Hollow Out Chicago's Little Village:</strong> Months of Operation Midway Blitz immigration raids have turned Chicago's Hispanic economic hub into a "ghost town," with businesses reporting 50%+ revenue drops as residents stay indoors out of fear. The crackdown — launched after a US citizen was killed by an undocumented migrant — has arrested 800+ people, but the economic collateral damage is devastating one of Chicago's highest tax-revenue corridors outside downtown.<br><br>
+            <strong>3. Poilievre Survives Leadership Test:</strong> Canada's Conservative leader Pierre Poilievre secured 87.4% in a leadership review — driven by delegates rallying behind him despite his April election loss to Liberal PM Carney. The strong result was powered by his call for national unity amid growing Alberta and Quebec separatist movements, which he blamed on Liberal mismanagement.
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.aljazeera.com/news/2026/1/31/us-envoy-witkoff-says-ukraine-talks-with-russia-productive" target="_blank" rel="noopener">Al Jazeera — Ukraine <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/cql4e439g4no" target="_blank" rel="noopener">BBC — ICE <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/c14r1023yy6o" target="_blank" rel="noopener">BBC — Poilievre <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- EUROPE -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">Europe</span>
+          <h3 class="card-headline">Starmer's Asia Reset · Norway Royal Scandal · Milan Protests ICE at Olympics</h3>
+          <p class="card-body">
+            <strong>1. Starmer's Diplomatic Reset Tour Wraps Up:</strong> UK PM Starmer completed his East Asia tour — the most significant British diplomatic offensive in the region in years — driven by the UK's need to hedge against Trump-era unpredictability and find new trade partnerships post-Brexit. In China, he secured £2.2B in export deals, visa-free travel, and the lifting of sanctions on British MPs. In Tokyo, he deepened defense ties with Takaichi. The tour signals a "more sophisticated" UK foreign policy balancing Beijing engagement with allied reassurance.<br><br>
+            <strong>2. Norway Royal Family Trial:</strong> Crown Prince Haakon's stepson Marius Borg Høiby faces 38 charges including rape in a trial that has put Norway's royal family under unprecedented public scrutiny — driven by allegations that the royal connection shielded him from earlier accountability. The case is generating massive media attention across Scandinavia and testing public support for the monarchy.<br><br>
+            <strong>3. Milan Protests ICE at Winter Olympics:</strong> Demonstrators in Milan marched against the US ICE unit's security role at the Milano-Cortina 2026 Winter Olympics, denouncing it as "creeping fascism." The protests were triggered by outrage over ICE tactics in US cities (particularly the Minneapolis shooting) bleeding into European hosting arrangements — an unusual intersection of US domestic policy and international sporting events.
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/cm2j04lk83zo" target="_blank" rel="noopener">BBC — UK-China <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/cm2xj3ykpj4o" target="_blank" rel="noopener">BBC — Norway <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.aljazeera.com/sports/2026/1/31/milan-demonstrators-decry-creeping-fascism-of-ice-role-at-winter-olympics" target="_blank" rel="noopener">Al Jazeera — Olympics <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- ASIA EX-JAPAN -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">Asia ex-Japan</span>
+          <h3 class="card-headline">Pakistan's Deadliest Day in Balochistan · India-EU "Mother of All Deals" · Hang Seng Slides</h3>
+          <p class="card-body">
+            <strong>1. Pakistan: 92 Militants Killed in Coordinated Attacks:</strong> The Balochistan Liberation Army launched simultaneous attacks across 12 cities and towns targeting police, military, and government buildings — one of the deadliest days of violence in the province's decades-long ethnic insurgency. Pakistan's military killed 92 militants in response but lost 15 security personnel and 18 civilians. <strong>The escalation was driven by the BLA's grievance that Islamabad exploits Balochistan's rich mineral resources</strong> (the province covers 44% of Pakistan's land but holds only 5% of its population) without benefiting locals. The military blamed India for supporting the militants — Delhi denied the accusation.<br><br>
+            <strong>2. India-EU Trade Deal Accelerates:</strong> The landmark India-EU free trade agreement — dubbed "the mother of all deals" by both Modi and von der Leyen — was finalized after 20 years of stalled talks, <strong>catalyzed by Trump's unpredictable tariff regime</strong> (50% on Indian goods including a 25% penalty for buying Russian oil). Both sides needed to diversify trade partnerships away from the US. The deal covers the world's second and fourth largest economies and signals a broader global trend of nations clubbing together to hedge against Washington.<br><br>
+            <strong>3. Hang Seng Drops −2.08%:</strong> Hong Kong markets fell sharply as China's weak manufacturing PMI, ongoing property sector distress (Vanke's $11.8B loss warning), and Beijing-Tokyo tensions weighed on investor confidence. Shanghai composite also fell −0.96%. The slide reflects persistent skepticism that China's stimulus measures are sufficient to address structural economic headwinds.
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/cn42nedxqyqo" target="_blank" rel="noopener">BBC — Pakistan <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/c75x9wqwz40o" target="_blank" rel="noopener">BBC — India-EU <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://finance.yahoo.com/quote/%5EHSI/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- MIDDLE EAST & AFRICA -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">Middle East & Africa</span>
+          <h3 class="card-headline">Israel Pushes for Iran Regime Change · DR Congo Mine Collapse Kills 200+ · Gaza Strikes Continue</h3>
+          <p class="card-body">
+            <strong>1. Israel Counting on Trump for Iran Regime Change:</strong> Israeli intelligence officials met US counterparts in Washington this week to discuss potential Iran strike targets, driven by Netanyahu's belief that Iran is "at its weakest now" — its military diminished after the 12-day war, regional proxies weakened, and domestic protests growing. Netanyahu is reportedly pushing the US toward "maximalist strikes" aimed at regime change rather than limited symbolic action, <strong>because he calculates that a limited strike leaving the regime intact would mean enduring Iranian retaliation without achieving strategic gain.</strong> Iran's Supreme Leader adviser warned of an "immediate and unprecedented" response to any US attack targeting Tel Aviv.<br><br>
+            <strong>2. DR Congo: 200+ Dead in Coltan Mine Collapse:</strong> Heavy rains caused a mine collapse in rebel-controlled Rubaya in eastern DRC, killing over 200 people — including women and children mining coltan (used in smartphones and electronics). <strong>The disaster was caused by poor maintenance under M23 rebel control</strong> combined with fragile soil conditions and heavy rains. The mine holds 15% of the world's coltan supply. The UN has accused M23 of taxing the mining sector for its own benefit while neglecting safety.<br><br>
+            <strong>3. Gaza Bombardment Kills 32:</strong> Israeli air strikes killed at least 32 Palestinians including children across Gaza — continuing the relentless campaign despite international pressure. Five people also died in gas explosions in Iran's Bandar Abbas, which officials attributed to a gas leak but which comes amid heightened regional tensions. Drone strikes in Ethiopia's Tigray killed one person, raising fears of a return to conflict following clashes between government troops and Tigrayan forces.
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/c78egvpkm77o" target="_blank" rel="noopener">BBC — Israel-Iran <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/cly381dvnvzo" target="_blank" rel="noopener">BBC — Congo <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/c701g1g00gdo" target="_blank" rel="noopener">BBC — Gaza <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- LATIN AMERICA -->
+        <article class="card featured geo fade-in">
+          <span class="card-tag geo">Latin America</span>
+          <h3 class="card-headline">Epstein Files Hit Musk & Gates · Mexico IPC Crashes −2.72% · Ibovespa Slides</h3>
+          <p class="card-body">
+            <strong>1. Epstein File Fallout Hits Tech Giants:</strong> Newly released Epstein documents reveal Bill Gates, Elon Musk, and Commerce Secretary Howard Lutnick had "more extensive contact with Epstein than previously known." The files — part of the DOJ's three-million-document dump — are generating escalating scrutiny of some of the world's most powerful figures, <strong>driven by court-ordered releases after victims' advocacy groups pushed for transparency.</strong> Political and business fallout will unfold over weeks.<br><br>
+            <strong>2. Mexico's IPC Crashes −2.72%:</strong> Mexico's benchmark index dropped sharply — triggered by Trump's renewed tariff threats over Mexico's oil supply to Cuba and broader fear of economic isolation under Trump's "America First" pressure on Latin America. The peso also weakened 1.38% against the dollar. Mexico faces a squeeze between maintaining sovereignty and avoiding punitive US trade action.<br><br>
+            <strong>3. Brazil Ibovespa −0.97%:</strong> Latin America's largest economy fell nearly 1% as global risk-off sentiment combined with the metals crash weighed on resource-heavy Brazilian equities. The broader LatAm trend reflects vulnerability to dollar strengthening and Trump's aggressive regional posture — from Panama Canal port seizures to Cuba oil pressure.
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.aljazeera.com/news/2026/1/31/bill-gates-elon-musk-howard-lutnick-face-new-scrutiny-over-epstein-ties" target="_blank" rel="noopener">Al Jazeera — Epstein <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://finance.yahoo.com/quote/%5EMXX/" target="_blank" rel="noopener">Yahoo Finance — Mexico <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- OCEANIA -->
+        <article class="card fade-in">
+          <span class="card-tag geo">Oceania</span>
+          <h3 class="card-headline">SpaceX's Million-Satellite Ambition · Australia Markets Under Pressure</h3>
+          <p class="card-body">
+            <strong>SpaceX Applies to Launch 1 Million Satellites:</strong> Elon Musk's SpaceX filed an application with the FCC to launch up to one million satellites to create "orbital data centres" for AI computing — claiming it's the most cost and energy-efficient way to meet surging demand as AI processing outpaces "terrestrial capabilities." The plan would increase SpaceX's orbital presence from ~10,000 Starlink satellites to 100x that, <strong>driven by the explosive growth of AI compute needs and SpaceX's ambition to dominate space infrastructure.</strong> Critics warn of space congestion and interference with astronomical research. ASX 200 fell −0.65% amid the global risk-off mood, while AUD weakened −1.18% against the strengthening dollar.
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/cyv5l24mrjmo" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- 📊 MARKETS & ECONOMY -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <div class="section-icon market">📊</div>
+        <h2 class="section-title market">Markets &amp; Economy</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- NOTE -->
+        <article class="card fade-in" style="background: #fffbeb; border-color: #fbbf24;">
+          <p class="card-body" style="font-size: 0.85rem; color: #92400e;"><strong>⏸️ Weekend Note:</strong> US and European markets are closed. All figures reflect Friday's close (Jan 31). Asian markets closed Friday evening. Futures and crypto trade 24/7 — see crypto section for live data. Monday's open will be the first market reaction to the full weekend's news cycle.</p>
+        </article>
+
+        <!-- HEALTH SCORE -->
+        <article class="card featured market fade-in">
+          <span class="card-tag market">Health Score</span>
+          <h3 class="card-headline">Economic Health Composite — Risk-Off Persists</h3>
+          <div class="health-gauge-wrap">
+            <div class="health-gauge">
+              <div class="gauge-bg"></div>
+              <div class="gauge-needle" id="gaugeNeedle">
+                <div class="gauge-dot"></div>
+              </div>
+            </div>
+            <div class="gauge-scale">
+              <span>0</span>
+              <span>50</span>
+              <span>100</span>
+            </div>
+            <div class="gauge-score" id="gaugeScore">53</div>
+            <div class="gauge-score-label">out of 100</div>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">4.4%</div>
+              <div class="indicator-name">GDP Growth (Q3)</div>
+              <div class="indicator-sub chg-pos">▲ Strong</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">4.4%</div>
+              <div class="indicator-name">Unemployment</div>
+              <div class="indicator-sub chg-neg">▲ Elevated</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">2.7%</div>
+              <div class="indicator-name">CPI Inflation</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● Above Target</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">56.4</div>
+              <div class="indicator-name">Consumer Sent.</div>
+              <div class="indicator-sub chg-neg">▼ Weak</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">51.9</div>
+              <div class="indicator-name">Mfg PMI</div>
+              <div class="indicator-sub chg-pos">▲ Expanding</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">17.44</div>
+              <div class="indicator-name">VIX</div>
+              <div class="indicator-sub chg-neg">▲ Rising</div>
+            </div>
+          </div>
+          <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▸</span> How is this calculated?
+          </div>
+          <div class="methodology-content">
+            <p>Composite of 7 components: <strong>GDP Growth</strong> (20%) — Q3 2025 annualized; <strong>Employment</strong> (20%) — unemployment rate + NFP payrolls; <strong>Inflation</strong> (15%) — CPI vs 2% target; <strong>Consumer Confidence</strong> (15%) — Michigan sentiment; <strong>Manufacturing</strong> (10%) — S&amp;P Global PMI; <strong>Market Conditions</strong> (10%) — equity levels + VIX; <strong>Leading Indicators</strong> (10%) — LEI + yield curve. Score ticks down from 54 to 53 as the weekend delivers no relief from Friday's historic metals crash, ongoing US government shutdown enters day 2, Israel-Iran regime change rhetoric escalates, and the global risk-off mood continues with geopolitical flashpoints multiplying (Pakistan, DR Congo, Ethiopia).</p>
+          </div>
+          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- EQUITIES -->
+        <article class="card fade-in">
+          <span class="card-tag market">Equities (Fri Close)</span>
+          <h3 class="card-headline">Equity Markets — Broad Selloff; Europe Diverges Positive</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">Friday's close saw red across US and Asia as the precious metals crash and risk-off sentiment dominated. <strong>Canada's TSX crashed −3.31%</strong> (worst day in months, driven by resource sector exposure to the metals crash), Russell 2000 −1.55% (small-caps vulnerable to shutdown uncertainty), Nasdaq −0.94% (continued tech rotation after MSFT). Europe outperformed as ECB rate cut expectations and strong earnings season buoyed sentiment.</p>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Level</th>
+                <th>Day %</th>
+                <th>YTD %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">S&amp;P 500</td>
+                <td class="idx-level">6,939.03</td>
+                <td class="chg-neg">−0.43%</td>
+                <td class="chg-pos">+1.69%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nasdaq</td>
+                <td class="idx-level">23,461.82</td>
+                <td class="chg-neg">−0.94%</td>
+                <td class="chg-neg">−0.31%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Dow Jones</td>
+                <td class="idx-level">48,892.47</td>
+                <td class="chg-neg">−0.36%</td>
+                <td class="chg-pos">+2.75%</td>
+              </tr>
+              <tr style="background: #fef2f2;">
+                <td class="idx-name">Russell 2000</td>
+                <td class="idx-level">2,613.74</td>
+                <td class="chg-neg">−1.55%</td>
+                <td class="chg-neg">−0.10%</td>
+              </tr>
+              <tr style="background: #fef2f2;">
+                <td class="idx-name">S&amp;P/TSX (Canada)</td>
+                <td class="idx-level">31,923.52</td>
+                <td class="chg-neg">−3.31%</td>
+                <td class="chg-neg">−1.20%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nikkei 225</td>
+                <td class="idx-level">53,322.85</td>
+                <td class="chg-neg">−0.10%</td>
+                <td class="chg-pos">+3.45%</td>
+              </tr>
+              <tr style="background: #fef2f2;">
+                <td class="idx-name">Hang Seng</td>
+                <td class="idx-level">27,387.11</td>
+                <td class="chg-neg">−2.08%</td>
+                <td class="chg-pos">+5.82%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Shanghai</td>
+                <td class="idx-level">4,117.95</td>
+                <td class="chg-neg">−0.96%</td>
+                <td class="chg-pos">+4.10%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">KOSPI</td>
+                <td class="idx-level">5,224.36</td>
+                <td class="chg-pos">+0.06%</td>
+                <td class="chg-pos">+8.20%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Sensex</td>
+                <td class="idx-level">82,269.78</td>
+                <td class="chg-neg">−0.36%</td>
+                <td class="chg-neg">−2.10%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">FTSE 100</td>
+                <td class="idx-level">10,223.54</td>
+                <td class="chg-pos">+0.51%</td>
+                <td class="chg-pos">+4.85%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">DAX</td>
+                <td class="idx-level">24,538.81</td>
+                <td class="chg-pos">+0.94%</td>
+                <td class="chg-pos">+8.92%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Euro Stoxx 50</td>
+                <td class="idx-level">5,947.81</td>
+                <td class="chg-pos">+0.95%</td>
+                <td class="chg-pos">+7.15%</td>
+              </tr>
+              <tr style="background: #fef2f2;">
+                <td class="idx-name">IPC Mexico</td>
+                <td class="idx-level">67,598.95</td>
+                <td class="chg-neg">−2.72%</td>
+                <td class="chg-neg">−3.50%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ASX 200</td>
+                <td class="idx-level">8,869.10</td>
+                <td class="chg-neg">−0.65%</td>
+                <td class="chg-pos">+2.15%</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- COMMODITIES & CRYPTO -->
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag market">Commodities 🔥</span>
+            <h3 class="card-headline">Metals Crash Aftermath — Silver −31%, Gold −11%</h3>
+            <div style="margin-top: 0.5rem;">
+              <div class="yield-row" style="background: #fef2f2; padding: 0.5rem; border-radius: 4px;">
+                <span class="yield-label"><strong>Gold</strong></span>
+                <span class="yield-value chg-neg">$4,745.10 (−11.39%)</span>
+              </div>
+              <div class="yield-row" style="background: #fef2f2; padding: 0.5rem; border-radius: 4px;">
+                <span class="yield-label"><strong>Silver</strong></span>
+                <span class="yield-value chg-neg">$78.53 (−31.37%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Copper</span>
+                <span class="yield-value chg-neg">$5.92 (−4.51%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Crude Oil (WTI)</span>
+                <span class="yield-value chg-neg">$65.21 (−0.32%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Brent Crude</span>
+                <span class="yield-value chg-neg">$69.32 (−0.39%)</span>
+              </div>
+              <div class="yield-row" style="background: #f0fdf4; padding: 0.5rem; border-radius: 4px;">
+                <span class="yield-label"><strong>Natural Gas</strong></span>
+                <span class="yield-value chg-pos">$4.354 (+11.13%)</span>
+              </div>
+            </div>
+            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;"><strong>The trigger chain:</strong> Trump's Kevin Warsh Fed nomination signaled a credible, relatively hawkish pick — removing fears of a puppet who'd slash rates and tank the dollar. Since gold's record run was fueled by dollar weakness expectations, inflation hedging, and speculative positioning, the Warsh pick yanked out the demand pillar, triggering cascading COMEX margin calls and forced liquidation. Silver's −31.4% is the worst single-day crash in modern history. Copper −4.5% on China PMI contraction + metals contagion. Natural Gas surged +11.1% as the bomb cyclone drives heating demand across the US East Coast.</p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/commodities/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag market">Crypto</span>
+            <h3 class="card-headline">Crypto Bloodbath — BTC −6.4%, ETH −10%, SOL −11.6%</h3>
+            <div style="margin-top: 0.5rem;">
+              <div class="yield-row" style="background: #fef2f2; padding: 0.5rem; border-radius: 4px;">
+                <span class="yield-label"><strong>Bitcoin</strong></span>
+                <span class="yield-value chg-neg">$78,527 (−6.36%)</span>
+              </div>
+              <div class="yield-row" style="background: #fef2f2; padding: 0.5rem; border-radius: 4px;">
+                <span class="yield-label"><strong>Ethereum</strong></span>
+                <span class="yield-value chg-neg">$2,425 (−9.98%)</span>
+              </div>
+              <div class="yield-row" style="background: #fef2f2; padding: 0.5rem; border-radius: 4px;">
+                <span class="yield-label"><strong>Solana</strong></span>
+                <span class="yield-value chg-neg">$104.61 (−11.62%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">BNB</span>
+                <span class="yield-value chg-neg">$779.27 (−8.36%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">XRP</span>
+                <span class="yield-value chg-neg">$1.66 (−4.26%)</span>
+              </div>
+            </div>
+            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;"><strong>Weekend crypto selling accelerated sharply</strong> — the metals crash contagion that spared crypto on Friday has now caught up. BTC dropped to $78.5K (−6.4%), its lowest since late 2024, driven by forced margin liquidations cascading from the precious metals deleveraging event. ETH at $2,425 is nearly −50% from its $4,954 high. SOL at $104.61 is −58.7% from its $253 peak. <strong>The "crypto decoupling from traditional risk" thesis from Friday has been completely invalidated</strong> — weekend selling shows crypto remains correlated in stress events. Bitcoin is now −37.8% from its $126K ATH.</p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/crypto/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <!-- BONDS & FX -->
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag market">Bonds (Fri Close)</span>
+            <h3 class="card-headline">US Treasuries — Curve Steepening Continues</h3>
+            <div class="yield-curve-visual">
+              <div class="yc-bar-wrap">
+                <div class="yc-val">3.48%</div>
+                <div class="yc-bar" style="height: 40px;"></div>
+                <div class="yc-label">2Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">3.80%</div>
+                <div class="yc-bar" style="height: 46px;"></div>
+                <div class="yc-label">5Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">4.24%</div>
+                <div class="yc-bar" style="height: 52px;"></div>
+                <div class="yc-label">10Y</div>
+              </div>
+              <div class="yc-bar-wrap">
+                <div class="yc-val">4.87%</div>
+                <div class="yc-bar" style="height: 61px;"></div>
+                <div class="yc-label">30Y</div>
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem;">
+              <div class="yield-row">
+                <span class="yield-label">2Y–10Y Spread</span>
+                <span class="yield-value chg-pos">+76 bps</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Yield Curve</span>
+                <span class="status-badge normal">Normal</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">Fed Funds Rate</span>
+                <span class="yield-value">3.50–3.75%</span>
+              </div>
+            </div>
+            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">Long end rose (10Y +0.33%, 30Y +0.37%) while short end fell (2Y −0.17%) — reflecting the market pricing in the Warsh nomination as hawkish-neutral on near-term rates but inflationary on the long end due to fiscal uncertainty from the shutdown. The positively sloped curve signals no imminent recession but growing long-term fiscal concerns.</p>
+            <div class="card-sources"><a class="source-link" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/" target="_blank" rel="noopener">US Treasury <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in">
+            <span class="card-tag market">FX (Fri Close)</span>
+            <h3 class="card-headline">Dollar Strengthens — Yen Near Intervention Zone</h3>
+            <div style="margin-top: 0.5rem;">
+              <div class="yield-row">
+                <span class="yield-label">DXY (Dollar Index)</span>
+                <span class="yield-value chg-pos">97.15 (+0.16%)</span>
+              </div>
+              <div class="yield-row" style="background: #fef2f2; padding: 0.5rem; border-radius: 4px;">
+                <span class="yield-label"><strong>USD/JPY</strong></span>
+                <span class="yield-value chg-neg">¥154.78 (+1.15%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">EUR/USD</span>
+                <span class="yield-value chg-neg">$1.1854 (−0.98%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">GBP/USD</span>
+                <span class="yield-value chg-neg">$1.3687 (−0.86%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">USD/CAD</span>
+                <span class="yield-value chg-neg">C$1.3613 (+0.95%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">USD/MXN</span>
+                <span class="yield-value chg-neg">$17.449 (+1.38%)</span>
+              </div>
+              <div class="yield-row">
+                <span class="yield-label">AUD/USD</span>
+                <span class="yield-value chg-neg">$0.6966 (−1.18%)</span>
+              </div>
+            </div>
+            <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;">Dollar rebounding from 4-year lows with broad strength — driven by the Warsh nomination signaling Fed credibility won't erode under Trump. <strong>Yen at ¥154.78 is the biggest daily move in weeks</strong> — approaching ¥155 intervention territory. BOJ/MOF will be watching closely as markets reopen Monday. MXN (−1.38%) hit by Cuba tariff threats. AUD (−1.18%) weakened despite heat-driven energy demand as commodities crashed.</p>
+            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/currencies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <!-- SECTORS -->
+        <article class="card fade-in">
+          <span class="card-tag market">Sectors (Fri Close)</span>
+          <h3 class="card-headline">S&amp;P 500 Sector Performance — Materials Crushed, Defensives Shine</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Sector</th>
+                <th>Weight</th>
+                <th>Day %</th>
+                <th style="text-align:right">YTD %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">Consumer Defensive</td>
+                <td>4.91%</td>
+                <td class="chg-pos">+1.21%</td>
+                <td style="text-align:right" class="chg-pos">+7.10%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Healthcare</td>
+                <td>9.21%</td>
+                <td class="chg-pos">+0.30%</td>
+                <td style="text-align:right" class="chg-neg">−0.34%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Consumer Cyclical</td>
+                <td>10.82%</td>
+                <td class="chg-neg">−0.04%</td>
+                <td style="text-align:right" class="chg-pos">+2.78%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Real Estate</td>
+                <td>2.15%</td>
+                <td class="chg-neg">−0.08%</td>
+                <td style="text-align:right" class="chg-pos">+2.40%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Energy</td>
+                <td>4.54%</td>
+                <td class="chg-neg">−0.12%</td>
+                <td style="text-align:right" class="chg-pos">+12.24%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Utilities</td>
+                <td>2.13%</td>
+                <td class="chg-neg">−0.36%</td>
+                <td style="text-align:right" class="chg-pos">+3.23%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Financial Services</td>
+                <td>14.63%</td>
+                <td class="chg-neg">−0.69%</td>
+                <td style="text-align:right" class="chg-neg">−1.51%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Industrials</td>
+                <td>8.90%</td>
+                <td class="chg-neg">−0.68%</td>
+                <td style="text-align:right" class="chg-pos">+7.84%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Communication</td>
+                <td>10.61%</td>
+                <td class="chg-neg">−0.84%</td>
+                <td style="text-align:right" class="chg-pos">+3.48%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Technology</td>
+                <td>29.17%</td>
+                <td class="chg-neg">−1.41%</td>
+                <td style="text-align:right" class="chg-neg">−2.05%</td>
+              </tr>
+              <tr style="background: #fef2f2;">
+                <td class="idx-name">Basic Materials</td>
+                <td>2.93%</td>
+                <td class="chg-neg">−5.71%</td>
+                <td style="text-align:right" class="chg-pos">+11.25%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 0.5rem; font-size: 0.8rem;"><strong>The rotation story in one chart:</strong> Basic Materials (−5.71%) was the direct victim of the metals crash, wiping out a chunk of its strong YTD gains. Consumer Defensive (+1.21%) led as investors fled to safety — classic late-cycle behavior. Tech (−1.41%) continues bleeding post-MSFT, now firmly negative YTD at −2.05%. Energy remains the YTD king at +12.24% despite oil being flat on the day. The growth-to-value rotation is accelerating.</p>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/sectors/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- KEY EVENTS -->
+        <article class="card featured market fade-in">
+          <span class="card-tag market">Key Events</span>
+          <h3 class="card-headline">Economic Calendar &amp; What's Coming</h3>
+          <div class="cards-grid" style="margin-top: 0.75rem;">
+            <div>
+              <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">This Weekend</h4>
+              <div class="event-timeline">
+                <div class="event-item today">
+                  <div class="event-date">Feb 1 · TODAY</div>
+                  <div class="event-name">US Gov't Shutdown Day 2</div>
+                  <div class="event-detail">House votes Monday on funding deal.</div>
+                </div>
+                <div class="event-item today">
+                  <div class="event-date">Feb 1 · TODAY</div>
+                  <div class="event-name">Crypto Weekend Sell-Off</div>
+                  <div class="event-detail">BTC −6.4%, metals contagion catches up.</div>
+                </div>
+                <div class="event-item today">
+                  <div class="event-date">Feb 1 · TODAY</div>
+                  <div class="event-name">Ukraine Energy "Truce" Expires</div>
+                  <div class="event-detail">Kremlin says pause ends as −20°C hits.</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-market); margin-bottom: 0.5rem;">Coming Up</h4>
+              <div class="event-timeline">
+                <div class="event-item">
+                  <div class="event-date">Feb 2 (Mon)</div>
+                  <div class="event-name">House Votes on Shutdown Deal</div>
+                  <div class="event-detail">Markets reopen; metals fallout first test.</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Feb 3 (Tue)</div>
+                  <div class="event-name">Japan Election Campaign Starts</div>
+                  <div class="event-detail">12-day campaign officially begins.</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Feb 6 (Fri)</div>
+                  <div class="event-name">January Jobs Report (NFP)</div>
+                  <div class="event-detail">Critical after Dec's weak 50K print.</div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">Feb 8 (Sun)</div>
+                  <div class="event-name">Japan General Election Day</div>
+                  <div class="event-detail">LDP aiming for single-party majority.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm" target="_blank" rel="noopener">BOJ <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- 🔮 PREDICTIONS -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <div class="section-icon predict">🔮</div>
+        <h2 class="section-title predict">Predictions</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured predict fade-in">
+          <span class="card-tag predict">Tomorrow & Week Ahead</span>
+          <h3 class="card-headline">What to Watch This Week</h3>
+          <p class="card-body">
+            <strong>🏛️ Monday — Shutdown Resolution + Market Reopening:</strong> House votes on the Senate funding deal. Quick passage expected. But the real action is the market open — this is the first reaction to (a) the full metals crash aftermath, (b) weekend crypto carnage (BTC to $78.5K), (c) the Israel-Iran regime change escalation, and (d) Pakistan's deadliest day in Balochistan. Expect elevated volatility. If shutdown resolves cleanly, one headwind removed.<br><br>
+            <strong>📊 January NFP (Feb 6):</strong> The week's biggest scheduled data point. December's weak 50K print rattled markets. A rebound above 150K would calm recession fears; another miss below 100K would put June rate cut firmly on the table and test the Warsh nomination thesis. Watch for government shutdown impact on data collection.<br><br>
+            <strong>🇯🇵 Japan Election (Feb 8):</strong> The campaign officially starts Tuesday. Takaichi holds a commanding lead but LDP's scandal baggage could narrow margins. If LDP wins a single-party majority, expect Nikkei to rally 2-3%, yen to weaken further, and BOJ to gain confidence for a March hike. A disappointing result would trigger a sharp reversal.<br><br>
+            <strong>🥇 Metals + Crypto Fallout:</strong> The weekend crypto selloff (BTC −6.4%) has invalidated the "crypto decouples from metals crash" thesis from Friday. Monday will show whether the deleveraging cascade is done or still unwinding. Gold stabilizing above $4,500 keeps the supercycle alive; below that, it's a regime change. Silver needs to find a floor — further forced selling could push it toward $70.<br><br>
+            <strong>📈 Expected Ranges:</strong> S&amp;P 500: 6,800–6,950 (biased lower on metals contagion). Nikkei: 52,500–53,800. USD/JPY: 153–157. Gold: $4,300–$5,000 (extremely wide). BTC: $74,000–$82,000. VIX likely to push above 19.
+          </p>
+        </article>
+
+        <article class="card featured predict fade-in">
+          <span class="card-tag predict">Key Themes</span>
+          <h3 class="card-headline">Evolving Outlook — Contagion Spreads</h3>
+          <p class="card-body">
+            <strong>1. The Deleveraging Cascade Isn't Over:</strong> Friday's precious metals crash was supposed to be a one-day event. The weekend crypto selloff proves otherwise — forced margin calls are cascading across asset classes. BTC's −6.4% and ETH's −10% show that when leverage unwinds, correlations go to 1. Monday's equity open will be the ultimate stress test. If the S&P holds 6,850, the damage is contained. Below that, we're looking at a broader correction.<br><br>
+            <strong>2. Japan's Diplomatic Balancing Act:</strong> In one weekend, Japan lost its last pandas (Beijing signaling displeasure), hosted the UK PM (Western alliance deepening), watched TEPCO's reactor restart fail (energy policy setback), and entered the final week before a snap election. Takaichi is juggling more geopolitical plates than any Japanese PM in recent memory — China, Taiwan, Trump, nuclear policy, the election — and any one of them could break. The Starmer visit was a tactical win, but the panda departure is a visceral reminder of how broken the China relationship has become.<br><br>
+            <strong>3. Iran Is the Wildcard:</strong> Israel pushing for maximalist US strikes aimed at regime change in Iran is the most dangerous escalation path in global geopolitics right now. If Trump authorizes strikes beyond symbolic, oil could spike 20-30%, VIX could double, and safe-haven flows would overwhelm everything else. The simultaneous nuclear talks and military positioning makes this genuinely unpredictable. Monitor closely.<br><br>
+            <strong>4. The Great Trade Realignment:</strong> India-EU free trade deal, UK resetting with both China and Japan, Canada and China warming up — the world is rapidly forming new trade alliances to hedge against Trump's tariff regime. The common thread: nobody trusts Washington to be a stable partner. This structural shift will persist regardless of the next US election.<br><br>
+            <strong>5. Tech Still Searching for a Floor:</strong> Tech at −2.05% YTD and falling, with NVDA down to $191 and INTC crashing −4.5%, shows the AI capex "show me the money" moment is here. The sector that dominated for two years is now the worst performer in 2026. Energy (+12.24% YTD) and Industrials (+7.84%) continue to lead. The rotation is real and accelerating.
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ⚡ BOTTOM LINE -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line fade-in">
+        <div class="section-header">
+          <div class="section-icon bottom">⚡</div>
+          <h2 class="section-title">The Bottom Line</h2>
+        </div>
+
+        <p>This afternoon's story is contagion. Friday's historic precious metals crash (silver −31%, gold −11%) was supposed to be contained — but the weekend proved otherwise. Crypto collapsed (BTC −6.4% to $78.5K, SOL −11.6%) as forced margin calls cascaded across asset classes, killing the "decoupling" thesis. In Japan, it was a weekend of symbolic inflection points: the UK PM visited Tokyo and declared the alliance the "strongest in decades" (a campaign gift to Takaichi 7 days before the election), but Japan's last two pandas are leaving for China on Tuesday — the most visceral signal yet that panda diplomacy is dead and Beijing-Tokyo relations are at their lowest point since normalization in 1972. TEPCO's embarrassing reactor restart failure hours after its first post-Fukushima restart undermines Takaichi's nuclear energy push. Globally, the signals are alarming: Israel is pushing Trump toward Iran regime change, Pakistan suffered its deadliest day in Balochistan, 200+ died in a DRC mine collapse, and Ukraine's energy "truce" expires today as −20°C hits. Monday's market open will be the first real stress test — shutdown vote, metals fallout, crypto carnage, and a world with more simultaneous flashpoints than at any point this year. Buckle up.</p>
+        <div class="card-sources">
+          <a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp;
+          <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp;
+          <a class="source-link" href="https://apnews.com/" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a> &nbsp;
+          <a class="source-link" href="https://www.aljazeera.com/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CEO Daily Briefing · Feb 1, 2026 · Afternoon Edition · Curated intelligence for executive decision-makers</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.nav-pill').forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(pill.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    const gaugeNeedle = document.getElementById('gaugeNeedle');
+    const gaugeScore = document.getElementById('gaugeScore');
+    if (gaugeNeedle) {
+      const score = 53;
+      const angle = -90 + (score / 100) * 180;
+      const gaugeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            gaugeNeedle.style.transform = `rotate(${angle}deg)`;
+            let current = 0;
+            const interval = setInterval(() => {
+              current++;
+              gaugeScore.textContent = current;
+              if (current >= score) clearInterval(interval);
+            }, 15);
+            gaugeObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      gaugeObserver.observe(gaugeNeedle.closest('.card'));
+    }
+
+    document.querySelectorAll('.methodology-toggle .arrow').forEach(arrow => {
+      const style = document.createElement('style');
+      style.textContent = '.arrow.open { transform: rotate(90deg); }';
+      document.head.appendChild(style);
+    });
+  </script>
+
+</body>
+</html>
