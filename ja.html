@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEOデイリーブリーフィング — 2026年2月3日（夜間版）</title>
+  <title>CEOデイリーブリーフィング — 2026年2月5日</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Noto+Serif+JP:wght@400;600;700;900&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Noto+Serif+JP:wght@600;700;900&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -40,7 +40,7 @@
       font-family: var(--sans);
       background: var(--bg);
       color: var(--text);
-      line-height: 1.8;
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -166,7 +166,9 @@
       padding: 2rem 1.5rem 4rem;
     }
 
-    .section { margin-bottom: 3rem; }
+    .section {
+      margin-bottom: 3rem;
+    }
 
     .section-header {
       display: flex;
@@ -189,9 +191,11 @@
     }
 
     .section-icon.geo { background: #e8eef5; }
+    .section-icon.tech { background: #ede6f6; }
     .section-icon.japan { background: #fce8e5; }
     .section-icon.market { background: #e6f5ef; }
     .section-icon.predict { background: #fef3c7; }
+    .section-icon.vc { background: #e0f2fe; }
     .section-icon.bottom { background: #f0f0f0; }
 
     .section-title {
@@ -202,9 +206,11 @@
     }
 
     .section-title.geo { color: var(--accent-geo); }
+    .section-title.tech { color: var(--accent-tech); }
     .section-title.japan { color: var(--accent-japan); }
     .section-title.market { color: var(--accent-market); }
     .section-title.predict { color: var(--accent-predict); }
+    .section-title.vc { color: var(--accent-vc); }
     .section-title.bottom { color: var(--accent-bottom); }
 
     .cards { display: grid; gap: 1rem; }
@@ -228,7 +234,7 @@
       font-family: var(--serif);
       font-size: 1.05rem;
       font-weight: 700;
-      line-height: 1.5;
+      line-height: 1.45;
       margin-bottom: 0.4rem;
       color: var(--text);
     }
@@ -236,7 +242,7 @@
     .card-body {
       font-size: 0.9rem;
       color: var(--text-secondary);
-      line-height: 1.75;
+      line-height: 1.7;
     }
 
     .card-tag {
@@ -251,14 +257,21 @@
     }
 
     .card-tag.geo { background: #e8eef5; color: var(--accent-geo); }
+    .card-tag.tech { background: #ede6f6; color: var(--accent-tech); }
     .card-tag.japan { background: #fce8e5; color: var(--accent-japan); }
     .card-tag.market { background: #e6f5ef; color: var(--accent-market); }
+    .card-tag.vc { background: #e0f2fe; color: var(--accent-vc); }
     .card-tag.predict { background: #fef3c7; color: var(--accent-predict); }
 
-    .card.featured { border-left: 4px solid; padding-left: 1.5rem; }
+    .card.featured {
+      border-left: 4px solid;
+      padding-left: 1.5rem;
+    }
     .card.featured.geo { border-left-color: var(--accent-geo); }
+    .card.featured.tech { border-left-color: var(--accent-tech); }
     .card.featured.japan { border-left-color: var(--accent-japan); }
     .card.featured.market { border-left-color: var(--accent-market); }
+    .card.featured.vc { border-left-color: var(--accent-vc); }
     .card.featured.predict { border-left-color: var(--accent-predict); }
 
     .cards-grid {
@@ -365,11 +378,7 @@
     }
     .index-table tr:last-child td { border-bottom: none; }
     .index-table .idx-name { font-weight: 600; color: var(--text); }
-    .index-table .idx-level {
-      font-family: var(--sans);
-      font-weight: 700;
-      font-variant-numeric: tabular-nums;
-    }
+    .index-table .idx-level { font-family: var(--sans); font-weight: 700; font-variant-numeric: tabular-nums; }
     .chg-pos { color: var(--green); font-weight: 600; }
     .chg-neg { color: var(--red); font-weight: 600; }
 
@@ -426,7 +435,7 @@
     .gauge-score {
       font-family: var(--serif);
       font-size: 2.4rem;
-      font-weight: 800;
+      font-weight: 900;
       color: var(--text);
       margin-top: 0.25rem;
     }
@@ -501,11 +510,13 @@
       overflow: hidden;
       transition: max-height 0.3s ease;
     }
-    .methodology-content.open { max-height: 500px; }
+    .methodology-content.open {
+      max-height: 500px;
+    }
     .methodology-content p {
       font-size: 0.78rem;
       color: var(--text-secondary);
-      line-height: 1.6;
+      line-height: 1.7;
       margin-top: 0.5rem;
     }
 
@@ -546,6 +557,31 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    .section:nth-child(1) .card { animation-delay: 0.05s; }
+    .section:nth-child(1) .card:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(1) .card:nth-child(3) { animation-delay: 0.15s; }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.2em 0.7em;
+      border-radius: 10px;
+    }
+    .status-badge.normal { background: #dcfce7; color: #166534; }
+    .status-badge.caution { background: #fef9c3; color: #854d0e; }
+    .status-badge.alert { background: #fecaca; color: #991b1b; }
+
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      .cards-grid-3 { grid-template-columns: 1fr; }
+    }
+
     @media print {
       body { background: #fff; }
       .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
@@ -556,14 +592,14 @@
 </head>
 <body>
 
-  <!-- ━━━ ナビ ━━━ -->
+  <!-- ━━━ ナビバー ━━━ -->
   <nav class="nav-bar">
     <a href="index.html">Today's Briefing</a>
     <a href="ja.html" class="active">日本語版</a>
     <a href="archive.html">Archive</a>
   </nav>
 
-  <!-- ━━━ ヘッダー ━━━ -->
+  <!-- ━━━ マストヘッド ━━━ -->
   <header class="masthead">
     <div class="lang-toggle">
       <a href="index.html">EN</a>
@@ -571,15 +607,15 @@
       <a href="ja.html" class="active">JA</a>
     </div>
     <div class="masthead-inner">
-      <div class="overline">夜間インテリジェンスブリーフ</div>
+      <div class="overline">朝のインテリジェンスブリーフ</div>
       <h1>CEOデイリーブリーフィング</h1>
-      <div class="edition-date">2026年2月3日（火） — 午後10時 JST</div>
-      <div class="edition-sub">日本 · 世界各地域 · マーケット＆経済 · 予測</div>
+      <div class="edition-date">2026年2月5日（木）午前7時 JST</div>
+      <div class="edition-sub">日本 · 世界各地域 · マーケット・経済 · 予測</div>
       <div class="divider-bar"></div>
     </div>
   </header>
 
-  <!-- ━━━ ナビピル ━━━ -->
+  <!-- ━━━ ナビゲーション ━━━ -->
   <nav class="nav-pills">
     <a href="#japan" class="nav-pill">🇯🇵 日本</a>
     <a href="#global" class="nav-pill">🌍 世界</a>
@@ -590,9 +626,9 @@
 
   <main class="container">
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <!-- 🇯🇵 日本（詳細セクション） -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <section class="section" id="japan">
       <div class="section-header">
         <div class="section-icon japan">🇯🇵</div>
@@ -601,86 +637,99 @@
 
       <div class="cards">
 
-        <!-- 1. 日経大幅上昇 -->
+        <!-- 1. 衆議院選挙 -->
         <article class="card featured japan fade-in">
-          <span class="card-tag japan">マーケット · トップ</span>
-          <h3 class="card-headline">日経平均+3.92%で54,721円、終値最高値更新 — 米印貿易合意と円安が追い風、ショートカバーが爆発的上昇を牽引</h3>
-          <p class="card-body">日経平均は<span class="stat">+2,065円（+3.92%）</span>の大幅高で54,721円に到達、史上5番目の上昇幅を記録し、終値ベースの最高値を約3週間ぶりに更新した。<strong>上昇の因果関係：</strong>（1）トランプ大統領が米印貿易合意を発表し、インドへの関税を50%→18%に大幅引き下げ — 世界的な関税リスク後退の合図となり、リスクオンムードが急拡大。（2）前日の過度な売られすぎ水準から積極的なショートカバーと押し目買いが殺到。（3）円がドル155円台半ばで安定推移し、輸出企業の利益マージンを支援。非鉄金属、銀行、機械セクターが上昇を主導。TOPIX も+3.10%の3,645.84で引けた。</p>
+          <span class="card-tag japan">選挙2026 · トップニュース</span>
+          <h3 class="card-headline">選挙まであと3日：高市首相の若年層支持急増、防衛タカ派vs護憲派、そして移民パラドックスが日本の将来を左右</h3>
+          <p class="card-body">2月8日の衆議院総選挙まで残り3日、3つの大きな力が交錯している。<strong>若年層の選挙参加が急増中：</strong>日経によると高市首相は「今までとは違う総理」として、小泉純一郎以来の街頭演説動員力を見せている — <strong>その背景には</strong>中国の台頭に対する不安と日本の国際的プレゼンス低下への焦りがあり、高市氏のナショナリスト的メッセージが若者世代の琴線に触れている。<strong>防衛政策では：</strong>トランプ大統領の同盟国負担増要求と、今週北京でKMTが「民族復興」を唱えたことを受け、防衛費の大幅増額を推進。<strong>移民問題では：</strong>候補者の約40%が外国人労働者の制限を主張 — <strong>しかしこれは</strong>年間約50万人の生産年齢人口減少という現実と真っ向から矛盾する。一方、野党は食料品消費税ゼロを実現するための<strong>政府系ファンド構想</strong>を提案しており、注目を集めるも財政タカ派から懐疑的な声も。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://mainichi.jp/english/articles/20260203/p2g/00m/0bu/031000c" target="_blank" rel="noopener">毎日新聞 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://asia.nikkei.com/politics/japan-election/a-different-kind-of-prime-minister-sparks-hope-among-japan-s-youth" target="_blank" rel="noopener">日経 — 若年層 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://asia.nikkei.com/politics/japan-election/nearly-40-of-japan-election-candidates-want-foreign-worker-curbs" target="_blank" rel="noopener">日経 — 移民 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://mainichi.jp/english/articles/20260204/p2a/00m/0na/010000c" target="_blank" rel="noopener">毎日新聞 — 消費税 <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 2. 日経平均 -->
+        <article class="card featured japan fade-in">
+          <span class="card-tag japan">マーケット</span>
+          <h3 class="card-headline">日経平均−0.78%の54,293円 — 選挙前の慎重姿勢とウォール街テック売りの波及で下落</h3>
+          <p class="card-body">日経225は<span class="stat">−0.78%</span>で54,293円に下落。<strong>下落の要因は</strong>ウォール街のテック主導の売りがアジア市場に波及したこと（ナスダック−1.43%）に加え、日曜日の選挙前にリスク回避姿勢を強める機関投資家の利益確定売りが重なった。高市首相の拡張的財政政策が広く予想される中、年初来+8%の好調な相場を前にイベントリスクを避ける動きが顕著になった。テック・半導体関連銘柄が下落を主導 — 米国発の「AI設備投資バブル」懸念が波及。</p>
+          <div class="card-sources">
             <a class="source-link" href="https://finance.yahoo.com/quote/%5EN225/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
-        <!-- 2. 選挙5日前 -->
+        <!-- 3. トヨタ -->
         <article class="card featured japan fade-in">
-          <span class="card-tag japan">衆院選2026</span>
-          <h3 class="card-headline">衆院選まで5日 — 自民単独過半数の勢い、選挙期待が株高の最大要因に</h3>
-          <p class="card-body">2月8日の衆議院選挙を5日後に控え、各種世論調査で自民党の単独過半数（465議席中233議席超）が視野に入った。<strong>自民支持の背景：</strong>高市早苗首相の安全保障強化と経済成長重視のメッセージが有権者に響いている — 特にトランプ政権からの同盟国防衛費増額圧力と中国の台湾海峡での軍事的挑発が、防衛力強化への支持を高めている。一方、野田佳彦氏率いる中道改革連合は「中道にとても厳しい数字」と緊急メッセージを発表し、支持浸透に苦戦。<strong>市場への含意：</strong>自民勝利 = 日経続伸＋円安継続（政策安定期待）。予想外の不振があればリスクオフで円急騰・株下落の可能性。</p>
+          <span class="card-tag japan">自動車</span>
+          <h3 class="card-headline">トヨタ、2028年にHV3割増産 — EV補助金縮小で「ハイブリッド優位」が鮮明に</h3>
+          <p class="card-body">トヨタ自動車は2028年にハイブリッド車（HV）の生産台数を26年計画比<span class="stat">約3割増の670万台</span>に引き上げる方針を主要部品メーカーに通知した。米国を中心にエンジン・部品工場へ投資を拡大。<strong>この戦略転換の背景には</strong>欧米各国のEV購入補助金の相次ぐ縮小があり、航続距離や充電インフラの不安を感じる消費者がコスト面で優位なHVに回帰している現実がある。競合他社がEV一本足で巨額赤字を計上する中、トヨタのHV優先戦略は台数と利益率の両方を達成 — かつて批判された「EVに慎重すぎる」姿勢が正しかったことが証明されつつある。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://mainichi.jp/english/articles/20260203/p2g/00m/0na/012000c" target="_blank" rel="noopener">毎日新聞 <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://news.yahoo.co.jp/" target="_blank" rel="noopener">Yahoo!ニュース <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://asia.nikkei.com/business/automobiles/toyota-plans-30-increase-in-global-hybrid-production" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.nikkei.com/article/DGXZQOFD2852Y0Y6A120C2000000/" target="_blank" rel="noopener">日本経済新聞 <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
-        <!-- 3. 日銀ETF売却開始 -->
-        <article class="card featured japan fade-in">
-          <span class="card-tag japan">金融政策</span>
-          <h3 class="card-headline">日銀がETF・J-REIT売却を開始 — 異次元緩和からの正常化が本格始動</h3>
-          <p class="card-body">日銀のバランスシートから、ETF約53.7億円とJ-REIT約1億円の売却が確認された。<strong>売却開始の理由：</strong>2024年3月にマイナス金利を解除し、同年9月の政策会合でETF・J-REITの段階的縮小を決定 — 年間ETF約3,300億円、J-REIT約50億円のペースで保有を減らす方針。日銀は簿価ベースで約37兆円のETFを保有しており、植田和男総裁は「単純計算で100年以上かかる」と述べている。市場への影響は限定的だが、<strong>日銀の緩和解除がもう後戻りできない段階</strong>に入ったことを象徴する動きだ。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://mainichi.jp/english/articles/20260203/p2g/00m/0bu/027000c" target="_blank" rel="noopener">毎日新聞 <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
+        <!-- 4. MHI + JGB -->
+        <div class="cards-grid">
+          <article class="card fade-in">
+            <span class="card-tag japan">防衛・エネルギー</span>
+            <h3 class="card-headline">三菱重工、過去最高益を更新 — 米国AIデータセンター向けガスタービン需要が爆発</h3>
+            <p class="card-body">三菱重工業が2桁の増収増益で過去最高益を記録。<strong>急成長の原動力は</strong>AIデータセンターの電力需要急増に対応するため米国で天然ガスタービンの需要が爆発的に拡大したこと。ハイパースケーラーが安定的なベースロード電源として天然ガスに殺到し、世界のガスタービン市場は2025年にほぼ倍増。日本の重工業企業がAIブームの重要なインフラ供給者として浮上している。</p>
+            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/aerospace-defense-industries/gas-turbine-boom-in-us-lifts-japan-s-mitsubishi-heavy-to-record-profit" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a></div>
+          </article>
 
-        <!-- 4. フジHD + Nintendo -->
+          <article class="card fade-in">
+            <span class="card-tag japan">債券</span>
+            <h3 class="card-headline">JGB10年利回りが数十年ぶり高水準 — 高市財政拡張への期待が利回りを押し上げ</h3>
+            <p class="card-body">10年物国債利回りが数十年ぶりの高水準を維持。<strong>上昇の要因は</strong>日曜日の選挙後に高市首相が拡張的財政政策を推進し、新規国債発行が増加するとの市場の織り込み。利回り上昇は日本の保険会社の含み損拡大を招いているが、株式ポートフォリオの含み益がバッファーとなっている。逆説的に、利回り上昇が外国人投資家のJGB買いを呼び込んでおり、新規発行の吸収に寄与する可能性も。</p>
+            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/markets/bonds/rising-japan-bond-yields-hit-insurers-but-stock-prices-offer-buffer" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <!-- 5. パナソニック + 旧統一教会 -->
         <div class="cards-grid">
           <article class="card fade-in">
             <span class="card-tag japan">企業</span>
-            <h3 class="card-headline">フジHD、村上氏側の持ち株を2,350億円で買取 — 不動産再編で対立収束へ</h3>
-            <p class="card-body">フジ・メディア・ホールディングスは、村上世彰氏らが保有するFMH株を上限2,350億円で買い取ると発表。<strong>背景：</strong>村上氏側がフジの不動産事業の分離・外部資本導入を要求していたアクティビスト攻勢に対し、経営陣が妥協 — 不動産事業への外部資本受け入れ検討を開始する代わりに、村上氏側は大規模買い付け提案を取り下げる方針。清水賢治社長は「企業価値向上という目標は一致していた」と述べた。</p>
-            <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/" target="_blank" rel="noopener">日経新聞 <span class="src-arrow">↗</span></a></div>
+            <h3 class="card-headline">パナソニックHD、業績見通しを下方修正 — 構造改革費用が利益を圧迫</h3>
+            <p class="card-body">パナソニックホールディングスが今年度の業績見通しを下方修正。<strong>下方修正の理由は</strong>車載電池事業を中心とした構造改革費用の増加。EV市場の成長鈍化を受け、北米の電池工場計画を見直す必要に迫られたことが背景にある。トヨタのHV増産ニュースとは対照的に、EV一辺倒の投資戦略のリスクが顕在化した形だ。</p>
+            <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043511000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
-            <span class="card-tag japan">ゲーム</span>
-            <h3 class="card-headline">任天堂、4-12月売上高倍増 — Switchが歴代最高販売台数を記録</h3>
-            <p class="card-body">任天堂の2025年4-12月期の売上高が前年同期比で倍増。<strong>躍進の理由：</strong>Switch 2の年末商戦での販売が初代Switchの同時期を上回り、ハード・ソフト双方で強い需要が持続。ただしメモリチップ価格の高騰（AI向けDRAM/NAND需要がキャパシティを逼迫）がマージンを圧迫するリスクは来期以降に顕在化する可能性。</p>
-            <div class="card-sources"><a class="source-link" href="https://mainichi.jp/english/articles/20260203/p2g/00m/0bu/036000c" target="_blank" rel="noopener">毎日新聞 <span class="src-arrow">↗</span></a></div>
+            <span class="card-tag japan">政治・社会</span>
+            <h3 class="card-headline">旧統一教会の解散命令、東京高裁が3月4日に判断 — 安倍銃撃事件の山上被告は控訴</h3>
+            <p class="card-body">旧統一教会の解散命令をめぐる2審判断が3月4日に予定。<strong>注目される理由は</strong>2022年の安倍元首相銃撃事件を契機に表面化した教団の組織的献金勧誘問題が、ついに司法の最終判断を迎えること。同時に、山上被告の弁護団が無期懲役の判決を不服として控訴 — <strong>控訴の根拠は</strong>精神鑑定の評価や動機の特殊性に関する法的議論。</p>
+            <div class="card-sources">
+              <a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043291000" target="_blank" rel="noopener">NHK — 旧統一教会 <span class="src-arrow">↗</span></a> &nbsp;
+              <a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043001000" target="_blank" rel="noopener">NHK — 山上被告 <span class="src-arrow">↗</span></a>
+            </div>
           </article>
         </div>
 
-        <!-- 5. IHI + 春闘 -->
+        <!-- 6. 円安 + JAXA -->
         <div class="cards-grid">
           <article class="card fade-in">
-            <span class="card-tag japan">エネルギー</span>
-            <h3 class="card-headline">IHI、原発部品増産に200億円投資 — 次世代原子炉需要を見込む</h3>
-            <p class="card-body">IHIは格納容器など原発部品の増産に向け、今後3年間で200億円を投資する。<strong>投資の背景：</strong>AI普及による世界的電力需要の急増で、次世代原子炉（SMR含む）の新設需要が高まっている。国内でも原発再稼働にとどまらず新設調査が動き出しており、原発産業が構造的な復活期に入りつつある。</p>
-            <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/" target="_blank" rel="noopener">日経新聞 <span class="src-arrow">↗</span></a></div>
+            <span class="card-tag japan">為替</span>
+            <h3 class="card-headline">円安進行、1ドル=156.65円 — 選挙後の経済政策を巡る思惑で円売り加速</h3>
+            <p class="card-body">ドル/円は<span class="stat">+0.58%</span>の156.65円に上昇。<strong>円安が進んだ背景は</strong>高市首相の弱い円を容認する拡張的財政政策が選挙で支持されるとの見通しから、選挙後の日本の経済政策をにらんだ円売りが膨らんだこと。日米金利差の拡大（JGB利回りは上昇するも米国金利がイラン情勢のリスクプレミアムでより速く上昇）も円安要因。</p>
+            <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043391000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in">
-            <span class="card-tag japan">労働・経済</span>
-            <h3 class="card-headline">春闘 — 日商と連合が賃上げ・価格転嫁で一致</h3>
-            <p class="card-body">日本商工会議所の小林会頭と連合の芳野友子会長がトップ会談を実施。<strong>合意の背景：</strong>物価高が持続する中、中小企業が賃上げ原資を確保するには適正な価格転嫁が不可欠 — 大企業と中小企業間のサプライチェーンでの価格交渉力格差が依然として課題。今年の春闘は実質賃金のプラス転換を維持できるかが焦点。</p>
-            <div class="card-sources"><a class="source-link" href="https://news.web.nhk.or.jp/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
+            <span class="card-tag japan">科学技術</span>
+            <h3 class="card-headline">JAXA、イプシロンSロケット開発計画を見直し — 相次ぐ試験失敗で抜本的再検討</h3>
+            <p class="card-body">JAXAが小型ロケット「イプシロンS」の開発計画見直しを決定。<strong>見直しに至った理由は</strong>燃焼試験での爆発事故が相次ぎ、当初の打ち上げスケジュールの大幅な遅延が不可避になったこと。日本の独自宇宙輸送手段の確保が遅れることで、国際競争力の観点から懸念が広がっている。</p>
+            <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043581000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
-
-        <!-- 6. 山上被告控訴 -->
-        <article class="card fade-in">
-          <span class="card-tag japan">社会</span>
-          <h3 class="card-headline">安倍元首相銃撃事件 — 山上徹也被告の弁護団が控訴の方針</h3>
-          <p class="card-body">安倍晋三元首相を銃撃・殺害した山上徹也被告の弁護団が、無期懲役の一審判決を不服として控訴する方針を固めた。<strong>控訴の理由：</strong>弁護側は旧統一教会による宗教被害が動機の根底にあると主張しており、奈良地裁の「宗教団体への恨みから生命を奪う意思決定は大きな飛躍がある」という判断に反論する構え。事件は日本の宗教団体と政治の関係を根本から問い直すきっかけとなった。</p>
-          <div class="card-sources"><a class="source-link" href="https://news.web.nhk.or.jp/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
-        </article>
 
       </div>
     </section>
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <!-- 🌍 世界各地域 -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <section class="section" id="global">
       <div class="section-header">
         <div class="section-icon geo">🌍</div>
@@ -692,108 +741,118 @@
         <!-- 北米 -->
         <article class="card featured geo fade-in">
           <span class="card-tag geo">北米</span>
-          <h3 class="card-headline">米印貿易合意で関税18%に大幅引下げ · 120億ドル「プロジェクト・ボルト」レアアース備蓄 · トランプがグラミー司会者を提訴へ</h3>
+          <h3 class="card-headline">PayPal株−20%暴落 · トランプ政権がレアアース120億ドル戦略備蓄発表 · 重要鉱物閣僚級会合に50カ国以上参加</h3>
           <p class="card-body">
-            <strong>1. 米印貿易合意 — 関税50%→18%へ大幅引下げ：</strong>トランプ大統領は、インドがロシア産石油の購入を停止し、米国製品5,000億ドルの購入と関税ゼロ化を約束したことを受け、インドへの関税を18%に引き下げると発表。<strong>合意成立の理由：</strong>インドが先に英国・EUと貿易協定を締結し、米国に競争的緊迫感が生まれたことが水面下交渉を加速。さらにトランプ大統領はロシアの石油収入を断つことがウクライナ戦争終結への最善策と考えており、インドのロシア石油購入停止は地政学的にも重要な譲歩となった。<br><br>
-            <strong>2. 「プロジェクト・ボルト」— 120億ドルのレアアース戦略備蓄：</strong>トランプ政権は米国輸出入銀行の100億ドル融資と民間資本16.7億ドルでレアアース戦略備蓄を創設。<strong>創設の理由：</strong>中国が世界のレアアース採掘の70%、加工の90%を支配しており、昨年の米中貿易交渉で輸出制限を武器として使用した経験が直接のトリガー。石油戦略備蓄と同様のモデルで供給途絶リスクに対応する。<br><br>
-            <strong>3. トランプ大統領がグラミー賞司会者を提訴へ：</strong>グラミー賞授賞式での司会者のジョークに激怒し、名誉毀損で提訴する意向を表明。<strong>背景：</strong>トランプ政権下でのエンターテインメント業界との対立が激化しており、言論の自由と大統領の権威をめぐる文化戦争の一環。
+            <strong>1. PayPal、1日で−20.3%暴落 — フィンテックの堀は想像以上に薄かった：</strong>PayPal株が<span class="stat">$41.70</span>に急落、通常の8倍の出来高（1.41億株）を記録。<strong>暴落のきっかけは</strong>Q4売上成長率がわずか3.7%にとどまり予想を下回ったこと。Apple Pay、Google Pay、新興フィンテックとの競争でブランデッドチェックアウト事業が持続的に浸食されていることが投資家のパニックを誘発。時価総額は1日で約90億ドル消失。<br><br>
+            <strong>2. トランプ政権、レアアース120億ドル戦略備蓄「プロジェクト・ボールト」を発表：</strong><strong>この施策の動機は</strong>中国がレアアース採掘の70%、加工の90%を支配しており、2025年の貿易交渉でジェットエンジン・EV・電子機器に不可欠な元素の輸出制限をカードとして使ったこと。Ex-Im銀行100億ドルの融資と民間16.7億ドルで戦略備蓄を構築し、石油戦略備蓄をモデルとする。<br><br>
+            <strong>3. 重要鉱物閣僚級会合に50カ国以上が参加：</strong>ルビオ国務長官が主催し、ヴァンス副大統領が基調講演。<strong>この会合の目的は</strong>中国への鉱物依存を低減するための国際的な連携強化であり、二国間協定の締結が見込まれる。日本にとっても半導体材料の供給多角化という文脈で重要。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://mainichi.jp/english/articles/20260203/p2g/00m/0in/010000c" target="_blank" rel="noopener">毎日新聞 — 米印合意 <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://mainichi.jp/english/articles/20260203/p2g/00m/0in/020000c" target="_blank" rel="noopener">毎日新聞 — レアアース <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://finance.yahoo.com/quote/PYPL/" target="_blank" rel="noopener">Yahoo — PayPal <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://asia.nikkei.com/business/materials/trump-administration-to-create-strategic-reserve-for-rare-earths" target="_blank" rel="noopener">日経 — レアアース <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.aljazeera.com/economy/2026/2/4/trumps-critical-minerals-meet-whos-attending-whats-at-stake" target="_blank" rel="noopener">Al Jazeera — 鉱物会合 <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- ヨーロッパ -->
         <article class="card featured geo fade-in">
           <span class="card-tag geo">ヨーロッパ</span>
-          <h3 class="card-headline">ロシアがウクライナに2026年最大の攻撃 — ミサイル70発超+ドローン450機 · パリ検察がマスクのX社を強制捜査 · クリントン夫妻がエプスタイン証言に同意</h3>
+          <h3 class="card-headline">ロシア、ウクライナのエネルギー施設を猛攻撃 · スペインがSNS規制発表でマスクが激怒 · エプスタイン文書が英政治を揺るがす</h3>
           <p class="card-body">
-            <strong>1. ロシアの大規模エネルギー攻撃：</strong>ロシアがウクライナの発電所に2026年最大規模の攻撃を実行 — ミサイル70発以上、ドローン450機以上を投入し、キーウ、ハルキウ、オデーサ、ドニプロの電力インフラを標的にした。気温は−20℃。<strong>エスカレーションの理由：</strong>トランプ大統領が仲介した「エネルギー休戦」が週末に期限切れとなり、プーチン大統領は今週のアブダビ和平協議を前に民間の苦痛を最大化する戦略を採用。ハルキウの発電所は修復不可能なほど破壊され、キーウでは1,000以上のマンションが暖房を喪失した。<br><br>
-            <strong>2. パリ検察がX社フランスオフィスを強制捜査：</strong>サイバー犯罪担当部門がX社のパリオフィスを捜索。<strong>捜査の理由：</strong>2025年1月に開始された推奨アルゴリズム調査が拡大し、GrokのAIツールによる性的ディープフェイク画像生成と児童ポルノ配布の共犯容疑が追加された。マスク氏と前CEO ヤッカリーノ氏は4月の審問に召喚されている。<br><br>
-            <strong>3. クリントン夫妻がエプスタイン事件で証言に同意：</strong>ビルとヒラリー・クリントンが下院監視委員会への証言に同意。<strong>同意の理由：</strong>議会侮辱罪の採決が迫り、数ヶ月にわたる召喚状無効の主張が通らなくなった。英国ではマンデルソン卿のエプスタイン関連疑惑も浮上。
+            <strong>1. ロシア、ウクライナのエネルギーインフラに「特に卑劣な」攻撃：</strong>英国のスターマー首相がロシアの発電所・インフラ攻撃を非難。<strong>この攻撃のタイミングの意図は</strong>冬期の民間人の苦痛を最大化し、春の和平交渉に向けてキーウに譲歩を迫ること。ウクライナ・ロシア間の第2ラウンドの米国仲介協議がアブダビで開始 — 東部領土の帰属が最大の争点。<br><br>
+            <strong>2. マスク氏、スペイン首相を「暴君」と非難 — SNS規制法案を巡り対立：</strong>スペインのサンチェス首相が厳格なSNS規制を発表したことを受け、マスク氏が猛反発。<strong>この対立の背景には</strong>欧州全体で強まるテック規制の流れと、マスク氏がX（旧Twitter）の表現の自由を守ろうとする戦略的立場の衝突がある。<br><br>
+            <strong>3. エプスタイン文書が英政治を直撃 — マンデルソン問題深刻化：</strong>スターマー首相はマンデルソン卿のエプスタイン関連について対応を迫られた。<strong>問題が深刻化した理由は</strong>スターマー自身がわずか1年前にマンデルソンを駐米大使に任命しており、判断力が直接問われているから。クリントン夫妻は2月下旬に議会証言に合意。メリンダ・ゲイツ氏はビルに「答えるべき質問がある」と公言。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/news/articles/cpwng25114ro" target="_blank" rel="noopener">BBC — ウクライナ <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.bbc.com/news/articles/ce3ex92557jo" target="_blank" rel="noopener">BBC — X捜査 <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/articles/crley6x0dgzo" target="_blank" rel="noopener">BBC — ウクライナ <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.aljazeera.com/news/2026/2/4/musk-labels-spain-pm-tyrant-after-madrid-proposes-social-media-curbs" target="_blank" rel="noopener">Al Jazeera — スペインSNS <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/cqxynz2l0g2o" target="_blank" rel="noopener">BBC — エプスタイン <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- アジア（日本除く） -->
         <article class="card featured geo fade-in">
           <span class="card-tag geo">アジア（日本除く）</span>
-          <h3 class="card-headline">KOSPI +6.84%で歴史的反発 · 中国が隠しドアハンドル禁止 · 米印合意でセンセックス+2.54%急騰</h3>
+          <h3 class="card-headline">KOSPI過去最高値 — 「韓国ディスカウント」が「韓国プレミアム」に · 台湾KMTが北京で「民族復興」に同調 · 中国メモリ大手が大増産計画</h3>
           <p class="card-body">
-            <strong>1. KOSPI +6.84%の爆発的反発：</strong>韓国KOSPIが<span class="stat">+338ポイント（+6.84%）</span>で5,288に急騰し、数ヶ月で最大の上昇。<strong>反発の理由：</strong>米印貿易合意が世界的な関税緩和の合図となり、前日の暴落で発生した信用取引の強制清算（マージンコール）が巻き戻された。サムスン株が機関投資家の積極的買いで大幅反発。前日の下落がファンダメンタルズ悪化ではなくテクニカル要因（信用圧縮）だったことが確認された。<br><br>
-            <strong>2. 中国がEVの隠しドアハンドルを禁止：</strong>2027年1月施行で、中国が世界初の隠しドアハンドル禁止規制を導入。<strong>規制の理由：</strong>シャオミEVで電源喪失時にドアが開けられず死亡事故が2件発生。中国の上位100EV車種の約60%が隠しハンドルを採用（テスラが広めたデザイン）。中国のEV生産規模を考えると、世界の自動車安全基準にも波及する可能性が高い。<br><br>
-            <strong>3. インド市場が急騰 — センセックス+2.54%：</strong>米印貿易合意を好感し、インドBSEセンセックスが<span class="stat">+2.54%</span>で83,739に上昇。<strong>上昇の理由：</strong>50%関税の恐怖が18%に大幅緩和されたことで、インドのIT・製造業輸出企業の業績懸念が後退。ただし専門家は合意の詳細が不明確で「祝うのは早い」と警戒も。
+            <strong>1. KOSPI、史上最高値5,371を記録 — AI半導体需要が韓国株を押し上げ：</strong>韓国KOSPI指数が<span class="stat">+1.57%</span>の5,371に急伸。<strong>上昇の原動力は</strong>AIによる世界的なメモリ半導体不足を背景に、サムスンとSKハイニックスの業績が爆発的に成長していること。両社の時価総額は中国のテンセントとアリババを超えた。長年の「韓国ディスカウント」がAI需要により「韓国プレミアム」に転換しつつある。<br><br>
+            <strong>2. 台湾KMT、北京のCCPフォーラムで習近平の「民族復興」に呼応：</strong>台湾の野党・国民党(KMT)が北京で中国共産党フォーラムに参加。<strong>これが問題視される理由は</strong>台湾海峡の緊張が続く中、KMTの大陸寄り姿勢が台湾の安全保障を弱体化させる恐れがあるから。KMT副主席率いる大規模代表団の訪中は2016年以来初。<br><br>
+            <strong>3. 中国CXMT・YMTC、メモリ半導体の大幅増産計画：</strong>中国のメモリ大手2社が生産能力の大規模拡張を計画。<strong>増産の動機は</strong>世界的なメモリ不足を好機と捉え、米国の制裁下でも国内需要に応えシェアを拡大する狙い。サムスン・SKハイニックスとの競争が激化の様相。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://finance.yahoo.com/quote/%5EKS11/" target="_blank" rel="noopener">Yahoo — KOSPI <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.bbc.com/news/articles/cp37g5nxe3lo" target="_blank" rel="noopener">BBC — 隠しドアハンドル <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://asia.nikkei.com/business/markets/equities/ai-effect-starts-to-flip-korea-discount-on-stocks-into-a-premium" target="_blank" rel="noopener">日経 — KOSPI <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://asia.nikkei.com/politics/international-relations/taiwan-tensions/in-beijing-taiwan-s-kmt-echoes-xi-jinping-s-national-rejuvenation-call" target="_blank" rel="noopener">日経 — KMT <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://asia.nikkei.com/business/tech/semiconductors/china-s-cxmt-and-ymtc-to-massively-expand-memory-output-amid-global-crunch" target="_blank" rel="noopener">日経 — 中国半導体 <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- 中東・アフリカ -->
         <article class="card featured geo fade-in">
           <span class="card-tag geo">中東・アフリカ</span>
-          <h3 class="card-headline">ガザ・ラファ検問所が再開も初日は5人のみ通過 · イランが米国との交渉準備表明 · シリア政府軍がハサカに展開</h3>
+          <h3 class="card-headline">米軍F-35がイラン無人機を撃墜 · ガザで停戦後最悪の空爆 · スーダン内戦の人道危機が深刻化</h3>
           <p class="card-body">
-            <strong>1. ラファ検問所再開 — 初日は患者5人のみ：</strong>2024年5月のイスラエル軍占拠以来閉鎖されていたラファ検問所が患者移送用に再開。<strong>再開の経緯：</strong>最後のイスラエル人人質の遺体返還がイスラエル側の前提条件だった。しかし初日の通過は患者5人と付き添い7人のみ — 1日50人の上限に対し大幅に不足。<strong>遅延の理由：</strong>イスラエルの遠隔セキュリティチェックが極めて厳格で、2万人の負傷・病気のパレスチナ人が待機中。<br><br>
-            <strong>2. イランが米国との交渉準備を表明：</strong>イラン大統領が米国との直接対話への準備を示唆する異例の外交シグナル。<strong>柔軟化の理由：</strong>再発動された制裁による経済的圧迫、石油収入減少、イスラエルの軍事エスカレーションリスクが重なり、外交的出口を模索。テヘラン市場での大規模火災も国内の不安定さを象徴。<br><br>
-            <strong>3. シリア政府軍がハサカに展開：</strong>シリア政府軍がクルド主導SDFとの停戦合意に基づきハサカに進駐。<strong>展開の理由：</strong>新ダマスカス政権が内戦による北東部の領土分断を解消し、統一的な領土支配を再構築する動き。
+            <strong>1. 米F-35Cがイラン無人機を撃墜 — ペルシャ湾の緊張が一気に激化：</strong>アラビア海で空母エイブラハム・リンカーンに接近したイラン製シャヘド139型無人機を米F-35Cが撃墜。<strong>この事件の背景には</strong>先月のイラン反政府デモへの弾圧に対する米国の強硬姿勢と、トランプ大統領がイラン沿岸に空母打撃群を展開した軍事的圧力がある。数時間後にはIRGCの高速艇がホルムズ海峡で米国籍タンカーに接近・乗船を試みる事案も発生。原油は1バレル1ドル上昇。<br><br>
+            <strong>2. ガザでイスラエル軍の空爆により21人死亡 — 「停戦」後最悪の1日：</strong>北部で14人、南部のテント集落で6人が死亡。<strong>攻撃が続く理由は</strong>イスラエルがハマスの再武装を阻止するためとして軍事作戦を継続しており、停戦合意の範囲をめぐる解釈の相違が根本的に解消されていないこと。ラファ検問所経由の避難民の帰還も中断された。<br><br>
+            <strong>3. スーダン内戦、タウィラの避難民が極限状態に：</strong>エルファシェルから逃れた避難民が毛布も食料もない劣悪な環境に置かれている。<strong>危機が深刻化した原因は</strong>RSF（即応支援部隊）とスーダン軍の戦闘が激化し、人道支援ルートが遮断されたこと。国際社会の注目がウクライナと中東に集中し、スーダンは「忘れられた危機」となっている。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.aljazeera.com/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.bbc.com/news/articles/c4gw10mkz0yo" target="_blank" rel="noopener">BBC — イラン <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/articles/c3dmjn7n985o" target="_blank" rel="noopener">BBC — イラン無人機 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.aljazeera.com/news/2026/2/4/israel-suspends-evacuation-of-palestinians-via-rafah-crossing-red-crescent" target="_blank" rel="noopener">Al Jazeera — ガザ <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.aljazeera.com/news/2026/2/4/the-cold-hungry-reality-of-displacement-in-war-torn-sudans-tawila" target="_blank" rel="noopener">Al Jazeera — スーダン <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- 中南米 -->
         <article class="card featured geo fade-in">
           <span class="card-tag geo">中南米</span>
-          <h3 class="card-headline">コロンビア大統領がトランプと対決 — コカイン政策で溝 · ブラジル株続伸 · 中国がウルグアイとの関係強化</h3>
+          <h3 class="card-headline">ブラジルIbovespa+1.6%で世界最強指数 · トランプがコロンビア大統領を手のひら返しで絶賛 · パナマ運河問題で香港系企業が仲裁手続き</h3>
           <p class="card-body">
-            <strong>1. コロンビアvs米国 — コカイン対策で対立：</strong>コロンビアのペトロ大統領がワシントンでトランプ大統領と会談予定。<strong>対立の原因：</strong>ペトロ大統領は先住民コミュニティの健康・環境被害を理由にコカ畑の空中散布を拒否しているが、トランプ大統領は積極的な撲滅策を要求。コロンビアは世界のコカインの約60%を生産しており、合意なければ関税引き上げと米国援助の削減リスク。<br><br>
-            <strong>2. ブラジル・イボベスパ+0.79%で182,793：</strong>米印貿易合意による世界的な貿易緊張緩和の波及効果と、コモディティ価格（鉄鉱石、大豆）の回復がリソース寄りのブラジル株を下支え。<br><br>
-            <strong>3. 中国の習近平主席がウルグアイ大統領と会談：</strong><strong>目的：</strong>米国の「裏庭」である中南米での影響力を拡大する中国の長期戦略の一環。ウルグアイはメルコスールのメンバーであり、中国は貿易・インフラ投資を通じた経済的結びつきを強化している。
+            <strong>1. ブラジルIbovespa、+1.58%の185,674 — 年初来+15%で世界最高パフォーマンス：</strong><strong>急騰の背景は</strong>コモディティ価格の回復（鉄鉱石・大豆）、財政見通しの改善、そして米中貿易戦争の中立的立場を生かした新興国投資マネーの流入。資源スーパーサイクルの恩恵を最も受けている市場。<br><br>
+            <strong>2. トランプ大統領、コロンビアのペトロ大統領を「素晴らしい」と絶賛 — 数週間前に「病人」と侮辱したばかり：</strong><strong>態度急変の理由は</strong>コロンビアが移民強制送還で協力姿勢を示したことに加え、麻薬対策での二国間協力が進展したこと。トランプ流の「アメとムチ」外交の典型的パターン。<br><br>
+            <strong>3. パナマ運河の港湾運営、違憲判断で香港系企業が仲裁手続き開始：</strong><strong>紛争の原因は</strong>パナマ最高裁が香港系CKハチソンの運営契約を違憲と判断したこと。トランプ政権がパナマ運河への中国の影響力排除を推進する中、地政学的な駆け引きが法廷に持ち込まれた形。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/news/articles/c62v187kl1ro" target="_blank" rel="noopener">BBC — コロンビア <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://news.web.nhk.or.jp/" target="_blank" rel="noopener">NHK — 習主席 <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://finance.yahoo.com/quote/%5EBVSP/" target="_blank" rel="noopener">Yahoo — Ibovespa <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://mainichi.jp/english/articles/20260204/p2g/00m/0in/016000c" target="_blank" rel="noopener">毎日新聞 — コロンビア <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043591000" target="_blank" rel="noopener">NHK — パナマ <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- オセアニア -->
         <article class="card fade-in">
           <span class="card-tag geo">オセアニア</span>
-          <h3 class="card-headline">ASX 200 +0.89%で8,857 — 資源株がアジア全域のリスクオンに連動</h3>
+          <h3 class="card-headline">ASX200が+0.80%の8,928 · 豪ドルが対米ドルで上昇</h3>
           <p class="card-body">
-            豪州ASX 200が+0.89%上昇。<strong>上昇の理由：</strong>アジア全域のリスクオンラリーの波及効果で資源株が上昇、コモディティ価格の回復も追い風。NZ50は+0.07%の小幅高にとどまった — 国内経済の減速懸念が海外要因を相殺。
+            オーストラリアのASX200は<span class="stat">+0.80%</span>の8,928に上昇。<strong>上昇を支えたのは</strong>コモディティ価格回復による鉱業株の買いと、世界的な貿易楽観論によるリスクオンムード。豪ドルも対米ドルで+0.99%上昇 — コモディティ価格上昇に伴う交易条件の改善を反映。NZ50指数も+0.34%で堅調。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://finance.yahoo.com/quote/%5EAXJO/" target="_blank" rel="noopener">Yahoo — ASX <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://finance.yahoo.com/quote/%5EAXJO/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
       </div>
     </section>
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-    <!-- 📊 マーケット＆経済 -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- 📊 マーケット・経済 -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <section class="section" id="markets">
       <div class="section-header">
         <div class="section-icon market">📊</div>
-        <h2 class="section-title market">マーケット＆経済</h2>
+        <h2 class="section-title market">マーケット・経済</h2>
       </div>
 
       <div class="cards">
 
+        <!-- 注意信号 -->
+        <article class="card fade-in" style="background: #fefce8; border-color: #eab308;">
+          <p class="card-body" style="font-size: 0.85rem; color: #854d0e;"><strong>⚠️ 注目シグナル：</strong>VIXが+8.4%の17.71に急騰 — テックローテーション加速とイラン情勢の緊張化が要因。金は$5,078を突破（+2.9%）し、ビットコインは$76K割れ（−2.9%）。「グレートローテーション」が進行中：貴金属vs暗号資産の乖離は2022年の暗号資産暴落以来最大。PayPalの−20%暴落はフィンテックにバリュートラップが出現していることを示唆。KOSPIの史上最高値はAIメモリトレードが健在であることを証明するも、恩恵を受ける銘柄は絞り込まれつつある。</p>
+        </article>
+
         <!-- ヘルススコア -->
         <article class="card featured market fade-in">
           <span class="card-tag market">ヘルススコア</span>
-          <h3 class="card-headline">経済健全性スコア — 回復基調</h3>
+          <h3 class="card-headline">経済健全性総合スコア — 横ばい</h3>
           <div class="health-gauge-wrap">
             <div class="health-gauge">
               <div class="gauge-bg"></div>
@@ -806,13 +865,13 @@
               <span>50</span>
               <span>100</span>
             </div>
-            <div class="gauge-score" id="gaugeScore">56</div>
-            <div class="gauge-score-label">/ 100</div>
+            <div class="gauge-score" id="gaugeScore">54</div>
+            <div class="gauge-score-label">/ 100点</div>
           </div>
           <div class="indicator-grid">
             <div class="indicator-item">
               <div class="indicator-value">4.4%</div>
-              <div class="indicator-name">GDP成長率（Q3）</div>
+              <div class="indicator-name">GDP成長率 (Q3)</div>
               <div class="indicator-sub chg-pos">▲ 堅調</div>
             </div>
             <div class="indicator-item">
@@ -822,7 +881,7 @@
             </div>
             <div class="indicator-item">
               <div class="indicator-value">2.7%</div>
-              <div class="indicator-name">CPI</div>
+              <div class="indicator-name">CPI インフレ率</div>
               <div class="indicator-sub" style="color: var(--text-muted);">● 目標超</div>
             </div>
             <div class="indicator-item">
@@ -836,42 +895,81 @@
               <div class="indicator-sub chg-pos">▲ 拡大</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">16.08</div>
+              <div class="indicator-value">17.7</div>
               <div class="indicator-name">VIX</div>
-              <div class="indicator-sub chg-pos">▼ −7.8% 沈静化</div>
+              <div class="indicator-sub chg-neg">▲ 上昇中</div>
             </div>
           </div>
           <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            <span class="arrow">▸</span> 算出方法
+            <span class="arrow">▸</span> 算出方法を見る
           </div>
           <div class="methodology-content">
-            <p>7項目の複合指数：<strong>GDP成長率</strong>（20%）、<strong>雇用</strong>（20%）、<strong>インフレ</strong>（15%）、<strong>消費者信頼感</strong>（15%）、<strong>製造業</strong>（10%）、<strong>市場環境</strong>（10%）、<strong>先行指標</strong>（10%）。VIXの−7.8%低下、アジア株の劇的V字回復（KOSPI +6.84%、日経+3.92%）、米印貿易合意による関税不安の後退が改善要因。一方、長期米国債利回り上昇（10年4.275%）とウクライナ情勢の地政学リスクが重石。</p>
+            <p>7つの構成要素の複合指標：<strong>GDP成長率</strong>（20%）— 2025年Q3年率換算、<strong>雇用</strong>（20%）— 失業率+非農業部門雇用者数、<strong>インフレ</strong>（15%）— CPI vs 2%目標、<strong>消費者信頼感</strong>（15%）— ミシガン大指数、<strong>製造業</strong>（10%）— S&P Global PMI、<strong>市場環境</strong>（10%）— 株式水準+VIX、<strong>先行指標</strong>（10%）— LEI+イールドカーブ。スコアは55→54に微減：VIX急騰（+8.4%）がボラティリティ拡大を示唆、テックセクターのローテーション加速（テクノロジー−3.85% YTD vs 素材+16.04% YTD）、米イラン緊張による地政学リスクプレミアム上昇。一方、KOSPI最高値によるAI需要の健在確認、金のセーフヘイブン機能、新興国株好調（Ibovespa +15% YTD）が下支え。</p>
           </div>
+          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- 株式 -->
         <article class="card fade-in">
           <span class="card-tag market">株式</span>
-          <h3 class="card-headline">世界株式 — アジア主導のリリーフラリー</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;">火曜日のセッションは月曜日の真逆 — ほぼ全面高。米印合意がカタリストとなり、メカニクスはショートカバーと押し目買いが中心。KOSPI +6.84%がスタンドアウト。日経+3.92%は数週間で最強。米国も堅調にグリーンで引け（ダウ+1.05%）。欧州はまちまち — DAX +0.44%だがFTSEは−0.46%（エプスタイン政治スキャンダルの影響で英国内需株が軟調）。</p>
+          <h3 class="card-headline">株式市場 — グレートローテーション加速：テック下落、コモディティ・バリュー上昇</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">テックからバリューへのローテーションが加速。S&P500テクノロジーセクターは<span class="stat">−3.85% YTD</span>に対し、素材セクターは<span class="stat">+16.04% YTD</span>でトップ。<strong>ローテーションの原因は</strong>ビッグテックのAI設備投資が投資額に見合ったリターンを生むかへの懐疑が拡大していること。ナスダックは−1.43%下落する一方、小型株ラッセル2000は+0.31%上昇し、資金移動を裏付け。</p>
           <table class="index-table">
             <thead>
-              <tr><th>指数</th><th>水準</th><th>日次%</th><th>年初来%</th></tr>
+              <tr>
+                <th>指数</th>
+                <th>終値</th>
+                <th>日次%</th>
+                <th>週次%</th>
+                <th>月次%</th>
+                <th>年初来%</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td class="idx-name">🇺🇸 S&P 500</td><td class="idx-level">6,976</td><td class="chg-pos">+0.54%</td><td class="chg-pos">+2.2%</td></tr>
-              <tr><td class="idx-name">🇺🇸 ナスダック</td><td class="idx-level">23,592</td><td class="chg-pos">+0.56%</td><td class="chg-neg">−0.6%</td></tr>
-              <tr><td class="idx-name">🇺🇸 ダウ</td><td class="idx-level">49,408</td><td class="chg-pos">+1.05%</td><td class="chg-pos">+3.9%</td></tr>
-              <tr><td class="idx-name">🇯🇵 日経225</td><td class="idx-level">54,721</td><td class="chg-pos">+3.92%</td><td class="chg-pos">+7.5%</td></tr>
-              <tr><td class="idx-name">🇭🇰 ハンセン</td><td class="idx-level">26,835</td><td class="chg-pos">+0.22%</td><td class="chg-pos">+4.3%</td></tr>
-              <tr><td class="idx-name">🇨🇳 上海</td><td class="idx-level">4,068</td><td class="chg-pos">+1.29%</td><td class="chg-pos">+6.3%</td></tr>
-              <tr><td class="idx-name">🇰🇷 KOSPI</td><td class="idx-level">5,288</td><td class="chg-pos">+6.84%</td><td class="chg-neg">−2.1%</td></tr>
-              <tr><td class="idx-name">🇮🇳 センセックス</td><td class="idx-level">83,739</td><td class="chg-pos">+2.54%</td><td class="chg-pos">+8.5%</td></tr>
-              <tr><td class="idx-name">🇦🇺 ASX 200</td><td class="idx-level">8,857</td><td class="chg-pos">+0.89%</td><td class="chg-pos">+3.2%</td></tr>
-              <tr><td class="idx-name">🇬🇧 FTSE 100</td><td class="idx-level">10,294</td><td class="chg-neg">−0.46%</td><td class="chg-pos">+7.0%</td></tr>
-              <tr><td class="idx-name">🇩🇪 DAX</td><td class="idx-level">24,910</td><td class="chg-pos">+0.45%</td><td class="chg-pos">+10.2%</td></tr>
-              <tr><td class="idx-name">🇫🇷 CAC 40</td><td class="idx-level">8,180</td><td class="chg-neg">−0.02%</td><td class="chg-pos">+5.5%</td></tr>
-              <tr><td class="idx-name">🇧🇷 イボベスパ</td><td class="idx-level">182,793</td><td class="chg-pos">+0.79%</td><td class="chg-pos">+5.3%</td></tr>
+              <tr><td class="idx-name">🇺🇸 S&P 500</td><td class="idx-level">6,917.81</td><td class="chg-neg">−0.84%</td><td class="chg-neg">−0.9%</td><td class="chg-pos">+0.2%</td><td class="chg-pos">+1.1%</td></tr>
+              <tr><td class="idx-name">🇺🇸 ダウ平均</td><td class="idx-level">49,240.99</td><td class="chg-neg">−0.34%</td><td class="chg-pos">+0.4%</td><td class="chg-pos">+0.5%</td><td class="chg-pos">+2.5%</td></tr>
+              <tr><td class="idx-name">🇺🇸 ナスダック</td><td class="idx-level">23,255.19</td><td class="chg-neg">−1.43%</td><td class="chg-neg">−2.8%</td><td class="chg-neg">−0.4%</td><td class="chg-pos">+0.2%</td></tr>
+              <tr><td class="idx-name">🇺🇸 ラッセル2000</td><td class="idx-level">2,648.50</td><td class="chg-pos">+0.31%</td><td class="chg-pos">+0.6%</td><td class="chg-pos">+1.2%</td><td class="chg-pos">+3.1%</td></tr>
+              <tr><td class="idx-name">🇯🇵 日経225</td><td class="idx-level">54,293.36</td><td class="chg-neg">−0.78%</td><td class="chg-pos">+1.5%</td><td class="chg-pos">+4.6%</td><td class="chg-pos">+8.0%</td></tr>
+              <tr><td class="idx-name">🇰🇷 KOSPI</td><td class="idx-level">5,371.10</td><td class="chg-pos">+1.57%</td><td class="chg-pos">+1.8%</td><td class="chg-pos">+6.0%</td><td class="chg-pos">+7.2%</td></tr>
+              <tr><td class="idx-name">🇭🇰 ハンセン</td><td class="idx-level">26,847.32</td><td class="chg-pos">+0.05%</td><td class="chg-neg">−3.5%</td><td class="chg-pos">+1.8%</td><td class="chg-pos">+4.6%</td></tr>
+              <tr><td class="idx-name">🇨🇳 上海総合</td><td class="idx-level">4,102.20</td><td class="chg-pos">+0.85%</td><td class="chg-neg">−1.8%</td><td class="chg-pos">+1.3%</td><td class="chg-pos">+2.7%</td></tr>
+              <tr><td class="idx-name">🇮🇳 SENSEX</td><td class="idx-level">83,817.69</td><td class="chg-pos">+0.09%</td><td class="chg-pos">+1.4%</td><td class="chg-neg">−2.0%</td><td class="chg-neg">−1.8%</td></tr>
+              <tr><td class="idx-name">🇦🇺 ASX 200</td><td class="idx-level">8,927.80</td><td class="chg-pos">+0.80%</td><td class="chg-neg">−0.1%</td><td class="chg-pos">+2.3%</td><td class="chg-pos">+2.5%</td></tr>
+              <tr><td class="idx-name">🇬🇧 FTSE 100</td><td class="idx-level">10,434.32</td><td class="chg-pos">+1.16%</td><td class="chg-pos">+1.2%</td><td class="chg-pos">+3.3%</td><td class="chg-pos">+4.1%</td></tr>
+              <tr><td class="idx-name">🇩🇪 DAX</td><td class="idx-level">24,698.66</td><td class="chg-neg">−0.33%</td><td class="chg-neg">−0.1%</td><td class="chg-neg">−0.2%</td><td class="chg-pos">+1.3%</td></tr>
+              <tr><td class="idx-name">🇧🇷 Ibovespa</td><td class="idx-level">185,674.44</td><td class="chg-pos">+1.58%</td><td class="chg-pos">+2.1%</td><td class="chg-pos">+14.7%</td><td class="chg-pos">+15.2%</td></tr>
+              <tr><td class="idx-name">🇲🇽 IPC メキシコ</td><td class="idx-level">69,735.06</td><td class="chg-pos">+3.16%</td><td class="chg-pos">+1.5%</td><td class="chg-pos">+7.4%</td><td class="chg-pos">+8.6%</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- セクターパフォーマンス -->
+        <article class="card fade-in">
+          <span class="card-tag market">セクターローテーション</span>
+          <h3 class="card-headline">S&P500セクター年初来パフォーマンス — バリューがグロースを圧倒</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>セクター</th>
+                <th>比率</th>
+                <th>日次%</th>
+                <th>年初来%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">素材</td><td>3.04%</td><td class="chg-pos">+3.42%</td><td class="chg-pos">+16.04%</td></tr>
+              <tr><td class="idx-name">エネルギー</td><td>4.57%</td><td class="chg-pos">+2.85%</td><td class="chg-pos">+13.90%</td></tr>
+              <tr><td class="idx-name">生活必需品</td><td>5.05%</td><td class="chg-pos">+1.71%</td><td class="chg-pos">+10.87%</td></tr>
+              <tr><td class="idx-name">資本財</td><td>9.04%</td><td class="chg-pos">+1.10%</td><td class="chg-pos">+10.46%</td></tr>
+              <tr><td class="idx-name">ヘルスケア</td><td>9.85%</td><td class="chg-pos">+2.86%</td><td class="chg-pos">+7.33%</td></tr>
+              <tr><td class="idx-name">公益事業</td><td>2.12%</td><td class="chg-pos">+1.33%</td><td class="chg-pos">+3.57%</td></tr>
+              <tr><td class="idx-name">通信サービス</td><td>10.52%</td><td class="chg-neg">−1.43%</td><td class="chg-pos">+3.44%</td></tr>
+              <tr><td class="idx-name">一般消費財</td><td>10.72%</td><td class="chg-neg">−0.74%</td><td class="chg-pos">+2.62%</td></tr>
+              <tr><td class="idx-name">不動産</td><td>2.11%</td><td class="chg-pos">+0.05%</td><td class="chg-pos">+1.52%</td></tr>
+              <tr><td class="idx-name">金融</td><td>14.59%</td><td class="chg-neg">−0.72%</td><td class="chg-neg">−1.02%</td></tr>
+              <tr><td class="idx-name">テクノロジー</td><td>28.41%</td><td class="chg-neg">−2.38%</td><td class="chg-neg">−3.85%</td></tr>
             </tbody>
           </table>
           <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
@@ -880,15 +978,24 @@
         <!-- 債券 -->
         <article class="card fade-in">
           <span class="card-tag market">債券</span>
-          <h3 class="card-headline">米国債 — 長期金利が上昇継続、イールドカーブのスティープ化が進行</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;">債券市場は引き続き慎重姿勢。<strong>長期金利が上昇</strong> — 10年債4.275%（+0.80%）、30年債4.909%（+0.76%）。<strong>上昇の理由：</strong>トランプの貿易合意に伴う財政拡大期待と、持続的インフレの市場織り込みが進行。2年債は3.480%でやや低下し、短期金利見通しは安定。日本の10年JGB利回りは2.255%（+0.025%）で、米金利上昇に連動した売りが出た。</p>
+          <h3 class="card-headline">債券利回り — 米10年債4.27%安定、30年債は5%の大台に接近</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;"><strong>米国のロングエンドが注目：</strong>30年債利回り4.906%が心理的節目の5%に迫っている。<strong>上昇の原因は</strong>根強いインフレ期待、イラン情勢の地政学リスクプレミアム、そしてどの政権でも財政赤字が続くとの見通し。2年-10年スプレッドはスティープ化が進行 — 短期金利はFRBの利下げを織り込む一方、長期金利はインフレの長期化を反映。日本国債も数十年ぶり高水準の利回りで弱気相場が続く。</p>
           <table class="index-table">
-            <thead><tr><th>債券</th><th>利回り</th><th>日次変化</th></tr></thead>
+            <thead>
+              <tr>
+                <th>債券</th>
+                <th>利回り</th>
+                <th>日次変動</th>
+                <th>年初来変動</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td class="idx-name">🇺🇸 2年</td><td class="idx-level">3.480%</td><td class="chg-pos">−0.17%（上昇）</td></tr>
-              <tr><td class="idx-name">🇺🇸 10年</td><td class="idx-level">4.275%</td><td class="chg-neg">+0.80%（下落）</td></tr>
-              <tr><td class="idx-name">🇺🇸 30年</td><td class="idx-level">4.909%</td><td class="chg-neg">+0.76%（下落）</td></tr>
-              <tr><td class="idx-name">🇯🇵 10年JGB</td><td class="idx-level">2.255%</td><td class="chg-neg">+0.025%</td></tr>
+              <tr><td class="idx-name">🇺🇸 13週間</td><td class="idx-level">3.590%</td><td>+0.3bp</td><td>—</td></tr>
+              <tr><td class="idx-name">🇺🇸 2年</td><td class="idx-level">3.480%</td><td>−0.2bp</td><td>—</td></tr>
+              <tr><td class="idx-name">🇺🇸 5年</td><td class="idx-level">3.837%</td><td>+0.1bp</td><td>—</td></tr>
+              <tr><td class="idx-name">🇺🇸 10年</td><td class="idx-level">4.274%</td><td>−0.0bp</td><td class="chg-pos">−17bp</td></tr>
+              <tr><td class="idx-name">🇺🇸 30年</td><td class="idx-level">4.906%</td><td>−0.1bp</td><td class="chg-neg">+8bp</td></tr>
+              <tr><td class="idx-name">🇯🇵 10年</td><td class="idx-level">~2.25%</td><td>+1bp</td><td class="chg-neg">+18bp</td></tr>
             </tbody>
           </table>
           <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/bonds/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
@@ -897,95 +1004,163 @@
         <!-- コモディティ -->
         <article class="card fade-in">
           <span class="card-tag market">コモディティ</span>
-          <h3 class="card-headline">金+6.1%で$4,937突破 · 銀+12.7%で爆騰 · 原油は小幅回復</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;"><strong>貴金属が急騰。</strong>金は<span class="stat">+6.10%</span>で$4,937、銀は<span class="stat">+12.70%</span>で$86.79。<strong>急騰の理由：</strong>先週の暴落がマージンコールによるテクニカルな強制清算だったことが確認され、積極的な押し目買いが殺到。中央銀行の金購入、地政学的ヘッジ需要、ドル減価懸念という根本的な強気要因は健在 — むしろ今晩のロシアによるウクライナ大規模攻撃で強化された。銅は+4.03%で$6.06に上昇（リスクオン+中国拡張ニュース）。原油は安定：WTI +0.68%で$62.56、ブレント+0.48%で$66.62。</p>
+          <h3 class="card-headline">金が$5,078突破 — イラン情勢で急騰 · 銀が1日で+7.7%爆発 · 原油はドローン事件にもかかわらず安定</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;"><strong>貴金属が炎上中：</strong>金は<span class="stat">+2.91%</span>で$5,078を突破、銀は<span class="stat">+7.74%</span>で$89.75に爆発的上昇。<strong>急騰の要因は</strong>米イランのドローン撃墜事件による地政学リスクの高まり、中央銀行の金買い継続、そして割高テックからハードアセットへの資金ローテーション。銀の金を大幅に上回る上昇（+7.7% vs +2.9%）は、安全資産需要に加え産業用途の期待を示唆。原油はイラン事件にもかかわらず穏やか — WTI +0.38%の$63.45 — <strong>その理由は</strong>供給途絶リスクと中国の弱い需要データ・OPEC+供給規律への疑問が相殺しているため。</p>
           <table class="index-table">
-            <thead><tr><th>コモディティ</th><th>価格</th><th>日次%</th></tr></thead>
+            <thead>
+              <tr>
+                <th>商品</th>
+                <th>価格</th>
+                <th>日次%</th>
+                <th>週次%</th>
+                <th>月次%</th>
+                <th>年初来%</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td class="idx-name">🥇 金</td><td class="idx-level">$4,936.60</td><td class="chg-pos">+6.10%</td></tr>
-              <tr><td class="idx-name">🥈 銀</td><td class="idx-level">$86.79</td><td class="chg-pos">+12.70%</td></tr>
-              <tr><td class="idx-name">🔧 銅</td><td class="idx-level">$6.06</td><td class="chg-pos">+4.03%</td></tr>
-              <tr><td class="idx-name">🛢️ WTI原油</td><td class="idx-level">$62.56</td><td class="chg-pos">+0.68%</td></tr>
-              <tr><td class="idx-name">🛢️ ブレント</td><td class="idx-level">$66.62</td><td class="chg-pos">+0.48%</td></tr>
-              <tr><td class="idx-name">⚡ 天然ガス</td><td class="idx-level">$3.268</td><td class="chg-pos">+0.96%</td></tr>
-              <tr><td class="idx-name">🌽 トウモロコシ</td><td class="idx-level">$427.25</td><td class="chg-pos">+0.35%</td></tr>
+              <tr><td class="idx-name">🥇 金</td><td class="idx-level">$5,078.40</td><td class="chg-pos">+2.91%</td><td class="chg-neg">−6.1%</td><td class="chg-pos">+14.3%</td><td class="chg-pos">+17.6%</td></tr>
+              <tr><td class="idx-name">🥈 銀</td><td class="idx-level">$89.75</td><td class="chg-pos">+7.74%</td><td class="chg-neg">−23.8%</td><td class="chg-pos">+17.1%</td><td class="chg-pos">+25.9%</td></tr>
+              <tr><td class="idx-name">🔧 銅</td><td class="idx-level">$6.02</td><td class="chg-neg">−1.08%</td><td class="chg-pos">+1.8%</td><td class="chg-pos">+1.0%</td><td class="chg-pos">+6.2%</td></tr>
+              <tr><td class="idx-name">🛢️ WTI原油</td><td class="idx-level">$63.45</td><td class="chg-pos">+0.38%</td><td class="chg-pos">+0.6%</td><td class="chg-pos">+9.0%</td><td class="chg-pos">+10.6%</td></tr>
+              <tr><td class="idx-name">🛢️ ブレント原油</td><td class="idx-level">$67.50</td><td class="chg-pos">+0.25%</td><td class="chg-pos">+0.4%</td><td class="chg-pos">+9.5%</td><td class="chg-pos">+11.2%</td></tr>
+              <tr><td class="idx-name">🔥 天然ガス</td><td class="idx-level">$3.337</td><td class="chg-pos">+0.79%</td><td class="chg-neg">−11.0%</td><td class="chg-neg">−5.8%</td><td class="chg-neg">−9.9%</td></tr>
             </tbody>
           </table>
           <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/commodities/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
         </article>
 
-        <!-- 為替・暗号通貨 -->
+        <!-- 為替・暗号資産 -->
         <article class="card fade-in">
-          <span class="card-tag market">為替・暗号通貨</span>
-          <h3 class="card-headline">ドル横ばい · 円は155.81で小幅安 · BTC $78,179で膠着 · 貴金属に資金集中</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;"><strong>ドルはほぼ横ばい</strong> — リスクオンで安全資産需要が低下する一方、金利上昇がドルを支える構図。USD/JPY 155.81（+0.18%）— 円は高市首相の円安容認姿勢と日銀の緩やかな引き締め期待の間で方向感に欠ける。EUR/USD 1.1806。<strong>暗号通貨は静か</strong> — BTC +0.49%で$78,179、ETH −0.29%。本日の主役は金・銀であり、暗号通貨ではない。</p>
+          <span class="card-tag market">為替・暗号資産</span>
+          <h3 class="card-headline">ドル指数97.45で横ばい · 円安¥156.65 · 暗号資産冬：BTC $76K割れ、SOL −6.7%</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;"><strong>DXY 97.45</strong> — イランのセーフヘイブン需要と貿易楽観のリスクオンに挟まれほぼ横ばい。<strong>暗号資産は全面安：</strong>ビットコインは<span class="stat">−2.93%</span>で$75,998に下落 — 昨年の$126K高値から大幅に離れた水準。ソラナは<span class="stat">−6.71%</span>の$96.22で2024年初頭以来の安値。<strong>暗号資産下落の原因は</strong>機関投資家の資金がBTC（−12.9% YTD）ではなく金（+17.6% YTD）に積極的に流入していること、規制の不透明感、そして「デジタルゴールド」としてのビットコインの物語が金に完全に敗北したという認識の広がり。</p>
           <table class="index-table">
-            <thead><tr><th>ペア/資産</th><th>水準</th><th>日次%</th></tr></thead>
+            <thead>
+              <tr>
+                <th>通貨ペア / 資産</th>
+                <th>水準</th>
+                <th>日次%</th>
+                <th>月次%</th>
+                <th>年初来%</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td class="idx-name">💴 USD/JPY</td><td class="idx-level">155.81</td><td class="chg-neg">+0.18%</td></tr>
-              <tr><td class="idx-name">🇪🇺 EUR/USD</td><td class="idx-level">1.1806</td><td class="chg-pos">+0.11%</td></tr>
-              <tr><td class="idx-name">🇬🇧 GBP/USD</td><td class="idx-level">1.3689</td><td class="chg-pos">+0.15%</td></tr>
-              <tr><td class="idx-name">🇨🇳 USD/CNY</td><td class="idx-level">6.937</td><td class="chg-pos">−0.13%</td></tr>
-              <tr><td class="idx-name">₿ ビットコイン</td><td class="idx-level">$78,179</td><td class="chg-pos">+0.49%</td></tr>
-              <tr><td class="idx-name">⟠ イーサリアム</td><td class="idx-level">$2,297</td><td class="chg-neg">−0.29%</td></tr>
-              <tr><td class="idx-name">◎ ソラナ</td><td class="idx-level">$102.95</td><td class="chg-neg">−0.03%</td></tr>
+              <tr><td class="idx-name">💵 DXY</td><td class="idx-level">97.45</td><td class="chg-pos">+0.01%</td><td class="chg-neg">−0.9%</td><td class="chg-neg">−1.0%</td></tr>
+              <tr><td class="idx-name">💴 ドル/円</td><td class="idx-level">156.654</td><td class="chg-neg">+0.58%</td><td class="chg-neg">−0.1%</td><td class="chg-neg">−0.3%</td></tr>
+              <tr><td class="idx-name">🇪🇺 ユーロ/ドル</td><td class="idx-level">1.1825</td><td style="color: var(--text-muted);">−0.01%</td><td class="chg-pos">+0.9%</td><td class="chg-pos">+0.8%</td></tr>
+              <tr><td class="idx-name">🇬🇧 ポンド/ドル</td><td class="idx-level">1.372</td><td class="chg-pos">+0.16%</td><td class="chg-pos">+1.3%</td><td class="chg-pos">+1.9%</td></tr>
+              <tr><td class="idx-name">🪙 ビットコイン</td><td class="idx-level">$75,998</td><td class="chg-neg">−2.93%</td><td class="chg-neg">−18.9%</td><td class="chg-neg">−12.9%</td></tr>
+              <tr><td class="idx-name">💎 イーサリアム</td><td class="idx-level">$2,236</td><td class="chg-neg">−2.65%</td><td class="chg-neg">−20.1%</td><td class="chg-neg">−23.8%</td></tr>
+              <tr><td class="idx-name">☀️ ソラナ</td><td class="idx-level">$96.22</td><td class="chg-neg">−6.71%</td><td class="chg-neg">−35.2%</td><td class="chg-neg">−50.2%</td></tr>
+              <tr><td class="idx-name">🔷 XRP</td><td class="idx-level">$1.59</td><td class="chg-neg">−1.13%</td><td class="chg-neg">−28.5%</td><td class="chg-neg">−33.9%</td></tr>
             </tbody>
           </table>
-          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/currencies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/crypto/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 注目銘柄 -->
+        <article class="card fade-in">
+          <span class="card-tag market">注目個別銘柄</span>
+          <h3 class="card-headline">個別銘柄ハイライト</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>銘柄</th>
+                <th>株価</th>
+                <th>日次%</th>
+                <th>理由</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">PYPL</td><td>$41.70</td><td class="chg-neg">−20.31%</td><td style="font-size: 0.8rem;">Q4売上未達、ブランデッドチェックアウト低迷、フィンテック競争激化</td></tr>
+              <tr><td class="idx-name">PLTR</td><td>$157.96</td><td class="chg-pos">+6.89%</td><td style="font-size: 0.8rem;">AI政府契約の勢い継続、防衛支出拡大の追い風</td></tr>
+              <tr><td class="idx-name">NVDA</td><td>$180.38</td><td class="chg-neg">−2.82%</td><td style="font-size: 0.8rem;">AI設備投資バブル懸念、モメンタム銘柄からの資金流出</td></tr>
+              <tr><td class="idx-name">INTC</td><td>$49.27</td><td class="chg-pos">+0.98%</td><td style="font-size: 0.8rem;">ターンアラウンド期待、ファウンドリ戦略に信頼性（52週+150%）</td></tr>
+              <tr><td class="idx-name">PFE</td><td>$25.77</td><td class="chg-neg">−3.34%</td><td style="font-size: 0.8rem;">コロナ後の売上減少継続、パイプラインへの懸念</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/stocks/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 未上場市場 -->
+        <article class="card fade-in">
+          <span class="card-tag market">未上場企業</span>
+          <h3 class="card-headline">未上場ユニコーン評価額 — AI関連がトップ5を独占</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>企業</th>
+                <th>評価額</th>
+                <th>直近ラウンド</th>
+                <th>52週変動</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">SpaceX</td><td>$8,498億</td><td>$19億テンダー (2025/12)</td><td class="chg-pos">+93%</td></tr>
+              <tr><td class="idx-name">OpenAI</td><td>$5,000億</td><td>$66億テンダー (2025/10)</td><td class="chg-pos">+153%</td></tr>
+              <tr><td class="idx-name">Anthropic</td><td>$3,500億</td><td>$100億レイトステージ (2026/1)</td><td class="chg-pos">+367%</td></tr>
+              <tr><td class="idx-name">xAI</td><td>$2,501億</td><td>$200億シリーズE (2026/1)</td><td class="chg-pos">+279%</td></tr>
+              <tr><td class="idx-name">Databricks</td><td>$1,394億</td><td>$40億シリーズL (2025/12)</td><td class="chg-pos">+101%</td></tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 0.75rem;">上位5社はすべてAI関連。合計評価額は<span class="stat">2兆ドル超</span>。<strong>Anthropicの52週+367%</strong>が突出 — 1月の$100億レイトステージラウンドとClaudeのエンタープライズ採用急拡大が背景。SpaceXのxAI買収（合計~$1.25T）は、史上最大の未上場企業IPOに向けた布石となる可能性。</p>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/private-companies/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
         </article>
 
       </div>
     </section>
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <!-- 🔮 予測 -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <section class="section" id="predictions">
       <div class="section-header">
         <div class="section-icon predict">🔮</div>
-        <h2 class="section-title predict">予測＆見通し</h2>
+        <h2 class="section-title predict">予測</h2>
       </div>
 
       <div class="cards">
+
         <article class="card featured predict fade-in">
           <span class="card-tag predict">今週の注目</span>
-          <h3 class="card-headline">重要イベント — 2月3-8日</h3>
+          <h3 class="card-headline">今週の注目ポイント — 日曜日の衆院選、米イラン情勢、レアアース閣僚級会合</h3>
           <p class="card-body">
-            <strong>🌏 水曜日：</strong>ルビオ国務長官がクリティカルミネラル多国間閣僚会議を主催、バンスVPが基調講演。レアアース供給の二国間協定が期待され、鉱業株と日本の資源関連企業に影響の可能性。同じ週にロシア・ウクライナのアブダビ和平協議も — 今晩の大規模攻撃が厳しい背景を形成。<br><br>
-            <strong>🇺🇸 木-金曜日：</strong>米国雇用統計（NFP）が今週のマクロ最大イベント。強い数字はタカ派金利期待を強化、弱い数字は債券に安心感。関税による価格転嫁圧力を踏まえ、賃金インフレが特に注視される。<br><br>
-            <strong>🇯🇵 日曜日2月8日：</strong>衆議院選挙 — アジアのメインイベント。自民党が過半数に向かっている。市場コンセンサス：自民勝利 = 日経続伸＋円安（政策継続期待）。予想外の不振は円急騰＋一時的株売りのトリガー。防衛費と移民政策の議論が今後4年の政策アジェンダを決定する。<br><br>
-            <strong>🥇 貴金属：</strong>金（+6.1%）と銀（+12.7%）が先週の暴落からの反発を確認。金が水曜日まで$4,900超を維持すれば、調整終了で$5,000への道が再開する可能性が高い。
+            <strong>🗳️ 衆議院選挙（2月8日）：</strong>今週最大のイベント。高市首相の勝利が広く予想されるが、勝利の幅が重要。自民党単独過半数なら積極的な財政拡張（JGB利回りの一段高の可能性）、僅差なら姿勢の軟化も。日曜夜〜月曜朝の円とJGBの動きに注目。<br><br>
+            <strong>🇮🇷 米イラン情勢のエスカレーション：</strong>ドローン撃墜とホルムズ海峡タンカー接近事件は、トランプ第2期で最も深刻な軍事的事案。イランがさらに報復すれば原油は$70方向へ急騰、金は$5,200超を試す可能性。外交が機能すれば、リスク資産のリリーフラリーが期待できる。<br><br>
+            <strong>💎 重要鉱物閣僚級会合（2月5日）：</strong>ヴァンス副大統領が基調講演。二国間協定の締結が見込まれる。MP Materials等のレアアース関連銘柄と、重要鉱物サプライチェーン全体への影響に注目。<br><br>
+            <strong>🏔️ ミラノ・コルティナ冬季五輪間近：</strong>日本選手団のサポート施設が報道公開。メダル数の過去最多更新を目指す日本チームの動向にも注目。
           </p>
         </article>
 
         <article class="card featured predict fade-in">
-          <span class="card-tag predict">年間テーマ</span>
-          <h3 class="card-headline">2026年の新興パターン</h3>
+          <span class="card-tag predict">年間見通し</span>
+          <h3 class="card-headline">2026年見通し — グレートローテーション、コモディティスーパーサイクル、AI清算の時</h3>
           <p class="card-body">
-            <strong>🤝 トランプの「ディール段階」が始動：</strong>米印合意、レアアース閣僚会議、イラン外交シグナル、コロンビア会談 — すべてがトランプの関税エスカレーションからディールメーキングへの転換を示唆。市場にとって基本的にポジティブだが、各ディールには条件付き。次のターゲットは中国か、それとも中国は永続的な敵対者のままか。<br><br>
-            <strong>🇯🇵 日本のアイデンティティ選挙：</strong>日経+3.92%のラリー（円安が輸出企業を支援）を喜ぶ一方、候補者は労働力不足にもかかわらず外国人労働者の制限を議論し、家計は同じ円安による食品インフレに苦しんでいる。選挙は日本がどのアイデンティティを選ぶかを示す — グローバル金融大国か、国内福祉国家か。<br><br>
-            <strong>⚔️ ウクライナ・エスカレーション：</strong>今晩のミサイル70発超、ドローン450機超の攻撃 — 2026年最大 — は外交チャネルにもかかわらずロシアが攻勢を強化していることを示す。NATO同盟国の防衛支出は増加の一途で、防衛テック投資サイクルが持続。<br><br>
-            <strong>🥇 貴金属スーパーサイクル：</strong>金$4,937、銀$86.79は、中央銀行の金購入、地政学リスク、ドル減価懸念の三重の構造的需要を反映。先週の暴落からの急回復は、ファンダメンタルズの強さを改めて証明した。
+            <strong>1. グレートローテーションは本物：</strong>テクノロジー（−3.85% YTD）vs 素材（+16.04% YTD）はノイズではなく構造的再配分。テック支配の3年を経て、資金はハードアセット・コモディティ・防衛・エネルギーに流入中。テックが終わったわけではないが、AIトレードの「楽な儲け」フェーズは終了。選別が全てを決める。<br><br>
+            <strong>2. コモディティスーパーサイクルの加速：</strong>金+17.6% YTD、銀+25.9%、原油+10.6%、銅+6.2%。中央銀行の金購入、AIデータセンターのエネルギー需要、地政学リスクプレミアム、脱炭素投資がコモディティ複合体全体の持続的需要を創出。ブラジルIbovespa（+15.2% YTD）はこのテーマの株式市場での表れ。<br><br>
+            <strong>3. 暗号資産のアイデンティティ危機：</strong>BTC（−12.9% YTD）vs 金（+17.6% YTD）は「デジタルゴールド」論争に決定的な回答を与えた — 金の勝利。ソラナの−50% YTDはアルトコイン投げ売りの先行指標。<br><br>
+            <strong>4. 日本の好機：</strong>日経+8.0% YTD、選挙の追い風、防衛費拡大、代替不可能な半導体材料サプライヤーとしての地位。高市首相が JGB危機を引き起こさずに財政拡張を実現できれば、日本は2026年の先進国サプライズとなる可能性。<br><br>
+            <strong>5. 常態化する地政学リスク：</strong>米イラン、台湾海峡、ロシア・ウクライナ、中東 — リスクプレミアムはエピソード的ではなく恒常的に。防衛株とエネルギー株がヘッジとなる。
           </p>
         </article>
+
       </div>
     </section>
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <!-- ⚡ まとめ -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
     <section class="section" id="bottomline">
       <div class="bottom-line">
         <div class="section-header">
           <div class="section-icon bottom">⚡</div>
-          <h2 class="section-title bottom">まとめ</h2>
+          <h2 class="section-title">まとめ</h2>
         </div>
-        <p>市場は決定的な反転を見せた：KOSPI +6.84%、日経+3.92%、センセックス+2.54%で、月曜日の暴落が強制清算であり、ファンダメンタルズの崩壊ではなかったことが確認された。米印貿易合意がカタリストだが、真のシグナルは「トランプが関税戦士からディールメーカーに転換した」ことであり、市場はそれを好感している。貴金属は株式以上に雄弁だった — 金+6.1%で$4,937、銀+12.7%で$86.79は安全資産と産業需要の双方が急増していることを示す。しかし今夜の警告サイン：ロシアの2026年最大のミサイル攻撃（70発超+ドローン450機、−20℃の中）は戦争がアブダビ和平協議を前に激化していることを意味する。また長期米国債の利回り上昇（30年4.91%）は、債券市場がインフレの持続を株式が織り込むよりも長く見ていることを示唆。日本の衆院選まであと5日 — 自民勝利は高市首相の円安・防衛重視・成長路線を固める。日経には追い風。だが食品価格の上昇に苦しむ家計には逆風。市場のユーフォリアと国民の生活コスト不安の矛盾が、次期政権のマンデートとその限界を決定する。</p>
+        <p>グレートローテーションが加速している。テック株は流血中（ナスダック−1.4%、テクノロジーセクター−3.85% YTD）、一方でハードアセットが急騰（金$5,078、銀が1日で+7.7%、素材+16% YTD）。PayPalの−20%暴落は、フィンテックの堀が想像以上に薄かったことを示した。現実世界でも大きな動きが：米F-35がイラン無人機を撃墜し、ロシアはウクライナの発電所を爆撃し、日本は日曜日にこの10年で最も重要な総選挙を迎える。高市首相の若年層支持急増、防衛タカ派の勢い、財政拡張計画は世界第3位の経済を形作る。中国メモリ大手の大増産計画は、半導体戦争が一段と激化することを予告している。この環境では、金が新たなビットコインであり、コモディティが新たなテックであり、選別こそが唯一の戦略である。</p>
         <div class="card-sources">
-          <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp;
-          <a class="source-link" href="https://www.nikkei.com/" target="_blank" rel="noopener">日経新聞 <span class="src-arrow">↗</span></a> &nbsp;
-          <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp;
-          <a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a>
+          <a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp;
+          <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a> &nbsp;
+          <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a>
         </div>
       </div>
     </section>
@@ -993,17 +1168,15 @@
   </main>
 
   <footer class="footer">
-    <p>CEOデイリーブリーフィング — 夜間版 — 2026年2月3日 午後10時JST生成<br>
-    ソース：日経新聞、Yahoo Finance、BBC、NHK、Al Jazeera、毎日新聞<br>
-    社内利用限定。投資助言ではありません。</p>
+    Sanbot生成 · ソース: 日経アジア、Yahoo Finance、BBC、AP、Al Jazeera、NHK、毎日新聞 · 2026年2月4日市場終値時点 · 投資助言ではありません
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const score = 56;
+      const score = 54;
+      const angle = -90 + (score / 100) * 180;
       const needle = document.getElementById('gaugeNeedle');
       if (needle) {
-        const angle = -90 + (score / 100) * 180;
         setTimeout(() => { needle.style.transform = `rotate(${angle}deg)`; }, 300);
       }
     });
