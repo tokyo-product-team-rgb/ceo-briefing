@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEO Daily Briefing — Feb 5, 2026 (Afternoon)</title>
+  <title>CEO Daily Briefing — Feb 5, 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -42,7 +42,6 @@
       color: var(--text);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     .masthead {
@@ -152,14 +151,6 @@
       color: var(--text);
     }
 
-    .lang-toggle a:hover:not(.active) {
-      color: var(--text-secondary);
-    }
-
-    .lang-toggle .sep {
-      color: var(--border);
-    }
-
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -191,11 +182,9 @@
     }
 
     .section-icon.geo { background: #e8eef5; }
-    .section-icon.tech { background: #ede6f6; }
     .section-icon.japan { background: #fce8e5; }
     .section-icon.market { background: #e6f5ef; }
     .section-icon.predict { background: #fef3c7; }
-    .section-icon.vc { background: #e0f2fe; }
     .section-icon.bottom { background: #f0f0f0; }
 
     .section-title {
@@ -206,11 +195,9 @@
     }
 
     .section-title.geo { color: var(--accent-geo); }
-    .section-title.tech { color: var(--accent-tech); }
     .section-title.japan { color: var(--accent-japan); }
     .section-title.market { color: var(--accent-market); }
     .section-title.predict { color: var(--accent-predict); }
-    .section-title.vc { color: var(--accent-vc); }
     .section-title.bottom { color: var(--accent-bottom); }
 
     .cards {
@@ -260,10 +247,8 @@
     }
 
     .card-tag.geo { background: #e8eef5; color: var(--accent-geo); }
-    .card-tag.tech { background: #ede6f6; color: var(--accent-tech); }
     .card-tag.japan { background: #fce8e5; color: var(--accent-japan); }
     .card-tag.market { background: #e6f5ef; color: var(--accent-market); }
-    .card-tag.vc { background: #e0f2fe; color: var(--accent-vc); }
     .card-tag.predict { background: #fef3c7; color: var(--accent-predict); }
 
     .card.featured {
@@ -271,10 +256,8 @@
       padding-left: 1.5rem;
     }
     .card.featured.geo { border-left-color: var(--accent-geo); }
-    .card.featured.tech { border-left-color: var(--accent-tech); }
     .card.featured.japan { border-left-color: var(--accent-japan); }
     .card.featured.market { border-left-color: var(--accent-market); }
-    .card.featured.vc { border-left-color: var(--accent-vc); }
     .card.featured.predict { border-left-color: var(--accent-predict); }
 
     .cards-grid {
@@ -358,8 +341,6 @@
       font-weight: 700;
       color: var(--text);
     }
-
-    .card-body .stat { font-size: 0.95rem; }
 
     .index-table {
       width: 100%;
@@ -603,11 +584,6 @@
     .source-link .src-arrow {
       font-size: 0.6rem;
       margin-left: 0.1rem;
-      display: inline-block;
-      transition: transform 0.2s;
-    }
-    .source-link:hover .src-arrow {
-      transform: translate(1px, -1px);
     }
     .card-sources {
       margin-top: 0.6rem;
@@ -620,9 +596,6 @@
     .bottom-line .source-link {
       color: rgba(255,255,255,0.45);
     }
-    .bottom-line .source-link:hover {
-      color: rgba(255,255,255,0.7);
-    }
 
     .fade-in {
       opacity: 0;
@@ -632,53 +605,6 @@
 
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    .section:nth-child(1) .card { animation-delay: 0.05s; }
-    .section:nth-child(1) .card:nth-child(2) { animation-delay: 0.1s; }
-    .section:nth-child(1) .card:nth-child(3) { animation-delay: 0.15s; }
-
-    .status-badge {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.2em 0.7em;
-      border-radius: 10px;
-    }
-    .status-badge.normal { background: #dcfce7; color: #166534; }
-    .status-badge.caution { background: #fef9c3; color: #854d0e; }
-    .status-badge.alert { background: #fecaca; color: #991b1b; }
-
-    .cards-grid-3 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
-    }
-    @media (max-width: 768px) {
-      .cards-grid-3 { grid-template-columns: 1fr; }
-    }
-
-    @media print {
-      body { background: #fff; }
-      .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
-      .bottom-line { background: #333; }
-      .nav-pills { display: none; }
-    }
-
-    .afternoon-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #f59e0b, #d97706);
-      color: white;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3em 0.8em;
-      border-radius: 12px;
-      margin-left: 0.5rem;
-      vertical-align: middle;
     }
 
     .sector-tabs {
@@ -718,7 +644,7 @@
 </head>
 <body>
 
-  <!-- ━━━ NAV BAR ━━━ -->
+  <!-- NAV BAR -->
   <nav class="nav-bar">
     <a href="live.html">Live</a>
     <a href="index.html" class="active">Daily</a>
@@ -726,7 +652,7 @@
     <a href="archive.html">Archive</a>
   </nav>
 
-  <!-- ━━━ SECTOR TABS ━━━ -->
+  <!-- SECTOR TABS -->
   <div class="sector-tabs">
     <a href="vc-review.html" class="sector-tab">💰 VC</a>
     <a href="ai-review.html" class="sector-tab">🤖 AI</a>
@@ -737,7 +663,7 @@
     <a href="sports-entertainment-review.html" class="sector-tab">🎬 Sports</a>
   </div>
 
-  <!-- ━━━ MASTHEAD ━━━ -->
+  <!-- MASTHEAD -->
   <header class="masthead">
     <div class="lang-toggle">
       <a href="index.html" class="active">EN</a>
@@ -745,15 +671,15 @@
       <a href="ja.html">JA</a>
     </div>
     <div class="masthead-inner">
-      <div class="overline">Afternoon Intelligence Brief <span class="afternoon-badge">PM Update</span></div>
+      <div class="overline">Executive Intelligence Brief</div>
       <h1>CEO Daily Briefing</h1>
-      <div class="edition-date">Thursday, February 5, 2026 — 3:00 PM JST</div>
-      <div class="edition-sub">Health Score · Markets · Japan · Global · Predictions</div>
+      <div class="edition-date">Thursday, February 5, 2026 — 7:00 AM JST</div>
+      <div class="edition-sub">Markets · Japan · Global · Predictions</div>
       <div class="divider-bar"></div>
     </div>
   </header>
 
-  <!-- ━━━ NAV ━━━ -->
+  <!-- NAV -->
   <nav class="nav-pills">
     <a href="#health" class="nav-pill">📊 Health Score</a>
     <a href="#markets" class="nav-pill">💹 Markets</a>
@@ -765,9 +691,7 @@
 
   <main class="container">
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-    <!-- 📊 ECONOMIC HEALTH COMPOSITE - TOP OF PAGE -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- ECONOMIC HEALTH COMPOSITE -->
     <section class="section" id="health">
       <div class="section-header">
         <div class="section-icon market">📊</div>
@@ -778,29 +702,27 @@
         <div class="health-gauge-wrap">
           <div class="health-gauge">
             <div class="gauge-bg"></div>
-            <div class="gauge-needle" id="gaugeNeedle">
-              <div class="gauge-dot"></div>
-            </div>
+            <div class="gauge-needle" id="gaugeNeedle" style="transform: rotate(-27deg);"></div>
           </div>
           <div class="gauge-scale">
             <span>0</span>
             <span>50</span>
             <span>100</span>
           </div>
-          <div class="gauge-score" id="gaugeScore">64</div>
+          <div class="gauge-score" id="gaugeScore">58</div>
           <div class="gauge-score-label">out of 100 · 🟡 YELLOW ZONE — Caution</div>
           <div class="score-changes">
             <div class="score-change">
               <span class="change-label">Daily Δ</span>
-              <span class="change-value chg-pos">+0.8</span>
+              <span class="change-value chg-neg">−3.2</span>
             </div>
             <div class="score-change">
               <span class="change-label">Weekly Δ</span>
-              <span class="change-value chg-neg">−1.2</span>
+              <span class="change-value chg-neg">−5.8</span>
             </div>
             <div class="score-change">
               <span class="change-label">Monthly Δ</span>
-              <span class="change-value chg-neg">−3.4</span>
+              <span class="change-value chg-neg">−7.4</span>
             </div>
           </div>
         </div>
@@ -809,103 +731,38 @@
         <div class="indicator-section">
           <div class="indicator-section-header">
             <span class="indicator-section-title">⚡ Daily Indicators (30%)</span>
-            <span class="indicator-section-score chg-pos">72</span>
+            <span class="indicator-section-score chg-neg">52</span>
           </div>
           <div class="indicator-grid">
             <div class="indicator-item">
-              <div class="indicator-value">+0.4%</div>
+              <div class="indicator-value">−0.5%</div>
               <div class="indicator-name">S&P 500</div>
-              <div class="indicator-sub chg-pos">▲ Recovering</div>
+              <div class="indicator-sub chg-neg">▼ Tech Selloff</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">17.7</div>
+              <div class="indicator-value">19.2</div>
               <div class="indicator-name">VIX</div>
               <div class="indicator-sub chg-neg">▲ Elevated</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">+0.32%</div>
+              <div class="indicator-value">+0.25%</div>
               <div class="indicator-name">10Y-2Y Spread</div>
               <div class="indicator-sub" style="color: var(--text-muted);">● Normalizing</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">1.12%</div>
+              <div class="indicator-value">1.18%</div>
               <div class="indicator-name">Credit Spread</div>
-              <div class="indicator-sub chg-pos">▼ Tight</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● Stable</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">107.8</div>
+              <div class="indicator-value">107.9</div>
               <div class="indicator-name">Dollar (DXY)</div>
-              <div class="indicator-sub" style="color: var(--text-muted);">● Stable</div>
+              <div class="indicator-sub chg-pos">▲ Rebounding</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">+2.9%</div>
-              <div class="indicator-name">Gold</div>
-              <div class="indicator-sub chg-neg">▲ Safe Haven Bid</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- WEEKLY INDICATORS -->
-        <div class="indicator-section">
-          <div class="indicator-section-header">
-            <span class="indicator-section-title">📅 Weekly Indicators (25%)</span>
-            <span class="indicator-section-score" style="color: var(--text-muted);">65</span>
-          </div>
-          <div class="indicator-grid">
-            <div class="indicator-item">
-              <div class="indicator-value">219K</div>
-              <div class="indicator-name">Jobless Claims</div>
-              <div class="indicator-sub chg-pos">▼ Low</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">−2.1%</div>
-              <div class="indicator-name">Mortgage Apps</div>
-              <div class="indicator-sub chg-neg">▼ Declining</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">$3.12</div>
-              <div class="indicator-name">Gas Price</div>
-              <div class="indicator-sub chg-pos">▼ Easing</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">+1.8%</div>
-              <div class="indicator-name">Rail Traffic</div>
-              <div class="indicator-sub chg-pos">▲ Growing</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- MONTHLY INDICATORS -->
-        <div class="indicator-section">
-          <div class="indicator-section-header">
-            <span class="indicator-section-title">📊 Monthly Indicators (25%)</span>
-            <span class="indicator-section-score chg-neg">62</span>
-          </div>
-          <div class="indicator-grid">
-            <div class="indicator-item">
-              <div class="indicator-value">4.4%</div>
-              <div class="indicator-name">GDP Growth</div>
-              <div class="indicator-sub chg-pos">▲ Strong</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">4.4%</div>
-              <div class="indicator-name">Unemployment</div>
-              <div class="indicator-sub" style="color: var(--text-muted);">● Stable</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">2.7%</div>
-              <div class="indicator-name">CPI Inflation</div>
-              <div class="indicator-sub chg-neg">▲ Above Target</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">56.4</div>
-              <div class="indicator-name">Consumer Sent.</div>
-              <div class="indicator-sub chg-neg">▼ Weak</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">51.9</div>
-              <div class="indicator-name">Mfg PMI</div>
-              <div class="indicator-sub" style="color: var(--text-muted);">● Barely Expanding</div>
+              <div class="indicator-value">−19%</div>
+              <div class="indicator-name">Bitcoin</div>
+              <div class="indicator-sub chg-neg">▼ Crypto Crash</div>
             </div>
           </div>
         </div>
@@ -914,437 +771,321 @@
         <div class="indicator-section">
           <div class="indicator-section-header">
             <span class="indicator-section-title">🌍 Geopolitical Risk (20%)</span>
-            <span class="indicator-section-score chg-neg">52</span>
+            <span class="indicator-section-score chg-neg">48</span>
           </div>
           <div class="indicator-grid">
             <div class="indicator-item">
-              <div class="indicator-value">160</div>
+              <div class="indicator-value">175</div>
               <div class="indicator-name">GPR Index</div>
-              <div class="indicator-sub chg-neg">▲ Elevated</div>
+              <div class="indicator-sub chg-neg">▲ High</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">55</div>
+              <div class="indicator-value">65</div>
               <div class="indicator-name">Oil Supply Risk</div>
               <div class="indicator-sub chg-neg">⚠️ Iran/Hormuz</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">50</div>
+              <div class="indicator-value">55</div>
               <div class="indicator-name">US-China</div>
-              <div class="indicator-sub" style="color: var(--text-muted);">● Stable Tension</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">140</div>
-              <div class="indicator-name">Policy Uncert.</div>
-              <div class="indicator-sub" style="color: var(--text-muted);">● Moderate</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">50</div>
-              <div class="indicator-name">Active Conflicts</div>
-              <div class="indicator-sub chg-neg">● Ukraine/Gaza</div>
+              <div class="indicator-sub chg-neg">● Xi-Trump call</div>
             </div>
           </div>
         </div>
 
         <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-          <span class="arrow">▸</span> Methodology & Backtest Results (85% historical accuracy)
+          <span class="arrow">▸</span> Methodology (85% historical accuracy)
         </div>
         <div class="methodology-content">
           <p><strong>Zone Thresholds:</strong> 🟢 GREEN 70-100 · 🟡 YELLOW 50-69 · 🟠 ORANGE 35-49 · 🔴 RED 0-34<br><br>
-          <strong>Historical hits:</strong> RED during 9/11 (41), GFC (28), COVID (17), inflation peak (44). YELLOW for Crimea, Trade War, Ukraine invasion.<br><br>
-          <strong>Current assessment:</strong> Strong GDP but weak consumer sentiment (56.4 near historic lows) + elevated geopolitical risk = YELLOW warranted.<br><br>
-          <strong>Key watch:</strong> Friday Feb 7 US-Iran Oman talks — biggest near-term swing factor.</p>
+          <strong>Current assessment:</strong> Score dropped 3.2 points overnight as crypto crashed (BTC −19% YTD), tech selloff deepened (Google CapEx shock), and geopolitical tensions elevated (US-Iran drone incident, Xi-Trump Taiwan call). The Ukraine-Russia POW swap deal provides slight relief. Japan election uncertainty adds to risk.</p>
         </div>
-        <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.matteoiacoviello.com/gpr.htm" target="_blank" rel="noopener">GPR Index <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="backtest-economic-health-v2.md" target="_blank" rel="noopener">Full Backtest <span class="src-arrow">↗</span></a></div>
       </article>
     </section>
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-    <!-- 📊 MARKETS & ECONOMY - AFTERNOON UPDATE -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+    <!-- MARKETS & ECONOMY -->
     <section class="section" id="markets">
       <div class="section-header">
         <div class="section-icon market">📊</div>
-        <h2 class="section-title market">Markets &amp; Economy — Live Update</h2>
+        <h2 class="section-title market">Markets &amp; Economy</h2>
       </div>
 
       <div class="cards">
 
-        <!-- AFTERNOON KEY SIGNALS -->
-        <article class="card fade-in" style="background: #fefce8; border-color: #eab308;">
-          <p class="card-body" style="font-size: 0.85rem; color: #854d0e;"><strong>🆕 Afternoon Signal:</strong> US futures recovering — S&P +0.4%, Nasdaq +0.6% — as dip buyers step in after yesterday's tech selloff. Alphabet's after-hours weakness (-1%) is being offset by AI infrastructure plays rallying (NVDA +1.9%, AVGO +6.5%). Gold consolidating near $5,080 after yesterday's +2.9% surge. Oil steady as US-Iran talks announcement offsets geopolitical fear premium. The Friday Oman meeting could be the week's biggest swing factor.</p>
+        <!-- KEY SIGNAL -->
+        <article class="card fade-in" style="background: #fef2f2; border-color: #dc2626;">
+          <p class="card-body" style="font-size: 0.85rem; color: #991b1b;"><strong>🚨 Key Signal:</strong> Crypto meltdown accelerates — Bitcoin crashed below $70K overnight (now ~$71K), erasing all gains since Trump's election. Silver plunged 17% in a margin-call cascade. Gold consolidating near $5,080 as safe-haven bid absorbs selling pressure. Tech weakness persists after Google's $91.45B CapEx shock spooked markets. The Great Rotation continues: commodities over crypto, value over growth.</p>
         </article>
 
         <!-- EQUITIES -->
         <article class="card fade-in">
           <span class="card-tag market">Equities</span>
-          <h3 class="card-headline">Global Equity Markets — Asia Closed, US Futures Recovering</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;">Asian markets closed mixed as investors digested Wall Street's tech-led decline. US futures are recovering with S&P +0.4% and Nasdaq +0.6% as dip buyers emerge. The Great Rotation theme continues — value over growth, commodities over tech. Indonesia's market crisis remains a concern; billionaires face forced selling deadlines.</p>
+          <h3 class="card-headline">Global Markets Under Pressure — Tech Selloff Deepens, Japan Holds</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">US futures slipping after yesterday's tech-led decline. <strong>The selloff was triggered by</strong> Alphabet's shocking $91.45B CapEx guidance (vs $28B expected), sparking fears the AI infrastructure buildout is spiraling beyond control. Indonesia's market crisis worsens — Jakarta down 14.8% YTD amid manipulation scandal and forced liquidations.</p>
           <table class="index-table">
             <thead>
-              <tr>
-                <th>Index</th>
-                <th>Level</th>
-                <th>Day %</th>
-                <th>Week %</th>
-                <th>Month %</th>
-                <th>YTD %</th>
-              </tr>
+              <tr><th>Index</th><th>Level</th><th>Day %</th><th>Week %</th><th>Month %</th><th>YTD %</th></tr>
             </thead>
             <tbody>
-              <tr><td class="idx-name">🇺🇸 S&P 500 Fut</td><td class="idx-level">6,945</td><td class="chg-pos">+0.40%</td><td class="chg-neg">−0.5%</td><td class="chg-pos">+0.6%</td><td class="chg-pos">+1.5%</td></tr>
-              <tr><td class="idx-name">🇺🇸 Nasdaq Fut</td><td class="idx-level">23,395</td><td class="chg-pos">+0.60%</td><td class="chg-neg">−2.2%</td><td class="chg-pos">+0.2%</td><td class="chg-pos">+0.8%</td></tr>
-              <tr><td class="idx-name">🇺🇸 Dow Jones</td><td class="idx-level">49,501</td><td class="chg-pos">+0.53%</td><td class="chg-pos">+0.4%</td><td class="chg-pos">+0.5%</td><td class="chg-pos">+2.5%</td></tr>
-              <tr><td class="idx-name">🇯🇵 Nikkei 225</td><td class="idx-level">54,293</td><td class="chg-neg">−0.78%</td><td class="chg-pos">+1.5%</td><td class="chg-pos">+4.6%</td><td class="chg-pos">+8.0%</td></tr>
-              <tr><td class="idx-name">🇰🇷 KOSPI</td><td class="idx-level">5,371</td><td class="chg-pos">+1.57%</td><td class="chg-pos">+1.8%</td><td class="chg-pos">+6.0%</td><td class="chg-pos">+7.2%</td></tr>
-              <tr><td class="idx-name">🇭🇰 Hang Seng</td><td class="idx-level">26,847</td><td class="chg-pos">+0.05%</td><td class="chg-neg">−3.5%</td><td class="chg-pos">+1.8%</td><td class="chg-pos">+4.6%</td></tr>
-              <tr><td class="idx-name">🇨🇳 Shanghai</td><td class="idx-level">4,102</td><td class="chg-pos">+0.85%</td><td class="chg-neg">−1.8%</td><td class="chg-pos">+1.3%</td><td class="chg-pos">+2.7%</td></tr>
+              <tr><td class="idx-name">🇺🇸 S&P 500</td><td class="idx-level">6,065</td><td class="chg-neg">−0.51%</td><td class="chg-neg">−0.8%</td><td class="chg-neg">−0.2%</td><td class="chg-pos">+1.8%</td></tr>
+              <tr><td class="idx-name">🇺🇸 Nasdaq</td><td class="idx-level">19,650</td><td class="chg-neg">−1.21%</td><td class="chg-neg">−2.5%</td><td class="chg-neg">−1.1%</td><td class="chg-neg">−0.8%</td></tr>
+              <tr><td class="idx-name">🇺🇸 Dow Jones</td><td class="idx-level">44,873</td><td class="chg-pos">+0.02%</td><td class="chg-pos">+0.5%</td><td class="chg-pos">+1.2%</td><td class="chg-pos">+4.2%</td></tr>
+              <tr><td class="idx-name">🇯🇵 Nikkei 225</td><td class="idx-level">38,831</td><td class="chg-neg">−0.25%</td><td class="chg-pos">+0.8%</td><td class="chg-pos">+2.1%</td><td class="chg-neg">−2.2%</td></tr>
+              <tr><td class="idx-name">🇭🇰 Hang Seng</td><td class="idx-level">20,891</td><td class="chg-pos">+0.05%</td><td class="chg-neg">−1.2%</td><td class="chg-pos">+4.8%</td><td class="chg-pos">+5.2%</td></tr>
+              <tr><td class="idx-name">🇨🇳 Shanghai</td><td class="idx-level">3,268</td><td class="chg-pos">+0.85%</td><td class="chg-pos">+0.4%</td><td class="chg-pos">+2.1%</td><td class="chg-neg">−1.8%</td></tr>
               <tr><td class="idx-name">🇮🇩 Jakarta</td><td class="idx-level">6,245</td><td class="chg-neg">−2.3%</td><td class="chg-neg">−8.5%</td><td class="chg-neg">−12.1%</td><td class="chg-neg">−14.8%</td></tr>
-              <tr><td class="idx-name">🇬🇧 FTSE 100</td><td class="idx-level">10,434</td><td class="chg-pos">+1.16%</td><td class="chg-pos">+1.2%</td><td class="chg-pos">+3.3%</td><td class="chg-pos">+4.1%</td></tr>
-              <tr><td class="idx-name">🇧🇷 Ibovespa</td><td class="idx-level">185,674</td><td class="chg-pos">+1.58%</td><td class="chg-pos">+2.1%</td><td class="chg-pos">+14.7%</td><td class="chg-pos">+15.2%</td></tr>
-            </tbody>
-          </table>
-          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-        </article>
-
-        <!-- COMMODITIES -->
-        <article class="card fade-in">
-          <span class="card-tag market">Commodities</span>
-          <h3 class="card-headline">Gold Consolidates Near $5,080 · Oil Steady on Iran Talks Hopes</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;">Gold is holding gains near $5,080 after yesterday's +2.9% surge. <strong>The consolidation is healthy because</strong> it digests the geopolitical fear premium that spiked on the US-Iran drone incident. Friday's Oman talks could trigger profit-taking if successful, or another leg higher if they collapse. Oil is remarkably stable given the Hormuz tensions — WTI ~$63.50 — <strong>because</strong> the talks announcement provided reassurance that both sides want to avoid disruption.</p>
-          <table class="index-table">
-            <thead>
-              <tr>
-                <th>Commodity</th>
-                <th>Price</th>
-                <th>Day %</th>
-                <th>Week %</th>
-                <th>Month %</th>
-                <th>YTD %</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="idx-name">🥇 Gold</td><td class="idx-level">$5,082</td><td class="chg-pos">+0.07%</td><td class="chg-neg">−6.0%</td><td class="chg-pos">+14.4%</td><td class="chg-pos">+17.7%</td></tr>
-              <tr><td class="idx-name">🥈 Silver</td><td class="idx-level">$90.10</td><td class="chg-pos">+0.39%</td><td class="chg-neg">−23.5%</td><td class="chg-pos">+17.6%</td><td class="chg-pos">+26.4%</td></tr>
-              <tr><td class="idx-name">🛢️ WTI Crude</td><td class="idx-level">$63.52</td><td class="chg-pos">+0.11%</td><td class="chg-pos">+0.7%</td><td class="chg-pos">+9.1%</td><td class="chg-pos">+10.7%</td></tr>
-              <tr><td class="idx-name">🛢️ Brent Crude</td><td class="idx-level">$67.55</td><td class="chg-pos">+0.07%</td><td class="chg-pos">+0.5%</td><td class="chg-pos">+9.6%</td><td class="chg-pos">+11.3%</td></tr>
-              <tr><td class="idx-name">🔧 Copper</td><td class="idx-level">$6.04</td><td class="chg-pos">+0.33%</td><td class="chg-pos">+2.1%</td><td class="chg-pos">+1.3%</td><td class="chg-pos">+6.5%</td></tr>
-            </tbody>
-          </table>
-          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/commodities/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-        </article>
-
-        <!-- FX & CRYPTO -->
-        <article class="card fade-in">
-          <span class="card-tag market">FX &amp; Crypto</span>
-          <h3 class="card-headline">Yen Steady at ¥156.65 · Crypto Stabilizing After Yesterday's Rout</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;">USD/JPY holding near 156.65 as markets await Sunday's election. Crypto is stabilizing after yesterday's selloff — Bitcoin hovering around $76K, Ethereum near $2,240. <strong>The stabilization came because</strong> long-term holders are refusing to capitulate despite short-term weakness, and institutional rotation appears to have paused. However, the gold/crypto ratio continues to favor gold.</p>
-          <table class="index-table">
-            <thead>
-              <tr>
-                <th>Pair / Asset</th>
-                <th>Level</th>
-                <th>Day %</th>
-                <th>Month %</th>
-                <th>YTD %</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="idx-name">💵 DXY</td><td class="idx-level">97.43</td><td class="chg-neg">−0.02%</td><td class="chg-neg">−0.9%</td><td class="chg-neg">−1.0%</td></tr>
-              <tr><td class="idx-name">💴 USD/JPY</td><td class="idx-level">156.65</td><td style="color: var(--text-muted);">0.00%</td><td class="chg-neg">−0.1%</td><td class="chg-neg">−0.3%</td></tr>
-              <tr><td class="idx-name">🇪🇺 EUR/USD</td><td class="idx-level">1.1828</td><td class="chg-pos">+0.03%</td><td class="chg-pos">+0.9%</td><td class="chg-pos">+0.8%</td></tr>
-              <tr><td class="idx-name">🪙 Bitcoin</td><td class="idx-level">$76,150</td><td class="chg-pos">+0.20%</td><td class="chg-neg">−18.7%</td><td class="chg-neg">−12.7%</td></tr>
-              <tr><td class="idx-name">💎 Ethereum</td><td class="idx-level">$2,245</td><td class="chg-pos">+0.40%</td><td class="chg-neg">−19.8%</td><td class="chg-neg">−23.5%</td></tr>
-            </tbody>
-          </table>
-          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/markets/crypto/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-        </article>
-
-        <!-- AFTERNOON MOVERS -->
-        <article class="card fade-in">
-          <span class="card-tag market">🆕 Afternoon Movers</span>
-          <h3 class="card-headline">After-Hours & Pre-Market Highlights</h3>
-          <table class="index-table">
-            <thead>
-              <tr>
-                <th>Stock</th>
-                <th>Price</th>
-                <th>After-Hrs %</th>
-                <th>Why</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="idx-name">GOOGL</td><td>$217.50</td><td class="chg-neg">−1.1%</td><td style="font-size: 0.8rem;">$91.45B capex shock despite strong revenues</td></tr>
-              <tr><td class="idx-name">NVDA</td><td>$183.80</td><td class="chg-pos">+1.9%</td><td style="font-size: 0.8rem;">Alphabet capex = Nvidia revenue; AI buildout accelerating</td></tr>
-              <tr><td class="idx-name">AVGO</td><td>$252.40</td><td class="chg-pos">+6.5%</td><td style="font-size: 0.8rem;">Custom AI chip leader benefits from hyperscaler spending</td></tr>
-              <tr><td class="idx-name">PYPL</td><td>$41.85</td><td class="chg-pos">+0.4%</td><td style="font-size: 0.8rem;">Stabilizing after −20% crash; bargain hunters emerging</td></tr>
-              <tr><td class="idx-name">PLTR</td><td>$158.50</td><td class="chg-pos">+0.3%</td><td style="font-size: 0.8rem;">Defense/AI momentum continues; government contracts</td></tr>
+              <tr><td class="idx-name">🇬🇧 FTSE 100</td><td class="idx-level">8,621</td><td class="chg-pos">+0.62%</td><td class="chg-pos">+1.8%</td><td class="chg-pos">+5.2%</td><td class="chg-pos">+6.1%</td></tr>
             </tbody>
           </table>
           <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
         </article>
 
+        <!-- CRYPTO MELTDOWN -->
+        <article class="card featured market fade-in" style="border-left-color: #dc2626;">
+          <span class="card-tag" style="background: #fecaca; color: #991b1b;">🚨 Crypto Crash</span>
+          <h3 class="card-headline">Bitcoin Crashes Below $70K — Worst Selloff Since FTX Collapse</h3>
+          <p class="card-body">Bitcoin plunged to $69,101 overnight on Bitstamp before recovering slightly to ~$71K. <strong>The crash was caused by</strong> a perfect storm: (1) AI-driven tech rout spillover as risk assets correlate higher, (2) margin calls forcing liquidations across crypto and precious metals, (3) on-chain data showing production costs ($87K) far exceeding current prices — historically a bear market signal. Michael Burry ("Big Short") flagged this exact pattern, warning of a potential drop to low $50Ks. <strong>Key context:</strong> Miners are now underwater, Bhutan's sovereign fund is moving BTC to exchanges (potential selling), and stablecoin balances are drifting lower — all bearish signals.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.coindesk.com/" target="_blank" rel="noopener">CoinDesk <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- COMMODITIES -->
+        <article class="card fade-in">
+          <span class="card-tag market">Commodities</span>
+          <h3 class="card-headline">Gold Holds $5,080 as Safe Haven · Silver Crashes 17% in Margin Cascade</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">Gold is consolidating near $5,080 after recent gains. <strong>Silver's 17% plunge was triggered by</strong> a margin-call cascade — falling crypto collateral forced metal selling in a feedback loop (the exact setup Burry warned about). Oil steady near $71 as US-Iran tensions balanced by Oman talks announcement.</p>
+          <table class="index-table">
+            <thead>
+              <tr><th>Commodity</th><th>Price</th><th>Day %</th><th>Week %</th><th>Month %</th><th>YTD %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">🥇 Gold</td><td class="idx-level">$5,082</td><td class="chg-pos">+0.1%</td><td class="chg-neg">−6.0%</td><td class="chg-pos">+14.4%</td><td class="chg-pos">+17.7%</td></tr>
+              <tr><td class="idx-name">🥈 Silver</td><td class="idx-level">$74.50</td><td class="chg-neg">−17.2%</td><td class="chg-neg">−23.5%</td><td class="chg-pos">+8.6%</td><td class="chg-pos">+15.4%</td></tr>
+              <tr><td class="idx-name">🛢️ WTI Crude</td><td class="idx-level">$71.25</td><td class="chg-pos">+0.3%</td><td class="chg-neg">−1.2%</td><td class="chg-neg">−0.8%</td><td class="chg-neg">−0.5%</td></tr>
+              <tr><td class="idx-name">🛢️ Brent Crude</td><td class="idx-level">$74.80</td><td class="chg-pos">+0.2%</td><td class="chg-neg">−1.0%</td><td class="chg-neg">−0.5%</td><td class="chg-neg">−0.3%</td></tr>
+              <tr><td class="idx-name">🔧 Copper</td><td class="idx-level">$4.28</td><td class="chg-pos">+0.5%</td><td class="chg-pos">+1.2%</td><td class="chg-pos">+2.8%</td><td class="chg-pos">+5.1%</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://oilprice.com/" target="_blank" rel="noopener">OilPrice.com <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- FX & BONDS -->
+        <article class="card fade-in">
+          <span class="card-tag market">FX &amp; Bonds</span>
+          <h3 class="card-headline">BOE Holds at 3.75% in Split Vote · Yen Steady Ahead of Election</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">Bank of England held rates at 3.75% in a surprise 5-4 split vote (4 members wanted a cut). <strong>The dovish split occurred because</strong> UK disinflation is running ahead of schedule, but sticky services inflation kept the majority cautious. ECB expected to hold at 2.00% later today. USD/JPY holding near ¥154.5 as markets await Sunday's Japan election.</p>
+          <table class="index-table">
+            <thead>
+              <tr><th>Pair / Rate</th><th>Level</th><th>Day %</th><th>Week %</th><th>YTD %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">💵 DXY</td><td class="idx-level">107.9</td><td class="chg-pos">+0.2%</td><td class="chg-pos">+1.1%</td><td class="chg-neg">−0.5%</td></tr>
+              <tr><td class="idx-name">💴 USD/JPY</td><td class="idx-level">154.52</td><td class="chg-pos">+0.1%</td><td class="chg-pos">+0.8%</td><td class="chg-neg">−1.2%</td></tr>
+              <tr><td class="idx-name">🇪🇺 EUR/USD</td><td class="idx-level">1.0382</td><td class="chg-neg">−0.2%</td><td class="chg-neg">−0.9%</td><td class="chg-neg">−0.3%</td></tr>
+              <tr><td class="idx-name">🇬🇧 GBP/USD</td><td class="idx-level">1.2485</td><td class="chg-neg">−0.3%</td><td class="chg-neg">−1.2%</td><td class="chg-neg">−0.8%</td></tr>
+              <tr><td class="idx-name">🇺🇸 10Y Yield</td><td class="idx-level">4.43%</td><td>+1bp</td><td>+8bp</td><td>−15bp</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cvgp2w95n93o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
+        </article>
+
       </div>
     </section>
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-    <!-- 🇯🇵 JAPAN (IN-DEPTH) - AFTERNOON UPDATE -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- JAPAN IN-DEPTH -->
     <section class="section" id="japan">
       <div class="section-header">
         <div class="section-icon japan">🇯🇵</div>
-        <h2 class="section-title japan">Japan — Afternoon Update</h2>
+        <h2 class="section-title japan">Japan — In-Depth</h2>
       </div>
 
       <div class="cards">
 
-        <!-- 1. TSMC Second Japan Plant -->
+        <!-- 1. TSMC -->
         <article class="card featured japan fade-in">
-          <span class="card-tag japan">🆕 Breaking · Semiconductors</span>
-          <h3 class="card-headline">TSMC Confirms Advanced AI Chips at Second Japan Plant — 2nm Process Coming to Kumamoto</h3>
-          <p class="card-body"><strong>TSMC will manufacture advanced AI chips at its second Japanese fab</strong>, the company confirmed this afternoon, marking a major upgrade from initial plans. <strong>The decision was driven by</strong> surging global AI chip demand and Japan's strategic importance as a stable production base amid US-China tech decoupling. The second Kumamoto plant will feature leading-edge nodes (reported to include 2nm process technology), moving beyond the trailing-edge chips of the first fab. <strong>Why it matters:</strong> Japan is cementing its position as the third pillar of global semiconductor manufacturing alongside Taiwan and the US. Combined with Rapidus's $1B+ private funding milestone (IBM reportedly joining), Japan's chip ambitions are gaining serious momentum just as supply chain security becomes a geopolitical imperative.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/business/tech/semiconductors/tsmc-to-make-advanced-chips-for-ai-at-2nd-japan-plant" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
-          </div>
+          <span class="card-tag japan">Semiconductors · Breaking</span>
+          <h3 class="card-headline">TSMC Confirms 3nm Chips at Second Japan Plant — Major Upgrade from Initial Plans</h3>
+          <p class="card-body">TSMC CEO C.C. Wei met PM Takaichi today and confirmed the company will produce <strong>3-nanometer advanced chips</strong> at its second Kumamoto fab — a significant upgrade from the initially planned 6nm process. <strong>The decision was driven by</strong> surging global AI chip demand and Japan's strategic importance as a geopolitically stable production base amid US-China tech decoupling. PM Takaichi welcomed the move, pledging close cooperation. <strong>Why it matters:</strong> Combined with Rapidus topping $1B in private investment (with IBM set to join), Japan is rapidly cementing its position as the third pillar of global advanced semiconductor manufacturing.</p>
+          <div class="card-sources"><a class="source-link" href="https://english.kyodonews.net/articles/-/69897" target="_blank" rel="noopener">Kyodo News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
-        <!-- 2. Sony Profit Outlook -->
+        <!-- 2. Election -->
         <article class="card featured japan fade-in">
-          <span class="card-tag japan">🆕 Earnings · Tech</span>
-          <h3 class="card-headline">Sony Lifts Full-Year Profit Outlook — Chip Demand Surge and IP Gains Drive Upgrade</h3>
-          <p class="card-body">Sony raised its full-year profit outlook this afternoon, <strong>propelled by</strong> stronger-than-expected demand for image sensors (used in AI-enabled smartphones and vehicles) and gains from intellectual property monetization. <strong>The upgrade reflects</strong> Sony's unique position at the intersection of content (gaming, music, film) and components (image sensors are essential for AI vision systems). As the AI boom spreads beyond chips to the edge devices that capture data, Sony's sensor division — which dominates the high-end smartphone camera market — is emerging as an unexpected AI beneficiary.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/business/media-entertainment/sony-lifts-full-year-profit-outlook-on-chip-demand-ip-gain" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
-          </div>
+          <span class="card-tag japan">Politics · Election</span>
+          <h3 class="card-headline">Sunday Election: Takaichi's Youth Surge Meets "Different Kind of PM" Hopes</h3>
+          <p class="card-body">Japan heads to the polls Sunday with PM Sanae Takaichi seeking a mandate for her nationalist-economic agenda. <strong>The unexpected development:</strong> Takaichi has sparked genuine hope among Japan's disaffected youth, with her "different kind of PM" image resonating with voters tired of the gerontocratic LDP establishment. Nearly 40% of candidates support foreign worker curbs — <strong>driven by</strong> rising concerns over wage competition and cultural anxieties amid Japan's largest-ever immigration wave. <strong>Key watch:</strong> Her defense spending plans are under sharp focus amid Trump's Taiwan pressure on allies.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/japan-election/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
-        <!-- 3. Rapidus $1B Milestone -->
-        <article class="card featured japan fade-in">
-          <span class="card-tag japan">🆕 Semiconductors · Investment</span>
-          <h3 class="card-headline">Rapidus Tops ¥150B ($1B+) in Private Investment — IBM Set to Join as Investor</h3>
-          <p class="card-body">Japan's ambitious semiconductor venture Rapidus has surpassed <span class="stat">¥150 billion ($1B+)</span> in private investment, with IBM reportedly poised to join as an investor. <strong>The funding surge was enabled by</strong> growing confidence in Japan's ability to resurrect its chip industry, bolstered by the government's massive subsidies and TSMC's deepening Japan commitment announced today. IBM's entry would bring critical technology transfer — Rapidus licensed IBM's 2nm gate-all-around transistor technology for its Hokkaido fab. <strong>The strategic significance:</strong> If Rapidus succeeds, it would create a non-Taiwan, non-US source of cutting-edge logic chips — exactly what European and Japanese carmakers, and increasingly the Pentagon, desperately want.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/business/tech/semiconductors/japan-chipmaker-rapidus-tops-1bn-in-private-investment-as-ibm-aims-to-join" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <!-- 4. Election Timing Controversy -->
+        <!-- 3. Xi Ripples -->
         <article class="card fade-in">
-          <span class="card-tag japan">🆕 Election · Youth</span>
-          <h3 class="card-headline">"Extremely Unreasonable" — Young Voters Protest Election Timing During University Entrance Exams</h3>
-          <p class="card-body">Opposition members are criticizing PM Takaichi for holding Sunday's election during university entrance exam season, calling the timing <strong>"extremely unreasonable."</strong> <strong>The controversy stems from</strong> Japan's brutal "examination hell" — university entrance tests occur in late January through early February, and the Sunday election directly conflicts with many students' preparation schedules. Young voters who would otherwise support Takaichi face an impossible choice between civic duty and career-defining exams. <strong>The irony:</strong> Takaichi's unexpected youth support surge could be dampened by the very timing her government chose.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.scmp.com/news/asia/east-asia/article/3342441/japans-extremely-unreasonable-election-timing-threatens-keep-young-voters-away" target="_blank" rel="noopener">SCMP <span class="src-arrow">↗</span></a>
-          </div>
+          <span class="card-tag japan">Geopolitics · China</span>
+          <h3 class="card-headline">Xi's Power Struggle Sends Ripples Through Japan's Election</h3>
+          <p class="card-body">Xi Jinping's purge of Gen. Zhang Youxia — a rare challenge to China's military leadership — is coinciding with Takaichi's election campaign in ways that benefit her nationalist platform. <strong>The connection:</strong> China's internal instability validates Takaichi's calls for increased defense spending and closer US ties, while also raising concerns about unpredictable Chinese behavior in the Taiwan Strait. Meanwhile, Xi told Trump to be "prudent" about Taiwan arms sales in their first call since November — <strong>signaling</strong> Beijing's unease with the deepening US-Taiwan military relationship.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/editor-s-picks/china-up-close/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/articles/c62wpjd3j1zo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
-        <!-- 5. PC Makers Eyeing Chinese Memory -->
-        <div class="cards-grid">
-          <article class="card fade-in">
-            <span class="card-tag japan">🆕 Tech Supply Chain</span>
-            <h3 class="card-headline">HP, Dell, Acer, Asus Eyeing Chinese Memory Chips — Supply Crunch Forces Hard Choices</h3>
-            <p class="card-body">Major PC makers including HP, Dell, and Japan-adjacent Acer/Asus are <strong>mulling the use of Chinese memory chips</strong> amid a global supply crunch. <strong>The desperation is driven by</strong> Korean memory giants Samsung and SK Hynix prioritizing high-margin AI/HBM chips over commodity DRAM, leaving PC manufacturers scrambling for alternatives. Chinese firms CXMT and YMTC are aggressively expanding output to fill the gap. <strong>Implication:</strong> The AI boom's insatiable appetite for advanced memory is inadvertently strengthening China's chip industry.</p>
-            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/spotlight/supply-chain/hp-dell-acer-and-asus-mull-using-chinese-memory-chips-amid-supply-crunch" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a></div>
-          </article>
-
-          <article class="card fade-in">
-            <span class="card-tag japan">Markets</span>
-            <h3 class="card-headline">Nikkei Closes −0.78% at 54,293 — Pre-Election Caution Persists</h3>
-            <p class="card-body">The Nikkei 225 finished the day at <span class="stat">54,293</span>, down −0.78%, largely unchanged from morning levels. <strong>The sideways action was caused by</strong> offsetting forces: positive semiconductor news (TSMC, Sony, Rapidus) balanced against Wall Street's tech selloff spillover and institutional de-risking ahead of Sunday's vote. Trading volume was subdued as major players await the election outcome. <strong>Watch:</strong> Futures markets Sunday night for initial reaction to expected Takaichi victory.</p>
-            <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/quote/%5EN225/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
-          </article>
-        </div>
-
-        <!-- 6. North Korea Summit Rumors -->
+        <!-- 4. Toyota Hybrids -->
         <article class="card fade-in">
-          <span class="card-tag japan">🆕 Diplomacy · Election</span>
-          <h3 class="card-headline">Rumored "Shock" Pyongyang Visit — Could Takaichi Pull an Abductee Deal Before Election Day?</h3>
-          <p class="card-body">Speculation is intensifying that PM Takaichi could make a dramatic pre-election visit to Pyongyang, with abductee activists claiming North Korea is ready to return surviving abductees in exchange for "immediate, large-scale" aid. <strong>The rumors emerged because</strong> Takaichi has made the abductee issue central to her nationalist platform, and a breakthrough would virtually guarantee her victory margin. Most analysts remain skeptical — <strong>such visits require months of secret preparation</strong>, and Kim Jong Un has shown no public signals of softening. But the mere speculation reveals how high-stakes Sunday's election has become.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.scmp.com/week-asia/politics/article/3342387/japan-north-korea-summit-rumours-link-takaichi-shock-visit-ahead-vote" target="_blank" rel="noopener">SCMP <span class="src-arrow">↗</span></a>
-          </div>
+          <span class="card-tag japan">Automotive</span>
+          <h3 class="card-headline">Toyota Plans 30% Global Hybrid Production Increase</h3>
+          <p class="card-body">Toyota announced plans to boost global hybrid vehicle production by 30%. <strong>The expansion is motivated by</strong> the company's vindicated bet that hybrids would bridge the EV transition — hybrid demand is surging in markets where charging infrastructure lags (US, Southeast Asia, India), while pure EV adoption slows in Europe amid range anxiety and grid concerns. <strong>Strategic angle:</strong> As competitors scramble to pivot from all-in EV strategies, Toyota's hybrid dominance positions it to capture market share during the "great recalibration" of the EV transition timeline.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/automobiles/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 5. Sony -->
+        <article class="card fade-in">
+          <span class="card-tag japan">Tech · Earnings</span>
+          <h3 class="card-headline">Sony Lifts Profit Outlook — Chip Demand and IP Gains Drive Upgrade</h3>
+          <p class="card-body">Sony raised its full-year profit outlook, <strong>propelled by</strong> stronger-than-expected demand for image sensors (used in AI-enabled smartphones and vehicles) and gains from intellectual property monetization. As the AI boom spreads beyond chips to edge devices that capture data, Sony's sensor division — which dominates high-end smartphone cameras — is emerging as an unexpected AI beneficiary.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/media-entertainment/sony-lifts-full-year-profit-outlook-on-chip-demand-ip-gain" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 6. Life Insurance -->
+        <article class="card fade-in">
+          <span class="card-tag japan">Finance · Demographics</span>
+          <h3 class="card-headline">Life Insurers Plan for "108-Year-Olds" — Longevity Breaks Product Design</h3>
+          <p class="card-body">Major Japanese life insurers are reviewing policies for customers who may exceed 108 years old — the age ceiling built into many legacy products. <strong>The review was forced by</strong> Japan's world-leading longevity: current centenarians (90,000+) were born when life expectancy was 45 years, and the math for perpetual premium payments is breaking down. <strong>Implication:</strong> A symbol of how Japan's "super-aged society" is forcing industries to rethink fundamental assumptions about the human lifespan.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/article/DGXZQOUB026KT0S6A200C2000000/" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a></div>
         </article>
 
       </div>
     </section>
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-    <!-- 🌍 GLOBAL BY CONTINENT - AFTERNOON UPDATE -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- GLOBAL BY CONTINENT -->
     <section class="section" id="global">
       <div class="section-header">
         <div class="section-icon geo">🌍</div>
-        <h2 class="section-title geo">Global by Region — Afternoon Update</h2>
+        <h2 class="section-title geo">Global By Continent</h2>
       </div>
 
       <div class="cards">
 
         <!-- NORTH AMERICA -->
-        <article class="card featured geo fade-in">
-          <span class="card-tag geo">North America</span>
-          <h3 class="card-headline">Alphabet Capex Shocks at $91B · Washington Post "Bloodbath" · US-Iran Talks Set for Friday</h3>
-          <p class="card-body">
-            <strong>1. Alphabet's AI Capex Blows Past Estimates — $91.45B vs $28B Expected:</strong> Google parent Alphabet reported Q4 earnings after hours, revealing capital expenditure plans of <span class="stat">$91.45 billion</span> — more than 3x analyst expectations of $28.17B. <strong>The massive spending surge is driven by</strong> the AI infrastructure arms race: Google is scrambling to catch up with OpenAI/Microsoft and needs exponentially more compute capacity. The stock slid ~1% after hours despite solid revenue numbers, <strong>because</strong> investors are questioning whether AI returns will justify this level of investment. However, AI-adjacent stocks Nvidia (+1.9% after hours) and Broadcom (+6.5%) rallied on the news — Alphabet's spending is their revenue.<br><br>
-            <strong>2. Washington Post "Bloodbath" — Hundreds Laid Off:</strong> The Washington Post announced sweeping layoffs and is scaling back news coverage in what staff called "one of the darkest days" in the paper's history. <strong>The cuts were forced by</strong> cratering digital ad revenue, subscriber churn after owner Jeff Bezos's controversial decision to block a presidential endorsement, and broader media industry collapse. The storied paper that broke Watergate is a shadow of itself.<br><br>
-            <strong>3. US-Iran Nuclear Talks Set for Friday in Oman:</strong> Tehran confirmed that nuclear talks with the US will take place Friday in Oman. <strong>The breakthrough came because</strong> both sides are seeking de-escalation after yesterday's drone shootdown near the USS Abraham Lincoln — Iran wants sanctions relief, and Trump wants a diplomatic win to contrast with his military pressure campaign. Markets are cautiously optimistic that escalation can be avoided.
-          </p>
-          <div class="card-sources">
-            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo — Alphabet <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.bbc.com/news/articles/cwyn05d1494o" target="_blank" rel="noopener">BBC — WaPo <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.aljazeera.com/news/2026/2/4/us-iran-nuclear-talks-set-for-oman-on-friday-tehran-confirms" target="_blank" rel="noopener">Al Jazeera — Iran <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card fade-in">
+          <span class="card-tag geo">🇺🇸 North America</span>
+          <h3 class="card-headline">Google's $91B CapEx Shock · Trump Critical Minerals Reserve · ICE Tensions</h3>
+          <p class="card-body"><strong>1. Alphabet earnings spooked markets</strong> when CapEx guidance hit $91.45B — 3x analyst estimates — fueling fears of an AI infrastructure bubble where hyperscalers chase compute regardless of returns. Revenue was strong but ignored. <strong>2. Trump unveiled a $12B critical minerals stockpile</strong> to counter China's dominance, funded by tariff revenues and focused on rare earths essential for EVs and defense. <strong>3. ICE tensions escalated</strong> in Minneapolis after deadly incidents; a 10-year-old Minnesota girl was released after a month in detention, intensifying the political firestorm around immigration enforcement.</p>
+          <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- EUROPE -->
-        <article class="card featured geo fade-in">
-          <span class="card-tag geo">Europe</span>
-          <h3 class="card-headline">New START Nuclear Treaty Expires · Ukraine Talks "Productive" · Labour Revolt Over Mandelson</h3>
-          <p class="card-body">
-            <strong>1. New START Expires — "Grave Moment" for Nuclear Security:</strong> The last US-Russia nuclear arms treaty expired today, leaving no limits on the world's two largest nuclear arsenals for the first time since the Cold War. <strong>The collapse was caused by</strong> Russia's suspension of participation in 2023 over Ukraine, and neither Biden nor Trump prioritized renegotiation. UN Secretary-General Guterres called it a "grave moment for international peace and security," urging both powers to begin new talks immediately. <strong>With no inspection regime</strong>, both countries can now expand arsenals without oversight.<br><br>
-            <strong>2. Ukraine-Russia Peace Talks "Productive" in Abu Dhabi:</strong> Day two of US-mediated peace talks in the UAE continues, with Ukraine's Zelenskyy calling the first day "productive" and expressing hope for another prisoner exchange. <strong>The cautious optimism stems from</strong> both sides exhausted by a 1,442-day war, and Trump's pressure on both capitals to reach a deal. However, fundamental issues — territorial control, NATO membership — remain unresolved. Russia resumed night strikes on Ukrainian cities this week despite the talks.<br><br>
-            <strong>3. Labour MPs Say Starmer's "Days Are Numbered" Over Mandelson:</strong> Fury within the UK Labour Party is escalating over PM Starmer's handling of the Mandelson-Epstein scandal, with some MPs privately saying his tenure is in jeopardy. <strong>The crisis intensified because</strong> Starmer admitted he knew about deeper Mandelson-Epstein ties before appointing him US Ambassador, but proceeded anyway. The Conservatives forced a vote to release all Mandelson files, which Labour backed after internal pressure — a humiliating climbdown.
-          </p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.dw.com/en/new-start-us-russia-nuclear-treaty-expires/a-75812014" target="_blank" rel="noopener">DW — New START <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.aljazeera.com/news/2026/2/4/ukraine-says-first-day-of-peace-talks-with-russia" target="_blank" rel="noopener">Al Jazeera — Ukraine <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.theguardian.com/international" target="_blank" rel="noopener">Guardian — Labour <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card fade-in">
+          <span class="card-tag geo">🇪🇺 Europe</span>
+          <h3 class="card-headline">Ukraine-Russia POW Swap · Starmer's Mandelson Crisis · BOE Holds</h3>
+          <p class="card-body"><strong>1. "Productive" US-led talks in Abu Dhabi</strong> yielded a Ukraine-Russia prisoner exchange deal (314 POWs), the first tangible progress since Trump's envoy took over negotiations. <strong>The breakthrough came because</strong> both sides need to show constituents something amid war fatigue. <strong>2. PM Starmer apologized to Epstein victims</strong> for appointing Peter Mandelson as US ambassador, admitting he "believed his lies" about the Epstein relationship. The scandal is roiling British politics with calls to withdraw the nomination. <strong>3. BOE kept rates at 3.75%</strong> but the 5-4 split (4 wanted cuts) signals UK disinflation is running ahead of expectations.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/live/czx3lq460n6t" target="_blank" rel="noopener">BBC Live <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.dw.com/" target="_blank" rel="noopener">DW <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- ASIA EX-JAPAN -->
-        <article class="card featured geo fade-in">
-          <span class="card-tag geo">Asia ex-Japan</span>
-          <h3 class="card-headline">Xi Warns Trump on Taiwan Arms · Indonesia Forces Billionaires to Sell · Bangladesh Election Tests Gen Z Uprising</h3>
-          <p class="card-body">
-            <strong>1. Xi Tells Trump: "Be Prudent" on Taiwan Arms Sales:</strong> In their first call since the Taiwan Strait tensions of late 2025, Xi Jinping told Trump the US "must be prudent" when supplying weapons to Taiwan. <strong>The warning was prompted by</strong> Taiwan's record $19 billion defense order placed in January and the Trump administration's approval of F-35 sales. Xi is trying to establish deterrence before the weapons arrive, while Trump is using arms sales as leverage in broader trade negotiations. Taiwan's defense posture hangs in the balance.<br><br>
-            <strong>2. Indonesia's "Loose or Lose" Ultimatum to Billionaires:</strong> Indonesia is forcing its wealthiest tycoons to sell shares or loosen family control of listed companies, threatening to strip market access otherwise. <strong>The drastic move was necessitated by</strong> the Jakarta stock exchange's worst rout in years, which exposed long-standing market manipulation and governance issues that scared off foreign investors. Indonesia risks losing its MSCI emerging market status if reforms fail. Top economic minister Airlangga Hartarto vowed capital market reforms "not merely because of MSCI."<br><br>
-            <strong>3. Bangladesh Election Tests Gen Z Revolution:</strong> Just six months after student protesters toppled Sheikh Hasina's government in a "Gen Z revolution," Bangladesh goes to the polls — but the old guard is tipped to win. <strong>The reversal is occurring because</strong> the protest movement was united in opposition but fragmented on governance, allowing establishment parties to regroup. Voter turnout among young protesters may determine whether their revolution produces lasting change or becomes a historical footnote.
-          </p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/news/articles/c62wpjd3j1zo" target="_blank" rel="noopener">BBC — Xi-Trump <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.scmp.com/news/asia/southeast-asia/article/3342468/indonesia-force-billionaires-sell-shares-loosen-control-or-lose-market-status" target="_blank" rel="noopener">SCMP — Indonesia <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.bbc.com/news/articles/c1m7444nr3yo" target="_blank" rel="noopener">BBC — Bangladesh <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card fade-in">
+          <span class="card-tag geo">🌏 Asia ex-Japan</span>
+          <h3 class="card-headline">Xi Warns Trump on Taiwan · Thailand Election Sunday · Pakistan Balochistan Attacks</h3>
+          <p class="card-body"><strong>1. Xi told Trump to be "prudent"</strong> about Taiwan arms sales in their first call since November. Taiwan's President Lai insisted ties with Washington are "rock solid," but the call stirred unease in Taipei about potential dealmaking over their heads. <strong>2. Thailand heads to polls Sunday</strong> with the opposition People's Party leading in polls — the same movement whose predecessor was dissolved by the courts. A win would test the military-royalist establishment's tolerance. <strong>3. Pakistan's Balochistan violence surged</strong> with 250+ killed in coordinated insurgent attacks; Islamabad blames "India-backed elements" and rules out negotiations.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.scmp.com/" target="_blank" rel="noopener">SCMP <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- MIDDLE EAST & AFRICA -->
-        <article class="card featured geo fade-in">
-          <span class="card-tag geo">Middle East & Africa</span>
-          <h3 class="card-headline">Nobel Laureate Mohammadi on Hunger Strike · Balochistan Death Toll Hits 250 · Nigeria Attacks Kill 200</h3>
-          <p class="card-body">
-            <strong>1. Narges Mohammadi on Hunger Strike in Iranian Detention:</strong> Nobel Peace Prize laureate Narges Mohammadi has begun a hunger strike in detention, her foundation confirmed. <strong>The protest was sparked by</strong> Iran's refusal to provide adequate medical care despite her deteriorating health. The hunger strike coincides with Friday's scheduled nuclear talks — Mohammadi's defiance highlights the brutality of the regime Trump is about to negotiate with, complicating the administration's dual-track approach of pressure and diplomacy.<br><br>
-            <strong>2. Pakistan Balochistan Death Toll Reaches 250:</strong> Violence in Pakistan's Balochistan province has killed over 250 people including civilians, security personnel, and insurgents in the past week. <strong>Pakistan accused "elements supported by India"</strong> of organizing the attacks, escalating regional tensions. The separatist Balochistan Liberation Army has been conducting coordinated strikes on security convoys and checkpoints, exploiting the region's mineral wealth grievances. The crisis threatens US critical minerals interests — Balochistan sits atop vast copper and gold deposits.<br><br>
-            <strong>3. Nigeria Mass Killings — 200 Dead in Kwara and Katsina:</strong> Gunmen killed nearly 200 people in coordinated attacks across Nigeria's Kwara and Katsina states. <strong>The violence was driven by</strong> escalating farmer-herder conflicts, bandits seeking ransom, and security forces spread too thin across Africa's most populous nation. The attacks underscore Nigeria's governance crisis as President Tinubu struggles to maintain order.
-          </p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.cnn.com/2026/02/04/middleeast/narges-mohammadi-iran-hunger-strike-intl" target="_blank" rel="noopener">CNN — Mohammadi <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.scmp.com/week-asia/politics/article/3342424/violence-balochistan-rages-pakistan-rules-out-talks-insurgents" target="_blank" rel="noopener">SCMP — Pakistan <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.cnn.com/2026/02/04/africa/gunmen-attack-kwara-village-nigeria-intl" target="_blank" rel="noopener">CNN — Nigeria <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card fade-in">
+          <span class="card-tag geo">🌍 Middle East & Africa</span>
+          <h3 class="card-headline">US-Iran Drone Incident · Gaza Strikes Continue · Nigeria Massacre 160+</h3>
+          <p class="card-body"><strong>1. US shot down an Iranian drone</strong> approaching an aircraft carrier in the Arabian Sea — the latest escalation before Friday's critical Oman talks. Iran conditionally agreed to negotiate but warned of "regional war" if attacked. Trump warned Khamenei to be "very worried." <strong>2. Israeli strikes killed 20+ in Gaza</strong> after a soldier was wounded by gunfire, despite the ceasefire. Rafah crossing reopened but only a handful of patients have crossed. <strong>3. Gunmen killed 160+ in Nigeria's Kwara and Katsina states</strong> — victims were rounded up, bound, and shot in one of the worst civilian massacres this year.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/world/middle_east" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- LATIN AMERICA -->
-        <article class="card featured geo fade-in">
-          <span class="card-tag geo">Latin America</span>
-          <h3 class="card-headline">Venezuela's Month After Maduro — People Aren't Sure · Robin Hood Thieves Protest Canadian Prices · Colombia Drug War Rages</h3>
-          <p class="card-body">
-            <strong>1. One Month Post-Maduro, Venezuelans Doubt Change:</strong> One month after the dramatic capture of Nicolás Maduro, Venezuelans are questioning whether anything has really changed. <strong>The skepticism is rooted in</strong> the new government's slow progress on basic services, continued food shortages, and the same Chavista elite remaining in control of key institutions. The US has declared Venezuela is "changing," but ordinary citizens aren't feeling it yet. The gap between Washington rhetoric and Caracas reality is widening.<br><br>
-            <strong>2. Montreal "Robin Hood" Thieves Give Away Stolen Groceries:</strong> Thieves dressed as Robin Hood stole groceries and distributed them publicly in Montreal, protesting Canada's cost-of-living crisis. <strong>The stunt gained viral traction because</strong> grocery prices have risen 25%+ since 2023 while major chains post record profits — a populist grievance that PM Mark Carney's new Liberal government will need to address. Canadians are increasingly receptive to anti-corporate messaging.<br><br>
-            <strong>3. Colombia EGC Suspends Peace Talks:</strong> Colombia's largest remaining armed group (EGC) suspended Doha peace talks in response to reports that Colombia and the US would jointly target its leader for arrest. <strong>The breakdown was triggered by</strong> President Petro's Washington meeting with Trump, which signaled closer security cooperation. The EGC controls vast cocaine trafficking routes — their departure from talks means the drug war continues unabated.
-          </p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.cnn.com/2026/02/04/americas/venezuela-month-after-maduro-capture-latam-intl" target="_blank" rel="noopener">CNN — Venezuela <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.cnn.com/2026/02/04/americas/robin-hood-thieves-montreal-grocery-canada-latam-intl" target="_blank" rel="noopener">CNN — Canada <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.aljazeera.com/news/2026/2/4/colombias-egc-suspends-doha-peace-talks-over-petro-trump-meeting" target="_blank" rel="noopener">Al Jazeera — Colombia <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card fade-in">
+          <span class="card-tag geo">🌎 Latin America</span>
+          <h3 class="card-headline">Venezuela's Saab Detained · Costa Rica Elects Crime-Fighter · Panama-China Canal Row</h3>
+          <p class="card-body"><strong>1. Alex Saab, Maduro's alleged financial fixer, was reportedly detained</strong> in Caracas by FBI and Venezuelan intelligence — along with billionaire media mogul Raúl Gorrín — signaling the post-Maduro cleanup is accelerating. <strong>2. Laura Fernández won Costa Rica's presidency</strong> in the first round on a tough-on-crime platform, <strong>propelled by</strong> voter fears over rising organized crime and cartel influence. <strong>3. Panama's president pushed back against China</strong> after Beijing threatened retaliation over canal port ownership disputes — insisting Panama has an "independent court system" and won't bow to pressure.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.theguardian.com/world/americas" target="_blank" rel="noopener">Guardian <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/world/latin_america" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- OCEANIA -->
         <article class="card fade-in">
-          <span class="card-tag geo">Oceania</span>
-          <h3 class="card-headline">Winter Olympics Kick Off Tomorrow in Milan-Cortina · Australian Outback Disappearance Now "Major Crime"</h3>
-          <p class="card-body">
-            <strong>1. Winter Olympics Begin Friday:</strong> The 2026 Winter Olympics officially open tomorrow in Milan-Cortina, Italy. Team GB got off to a winning start in mixed doubles curling despite a power cut. Lindsey Vonn's comeback at age 41 has been the pre-Games storyline, though first women's downhill training was cancelled due to weather. <strong>The Games come amid</strong> unprecedented geopolitical tension — organizers are hoping sport can transcend politics, but Russia's ban and China's cold relations with the West will be constants.<br><br>
-            <strong>2. Australian Four-Year-Old Disappearance Declared "Major Crime":</strong> The disappearance of Gus Lamont, 4, in the Australian outback last September has been declared a major crime, with a suspect identified. <strong>The escalation came because</strong> investigators concluded the child couldn't have wandered off alone given the terrain and circumstances — foul play is now suspected in a case that has gripped Australia.
-          </p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/sport/articles/c338y36kngzo" target="_blank" rel="noopener">BBC — Olympics <span class="src-arrow">↗</span></a> &nbsp;
-            <a class="source-link" href="https://www.bbc.com/news/articles/c368g5l33xzo" target="_blank" rel="noopener">BBC — Australia <span class="src-arrow">↗</span></a>
-          </div>
+          <span class="card-tag geo">🌏 Oceania</span>
+          <h3 class="card-headline">Australia AUKUS Doubts · Teen Hero Saves Family · Child Abuse Arrest</h3>
+          <p class="card-body"><strong>1. US congressional report explored "not delivering" AUKUS subs to Australia</strong> at all — raising alarm bells in Canberra about the deal's durability. <strong>The concern stems from</strong> US submarine production capacity constraints and Trump-era allies-pay-their-way rhetoric. <strong>2. A 13-year-old boy swam 4 hours to shore</strong> to save his mother and siblings after their kayak was swept out to sea in Western Australia — hailed as a national hero. <strong>3. Police charged a man with abuse of 459 children</strong> in one of Australia's worst pedophilia cases, with victims spanning decades.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.theguardian.com/australia-news" target="_blank" rel="noopener">Guardian Australia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/world/australia" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
       </div>
     </section>
 
-    <!-- 🔮 PREDICTIONS - AFTERNOON UPDATE -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- PREDICTIONS -->
     <section class="section" id="predictions">
       <div class="section-header">
         <div class="section-icon predict">🔮</div>
-        <h2 class="section-title predict">Predictions — Afternoon Update</h2>
+        <h2 class="section-title predict">Predictions</h2>
       </div>
 
       <div class="cards">
 
         <article class="card featured predict fade-in">
-          <span class="card-tag predict">Tomorrow</span>
-          <h3 class="card-headline">Friday, Feb 6 — Winter Olympics Open, US-Iran Talks in Oman, US Jobs Data</h3>
+          <span class="card-tag predict">Week Ahead</span>
+          <h3 class="card-headline">Critical Events: Feb 6-12</h3>
           <p class="card-body">
-            <strong>🇮🇷 US-Iran Nuclear Talks (Oman):</strong> The most market-moving event tomorrow. Success could see oil drop $2-3, gold retreat, and risk assets rally. Failure or walkout would reverse all of that. <strong>Probability of meaningful progress:</strong> ~35%. Both sides have incentives to talk, but the gap between "sanctions relief" and "nuclear dismantlement" remains vast.<br><br>
-            <strong>🏂 Winter Olympics Opening Ceremony (Milan-Cortina):</strong> The first Winter Games since 2022 Beijing. Watch for diplomatic statements — who attends, who doesn't, and what it signals about global alignments. Russia is banned; China's presence will be closely watched.<br><br>
-            <strong>📊 US Employment Data:</strong> Weekly jobless claims and continuing claims provide a real-time labor market pulse. After Wednesday's weak ADP print (22K vs expectations), markets are bracing for softness. A weak number could revive Fed cut expectations.<br><br>
-            <strong>🗾 Japan Pre-Election:</strong> Last full day of campaigning before Sunday's vote. Watch for any surprise announcements from Takaichi — the North Korea summit rumors, while unlikely, would be game-changing.
+            <strong>🇮🇹 Feb 6:</strong> Winter Olympics opening ceremony (Cortina) — watch for geopolitical overtones amid Russia ban.<br>
+            <strong>🇺🇸🇮🇷 Feb 7:</strong> US-Iran talks in Oman — the week's biggest swing factor. Success = oil down, risk-on; failure = escalation fears spike.<br>
+            <strong>🇯🇵 Feb 8:</strong> Japan general election — Takaichi expected to win; watch margin for mandate strength.<br>
+            <strong>🇹🇭 Feb 9:</strong> Thailand election — opposition leads polls; establishment response if they win is the real story.<br>
+            <strong>🇺🇸 Feb 12:</strong> US CPI data — Fed's next move hinges on whether January inflation stays sticky.<br>
+            <strong>📊 Expected moves:</strong> BTC likely to test $65K support if risk-off continues; gold could break $5,200 on Iran escalation; Nikkei could rally 3-5% on clear Takaichi victory.
           </p>
         </article>
 
         <article class="card featured predict fade-in">
-          <span class="card-tag predict">Weekend</span>
-          <h3 class="card-headline">Sunday, Feb 8 — Japan Election Day: The Stakes Couldn't Be Higher</h3>
+          <span class="card-tag predict">2026 Outlook</span>
+          <h3 class="card-headline">Major Themes Shaping the Year</h3>
           <p class="card-body">
-            <strong>🗳️ Expected Outcome:</strong> Takaichi wins decisively, likely with LDP single-party majority. The margin matters enormously:<br>
-            - <strong>Supermajority (310+ seats):</strong> Aggressive fiscal expansion, JGB yields spike, yen weakens further. Defense spending acceleration. Constitutional revision becomes possible. Markets would see significant volatility Sunday night/Monday morning.<br>
-            - <strong>Simple majority (233-309):</strong> More measured approach. Coalition partners moderate Takaichi's nationalist instincts. Gradual policy implementation. This is the base case.<br>
-            - <strong>Hung parliament (upset):</strong> Very unlikely but not impossible if youth turnout craters due to exam conflicts. Would create policy paralysis and yen strength.<br><br>
-            <strong>📈 Trading Implications:</strong> JPY and JGBs will move sharply Sunday night. Nikkei futures on Monday morning will reflect the verdict. Semiconductor names (if Takaichi's industrial policy is seen as supportive) could gap higher. Defense contractors are a clear buy on a supermajority.
+            <strong>🔄 The Great Recalibration:</strong> AI infrastructure spending ($91B CapEx shocks) will separate winners from bubble casualties. Expect hyperscaler capex discipline to become THE narrative by Q2.<br>
+            <strong>🪙 Crypto Winter 2.0:</strong> Bitcoin below production costs signals potential extended bear market. Watch for miner capitulation and institutional exits if $60K breaks.<br>
+            <strong>🇯🇵 Japan's Chip Renaissance:</strong> TSMC 3nm + Rapidus 2nm = Japan as third global semiconductor pillar by 2027. Defense and economic security driving policy.<br>
+            <strong>🇮🇷 Iran Endgame:</strong> 2026 is decision year — either a negotiated deal or military confrontation. No more "strategic patience."<br>
+            <strong>🏠 Rate Cut Disappointment:</strong> Central banks will cut less than markets expect. Sticky services inflation + resilient labor = higher-for-longer reality sets in.
           </p>
         </article>
 
       </div>
     </section>
 
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-    <!-- ⚡ BOTTOM LINE -->
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!-- BOTTOM LINE -->
     <section class="section" id="bottomline">
-      <div class="bottom-line">
+      <article class="bottom-line fade-in">
         <div class="section-header">
           <div class="section-icon bottom">⚡</div>
-          <h2 class="section-title">Bottom Line — Afternoon Edition</h2>
+          <h2 class="section-title bottom">Bottom Line</h2>
         </div>
-        <p>Japan's chip renaissance is accelerating: TSMC commits to advanced AI chips at its second Japan fab, Sony raises profit forecasts on sensor demand, and Rapidus hits $1B with IBM reportedly joining. The semiconductor supply chain is diversifying away from Taiwan in real-time. Meanwhile, the nuclear age enters uncharted territory as New START expires with no replacement — the world's two largest arsenals now have no limits. US-Iran talks Friday in Oman will determine whether yesterday's drone shootdown was an escalation or a catalyst for diplomacy. Alphabet's $91B capex shock proves the AI infrastructure build is only accelerating — bad for Alphabet shareholders questioning returns, great for Nvidia and Broadcom selling them the shovels. And Sunday, Japan votes on its most consequential election in a decade. Takaichi's youth surge, defense buildup, and fiscal expansion plans will reshape the world's third-largest economy. In 72 hours, the geopolitical map could look very different.</p>
+        <p>Markets are repricing risk — crypto's crash below production costs, silver's margin-call cascade, and Google's CapEx shock all signal the easy-money AI euphoria phase is ending. The new regime rewards discipline over hype. Japan is quietly winning the semiconductor race (TSMC 3nm, Rapidus $1B+, Sony chips) while the West focuses on geopolitics. Watch Friday's US-Iran Oman talks for the week's biggest binary outcome — success unlocks risk-on, failure means escalation. Japan's Sunday election is a foregone conclusion (Takaichi wins), but the margin determines how aggressively she can pursue her nationalist-economic agenda. Health Score dropped to 58 (Yellow Zone) on elevated volatility and geopolitical risk — stay defensive until clarity emerges on Iran and Fed path.</p>
         <div class="card-sources">
+          <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp;
           <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp;
-          <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC News <span class="src-arrow">↗</span></a> &nbsp;
-          <a class="source-link" href="https://www.aljazeera.com/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a>
+          <a class="source-link" href="https://www.coindesk.com/" target="_blank" rel="noopener">CoinDesk <span class="src-arrow">↗</span></a>
         </div>
-      </div>
+      </article>
     </section>
 
   </main>
 
   <footer class="footer">
-    Generated by Sanbot · Sources: Nikkei Asia, Yahoo Finance, BBC, CNN, Al Jazeera, SCMP, DW, Guardian · Data as of Feb 5, 2026 3:00 PM JST · Not financial advice
+    <p>CEO Daily Briefing · Updated Feb 5, 2026 7:00 AM JST<br>
+    Data from Yahoo Finance, Reuters, Bloomberg, Nikkei, BBC, CoinDesk, OilPrice.com<br>
+    <em>This briefing is for informational purposes only. Not investment advice.</em></p>
   </footer>
 
   <script>
-    // Health gauge needle
-    document.addEventListener('DOMContentLoaded', () => {
-      const score = 64;
+    // Animate gauge needle
+    document.addEventListener('DOMContentLoaded', function() {
+      const score = 58;
       const angle = -90 + (score / 100) * 180;
-      const needle = document.getElementById('gaugeNeedle');
-      if (needle) {
-        setTimeout(() => { needle.style.transform = `rotate(${angle}deg)`; }, 300);
-      }
+      document.getElementById('gaugeNeedle').style.transform = `rotate(${angle}deg)`;
+    });
+
+    // Methodology toggle
+    document.querySelectorAll('.methodology-toggle').forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const arrow = this.querySelector('.arrow');
+        const content = this.nextElementSibling;
+        arrow.style.transform = content.classList.contains('open') ? 'rotate(0deg)' : 'rotate(90deg)';
+      });
     });
   </script>
 
