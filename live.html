@@ -7,113 +7,222 @@
   <title>Live Markets — CEO Briefing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0f0f0f;
-      --surface: #1a1a1a;
-      --surface-2: #252525;
-      --text: #ffffff;
-      --text-secondary: #a0a0a0;
-      --text-muted: #666;
-      --border: #333;
-      --green: #22c55e;
-      --red: #ef4444;
-      --yellow: #eab308;
-      --orange: #f97316;
-      --blue: #3b82f6;
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e8e5e1;
+      --accent-market: #0d6e4f;
+      --accent-geo: #1e3a5f;
+      --accent-tech: #6c3ea0;
+      --accent-japan: #c23b22;
+      --accent-predict: #b45309;
       --serif: 'Playfair Display', Georgia, serif;
       --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --shadow: 0 4px 20px rgba(0,0,0,0.4);
-      --radius: 12px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 8px;
+      --green: #16a34a;
+      --red: #dc2626;
+      --yellow: #ca8a04;
+      --orange: #ea580c;
     }
 
-    html { font-size: 16px; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+
     body {
       font-family: var(--sans);
       background: var(--bg);
       color: var(--text);
-      line-height: 1.5;
-      min-height: 100vh;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Zone-based header */
+    /* Zone Header */
     .zone-header {
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1rem;
       text-align: center;
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
-    .zone-header.green { background: var(--green); color: #000; }
-    .zone-header.yellow { background: var(--yellow); color: #000; }
-    .zone-header.orange { background: var(--orange); color: #000; }
-    .zone-header.red { background: var(--red); color: #fff; }
+    .zone-header.green { background: #dcfce7; color: #166534; }
+    .zone-header.yellow { background: #fef9c3; color: #854d0e; }
+    .zone-header.orange { background: #ffedd5; color: #c2410c; }
+    .zone-header.red { background: #fee2e2; color: #991b1b; }
 
     .nav-bar {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 0;
       background: var(--surface);
       border-bottom: 1px solid var(--border);
+      font-family: var(--sans);
       font-size: 0.8rem;
       font-weight: 500;
+      letter-spacing: 0.04em;
     }
+
     .nav-bar a {
       text-decoration: none;
       color: var(--text-muted);
-      padding: 0.75rem 1.25rem;
+      padding: 0.7rem 1.5rem;
       border-bottom: 2px solid transparent;
-      transition: all 0.2s;
+      transition: color 0.2s ease, border-color 0.2s ease;
     }
+
     .nav-bar a.active {
       color: var(--text);
-      border-bottom-color: var(--green);
-    }
-    .nav-bar a:hover:not(.active) { color: var(--text-secondary); }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1.5rem;
+      border-bottom-color: var(--text);
     }
 
-    /* Live indicator */
-    .live-indicator {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem;
+    .nav-bar a:hover:not(.active) {
       color: var(--text-secondary);
-      font-size: 0.75rem;
     }
+
+    .masthead {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+      margin-left: 0.5rem;
+    }
+
     .live-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--green);
+      width: 6px;
+      height: 6px;
+      background: #16a34a;
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
+
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.4; }
     }
 
-    /* Big Score */
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .section-icon.market { background: #e6f5ef; }
+    .section-icon.action { background: #fef3c7; }
+    .section-icon.regime { background: #ede9fe; }
+    .section-icon.history { background: #e0f2fe; }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title.market { color: var(--accent-market); }
+    .section-title.action { color: var(--accent-predict); }
+    .section-title.regime { color: var(--accent-tech); }
+    .section-title.history { color: var(--accent-geo); }
+
+    /* Score Hero */
     .score-hero {
-      text-align: center;
-      padding: 2rem;
       background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
       margin-bottom: 1.5rem;
     }
+
     .score-number {
       font-family: var(--serif);
-      font-size: 6rem;
+      font-size: 5rem;
       font-weight: 800;
       line-height: 1;
     }
@@ -121,121 +230,30 @@
     .score-number.yellow { color: var(--yellow); }
     .score-number.orange { color: var(--orange); }
     .score-number.red { color: var(--red); }
-    
+
     .score-label {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: 600;
       margin-top: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      color: var(--text-secondary);
     }
+
     .score-zone {
       display: inline-block;
-      padding: 0.25rem 0.75rem;
+      padding: 0.35rem 1rem;
       border-radius: 20px;
       font-size: 0.8rem;
       font-weight: 700;
       margin-top: 0.75rem;
-    }
-    .score-zone.green { background: rgba(34,197,94,0.2); color: var(--green); }
-    .score-zone.yellow { background: rgba(234,179,8,0.2); color: var(--yellow); }
-    .score-zone.orange { background: rgba(249,115,22,0.2); color: var(--orange); }
-    .score-zone.red { background: rgba(239,68,68,0.2); color: var(--red); }
-
-    /* Regime Indicator */
-    .regime-section {
-      background: var(--surface);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .regime-title {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-    }
-    .regime-cycle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      padding: 0 1rem;
-    }
-    .regime-cycle::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 1rem;
-      right: 1rem;
-      height: 4px;
-      background: var(--surface-2);
-      border-radius: 2px;
-      z-index: 0;
-    }
-    .regime-phase {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      z-index: 1;
-    }
-    .regime-dot {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--surface-2);
-      border: 3px solid var(--border);
-      transition: all 0.3s;
-    }
-    .regime-dot.active {
-      width: 32px;
-      height: 32px;
-      border-width: 4px;
-    }
-    .regime-dot.expansion { border-color: var(--green); }
-    .regime-dot.expansion.active { background: var(--green); }
-    .regime-dot.slowdown { border-color: var(--yellow); }
-    .regime-dot.slowdown.active { background: var(--yellow); }
-    .regime-dot.contraction { border-color: var(--red); }
-    .regime-dot.contraction.active { background: var(--red); }
-    .regime-dot.recovery { border-color: var(--blue); }
-    .regime-dot.recovery.active { background: var(--blue); }
-    
-    .regime-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-    }
-    .regime-label.active { color: var(--text); }
-
-    .regime-detail {
-      margin-top: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .regime-stat {
-      text-align: center;
-    }
-    .regime-stat-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-    .regime-stat-label {
-      font-size: 0.7rem;
-      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
+    .score-zone.green { background: #dcfce7; color: #166534; }
+    .score-zone.yellow { background: #fef9c3; color: #854d0e; }
+    .score-zone.orange { background: #ffedd5; color: #c2410c; }
+    .score-zone.red { background: #fee2e2; color: #991b1b; }
 
-    /* Delta cards */
+    /* Delta Grid */
     .delta-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -245,12 +263,16 @@
     @media (max-width: 640px) {
       .delta-grid { grid-template-columns: 1fr; }
     }
+
     .delta-card {
       background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.25rem;
       text-align: center;
+      box-shadow: var(--shadow-sm);
     }
+
     .delta-label {
       font-size: 0.7rem;
       font-weight: 600;
@@ -259,34 +281,212 @@
       color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
+
     .delta-value {
+      font-family: var(--serif);
       font-size: 1.75rem;
       font-weight: 800;
     }
     .delta-value.pos { color: var(--green); }
     .delta-value.neg { color: var(--red); }
 
-    /* Indicator sections */
+    /* Regime Indicator */
+    .regime-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .regime-cycle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 0 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .regime-cycle::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 2rem;
+      right: 2rem;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      z-index: 0;
+      transform: translateY(-50%);
+    }
+
+    .regime-phase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 1;
+    }
+
+    .regime-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 3px solid var(--border);
+      transition: all 0.3s;
+    }
+    .regime-dot.active { width: 36px; height: 36px; border-width: 4px; }
+    .regime-dot.expansion { border-color: var(--green); }
+    .regime-dot.expansion.active { background: var(--green); }
+    .regime-dot.slowdown { border-color: var(--yellow); }
+    .regime-dot.slowdown.active { background: var(--yellow); }
+    .regime-dot.contraction { border-color: var(--red); }
+    .regime-dot.contraction.active { background: var(--red); }
+    .regime-dot.recovery { border-color: #3b82f6; }
+    .regime-dot.recovery.active { background: #3b82f6; }
+
+    .regime-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .regime-label.active { color: var(--text); font-weight: 700; }
+
+    .regime-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 640px) {
+      .regime-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .regime-stat {
+      text-align: center;
+    }
+
+    .regime-stat-value {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .regime-stat-label {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 0.2rem;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1rem;
+    }
+
+    .card.featured {
+      border-left: 4px solid;
+      padding-left: 1.5rem;
+    }
+    .card.featured.market { border-left-color: var(--accent-market); }
+    .card.featured.action { border-left-color: var(--accent-predict); }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Action Items */
+    .action-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .action-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: var(--bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .action-tag {
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+    }
+    .action-tag.risk { background: #fee2e2; color: #991b1b; }
+    .action-tag.opportunity { background: #dcfce7; color: #166534; }
+    .action-tag.monitor { background: #f3f4f6; color: #6b7280; }
+    .action-tag.act-now { background: #dc2626; color: #fff; }
+    .action-tag.this-week { background: #fbbf24; color: #78350f; }
+
+    .action-text {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .action-text strong { color: var(--text); }
+
+    /* Indicator Sections */
     .indicator-section {
       background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.25rem;
       margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
     }
+
     .indicator-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
     }
+
     .indicator-title {
       font-size: 0.8rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
+      color: var(--text-secondary);
     }
+
     .indicator-score {
-      font-size: 1.1rem;
+      font-family: var(--serif);
+      font-size: 1.25rem;
       font-weight: 800;
     }
     .indicator-score.pos { color: var(--green); }
@@ -295,20 +495,23 @@
 
     .indicator-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 0.75rem;
     }
+
     .indicator-item {
-      background: var(--surface-2);
+      background: var(--bg);
       border-radius: 8px;
-      padding: 0.75rem;
+      padding: 0.85rem;
       text-align: center;
     }
+
     .ind-value {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text);
     }
+
     .ind-name {
       font-size: 0.65rem;
       color: var(--text-muted);
@@ -316,131 +519,37 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
+
     .ind-spark {
-      height: 20px;
-      margin-top: 0.4rem;
+      height: 24px;
+      margin-top: 0.5rem;
     }
+
     .ind-change {
       font-size: 0.7rem;
       font-weight: 600;
-      margin-top: 0.25rem;
+      margin-top: 0.3rem;
     }
     .ind-change.pos { color: var(--green); }
     .ind-change.neg { color: var(--red); }
 
-    /* Action Items */
-    .action-section {
-      background: var(--surface);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .action-title {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .action-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .action-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      padding: 0.75rem;
-      background: var(--surface-2);
-      border-radius: 8px;
-    }
-    .action-tag {
-      font-size: 0.65rem;
-      font-weight: 700;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .action-tag.risk { background: rgba(239,68,68,0.2); color: var(--red); }
-    .action-tag.opportunity { background: rgba(34,197,94,0.2); color: var(--green); }
-    .action-tag.monitor { background: rgba(100,100,100,0.3); color: var(--text-muted); }
-    .action-tag.act-now { background: var(--red); color: #fff; }
-    .action-tag.this-week { background: var(--yellow); color: #000; }
-    .action-text {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.4;
-    }
-
-    /* Markets tables */
-    .markets-section {
-      background: var(--surface);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .markets-title {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 1rem;
-    }
-    .market-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
-    }
-    .market-table th {
-      text-align: left;
-      padding: 0.5rem;
-      font-size: 0.65rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      border-bottom: 1px solid var(--border);
-    }
-    .market-table td {
-      padding: 0.6rem 0.5rem;
-      border-bottom: 1px solid var(--surface-2);
-    }
-    .market-table tr:last-child td { border-bottom: none; }
-    .market-table .symbol { font-weight: 600; }
-    .market-table .price { font-weight: 600; }
-    .market-table .pos { color: var(--green); }
-    .market-table .neg { color: var(--red); }
-    .market-table .spark { width: 60px; }
-
-    /* Historical Context */
-    .context-section {
-      background: var(--surface);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .context-title {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 1rem;
-    }
+    /* Context Grid */
     .context-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
     }
-    .context-card {
-      background: var(--surface-2);
-      border-radius: 8px;
-      padding: 1rem;
+    @media (max-width: 640px) {
+      .context-grid { grid-template-columns: 1fr; }
     }
+
+    .context-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+
     .context-label {
       font-size: 0.7rem;
       color: var(--text-muted);
@@ -448,22 +557,59 @@
       letter-spacing: 0.05em;
       margin-bottom: 0.5rem;
     }
+
     .context-value {
-      font-size: 1.25rem;
+      font-family: var(--serif);
+      font-size: 1.5rem;
       font-weight: 700;
+      color: var(--text);
     }
+
     .context-sub {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       color: var(--text-secondary);
       margin-top: 0.25rem;
     }
 
+    /* Tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 0.65rem 0.5rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 0.75rem 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table .symbol { font-weight: 600; color: var(--text); }
+    .data-table .price { font-weight: 600; }
+    .data-table .pos { color: var(--green); font-weight: 600; }
+    .data-table .neg { color: var(--red); font-weight: 600; }
+
     /* Footer */
     .footer {
       text-align: center;
-      padding: 2rem;
-      color: var(--text-muted);
+      padding: 2rem 1.5rem 3rem;
       font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -471,7 +617,7 @@
 
   <!-- Zone Header -->
   <div class="zone-header yellow">
-    🟡 YELLOW ZONE — CAUTION — Score: 64/100
+    🟡 YELLOW ZONE — CAUTION — Economic Health Score: 64/100
   </div>
 
   <nav class="nav-bar">
@@ -481,82 +627,95 @@
     <a href="archive.html">Archive</a>
   </nav>
 
-  <div class="container">
-
-    <div class="live-indicator">
-      <span class="live-dot"></span>
-      <span>LIVE · Last updated: <span id="lastUpdate">--</span> · Auto-refresh: 5 min</span>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="overline">Real-Time Market Intelligence <span class="live-badge"><span class="live-dot"></span> LIVE</span></div>
+      <h1>CEO Live Dashboard</h1>
+      <div class="edition-date">Auto-updates every 5 minutes · Last update: <span id="lastUpdate">--</span></div>
+      <div class="divider-bar"></div>
     </div>
+  </header>
 
-    <!-- Big Score -->
-    <div class="score-hero">
-      <div class="score-number yellow" id="mainScore">64</div>
-      <div class="score-label">Economic Health Composite</div>
-      <div class="score-zone yellow">🟡 YELLOW ZONE — CAUTION</div>
-    </div>
+  <main class="container">
 
-    <!-- Delta Cards -->
-    <div class="delta-grid">
-      <div class="delta-card">
-        <div class="delta-label">Daily Change</div>
-        <div class="delta-value pos">+0.8</div>
+    <!-- SCORE HERO -->
+    <section class="section">
+      <div class="score-hero">
+        <div class="score-number yellow">64</div>
+        <div class="score-label">Economic Health Composite</div>
+        <div class="score-zone yellow">🟡 Yellow Zone — Caution</div>
       </div>
-      <div class="delta-card">
-        <div class="delta-label">Weekly Change</div>
-        <div class="delta-value neg">−1.2</div>
-      </div>
-      <div class="delta-card">
-        <div class="delta-label">Monthly Change</div>
-        <div class="delta-value neg">−3.4</div>
-      </div>
-    </div>
 
-    <!-- Regime Indicator -->
-    <div class="regime-section">
-      <div class="regime-title">📊 Economic Regime Indicator</div>
-      <div class="regime-cycle">
-        <div class="regime-phase">
-          <div class="regime-dot expansion"></div>
-          <span class="regime-label">Expansion</span>
+      <div class="delta-grid">
+        <div class="delta-card">
+          <div class="delta-label">Daily Change</div>
+          <div class="delta-value pos">+0.8</div>
         </div>
-        <div class="regime-phase">
-          <div class="regime-dot slowdown active"></div>
-          <span class="regime-label active">Slowdown</span>
+        <div class="delta-card">
+          <div class="delta-label">Weekly Change</div>
+          <div class="delta-value neg">−1.2</div>
         </div>
-        <div class="regime-phase">
-          <div class="regime-dot contraction"></div>
-          <span class="regime-label">Contraction</span>
-        </div>
-        <div class="regime-phase">
-          <div class="regime-dot recovery"></div>
-          <span class="regime-label">Recovery</span>
+        <div class="delta-card">
+          <div class="delta-label">Monthly Change</div>
+          <div class="delta-value neg">−3.4</div>
         </div>
       </div>
-      <div class="regime-detail">
-        <div class="regime-stat">
-          <div class="regime-stat-value" style="color: var(--yellow);">SLOWDOWN</div>
-          <div class="regime-stat-label">Current Regime</div>
-        </div>
-        <div class="regime-stat">
-          <div class="regime-stat-value">+4.2%</div>
-          <div class="regime-stat-label">Avg S&P Return (12mo) in this regime</div>
-        </div>
-      </div>
-      <div class="regime-detail" style="border-top: none; padding-top: 0;">
-        <div class="regime-stat">
-          <div class="regime-stat-value">8.3 mo</div>
-          <div class="regime-stat-label">Avg Duration</div>
-        </div>
-        <div class="regime-stat">
-          <div class="regime-stat-value">3.1 mo</div>
-          <div class="regime-stat-label">Time in Current Regime</div>
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <!-- Action Items -->
-    <div class="action-section">
-      <div class="action-title">⚡ Action Items</div>
+    <!-- REGIME INDICATOR -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon regime">📊</div>
+        <h2 class="section-title regime">Economic Regime Indicator</h2>
+      </div>
+
+      <div class="regime-card">
+        <div class="regime-cycle">
+          <div class="regime-phase">
+            <div class="regime-dot expansion"></div>
+            <span class="regime-label">Expansion</span>
+          </div>
+          <div class="regime-phase">
+            <div class="regime-dot slowdown active"></div>
+            <span class="regime-label active">Slowdown</span>
+          </div>
+          <div class="regime-phase">
+            <div class="regime-dot contraction"></div>
+            <span class="regime-label">Contraction</span>
+          </div>
+          <div class="regime-phase">
+            <div class="regime-dot recovery"></div>
+            <span class="regime-label">Recovery</span>
+          </div>
+        </div>
+        <div class="regime-stats">
+          <div class="regime-stat">
+            <div class="regime-stat-value" style="color: var(--yellow);">SLOWDOWN</div>
+            <div class="regime-stat-label">Current Regime</div>
+          </div>
+          <div class="regime-stat">
+            <div class="regime-stat-value">+4.2%</div>
+            <div class="regime-stat-label">Avg S&P Return (12mo)</div>
+          </div>
+          <div class="regime-stat">
+            <div class="regime-stat-value">8.3 mo</div>
+            <div class="regime-stat-label">Avg Duration</div>
+          </div>
+          <div class="regime-stat">
+            <div class="regime-stat-value">3.1 mo</div>
+            <div class="regime-stat-label">Time in Regime</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTION ITEMS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon action">⚡</div>
+        <h2 class="section-title action">Action Items</h2>
+      </div>
+
       <div class="action-list">
         <div class="action-item">
           <span class="action-tag act-now">Act Now</span>
@@ -576,171 +735,170 @@
         </div>
         <div class="action-item">
           <span class="action-tag monitor">Monitor</span>
-          <span class="action-text"><strong>Indonesia Market Crisis</strong> — Jakarta -14.8% YTD. Contagion risk to EM if billionaire forced selling continues.</span>
+          <span class="action-text"><strong>Indonesia Market Crisis</strong> — Jakarta −14.8% YTD. Contagion risk to EM if billionaire forced selling continues.</span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Indicator Sections -->
-    <div class="indicator-section">
-      <div class="indicator-header">
-        <span class="indicator-title">⚡ Daily Indicators (30%)</span>
-        <span class="indicator-score pos">72</span>
+    <!-- INDICATORS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon market">📈</div>
+        <h2 class="section-title market">Live Indicators</h2>
       </div>
-      <div class="indicator-grid">
-        <div class="indicator-item">
-          <div class="ind-value">6,945</div>
-          <div class="ind-name">S&P 500</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,15 10,12 20,14 30,10 40,8 50,9 60,7"/></svg>
-          <div class="ind-change pos">+0.4%</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">17.7</div>
-          <div class="ind-name">VIX</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,10 10,8 20,12 30,15 40,18 50,16 60,14"/></svg>
-          <div class="ind-change neg">▲ Elevated</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">+0.32%</div>
-          <div class="ind-name">Yield Curve</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,18 10,16 20,14 30,12 40,10 50,9 60,8"/></svg>
-          <div class="ind-change pos">Normalizing</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">1.12%</div>
-          <div class="ind-name">Credit Spread</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,12 10,11 20,10 30,10 40,9 50,9 60,8"/></svg>
-          <div class="ind-change pos">Tight</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">107.8</div>
-          <div class="ind-name">Dollar (DXY)</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#666" stroke-width="2" points="0,10 10,10 20,11 30,10 40,10 50,10 60,10"/></svg>
-          <div class="ind-change" style="color: var(--text-muted);">Stable</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">$5,082</div>
-          <div class="ind-name">Gold</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#eab308" stroke-width="2" points="0,15 10,12 20,10 30,8 40,6 50,5 60,4"/></svg>
-          <div class="ind-change pos">+2.9% Safe Haven</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="indicator-section">
-      <div class="indicator-header">
-        <span class="indicator-title">📅 Weekly Indicators (25%)</span>
-        <span class="indicator-score neutral">65</span>
+      <div class="indicator-section">
+        <div class="indicator-header">
+          <span class="indicator-title">⚡ Daily Indicators (30%)</span>
+          <span class="indicator-score pos">72</span>
+        </div>
+        <div class="indicator-grid">
+          <div class="indicator-item">
+            <div class="ind-value">6,945</div>
+            <div class="ind-name">S&P 500</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,18 10,15 20,17 30,12 40,10 50,11 60,8"/></svg>
+            <div class="ind-change pos">+0.4%</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">17.7</div>
+            <div class="ind-name">VIX</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,12 10,10 20,14 30,18 40,20 50,18 60,16"/></svg>
+            <div class="ind-change neg">▲ Elevated</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">+0.32%</div>
+            <div class="ind-name">Yield Curve</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,20 10,18 20,16 30,14 40,12 50,10 60,9"/></svg>
+            <div class="ind-change pos">Normalizing</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">1.12%</div>
+            <div class="ind-name">Credit Spread</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,14 10,13 20,12 30,12 40,11 50,10 60,10"/></svg>
+            <div class="ind-change pos">Tight</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">$5,082</div>
+            <div class="ind-name">Gold</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#ca8a04" stroke-width="2" points="0,18 10,15 20,12 30,10 40,8 50,6 60,5"/></svg>
+            <div class="ind-change pos">+2.9%</div>
+          </div>
+        </div>
       </div>
-      <div class="indicator-grid">
-        <div class="indicator-item">
-          <div class="ind-value">219K</div>
-          <div class="ind-name">Jobless Claims</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,10 10,11 20,10 30,9 40,10 50,9 60,8"/></svg>
-          <div class="ind-change pos">Low</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">−2.1%</div>
-          <div class="ind-name">Mortgage Apps</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,8 10,10 20,11 30,12 40,13 50,14 60,15"/></svg>
-          <div class="ind-change neg">Declining</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">$3.12</div>
-          <div class="ind-name">Gas Price</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,8 10,10 20,12 30,11 40,10 50,9 60,10"/></svg>
-          <div class="ind-change pos">Easing</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">+1.8%</div>
-          <div class="ind-name">Rail Traffic</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,12 10,11 20,10 30,9 40,8 50,8 60,7"/></svg>
-          <div class="ind-change pos">Growing</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="indicator-section">
-      <div class="indicator-header">
-        <span class="indicator-title">📊 Monthly Indicators (25%)</span>
-        <span class="indicator-score neg">62</span>
-      </div>
-      <div class="indicator-grid">
-        <div class="indicator-item">
-          <div class="ind-value">4.4%</div>
-          <div class="ind-name">GDP Growth</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,15 10,12 20,10 30,8 40,6 50,5 60,4"/></svg>
-          <div class="ind-change pos">Strong</div>
+      <div class="indicator-section">
+        <div class="indicator-header">
+          <span class="indicator-title">📅 Weekly Indicators (25%)</span>
+          <span class="indicator-score neutral">65</span>
         </div>
-        <div class="indicator-item">
-          <div class="ind-value">4.4%</div>
-          <div class="ind-name">Unemployment</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#666" stroke-width="2" points="0,10 10,10 20,10 30,10 40,10 50,10 60,10"/></svg>
-          <div class="ind-change" style="color: var(--text-muted);">Stable</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">2.7%</div>
-          <div class="ind-name">CPI Inflation</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#eab308" stroke-width="2" points="0,5 10,7 20,10 30,12 40,11 50,10 60,10"/></svg>
-          <div class="ind-change neg">Above Target</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">56.4</div>
-          <div class="ind-name">Consumer Sent.</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,5 10,8 20,10 30,12 40,14 50,15 60,16"/></svg>
-          <div class="ind-change neg">⚠️ Weak</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">51.9</div>
-          <div class="ind-name">Mfg PMI</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#666" stroke-width="2" points="0,12 10,11 20,10 30,10 40,10 50,10 60,10"/></svg>
-          <div class="ind-change" style="color: var(--text-muted);">Barely Expanding</div>
+        <div class="indicator-grid">
+          <div class="indicator-item">
+            <div class="ind-value">219K</div>
+            <div class="ind-name">Jobless Claims</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,12 10,13 20,12 30,11 40,12 50,11 60,10"/></svg>
+            <div class="ind-change pos">Low</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">−2.1%</div>
+            <div class="ind-name">Mortgage Apps</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,10 10,12 20,13 30,14 40,15 50,16 60,17"/></svg>
+            <div class="ind-change neg">Declining</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">$3.12</div>
+            <div class="ind-name">Gas Price</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,10 10,12 20,14 30,13 40,12 50,11 60,12"/></svg>
+            <div class="ind-change pos">Easing</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">+1.8%</div>
+            <div class="ind-name">Rail Traffic</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,14 10,13 20,12 30,11 40,10 50,10 60,9"/></svg>
+            <div class="ind-change pos">Growing</div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="indicator-section">
-      <div class="indicator-header">
-        <span class="indicator-title">🌍 Geopolitical Risk (20%)</span>
-        <span class="indicator-score neg">52</span>
+      <div class="indicator-section">
+        <div class="indicator-header">
+          <span class="indicator-title">📊 Monthly Indicators (25%)</span>
+          <span class="indicator-score neg">62</span>
+        </div>
+        <div class="indicator-grid">
+          <div class="indicator-item">
+            <div class="ind-value">4.4%</div>
+            <div class="ind-name">GDP Growth</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,18 10,15 20,12 30,10 40,8 50,7 60,5"/></svg>
+            <div class="ind-change pos">Strong</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">4.4%</div>
+            <div class="ind-name">Unemployment</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#888" stroke-width="2" points="0,12 10,12 20,12 30,12 40,12 50,12 60,12"/></svg>
+            <div class="ind-change" style="color: var(--text-muted);">Stable</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">2.7%</div>
+            <div class="ind-name">CPI Inflation</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#ca8a04" stroke-width="2" points="0,6 10,9 20,12 30,14 40,13 50,12 60,12"/></svg>
+            <div class="ind-change neg">Above Target</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">56.4</div>
+            <div class="ind-name">Consumer Sent.</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,6 10,10 20,12 30,14 40,16 50,17 60,18"/></svg>
+            <div class="ind-change neg">⚠️ Weak</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">51.9</div>
+            <div class="ind-name">Mfg PMI</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#888" stroke-width="2" points="0,14 10,13 20,12 30,12 40,12 50,12 60,12"/></svg>
+            <div class="ind-change" style="color: var(--text-muted);">Barely Expanding</div>
+          </div>
+        </div>
       </div>
-      <div class="indicator-grid">
-        <div class="indicator-item">
-          <div class="ind-value">160</div>
-          <div class="ind-name">GPR Index</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,15 10,12 20,10 30,8 40,9 50,8 60,7"/></svg>
-          <div class="ind-change neg">Elevated</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">55</div>
-          <div class="ind-name">Oil Supply Risk</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#f97316" stroke-width="2" points="0,12 10,10 20,8 30,10 40,8 50,7 60,8"/></svg>
-          <div class="ind-change neg">⚠️ Iran/Hormuz</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">50</div>
-          <div class="ind-name">US-China</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#666" stroke-width="2" points="0,10 10,10 20,10 30,10 40,10 50,10 60,10"/></svg>
-          <div class="ind-change" style="color: var(--text-muted);">Stable Tension</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">140</div>
-          <div class="ind-name">Policy Uncert.</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#666" stroke-width="2" points="0,10 10,11 20,10 30,10 40,10 50,10 60,10"/></svg>
-          <div class="ind-change" style="color: var(--text-muted);">Moderate</div>
-        </div>
-        <div class="indicator-item">
-          <div class="ind-value">50</div>
-          <div class="ind-name">Active Conflicts</div>
-          <svg class="ind-spark" viewBox="0 0 60 20"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,12 10,10 20,8 30,8 40,8 50,8 60,8"/></svg>
-          <div class="ind-change neg">Ukraine/Gaza</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Historical Context -->
-    <div class="context-section">
-      <div class="context-title">📈 Historical Context</div>
+      <div class="indicator-section">
+        <div class="indicator-header">
+          <span class="indicator-title">🌍 Geopolitical Risk (20%)</span>
+          <span class="indicator-score neg">52</span>
+        </div>
+        <div class="indicator-grid">
+          <div class="indicator-item">
+            <div class="ind-value">160</div>
+            <div class="ind-name">GPR Index</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,18 10,15 20,12 30,10 40,11 50,10 60,8"/></svg>
+            <div class="ind-change neg">Elevated</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">55</div>
+            <div class="ind-name">Oil Supply Risk</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#ea580c" stroke-width="2" points="0,14 10,12 20,10 30,12 40,10 50,9 60,10"/></svg>
+            <div class="ind-change neg">⚠️ Iran/Hormuz</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">50</div>
+            <div class="ind-name">US-China</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#888" stroke-width="2" points="0,12 10,12 20,12 30,12 40,12 50,12 60,12"/></svg>
+            <div class="ind-change" style="color: var(--text-muted);">Stable Tension</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">50</div>
+            <div class="ind-name">Active Conflicts</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,14 10,12 20,10 30,10 40,10 50,10 60,10"/></svg>
+            <div class="ind-change neg">Ukraine/Gaza</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORICAL CONTEXT -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon history">📜</div>
+        <h2 class="section-title history">Historical Context</h2>
+      </div>
+
       <div class="context-grid">
         <div class="context-card">
           <div class="context-label">This Day Last Year</div>
@@ -753,134 +911,111 @@
           <div class="context-sub">Avg S&P 500 return over next 12 months</div>
         </div>
         <div class="context-card">
-          <div class="context-label">Similar Periods</div>
+          <div class="context-label">Similar Period</div>
           <div class="context-value">Q2 2019</div>
           <div class="context-sub">Trade war uncertainty, strong labor market</div>
         </div>
         <div class="context-card">
-          <div class="context-label">Risk of RED in 90 days</div>
+          <div class="context-label">Risk of RED in 90 Days</div>
           <div class="context-value">18%</div>
-          <div class="context-sub">Based on current trajectory and indicators</div>
+          <div class="context-sub">Based on current trajectory</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Markets -->
-    <div class="markets-section">
-      <div class="markets-title">📊 Global Indices</div>
-      <table class="market-table">
-        <thead>
-          <tr>
-            <th>Index</th>
-            <th>Price</th>
-            <th>Day</th>
-            <th>Week</th>
-            <th>YTD</th>
-            <th class="spark">7D</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="symbol">🇺🇸 S&P 500</td>
-            <td class="price">6,945</td>
-            <td class="pos">+0.40%</td>
-            <td class="neg">−0.5%</td>
-            <td class="pos">+1.5%</td>
-            <td><svg viewBox="0 0 60 20" width="60" height="20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,15 10,12 20,14 30,10 40,8 50,9 60,7"/></svg></td>
-          </tr>
-          <tr>
-            <td class="symbol">🇺🇸 Nasdaq</td>
-            <td class="price">23,395</td>
-            <td class="pos">+0.60%</td>
-            <td class="neg">−2.2%</td>
-            <td class="pos">+0.8%</td>
-            <td><svg viewBox="0 0 60 20" width="60" height="20"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,8 10,10 20,12 30,14 40,12 50,10 60,9"/></svg></td>
-          </tr>
-          <tr>
-            <td class="symbol">🇯🇵 Nikkei</td>
-            <td class="price">54,293</td>
-            <td class="neg">−0.78%</td>
-            <td class="pos">+1.5%</td>
-            <td class="pos">+8.0%</td>
-            <td><svg viewBox="0 0 60 20" width="60" height="20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,14 10,12 20,10 30,8 40,9 50,10 60,11"/></svg></td>
-          </tr>
-          <tr>
-            <td class="symbol">🇮🇩 Jakarta</td>
-            <td class="price">6,245</td>
-            <td class="neg">−2.3%</td>
-            <td class="neg">−8.5%</td>
-            <td class="neg">−14.8%</td>
-            <td><svg viewBox="0 0 60 20" width="60" height="20"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,5 10,8 20,10 30,12 40,14 50,16 60,18"/></svg></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- MARKETS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon market">💹</div>
+        <h2 class="section-title market">Global Markets</h2>
+      </div>
 
-    <div class="markets-section">
-      <div class="markets-title">🛢️ Commodities & Crypto</div>
-      <table class="market-table">
-        <thead>
-          <tr>
-            <th>Asset</th>
-            <th>Price</th>
-            <th>Day</th>
-            <th>Week</th>
-            <th>YTD</th>
-            <th class="spark">7D</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="symbol">🥇 Gold</td>
-            <td class="price">$5,082</td>
-            <td class="pos">+0.07%</td>
-            <td class="neg">−6.0%</td>
-            <td class="pos">+17.7%</td>
-            <td><svg viewBox="0 0 60 20" width="60" height="20"><polyline fill="none" stroke="#eab308" stroke-width="2" points="0,15 10,12 20,10 30,8 40,6 50,5 60,4"/></svg></td>
-          </tr>
-          <tr>
-            <td class="symbol">🛢️ WTI Oil</td>
-            <td class="price">$63.52</td>
-            <td class="pos">+0.11%</td>
-            <td class="pos">+0.7%</td>
-            <td class="pos">+10.7%</td>
-            <td><svg viewBox="0 0 60 20" width="60" height="20"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,12 10,11 20,10 30,10 40,10 50,10 60,10"/></svg></td>
-          </tr>
-          <tr>
-            <td class="symbol">🪙 Bitcoin</td>
-            <td class="price">$76,150</td>
-            <td class="pos">+0.20%</td>
-            <td class="neg">−5.2%</td>
-            <td class="neg">−12.7%</td>
-            <td><svg viewBox="0 0 60 20" width="60" height="20"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,6 10,8 20,10 30,12 40,11 50,10 60,10"/></svg></td>
-          </tr>
-          <tr>
-            <td class="symbol">💴 USD/JPY</td>
-            <td class="price">156.65</td>
-            <td style="color: var(--text-muted);">0.00%</td>
-            <td class="neg">−0.1%</td>
-            <td class="neg">−0.3%</td>
-            <td><svg viewBox="0 0 60 20" width="60" height="20"><polyline fill="none" stroke="#666" stroke-width="2" points="0,10 10,10 20,10 30,10 40,10 50,10 60,10"/></svg></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Price</th>
+              <th>Day</th>
+              <th>Week</th>
+              <th>YTD</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="symbol">🇺🇸 S&P 500</td>
+              <td class="price">6,945</td>
+              <td class="pos">+0.40%</td>
+              <td class="neg">−0.5%</td>
+              <td class="pos">+1.5%</td>
+            </tr>
+            <tr>
+              <td class="symbol">🇺🇸 Nasdaq</td>
+              <td class="price">23,395</td>
+              <td class="pos">+0.60%</td>
+              <td class="neg">−2.2%</td>
+              <td class="pos">+0.8%</td>
+            </tr>
+            <tr>
+              <td class="symbol">🇯🇵 Nikkei</td>
+              <td class="price">54,293</td>
+              <td class="neg">−0.78%</td>
+              <td class="pos">+1.5%</td>
+              <td class="pos">+8.0%</td>
+            </tr>
+            <tr>
+              <td class="symbol">🇮🇩 Jakarta</td>
+              <td class="price">6,245</td>
+              <td class="neg">−2.3%</td>
+              <td class="neg">−8.5%</td>
+              <td class="neg">−14.8%</td>
+            </tr>
+            <tr>
+              <td class="symbol">🥇 Gold</td>
+              <td class="price">$5,082</td>
+              <td class="pos">+0.07%</td>
+              <td class="neg">−6.0%</td>
+              <td class="pos">+17.7%</td>
+            </tr>
+            <tr>
+              <td class="symbol">🛢️ WTI Oil</td>
+              <td class="price">$63.52</td>
+              <td class="pos">+0.11%</td>
+              <td class="pos">+0.7%</td>
+              <td class="pos">+10.7%</td>
+            </tr>
+            <tr>
+              <td class="symbol">🪙 Bitcoin</td>
+              <td class="price">$76,150</td>
+              <td class="pos">+0.20%</td>
+              <td class="neg">−5.2%</td>
+              <td class="neg">−12.7%</td>
+            </tr>
+            <tr>
+              <td class="symbol">💴 USD/JPY</td>
+              <td class="price">156.65</td>
+              <td style="color: var(--text-muted);">0.00%</td>
+              <td class="neg">−0.1%</td>
+              <td class="neg">−0.3%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-  </div>
+  </main>
 
   <footer class="footer">
-    <p>Live Markets Dashboard · Auto-refreshes every 5 minutes</p>
+    <p>CEO Live Dashboard · Auto-refreshes every 5 minutes</p>
     <p>Data sources: Yahoo Finance, FRED, BLS, GPR Index</p>
   </footer>
 
   <script>
-    // Update timestamp
     function updateTime() {
       const now = new Date();
       document.getElementById('lastUpdate').textContent = now.toLocaleTimeString('en-US', { 
         hour: '2-digit', 
         minute: '2-digit',
-        second: '2-digit',
         hour12: false 
       }) + ' JST';
     }
