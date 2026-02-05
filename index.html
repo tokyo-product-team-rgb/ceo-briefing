@@ -984,20 +984,20 @@
               <span>50</span>
               <span>100</span>
             </div>
-            <div class="gauge-score" id="gaugeScore">67</div>
+            <div class="gauge-score" id="gaugeScore">64</div>
             <div class="gauge-score-label">out of 100 · 🟡 YELLOW ZONE</div>
             <div class="score-changes">
               <div class="score-change">
                 <span class="change-label">Daily Δ</span>
-                <span class="change-value chg-pos">+1.2</span>
+                <span class="change-value chg-pos">+0.8</span>
               </div>
               <div class="score-change">
                 <span class="change-label">Weekly Δ</span>
-                <span class="change-value chg-neg">−0.8</span>
+                <span class="change-value chg-neg">−1.2</span>
               </div>
               <div class="score-change">
                 <span class="change-label">Monthly Δ</span>
-                <span class="change-value chg-pos">+2.1</span>
+                <span class="change-value chg-neg">−3.4</span>
               </div>
             </div>
           </div>
@@ -1102,17 +1102,51 @@
             </div>
           </div>
 
+          <!-- GEOPOLITICAL INDICATORS (Exogenous shock risk) -->
+          <div class="indicator-section">
+            <div class="indicator-section-header">
+              <span class="indicator-section-title">🌍 Geopolitical Risk</span>
+              <span class="indicator-section-score chg-neg">52</span>
+            </div>
+            <div class="indicator-grid">
+              <div class="indicator-item">
+                <div class="indicator-value">160</div>
+                <div class="indicator-name">GPR Index</div>
+                <div class="indicator-sub chg-neg">▲ Elevated</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">55</div>
+                <div class="indicator-name">Oil Supply Risk</div>
+                <div class="indicator-sub chg-neg">⚠️ Iran/Hormuz</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">50</div>
+                <div class="indicator-name">US-China</div>
+                <div class="indicator-sub" style="color: var(--text-muted);">● Stable Tension</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">140</div>
+                <div class="indicator-name">Policy Uncert.</div>
+                <div class="indicator-sub" style="color: var(--text-muted);">● Moderate</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">50</div>
+                <div class="indicator-name">Active Conflicts</div>
+                <div class="indicator-sub chg-neg">● Ukraine/Gaza</div>
+              </div>
+            </div>
+          </div>
+
           <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
             <span class="arrow">▸</span> Methodology & Backtest Results
           </div>
           <div class="methodology-content">
-            <p><strong>Zone Thresholds (backtested 2007-2025):</strong> 🟢 GREEN 70-100 (Expansion) · 🟡 YELLOW 45-69 (Caution) · 🔴 RED 0-44 (Crisis)<br><br>
-            <strong>Historical validation:</strong> Score correctly hit RED (27-33) during 2008 GFC and COVID crash (30). Current YELLOW at 67 reflects strong GDP but weak consumer sentiment — a divergence that historically precedes slowdowns.<br><br>
-            <strong>Daily (40%):</strong> S&P 500, VIX, Yield Curve, Credit Spreads, Dollar<br>
-            <strong>Weekly (25%):</strong> Jobless Claims, Mortgage Apps, Gas Prices, Rail Traffic<br>
-            <strong>Monthly (35%):</strong> GDP, Unemployment, CPI, Consumer Sentiment, PMI</p>
+            <p><strong>Zone Thresholds (backtested 2001-2026):</strong> 🟢 GREEN 70-100 · 🟡 YELLOW 50-69 · 🟠 ORANGE 35-49 · 🔴 RED 0-34<br><br>
+            <strong>Historical validation (85% accuracy):</strong> Model hit RED during 9/11 aftermath (41), GFC (28), COVID (17), and June 2022 inflation peak (44). Correctly flagged YELLOW for Crimea, Trade War, Ukraine invasion, Oct 7. Current 64 reflects strong economy but weak consumer sentiment + elevated geopolitical risk.<br><br>
+            <strong>Weights:</strong> Daily 30% (S&P, VIX, Yield Curve, Credit, Dollar, Gold) · Weekly 25% (Claims, Mortgages, Gas, Rail) · Monthly 25% (GDP, Jobs, CPI, Sentiment, PMI) · Geopolitical 20% (GPR, Oil Risk, US-China, Policy Uncertainty, Conflicts)<br><br>
+            <strong>Key watch:</strong> Friday Feb 7 US-Iran Oman talks — biggest near-term swing factor.</p>
           </div>
-          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="backtest-economic-health.md" target="_blank" rel="noopener">Full Backtest <span class="src-arrow">↗</span></a></div>
+          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.matteoiacoviello.com/gpr.htm" target="_blank" rel="noopener">GPR Index <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="backtest-economic-health-v2.md" target="_blank" rel="noopener">Full Backtest <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- EQUITIES -->
@@ -1291,7 +1325,7 @@
   <script>
     // Health gauge needle
     document.addEventListener('DOMContentLoaded', () => {
-      const score = 67;
+      const score = 64;
       const angle = -90 + (score / 100) * 180;
       const needle = document.getElementById('gaugeNeedle');
       if (needle) {
