@@ -258,6 +258,52 @@
       transform: translateY(-1px);
     }
 
+    /* Collapsible cards - tap to reveal */
+    .card.collapsible {
+      cursor: pointer;
+    }
+    .card.collapsible .card-body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, margin 0.2s ease;
+      margin-bottom: 0;
+    }
+    .card.collapsible.expanded .card-body {
+      max-height: 500px;
+      opacity: 1;
+      margin-bottom: 0.4rem;
+    }
+    .card.collapsible .card-headline {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .card.collapsible .card-headline::after {
+      content: '▸';
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .card.collapsible.expanded .card-headline::after {
+      transform: rotate(90deg);
+    }
+    .card.collapsible .tap-hint {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      margin-top: 0.4rem;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .tap-hint {
+      opacity: 0;
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
     .card-headline {
       font-family: var(--serif);
       font-size: 1.25rem;
@@ -954,49 +1000,55 @@
       <div class="cards">
 
         <!-- 1. TSMC -->
-        <article class="card featured japan fade-in">
+        <article class="card featured japan fade-in collapsible">
           <span class="card-tag japan">Semiconductors · Breaking</span>
           <h3 class="card-headline">TSMC Confirms 3nm Chips at Second Japan Plant — Major Upgrade from Initial Plans</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body">TSMC CEO C.C. Wei met PM Takaichi today and confirmed the company will produce <strong>3-nanometer advanced chips</strong> at its second Kumamoto fab — a significant upgrade from the initially planned 6nm process. <strong>The decision was driven by</strong> surging global AI chip demand and Japan's strategic importance as a geopolitically stable production base amid US-China tech decoupling. PM Takaichi welcomed the move, pledging close cooperation. <strong>Why it matters:</strong> Combined with Rapidus topping $1B in private investment (with IBM set to join), Japan is rapidly cementing its position as the third pillar of global advanced semiconductor manufacturing.</p>
           <div class="card-sources"><a class="source-link" href="https://english.kyodonews.net/articles/-/69897" target="_blank" rel="noopener">Kyodo News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- 2. Election -->
-        <article class="card featured japan fade-in">
+        <article class="card featured japan fade-in collapsible">
           <span class="card-tag japan">Politics · Election</span>
           <h3 class="card-headline">Sunday Election: Takaichi's Youth Surge Meets "Different Kind of PM" Hopes</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body">Japan heads to the polls Sunday with PM Sanae Takaichi seeking a mandate for her nationalist-economic agenda. <strong>The unexpected development:</strong> Takaichi has sparked genuine hope among Japan's disaffected youth, with her "different kind of PM" image resonating with voters tired of the gerontocratic LDP establishment. Nearly 40% of candidates support foreign worker curbs — <strong>driven by</strong> rising concerns over wage competition and cultural anxieties amid Japan's largest-ever immigration wave. <strong>Key watch:</strong> Her defense spending plans are under sharp focus amid Trump's Taiwan pressure on allies.</p>
           <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/japan-election/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- 3. Xi Ripples -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag japan">Geopolitics · China</span>
           <h3 class="card-headline">Xi's Power Struggle Sends Ripples Through Japan's Election</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body">Xi Jinping's purge of Gen. Zhang Youxia — a rare challenge to China's military leadership — is coinciding with Takaichi's election campaign in ways that benefit her nationalist platform. <strong>The connection:</strong> China's internal instability validates Takaichi's calls for increased defense spending and closer US ties, while also raising concerns about unpredictable Chinese behavior in the Taiwan Strait. Meanwhile, Xi told Trump to be "prudent" about Taiwan arms sales in their first call since November — <strong>signaling</strong> Beijing's unease with the deepening US-Taiwan military relationship.</p>
           <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/editor-s-picks/china-up-close/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/articles/c62wpjd3j1zo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- 4. Toyota Hybrids -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag japan">Automotive</span>
           <h3 class="card-headline">Toyota Plans 30% Global Hybrid Production Increase</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body">Toyota announced plans to boost global hybrid vehicle production by 30%. <strong>The expansion is motivated by</strong> the company's vindicated bet that hybrids would bridge the EV transition — hybrid demand is surging in markets where charging infrastructure lags (US, Southeast Asia, India), while pure EV adoption slows in Europe amid range anxiety and grid concerns. <strong>Strategic angle:</strong> As competitors scramble to pivot from all-in EV strategies, Toyota's hybrid dominance positions it to capture market share during the "great recalibration" of the EV transition timeline.</p>
           <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/automobiles/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- 5. Sony -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag japan">Tech · Earnings</span>
           <h3 class="card-headline">Sony Lifts Profit Outlook — Chip Demand and IP Gains Drive Upgrade</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body">Sony raised its full-year profit outlook, <strong>propelled by</strong> stronger-than-expected demand for image sensors (used in AI-enabled smartphones and vehicles) and gains from intellectual property monetization. As the AI boom spreads beyond chips to edge devices that capture data, Sony's sensor division — which dominates high-end smartphone cameras — is emerging as an unexpected AI beneficiary.</p>
           <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/media-entertainment/sony-lifts-full-year-profit-outlook-on-chip-demand-ip-gain" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- 6. Life Insurance -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag japan">Finance · Demographics</span>
           <h3 class="card-headline">Life Insurers Plan for "108-Year-Olds" — Longevity Breaks Product Design</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body">Major Japanese life insurers are reviewing policies for customers who may exceed 108 years old — the age ceiling built into many legacy products. <strong>The review was forced by</strong> Japan's world-leading longevity: current centenarians (90,000+) were born when life expectancy was 45 years, and the math for perpetual premium payments is breaking down. <strong>Implication:</strong> A symbol of how Japan's "super-aged society" is forcing industries to rethink fundamental assumptions about the human lifespan.</p>
           <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/article/DGXZQOUB026KT0S6A200C2000000/" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a></div>
         </article>
@@ -1013,49 +1065,55 @@
       <div class="cards">
 
         <!-- NORTH AMERICA -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag geo">🇺🇸 North America</span>
           <h3 class="card-headline">Google's $91B CapEx Shock · Trump Critical Minerals Reserve · ICE Tensions</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body"><strong>1. Alphabet earnings spooked markets</strong> when CapEx guidance hit $91.45B — 3x analyst estimates — fueling fears of an AI infrastructure bubble where hyperscalers chase compute regardless of returns. Revenue was strong but ignored. <strong>2. Trump unveiled a $12B critical minerals stockpile</strong> to counter China's dominance, funded by tariff revenues and focused on rare earths essential for EVs and defense. <strong>3. ICE tensions escalated</strong> in Minneapolis after deadly incidents; a 10-year-old Minnesota girl was released after a month in detention, intensifying the political firestorm around immigration enforcement.</p>
           <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- EUROPE -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag geo">🇪🇺 Europe</span>
           <h3 class="card-headline">Ukraine-Russia POW Swap · Starmer's Mandelson Crisis · BOE Holds</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body"><strong>1. "Productive" US-led talks in Abu Dhabi</strong> yielded a Ukraine-Russia prisoner exchange deal (314 POWs), the first tangible progress since Trump's envoy took over negotiations. <strong>The breakthrough came because</strong> both sides need to show constituents something amid war fatigue. <strong>2. PM Starmer apologized to Epstein victims</strong> for appointing Peter Mandelson as US ambassador, admitting he "believed his lies" about the Epstein relationship. The scandal is roiling British politics with calls to withdraw the nomination. <strong>3. BOE kept rates at 3.75%</strong> but the 5-4 split (4 wanted cuts) signals UK disinflation is running ahead of expectations.</p>
           <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/live/czx3lq460n6t" target="_blank" rel="noopener">BBC Live <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.dw.com/" target="_blank" rel="noopener">DW <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- ASIA EX-JAPAN -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag geo">🌏 Asia ex-Japan</span>
           <h3 class="card-headline">Xi Warns Trump on Taiwan · Thailand Election Sunday · Pakistan Balochistan Attacks</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body"><strong>1. Xi told Trump to be "prudent"</strong> about Taiwan arms sales in their first call since November. Taiwan's President Lai insisted ties with Washington are "rock solid," but the call stirred unease in Taipei about potential dealmaking over their heads. <strong>2. Thailand heads to polls Sunday</strong> with the opposition People's Party leading in polls — the same movement whose predecessor was dissolved by the courts. A win would test the military-royalist establishment's tolerance. <strong>3. Pakistan's Balochistan violence surged</strong> with 250+ killed in coordinated insurgent attacks; Islamabad blames "India-backed elements" and rules out negotiations.</p>
           <div class="card-sources"><a class="source-link" href="https://www.scmp.com/" target="_blank" rel="noopener">SCMP <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- MIDDLE EAST & AFRICA -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag geo">🌍 Middle East & Africa</span>
           <h3 class="card-headline">US-Iran Drone Incident · Gaza Strikes Continue · Nigeria Massacre 160+</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body"><strong>1. US shot down an Iranian drone</strong> approaching an aircraft carrier in the Arabian Sea — the latest escalation before Friday's critical Oman talks. Iran conditionally agreed to negotiate but warned of "regional war" if attacked. Trump warned Khamenei to be "very worried." <strong>2. Israeli strikes killed 20+ in Gaza</strong> after a soldier was wounded by gunfire, despite the ceasefire. Rafah crossing reopened but only a handful of patients have crossed. <strong>3. Gunmen killed 160+ in Nigeria's Kwara and Katsina states</strong> — victims were rounded up, bound, and shot in one of the worst civilian massacres this year.</p>
           <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/world/middle_east" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- LATIN AMERICA -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag geo">🌎 Latin America</span>
           <h3 class="card-headline">Venezuela's Saab Detained · Costa Rica Elects Crime-Fighter · Panama-China Canal Row</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body"><strong>1. Alex Saab, Maduro's alleged financial fixer, was reportedly detained</strong> in Caracas by FBI and Venezuelan intelligence — along with billionaire media mogul Raúl Gorrín — signaling the post-Maduro cleanup is accelerating. <strong>2. Laura Fernández won Costa Rica's presidency</strong> in the first round on a tough-on-crime platform, <strong>propelled by</strong> voter fears over rising organized crime and cartel influence. <strong>3. Panama's president pushed back against China</strong> after Beijing threatened retaliation over canal port ownership disputes — insisting Panama has an "independent court system" and won't bow to pressure.</p>
           <div class="card-sources"><a class="source-link" href="https://www.theguardian.com/world/americas" target="_blank" rel="noopener">Guardian <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/world/latin_america" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- OCEANIA -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag geo">🌏 Oceania</span>
           <h3 class="card-headline">Australia AUKUS Doubts · Teen Hero Saves Family · Child Abuse Arrest</h3>
+          <div class="tap-hint">Tap to read more</div>
           <p class="card-body"><strong>1. US congressional report explored "not delivering" AUKUS subs to Australia</strong> at all — raising alarm bells in Canberra about the deal's durability. <strong>The concern stems from</strong> US submarine production capacity constraints and Trump-era allies-pay-their-way rhetoric. <strong>2. A 13-year-old boy swam 4 hours to shore</strong> to save his mother and siblings after their kayak was swept out to sea in Western Australia — hailed as a national hero. <strong>3. Police charged a man with abuse of 459 children</strong> in one of Australia's worst pedophilia cases, with victims spanning decades.</p>
           <div class="card-sources"><a class="source-link" href="https://www.theguardian.com/australia-news" target="_blank" rel="noopener">Guardian Australia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/world/australia" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
@@ -1136,6 +1194,15 @@
         const arrow = this.querySelector('.arrow');
         const content = this.nextElementSibling;
         arrow.style.transform = content.classList.contains('open') ? 'rotate(0deg)' : 'rotate(90deg)';
+      });
+    });
+
+    // Collapsible cards - tap to reveal
+    document.querySelectorAll('.card.collapsible').forEach(card => {
+      card.addEventListener('click', function(e) {
+        // Don't toggle if clicking a link
+        if (e.target.tagName === 'A') return;
+        this.classList.toggle('expanded');
       });
     });
   </script>
