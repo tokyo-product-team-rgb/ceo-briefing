@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Monthly Review — January 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e8e5e1;
+      --accent-primary: #ea580c;
+      --accent-secondary: #0891b2;
+      --accent-tertiary: #16a34a;
+      --accent-highlight: #7c3aed;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 8px;
+      --green: #16a34a;
+      --red: #dc2626;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .masthead {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--accent-primary);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      flex-wrap: wrap;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1rem;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-bar a.active {
+      color: var(--accent-primary);
+      border-bottom-color: var(--accent-primary);
+    }
+
+    .nav-bar a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .sector-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      background: var(--bg);
+      flex-wrap: wrap;
+    }
+
+    .sector-tab {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .sector-tab:hover {
+      border-color: var(--text-secondary);
+    }
+
+    .sector-tab.active {
+      background: var(--accent-primary);
+      color: #fff;
+      border-color: var(--accent-primary);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .section-icon.primary { background: #ffedd5; }
+    .section-icon.secondary { background: #cffafe; }
+    .section-icon.tertiary { background: #dcfce7; }
+    .section-icon.highlight { background: #ede9fe; }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title.primary { color: var(--accent-primary); }
+    .section-title.secondary { color: var(--accent-secondary); }
+    .section-title.tertiary { color: var(--accent-tertiary); }
+    .section-title.highlight { color: var(--accent-highlight); }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-value {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--accent-primary);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #ffedd5 0%, #dcfce7 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-title {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .highlight-box p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .highlight-box strong {
+      color: var(--text);
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2em 0.6em;
+      border-radius: 4px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-tag.primary { background: #ffedd5; color: var(--accent-primary); }
+    .card-tag.secondary { background: #cffafe; color: var(--accent-secondary); }
+    .card-tag.tertiary { background: #dcfce7; color: var(--accent-tertiary); }
+    .card-tag.highlight { background: #ede9fe; color: var(--accent-highlight); }
+
+    .card.featured {
+      border-left: 4px solid var(--accent-primary);
+      padding-left: 1.5rem;
+    }
+
+    .bottom-line {
+      background: var(--text);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .bottom-line .section-header {
+      border-bottom-color: rgba(255,255,255,0.15);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bottom-line .section-icon { background: rgba(255,255,255,0.12); }
+    .bottom-line .section-title { color: #fff; }
+
+    .bottom-line p {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="index.html">Today's Briefing</a>
+    <a href="vc-review.html">VC Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <div class="sector-tabs">
+    <a href="vc-review.html" class="sector-tab">💰 VC</a>
+    <a href="ai-review.html" class="sector-tab">🤖 AI</a>
+    <a href="longevity-review.html" class="sector-tab">🧬 Longevity</a>
+    <a href="health-wellness-review.html" class="sector-tab">💊 Health</a>
+    <a href="space-review.html" class="sector-tab">🚀 Space</a>
+    <a href="energy-review.html" class="sector-tab active">⚡ Energy</a>
+    <a href="sports-entertainment-review.html" class="sector-tab">🎬 Sports & Entertainment</a>
+  </div>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="overline">Monthly Intelligence Brief</div>
+      <h1>Energy Monthly Review</h1>
+      <div class="edition-date">January 2026 Edition</div>
+      <div class="edition-sub">Nuclear Fusion · Solid-State Batteries · Carbon Capture · What to Watch</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- OVERVIEW -->
+    <section class="section" id="overview">
+      <div class="section-header">
+        <div class="section-icon primary">📊</div>
+        <h2 class="section-title primary">Market Overview</h2>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">2050-70</div>
+          <div class="stat-label">Commercial Fusion ETA</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">2x</div>
+          <div class="stat-label">Solid-State EV Range</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">1000→hrs</div>
+          <div class="stat-label">Carbon Capture Speedup</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">+5%</div>
+          <div class="stat-label">China Power Use 2025</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-title">🔥 The Big Story</div>
+        <p>2025 was a <strong>breakthrough year for nuclear fusion</strong>. China made key advances in 'artificial sun' materials, LENR (Low Energy Nuclear Reaction) research is gaining investment from NASA and DOD, and projections now point to <strong>commercial fusion energy between 2050-2070</strong>. Meanwhile, solid-state batteries are entering production with Chery launching the first EV featuring the technology.</p>
+      </div>
+    </section>
+
+    <!-- NUCLEAR FUSION -->
+    <section class="section" id="fusion">
+      <div class="section-header">
+        <div class="section-icon secondary">☢️</div>
+        <h2 class="section-title secondary">Nuclear Fusion</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured">
+          <span class="card-tag secondary">China Breakthrough</span>
+          <h3 class="card-headline">China Makes Breakthrough in Key Material for 'Artificial Sun'</h3>
+          <p class="card-body">China achieved a significant breakthrough in nuclear fusion materials for their 'artificial sun' project, bringing the promise of <strong>virtually limitless, clean energy</strong> one step closer to reality.</p>
+        </article>
+
+        <article class="card featured">
+          <span class="card-tag highlight">LENR Research</span>
+          <h3 class="card-headline">Low Energy Nuclear Reaction Gains NASA/DOD Investment</h3>
+          <p class="card-body">Cold fusion (officially debunked) has evolved into LENR — <strong>"classified energy technology"</strong> now receiving investment from NASA and DOD for secret projects. 2025 marked a breakthrough year for this research.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag secondary">AI + Nuclear</span>
+          <h3 class="card-headline">MIT 2025: AI-Powered Nuclear Reactors as Game-Changer</h3>
+          <p class="card-body">MIT's 2025 technology list highlights AI-powered nuclear reactors that use machine learning to <strong>optimize fusion energy, slash costs & boost safety</strong> — paving the way for unlimited clean power.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BATTERIES -->
+    <section class="section" id="batteries">
+      <div class="section-header">
+        <div class="section-icon tertiary">🔋</div>
+        <h2 class="section-title tertiary">Solid-State Batteries & EVs</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured">
+          <span class="card-tag tertiary">First EV Launch</span>
+          <h3 class="card-headline">Chery Launches First EV with Solid-State Battery</h3>
+          <p class="card-body">Chery became the first automaker to launch an EV with solid-state battery technology. <strong>Eliminates flammable components</strong>, delivers higher energy density, and offers safer, longer-range electric vehicles.</p>
+        </article>
+
+        <article class="card featured">
+          <span class="card-tag tertiary">China Tech</span>
+          <h3 class="card-headline">China Solid-State Breakthrough Doubles EV Range</h3>
+          <p class="card-body">China's solid-state battery technology reportedly <strong>doubles EV range and redefines energy safety</strong> — potentially the biggest breakthrough for the EV industry.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag primary">Tesla</span>
+          <h3 class="card-headline">Tesla's Dry Electrode Breakthrough for 4680 Cells</h3>
+          <p class="card-body">Tesla's dry electrode breakthrough enhances <strong>lithium-ion battery production efficiency and cost</strong> for their 4680 cells, bolstering EV dominance through manufacturing innovation.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag highlight">QuantumScape</span>
+          <h3 class="card-headline">QuantumScape Ramps Solid-State Production</h3>
+          <p class="card-body">QuantumScape ($QS) continues ramping solid-state battery production, promising <strong>superior energy density and safety</strong> compared to traditional lithium-ion technology.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CARBON CAPTURE -->
+    <section class="section" id="carbon">
+      <div class="section-header">
+        <div class="section-icon primary">🌍</div>
+        <h2 class="section-title primary">Carbon Capture & Climate Tech</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured">
+          <span class="card-tag primary">Speed Breakthrough</span>
+          <h3 class="card-headline">Scientists Compress 1,000 Years of Carbon Capture Into Hours</h3>
+          <p class="card-body">Researchers achieved a remarkable breakthrough: a laboratory reactor that <strong>accelerates nature's thousand-year carbon capture process into hours</strong> — potentially game-changing for climate engineering.</p>
+        </article>
+
+        <article class="card featured">
+          <span class="card-tag secondary">Iceland</span>
+          <h3 class="card-headline">World's Largest Direct Air Carbon Capture Plant Now Operational</h3>
+          <p class="card-body">The world's largest DACCS plant has officially begun operations in Iceland, marking a major breakthrough in climate engineering. Unlike emissions reduction, this facility <strong>actively removes existing CO₂</strong> from the atmosphere.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag tertiary">'Reverse Solar Panel'</span>
+          <h3 class="card-headline">Breakthrough: Generates Electricity in Total Darkness</h3>
+          <p class="card-body">A 'reverse solar panel' breakthrough generates <strong>electricity in total darkness</strong> — potentially enabling 24/7 renewable energy generation regardless of sunlight.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag highlight">India Budget</span>
+          <h3 class="card-headline">India's 2026 Budget Boosts Nuclear, Carbon Capture, Grid Storage</h3>
+          <p class="card-body">India's 2026 budget significantly increases investment in nuclear energy, carbon capture technology, and grid storage — signaling major commitment to energy transition.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHAT TO WATCH -->
+    <section class="section" id="watch">
+      <div class="section-header">
+        <div class="section-icon highlight">🔮</div>
+        <h2 class="section-title highlight">What to Watch in February 2026</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <p class="card-body">
+            ☢️ <strong>Fusion Progress</strong> — Watch for more material breakthroughs from China's 'artificial sun' project<br><br>
+            🔋 <strong>Solid-State Production Scale</strong> — Will more automakers announce SSB vehicles?<br><br>
+            🌍 <strong>Iceland DACCS Data</strong> — First operational metrics from world's largest carbon capture facility<br><br>
+            💰 <strong>SpaceX Solar Satellites</strong> — Seeking approval for 1M solar-powered satellite data centers<br><br>
+            ⚡ <strong>Grid Storage Investments</strong> — Following India's lead, watch for global grid storage announcements
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BOTTOM LINE -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line">
+        <div class="section-header">
+          <div class="section-icon">⚡</div>
+          <h2 class="section-title">Bottom Line</h2>
+        </div>
+        <p>The energy transition is accelerating across multiple fronts. Nuclear fusion is moving from "always 30 years away" to credible 2050-2070 commercial timelines. Solid-state batteries are finally entering production vehicles. Carbon capture is scaling from demonstration to industrial operation. The convergence of AI with energy tech (AI-powered reactors, optimized grid management) is amplifying progress. This decade could see more energy innovation than the previous century.</p>
+        <p style="margin-top: 1rem; font-weight: 700; font-style: normal;">The energy revolution is real. The timelines are shrinking. Position accordingly.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Energy Monthly Review · Compiled by Sanbot · January 2026</p>
+    <p>Next edition: February 2026</p>
+  </footer>
+
+</body>
+</html>

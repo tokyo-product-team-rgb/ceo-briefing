@@ -588,6 +588,40 @@
       .bottom-line { background: #333; }
       .nav-pills { display: none; }
     }
+
+    .sector-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      background: var(--bg);
+      flex-wrap: wrap;
+    }
+
+    .sector-tab {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .sector-tab:hover {
+      border-color: var(--text-secondary);
+    }
+
+    .sector-tab.active {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+    }
   </style>
 </head>
 <body>
@@ -599,6 +633,17 @@
     <a href="vc-review.html">VC Review</a>
     <a href="archive.html">Archive</a>
   </nav>
+
+  <!-- ━━━ セクタータブ ━━━ -->
+  <div class="sector-tabs">
+    <a href="vc-review.html" class="sector-tab">💰 VC</a>
+    <a href="ai-review.html" class="sector-tab">🤖 AI</a>
+    <a href="longevity-review.html" class="sector-tab">🧬 長寿</a>
+    <a href="health-wellness-review.html" class="sector-tab">💊 健康</a>
+    <a href="space-review.html" class="sector-tab">🚀 宇宙</a>
+    <a href="energy-review.html" class="sector-tab">⚡ エネルギー</a>
+    <a href="sports-entertainment-review.html" class="sector-tab">🎬 スポーツ</a>
+  </div>
 
   <!-- ━━━ マストヘッド ━━━ -->
   <header class="masthead">

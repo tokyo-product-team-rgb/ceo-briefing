@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports & Entertainment Monthly Review — January 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e8e5e1;
+      --accent-primary: #9333ea;
+      --accent-secondary: #0891b2;
+      --accent-tertiary: #ea580c;
+      --accent-highlight: #16a34a;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 8px;
+      --green: #16a34a;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .masthead {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--accent-primary);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      flex-wrap: wrap;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1rem;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-bar a.active {
+      color: var(--accent-primary);
+      border-bottom-color: var(--accent-primary);
+    }
+
+    .nav-bar a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .sector-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      background: var(--bg);
+      flex-wrap: wrap;
+    }
+
+    .sector-tab {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .sector-tab:hover {
+      border-color: var(--text-secondary);
+    }
+
+    .sector-tab.active {
+      background: var(--accent-primary);
+      color: #fff;
+      border-color: var(--accent-primary);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .section-icon.primary { background: #f3e8ff; }
+    .section-icon.secondary { background: #cffafe; }
+    .section-icon.tertiary { background: #ffedd5; }
+    .section-icon.highlight { background: #dcfce7; }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title.primary { color: var(--accent-primary); }
+    .section-title.secondary { color: var(--accent-secondary); }
+    .section-title.tertiary { color: var(--accent-tertiary); }
+    .section-title.highlight { color: var(--accent-highlight); }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-value {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--accent-primary);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #f3e8ff 0%, #cffafe 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-title {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .highlight-box p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .highlight-box strong {
+      color: var(--text);
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2em 0.6em;
+      border-radius: 4px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-tag.primary { background: #f3e8ff; color: var(--accent-primary); }
+    .card-tag.secondary { background: #cffafe; color: var(--accent-secondary); }
+    .card-tag.tertiary { background: #ffedd5; color: var(--accent-tertiary); }
+    .card-tag.highlight { background: #dcfce7; color: var(--accent-highlight); }
+
+    .card.featured {
+      border-left: 4px solid var(--accent-primary);
+      padding-left: 1.5rem;
+    }
+
+    .bottom-line {
+      background: var(--text);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .bottom-line .section-header {
+      border-bottom-color: rgba(255,255,255,0.15);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bottom-line .section-icon { background: rgba(255,255,255,0.12); }
+    .bottom-line .section-title { color: #fff; }
+
+    .bottom-line p {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="index.html">Today's Briefing</a>
+    <a href="vc-review.html">VC Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <div class="sector-tabs">
+    <a href="vc-review.html" class="sector-tab">💰 VC</a>
+    <a href="ai-review.html" class="sector-tab">🤖 AI</a>
+    <a href="longevity-review.html" class="sector-tab">🧬 Longevity</a>
+    <a href="health-wellness-review.html" class="sector-tab">💊 Health</a>
+    <a href="space-review.html" class="sector-tab">🚀 Space</a>
+    <a href="energy-review.html" class="sector-tab">⚡ Energy</a>
+    <a href="sports-entertainment-review.html" class="sector-tab active">🎬 Sports & Entertainment</a>
+  </div>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="overline">Monthly Intelligence Brief</div>
+      <h1>Sports & Entertainment Review</h1>
+      <div class="edition-date">January 2026 Edition</div>
+      <div class="edition-sub">Winter Olympics · Media Shifts · Consumer Trends · What to Watch</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- OVERVIEW -->
+    <section class="section" id="overview">
+      <div class="section-header">
+        <div class="section-icon primary">📊</div>
+        <h2 class="section-title primary">Market Overview</h2>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">Feb 7</div>
+          <div class="stat-label">Winter Olympics Start</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">87%</div>
+          <div class="stat-label">Gen Z Alcohol Spend Drop</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">41</div>
+          <div class="stat-label">Lindsey Vonn Age</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">$3.1B</div>
+          <div class="stat-label">Gen Z Total Alcohol Spend</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-title">🔥 The Big Story</div>
+        <p>The <strong>2026 Winter Olympics open February 7 in Milan-Cortina</strong>, with Lindsey Vonn's comeback at age 41 as the major storyline. Meanwhile, consumer data reveals <strong>Gen Z spends 87% less on alcohol than Millennials</strong> ($3.1B vs $23.4B aggregate), signaling massive shifts in entertainment and lifestyle spending patterns.</p>
+      </div>
+    </section>
+
+    <!-- WINTER OLYMPICS -->
+    <section class="section" id="olympics">
+      <div class="section-header">
+        <div class="section-icon secondary">🏂</div>
+        <h2 class="section-title secondary">2026 Winter Olympics</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured">
+          <span class="card-tag secondary">Major Event</span>
+          <h3 class="card-headline">Milan-Cortina 2026 Opens February 7</h3>
+          <p class="card-body">The first Winter Olympics since Beijing 2022. Team GB already winning in mixed doubles curling despite a power cut. <strong>Russia is banned</strong>; China's presence will be closely watched. Geopolitical tensions underpin the sporting spectacle.</p>
+        </article>
+
+        <article class="card featured">
+          <span class="card-tag primary">Comeback</span>
+          <h3 class="card-headline">Lindsey Vonn's Return at 41</h3>
+          <p class="card-body">The pre-Games storyline: <strong>Lindsey Vonn competing at age 41</strong> after years of retirement. First women's downhill training was cancelled due to weather, building anticipation for her Olympic return.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag tertiary">Geopolitics</span>
+          <h3 class="card-headline">Sport Meets Global Tensions</h3>
+          <p class="card-body">Organizers hoping sport can transcend politics, but <strong>Russia's ban and China's cold relations with the West</strong> will be constants throughout the Games. Watch for diplomatic statements — who attends and who doesn't signals global alignments.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONSUMER TRENDS -->
+    <section class="section" id="consumer">
+      <div class="section-header">
+        <div class="section-icon tertiary">📈</div>
+        <h2 class="section-title tertiary">Consumer Trends</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card featured">
+          <span class="card-tag tertiary">Generational Shift</span>
+          <h3 class="card-headline">Gen Z Alcohol Spending: 87% Less Than Millennials</h3>
+          <p class="card-body">Bureau of Labor Statistics Consumer Expenditure Survey data: Gen Z's total annual alcohol spending at <strong>~$3.1B vs ~$23.4B for Millennials</strong> (about 87% less aggregate). This measures spending, not per-capita — but the shift is dramatic.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag secondary">Media Industry</span>
+          <h3 class="card-headline">Washington Post "Bloodbath" — Hundreds Laid Off</h3>
+          <p class="card-body">The Washington Post announced sweeping layoffs and scaled back news coverage in what staff called <strong>"one of the darkest days"</strong> in the paper's history. Cratering digital ad revenue and subscriber churn continue the media industry collapse.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag highlight">Spending Shifts</span>
+          <h3 class="card-headline">Health Insurance Spending: $500 → $3,800</h3>
+          <p class="card-body">Average household spending on health insurance rose from <strong>~$500 in 1984 to ~$3,800 in 2022</strong> — now 35% above pre-ACA trend. Entertainment and discretionary spending are being squeezed by healthcare costs.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHAT TO WATCH -->
+    <section class="section" id="watch">
+      <div class="section-header">
+        <div class="section-icon highlight">🔮</div>
+        <h2 class="section-title highlight">What to Watch in February 2026</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <p class="card-body">
+            🏂 <strong>Winter Olympics</strong> — Medal counts, diplomatic signals, Lindsey Vonn's performance<br><br>
+            📺 <strong>Streaming Wars</strong> — Olympics coverage driving streaming vs linear TV debates<br><br>
+            🍺 <strong>Beverage Industry</strong> — How are alcohol companies responding to Gen Z trends?<br><br>
+            🎮 <strong>Gaming/Esports</strong> — Continued growth amid traditional media struggles<br><br>
+            💰 <strong>Sports Media Rights</strong> — Post-Olympics negotiations and valuations
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BOTTOM LINE -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line">
+        <div class="section-header">
+          <div class="section-icon">⚡</div>
+          <h2 class="section-title">Bottom Line</h2>
+        </div>
+        <p>The sports and entertainment landscape is fragmenting. Traditional media continues its painful contraction while live events (Olympics, sports) retain premium value. Gen Z's dramatically different spending patterns — 87% less on alcohol alone — signal massive shifts in how entertainment companies must evolve. The Winter Olympics will be both a sporting spectacle and a geopolitical barometer.</p>
+        <p style="margin-top: 1rem; font-weight: 700; font-style: normal;">Attention is fragmenting. Live events matter more. Adapt or die.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Sports & Entertainment Monthly Review · Compiled by Sanbot · January 2026</p>
+    <p>Next edition: February 2026</p>
+  </footer>
+
+</body>
+</html>
