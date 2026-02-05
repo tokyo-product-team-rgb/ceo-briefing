@@ -230,6 +230,68 @@
       transform: translateY(-1px);
     }
 
+    /* Collapsible cards - tap to reveal */
+    .card.collapsible {
+      cursor: pointer;
+    }
+    .card.collapsible .card-body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, margin 0.2s ease;
+      margin-bottom: 0;
+    }
+    .card.collapsible.expanded .card-body {
+      max-height: 500px;
+      opacity: 1;
+      margin-bottom: 0.4rem;
+    }
+    .card.collapsible .card-headline {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .card.collapsible .card-headline::after {
+      content: '▸';
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .card.collapsible.expanded .card-headline::after {
+      transform: rotate(90deg);
+    }
+    .card.collapsible .tap-hint {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .tap-hint {
+      opacity: 0;
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .card.collapsible .card-sources {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      border: none;
+      transition: max-height 0.3s ease, opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .card-sources {
+      max-height: 100px;
+      opacity: 1;
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--border);
+    }
+
     .card-headline {
       font-family: var(--serif);
       font-size: 1.05rem;
@@ -685,9 +747,10 @@
       <div class="cards">
 
         <!-- 1. 衆議院選挙 -->
-        <article class="card featured japan fade-in">
+        <article class="card featured japan fade-in collapsible">
           <span class="card-tag japan">選挙2026 · トップニュース</span>
           <h3 class="card-headline">選挙まであと3日：高市首相の若年層支持急増、防衛タカ派vs護憲派、そして移民パラドックスが日本の将来を左右</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">2月8日の衆議院総選挙まで残り3日、3つの大きな力が交錯している。<strong>若年層の選挙参加が急増中：</strong>日経によると高市首相は「今までとは違う総理」として、小泉純一郎以来の街頭演説動員力を見せている — <strong>その背景には</strong>中国の台頭に対する不安と日本の国際的プレゼンス低下への焦りがあり、高市氏のナショナリスト的メッセージが若者世代の琴線に触れている。<strong>防衛政策では：</strong>トランプ大統領の同盟国負担増要求と、今週北京でKMTが「民族復興」を唱えたことを受け、防衛費の大幅増額を推進。<strong>移民問題では：</strong>候補者の約40%が外国人労働者の制限を主張 — <strong>しかしこれは</strong>年間約50万人の生産年齢人口減少という現実と真っ向から矛盾する。一方、野党は食料品消費税ゼロを実現するための<strong>政府系ファンド構想</strong>を提案しており、注目を集めるも財政タカ派から懐疑的な声も。</p>
           <div class="card-sources">
             <a class="source-link" href="https://asia.nikkei.com/politics/japan-election/a-different-kind-of-prime-minister-sparks-hope-among-japan-s-youth" target="_blank" rel="noopener">日経 — 若年層 <span class="src-arrow">↗</span></a> &nbsp;
@@ -697,9 +760,10 @@
         </article>
 
         <!-- 2. 日経平均 -->
-        <article class="card featured japan fade-in">
+        <article class="card featured japan fade-in collapsible">
           <span class="card-tag japan">マーケット</span>
           <h3 class="card-headline">日経平均−0.78%の54,293円 — 選挙前の慎重姿勢とウォール街テック売りの波及で下落</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">日経225は<span class="stat">−0.78%</span>で54,293円に下落。<strong>下落の要因は</strong>ウォール街のテック主導の売りがアジア市場に波及したこと（ナスダック−1.43%）に加え、日曜日の選挙前にリスク回避姿勢を強める機関投資家の利益確定売りが重なった。高市首相の拡張的財政政策が広く予想される中、年初来+8%の好調な相場を前にイベントリスクを避ける動きが顕著になった。テック・半導体関連銘柄が下落を主導 — 米国発の「AI設備投資バブル」懸念が波及。</p>
           <div class="card-sources">
             <a class="source-link" href="https://finance.yahoo.com/quote/%5EN225/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
@@ -707,9 +771,10 @@
         </article>
 
         <!-- 3. トヨタ -->
-        <article class="card featured japan fade-in">
+        <article class="card featured japan fade-in collapsible">
           <span class="card-tag japan">自動車</span>
           <h3 class="card-headline">トヨタ、2028年にHV3割増産 — EV補助金縮小で「ハイブリッド優位」が鮮明に</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">トヨタ自動車は2028年にハイブリッド車（HV）の生産台数を26年計画比<span class="stat">約3割増の670万台</span>に引き上げる方針を主要部品メーカーに通知した。米国を中心にエンジン・部品工場へ投資を拡大。<strong>この戦略転換の背景には</strong>欧米各国のEV購入補助金の相次ぐ縮小があり、航続距離や充電インフラの不安を感じる消費者がコスト面で優位なHVに回帰している現実がある。競合他社がEV一本足で巨額赤字を計上する中、トヨタのHV優先戦略は台数と利益率の両方を達成 — かつて批判された「EVに慎重すぎる」姿勢が正しかったことが証明されつつある。</p>
           <div class="card-sources">
             <a class="source-link" href="https://asia.nikkei.com/business/automobiles/toyota-plans-30-increase-in-global-hybrid-production" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a> &nbsp;
@@ -719,16 +784,18 @@
 
         <!-- 4. MHI + JGB -->
         <div class="cards-grid">
-          <article class="card fade-in">
+          <article class="card fade-in collapsible">
             <span class="card-tag japan">防衛・エネルギー</span>
             <h3 class="card-headline">三菱重工、過去最高益を更新 — 米国AIデータセンター向けガスタービン需要が爆発</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
             <p class="card-body">三菱重工業が2桁の増収増益で過去最高益を記録。<strong>急成長の原動力は</strong>AIデータセンターの電力需要急増に対応するため米国で天然ガスタービンの需要が爆発的に拡大したこと。ハイパースケーラーが安定的なベースロード電源として天然ガスに殺到し、世界のガスタービン市場は2025年にほぼ倍増。日本の重工業企業がAIブームの重要なインフラ供給者として浮上している。</p>
             <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/aerospace-defense-industries/gas-turbine-boom-in-us-lifts-japan-s-mitsubishi-heavy-to-record-profit" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a></div>
           </article>
 
-          <article class="card fade-in">
+          <article class="card fade-in collapsible">
             <span class="card-tag japan">債券</span>
             <h3 class="card-headline">JGB10年利回りが数十年ぶり高水準 — 高市財政拡張への期待が利回りを押し上げ</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
             <p class="card-body">10年物国債利回りが数十年ぶりの高水準を維持。<strong>上昇の要因は</strong>日曜日の選挙後に高市首相が拡張的財政政策を推進し、新規国債発行が増加するとの市場の織り込み。利回り上昇は日本の保険会社の含み損拡大を招いているが、株式ポートフォリオの含み益がバッファーとなっている。逆説的に、利回り上昇が外国人投資家のJGB買いを呼び込んでおり、新規発行の吸収に寄与する可能性も。</p>
             <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/markets/bonds/rising-japan-bond-yields-hit-insurers-but-stock-prices-offer-buffer" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a></div>
           </article>
@@ -736,16 +803,18 @@
 
         <!-- 5. パナソニック + 旧統一教会 -->
         <div class="cards-grid">
-          <article class="card fade-in">
+          <article class="card fade-in collapsible">
             <span class="card-tag japan">企業</span>
             <h3 class="card-headline">パナソニックHD、業績見通しを下方修正 — 構造改革費用が利益を圧迫</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
             <p class="card-body">パナソニックホールディングスが今年度の業績見通しを下方修正。<strong>下方修正の理由は</strong>車載電池事業を中心とした構造改革費用の増加。EV市場の成長鈍化を受け、北米の電池工場計画を見直す必要に迫られたことが背景にある。トヨタのHV増産ニュースとは対照的に、EV一辺倒の投資戦略のリスクが顕在化した形だ。</p>
             <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043511000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
 
-          <article class="card fade-in">
+          <article class="card fade-in collapsible">
             <span class="card-tag japan">政治・社会</span>
             <h3 class="card-headline">旧統一教会の解散命令、東京高裁が3月4日に判断 — 安倍銃撃事件の山上被告は控訴</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
             <p class="card-body">旧統一教会の解散命令をめぐる2審判断が3月4日に予定。<strong>注目される理由は</strong>2022年の安倍元首相銃撃事件を契機に表面化した教団の組織的献金勧誘問題が、ついに司法の最終判断を迎えること。同時に、山上被告の弁護団が無期懲役の判決を不服として控訴 — <strong>控訴の根拠は</strong>精神鑑定の評価や動機の特殊性に関する法的議論。</p>
             <div class="card-sources">
               <a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043291000" target="_blank" rel="noopener">NHK — 旧統一教会 <span class="src-arrow">↗</span></a> &nbsp;
@@ -756,16 +825,18 @@
 
         <!-- 6. 円安 + JAXA -->
         <div class="cards-grid">
-          <article class="card fade-in">
+          <article class="card fade-in collapsible">
             <span class="card-tag japan">為替</span>
             <h3 class="card-headline">円安進行、1ドル=156.65円 — 選挙後の経済政策を巡る思惑で円売り加速</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
             <p class="card-body">ドル/円は<span class="stat">+0.58%</span>の156.65円に上昇。<strong>円安が進んだ背景は</strong>高市首相の弱い円を容認する拡張的財政政策が選挙で支持されるとの見通しから、選挙後の日本の経済政策をにらんだ円売りが膨らんだこと。日米金利差の拡大（JGB利回りは上昇するも米国金利がイラン情勢のリスクプレミアムでより速く上昇）も円安要因。</p>
             <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043391000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
 
-          <article class="card fade-in">
+          <article class="card fade-in collapsible">
             <span class="card-tag japan">科学技術</span>
             <h3 class="card-headline">JAXA、イプシロンSロケット開発計画を見直し — 相次ぐ試験失敗で抜本的再検討</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
             <p class="card-body">JAXAが小型ロケット「イプシロンS」の開発計画見直しを決定。<strong>見直しに至った理由は</strong>燃焼試験での爆発事故が相次ぎ、当初の打ち上げスケジュールの大幅な遅延が不可避になったこと。日本の独自宇宙輸送手段の確保が遅れることで、国際競争力の観点から懸念が広がっている。</p>
             <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015043581000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
@@ -786,9 +857,10 @@
       <div class="cards">
 
         <!-- 北米 -->
-        <article class="card featured geo fade-in">
+        <article class="card featured geo fade-in collapsible">
           <span class="card-tag geo">北米</span>
           <h3 class="card-headline">PayPal株−20%暴落 · トランプ政権がレアアース120億ドル戦略備蓄発表 · 重要鉱物閣僚級会合に50カ国以上参加</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
             <strong>1. PayPal、1日で−20.3%暴落 — フィンテックの堀は想像以上に薄かった：</strong>PayPal株が<span class="stat">$41.70</span>に急落、通常の8倍の出来高（1.41億株）を記録。<strong>暴落のきっかけは</strong>Q4売上成長率がわずか3.7%にとどまり予想を下回ったこと。Apple Pay、Google Pay、新興フィンテックとの競争でブランデッドチェックアウト事業が持続的に浸食されていることが投資家のパニックを誘発。時価総額は1日で約90億ドル消失。<br><br>
             <strong>2. トランプ政権、レアアース120億ドル戦略備蓄「プロジェクト・ボールト」を発表：</strong><strong>この施策の動機は</strong>中国がレアアース採掘の70%、加工の90%を支配しており、2025年の貿易交渉でジェットエンジン・EV・電子機器に不可欠な元素の輸出制限をカードとして使ったこと。Ex-Im銀行100億ドルの融資と民間16.7億ドルで戦略備蓄を構築し、石油戦略備蓄をモデルとする。<br><br>
@@ -802,9 +874,10 @@
         </article>
 
         <!-- ヨーロッパ -->
-        <article class="card featured geo fade-in">
+        <article class="card featured geo fade-in collapsible">
           <span class="card-tag geo">ヨーロッパ</span>
           <h3 class="card-headline">ロシア、ウクライナのエネルギー施設を猛攻撃 · スペインがSNS規制発表でマスクが激怒 · エプスタイン文書が英政治を揺るがす</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
             <strong>1. ロシア、ウクライナのエネルギーインフラに「特に卑劣な」攻撃：</strong>英国のスターマー首相がロシアの発電所・インフラ攻撃を非難。<strong>この攻撃のタイミングの意図は</strong>冬期の民間人の苦痛を最大化し、春の和平交渉に向けてキーウに譲歩を迫ること。ウクライナ・ロシア間の第2ラウンドの米国仲介協議がアブダビで開始 — 東部領土の帰属が最大の争点。<br><br>
             <strong>2. マスク氏、スペイン首相を「暴君」と非難 — SNS規制法案を巡り対立：</strong>スペインのサンチェス首相が厳格なSNS規制を発表したことを受け、マスク氏が猛反発。<strong>この対立の背景には</strong>欧州全体で強まるテック規制の流れと、マスク氏がX（旧Twitter）の表現の自由を守ろうとする戦略的立場の衝突がある。<br><br>
@@ -818,9 +891,10 @@
         </article>
 
         <!-- アジア（日本除く） -->
-        <article class="card featured geo fade-in">
+        <article class="card featured geo fade-in collapsible">
           <span class="card-tag geo">アジア（日本除く）</span>
           <h3 class="card-headline">KOSPI過去最高値 — 「韓国ディスカウント」が「韓国プレミアム」に · 台湾KMTが北京で「民族復興」に同調 · 中国メモリ大手が大増産計画</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
             <strong>1. KOSPI、史上最高値5,371を記録 — AI半導体需要が韓国株を押し上げ：</strong>韓国KOSPI指数が<span class="stat">+1.57%</span>の5,371に急伸。<strong>上昇の原動力は</strong>AIによる世界的なメモリ半導体不足を背景に、サムスンとSKハイニックスの業績が爆発的に成長していること。両社の時価総額は中国のテンセントとアリババを超えた。長年の「韓国ディスカウント」がAI需要により「韓国プレミアム」に転換しつつある。<br><br>
             <strong>2. 台湾KMT、北京のCCPフォーラムで習近平の「民族復興」に呼応：</strong>台湾の野党・国民党(KMT)が北京で中国共産党フォーラムに参加。<strong>これが問題視される理由は</strong>台湾海峡の緊張が続く中、KMTの大陸寄り姿勢が台湾の安全保障を弱体化させる恐れがあるから。KMT副主席率いる大規模代表団の訪中は2016年以来初。<br><br>
@@ -834,9 +908,10 @@
         </article>
 
         <!-- 中東・アフリカ -->
-        <article class="card featured geo fade-in">
+        <article class="card featured geo fade-in collapsible">
           <span class="card-tag geo">中東・アフリカ</span>
           <h3 class="card-headline">米軍F-35がイラン無人機を撃墜 · ガザで停戦後最悪の空爆 · スーダン内戦の人道危機が深刻化</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
             <strong>1. 米F-35Cがイラン無人機を撃墜 — ペルシャ湾の緊張が一気に激化：</strong>アラビア海で空母エイブラハム・リンカーンに接近したイラン製シャヘド139型無人機を米F-35Cが撃墜。<strong>この事件の背景には</strong>先月のイラン反政府デモへの弾圧に対する米国の強硬姿勢と、トランプ大統領がイラン沿岸に空母打撃群を展開した軍事的圧力がある。数時間後にはIRGCの高速艇がホルムズ海峡で米国籍タンカーに接近・乗船を試みる事案も発生。原油は1バレル1ドル上昇。<br><br>
             <strong>2. ガザでイスラエル軍の空爆により21人死亡 — 「停戦」後最悪の1日：</strong>北部で14人、南部のテント集落で6人が死亡。<strong>攻撃が続く理由は</strong>イスラエルがハマスの再武装を阻止するためとして軍事作戦を継続しており、停戦合意の範囲をめぐる解釈の相違が根本的に解消されていないこと。ラファ検問所経由の避難民の帰還も中断された。<br><br>
@@ -850,9 +925,10 @@
         </article>
 
         <!-- 中南米 -->
-        <article class="card featured geo fade-in">
+        <article class="card featured geo fade-in collapsible">
           <span class="card-tag geo">中南米</span>
           <h3 class="card-headline">ブラジルIbovespa+1.6%で世界最強指数 · トランプがコロンビア大統領を手のひら返しで絶賛 · パナマ運河問題で香港系企業が仲裁手続き</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
             <strong>1. ブラジルIbovespa、+1.58%の185,674 — 年初来+15%で世界最高パフォーマンス：</strong><strong>急騰の背景は</strong>コモディティ価格の回復（鉄鉱石・大豆）、財政見通しの改善、そして米中貿易戦争の中立的立場を生かした新興国投資マネーの流入。資源スーパーサイクルの恩恵を最も受けている市場。<br><br>
             <strong>2. トランプ大統領、コロンビアのペトロ大統領を「素晴らしい」と絶賛 — 数週間前に「病人」と侮辱したばかり：</strong><strong>態度急変の理由は</strong>コロンビアが移民強制送還で協力姿勢を示したことに加え、麻薬対策での二国間協力が進展したこと。トランプ流の「アメとムチ」外交の典型的パターン。<br><br>
@@ -866,9 +942,10 @@
         </article>
 
         <!-- オセアニア -->
-        <article class="card fade-in">
+        <article class="card fade-in collapsible">
           <span class="card-tag geo">オセアニア</span>
           <h3 class="card-headline">ASX200が+0.80%の8,928 · 豪ドルが対米ドルで上昇</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
             オーストラリアのASX200は<span class="stat">+0.80%</span>の8,928に上昇。<strong>上昇を支えたのは</strong>コモディティ価格回復による鉱業株の買いと、世界的な貿易楽観論によるリスクオンムード。豪ドルも対米ドルで+0.99%上昇 — コモディティ価格上昇に伴う交易条件の改善を反映。NZ50指数も+0.34%で堅調。
           </p>
@@ -1226,6 +1303,15 @@
       if (needle) {
         setTimeout(() => { needle.style.transform = `rotate(${angle}deg)`; }, 300);
       }
+
+      // Collapsible cards - tap to reveal
+      document.querySelectorAll('.card.collapsible').forEach(card => {
+        card.addEventListener('click', function(e) {
+          // Don't toggle if clicking a link
+          if (e.target.tagName === 'A') return;
+          this.classList.toggle('expanded');
+        });
+      });
     });
   </script>
 
