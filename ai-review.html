@@ -6,303 +6,176 @@
   <title>AI Review — January 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #fafaf9;
-      --surface: #ffffff;
-      --text: #1a1a1a;
-      --text-secondary: #555;
-      --text-muted: #888;
-      --border: #e8e5e1;
-      --accent-primary: #7c3aed;
-      --accent-secondary: #0891b2;
-      --accent-tertiary: #059669;
-      --accent-highlight: #db2777;
-      --accent-bottom: #1a1a1a;
-      --serif: 'Playfair Display', Georgia, serif;
-      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
-      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
-      --radius: 8px;
-      --green: #16a34a;
-      --red: #dc2626;
+      --text-primary: #111111;
+      --text-secondary: #44403C;
+      --text-tertiary: #78716C;
+      --text-link: #1D736C;
+      --bg-primary: #F9F9F9;
+      --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3;
+      --bg-white: #FFFFFF;
+      --bg-accent: #2A8F87;
+      --line-subtle: #E8E5E1;
+      --line-default: #D5D2CD;
+      --chart-primary: #2A8F87;
+      --chart-secondary: #E07A3F;
+      --highlight-info: #E3EBF5;
+      --serif: 'Copernicus Trial', Georgia, serif;
+      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-card: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-card-hover: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --radius: 24px;
     }
 
     html { font-size: 16px; scroll-behavior: smooth; }
-
     body {
       font-family: var(--sans);
-      background: var(--bg);
-      color: var(--text);
+      background: var(--bg-primary);
+      color: var(--text-primary);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
-    }
-
-    .masthead {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      position: relative;
-    }
-
-    .masthead-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 2rem;
-      text-align: center;
-    }
-
-    .masthead .overline {
-      font-family: var(--sans);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .masthead h1 {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      line-height: 1.1;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-    }
-
-    .masthead .edition-date {
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
-
-    .masthead .edition-sub {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .divider-bar {
-      width: 60px;
-      height: 3px;
-      background: var(--accent-primary);
-      margin: 1rem auto 0;
-      border-radius: 2px;
     }
 
     .nav-bar {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 0;
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      font-family: var(--sans);
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--line-subtle);
       font-size: 0.8rem;
       font-weight: 500;
-      letter-spacing: 0.04em;
-      flex-wrap: wrap;
     }
-
     .nav-bar a {
       text-decoration: none;
-      color: var(--text-muted);
-      padding: 0.7rem 1rem;
+      color: var(--text-tertiary);
+      padding: 0.7rem 1.5rem;
       border-bottom: 2px solid transparent;
-      transition: color 0.2s ease, border-color 0.2s ease;
+      transition: color 0.2s, border-color 0.2s;
     }
-
-    .nav-bar a.active {
-      color: var(--accent-primary);
-      border-bottom-color: var(--accent-primary);
-    }
-
-    .nav-bar a:hover:not(.active) {
-      color: var(--text-secondary);
-    }
+    .nav-bar a.active { color: var(--text-primary); background: #ECEAE7; border-bottom: none; border-radius: 6px; }
+    .nav-bar a:hover:not(.active) { color: var(--text-secondary); }
 
     .sector-tabs {
       display: flex;
       justify-content: center;
       gap: 0.5rem;
       padding: 1rem 1.5rem;
-      background: var(--bg);
+      background: var(--bg-primary);
       flex-wrap: wrap;
     }
-
     .sector-tab {
-      font-family: var(--sans);
       font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       text-decoration: none;
       padding: 0.5em 1em;
-      border-radius: 20px;
-      border: 1px solid var(--border);
+      border-radius: 999px;
+      border: 1px solid var(--line-default);
       color: var(--text-secondary);
-      background: var(--surface);
+      background: var(--bg-secondary);
       transition: all 0.2s;
     }
+    .sector-tab:hover { background: var(--bg-hover); }
+    .sector-tab.active { background: var(--bg-hover-darker); color: var(--text-primary); border-color: var(--bg-hover-darker); }
 
-    .sector-tab:hover {
-      border-color: var(--text-secondary);
+    .masthead {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--line-subtle);
+      position: relative;
     }
-
-    .sector-tab.active {
-      background: var(--accent-primary);
-      color: #fff;
-      border-color: var(--accent-primary);
-    }
-
-    .container {
+    .masthead-inner {
       max-width: 900px;
       margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
     }
-
-    .section {
-      margin-bottom: 3rem;
+    .masthead .overline {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 0.75rem;
     }
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    .masthead .edition-date { font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); }
+    .masthead .edition-sub { font-size: 0.8rem; color: var(--text-tertiary); }
+    .divider-bar { width: 60px; height: 3px; background: var(--text-primary); margin: 1rem auto 0; border-radius: 2px; }
 
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .section { margin-bottom: 3rem; }
     .section-header {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       margin-bottom: 1.5rem;
       padding-bottom: 0.75rem;
-      border-bottom: 2px solid var(--border);
+      border-bottom: 1px solid var(--line-subtle);
     }
-
-    .section-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .section-icon.primary { background: #ede9fe; }
-    .section-icon.secondary { background: #cffafe; }
-    .section-icon.tertiary { background: #d1fae5; }
-    .section-icon.highlight { background: #fce7f3; }
-
     .section-title {
       font-family: var(--serif);
       font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
+      font-weight: 500;
+      color: var(--text-secondary);
     }
 
-    .section-title.primary { color: var(--accent-primary); }
-    .section-title.secondary { color: var(--accent-secondary); }
-    .section-title.tertiary { color: var(--accent-tertiary); }
-    .section-title.highlight { color: var(--accent-highlight); }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    @media (max-width: 640px) {
-      .stat-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    @media (max-width: 640px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
     .stat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--bg-secondary);
       border-radius: var(--radius);
       padding: 1.25rem;
       text-align: center;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-card);
     }
-
-    .stat-value {
-      font-family: var(--serif);
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: var(--accent-primary);
-      line-height: 1.1;
-    }
-
-    .stat-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      margin-top: 0.35rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+    .stat-value { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; color: var(--chart-primary); }
+    .stat-label { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-top: 0.35rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
     .highlight-box {
-      background: linear-gradient(135deg, #ede9fe 0%, #cffafe 100%);
-      border: 1px solid var(--border);
+      background: var(--highlight-info);
       border-radius: var(--radius);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
     }
+    .highlight-title { font-family: var(--serif); font-weight: 500; font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .highlight-box p { font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6; }
+    .highlight-box strong { color: var(--text-primary); }
 
-    .highlight-title {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 0.75rem;
-      color: var(--text);
-    }
-
-    .highlight-box p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    .highlight-box strong {
-      color: var(--text);
-    }
-
-    .cards {
-      display: grid;
-      gap: 1rem;
-    }
-
+    .cards { display: grid; gap: 1rem; }
     .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--bg-secondary);
       border-radius: var(--radius);
       padding: 1.25rem 1.5rem;
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow 0.2s, transform 0.2s;
     }
-
-    .card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-1px);
-    }
-
-    .card-headline {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      font-weight: 700;
-      line-height: 1.35;
-      margin-bottom: 0.4rem;
-      color: var(--text);
-    }
-
-    .card-body {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
+    .card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px); }
+    .card-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 0.4rem; color: var(--text-primary); }
+    .card-body { font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6; }
     .card-tag {
       display: inline-block;
       font-size: 0.65rem;
@@ -310,103 +183,39 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       padding: 0.2em 0.6em;
-      border-radius: 4px;
+      border-radius: 999px;
       margin-bottom: 0.6rem;
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
     }
-
-    .card-tag.primary { background: #ede9fe; color: var(--accent-primary); }
-    .card-tag.secondary { background: #cffafe; color: var(--accent-secondary); }
-    .card-tag.tertiary { background: #d1fae5; color: var(--accent-tertiary); }
-    .card-tag.highlight { background: #fce7f3; color: var(--accent-highlight); }
-
-    .card.featured {
-      border-left: 4px solid var(--accent-primary);
-      padding-left: 1.5rem;
-    }
+    .card-meta { font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.5rem; }
 
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.9rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      font-size: 1rem;
+      background: var(--bg-secondary);
       border-radius: var(--radius);
       overflow: hidden;
+      box-shadow: var(--shadow-card);
     }
-
-    .data-table th,
-    .data-table td {
-      padding: 0.85rem 1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .data-table th {
-      background: var(--bg);
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-    }
-
+    .data-table th, .data-table td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--line-subtle); }
+    .data-table th { background: var(--bg-tertiary); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); }
     .data-table tr:last-child td { border-bottom: none; }
-
-    .data-table .amount {
-      font-weight: 700;
-      color: var(--green);
-    }
-
-    .data-table .valuation {
-      font-weight: 600;
-      color: var(--accent-primary);
-    }
-
-    .data-table .company {
-      font-weight: 600;
-      color: var(--text);
-    }
+    .data-table .amount { font-weight: 600; color: var(--chart-primary); }
+    .data-table .valuation { font-weight: 600; color: var(--chart-secondary); }
+    .data-table .company { font-weight: 600; color: var(--text-primary); }
 
     .bottom-line {
-      background: var(--text);
-      color: #fff;
+      background: var(--bg-tertiary);
       border-radius: var(--radius);
       padding: 2rem;
-      box-shadow: var(--shadow-lg);
     }
+    .bottom-line .section-header { border-bottom-color: var(--line-subtle); margin-bottom: 1rem; padding-bottom: 0.5rem; }
+    .bottom-line .section-title { color: var(--text-secondary); }
+    .bottom-line p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
 
-    .bottom-line .section-header {
-      border-bottom-color: rgba(255,255,255,0.15);
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-    }
-
-    .bottom-line .section-icon { background: rgba(255,255,255,0.12); }
-    .bottom-line .section-title { color: #fff; }
-
-    .bottom-line p {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      font-style: italic;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.9);
-    }
-
-    .footer {
-      text-align: center;
-      padding: 2rem 1.5rem 3rem;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .card-meta {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
+    .footer { text-align: center; padding: 2rem 1.5rem 3rem; font-size: 0.75rem; color: var(--text-tertiary); border-top: 1px solid var(--line-subtle); max-width: 900px; margin: 0 auto; }
   </style>
 </head>
 <body>
@@ -414,18 +223,18 @@
   <nav class="nav-bar">
     <a href="live.html">Live</a>
     <a href="index.html">Daily</a>
-    <a href="vc-review.html">VC Review</a>
+    <a href="vc-review.html">Review</a>
     <a href="archive.html">Archive</a>
   </nav>
 
   <div class="sector-tabs">
-    <a href="vc-review.html" class="sector-tab">💰 VC</a>
-    <a href="ai-review.html" class="sector-tab active">🤖 AI</a>
-    <a href="longevity-review.html" class="sector-tab">🧬 Longevity</a>
-    <a href="health-wellness-review.html" class="sector-tab">💊 Health</a>
-    <a href="space-review.html" class="sector-tab">🚀 Space</a>
-    <a href="energy-review.html" class="sector-tab">⚡ Energy</a>
-    <a href="sports-entertainment-review.html" class="sector-tab">🎬 Sports & Entertainment</a>
+    <a href="vc-review.html" class="sector-tab">VC</a>
+    <a href="ai-review.html" class="sector-tab active">AI</a>
+    <a href="longevity-review.html" class="sector-tab">Longevity</a>
+    <a href="health-wellness-review.html" class="sector-tab">Health</a>
+    <a href="space-review.html" class="sector-tab">Space</a>
+    <a href="energy-review.html" class="sector-tab">Energy</a>
+    <a href="sports-entertainment-review.html" class="sector-tab">Sports & Entertainment</a>
   </div>
 
   <header class="masthead">
@@ -440,11 +249,9 @@
 
   <main class="container">
 
-    <!-- OVERVIEW -->
     <section class="section" id="overview">
       <div class="section-header">
-        <div class="section-icon primary">📊</div>
-        <h2 class="section-title primary">Market Overview</h2>
+        <h2 class="section-title">Market Overview</h2>
       </div>
 
       <div class="stat-grid">
@@ -467,16 +274,14 @@
       </div>
 
       <div class="highlight-box">
-        <div class="highlight-title">🔥 The Big Story</div>
+        <div class="highlight-title">The Big Story</div>
         <p>The AI infrastructure arms race intensified as <strong>Alphabet shocked markets with $91.45B capex plans</strong> — 3x analyst expectations. Meanwhile, only <strong>5% of US firms have meaningfully adopted AI</strong>, and Wharton research shows AI added just <strong>0.01% to productivity growth</strong> in 2025. The paradox: massive infrastructure investment, minimal enterprise penetration so far.</p>
       </div>
     </section>
 
-    <!-- COMPANY DATA -->
     <section class="section" id="companies">
       <div class="section-header">
-        <div class="section-icon secondary">🏢</div>
-        <h2 class="section-title secondary">Leading AI Companies</h2>
+        <h2 class="section-title">Leading AI Companies</h2>
       </div>
 
       <table class="data-table">
@@ -523,98 +328,90 @@
       </table>
     </section>
 
-    <!-- BREAKTHROUGHS -->
     <section class="section" id="breakthroughs">
       <div class="section-header">
-        <div class="section-icon tertiary">🔬</div>
-        <h2 class="section-title tertiary">Technical Breakthroughs</h2>
+        <h2 class="section-title">Technical Breakthroughs</h2>
       </div>
 
       <div class="cards">
-        <article class="card featured">
-          <span class="card-tag tertiary">Quantum + AI</span>
+        <article class="card">
+          <span class="card-tag">Quantum + AI</span>
           <h3 class="card-headline">Google Willow Chip: 105 Qubits with Error-Correction Breakthrough</h3>
           <p class="card-body">Google's Willow chip demonstrated that <strong>adding more qubits reduces error rates</strong> — not increases them. This is a major milestone toward practical quantum computing and could accelerate AI training in the future.</p>
         </article>
 
-        <article class="card featured">
-          <span class="card-tag secondary">Fidelity Record</span>
+        <article class="card">
+          <span class="card-tag">Fidelity Record</span>
           <h3 class="card-headline">Infleqtion + UW-Madison: 99.93% Qubit Measurement Fidelity</h3>
           <p class="card-body">Researchers achieved <strong>99.93% qubit measurement fidelity</strong> in neutral-atom quantum systems while preserving quantum states during computation — enabling faster cycles and more reliable operation.</p>
         </article>
 
         <article class="card">
-          <span class="card-tag primary">AI + CRISPR</span>
+          <span class="card-tag">AI + CRISPR</span>
           <h3 class="card-headline">Stanford: AI-Powered CRISPR Speeds Gene Therapy Development</h3>
           <p class="card-body">Stanford Medicine study shows AI is dramatically accelerating CRISPR gene therapy development — turning "sci-fi into reality" for genetic disease treatments.</p>
         </article>
       </div>
     </section>
 
-    <!-- INSIGHTS -->
     <section class="section" id="insights">
       <div class="section-header">
-        <div class="section-icon highlight">🐦</div>
-        <h2 class="section-title highlight">Industry Insights</h2>
+        <h2 class="section-title">Industry Insights</h2>
       </div>
 
       <div class="cards">
-        <article class="card featured">
-          <span class="card-tag highlight">Anthropic CEO</span>
+        <article class="card">
+          <span class="card-tag">Anthropic CEO</span>
           <h3 class="card-headline">"The Adolescence of Technology" — Dario Amodei</h3>
           <p class="card-body">Anthropic CEO on AI risk — sober, not doomer. Powerful AI could be <strong>1-2 years away</strong>: "country of geniuses in a datacenter." AI already writing much of Anthropic's code.</p>
         </article>
 
         <article class="card">
-          <span class="card-tag primary">Productivity Paradox</span>
+          <span class="card-tag">Productivity Paradox</span>
           <h3 class="card-headline">AI Added Just 0.01% to 2025 Productivity Growth</h3>
           <p class="card-meta">Wharton Research via @mg3z3</p>
           <p class="card-body">Only 5% of US firms meaningfully adopted AI. Bureau of Labor Statistics shows <strong>no clear AI productivity signature</strong>. The revolution is still waiting.</p>
         </article>
 
         <article class="card">
-          <span class="card-tag secondary">Copyright Office</span>
+          <span class="card-tag">Copyright Office</span>
           <h3 class="card-headline">2025 Copyright Report: ~1% Training Data Reproduction Rate</h3>
           <p class="card-body">AI models memorize training data patterns, enabling rare reproductions of copyrighted works (~1% in studies). It's not literal storage but "encoded statistics."</p>
         </article>
 
         <article class="card">
-          <span class="card-tag tertiary">Enterprise Split</span>
+          <span class="card-tag">Enterprise Split</span>
           <h3 class="card-headline">Anthropic vs OpenAI: Enterprise vs Consumer Focus</h3>
           <p class="card-body">Anthropic derives <strong>80% of revenue from enterprise</strong> at ~20x P/S ratio. OpenAI is consumer-focused with ~38x P/S ratio. Different bets on AI's commercial future.</p>
         </article>
       </div>
     </section>
 
-    <!-- WHAT TO WATCH -->
     <section class="section" id="watch">
       <div class="section-header">
-        <div class="section-icon primary">🔮</div>
-        <h2 class="section-title primary">What to Watch Tomorrow</h2>
+        <h2 class="section-title">What to Watch Tomorrow</h2>
       </div>
 
       <div class="cards">
         <article class="card">
           <p class="card-body">
-            📄 <strong>OpenAI IPO Filing?</strong> — Speculation intensifying after $830B valuation target<br><br>
-            💰 <strong>Anthropic $10B Raise</strong> — At $350B pre-money valuation<br><br>
-            🔧 <strong>Alphabet Capex Deployment</strong> — $91B starting to flow into AI infrastructure<br><br>
-            🇪🇺 <strong>EU AI Act Enforcement</strong> — August deadline approaching, compliance costs rising<br><br>
-            🤖 <strong>Agentic AI Products</strong> — 2026 expected to be the "Application Layer Awakening"
+            <strong>OpenAI IPO Filing?</strong> — Speculation intensifying after $830B valuation target<br><br>
+            <strong>Anthropic $10B Raise</strong> — At $350B pre-money valuation<br><br>
+            <strong>Alphabet Capex Deployment</strong> — $91B starting to flow into AI infrastructure<br><br>
+            <strong>EU AI Act Enforcement</strong> — August deadline approaching, compliance costs rising<br><br>
+            <strong>Agentic AI Products</strong> — 2026 expected to be the "Application Layer Awakening"
           </p>
         </article>
       </div>
     </section>
 
-    <!-- BOTTOM LINE -->
     <section class="section" id="bottomline">
       <div class="bottom-line">
         <div class="section-header">
-          <div class="section-icon">⚡</div>
           <h2 class="section-title">Bottom Line</h2>
         </div>
         <p>The infrastructure buildout is accelerating at unprecedented scale — $91B from Alphabet alone. But enterprise adoption remains stuck at 5%, creating a massive gap between investment and realized value. The real alpha in 2026 will be in applications, not infrastructure. OpenAI and Anthropic are both "too big to fail" but pursuing different strategies. The next 1-2 years could see AI capabilities that reshape everything.</p>
-        <p style="margin-top: 1rem; font-weight: 700; font-style: normal;">Invest in applications. Watch the adoption curve. Don't confuse capex with value creation.</p>
+        <p style="margin-top: 1rem; font-weight: 600;">Invest in applications. Watch the adoption curve. Don't confuse capex with value creation.</p>
       </div>
     </section>
 

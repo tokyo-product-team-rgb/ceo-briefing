@@ -56,7 +56,7 @@
       
       /* Highlights */
       --highlight-emphasis: #F4E3B1;
-      --highlight-info: #C9D6E8;
+      --highlight-info: #E3EBF5;
       --highlight-warning: #F6E3E1;
       --highlight-brand: #E5FBF8;
       
@@ -168,8 +168,10 @@
     }
 
     .nav-bar a.active {
-      color: var(--text);
-      border-bottom-color: var(--text);
+      color: var(--text-primary);
+      background: #ECEAE7;
+      border-bottom: none;
+      border-radius: 6px;
     }
 
     .nav-bar a:hover:not(.active) {
@@ -244,7 +246,7 @@
     }
 
     .card {
-      background: var(--bg-white);
+      background: var(--bg-secondary);
       border: none;
       border-radius: var(--radius);
       padding: 1.25rem 1.5rem;
@@ -330,9 +332,14 @@
     }
 
     .card-body {
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: var(--text-secondary);
       line-height: 1.6;
+    }
+
+    .list-header {
+      font-weight: 500;
+      color: var(--text-primary);
     }
 
     /* Pills/Tags - newui: no emojis, gray styling */
@@ -647,7 +654,7 @@
       color: var(--text-secondary);
     }
     .indicator-section-score {
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 800;
     }
 
@@ -755,9 +762,9 @@
     }
 
     .sector-tab.active {
-      background: var(--text-primary);
-      color: var(--bg-white);
-      border-color: var(--text-primary);
+      background: var(--bg-hover-darker);
+      color: var(--text-primary);
+      border-color: var(--bg-hover-darker);
     }
   </style>
 </head>
@@ -767,20 +774,9 @@
   <nav class="nav-bar">
     <a href="live.html">Live</a>
     <a href="index.html" class="active">Daily</a>
-    <a href="vc-review.html">VC Review</a>
+    <a href="vc-review.html">Review</a>
     <a href="archive.html">Archive</a>
   </nav>
-
-  <!-- SECTOR TABS - newui: no emojis -->
-  <div class="sector-tabs">
-    <a href="vc-review.html" class="sector-tab">VC</a>
-    <a href="ai-review.html" class="sector-tab">AI</a>
-    <a href="longevity-review.html" class="sector-tab">Longevity</a>
-    <a href="health-wellness-review.html" class="sector-tab">Health</a>
-    <a href="space-review.html" class="sector-tab">Space</a>
-    <a href="energy-review.html" class="sector-tab">Energy</a>
-    <a href="sports-entertainment-review.html" class="sector-tab">Sports</a>
-  </div>
 
   <!-- MASTHEAD -->
   <header class="masthead">
@@ -914,8 +910,8 @@
           <span class="arrow">▸</span> Methodology (85% historical accuracy)
         </div>
         <div class="methodology-content">
-          <p><strong>Zone Thresholds:</strong> 🟢 GREEN 70-100 · 🟡 YELLOW 50-69 · 🟠 ORANGE 35-49 · 🔴 RED 0-34<br><br>
-          <strong>Current assessment:</strong> Score dropped 3.2 points overnight as crypto crashed (BTC −19% YTD), tech selloff deepened (Google CapEx shock), and geopolitical tensions elevated (US-Iran drone incident, Xi-Trump Taiwan call). The Ukraine-Russia POW swap deal provides slight relief. Japan election uncertainty adds to risk.</p>
+          <p>Zone Thresholds: 🟢 GREEN 70-100 · 🟡 YELLOW 50-69 · 🟠 ORANGE 35-49 · 🔴 RED 0-34<br><br>
+          Current assessment: Score dropped 3.2 points overnight as crypto crashed (BTC −19% YTD), tech selloff deepened (Google CapEx shock), and geopolitical tensions elevated (US-Iran drone incident, Xi-Trump Taiwan call). The Ukraine-Russia POW swap deal provides slight relief. Japan election uncertainty adds to risk.</p>
         </div>
       </article>
     </section>
@@ -930,14 +926,14 @@
 
         <!-- KEY SIGNAL -->
         <article class="card fade-in" style="background: #fef2f2; border-color: #dc2626;">
-          <p class="card-body" style="font-size: 0.85rem; color: #991b1b;"><strong>🚨 Key Signal:</strong> Crypto meltdown accelerates — Bitcoin crashed below $70K overnight (now ~$71K), erasing all gains since Trump's election. Silver plunged 17% in a margin-call cascade. Gold consolidating near $5,080 as safe-haven bid absorbs selling pressure. Tech weakness persists after Google's $91.45B CapEx shock spooked markets. The Great Rotation continues: commodities over crypto, value over growth.</p>
+          <p class="card-body" style="font-size: 0.85rem; color: #991b1b;">🚨 Key Signal: Crypto meltdown accelerates — Bitcoin crashed below $70K overnight (now ~$71K), erasing all gains since Trump's election. Silver plunged 17% in a margin-call cascade. Gold consolidating near $5,080 as safe-haven bid absorbs selling pressure. Tech weakness persists after Google's $91.45B CapEx shock spooked markets. The Great Rotation continues: commodities over crypto, value over growth.</p>
         </article>
 
         <!-- EQUITIES -->
         <article class="card fade-in">
           <span class="card-tag market">Equities</span>
           <h3 class="card-headline">Global Markets Under Pressure — Tech Selloff Deepens, Japan Holds</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;">US futures slipping after yesterday's tech-led decline. <strong>The selloff was triggered by</strong> Alphabet's shocking $91.45B CapEx guidance (vs $28B expected), sparking fears the AI infrastructure buildout is spiraling beyond control. Indonesia's market crisis worsens — Jakarta down 14.8% YTD amid manipulation scandal and forced liquidations.</p>
+          <p class="card-body" style="margin-bottom: 0.75rem;">US futures slipping after yesterday's tech-led decline. The selloff was triggered by Alphabet's shocking $91.45B CapEx guidance (vs $28B expected), sparking fears the AI infrastructure buildout is spiraling beyond control. Indonesia's market crisis worsens — Jakarta down 14.8% YTD amid manipulation scandal and forced liquidations.</p>
           <table class="index-table">
             <thead>
               <tr><th>Index</th><th>Level</th><th>Day %</th><th>Week %</th><th>Month %</th><th>YTD %</th></tr>
@@ -960,7 +956,7 @@
         <article class="card featured market fade-in" style="border-left-color: #dc2626;">
           <span class="card-tag" style="background: #fecaca; color: #991b1b;">🚨 Crypto Crash</span>
           <h3 class="card-headline">Bitcoin Crashes Below $70K — Worst Selloff Since FTX Collapse</h3>
-          <p class="card-body">Bitcoin plunged to $69,101 overnight on Bitstamp before recovering slightly to ~$71K. <strong>The crash was caused by</strong> a perfect storm: (1) AI-driven tech rout spillover as risk assets correlate higher, (2) margin calls forcing liquidations across crypto and precious metals, (3) on-chain data showing production costs ($87K) far exceeding current prices — historically a bear market signal. Michael Burry ("Big Short") flagged this exact pattern, warning of a potential drop to low $50Ks. <strong>Key context:</strong> Miners are now underwater, Bhutan's sovereign fund is moving BTC to exchanges (potential selling), and stablecoin balances are drifting lower — all bearish signals.</p>
+          <p class="card-body">Bitcoin plunged to $69,101 overnight on Bitstamp before recovering slightly to ~$71K. The crash was caused by a perfect storm: (1) AI-driven tech rout spillover as risk assets correlate higher, (2) margin calls forcing liquidations across crypto and precious metals, (3) on-chain data showing production costs ($87K) far exceeding current prices — historically a bear market signal. Michael Burry ("Big Short") flagged this exact pattern, warning of a potential drop to low $50Ks. Key context: Miners are now underwater, Bhutan's sovereign fund is moving BTC to exchanges (potential selling), and stablecoin balances are drifting lower — all bearish signals.</p>
           <div class="card-sources"><a class="source-link" href="https://www.coindesk.com/" target="_blank" rel="noopener">CoinDesk <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -968,7 +964,7 @@
         <article class="card fade-in">
           <span class="card-tag market">Commodities</span>
           <h3 class="card-headline">Gold Holds $5,080 as Safe Haven · Silver Crashes 17% in Margin Cascade</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;">Gold is consolidating near $5,080 after recent gains. <strong>Silver's 17% plunge was triggered by</strong> a margin-call cascade — falling crypto collateral forced metal selling in a feedback loop (the exact setup Burry warned about). Oil steady near $71 as US-Iran tensions balanced by Oman talks announcement.</p>
+          <p class="card-body" style="margin-bottom: 0.75rem;">Gold is consolidating near $5,080 after recent gains. Silver's 17% plunge was triggered by a margin-call cascade — falling crypto collateral forced metal selling in a feedback loop (the exact setup Burry warned about). Oil steady near $71 as US-Iran tensions balanced by Oman talks announcement.</p>
           <table class="index-table">
             <thead>
               <tr><th>Commodity</th><th>Price</th><th>Day %</th><th>Week %</th><th>Month %</th><th>YTD %</th></tr>
@@ -988,7 +984,7 @@
         <article class="card fade-in">
           <span class="card-tag market">FX &amp; Bonds</span>
           <h3 class="card-headline">BOE Holds at 3.75% in Split Vote · Yen Steady Ahead of Election</h3>
-          <p class="card-body" style="margin-bottom: 0.75rem;">Bank of England held rates at 3.75% in a surprise 5-4 split vote (4 members wanted a cut). <strong>The dovish split occurred because</strong> UK disinflation is running ahead of schedule, but sticky services inflation kept the majority cautious. ECB expected to hold at 2.00% later today. USD/JPY holding near ¥154.5 as markets await Sunday's Japan election.</p>
+          <p class="card-body" style="margin-bottom: 0.75rem;">Bank of England held rates at 3.75% in a surprise 5-4 split vote (4 members wanted a cut). The dovish split occurred because UK disinflation is running ahead of schedule, but sticky services inflation kept the majority cautious. ECB expected to hold at 2.00% later today. USD/JPY holding near ¥154.5 as markets await Sunday's Japan election.</p>
           <table class="index-table">
             <thead>
               <tr><th>Pair / Rate</th><th>Level</th><th>Day %</th><th>Week %</th><th>YTD %</th></tr>
@@ -1020,7 +1016,7 @@
           <span class="card-tag japan">Semiconductors · Breaking</span>
           <h3 class="card-headline">TSMC Confirms 3nm Chips at Second Japan Plant — Major Upgrade from Initial Plans</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body">TSMC CEO C.C. Wei met PM Takaichi today and confirmed the company will produce <strong>3-nanometer advanced chips</strong> at its second Kumamoto fab — a significant upgrade from the initially planned 6nm process. <strong>The decision was driven by</strong> surging global AI chip demand and Japan's strategic importance as a geopolitically stable production base amid US-China tech decoupling. PM Takaichi welcomed the move, pledging close cooperation. <strong>Why it matters:</strong> Combined with Rapidus topping $1B in private investment (with IBM set to join), Japan is rapidly cementing its position as the third pillar of global advanced semiconductor manufacturing.</p>
+          <p class="card-body">TSMC CEO C.C. Wei met PM Takaichi today and confirmed the company will produce 3-nanometer advanced chips at its second Kumamoto fab — a significant upgrade from the initially planned 6nm process. The decision was driven by surging global AI chip demand and Japan's strategic importance as a geopolitically stable production base amid US-China tech decoupling. PM Takaichi welcomed the move, pledging close cooperation. Why it matters: Combined with Rapidus topping $1B in private investment (with IBM set to join), Japan is rapidly cementing its position as the third pillar of global advanced semiconductor manufacturing.</p>
           <div class="card-sources"><a class="source-link" href="https://english.kyodonews.net/articles/-/69897" target="_blank" rel="noopener">Kyodo News <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1029,7 +1025,7 @@
           <span class="card-tag japan">Politics · Election</span>
           <h3 class="card-headline">Sunday Election: Takaichi's Youth Surge Meets "Different Kind of PM" Hopes</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body">Japan heads to the polls Sunday with PM Sanae Takaichi seeking a mandate for her nationalist-economic agenda. <strong>The unexpected development:</strong> Takaichi has sparked genuine hope among Japan's disaffected youth, with her "different kind of PM" image resonating with voters tired of the gerontocratic LDP establishment. Nearly 40% of candidates support foreign worker curbs — <strong>driven by</strong> rising concerns over wage competition and cultural anxieties amid Japan's largest-ever immigration wave. <strong>Key watch:</strong> Her defense spending plans are under sharp focus amid Trump's Taiwan pressure on allies.</p>
+          <p class="card-body">Japan heads to the polls Sunday with PM Sanae Takaichi seeking a mandate for her nationalist-economic agenda. The unexpected development: Takaichi has sparked genuine hope among Japan's disaffected youth, with her "different kind of PM" image resonating with voters tired of the gerontocratic LDP establishment. Nearly 40% of candidates support foreign worker curbs — driven by rising concerns over wage competition and cultural anxieties amid Japan's largest-ever immigration wave. Key watch: Her defense spending plans are under sharp focus amid Trump's Taiwan pressure on allies.</p>
           <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/japan-election/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1038,7 +1034,7 @@
           <span class="card-tag japan">Geopolitics · China</span>
           <h3 class="card-headline">Xi's Power Struggle Sends Ripples Through Japan's Election</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body">Xi Jinping's purge of Gen. Zhang Youxia — a rare challenge to China's military leadership — is coinciding with Takaichi's election campaign in ways that benefit her nationalist platform. <strong>The connection:</strong> China's internal instability validates Takaichi's calls for increased defense spending and closer US ties, while also raising concerns about unpredictable Chinese behavior in the Taiwan Strait. Meanwhile, Xi told Trump to be "prudent" about Taiwan arms sales in their first call since November — <strong>signaling</strong> Beijing's unease with the deepening US-Taiwan military relationship.</p>
+          <p class="card-body">Xi Jinping's purge of Gen. Zhang Youxia — a rare challenge to China's military leadership — is coinciding with Takaichi's election campaign in ways that benefit her nationalist platform. The connection: China's internal instability validates Takaichi's calls for increased defense spending and closer US ties, while also raising concerns about unpredictable Chinese behavior in the Taiwan Strait. Meanwhile, Xi told Trump to be "prudent" about Taiwan arms sales in their first call since November — signaling Beijing's unease with the deepening US-Taiwan military relationship.</p>
           <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/editor-s-picks/china-up-close/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/articles/c62wpjd3j1zo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1047,7 +1043,7 @@
           <span class="card-tag japan">Automotive</span>
           <h3 class="card-headline">Toyota Plans 30% Global Hybrid Production Increase</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body">Toyota announced plans to boost global hybrid vehicle production by 30%. <strong>The expansion is motivated by</strong> the company's vindicated bet that hybrids would bridge the EV transition — hybrid demand is surging in markets where charging infrastructure lags (US, Southeast Asia, India), while pure EV adoption slows in Europe amid range anxiety and grid concerns. <strong>Strategic angle:</strong> As competitors scramble to pivot from all-in EV strategies, Toyota's hybrid dominance positions it to capture market share during the "great recalibration" of the EV transition timeline.</p>
+          <p class="card-body">Toyota announced plans to boost global hybrid vehicle production by 30%. The expansion is motivated by the company's vindicated bet that hybrids would bridge the EV transition — hybrid demand is surging in markets where charging infrastructure lags (US, Southeast Asia, India), while pure EV adoption slows in Europe amid range anxiety and grid concerns. Strategic angle: As competitors scramble to pivot from all-in EV strategies, Toyota's hybrid dominance positions it to capture market share during the "great recalibration" of the EV transition timeline.</p>
           <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/automobiles/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1056,7 +1052,7 @@
           <span class="card-tag japan">Tech · Earnings</span>
           <h3 class="card-headline">Sony Lifts Profit Outlook — Chip Demand and IP Gains Drive Upgrade</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body">Sony raised its full-year profit outlook, <strong>propelled by</strong> stronger-than-expected demand for image sensors (used in AI-enabled smartphones and vehicles) and gains from intellectual property monetization. As the AI boom spreads beyond chips to edge devices that capture data, Sony's sensor division — which dominates high-end smartphone cameras — is emerging as an unexpected AI beneficiary.</p>
+          <p class="card-body">Sony raised its full-year profit outlook, propelled by stronger-than-expected demand for image sensors (used in AI-enabled smartphones and vehicles) and gains from intellectual property monetization. As the AI boom spreads beyond chips to edge devices that capture data, Sony's sensor division — which dominates high-end smartphone cameras — is emerging as an unexpected AI beneficiary.</p>
           <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/media-entertainment/sony-lifts-full-year-profit-outlook-on-chip-demand-ip-gain" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1065,7 +1061,7 @@
           <span class="card-tag japan">Finance · Demographics</span>
           <h3 class="card-headline">Life Insurers Plan for "108-Year-Olds" — Longevity Breaks Product Design</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body">Major Japanese life insurers are reviewing policies for customers who may exceed 108 years old — the age ceiling built into many legacy products. <strong>The review was forced by</strong> Japan's world-leading longevity: current centenarians (90,000+) were born when life expectancy was 45 years, and the math for perpetual premium payments is breaking down. <strong>Implication:</strong> A symbol of how Japan's "super-aged society" is forcing industries to rethink fundamental assumptions about the human lifespan.</p>
+          <p class="card-body">Major Japanese life insurers are reviewing policies for customers who may exceed 108 years old — the age ceiling built into many legacy products. The review was forced by Japan's world-leading longevity: current centenarians (90,000+) were born when life expectancy was 45 years, and the math for perpetual premium payments is breaking down. Implication: A symbol of how Japan's "super-aged society" is forcing industries to rethink fundamental assumptions about the human lifespan.</p>
           <div class="card-sources"><a class="source-link" href="https://www.nikkei.com/article/DGXZQOUB026KT0S6A200C2000000/" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1085,7 +1081,7 @@
           <span class="card-tag geo">🇺🇸 North America</span>
           <h3 class="card-headline">Google's $91B CapEx Shock · Trump Critical Minerals Reserve · ICE Tensions</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body"><strong>1. Alphabet earnings spooked markets</strong> when CapEx guidance hit $91.45B — 3x analyst estimates — fueling fears of an AI infrastructure bubble where hyperscalers chase compute regardless of returns. Revenue was strong but ignored. <strong>2. Trump unveiled a $12B critical minerals stockpile</strong> to counter China's dominance, funded by tariff revenues and focused on rare earths essential for EVs and defense. <strong>3. ICE tensions escalated</strong> in Minneapolis after deadly incidents; a 10-year-old Minnesota girl was released after a month in detention, intensifying the political firestorm around immigration enforcement.</p>
+          <p class="card-body"><span class="list-header">1. Alphabet earnings spooked markets:</span> CapEx guidance hit $91.45B — 3x analyst estimates — fueling fears of an AI infrastructure bubble where hyperscalers chase compute regardless of returns. Revenue was strong but ignored.<br><br><span class="list-header">2. Trump unveiled a $12B critical minerals stockpile:</span> Countering China's dominance, funded by tariff revenues and focused on rare earths essential for EVs and defense.<br><br><span class="list-header">3. ICE tensions escalated in Minneapolis:</span> Deadly incidents intensified; a 10-year-old Minnesota girl was released after a month in detention, fueling the political firestorm around immigration enforcement.</p>
           <div class="card-sources"><a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1094,7 +1090,7 @@
           <span class="card-tag geo">🇪🇺 Europe</span>
           <h3 class="card-headline">Ukraine-Russia POW Swap · Starmer's Mandelson Crisis · BOE Holds</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body"><strong>1. "Productive" US-led talks in Abu Dhabi</strong> yielded a Ukraine-Russia prisoner exchange deal (314 POWs), the first tangible progress since Trump's envoy took over negotiations. <strong>The breakthrough came because</strong> both sides need to show constituents something amid war fatigue. <strong>2. PM Starmer apologized to Epstein victims</strong> for appointing Peter Mandelson as US ambassador, admitting he "believed his lies" about the Epstein relationship. The scandal is roiling British politics with calls to withdraw the nomination. <strong>3. BOE kept rates at 3.75%</strong> but the 5-4 split (4 wanted cuts) signals UK disinflation is running ahead of expectations.</p>
+          <p class="card-body"><span class="list-header">1. Ukraine-Russia POW Swap:</span> "Productive" US-led talks in Abu Dhabi yielded a prisoner exchange deal (314 POWs), the first tangible progress since Trump's envoy took over negotiations. The breakthrough came because both sides need to show constituents something amid war fatigue.<br><br><span class="list-header">2. Starmer's Mandelson Crisis:</span> PM Starmer apologized to Epstein victims for appointing Peter Mandelson as US ambassador, admitting he "believed his lies" about the Epstein relationship. The scandal is roiling British politics with calls to withdraw the nomination.<br><br><span class="list-header">3. BOE Holds at 3.75%:</span> The 5-4 split (4 wanted cuts) signals UK disinflation is running ahead of expectations.</p>
           <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/live/czx3lq460n6t" target="_blank" rel="noopener">BBC Live <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.dw.com/" target="_blank" rel="noopener">DW <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1103,7 +1099,7 @@
           <span class="card-tag geo">🌏 Asia ex-Japan</span>
           <h3 class="card-headline">Xi Warns Trump on Taiwan · Thailand Election Sunday · Pakistan Balochistan Attacks</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body"><strong>1. Xi told Trump to be "prudent"</strong> about Taiwan arms sales in their first call since November. Taiwan's President Lai insisted ties with Washington are "rock solid," but the call stirred unease in Taipei about potential dealmaking over their heads. <strong>2. Thailand heads to polls Sunday</strong> with the opposition People's Party leading in polls — the same movement whose predecessor was dissolved by the courts. A win would test the military-royalist establishment's tolerance. <strong>3. Pakistan's Balochistan violence surged</strong> with 250+ killed in coordinated insurgent attacks; Islamabad blames "India-backed elements" and rules out negotiations.</p>
+          <p class="card-body"><span class="list-header">1. Xi Warns Trump on Taiwan:</span> Xi told Trump to be "prudent" about Taiwan arms sales in their first call since November. Taiwan's President Lai insisted ties with Washington are "rock solid," but the call stirred unease in Taipei about potential dealmaking over their heads.<br><br><span class="list-header">2. Thailand Election Sunday:</span> Thailand heads to polls Sunday with the opposition People's Party leading in polls — the same movement whose predecessor was dissolved by the courts. A win would test the military-royalist establishment's tolerance.<br><br><span class="list-header">3. Pakistan Balochistan Attacks:</span> Violence surged with 250+ killed in coordinated insurgent attacks; Islamabad blames "India-backed elements" and rules out negotiations.</p>
           <div class="card-sources"><a class="source-link" href="https://www.scmp.com/" target="_blank" rel="noopener">SCMP <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1112,7 +1108,7 @@
           <span class="card-tag geo">🌍 Middle East & Africa</span>
           <h3 class="card-headline">US-Iran Drone Incident · Gaza Strikes Continue · Nigeria Massacre 160+</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body"><strong>1. US shot down an Iranian drone</strong> approaching an aircraft carrier in the Arabian Sea — the latest escalation before Friday's critical Oman talks. Iran conditionally agreed to negotiate but warned of "regional war" if attacked. Trump warned Khamenei to be "very worried." <strong>2. Israeli strikes killed 20+ in Gaza</strong> after a soldier was wounded by gunfire, despite the ceasefire. Rafah crossing reopened but only a handful of patients have crossed. <strong>3. Gunmen killed 160+ in Nigeria's Kwara and Katsina states</strong> — victims were rounded up, bound, and shot in one of the worst civilian massacres this year.</p>
+          <p class="card-body"><span class="list-header">1. US-Iran Drone Incident:</span> US shot down an Iranian drone approaching an aircraft carrier in the Arabian Sea — the latest escalation before Friday's critical Oman talks. Iran conditionally agreed to negotiate but warned of "regional war" if attacked. Trump warned Khamenei to be "very worried."<br><br><span class="list-header">2. Gaza Strikes Continue:</span> Israeli strikes killed 20+ in Gaza after a soldier was wounded by gunfire, despite the ceasefire. Rafah crossing reopened but only a handful of patients have crossed.<br><br><span class="list-header">3. Nigeria Massacre 160+:</span> Gunmen killed 160+ in Nigeria's Kwara and Katsina states — victims were rounded up, bound, and shot in one of the worst civilian massacres this year.</p>
           <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/world/middle_east" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1121,7 +1117,7 @@
           <span class="card-tag geo">🌎 Latin America</span>
           <h3 class="card-headline">Venezuela's Saab Detained · Costa Rica Elects Crime-Fighter · Panama-China Canal Row</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body"><strong>1. Alex Saab, Maduro's alleged financial fixer, was reportedly detained</strong> in Caracas by FBI and Venezuelan intelligence — along with billionaire media mogul Raúl Gorrín — signaling the post-Maduro cleanup is accelerating. <strong>2. Laura Fernández won Costa Rica's presidency</strong> in the first round on a tough-on-crime platform, <strong>propelled by</strong> voter fears over rising organized crime and cartel influence. <strong>3. Panama's president pushed back against China</strong> after Beijing threatened retaliation over canal port ownership disputes — insisting Panama has an "independent court system" and won't bow to pressure.</p>
+          <p class="card-body"><span class="list-header">1. Venezuela's Saab Detained:</span> Alex Saab, Maduro's alleged financial fixer, was reportedly detained in Caracas by FBI and Venezuelan intelligence — along with billionaire media mogul Raúl Gorrín — signaling the post-Maduro cleanup is accelerating.<br><br><span class="list-header">2. Costa Rica Elects Crime-Fighter:</span> Laura Fernández won Costa Rica's presidency in the first round on a tough-on-crime platform, propelled by voter fears over rising organized crime and cartel influence.<br><br><span class="list-header">3. Panama-China Canal Row:</span> Panama's president pushed back against China after Beijing threatened retaliation over canal port ownership disputes — insisting Panama has an "independent court system" and won't bow to pressure.</p>
           <div class="card-sources"><a class="source-link" href="https://www.theguardian.com/world/americas" target="_blank" rel="noopener">Guardian <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/world/latin_america" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1130,7 +1126,7 @@
           <span class="card-tag geo">🌏 Oceania</span>
           <h3 class="card-headline">Australia AUKUS Doubts · Teen Hero Saves Family · Child Abuse Arrest</h3>
           <div class="tap-hint">Tap to read more</div>
-          <p class="card-body"><strong>1. US congressional report explored "not delivering" AUKUS subs to Australia</strong> at all — raising alarm bells in Canberra about the deal's durability. <strong>The concern stems from</strong> US submarine production capacity constraints and Trump-era allies-pay-their-way rhetoric. <strong>2. A 13-year-old boy swam 4 hours to shore</strong> to save his mother and siblings after their kayak was swept out to sea in Western Australia — hailed as a national hero. <strong>3. Police charged a man with abuse of 459 children</strong> in one of Australia's worst pedophilia cases, with victims spanning decades.</p>
+          <p class="card-body"><span class="list-header">1. Australia AUKUS Doubts:</span> US congressional report explored "not delivering" AUKUS subs to Australia at all — raising alarm bells in Canberra about the deal's durability. The concern stems from US submarine production capacity constraints and Trump-era allies-pay-their-way rhetoric.<br><br><span class="list-header">2. Teen Hero Saves Family:</span> A 13-year-old boy swam 4 hours to shore to save his mother and siblings after their kayak was swept out to sea in Western Australia — hailed as a national hero.<br><br><span class="list-header">3. Child Abuse Arrest:</span> Police charged a man with abuse of 459 children in one of Australia's worst pedophilia cases, with victims spanning decades.</p>
           <div class="card-sources"><a class="source-link" href="https://www.theguardian.com/australia-news" target="_blank" rel="noopener">Guardian Australia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/world/australia" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
         </article>
 
@@ -1149,12 +1145,12 @@
           <span class="card-tag predict">Week Ahead</span>
           <h3 class="card-headline">Critical Events: Feb 6-12</h3>
           <p class="card-body">
-            <strong>🇮🇹 Feb 6:</strong> Winter Olympics opening ceremony (Cortina) — watch for geopolitical overtones amid Russia ban.<br>
-            <strong>🇺🇸🇮🇷 Feb 7:</strong> US-Iran talks in Oman — the week's biggest swing factor. Success = oil down, risk-on; failure = escalation fears spike.<br>
-            <strong>🇯🇵 Feb 8:</strong> Japan general election — Takaichi expected to win; watch margin for mandate strength.<br>
-            <strong>🇹🇭 Feb 9:</strong> Thailand election — opposition leads polls; establishment response if they win is the real story.<br>
-            <strong>🇺🇸 Feb 12:</strong> US CPI data — Fed's next move hinges on whether January inflation stays sticky.<br>
-            <strong>📊 Expected moves:</strong> BTC likely to test $65K support if risk-off continues; gold could break $5,200 on Iran escalation; Nikkei could rally 3-5% on clear Takaichi victory.
+            🇮🇹 Feb 6: Winter Olympics opening ceremony (Cortina) — watch for geopolitical overtones amid Russia ban.<br>
+            🇺🇸🇮🇷 Feb 7: US-Iran talks in Oman — the week's biggest swing factor. Success = oil down, risk-on; failure = escalation fears spike.<br>
+            🇯🇵 Feb 8: Japan general election — Takaichi expected to win; watch margin for mandate strength.<br>
+            🇹🇭 Feb 9: Thailand election — opposition leads polls; establishment response if they win is the real story.<br>
+            🇺🇸 Feb 12: US CPI data — Fed's next move hinges on whether January inflation stays sticky.<br>
+            📊 Expected moves: BTC likely to test $65K support if risk-off continues; gold could break $5,200 on Iran escalation; Nikkei could rally 3-5% on clear Takaichi victory.
           </p>
         </article>
 
@@ -1162,11 +1158,11 @@
           <span class="card-tag predict">2026 Outlook</span>
           <h3 class="card-headline">Major Themes Shaping the Year</h3>
           <p class="card-body">
-            <strong>🔄 The Great Recalibration:</strong> AI infrastructure spending ($91B CapEx shocks) will separate winners from bubble casualties. Expect hyperscaler capex discipline to become THE narrative by Q2.<br>
-            <strong>🪙 Crypto Winter 2.0:</strong> Bitcoin below production costs signals potential extended bear market. Watch for miner capitulation and institutional exits if $60K breaks.<br>
-            <strong>🇯🇵 Japan's Chip Renaissance:</strong> TSMC 3nm + Rapidus 2nm = Japan as third global semiconductor pillar by 2027. Defense and economic security driving policy.<br>
-            <strong>🇮🇷 Iran Endgame:</strong> 2026 is decision year — either a negotiated deal or military confrontation. No more "strategic patience."<br>
-            <strong>🏠 Rate Cut Disappointment:</strong> Central banks will cut less than markets expect. Sticky services inflation + resilient labor = higher-for-longer reality sets in.
+            🔄 The Great Recalibration: AI infrastructure spending ($91B CapEx shocks) will separate winners from bubble casualties. Expect hyperscaler capex discipline to become THE narrative by Q2.<br>
+            🪙 Crypto Winter 2.0: Bitcoin below production costs signals potential extended bear market. Watch for miner capitulation and institutional exits if $60K breaks.<br>
+            🇯🇵 Japan's Chip Renaissance: TSMC 3nm + Rapidus 2nm = Japan as third global semiconductor pillar by 2027. Defense and economic security driving policy.<br>
+            🇮🇷 Iran Endgame: 2026 is decision year — either a negotiated deal or military confrontation. No more "strategic patience."<br>
+            🏠 Rate Cut Disappointment: Central banks will cut less than markets expect. Sticky services inflation + resilient labor = higher-for-longer reality sets in.
           </p>
         </article>
 
