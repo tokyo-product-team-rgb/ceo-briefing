@@ -529,6 +529,34 @@
       margin-top: 0.1rem;
     }
 
+    .indicator-section {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .indicator-section:first-of-type {
+      margin-top: 1rem;
+      padding-top: 0;
+      border-top: none;
+    }
+    .indicator-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .indicator-section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+    }
+    .indicator-section-score {
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
     .methodology-toggle {
       font-size: 0.75rem;
       font-weight: 600;
@@ -943,7 +971,7 @@
         <!-- HEALTH SCORE -->
         <article class="card featured market fade-in">
           <span class="card-tag market">Health Score</span>
-          <h3 class="card-headline">Economic Health Composite — Holding Steady</h3>
+          <h3 class="card-headline">Economic Health Composite — Caution</h3>
           <div class="health-gauge-wrap">
             <div class="health-gauge">
               <div class="gauge-bg"></div>
@@ -956,62 +984,135 @@
               <span>50</span>
               <span>100</span>
             </div>
-            <div class="gauge-score" id="gaugeScore">54</div>
-            <div class="gauge-score-label">out of 100</div>
+            <div class="gauge-score" id="gaugeScore">67</div>
+            <div class="gauge-score-label">out of 100 · 🟡 YELLOW ZONE</div>
             <div class="score-changes">
               <div class="score-change">
-                <span class="change-label">Daily</span>
-                <span class="change-value chg-pos">+0.5</span>
-              </div>
-              <div class="score-change">
-                <span class="change-label">Weekly</span>
+                <span class="change-label">Daily Δ</span>
                 <span class="change-value chg-pos">+1.2</span>
               </div>
               <div class="score-change">
-                <span class="change-label">Monthly</span>
-                <span class="change-value chg-neg">−2.3</span>
+                <span class="change-label">Weekly Δ</span>
+                <span class="change-value chg-neg">−0.8</span>
+              </div>
+              <div class="score-change">
+                <span class="change-label">Monthly Δ</span>
+                <span class="change-value chg-pos">+2.1</span>
               </div>
             </div>
           </div>
-          <div class="indicator-grid">
-            <div class="indicator-item">
-              <div class="indicator-value">4.4%</div>
-              <div class="indicator-name">GDP Growth (Q3)</div>
-              <div class="indicator-sub chg-pos">▲ Strong</div>
+
+          <!-- DAILY INDICATORS (Real-time crash detection) -->
+          <div class="indicator-section">
+            <div class="indicator-section-header">
+              <span class="indicator-section-title">⚡ Daily Indicators</span>
+              <span class="indicator-section-score chg-pos">72</span>
             </div>
-            <div class="indicator-item">
-              <div class="indicator-value">4.4%</div>
-              <div class="indicator-name">Unemployment</div>
-              <div class="indicator-sub chg-neg">▲ Elevated</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">2.7%</div>
-              <div class="indicator-name">CPI Inflation</div>
-              <div class="indicator-sub" style="color: var(--text-muted);">● Above Target</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">56.4</div>
-              <div class="indicator-name">Consumer Sent.</div>
-              <div class="indicator-sub chg-neg">▼ Weak</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">51.9</div>
-              <div class="indicator-name">Mfg PMI</div>
-              <div class="indicator-sub chg-pos">▲ Expanding</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">17.7</div>
-              <div class="indicator-name">VIX</div>
-              <div class="indicator-sub chg-neg">▲ Elevated</div>
+            <div class="indicator-grid">
+              <div class="indicator-item">
+                <div class="indicator-value">+0.4%</div>
+                <div class="indicator-name">S&P 500</div>
+                <div class="indicator-sub chg-pos">▲ Recovering</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">17.7</div>
+                <div class="indicator-name">VIX</div>
+                <div class="indicator-sub chg-neg">▲ Elevated</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">+0.32%</div>
+                <div class="indicator-name">10Y-2Y Spread</div>
+                <div class="indicator-sub" style="color: var(--text-muted);">● Normalizing</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">1.12%</div>
+                <div class="indicator-name">Credit Spread</div>
+                <div class="indicator-sub chg-pos">▼ Tight</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">107.8</div>
+                <div class="indicator-name">Dollar (DXY)</div>
+                <div class="indicator-sub" style="color: var(--text-muted);">● Stable</div>
+              </div>
             </div>
           </div>
+
+          <!-- WEEKLY INDICATORS (Early warning) -->
+          <div class="indicator-section">
+            <div class="indicator-section-header">
+              <span class="indicator-section-title">📅 Weekly Indicators</span>
+              <span class="indicator-section-score" style="color: var(--text-muted);">65</span>
+            </div>
+            <div class="indicator-grid">
+              <div class="indicator-item">
+                <div class="indicator-value">219K</div>
+                <div class="indicator-name">Jobless Claims</div>
+                <div class="indicator-sub chg-pos">▼ Low</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">−2.1%</div>
+                <div class="indicator-name">Mortgage Apps</div>
+                <div class="indicator-sub chg-neg">▼ Declining</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">$3.12</div>
+                <div class="indicator-name">Gas Price</div>
+                <div class="indicator-sub chg-pos">▼ Easing</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">+1.8%</div>
+                <div class="indicator-name">Rail Traffic</div>
+                <div class="indicator-sub chg-pos">▲ Growing</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MONTHLY INDICATORS (Trend confirmation) -->
+          <div class="indicator-section">
+            <div class="indicator-section-header">
+              <span class="indicator-section-title">📊 Monthly Indicators</span>
+              <span class="indicator-section-score chg-neg">62</span>
+            </div>
+            <div class="indicator-grid">
+              <div class="indicator-item">
+                <div class="indicator-value">4.4%</div>
+                <div class="indicator-name">GDP Growth</div>
+                <div class="indicator-sub chg-pos">▲ Strong</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">4.4%</div>
+                <div class="indicator-name">Unemployment</div>
+                <div class="indicator-sub" style="color: var(--text-muted);">● Stable</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">2.7%</div>
+                <div class="indicator-name">CPI Inflation</div>
+                <div class="indicator-sub chg-neg">▲ Above Target</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">56.4</div>
+                <div class="indicator-name">Consumer Sent.</div>
+                <div class="indicator-sub chg-neg">▼ Weak</div>
+              </div>
+              <div class="indicator-item">
+                <div class="indicator-value">51.9</div>
+                <div class="indicator-name">Mfg PMI</div>
+                <div class="indicator-sub" style="color: var(--text-muted);">● Barely Expanding</div>
+              </div>
+            </div>
+          </div>
+
           <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            <span class="arrow">▸</span> How is this calculated?
+            <span class="arrow">▸</span> Methodology & Backtest Results
           </div>
           <div class="methodology-content">
-            <p>Composite of 7 components: <strong>GDP Growth</strong> (20%), <strong>Employment</strong> (20%), <strong>Inflation</strong> (15%), <strong>Consumer Confidence</strong> (15%), <strong>Manufacturing</strong> (10%), <strong>Market Conditions</strong> (10%), <strong>Leading Indicators</strong> (10%). Score unchanged at 54 — yesterday's volatility spike is being absorbed as US-Iran diplomacy reduces tail risk. Tech sector rotation continues but is orderly. Alphabet's capex shock signals AI investment cycle has further to run, which supports semiconductor and infrastructure plays even as software faces disruption risk.</p>
+            <p><strong>Zone Thresholds (backtested 2007-2025):</strong> 🟢 GREEN 70-100 (Expansion) · 🟡 YELLOW 45-69 (Caution) · 🔴 RED 0-44 (Crisis)<br><br>
+            <strong>Historical validation:</strong> Score correctly hit RED (27-33) during 2008 GFC and COVID crash (30). Current YELLOW at 67 reflects strong GDP but weak consumer sentiment — a divergence that historically precedes slowdowns.<br><br>
+            <strong>Daily (40%):</strong> S&P 500, VIX, Yield Curve, Credit Spreads, Dollar<br>
+            <strong>Weekly (25%):</strong> Jobless Claims, Mortgage Apps, Gas Prices, Rail Traffic<br>
+            <strong>Monthly (35%):</strong> GDP, Unemployment, CPI, Consumer Sentiment, PMI</p>
           </div>
-          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a></div>
+          <div class="card-sources"><a class="source-link" href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bls.gov/" target="_blank" rel="noopener">BLS <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="backtest-economic-health.md" target="_blank" rel="noopener">Full Backtest <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- EQUITIES -->
@@ -1190,7 +1291,7 @@
   <script>
     // Health gauge needle
     document.addEventListener('DOMContentLoaded', () => {
-      const score = 54;
+      const score = 67;
       const angle = -90 + (score / 100) * 180;
       const needle = document.getElementById('gaugeNeedle');
       if (needle) {
