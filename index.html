@@ -303,6 +303,22 @@
       margin: 0;
       overflow: hidden;
     }
+    .card.collapsible .card-sources {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      border: none;
+      transition: max-height 0.3s ease, opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .card-sources {
+      max-height: 100px;
+      opacity: 1;
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--line-subtle);
+    }
 
     .card-headline {
       font-family: var(--serif);
