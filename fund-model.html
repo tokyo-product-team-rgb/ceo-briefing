@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fund Portfolio Model — X&Circle II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e8e5e1;
+      --accent: #1e3a5f;
+      --accent-light: #e0f2fe;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --radius: 8px;
+      --green: #16a34a;
+      --red: #dc2626;
+      --yellow: #ca8a04;
+    }
+
+    html { font-size: 16px; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1.5rem;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-bar a.active {
+      color: var(--text);
+      border-bottom-color: var(--text);
+    }
+    .nav-bar a:hover:not(.active) { color: var(--text-secondary); }
+
+    .masthead {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .masthead-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .masthead .overline {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .masthead .subtitle {
+      color: var(--text-secondary);
+      margin-top: 0.5rem;
+    }
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+      color: var(--accent);
+    }
+
+    .input-group {
+      margin-bottom: 1.25rem;
+    }
+    .input-group:last-child { margin-bottom: 0; }
+
+    .input-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .input-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    input[type="number"], input[type="text"] {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      font-size: 0.95rem;
+      font-family: var(--sans);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text);
+    }
+    input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(30,58,95,0.1);
+    }
+
+    input[type="range"] {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--border);
+      appearance: none;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+    }
+
+    .slider-value {
+      min-width: 60px;
+      text-align: right;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* Output Cards */
+    .output-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 600px) {
+      .output-grid { grid-template-columns: 1fr; }
+    }
+
+    .output-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: center;
+    }
+    .output-card.highlight {
+      background: var(--accent-light);
+      border-color: var(--accent);
+    }
+    .output-card.success {
+      background: #dcfce7;
+      border-color: var(--green);
+    }
+    .output-card.warning {
+      background: #fef9c3;
+      border-color: var(--yellow);
+    }
+    .output-card.danger {
+      background: #fee2e2;
+      border-color: var(--red);
+    }
+
+    .output-value {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .output-value.green { color: var(--green); }
+    .output-value.red { color: var(--red); }
+    .output-value.yellow { color: var(--yellow); }
+
+    .output-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    /* Breakdown Table */
+    .breakdown-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .breakdown-table th {
+      text-align: left;
+      padding: 0.6rem 0.5rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 2px solid var(--border);
+    }
+    .breakdown-table td {
+      padding: 0.65rem 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .breakdown-table tr:last-child td { border-bottom: none; }
+    .breakdown-table .engine { font-weight: 600; }
+    .breakdown-table .num { text-align: right; font-weight: 600; }
+    .breakdown-table .pos { color: var(--green); }
+    .breakdown-table .neg { color: var(--red); }
+
+    .breakdown-table tfoot td {
+      font-weight: 700;
+      border-top: 2px solid var(--border);
+      background: var(--bg);
+    }
+
+    /* Scenario Status */
+    .scenario-status {
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .scenario-status.success {
+      background: #dcfce7;
+      border: 1px solid var(--green);
+      color: #166534;
+    }
+    .scenario-status.warning {
+      background: #fef9c3;
+      border: 1px solid var(--yellow);
+      color: #854d0e;
+    }
+    .scenario-status.danger {
+      background: #fee2e2;
+      border: 1px solid var(--red);
+      color: #991b1b;
+    }
+    .scenario-status strong { font-weight: 700; }
+
+    /* Sensitivity */
+    .sensitivity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .sensitivity-item {
+      background: var(--bg);
+      border-radius: 6px;
+      padding: 0.75rem;
+    }
+    .sensitivity-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .sensitivity-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-top: 0.2rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="live.html">Live</a>
+    <a href="index.html">Daily</a>
+    <a href="vc-review.html">VC Review</a>
+    <a href="fund-model.html" class="active">Fund Model</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="overline">Portfolio Construction Tool</div>
+      <h1>Fund Model Simulator</h1>
+      <p class="subtitle">Adjust assumptions to stress-test portfolio economics</p>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+
+      <!-- INPUTS PANEL -->
+      <div class="panel">
+        <h2 class="panel-title">📊 Assumptions</h2>
+
+        <!-- Fund Basics -->
+        <div class="input-group">
+          <label class="input-label">Fund Size ($M)</label>
+          <input type="number" id="fundSize" value="1000" min="100" max="5000" step="50">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Management Fee (%)</label>
+          <div class="input-row">
+            <input type="range" id="mgmtFee" value="2" min="1" max="3" step="0.25">
+            <span class="slider-value" id="mgmtFeeVal">2%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Fund Life (Years)</label>
+          <input type="number" id="fundLife" value="10" min="5" max="15">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Target Net MOIC</label>
+          <input type="number" id="targetMoic" value="5" min="2" max="10" step="0.5">
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Allocation -->
+        <div class="input-group">
+          <label class="input-label">Discovery Allocation (%)</label>
+          <div class="input-row">
+            <input type="range" id="discoveryPct" value="15" min="5" max="30" step="1">
+            <span class="slider-value" id="discoveryPctVal">15%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Core Allocation (%)</label>
+          <div class="input-row">
+            <input type="range" id="corePct" value="73" min="50" max="85" step="1">
+            <span class="slider-value" id="corePctVal">73%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Breakout Allocation (%)</label>
+          <div class="input-row">
+            <input type="range" id="breakoutPct" value="12" min="5" max="25" step="1">
+            <span class="slider-value" id="breakoutPctVal">12%</span>
+          </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Position Counts -->
+        <div class="input-group">
+          <label class="input-label">Discovery Positions</label>
+          <input type="number" id="discoveryCount" value="146" min="20" max="300">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Core Positions</label>
+          <input type="number" id="coreCount" value="10" min="5" max="30">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Breakout Positions</label>
+          <input type="number" id="breakoutCount" value="3" min="1" max="10">
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Return Assumptions -->
+        <div class="input-group">
+          <label class="input-label">Discovery Avg Multiple (survivors)</label>
+          <input type="number" id="discoveryMult" value="8" min="1" max="50" step="0.5">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Core Avg Multiple</label>
+          <input type="number" id="coreMult" value="12" min="2" max="30" step="0.5">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Breakout Avg Multiple</label>
+          <input type="number" id="breakoutMult" value="25" min="5" max="100" step="1">
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Loss Rates -->
+        <div class="input-group">
+          <label class="input-label">Discovery Loss Rate (%)</label>
+          <div class="input-row">
+            <input type="range" id="discoveryLoss" value="60" min="30" max="80" step="5">
+            <span class="slider-value" id="discoveryLossVal">60%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Core Loss Rate (%)</label>
+          <div class="input-row">
+            <input type="range" id="coreLoss" value="30" min="10" max="50" step="5">
+            <span class="slider-value" id="coreLossVal">30%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Breakout Loss Rate (%)</label>
+          <div class="input-row">
+            <input type="range" id="breakoutLoss" value="10" min="0" max="30" step="5">
+            <span class="slider-value" id="breakoutLossVal">10%</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- OUTPUTS PANEL -->
+      <div>
+        <div class="panel" style="margin-bottom: 1.5rem;">
+          <h2 class="panel-title">💰 Fund Economics</h2>
+
+          <div id="scenarioStatus" class="scenario-status success">
+            <strong>✓ Target Achievable</strong> — Model produces 5.2x net MOIC
+          </div>
+
+          <div class="output-grid">
+            <div class="output-card highlight">
+              <div class="output-value" id="netMoic">5.2x</div>
+              <div class="output-label">Net MOIC</div>
+            </div>
+            <div class="output-card">
+              <div class="output-value" id="grossMoic">7.4x</div>
+              <div class="output-label">Gross MOIC</div>
+            </div>
+            <div class="output-card">
+              <div class="output-value" id="investable">$830M</div>
+              <div class="output-label">Investable Capital</div>
+            </div>
+          </div>
+
+          <div class="output-grid">
+            <div class="output-card">
+              <div class="output-value" id="grossProceeds">$6.1B</div>
+              <div class="output-label">Gross Proceeds</div>
+            </div>
+            <div class="output-card">
+              <div class="output-value" id="netDistributions">$5.2B</div>
+              <div class="output-label">Net to LPs</div>
+            </div>
+            <div class="output-card">
+              <div class="output-value" id="carry">$1.0B</div>
+              <div class="output-label">GP Carry (20%)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-bottom: 1.5rem;">
+          <h2 class="panel-title">📈 Engine Breakdown</h2>
+
+          <table class="breakdown-table">
+            <thead>
+              <tr>
+                <th>Engine</th>
+                <th>Capital</th>
+                <th>Positions</th>
+                <th>Avg Check</th>
+                <th>Survivors</th>
+                <th>Gross Return</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="engine">Discovery</td>
+                <td id="discoveryCapital">$122M</td>
+                <td id="discoveryPositions">146</td>
+                <td id="discoveryCheck">$836K</td>
+                <td id="discoverySurvivors">58</td>
+                <td id="discoveryReturn" class="num pos">$390M</td>
+              </tr>
+              <tr>
+                <td class="engine">Core</td>
+                <td id="coreCapital">$608M</td>
+                <td id="corePositions">10</td>
+                <td id="coreCheck">$60.8M</td>
+                <td id="coreSurvivors">7</td>
+                <td id="coreReturn" class="num pos">$5.1B</td>
+              </tr>
+              <tr>
+                <td class="engine">Breakout</td>
+                <td id="breakoutCapital">$100M</td>
+                <td id="breakoutPositions">3</td>
+                <td id="breakoutCheck">$33.3M</td>
+                <td id="breakoutSurvivors">2.7</td>
+                <td id="breakoutReturn" class="num pos">$675M</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td><strong>Total</strong></td>
+                <td id="totalCapital"><strong>$830M</strong></td>
+                <td id="totalPositions"><strong>159</strong></td>
+                <td>—</td>
+                <td id="totalSurvivors"><strong>68</strong></td>
+                <td id="totalReturn" class="num"><strong>$6.1B</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="panel">
+          <h2 class="panel-title">🎯 Sensitivity Analysis</h2>
+          
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            What if key assumptions change?
+          </p>
+
+          <div class="sensitivity-grid">
+            <div class="sensitivity-item">
+              <div class="sensitivity-label">If Core mult drops to 8x</div>
+              <div class="sensitivity-value" id="sensCore8x">3.8x net</div>
+            </div>
+            <div class="sensitivity-item">
+              <div class="sensitivity-label">If Core loss rate = 50%</div>
+              <div class="sensitivity-value" id="sensCoreLoss50">3.2x net</div>
+            </div>
+            <div class="sensitivity-item">
+              <div class="sensitivity-label">If Breakout hits 50x</div>
+              <div class="sensitivity-value" id="sensBreakout50x">6.1x net</div>
+            </div>
+            <div class="sensitivity-item">
+              <div class="sensitivity-label">Required Core mult for 5x</div>
+              <div class="sensitivity-value" id="sensRequiredMult">11.5x</div>
+            </div>
+          </div>
+
+          <hr class="section-divider">
+
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            <strong>Key Insight:</strong> <span id="keyInsight">Core positions drive 82% of returns. Focus LP pitch on your ability to pick and win these 10 deals.</span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Fund Portfolio Model · Interactive Assumptions Tool</p>
+  </footer>
+
+  <script>
+    // Get all inputs
+    const inputs = {
+      fundSize: document.getElementById('fundSize'),
+      mgmtFee: document.getElementById('mgmtFee'),
+      fundLife: document.getElementById('fundLife'),
+      targetMoic: document.getElementById('targetMoic'),
+      discoveryPct: document.getElementById('discoveryPct'),
+      corePct: document.getElementById('corePct'),
+      breakoutPct: document.getElementById('breakoutPct'),
+      discoveryCount: document.getElementById('discoveryCount'),
+      coreCount: document.getElementById('coreCount'),
+      breakoutCount: document.getElementById('breakoutCount'),
+      discoveryMult: document.getElementById('discoveryMult'),
+      coreMult: document.getElementById('coreMult'),
+      breakoutMult: document.getElementById('breakoutMult'),
+      discoveryLoss: document.getElementById('discoveryLoss'),
+      coreLoss: document.getElementById('coreLoss'),
+      breakoutLoss: document.getElementById('breakoutLoss'),
+    };
+
+    // Slider value displays
+    const sliderDisplays = {
+      mgmtFee: document.getElementById('mgmtFeeVal'),
+      discoveryPct: document.getElementById('discoveryPctVal'),
+      corePct: document.getElementById('corePctVal'),
+      breakoutPct: document.getElementById('breakoutPctVal'),
+      discoveryLoss: document.getElementById('discoveryLossVal'),
+      coreLoss: document.getElementById('coreLossVal'),
+      breakoutLoss: document.getElementById('breakoutLossVal'),
+    };
+
+    function formatMoney(val, decimals = 0) {
+      if (val >= 1e9) return '$' + (val / 1e9).toFixed(1) + 'B';
+      if (val >= 1e6) return '$' + (val / 1e6).toFixed(decimals) + 'M';
+      if (val >= 1e3) return '$' + (val / 1e3).toFixed(0) + 'K';
+      return '$' + val.toFixed(0);
+    }
+
+    function calculate() {
+      // Get values
+      const fundSize = parseFloat(inputs.fundSize.value) * 1e6;
+      const mgmtFee = parseFloat(inputs.mgmtFee.value) / 100;
+      const fundLife = parseFloat(inputs.fundLife.value);
+      const targetMoic = parseFloat(inputs.targetMoic.value);
+
+      const discoveryPct = parseFloat(inputs.discoveryPct.value) / 100;
+      const corePct = parseFloat(inputs.corePct.value) / 100;
+      const breakoutPct = parseFloat(inputs.breakoutPct.value) / 100;
+
+      const discoveryCount = parseInt(inputs.discoveryCount.value);
+      const coreCount = parseInt(inputs.coreCount.value);
+      const breakoutCount = parseInt(inputs.breakoutCount.value);
+
+      const discoveryMult = parseFloat(inputs.discoveryMult.value);
+      const coreMult = parseFloat(inputs.coreMult.value);
+      const breakoutMult = parseFloat(inputs.breakoutMult.value);
+
+      const discoveryLoss = parseFloat(inputs.discoveryLoss.value) / 100;
+      const coreLoss = parseFloat(inputs.coreLoss.value) / 100;
+      const breakoutLoss = parseFloat(inputs.breakoutLoss.value) / 100;
+
+      // Calculate fees and investable
+      const totalFees = fundSize * mgmtFee * fundLife;
+      const investable = fundSize - totalFees;
+
+      // Allocation
+      const discoveryCapital = investable * discoveryPct;
+      const coreCapital = investable * corePct;
+      const breakoutCapital = investable * breakoutPct;
+
+      // Check sizes
+      const discoveryCheck = discoveryCapital / discoveryCount;
+      const coreCheck = coreCapital / coreCount;
+      const breakoutCheck = breakoutCapital / breakoutCount;
+
+      // Survivors
+      const discoverySurvivors = discoveryCount * (1 - discoveryLoss);
+      const coreSurvivors = coreCount * (1 - coreLoss);
+      const breakoutSurvivors = breakoutCount * (1 - breakoutLoss);
+
+      // Returns (survivors * check * multiple)
+      const discoveryReturn = discoverySurvivors * discoveryCheck * discoveryMult;
+      const coreReturn = coreSurvivors * coreCheck * coreMult;
+      const breakoutReturn = breakoutSurvivors * breakoutCheck * breakoutMult;
+
+      const grossProceeds = discoveryReturn + coreReturn + breakoutReturn;
+      const grossMoic = grossProceeds / investable;
+
+      // Carry calculation (20% of profits above 1x)
+      const profits = grossProceeds - investable;
+      const carry = profits > 0 ? profits * 0.20 : 0;
+      const netToLPs = grossProceeds - carry;
+      const netMoic = netToLPs / fundSize;
+
+      // Update slider displays
+      sliderDisplays.mgmtFee.textContent = (mgmtFee * 100).toFixed(2) + '%';
+      sliderDisplays.discoveryPct.textContent = (discoveryPct * 100).toFixed(0) + '%';
+      sliderDisplays.corePct.textContent = (corePct * 100).toFixed(0) + '%';
+      sliderDisplays.breakoutPct.textContent = (breakoutPct * 100).toFixed(0) + '%';
+      sliderDisplays.discoveryLoss.textContent = (discoveryLoss * 100).toFixed(0) + '%';
+      sliderDisplays.coreLoss.textContent = (coreLoss * 100).toFixed(0) + '%';
+      sliderDisplays.breakoutLoss.textContent = (breakoutLoss * 100).toFixed(0) + '%';
+
+      // Update outputs
+      document.getElementById('netMoic').textContent = netMoic.toFixed(1) + 'x';
+      document.getElementById('grossMoic').textContent = grossMoic.toFixed(1) + 'x';
+      document.getElementById('investable').textContent = formatMoney(investable);
+      document.getElementById('grossProceeds').textContent = formatMoney(grossProceeds);
+      document.getElementById('netDistributions').textContent = formatMoney(netToLPs);
+      document.getElementById('carry').textContent = formatMoney(carry);
+
+      // Update breakdown table
+      document.getElementById('discoveryCapital').textContent = formatMoney(discoveryCapital);
+      document.getElementById('discoveryPositions').textContent = discoveryCount;
+      document.getElementById('discoveryCheck').textContent = formatMoney(discoveryCheck, 0);
+      document.getElementById('discoverySurvivors').textContent = Math.round(discoverySurvivors);
+      document.getElementById('discoveryReturn').textContent = formatMoney(discoveryReturn);
+
+      document.getElementById('coreCapital').textContent = formatMoney(coreCapital);
+      document.getElementById('corePositions').textContent = coreCount;
+      document.getElementById('coreCheck').textContent = formatMoney(coreCheck, 1);
+      document.getElementById('coreSurvivors').textContent = coreSurvivors.toFixed(1);
+      document.getElementById('coreReturn').textContent = formatMoney(coreReturn);
+
+      document.getElementById('breakoutCapital').textContent = formatMoney(breakoutCapital);
+      document.getElementById('breakoutPositions').textContent = breakoutCount;
+      document.getElementById('breakoutCheck').textContent = formatMoney(breakoutCheck, 1);
+      document.getElementById('breakoutSurvivors').textContent = breakoutSurvivors.toFixed(1);
+      document.getElementById('breakoutReturn').textContent = formatMoney(breakoutReturn);
+
+      document.getElementById('totalCapital').innerHTML = '<strong>' + formatMoney(investable) + '</strong>';
+      document.getElementById('totalPositions').innerHTML = '<strong>' + (discoveryCount + coreCount + breakoutCount) + '</strong>';
+      document.getElementById('totalSurvivors').innerHTML = '<strong>' + Math.round(discoverySurvivors + coreSurvivors + breakoutSurvivors) + '</strong>';
+      document.getElementById('totalReturn').innerHTML = '<strong>' + formatMoney(grossProceeds) + '</strong>';
+
+      // Scenario status
+      const statusEl = document.getElementById('scenarioStatus');
+      const netMoicEl = document.getElementById('netMoic');
+      
+      if (netMoic >= targetMoic) {
+        statusEl.className = 'scenario-status success';
+        statusEl.innerHTML = `<strong>✓ Target Achievable</strong> — Model produces ${netMoic.toFixed(1)}x net MOIC (target: ${targetMoic}x)`;
+        netMoicEl.className = 'output-value green';
+      } else if (netMoic >= targetMoic * 0.8) {
+        statusEl.className = 'scenario-status warning';
+        statusEl.innerHTML = `<strong>⚠ Close but Below Target</strong> — Model produces ${netMoic.toFixed(1)}x net MOIC (target: ${targetMoic}x)`;
+        netMoicEl.className = 'output-value yellow';
+      } else {
+        statusEl.className = 'scenario-status danger';
+        statusEl.innerHTML = `<strong>✗ Target Not Achievable</strong> — Model produces ${netMoic.toFixed(1)}x net MOIC (target: ${targetMoic}x)`;
+        netMoicEl.className = 'output-value red';
+      }
+
+      // Sensitivity analysis
+      // If Core mult drops to 8x
+      const coreReturn8x = coreSurvivors * coreCheck * 8;
+      const gross8x = discoveryReturn + coreReturn8x + breakoutReturn;
+      const net8x = (gross8x - (gross8x - investable) * 0.20) / fundSize;
+      document.getElementById('sensCore8x').textContent = net8x.toFixed(1) + 'x net';
+      document.getElementById('sensCore8x').style.color = net8x >= targetMoic ? 'var(--green)' : 'var(--red)';
+
+      // If Core loss rate = 50%
+      const coreSurvivors50 = coreCount * 0.5;
+      const coreReturn50Loss = coreSurvivors50 * coreCheck * coreMult;
+      const gross50Loss = discoveryReturn + coreReturn50Loss + breakoutReturn;
+      const net50Loss = (gross50Loss - (gross50Loss - investable) * 0.20) / fundSize;
+      document.getElementById('sensCoreLoss50').textContent = net50Loss.toFixed(1) + 'x net';
+      document.getElementById('sensCoreLoss50').style.color = net50Loss >= targetMoic ? 'var(--green)' : 'var(--red)';
+
+      // If Breakout hits 50x
+      const breakoutReturn50x = breakoutSurvivors * breakoutCheck * 50;
+      const gross50x = discoveryReturn + coreReturn + breakoutReturn50x;
+      const net50x = (gross50x - (gross50x - investable) * 0.20) / fundSize;
+      document.getElementById('sensBreakout50x').textContent = net50x.toFixed(1) + 'x net';
+      document.getElementById('sensBreakout50x').style.color = 'var(--green)';
+
+      // Required Core mult for target
+      const targetGross = (targetMoic * fundSize + investable * 0.20) / 0.80;
+      const neededFromCore = targetGross - discoveryReturn - breakoutReturn;
+      const requiredCoreMult = neededFromCore / (coreSurvivors * coreCheck);
+      document.getElementById('sensRequiredMult').textContent = requiredCoreMult.toFixed(1) + 'x';
+      document.getElementById('sensRequiredMult').style.color = requiredCoreMult <= coreMult ? 'var(--green)' : 'var(--red)';
+
+      // Key insight
+      const coreContribution = coreReturn / grossProceeds * 100;
+      document.getElementById('keyInsight').textContent = 
+        `Core positions drive ${coreContribution.toFixed(0)}% of gross returns. ` +
+        `You need ${requiredCoreMult.toFixed(1)}x avg multiple from your ${coreCount} Core picks to hit ${targetMoic}x net.`;
+    }
+
+    // Add event listeners to all inputs
+    Object.values(inputs).forEach(input => {
+      input.addEventListener('input', calculate);
+    });
+
+    // Initial calculation
+    calculate();
+  </script>
+
+</body>
+</html>
