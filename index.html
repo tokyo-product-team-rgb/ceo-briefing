@@ -470,6 +470,32 @@
       color: var(--text-muted);
     }
 
+    .score-changes {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .score-change {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+    }
+    .change-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+    .change-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
     .indicator-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -932,6 +958,20 @@
             </div>
             <div class="gauge-score" id="gaugeScore">54</div>
             <div class="gauge-score-label">out of 100</div>
+            <div class="score-changes">
+              <div class="score-change">
+                <span class="change-label">Daily</span>
+                <span class="change-value chg-pos">+0.5</span>
+              </div>
+              <div class="score-change">
+                <span class="change-label">Weekly</span>
+                <span class="change-value chg-pos">+1.2</span>
+              </div>
+              <div class="score-change">
+                <span class="change-label">Monthly</span>
+                <span class="change-value chg-neg">−2.3</span>
+              </div>
+            </div>
           </div>
           <div class="indicator-grid">
             <div class="indicator-item">
