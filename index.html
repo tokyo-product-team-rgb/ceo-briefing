@@ -887,11 +887,45 @@
           </div>
         </div>
 
+        <!-- VALUATION SIGNAL (Howard Marks / JPMorgan) -->
+        <div class="indicator-section">
+          <div class="indicator-section-header">
+            <span class="indicator-section-title">📊 S&P 500 Valuation Signal (20%)</span>
+            <span class="indicator-section-score" style="color: #B94A48;">32</span>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">23.9x</div>
+              <div class="indicator-name">Forward P/E</div>
+              <div class="indicator-sub chg-neg">🔴 EXPENSIVE</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">33.2x</div>
+              <div class="indicator-name">Shiller CAPE</div>
+              <div class="indicator-sub chg-neg">▲ 95th Percentile</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">0-2%</div>
+              <div class="indicator-name">Expected 10Y Return</div>
+              <div class="indicator-sub chg-neg">▼ Below Average</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">WAIT</div>
+              <div class="indicator-name">Buy Signal</div>
+              <div class="indicator-sub" style="color: #B94A48;">● Not Yet</div>
+            </div>
+          </div>
+          <div style="margin-top: 12px; padding: 12px 16px; background: #fef2f2; border-radius: 8px; font-size: 0.8rem; color: #7f1d1d;">
+            <strong>Howard Marks / JPMorgan Research:</strong> At P/E 23x+, historical 10-year returns cluster between −2% and +2%. Wait for P/E &lt;17x for attractive entry. Current valuation implies poor decade-ahead returns.
+          </div>
+        </div>
+
         <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
           <span class="arrow">▸</span> Methodology (85% historical accuracy)
         </div>
         <div class="methodology-content">
           <p>Zone Thresholds: 🟢 GREEN 70-100 · 🟡 YELLOW 50-69 · 🟠 ORANGE 35-49 · 🔴 RED 0-34<br><br>
+          <strong>Valuation Signal Methodology (JPMorgan/Shiller):</strong> Based on the historical relationship between Forward P/E ratios and subsequent 10-year returns. At current 23.9x Forward P/E, every historical instance resulted in 10-year returns between −2% and +2%. Buy signal activates when P/E drops below 17x (fair value) or 12x (strong buy). Sources: JPMorgan Guide to Markets Q4 2024, Shiller CAPE data, IBES forward earnings.<br><br>
           Afternoon update: Score jumped +4.0 points as US markets staged a powerful Friday rebound — Dow surged 2.47% to a record 50,116, S&P +1.97%. The rally was driven by dip-buying after Thursday's tech selloff as AI capex fears eased. Gold rallied 3.88% to $4,964, extending its safe-haven run. US-Iran talks in Oman described as a "good start" with plans to continue, lowering geopolitical risk premium. Bitcoin stabilized at $70K after earlier plunge. Tomorrow's twin elections in Japan and Thailand are the key catalysts — PM Takaichi's expected landslide would cement risk-on sentiment.</p>
         </div>
       </article>
@@ -908,6 +942,25 @@
         <!-- KEY SIGNAL -->
         <article class="card fade-in" style="background: #dcfce7; border-color: #16a34a;">
           <p class="card-body" style="font-size: 0.85rem; color: #166534;">⚡ AFTERNOON KEY: Dow surged 2.47% to a record 50,116 as dip-buyers returned after Thursday's tech-led selloff. The rebound was fueled by semiconductors (Nvidia +7.9%, AMD +7%+) as AI capex fears eased. Gold hit $4,968 (+4%) as safe-haven buying continued. US-Iran talks in Oman described as "good start" — continuing tomorrow — easing oil supply fears. Bitcoin stabilized at $70K after touching $60K Thursday. Tomorrow: Japan's election expected to deliver Takaichi a landslide, Thailand also votes. Consumer sentiment unexpectedly jumped to 6-month high.</p>
+        </article>
+
+        <!-- S&P 500 VALUATION BUY SIGNAL -->
+        <article class="card fade-in" style="background: #fef2f2; border-left: 4px solid #B94A48;">
+          <span class="card-tag" style="background: #fecaca; color: #7f1d1d;">Valuation Signal</span>
+          <h3 class="card-headline">S&P 500 Buy Signal: 🔴 WAIT — Forward P/E 23.9x signals poor decade ahead</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">Based on JPMorgan's analysis of Forward P/E ratios vs. subsequent 10-year returns, current valuations (23.9x Forward P/E, 33.2x Shiller CAPE) historically produce annualized returns between −2% and +2% over the next decade. As Howard Marks noted: <em>"If you bought the S&P when the P/E ratio was 23, in every case your annualized return over the next 10 years was between +2% and −2%."</em></p>
+          <table class="index-table" style="margin-bottom: 0.75rem;">
+            <thead>
+              <tr><th>Metric</th><th>Current</th><th>Buy Zone</th><th>Strong Buy</th><th>Signal</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">Forward P/E</td><td class="idx-level">23.9x</td><td style="color: var(--green);">&lt;17x</td><td style="color: var(--green);">&lt;12x</td><td class="chg-neg">🔴 EXPENSIVE</td></tr>
+              <tr><td class="idx-name">Shiller CAPE</td><td class="idx-level">33.2x</td><td style="color: var(--green);">&lt;22x</td><td style="color: var(--green);">&lt;15x</td><td class="chg-neg">🔴 95th %ile</td></tr>
+              <tr><td class="idx-name">Expected 10Y Return</td><td class="idx-level">0-2%</td><td style="color: var(--green);">5-10%</td><td style="color: var(--green);">12%+</td><td class="chg-neg">▼ Poor</td></tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="font-size: 0.8rem; color: #666;"><strong>What to watch:</strong> A 30-40% drawdown would bring P/E to ~15x (fair value) and trigger a BUY signal. Major crises (2008, 2020) created P/E &lt;12x STRONG BUY opportunities. Current strategy: Hold quality, build cash, wait for better entry.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.multpl.com/shiller-pe" target="_blank" rel="noopener">Shiller P/E <span class="src-arrow">↗</span></a> <a class="source-link" href="https://www.yardeni.com/pub/peacockfeval.pdf" target="_blank" rel="noopener">Yardeni Research <span class="src-arrow">↗</span></a></div>
         </article>
 
         <!-- EQUITIES -->
