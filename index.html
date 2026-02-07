@@ -376,6 +376,64 @@
 
     @media (max-width: 640px) {
       .cards-grid { grid-template-columns: 1fr; }
+      
+      /* Mobile table fixes */
+      .index-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.75rem;
+      }
+      .index-table th,
+      .index-table td {
+        padding: 0.4rem 0.5rem;
+        white-space: nowrap;
+      }
+      .index-table th {
+        font-size: 0.65rem;
+      }
+      
+      /* Card consistency */
+      .card {
+        padding: 1rem 1.25rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      
+      /* Indicator grid mobile */
+      .indicator-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem;
+      }
+      .indicator-item {
+        padding: 0.75rem;
+      }
+      .indicator-value {
+        font-size: 1.1rem;
+      }
+      .indicator-name {
+        font-size: 0.7rem;
+      }
+      .indicator-sub {
+        font-size: 0.65rem;
+      }
+      
+      /* Health gauge mobile */
+      .health-gauge-wrap {
+        padding: 1rem;
+      }
+      .gauge-score {
+        font-size: 2.5rem;
+      }
+      
+      /* Section padding mobile */
+      .section {
+        padding: 0 1rem;
+      }
+      .masthead-inner {
+        padding: 1.5rem 1rem;
+      }
     }
 
     .bottom-line {
@@ -971,6 +1029,20 @@
               <tr><td class="idx-name">Mar 2009</td><td>GFC bottom</td><td class="idx-level">10x</td><td class="chg-pos">+14.5%</td></tr>
               <tr><td class="idx-name">Mar 2020</td><td>COVID crash</td><td class="idx-level">13x</td><td class="chg-pos">+12%+</td></tr>
               <tr style="background: #fef2f2;"><td class="idx-name">Feb 2026</td><td>Current</td><td class="idx-level">24x</td><td class="chg-neg">0-2% expected</td></tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="font-size: 0.85rem; margin-bottom: 0.75rem;"><strong>The Pattern — P/E Zones & Expected Returns:</strong></p>
+          <table class="index-table" style="margin-bottom: 0.75rem; font-size: 0.85rem;">
+            <thead>
+              <tr><th>P/E Zone</th><th>Signal</th><th>Frequency</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">&lt;10x</td><td class="chg-pos">💚 Generational buy</td><td>2-3× per lifetime</td></tr>
+              <tr><td class="idx-name">10-12x</td><td class="chg-pos">🟢 Strong buy</td><td>Major crises</td></tr>
+              <tr><td class="idx-name">12-15x</td><td class="chg-pos">🟢 Good entry</td><td>Significant corrections</td></tr>
+              <tr><td class="idx-name">15-17x</td><td>🟡 Fair value</td><td>Normal pullbacks</td></tr>
+              <tr><td class="idx-name">17-20x</td><td class="chg-neg">🟠 Mediocre</td><td>Muted returns</td></tr>
+              <tr style="background: #fef2f2;"><td class="idx-name">&gt;20x</td><td class="chg-neg">🔴 Poor entry</td><td>Current zone</td></tr>
             </tbody>
           </table>
           <p class="card-body" style="font-size: 0.8rem; color: #666;"><strong>What to watch:</strong> S&P needs to drop ~30% (to 4,850) for P/E 17x fair value, or ~50% (to 3,500) for P/E 12x strong buy. Current strategy: Hold quality, build cash, wait for better entry.</p>

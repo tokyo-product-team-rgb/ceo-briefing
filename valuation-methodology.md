@@ -36,9 +36,32 @@ Forward P/E at time of purchase has a strong **negative correlation** with subse
 
 ## Historical Context
 
-- **March 2009 bottom:** P/E ~10x → subsequent 10-year return ~14% CAGR
-- **March 2020 bottom:** P/E ~13x → strong rebound
-- **Feb 2026 current:** P/E ~24x → expected poor decade-ahead returns
+| Date | Event | Forward P/E | Next 10Y CAGR |
+|------|-------|-------------|---------------|
+| Aug 1982 | Volcker bottom | ~8x | +18.0% |
+| Dec 1974 | Stagflation low | ~7x | +14.0% |
+| Oct 2002 | Dot-com bottom | ~14x | +8.3% |
+| Mar 2009 | GFC bottom | ~10x | +14.5% |
+| Mar 2020 | COVID crash | ~13x | +12%+ (ongoing) |
+| Feb 2026 | Current | ~24x | 0-2% expected |
+
+## P/E Zone Patterns
+
+| P/E Zone | Signal | Frequency |
+|----------|--------|-----------|
+| <10x | 💚 Generational buy | 2-3× per lifetime |
+| 10-12x | 🟢 Strong buy | Major crises |
+| 12-15x | 🟢 Good entry | Significant corrections |
+| 15-17x | 🟡 Fair value | Normal pullbacks |
+| 17-20x | 🟠 Mediocre | Muted returns |
+| >20x | 🔴 Poor entry | Current zone |
+
+**What creates buying opportunities:**
+- Recessions (avg P/E drop: 30-40%)
+- Financial crises (avg P/E drop: 40-50%)
+- Panic events (flash crashes, wars)
+
+**Current context:** S&P would need to drop ~30% (to ~4,850) to reach P/E 17x fair value, or ~50% (to ~3,500) for P/E 12x strong buy territory.
 
 ## Implementation in CEO Briefing
 
