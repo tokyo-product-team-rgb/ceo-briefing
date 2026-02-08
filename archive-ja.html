@@ -49,6 +49,44 @@
     .edition-label { font-size: 1rem; font-weight: 500; color: var(--text-primary); }
     footer { text-align: center; padding: 2rem 1.5rem 3rem; font-size: 0.75rem; color: var(--text-tertiary); }
     @media (max-width: 600px) { .archive-edition { flex-wrap: wrap; gap: 0.4rem; } .edition-links { margin-left: 0; width: 100%; } }
+  
+    /* Mobile content width */
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        border: none;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      .container {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        padding: 2rem 0 4rem;
+        margin: 0 auto;
+      }
+    }
+      .card.featured {
+        padding-left: 0;
+      }
+      .footer {
+        padding: 2rem 0 3rem;
+      }
+      .nav-pills {
+        padding: 1rem 0;
+      }
+      .bottom-line {
+        padding: 1.5rem 0;
+      }
+    }
   </style>
 </head>
 <body>

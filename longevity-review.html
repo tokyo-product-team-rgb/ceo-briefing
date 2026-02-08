@@ -71,7 +71,28 @@
     .section-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; color: var(--text-secondary); }
 
     .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
-    @media (max-width: 640px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      } .stat-grid { grid-template-columns: repeat(2, 1fr); } }
     .stat-card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem; text-align: center; box-shadow: var(--shadow-card); }
     .stat-value { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; color: var(--chart-primary); }
     .stat-label { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-top: 0.35rem;  letter-spacing: 0.05em; }
@@ -95,6 +116,50 @@
     .bottom-line p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
 
     .footer { text-align: center; padding: 2rem 1.5rem 3rem; font-size: 0.75rem; color: var(--text-tertiary); border-top: 1px solid var(--line-subtle); max-width: 900px; margin: 0 auto; }
+  
+    /* Mobile content width */
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      .container {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        padding: 2rem 0 4rem;
+        margin: 0 auto;
+      }
+    }
+      .card.featured {
+        padding-left: 0;
+      }
+      .footer {
+        padding: 2rem 0 3rem;
+      }
+      .nav-pills {
+        padding: 1rem 0;
+      }
+      .bottom-line {
+        padding: 1.5rem 0;
+      }
+    }
   </style>
 </head>
 <body>

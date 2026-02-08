@@ -240,6 +240,27 @@
       margin-bottom: 1.5rem;
     }
     @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
       .delta-grid { grid-template-columns: 1fr; }
     }
 
@@ -343,6 +364,27 @@
       border-top: 1px solid var(--border);
     }
     @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
       .regime-stats { grid-template-columns: repeat(2, 1fr); }
     }
 
@@ -519,6 +561,27 @@
       gap: 1rem;
     }
     @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
       .context-grid { grid-template-columns: 1fr; }
     }
 
@@ -589,6 +652,77 @@
       border-top: 1px solid var(--border);
       max-width: 900px;
       margin: 0 auto;
+    }
+  
+    /* Mobile content width */
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      /* Remove indicator card styling on mobile */
+      .indicator-section {
+        background: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border, #E8E5E1) !important;
+        border-radius: 0 !important;
+        padding: 0 0 1.5rem 0 !important;
+        margin-bottom: 1.5rem;
+        box-shadow: none !important;
+      }
+      .indicator-section:last-child {
+        border-bottom: none !important;
+      }
+      .indicator-grid {
+        background: transparent !important;
+      }
+      .indicator-item {
+        background: transparent !important;
+        border-radius: 0 !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: none !important;
+      }
+      .card.featured {
+        background: transparent !important;
+        border-left: none !important;
+        box-shadow: none !important;
+      }
+      .container {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        padding: 2rem 0 4rem;
+        margin: 0 auto;
+      }
+    }
+      .card.featured {
+        padding-left: 0;
+      }
+      .footer {
+        padding: 2rem 0 3rem;
+      }
+      .nav-pills {
+        padding: 1rem 0;
+      }
+      .bottom-line {
+        padding: 1.5rem 0;
+      }
     }
   </style>
 </head>
