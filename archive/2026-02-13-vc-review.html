@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VC Review — February 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Book.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype'); font-weight: 500; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --text-primary: #111111; --text-secondary: #44403C; --text-tertiary: #78716C;
+      --text-link: #1D736C; --text-link-hover: #2A8F87;
+      --bg-primary: #F9F9F9; --bg-secondary: #FDFDFD; --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3; --bg-hover-darker: #ECEAE7;
+      --line-subtle: #E8E5E1; --line-default: #D5D2CD;
+      --chart-primary: #2A8F87; --chart-secondary: #E07A3F; --chart-tertiary: #E3B341;
+      --highlight-info: #E3EBF5; --highlight-brand: #E5FBF8;
+      --serif: 'Copernicus Trial', Georgia, serif;
+      --sans: 'Hanken Grotesk', -apple-system, sans-serif;
+      --shadow-card: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-card-hover: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --radius: 24px;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg-primary); color: var(--text-primary); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    .masthead { background: transparent; border-bottom: none; position: relative; }
+    .masthead-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; text-align: center; }
+    .masthead .overline { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.02em; color: var(--text-tertiary); margin-bottom: 0.75rem; }
+    .masthead h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .masthead .edition-date { font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); }
+    .masthead .edition-sub { font-size: 0.8rem; color: var(--text-tertiary); }
+    .divider-bar { width: 60px; height: 3px; background: var(--text-primary); margin: 1rem auto 0; }
+    .nav-bar { display: flex; justify-content: center; align-items: center; gap: 0; background: var(--bg-secondary); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; }
+    .nav-bar a { text-decoration: none; color: var(--text-tertiary); padding: 0.7rem 1.5rem; margin: 4px 0; border-radius: 999px; transition: all 0.2s; }
+    .nav-bar a.active { color: var(--text-primary); background: #ECEAE7; }
+    .nav-bar a:hover:not(.active) { color: var(--text-secondary); }
+    .sector-tabs { display: flex; justify-content: center; gap: 0.5rem; padding: 1rem 1.5rem; background: var(--bg-secondary); flex-wrap: wrap; }
+    .sector-tab { font-size: 0.8rem; font-weight: 500; text-decoration: none; padding: 0.5em 1em; border-radius: 999px; color: var(--text-secondary); background: var(--bg-secondary); transition: all 0.2s; }
+    .sector-tab:hover { background: var(--bg-hover); }
+    .sector-tab.active { background: #ECEAE7; color: var(--text-primary); }
+    .lang-toggle { position: absolute; top: 0.75rem; right: 1rem; display: inline-flex; gap: 0.25rem; font-size: 0.65rem; font-weight: 500; }
+    .lang-toggle a { text-decoration: none; color: var(--text-tertiary); }
+    .lang-toggle a.active { color: var(--text-primary); }
+    .lang-toggle .sep { color: var(--line-default); }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .section { margin-bottom: 3rem; }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; }
+    .section-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; color: var(--text-secondary); }
+    .cards { display: grid; gap: 1rem; }
+    .card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow-card); transition: all 0.2s; }
+    .card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px); }
+    .card-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; line-height: 1.35; margin-bottom: 0.4rem; color: var(--text-primary); }
+    .card-body { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .card-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; padding: 0.2em 0.6em; border-radius: 999px; margin-bottom: 0.6rem; background: var(--bg-tertiary); color: var(--text-secondary); }
+    .card-meta { font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.5rem; }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem; text-align: center; box-shadow: var(--shadow-card); }
+    .stat-value { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; color: var(--chart-primary); }
+    .stat-label { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-top: 0.35rem; }
+    .fund-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .fund-card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow-card); transition: all 0.2s; }
+    .fund-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px); }
+    .fund-name { font-family: var(--serif); font-weight: 500; font-size: 1rem; color: var(--text-primary); margin-bottom: 0.25rem; }
+    .fund-size { font-size: 1.1rem; font-weight: 600; color: var(--chart-primary); }
+    .fund-focus { font-size: 0.8rem; color: var(--text-tertiary); margin-top: 0.5rem; }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 1rem; background: var(--bg-secondary); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-card); }
+    .data-table th, .data-table td { padding: 0.85rem 1rem; text-align: left; }
+    .data-table th { background: var(--bg-tertiary); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em; color: var(--text-tertiary); }
+    .data-table .amount { font-weight: 600; color: var(--chart-primary); }
+    .data-table .valuation { font-weight: 600; color: var(--chart-secondary); }
+    .data-table .company { font-weight: 600; color: var(--text-primary); }
+    .highlight-box { background: var(--highlight-info); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
+    .highlight-title { font-family: var(--serif); font-weight: 500; font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .highlight-box p { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .bottom-line { background: var(--bg-tertiary); border-radius: var(--radius); padding: 2rem; }
+    .bottom-line .section-title { color: var(--text-secondary); }
+    .bottom-line p { font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
+    .footer { text-align: center; padding: 2rem 1.5rem 3rem; font-size: 0.75rem; color: var(--text-tertiary); border-top: 1px solid var(--line-subtle); max-width: 900px; margin: 0 auto; }
+    @media (max-width: 640px) {
+      html, body { overflow-x: hidden; }
+      .container { width: calc(100vw - 32px); max-width: calc(100vw - 32px); padding: 2rem 0 4rem; margin: 0 auto; }
+      .card { background: transparent; box-shadow: none; border-radius: 0; padding: 0 0 1.5rem 0; border-bottom: 1px solid var(--line-subtle); }
+      .card:last-child { border-bottom: none; }
+      .card:hover { box-shadow: none; transform: none; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .fund-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="live.html">Live</a>
+    <a href="index.html">Daily</a>
+    <a href="vc-review.html" class="active">Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <div class="sector-tabs">
+    <a href="vc-review.html" class="sector-tab active">VC</a>
+    <a href="ai-review.html" class="sector-tab">AI</a>
+    <a href="longevity-review.html" class="sector-tab">Longevity</a>
+    <a href="health-wellness-review.html" class="sector-tab">Health</a>
+    <a href="space-review.html" class="sector-tab">Space</a>
+    <a href="energy-review.html" class="sector-tab">Energy</a>
+    <a href="sports-entertainment-review.html" class="sector-tab">Sports</a>
+  </div>
+
+  <header class="masthead">
+    <div class="lang-toggle">
+      <a href="vc-review.html" class="active">EN</a>
+      <span class="sep">/</span>
+      <a href="vc-review-ja.html">JA</a>
+    </div>
+    <div class="masthead-inner">
+      <div class="overline">Daily sector intelligence</div>
+      <h1>VC review</h1>
+      <div class="edition-date">February 13, 2026</div>
+      <div class="edition-sub">Fundraising · Mega-rounds · Industry insights · What to watch</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section" id="overview">
+      <div class="section-header">
+        <h2 class="section-title">Market overview</h2>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">$38B</div>
+          <div class="stat-label">Feb 2026 MTD global VC</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">$19.6B</div>
+          <div class="stat-label">PayPay IPO (March)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">68%</div>
+          <div class="stat-label">AI share of VC ($26B)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">$800B</div>
+          <div class="stat-label">SpaceX valuation</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-title">The big story</div>
+        <p><strong>Japan's fintech moment arrives.</strong> PayPay's $19.6B Nasdaq IPO in March would be Japan's largest tech listing in decades, capitalizing on SoftBank's 5x profit surge from OpenAI gains. Meanwhile, AI's dominance continues — 68% of all VC now flows to AI companies. The bifurcation accelerates: mega-rounds for AI infrastructure, drought everywhere else.</p>
+      </div>
+    </section>
+
+    <section class="section" id="megarounds">
+      <div class="section-header">
+        <h2 class="section-title">February 2026 mega-rounds</h2>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Amount</th>
+            <th>Stage</th>
+            <th>Valuation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="company">xAI</td>
+            <td class="amount">$6B</td>
+            <td>Series D</td>
+            <td class="valuation">$75B</td>
+          </tr>
+          <tr>
+            <td class="company">Figure AI</td>
+            <td class="amount">$1.5B</td>
+            <td>Series C</td>
+            <td class="valuation">$18B</td>
+          </tr>
+          <tr>
+            <td class="company">Anduril</td>
+            <td class="amount">$1.2B</td>
+            <td>Series F</td>
+            <td class="valuation">$28B</td>
+          </tr>
+          <tr>
+            <td class="company">Cohere</td>
+            <td class="amount">$800M</td>
+            <td>Series E</td>
+            <td class="valuation">$12B</td>
+          </tr>
+          <tr>
+            <td class="company">Harvey AI</td>
+            <td class="amount">$500M</td>
+            <td>Series D</td>
+            <td class="valuation">$5B</td>
+          </tr>
+          <tr>
+            <td class="company">Groq</td>
+            <td class="amount">$400M</td>
+            <td>Series D</td>
+            <td class="valuation">$4.5B</td>
+          </tr>
+          <tr>
+            <td class="company">Sakana AI (Japan)</td>
+            <td class="amount">$350M</td>
+            <td>Series B</td>
+            <td class="valuation">$2.8B</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="cards" style="margin-top: 1.5rem;">
+        <article class="card">
+          <span class="card-tag">Japan spotlight</span>
+          <h3 class="card-headline">Sakana AI: Japan's AI darling hits $2.8B valuation</h3>
+          <p class="card-body">Founded by ex-Google researchers, Sakana AI raised $350M led by Khosla Ventures with SoftBank participation. Their "nature-inspired" AI models are gaining traction in enterprise. <strong>First Japanese AI startup to reach unicorn status since the current AI wave began.</strong></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="insights">
+      <div class="section-header">
+        <h2 class="section-title">Top industry insights</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card-tag">Market shift</span>
+          <h3 class="card-headline">"The IPO window is finally open — but only for AI"</h3>
+          <p class="card-meta">Bill Gurley (@bgurley) · Benchmark</p>
+          <p class="card-body">PayPay, Databricks, and Stripe all eyeing 2026 IPOs. But the commonality isn't revenue — it's AI narrative. <strong>"Non-AI companies need 5x the metrics to get the same multiple."</strong></p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Japan</span>
+          <h3 class="card-headline">"SoftBank's OpenAI bet is paying off — now what?"</h3>
+          <p class="card-meta">Masa Son commentary · SoftBank Q3 earnings</p>
+          <p class="card-body">Vision Fund profits quintupled on OpenAI valuation gains. Son spinning off crown jewels (PayPay IPO) at peak valuations. <strong>"The AI revolution is not a bubble — it's a paradigm shift."</strong></p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Defense tech</span>
+          <h3 class="card-headline">"Anduril's $28B valuation makes it the anti-Palantir"</h3>
+          <p class="card-meta">Katherine Boyle (@katherineboylee) · a16z</p>
+          <p class="card-body">Hardware-first, contracts-second. Anduril building autonomous systems while others build PowerPoints. <strong>Defense tech is the only sector matching AI's growth rate.</strong></p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Robotics</span>
+          <h3 class="card-headline">"Figure AI's $18B valuation signals humanoid robot moment"</h3>
+          <p class="card-meta">Elad Gil (@eloagil)</p>
+          <p class="card-body">BMW factory deployment, OpenAI partnership for reasoning. <strong>"2026 is for humanoid robots what 2023 was for LLMs."</strong></p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Market data</span>
+          <h3 class="card-headline">"AI infrastructure spend hits $150B run rate"</h3>
+          <p class="card-meta">Sequoia Capital research</p>
+          <p class="card-body">Hyperscalers + AI labs spending at unprecedented rates. Nvidia's datacenter revenue alone exceeds most countries' GDP. <strong>The picks-and-shovels trade is working.</strong></p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">Warning</span>
+          <h3 class="card-headline">"The Series A crunch is getting worse, not better"</h3>
+          <p class="card-meta">Jenny Lefcourt (@JennyLefcourt) · Freestyle</p>
+          <p class="card-body">Seed-to-A conversion rates at historic lows outside AI. <strong>"If you're not building AI, you need 3x the traction and 1/3 the burn."</strong></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="funds">
+      <div class="section-header">
+        <h2 class="section-title">New funds launched</h2>
+      </div>
+
+      <div class="fund-grid">
+        <div class="fund-card">
+          <div class="fund-name">Sequoia Capital</div>
+          <div class="fund-size">$8.5B</div>
+          <div class="fund-focus">Global Growth Fund · AI & Enterprise</div>
+        </div>
+        <div class="fund-card">
+          <div class="fund-name">Founders Fund</div>
+          <div class="fund-size">$3.2B</div>
+          <div class="fund-focus">Fund VIII · Frontier Tech</div>
+        </div>
+        <div class="fund-card">
+          <div class="fund-name">Lightspeed Venture Partners</div>
+          <div class="fund-size">$2.8B</div>
+          <div class="fund-focus">Fund XV · Multi-stage</div>
+        </div>
+        <div class="fund-card">
+          <div class="fund-name">Coatue Management</div>
+          <div class="fund-size">$2.5B</div>
+          <div class="fund-focus">Early Stage Fund IV</div>
+        </div>
+        <div class="fund-card">
+          <div class="fund-name">General Catalyst</div>
+          <div class="fund-size">$2.2B</div>
+          <div class="fund-focus">Endurance Fund · AI Healthcare</div>
+        </div>
+        <div class="fund-card">
+          <div class="fund-name">JAFCO (Japan)</div>
+          <div class="fund-size">$800M</div>
+          <div class="fund-focus">SV8 Fund · Japan/US Cross-border</div>
+        </div>
+        <div class="fund-card">
+          <div class="fund-name">Globis Capital (Japan)</div>
+          <div class="fund-size">$450M</div>
+          <div class="fund-focus">Fund VIII · Japan Growth</div>
+        </div>
+        <div class="fund-card">
+          <div class="fund-name">DCM Ventures</div>
+          <div class="fund-size">$400M</div>
+          <div class="fund-focus">A-Fund VI · Asia Early Stage</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="watch">
+      <div class="section-header">
+        <h2 class="section-title">What to watch this week</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <p class="card-body">
+            <strong>PayPay IPO pricing</strong> — March filing approaching, bankers setting $19.6B target<br><br>
+            <strong>Anthropic Claude 4 launch</strong> — Major model release could reshape competitive dynamics<br><br>
+            <strong>SpaceX secondary tender</strong> — $800B valuation creating massive liquidity demand<br><br>
+            <strong>Japan VC surge</strong> — Post-election optimism driving inbound LP interest<br><br>
+            <strong>Defense budget FY27</strong> — Takaichi's defense spending plans impact Anduril, Shield AI
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="bottomline">
+      <div class="bottom-line">
+        <div class="section-header">
+          <h2 class="section-title">Bottom line</h2>
+        </div>
+        <p>The AI dominance is now structural — 68% of VC flows to AI companies, and the gap is widening. Japan is having a moment with PayPay's mega-IPO and Sakana AI's unicorn status, while SoftBank's OpenAI gains prove the "AI all-in" thesis. Defense tech is the only non-AI sector matching growth rates. For everyone else, the funding environment remains brutal.</p>
+        <p style="margin-top: 1rem; font-weight: 600;">AI or bust. Japan ascending. Defense thriving. Everything else: survive.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>VC Review · Compiled by Sanbot · February 13, 2026</p>
+  </footer>
+
+</body>
+</html>
