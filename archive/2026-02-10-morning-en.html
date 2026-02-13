@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Daily Briefing — Feb 10, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --text-primary: #111111;
+      --text-secondary: #44403C;
+      --text-tertiary: #78716C;
+      --text-link: #1D736C;
+      --text-link-hover: #2A8F87;
+      --text-error: #C5624E;
+      
+      --bg-primary: #F9F9F9;
+      --bg-secondary: #FDFDFD;
+      --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3;
+      --bg-hover-darker: #ECEAE7;
+      --bg-white: #FFFFFF;
+      --bg-accent: #2A8F87;
+      --bg-accent-dark: #1D736C;
+      
+      --line-subtle: #E8E5E1;
+      --line-default: #D5D2CD;
+      --line-neutral: rgba(0,0,0,0.06);
+      
+      --chart-primary: #2A8F87;
+      --chart-secondary: #E07A3F;
+      --chart-tertiary: #E3B341;
+      --chart-reference: #4C78A8;
+      --chart-outlier: #C06C84;
+      --chart-warning: #B94A48;
+      
+      --highlight-emphasis: #F4E3B1;
+      --highlight-info: #E3EBF5;
+      --highlight-warning: #F6E3E1;
+      --highlight-brand: #E5FBF8;
+      
+      --bg: var(--bg-primary);
+      --surface: var(--bg-white);
+      --text: var(--text-primary);
+      --border: var(--line-subtle);
+      
+      --serif: 'Copernicus Trial', Georgia, serif;
+      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      
+      --radius: 24px;
+      
+      --green: #2A8F87;
+      --red: #B94A48;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .masthead {
+      background: transparent;
+      border-bottom: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: none;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1.5rem;
+      margin: 4px 0;
+      border-radius: 999px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-bar a.active {
+      color: var(--text-primary);
+      background: #ECEAE7;
+    }
+
+    .nav-bar a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-toggle a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .lang-toggle a.active {
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--line-subtle);
+    }
+
+    .section-icon {
+      display: none;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text-secondary);
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--bg-secondary);
+      border: none;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card.collapsible {
+      cursor: pointer;
+    }
+    .card.collapsible .card-body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, margin 0.2s ease;
+      margin-bottom: 0;
+    }
+    .card.collapsible.expanded .card-body {
+      max-height: 500px;
+      opacity: 1;
+      margin-bottom: 0.4rem;
+    }
+    .card.collapsible .card-headline {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .card.collapsible .card-headline::after {
+      content: '▸';
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .card.collapsible.expanded .card-headline::after {
+      transform: rotate(90deg);
+    }
+    .card.collapsible .tap-hint {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      margin-top: 0.4rem;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .tap-hint {
+      opacity: 0;
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .card.collapsible .card-sources {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      border: none;
+      transition: max-height 0.3s ease, opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .card-sources {
+      max-height: 100px;
+      opacity: 1;
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--line-subtle);
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+
+    .card-body {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .list-header {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.2em 0.8em;
+      border-radius: 999px;
+      margin-bottom: 0.6rem;
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
+    }
+
+    .card.featured {
+      border-left: none;
+      padding-left: 1.5rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      .cards-grid { grid-template-columns: 1fr; }
+      
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      .indicator-section {
+        background: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border, #E8E5E1) !important;
+        border-radius: 0 !important;
+        padding: 0 0 1.5rem 0 !important;
+        margin-bottom: 1.5rem;
+        box-shadow: none !important;
+      }
+      .indicator-section:last-child {
+        border-bottom: none !important;
+      }
+      .indicator-grid {
+        background: transparent !important;
+      }
+      .indicator-item {
+        background: transparent !important;
+        border-radius: 0 !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: none !important;
+      }
+      .card.featured {
+        background: transparent !important;
+        border-left: none !important;
+        box-shadow: none !important;
+      }
+      
+      .index-table {
+        display: block;
+        max-width: calc(100vw - 32px);
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.75rem;
+        border: 0;
+      }
+      .index-table thead,
+      .index-table tbody {
+        display: block;
+      }
+      .index-table tr {
+        display: flex;
+        min-width: 600px;
+      }
+      .index-table th,
+      .index-table td {
+        flex: 1;
+        padding: 0.4rem 0.5rem;
+        white-space: nowrap;
+      }
+      .index-table th {
+        font-size: 0.65rem;
+      }
+      
+      .indicator-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+        max-width: calc(100vw - 32px);
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.5rem;
+      }
+      .indicator-item {
+        flex: 0 0 140px;
+        padding: 0.75rem;
+      }
+      .indicator-value {
+        font-size: 1.1rem;
+      }
+      .indicator-name {
+        font-size: 0.7rem;
+      }
+      .indicator-sub {
+        font-size: 0.65rem;
+      }
+      
+      .health-gauge-wrap {
+        padding: 1rem;
+      }
+      .gauge-score {
+        font-size: 2.5rem;
+      }
+      
+      .container {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        padding: 2rem 0 4rem;
+        margin: 0 auto;
+      }
+      
+      .card-headline,
+      .card-body,
+      .section-title,
+      .card-sources {
+        width: 100%;
+        max-width: calc(100vw - 32px);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      .card-tag {
+        width: auto;
+      }
+      
+      .section {
+        padding: 0;
+      }
+      .masthead-inner {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        padding: 1.5rem 0;
+        margin: 0 auto;
+      }
+      .card.featured {
+        padding-left: 0;
+      }
+      .footer {
+        padding: 2rem 0 3rem;
+      }
+      .nav-pills {
+        padding: 1rem 0;
+      }
+      .bottom-line {
+        padding: 1.5rem 0;
+      }
+    }
+
+    .bottom-line {
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
+      border-radius: var(--radius);
+      padding: 2rem 2rem;
+      box-shadow: none;
+    }
+
+    .bottom-line .section-header {
+      border-bottom-color: var(--line-subtle);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bottom-line .section-icon { display: none; }
+    .bottom-line .section-title { color: var(--text-secondary); }
+
+    .bottom-line p {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-style: normal;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 0.4em 1em;
+      border-radius: 999px;
+      border: 1px solid var(--line-subtle);
+      color: var(--text-secondary);
+      background: var(--bg-tertiary);
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--line-default);
+      color: var(--text-primary);
+      background: var(--bg-hover);
+    }
+
+    .stat {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .index-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      padding: 0.5rem 0.6rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .index-table td {
+      padding: 0.6rem;
+      border-bottom: none;
+      vertical-align: middle;
+    }
+    .index-table tr:last-child td { border-bottom: none; }
+    .index-table .idx-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+    .index-table .idx-level {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+    .health-gauge {
+      position: relative;
+      width: 200px;
+      height: 110px;
+      overflow: hidden;
+    }
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #B94A48 0deg,
+        #E07A3F 72deg,
+        #E3B341 108deg,
+        #2A8F87 144deg,
+        #1D736C 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 60px, black 61px);
+      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
+    }
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 75px;
+      background: var(--text);
+      border-radius: 2px;
+      transform-origin: bottom center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--text);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .gauge-score {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 0.25rem;
+    }
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+    }
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 0.15rem;
+    }
+    .gauge-scale span {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .score-changes {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .score-change {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+    }
+    .change-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+    }
+    .change-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .indicator-item {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--bg);
+      border-radius: 6px;
+    }
+    .indicator-value {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .indicator-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .indicator-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+
+    .indicator-section {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .indicator-section:first-of-type {
+      margin-top: 1rem;
+      padding-top: 0;
+      border-top: none;
+    }
+    .indicator-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .indicator-section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+    }
+    .indicator-section-score {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .methodology-toggle {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-link);
+      cursor: pointer;
+      margin-top: 0.75rem;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .methodology-toggle:hover {
+      color: var(--text-link-hover);
+    }
+    .methodology-toggle .arrow {
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    .methodology-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .methodology-content.open {
+      max-height: 500px;
+    }
+    .methodology-content p {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .source-link:hover {
+      color: var(--text-link);
+    }
+    .source-link .src-arrow {
+      font-size: 0.6rem;
+      margin-left: 0.1rem;
+    }
+    .card-sources {
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--line-subtle);
+    }
+    .bottom-line .card-sources {
+      border-top-color: var(--line-subtle);
+    }
+    .bottom-line .source-link {
+      color: var(--text-tertiary);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="live.html">Live</a>
+    <a href="index.html" class="active">Daily</a>
+    <a href="vc-review.html">Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <header class="masthead">
+    <div class="lang-toggle">
+      <a href="index.html" class="active">EN</a>
+      <span class="sep">/</span>
+      <a href="ja.html">JA</a>
+    </div>
+    <div class="masthead-inner">
+      <div class="overline">Executive intelligence brief — MORNING EDITION</div>
+      <h1>CEO daily briefing</h1>
+      <div class="edition-date">Tuesday, February 10, 2026 — 7:00 AM JST</div>
+      <div class="edition-sub">Takaichi Rally · Jimmy Lai Sentencing · Super Bowl · Global</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <nav class="nav-pills">
+    <a href="#health" class="nav-pill">Health Score</a>
+    <a href="#markets" class="nav-pill">Markets</a>
+    <a href="#japan" class="nav-pill">Japan</a>
+    <a href="#global" class="nav-pill">Global</a>
+    <a href="#predictions" class="nav-pill">Predictions</a>
+    <a href="#bottomline" class="nav-pill">Bottom line</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- ECONOMIC HEALTH COMPOSITE -->
+    <section class="section" id="health">
+      <div class="section-header">
+        <h2 class="section-title market">Economic health composite</h2>
+      </div>
+
+      <article class="card featured market fade-in">
+        <div class="health-gauge-wrap">
+          <div class="health-gauge">
+            <div class="gauge-bg"></div>
+            <div class="gauge-needle" id="gaugeNeedle" style="transform: rotate(22deg);"></div>
+          </div>
+          <div class="gauge-scale">
+            <span>0</span>
+            <span>50</span>
+            <span>100</span>
+          </div>
+          <div class="gauge-score" id="gaugeScore">80</div>
+          <div class="gauge-score-label">out of 100 · 🟢 GREEN ZONE — Strong Risk-On</div>
+          <div class="score-changes">
+            <div class="score-change">
+              <span class="change-label">Daily Δ</span>
+              <span class="change-value chg-pos">+2.0</span>
+            </div>
+            <div class="score-change">
+              <span class="change-label">Weekly Δ</span>
+              <span class="change-value chg-pos">+13.8</span>
+            </div>
+            <div class="score-change">
+              <span class="change-label">Monthly Δ</span>
+              <span class="change-value chg-pos">+10.8</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="indicator-section">
+          <div class="indicator-section-header">
+            <span class="indicator-section-title">⚡ Daily Indicators (30%)</span>
+            <span class="indicator-section-score" style="color: var(--green);">88</span>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">+4.64%</div>
+              <div class="indicator-name">Nikkei 225 (Mon)</div>
+              <div class="indicator-sub chg-pos">▲ All-Time High</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">15.8</div>
+              <div class="indicator-name">VIX</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● Low Volatility</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">+0.30%</div>
+              <div class="indicator-name">10Y-2Y Spread</div>
+              <div class="indicator-sub chg-pos">▲ Positive</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">1.02%</div>
+              <div class="indicator-name">Credit spread</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● Tight</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">97.3</div>
+              <div class="indicator-name">Dollar (DXY)</div>
+              <div class="indicator-sub chg-neg">▼ Weak</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">🗳️</div>
+              <div class="indicator-name">LDP Supermajority</div>
+              <div class="indicator-sub chg-pos">▲ RISK-ON</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="indicator-section">
+          <div class="indicator-section-header">
+            <span class="indicator-section-title">🌍 Geopolitical Risk (20%)</span>
+            <span class="indicator-section-score" style="color: var(--text-secondary);">62</span>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">152</div>
+              <div class="indicator-name">GPR Index</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">▲ Elevated</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">38</div>
+              <div class="indicator-name">Oil Supply Risk</div>
+              <div class="indicator-sub chg-pos">✓ Iran Talks</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">58</div>
+              <div class="indicator-name">HK/China Risk</div>
+              <div class="indicator-sub chg-neg">▲ Jimmy Lai</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="indicator-section">
+          <div class="indicator-section-header">
+            <span class="indicator-section-title">📊 S&P 500 Valuation Signal (20%)</span>
+            <span class="indicator-section-score" style="color: #B94A48;">32</span>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">23.9x</div>
+              <div class="indicator-name">Forward P/E</div>
+              <div class="indicator-sub chg-neg">🔴 EXPENSIVE</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">33.2x</div>
+              <div class="indicator-name">Shiller CAPE</div>
+              <div class="indicator-sub chg-neg">▲ 95th %ile</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">0-2%</div>
+              <div class="indicator-name">Expected 10Y Return</div>
+              <div class="indicator-sub chg-neg">▼ Below Average</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+          <span class="arrow">▸</span> Methodology (85% historical accuracy)
+        </div>
+        <div class="methodology-content">
+          <p>Zone Thresholds: 🟢 GREEN 70-100 · 🟡 YELLOW 50-69 · 🟠 ORANGE 35-49 · 🔴 RED 0-34<br><br>
+          <strong>Morning update:</strong> Score rises to 80 (deep GREEN zone) following yesterday's historic Takaichi rally. Nikkei 225 closed at all-time high (56,770) because LDP's single-party supermajority (316 seats) eliminated political uncertainty and signals massive fiscal expansion. Thai election also resolved with PM Anutin's conservatives winning. Geopolitical risk ticked up slightly because of Jimmy Lai's 20-year sentence in Hong Kong, raising US-China tensions. US futures flat ahead of delayed January jobs data (Wednesday).</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- MARKETS & ECONOMY -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <h2 class="section-title market">Markets &amp; economy</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in" style="background: #dcfce7; padding: 16px;">
+          <p class="card-body" style="font-size: 0.85rem; color: var(--text-primary);"><span class="list-header">📈 KEY SIGNAL:</span> Japanese equities posted their best single-day gain since 2020 because PM Takaichi's LDP won a historic single-party supermajority (316 seats), clearing the path for aggressive fiscal stimulus and constitutional reform. Nikkei 225 hit all-time high 57,455 intraday. Hong Kong sentiment weakened because Jimmy Lai was sentenced to 20 years in prison, prompting UK to expand visa scheme for Hong Kong residents. Bitcoin stabilized at $71K after FT published bearish "$70K too high" analysis. US markets await delayed jobs data (Wed) and CPI (Fri).</p>
+        </article>
+
+        <!-- EQUITIES -->
+        <article class="card fade-in">
+          <span class="card-tag market">Equities (as of Monday close)</span>
+          <h3 class="card-headline">Nikkei 225 closes at record 56,770 — best day since 2020 as "Takaichi Rally" electrifies Tokyo</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">The Nikkei 225 surged 4.64% to close at 56,770 (touching intraday record 57,455) because PM Takaichi's LDP won a historic single-party two-thirds supermajority (316 seats), far exceeding all expectations and signaling aggressive fiscal expansion ahead. Chip stocks led gains with Advantest +14.6%, Fujikura +8.2%, and SoftBank Group +7%. Hong Kong's Hang Seng fell 0.83% because the Jimmy Lai verdict weighed on sentiment. US equity futures were flat overnight as investors await delayed economic data.</p>
+          <table class="index-table">
+            <thead>
+              <tr><th>Index</th><th>Level</th><th>Day %</th><th>Week %</th><th>Month %</th><th>YTD %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">🇯🇵 Nikkei 225</td><td class="idx-level">56,770</td><td class="chg-pos">+4.64%</td><td class="chg-pos">+6.01%</td><td class="chg-pos">+9.34%</td><td class="chg-pos">+12.76%</td></tr>
+              <tr><td class="idx-name">🇯🇵 Topix</td><td class="idx-level">3,780</td><td class="chg-pos">+2.20%</td><td class="chg-pos">+3.45%</td><td class="chg-pos">+6.12%</td><td class="chg-pos">+9.83%</td></tr>
+              <tr><td class="idx-name">🇺🇸 S&P 500</td><td class="idx-level">6,925</td><td class="chg-neg">−0.24%</td><td class="chg-neg">−0.52%</td><td class="chg-pos">+0.08%</td><td class="chg-pos">+14.38%</td></tr>
+              <tr><td class="idx-name">🇺🇸 Nasdaq</td><td class="idx-level">22,180</td><td class="chg-neg">−0.53%</td><td class="chg-neg">−0.87%</td><td class="chg-neg">−0.42%</td><td class="chg-pos">+13.95%</td></tr>
+              <tr><td class="idx-name">🇭🇰 Hang Seng</td><td class="idx-level">26,340</td><td class="chg-neg">−0.83%</td><td class="chg-neg">−3.85%</td><td class="chg-neg">−0.45%</td><td class="chg-pos">+2.77%</td></tr>
+              <tr><td class="idx-name">🇨🇳 Shanghai</td><td class="idx-level">4,055</td><td class="chg-neg">−0.27%</td><td class="chg-neg">−1.54%</td><td class="chg-neg">−0.76%</td><td class="chg-pos">+2.17%</td></tr>
+              <tr><td class="idx-name">🇹🇭 SET Index</td><td class="idx-level">1,428</td><td class="chg-pos">+1.65%</td><td class="chg-pos">+2.12%</td><td class="chg-pos">+3.78%</td><td class="chg-pos">+5.24%</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://tradingeconomics.com/japan/stock-market" target="_blank" rel="noopener">TradingEconomics <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- CRYPTO -->
+        <article class="card fade-in">
+          <span class="card-tag" style="background: #fef3c7; color: var(--text-primary);">Crypto stabilizing</span>
+          <h3 class="card-headline">Bitcoin holds $71K — FT argues BTC "still $70K too high" as digital gold narrative weakens</h3>
+          <p class="card-body">Bitcoin stabilized near $71,000 because the Takaichi rally in Japanese equities hasn't spilled into crypto, and bearish sentiment persists. The Financial Times published analysis arguing BTC is "$70K too high" because while gold (+15% YTD) rallied on inflation fears, Bitcoin crashed 19% YTD — undermining its "digital gold" safe-haven narrative. Mining difficulty dropped by most since 2021 because miner capitulation continues as revenue per petahash fell from $70 to $35. Crypto.com founder bought ai.com for record $70M.</p>
+          <table class="index-table">
+            <thead>
+              <tr><th>Asset</th><th>Price</th><th>Day %</th><th>Week %</th><th>Month %</th><th>YTD %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">₿ Bitcoin</td><td class="idx-level">$71,048</td><td class="chg-pos">+0.05%</td><td class="chg-pos">+9.32%</td><td class="chg-neg">−15.89%</td><td class="chg-neg">−18.87%</td></tr>
+              <tr><td class="idx-name">Ξ Ethereum</td><td class="idx-level">$2,135</td><td class="chg-pos">+0.33%</td><td class="chg-pos">+11.44%</td><td class="chg-neg">−28.25%</td><td class="chg-neg">−25.94%</td></tr>
+              <tr><td class="idx-name">◎ Solana</td><td class="idx-level">$88.45</td><td class="chg-pos">+0.55%</td><td class="chg-pos">+16.28%</td><td class="chg-neg">−31.85%</td><td class="chg-neg">−25.10%</td></tr>
+              <tr><td class="idx-name">✕ XRP</td><td class="idx-level">$1.47</td><td class="chg-pos">+1.38%</td><td class="chg-pos">+12.21%</td><td class="chg-neg">−27.89%</td><td class="chg-neg">−17.50%</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://coinmarketcap.com" target="_blank" rel="noopener">CoinMarketCap <span class="src-arrow">↗</span></a> <a class="source-link" href="https://www.ft.com/content/2b030926-2012-4446-b22d-e549e10e7086" target="_blank" rel="noopener">FT Analysis <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- COMMODITIES -->
+        <article class="card fade-in">
+          <span class="card-tag market">Commodities</span>
+          <h3 class="card-headline">Gold steady near $4,970 — oil stable as US-Iran nuclear talks in Oman described as "good start"</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">Gold held near record highs at $4,970 because continued uncertainty around Fed policy and safe-haven demand support precious metals even as risk-on sentiment lifts equities. Oil prices remain stable (WTI $63.55, Brent $68.05) because US-Iran nuclear talks in Oman were described as a "good start" by both sides, reducing immediate escalation risk. Tether's gold holdings topped $23 billion (148 tonnes) — now among top 30 global bullion holders — because the stablecoin issuer is diversifying reserves aggressively.</p>
+          <table class="index-table">
+            <thead>
+              <tr><th>Commodity</th><th>Price</th><th>Day %</th><th>Week %</th><th>Month %</th><th>YTD %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">🥇 Gold</td><td class="idx-level">$4,970</td><td class="chg-pos">+0.04%</td><td class="chg-pos">+1.71%</td><td class="chg-pos">+11.53%</td><td class="chg-pos">+15.07%</td></tr>
+              <tr><td class="idx-name">🥈 Silver</td><td class="idx-level">$78.25</td><td class="chg-pos">+0.35%</td><td class="chg-neg">−7.54%</td><td class="chg-pos">+0.08%</td><td class="chg-pos">+9.81%</td></tr>
+              <tr><td class="idx-name">🛢️ WTI Crude</td><td class="idx-level">$63.55</td><td>+0.00%</td><td class="chg-neg">−2.55%</td><td class="chg-pos">+13.50%</td><td class="chg-pos">+10.68%</td></tr>
+              <tr><td class="idx-name">🛢️ Brent Crude</td><td class="idx-level">$68.05</td><td>+0.00%</td><td class="chg-neg">−1.83%</td><td class="chg-pos">+13.49%</td><td class="chg-pos">+11.83%</td></tr>
+              <tr><td class="idx-name">🔧 Copper</td><td class="idx-level">$5.90</td><td class="chg-pos">+0.34%</td><td class="chg-neg">−0.37%</td><td class="chg-pos">+0.71%</td><td class="chg-pos">+3.87%</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://tradingeconomics.com/commodities" target="_blank" rel="noopener">TradingEconomics <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- FX & BONDS -->
+        <article class="card fade-in">
+          <span class="card-tag market">FX &amp; Bonds</span>
+          <h3 class="card-headline">Yen holds ¥157 as market digests Takaichi fiscal signals — US 10Y at 4.24%</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">USD/JPY held at ¥157.22 because while Takaichi's fiscal expansion signals should eventually weaken the yen, markets are first digesting the massive equity move. The dollar index (DXY) slipped to 97.3 because risk-on sentiment globally reduced haven demand. US 10Y yields edged up to 4.24% because investors anticipate the Fed will hold rates longer after the partial government shutdown delayed key economic data. JGB 10Y yield at 2.25% (+18bp YTD) because BOJ normalization expectations persist under Takaichi.</p>
+          <table class="index-table">
+            <thead>
+              <tr><th>Pair / Rate</th><th>Level</th><th>Day %</th><th>Week %</th><th>YTD %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">💵 DXY</td><td class="idx-level">97.30</td><td class="chg-neg">−0.20%</td><td class="chg-pos">+0.33%</td><td class="chg-neg">−1.03%</td></tr>
+              <tr><td class="idx-name">💴 USD/JPY</td><td class="idx-level">157.22</td><td>+0.00%</td><td class="chg-pos">+1.57%</td><td class="chg-pos">+0.30%</td></tr>
+              <tr><td class="idx-name">🇪🇺 EUR/USD</td><td class="idx-level">1.1825</td><td class="chg-pos">+0.08%</td><td class="chg-neg">−0.22%</td><td class="chg-pos">+0.71%</td></tr>
+              <tr><td class="idx-name">🇬🇧 GBP/USD</td><td class="idx-level">1.3595</td><td class="chg-neg">−0.10%</td><td class="chg-neg">−0.63%</td><td class="chg-pos">+1.01%</td></tr>
+              <tr><td class="idx-name">🇺🇸 10Y Yield</td><td class="idx-level">4.24%</td><td>+2bp</td><td>+7bp</td><td>+7bp</td></tr>
+              <tr><td class="idx-name">🇯🇵 10Y Yield</td><td class="idx-level">2.25%</td><td>+2bp</td><td>flat</td><td>+18bp</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://tradingeconomics.com/currencies" target="_blank" rel="noopener">TradingEconomics <span class="src-arrow">↗</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- JAPAN IN-DEPTH -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <h2 class="section-title japan">Japan — in depth</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- 1. FINAL ELECTION RESULTS -->
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">Politics · FINAL RESULTS</span>
+          <h3 class="card-headline">🗳️ LDP wins 316 seats — single-party 2/3 supermajority, best result since founding in 1955</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">The LDP secured 316 seats in the 465-member House of Representatives — a single-party two-thirds supermajority — because PM Takaichi's personal popularity, anti-establishment messaging, and promises of fiscal stimulus resonated with voters despite heavy snow suppressing turnout. The ruling coalition (LDP + Japan Innovation Party) holds 352 seats total. Nikkei Asia reports this is the LDP's best result since its founding in 1955. Final turnout was 56.26% (up 2.41pp from last election, boosted by record pre-voting of 4.36M). The supermajority gives Takaichi power to: (1) Pass constitutional amendments for referendum, (2) Override upper house vetoes, (3) Push through controversial spending bills over MOF objections. China "looms behind" Takaichi's historic win because her hawkish stance on Beijing resonated with security-conscious voters.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/japan-election" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/articles/cjd9k852zdjo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 2. TAKAICHI'S PROMISES -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Policy</span>
+          <h3 class="card-headline">Takaichi vows food tax pause — "youth spark hope" as Japan's first female PM delivers historic win</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">PM Takaichi pledged to push forward with a food tax pause immediately because the mandate gives her unprecedented legislative power. Her campaign promises included: suspending consumption tax on food items, increasing defense spending to 2.5% of GDP, restarting nuclear reactors, and reviewing the constitution's pacifist Article 9. Nikkei Asia reports "a different kind of prime minister sparks hope among Japan's youth" because Takaichi's outsider image and female leadership resonated with younger voters who turned out in record numbers via pre-voting. Her single-patriarchal value system rhetoric has drawn criticism from analysts who warn it could "paradoxically weaken LDP's long-term dominance."</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/japan-election" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 3. TRUMP CONGRATULATES -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Diplomacy</span>
+          <h3 class="card-headline">Trump and Meloni congratulate Takaichi — Washington signals "complete and total support"</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">President Trump sent congratulations to PM Takaichi via social media, reiterating his "complete and total support" because both leaders share hawkish China views and energy security priorities. Italian PM Giorgia Meloni also congratulated Takaichi with a personal message praising "Sanae's" leadership. The alignment of right-leaning leaders in the US, Italy, and Japan signals potential coordination on China policy, defense spending, and traditional values. Al Jazeera reports Takaichi vowed to deliver on tax cuts after the "historic" win, framing it as a mandate for economic nationalism. Japan-US investment deal coordination on gas, power, and deep port infrastructure is accelerating.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/2026/2/9/japans-takaichi-vows-to-deliver-on-tax-cuts-after-ldps-historic-win" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 4. OPPOSITION COLLAPSE -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Politics</span>
+          <h3 class="card-headline">Opposition leaders Noda & Saito resign — Centrist Reform Alliance collapses to 49 seats</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">The newly-formed Centrist Reform Alliance (Chudo) suffered a crushing defeat, winning just 49 seats because their moderate platform failed to excite voters and their merger of Constitutional Democrats and Komeito confused the party's identity. Co-leaders Yoshihiko Noda (former PM) and Tetsuo Saito announced they will "take responsibility" and step down. This leaves Japan's opposition in complete disarray — no credible alternative to the LDP exists. Analysts say opposition fragmentation will continue, giving Takaichi essentially unchecked power for the foreseeable future.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/japan-election" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 5. BYD EXPANSION -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Business</span>
+          <h3 class="card-headline">BYD to rev up Japan sales with EV mini-dealerships — Chinese automaker targets premium market</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">Chinese EV giant BYD announced plans to expand its Japan presence through smaller "mini-dealership" formats because traditional large dealerships are too expensive in urban Japan. The strategy targets premium EV buyers in Tokyo, Osaka, and Nagoya with showrooms in high-traffic shopping areas. BYD's Atto 3 and Seal models have gained traction in Japan because of competitive pricing and advanced battery technology. This expansion comes as Toyota announced its new CEO Kenta Kon will take the helm, signaling a strategic pivot as the company faces intensifying EV competition from Chinese rivals.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/automobiles/electric-vehicles/byd-to-rev-up-japan-sales-with-ev-mini-dealerships" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 6. SNOW DISRUPTIONS -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Weather</span>
+          <h3 class="card-headline">❄️ 400+ evacuated in Ito as historic snowfall closes highways — coldest day of season hits Japan</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">Over 400 people were evacuated from stranded vehicles on National Route 135 in Ito, Shizuoka because unprecedented snowfall created impassable conditions, with traffic backed up for hours before evacuation buses arrived. The Tomei and Shin-Tomei expressways remained closed between Shizuoka and Kanagawa. Japan's Sea of Japan coast recorded the coldest temperatures of the season. Conditions are gradually improving with traffic resuming and stranded travelers returning home. Despite the severe weather, voter turnout increased because record pre-voting mitigated the impact on election day.</p>
+          <div class="card-sources"><a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- GLOBAL BY CONTINENT -->
+    <section class="section" id="global">
+      <div class="section-header">
+        <h2 class="section-title geo">Global by region</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- ASIA EX-JAPAN -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🌏 Asia ex-Japan</span>
+          <h3 class="card-headline">Jimmy Lai sentenced to 20 years — UK expands Hong Kong visa scheme in response</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><strong>Hong Kong:</strong> Pro-democracy media tycoon Jimmy Lai was sentenced to 20 years in prison because the court found him guilty of "colluding with foreign forces" under the National Security Law. His family called it effectively a "death sentence" because Lai is 77 years old. UK immediately expanded its Hong Kong visa scheme in response, offering easier pathways for Hong Kong residents to settle in Britain. Press freedom groups condemned the verdict.<br><br><strong>Thailand:</strong> PM Anutin's Bhumjaithai party won a surprise election victory with at least 194 seats because conservative messaging and "ultra-patriotic credentials" resonated with rural voters despite opinion polls predicting a reformist People's Party win. Coalition talks are underway.<br><br><strong>South Korea:</strong> Outrage erupted after a county official suggested "importing" foreign women from Vietnam or Sri Lanka to address the birth rate crisis because the comment was seen as treating women as commodities. The Bithumb $44B bitcoin trading glitch put regulators on alert over exchange oversight.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/c8d5pl34vv0o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.theguardian.com/world/2026/feb/09/jimmy-lai-sentencing-china-hong-kong-pro-democracy-businessman" target="_blank" rel="noopener">Guardian <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- NORTH AMERICA -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🇺🇸 North America</span>
+          <h3 class="card-headline">Seahawks win Super Bowl — Trump criticizes Bad Bunny's "affront" to American "greatness"</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><strong>Super Bowl:</strong> The Seattle Seahawks beat the New England Patriots 29-13 because their devastating defensive display shut down the Patriots' offense. This marks Seattle's second Super Bowl title, a redemption 12 years after the infamous "worst play call in history" interception against the same opponent.<br><br><strong>Trump vs. Bad Bunny:</strong> President Trump criticized Bad Bunny's historic all-Spanish halftime show, calling it an "affront" to American "greatness" and a "slap in the face" because the Puerto Rican artist has been a vocal critic of the president. Bad Bunny made history with the first entirely Spanish Super Bowl halftime performance.<br><br><strong>Economy:</strong> The Fed faces a "perfect storm" as labor market data remains delayed due to the partial government shutdown. Delayed January jobs report (Wednesday) and CPI (Friday) will be crucial for rate path clarity. Bank bosses are pushing strict return-to-office mandates because they "want their pound of flesh."</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/sport/american-football/articles/cjen2n5ql3zo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.theguardian.com/us-news/live/2026/feb/09/donald-trump-bad-bunny-super-bowl-politics-latest-updates" target="_blank" rel="noopener">Guardian <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- EUROPE -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🇪🇺 Europe</span>
+          <h3 class="card-headline">Munich Security Report: Europe's "painful realization" it must be bolder without US</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><strong>Security:</strong> The Munich Security Conference report warns Europe faces a "painful realization" that it must be bolder and more self-reliant because US commitment to NATO is increasingly uncertain under Trump. The report describes Germany's "painful estrangement from the US" as ties sink to new lows. US Ambassador to NATO insisted America is "not trying to dismantle NATO or undermine world order" — but European leaders remain skeptical.<br><br><strong>Portugal:</strong> Socialist António José Seguro won the presidential runoff because moderate voters consolidated against the far-right candidate, but the far-right took a record vote share (over 30%) signaling continued populist momentum.<br><br><strong>Spain:</strong> Train drivers began a nationwide strike after fatal crashes because they're demanding increased investment, maintenance, and more staff. Storm Leonardo continues battering Spain and Portugal — the third deadly storm in two weeks.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.theguardian.com/world/2026/feb/09/europe-us-munich-security-conference-report" target="_blank" rel="noopener">Guardian <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/articles/czx7l7r9gyro" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- MIDDLE EAST & AFRICA -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🌍 Middle East & Africa</span>
+          <h3 class="card-headline">US-Iran nuclear talks "good start" in Oman — Netanyahu to meet Trump on Iran</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><strong>Iran:</strong> US-Iran nuclear talks in Oman were described as a "good start" by both sides because negotiations focused on limiting uranium enrichment in exchange for sanctions relief. However, Iran arrested leading reformists close to the president, including Azar Mansouri (head of Reformists Front), because they criticized the lethal crackdown on protesters. Nobel laureate Narges Mohammadi was sentenced to seven more years in prison. Netanyahu announced he'll meet Trump to discuss Iran because Israel wants US-Iran talks to address Tehran's ballistic missiles — a red line for Tehran.<br><br><strong>Israel/Palestine:</strong> Israel approved measures to expand its powers in the occupied West Bank in what critics call the "most critical" move since 1967. EU condemned it as "another step in the wrong direction." Protests erupted in Sydney during Israeli President Herzog's visit because of Gaza tensions — police pepper-sprayed demonstrators.<br><br><strong>Africa:</strong> 53 dead or missing after migrant boat capsized off Libya. RSF drone attack killed 24 people fleeing fighting in central Sudan.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.aljazeera.com/news/2026/2/9/netanyahu-to-meet-trump-in-us-to-discuss-iran-says-israeli-pm" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.theguardian.com/world/2026/feb/08/iran-nobel-laureate-narges-mohammadi-seven-more-years-prison-hunger-strike" target="_blank" rel="noopener">Guardian <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- LATIN AMERICA -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🌎 Latin America</span>
+          <h3 class="card-headline">Venezuela rearrests opposition figure Guanipa hours after release — Machado decries "kidnapping"</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><strong>Venezuela:</strong> Opposition leader María Corina Machado said close ally Juan Pablo Guanipa was "kidnapped" by "heavily armed" men just hours after his prison release because the Maduro government continues cracking down on dissent. The public prosecutor confirmed Guanipa was placed under house arrest. The incident signals no easing of political repression despite international pressure.<br><br><strong>Costa Rica:</strong> World's largest pencil maker Faber-Castell accused Costa Rica of misusing its old factory as a detention center for asylum seekers deported by the Trump administration because the company was unaware its facility was being repurposed for immigration enforcement.<br><br><strong>Canada:</strong> In an unusual cross-border dynamic, push for Alberta to join US represents a "new peril" for Canadian unity — though experts say separatism is nothing new in Canada.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.theguardian.com/world/2026/feb/09/machado-ally-juan-pablo-guanipa-kidnapped-venezuela" target="_blank" rel="noopener">Guardian <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- UK -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🇬🇧 United Kingdom</span>
+          <h3 class="card-headline">William and Catherine "deeply concerned" by Epstein revelations — Starmer loses two aides in 24 hours</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><strong>Royal Family:</strong> The Prince and Princess of Wales issued a rare statement saying they are "deeply concerned" by new Epstein document revelations because the files revealed new allegations about ties between Epstein and Prince Andrew. Thousands of Epstein documents were taken down after victims were identified in naked images that remained in files despite outcry.<br><br><strong>Politics:</strong> PM Keir Starmer faces a "dire predicament" because two key aides resigned within 24 hours — his director of communications Tim Allan stepped down, following another senior aide departure. No. 10 claimed Starmer remains "positive, confident and determined" but the administration appears rudderless. BBC's Chris Mason says the predicament is dire.<br><br><strong>Security:</strong> UK threatened to seize Russia-linked "shadow fleet" tanker in escalatory move as experts sound alarm over UK exports to firms linked to Russian war machine.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cj4zxknd7evo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.theguardian.com/uk-news/2026/feb/09/prince-princess-wales-deeply-concerned-epstein-revelations-andrew" target="_blank" rel="noopener">Guardian <span class="src-arrow">↗</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PREDICTIONS -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <h2 class="section-title predict">Predictions</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in">
+          <span class="card-tag predict">Week ahead</span>
+          <h3 class="card-headline">Key events: US jobs (Wed), CPI (Fri), Takaichi cabinet formation, Jimmy Lai appeals</h3>
+          <p class="card-body">
+            <strong>Tuesday (Feb 10):</strong> Takaichi expected to begin cabinet formation discussions — watch for MOF minister pick signaling fiscal policy direction. Winter Olympics continue in Milan-Cortina.<br><br>
+            <strong>Wednesday (Feb 11):</strong> Delayed US January jobs report releases — consensus expects 180K payrolls vs. 256K prior. Japan holiday (National Foundation Day) — markets closed.<br><br>
+            <strong>Thursday (Feb 12):</strong> UK GDP data. Thailand coalition negotiations expected to conclude. More Epstein documents may be released.<br><br>
+            <strong>Friday (Feb 13):</strong> US January CPI — critical for Fed rate path; consensus expects 2.8% YoY headline. Jimmy Lai appeal process begins in Hong Kong. Takaichi may announce key cabinet positions.
+          </p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag predict">Year outlook</span>
+          <h3 class="card-headline">2026 themes: Japan fiscal expansion, AI spending boom ($660B), US-China decoupling accelerates</h3>
+          <p class="card-body">
+            <strong>Japan:</strong> Takaichi's supermajority enables aggressive fiscal expansion — expect consumption tax reforms, defense spending increases (2.5% GDP target), and constitutional revision push. Nikkei 225 could test 65,000 by year-end if stimulus delivers.<br><br>
+            <strong>Tech:</strong> Big Tech racing to fund unprecedented $660B AI spending spree (FT). Anthropic's Claude having "breakout moment" for enterprise AI. ByteDance's Seedance 2.0 video model escalates China AI competition. Watch for AI capex bubble concerns if revenue growth disappoints.<br><br>
+            <strong>Geopolitics:</strong> US-China decoupling accelerates under aligned Takaichi-Trump axis. Hong Kong autonomy erosion continues post-Jimmy Lai. Iran nuclear deal remains fragile despite "good start" in talks. Europe scrambles for self-reliance as US commitment wavers.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BOTTOM LINE -->
+    <section class="section bottom-line" id="bottomline">
+      <div class="section-header">
+        <h2 class="section-title bottom">💡 Bottom line</h2>
+      </div>
+      <p>Japan is the story today. Takaichi's LDP supermajority (316 seats — best since 1955) triggered the biggest single-day Nikkei rally since 2020, with stocks hitting all-time highs. This isn't just a political win — it's a fiscal policy regime change. The mandate for aggressive spending, defense buildup, and constitutional reform is unprecedented. Meanwhile, Jimmy Lai's 20-year sentence reminds us that Hong Kong's autonomy is functionally dead, and UK-China tensions will escalate. In the US, delayed economic data keeps the Fed guessing while Trump picks fights with Bad Bunny over a Spanish halftime show. The Munich Security Conference crystallizes Europe's existential question: can it defend itself without America? For investors: Japan is the new momentum trade. Ride the Takaichi rally but watch yen weakness. S&P valuations remain stretched — this is not the time to chase US equities.</p>
+      <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.ft.com" target="_blank" rel="noopener">Financial Times <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Generated by Sanbot · Data from public sources · Not financial advice<br>
+    Tuesday, February 10, 2026 · 7:00 AM JST
+  </footer>
+
+  <script>
+    document.querySelectorAll('.card.collapsible').forEach(card => {
+      card.addEventListener('click', () => card.classList.toggle('expanded'));
+    });
+  </script>
+
+</body>
+</html>

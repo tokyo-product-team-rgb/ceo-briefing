@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEOデイリーブリーフィング — 2026年2月6日</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #F9F9F9;
+      --surface: #FFFFFF;
+      --bg-secondary: #FDFDFD;
+      --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3;
+      --bg-hover-darker: #ECEAE7;
+      --bg-accent: #2A8F87;
+      --bg-accent-dark: #1D736C;
+      --text: #111111;
+      --text-secondary: #44403C;
+      --text-muted: #78716C;
+      --text-link: #1D736C;
+      --text-link-hover: #2A8F87;
+      --text-error: #C5624E;
+      --border: #E8E5E1;
+      --border-default: #D5D2CD;
+      --border-accent: #B56AEB;
+      --accent-geo: #44403C;
+      --accent-tech: #44403C;
+      --accent-japan: #44403C;
+      --accent-market: #44403C;
+      --accent-vc: #44403C;
+      --accent-predict: #44403C;
+      --accent-bottom: #111111;
+      --chart-primary: #2A8F87;
+      --chart-secondary: #E07A3F;
+      --chart-tertiary: #E3B341;
+      --chart-reference: #4C78A8;
+      --chart-outlier: #C06C84;
+      --chart-warning: #B94A48;
+      --highlight-emphasis: #F4E3B1;
+      --highlight-info: #E3EBF5;
+      --highlight-warning: #F6E3E1;
+      --highlight-brand: #E5FBF8;
+      --serif: 'Copernicus Trial', 'Shippori Mincho', Georgia, serif;
+      --sans: 'Hanken Grotesk', 'Zen Kaku Gothic New', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --shadow-lg: 0 16px 32px rgba(0,0,0,0.08);
+      --radius: 24px;
+      --green: #2A8F87;
+      --red: #B94A48;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .masthead {
+      background: transparent;
+      border-bottom: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: none;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1.5rem;
+      margin: 4px 0;
+      border-radius: 999px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-bar a.active {
+      color: var(--text-primary);
+      background: #ECEAE7;
+    }
+
+    .nav-bar a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-toggle a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .lang-toggle a.active {
+      color: var(--text);
+    }
+
+    .lang-toggle a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle .sep {
+      color: var(--border);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-icon {
+      display: none;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title.geo,
+    .section-title.tech,
+    .section-title.japan,
+    .section-title.market,
+    .section-title.predict,
+    .section-title.vc,
+    .section-title.bottom { color: var(--text-secondary); }
+
+    .cards { display: grid; gap: 1rem; }
+
+    .card {
+      background: var(--surface);
+      border: none;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card.collapsible {
+      cursor: pointer;
+    }
+    .card.collapsible .card-body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, margin 0.2s ease;
+      margin-bottom: 0;
+    }
+    .card.collapsible.expanded .card-body {
+      max-height: 500px;
+      opacity: 1;
+      margin-bottom: 0.4rem;
+    }
+    .card.collapsible .card-headline {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .card.collapsible .card-headline::after {
+      content: '▸';
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .card.collapsible.expanded .card-headline::after {
+      transform: rotate(90deg);
+    }
+    .card.collapsible .tap-hint {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .tap-hint {
+      opacity: 0;
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .card.collapsible .card-sources {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      border: none;
+      transition: max-height 0.3s ease, opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .card-sources {
+      max-height: 100px;
+      opacity: 1;
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.45;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.9;
+    }
+
+    .list-header {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.25em 0.75em;
+      border-radius: 999px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-tag.geo,
+    .card-tag.tech,
+    .card-tag.japan,
+    .card-tag.market,
+    .card-tag.vc,
+    .card-tag.predict { background: var(--bg-tertiary); color: var(--text-secondary); }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+
+    .bottom-line {
+      background: var(--bg-tertiary);
+      color: var(--text);
+      border-radius: var(--radius);
+      padding: 2rem 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .bottom-line .section-header {
+      border-bottom-color: var(--border);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bottom-line .section-icon { display: none; }
+    .bottom-line .section-title { color: var(--text-secondary); }
+
+    .bottom-line p {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-style: normal;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--text);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-body .stat { font-size: 0.95rem; }
+
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .index-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      padding: 0.5rem 0.6rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .index-table td {
+      padding: 0.6rem;
+      border-bottom: none;
+      vertical-align: middle;
+    }
+    .index-table tr:last-child td { border-bottom: none; }
+    .index-table .idx-name { font-weight: 600; color: var(--text); }
+    .index-table .idx-level { font-family: var(--sans); font-weight: 700; font-variant-numeric: tabular-nums; }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+    .health-gauge {
+      position: relative;
+      width: 200px;
+      height: 110px;
+      overflow: hidden;
+    }
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #B94A48 0deg,
+        #E07A3F 72deg,
+        #E3B341 108deg,
+        #2A8F87 144deg,
+        #1D736C 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 60px, black 61px);
+      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
+    }
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 75px;
+      background: var(--text);
+      border-radius: 2px;
+      transform-origin: bottom center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--text);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .gauge-score {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--text);
+      margin-top: 0.25rem;
+    }
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+    }
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 0.15rem;
+    }
+    .gauge-scale span {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .indicator-item {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--bg);
+      border-radius: 6px;
+    }
+    .indicator-value {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .indicator-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .indicator-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+
+    .methodology-toggle {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-market);
+      cursor: pointer;
+      margin-top: 0.75rem;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .methodology-toggle .arrow {
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    .methodology-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .methodology-content.open {
+      max-height: 500px;
+    }
+    .methodology-content p {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 0.5rem;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .source-link:hover { color: var(--text-secondary); }
+    .source-link .src-arrow {
+      font-size: 0.6rem;
+      margin-left: 0.1rem;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .source-link:hover .src-arrow { transform: translate(1px, -1px); }
+    .card-sources {
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1) .card { animation-delay: 0.05s; }
+    .section:nth-child(1) .card:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(1) .card:nth-child(3) { animation-delay: 0.15s; }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.2em 0.7em;
+      border-radius: 10px;
+    }
+    .status-badge.normal { background: #dcfce7; color: #166534; }
+    .status-badge.caution { background: #fef9c3; color: #854d0e; }
+    .status-badge.alert { background: #fecaca; color: #991b1b; }
+
+    @media print {
+      body { background: #fff; }
+      .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+      .bottom-line { background: #333; }
+      .nav-pills { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="live.html">Live</a>
+    <a href="ja.html" class="active">Daily</a>
+    <a href="vc-review.html">Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <header class="masthead">
+    <div class="lang-toggle">
+      <a href="index.html">EN</a>
+      <span class="sep">/</span>
+      <a href="ja.html" class="active">JA</a>
+    </div>
+    <div class="masthead-inner">
+      <div class="overline">朝のインテリジェンスブリーフ</div>
+      <h1>CEOデイリーブリーフィング</h1>
+      <div class="edition-date">2026年2月6日（金）午前7時 JST</div>
+      <div class="edition-sub">日本 · 世界各地域 · マーケット・経済 · 予測</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <nav class="nav-pills">
+    <a href="#japan" class="nav-pill">日本</a>
+    <a href="#global" class="nav-pill">世界</a>
+    <a href="#markets" class="nav-pill">マーケット</a>
+    <a href="#predictions" class="nav-pill">予測</a>
+    <a href="#bottomline" class="nav-pill">まとめ</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- 🇯🇵 日本 -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <div class="section-icon japan">🇯🇵</div>
+        <h2 class="section-title japan">日本 — 詳細分析</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">選挙2026 · トップニュース</span>
+          <h3 class="card-headline">トランプ大統領が高市首相を異例の公開支持 — 日曜日投票へ、悪天候が投票率に影響の懸念</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">トランプ大統領が外国選挙では異例の高市首相への公開支持を表明。支持の背景には日米同盟強化と対中強硬姿勢での一致があり、3月19日のホワイトハウス会談も決定。一方、日曜日の投票日は北海道を中心に猛吹雪が予想され、一部離島では既に繰り上げ投票を実施。悪天候で投票率が低下すれば、組織票を持つ与党に有利に働く可能性も。各党幹部が最後の訴えを展開する中、SNSでは外国人生活保護に関する偽情報も拡散しており、有権者は情報の真偽確認が求められている。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/c5yd14r2mgno" target="_blank" rel="noopener">BBC — トランプ支持 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015044801000" target="_blank" rel="noopener">NHK — 悪天候 <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">マーケット</span>
+          <h3 class="card-headline">日経平均+0.81%の54,254円 — 選挙週末を前にテック株が反発、週間では+1.75%</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">日経225は<span class="stat">+0.81%</span>で54,254円に上昇、TOPIXは+1.28%の3,699。前日の世界的テック売りを覆し、日曜日の選挙を前に投資家が高市政権継続を織り込む動きが見られた。上昇を牽引したのはソフトバンクG(+2.2%)、ソニー(+4.8%)、トヨタ(+2.0%)、三菱UFJ(+2.5%)など。貴金属・暗号資産の激しい売りがアジア朝方に波及したが、日本市場は回復力を示した。週間ではSKハイニックス決算を受けた半導体期待もあり、日経+1.75%、TOPIX+3.72%と堅調。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://tradingeconomics.com/japan/stock-market" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">企業不正</span>
+          <h3 class="card-headline">KDDI子会社で架空取引発覚 — 累計売上高2,460億円を過大計上、330億円が外部流出</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">KDDIは傘下のインターネット接続事業会社ビッグローブで大規模な架空取引が発覚したと発表。不正の手口は広告代理事業で取引先と結託し、実態のない売上を計上する循環取引。背景にはノルマ達成圧力と内部統制の脆弱さがあったとみられる。<span class="stat">330億円</span>が外部流出し、決算発表を3月末まで延期。日本企業のガバナンス問題が再び浮き彫りに — 東芝、日産に続く大企業の不正会計事例として投資家の信頼を損なう恐れ。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.nikkei.com/article/DGXZQOUC0676D0W6A200C2000000/" target="_blank" rel="noopener">日経 <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <div class="cards-grid">
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">年金運用</span>
+            <h3 class="card-headline">GPIF、10-12月期で16兆円超の運用益 — 株価上昇が寄与</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
+            <p class="card-body">世界最大の年金基金GPIFが四半期で<span class="stat">16兆円以上</span>の運用黒字を記録。好調の理由は国内外株式市場の上昇、特にAI関連銘柄の恩恵。円安も外貨建て資産のリターンを押し上げた。長期的な分散投資戦略が奏功している形だが、株式比率の高さはボラティリティリスクも内包。</p>
+            <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015045081000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">自動車</span>
+            <h3 class="card-headline">SUBARU、4-12月期70%超の大幅減益 — 米関税措置の影響深刻</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
+            <p class="card-body">SUBARUが10-12月期決算で<span class="stat">70%超の減益</span>を発表。減益の主因はトランプ政権の自動車関税措置により北米販売のコスト構造が悪化したこと。SUBARUは売上の約7割を北米に依存しており、関税の影響をまともに受ける構造。為替は円安で追い風だが関税負担がそれを上回った。</p>
+            <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015045191000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">スポーツ</span>
+            <h3 class="card-headline">ミラノ・コルティナ冬季五輪開幕 — 日本勢メダル第1号は誰に</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
+            <p class="card-body">ミラノ・コルティナ五輪が本日開幕。日本のメダル候補としてフィギュア団体で鍵山優真がエースとして起用決定。スノーボードハーフパイプの戸塚優斗は世界初の大技で金メダルを狙う。開会式は日本時間7日未明に行われ、16日間の熱戦が始まる。</p>
+            <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015045261000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">外交</span>
+            <h3 class="card-headline">マクロン仏大統領、3月下旬に訪日 — 日仏首脳会談へ</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
+            <p class="card-body">フランスのマクロン大統領が3月下旬に訪日することが決定。訪日の目的は安全保障協力の強化、特に太平洋地域での連携。フランスはニューカレドニアなど太平洋に領土を持ち、中国の海洋進出に懸念を共有。防衛装備品の共同開発や経済連携も議題に上る見通し。</p>
+            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/international-relations/france-s-macron-to-visit-japan-in-late-march" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">気象</span>
+          <h3 class="card-headline">北海道で猛吹雪、土日は大雪 — 関東も積雪の恐れ、交通に影響</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">発達した低気圧の影響で北海道では猛吹雪となり、土日にかけて大雪の見込み。この気象の原因は寒気を伴った低気圧が急速に発達しながら北海道付近を通過すること。JR線の運休や高速道路の通行止めが発生しており、投票日の日曜日にかけて交通障害が懸念される。関東でも積雪の可能性があり、首都圏の交通にも注意が必要。</p>
+          <div class="card-sources"><a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015044601000" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 🌍 世界各地域 -->
+    <section class="section" id="global">
+      <div class="section-header">
+        <div class="section-icon geo">🌍</div>
+        <h2 class="section-title geo">世界各地域</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- 北米 -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">北米</span>
+          <h3 class="card-headline">Amazon、AI投資2,000億ドル発表で株価急落 · 米イラン協議再開 · 新START条約失効</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. Amazon株−8%急落：</span>2026年のAIインフラ投資を<span class="stat">2,000億ドル</span>に拡大すると発表、クラウド売上成長を上回る支出ペースに市場が動揺。投資家が懸念しているのは収益化の見通しが不透明なまま巨額投資を続けること。他のメガテック（Meta、Alphabet）も下落。<br><br>
+            <span class="list-header">2. 米イラン協議が継続：</span>直接軍事衝突への懸念が高まる中、核協議が再開。協議の背景にはトランプ政権のイラン反政府デモ支持と中東での軍事プレゼンス強化があり、イランは条件付きで対話に応じた。同時に米軍F-35がイラン無人機を撃墜する事案も発生し、緊張は継続。<br><br>
+            <span class="list-header">3. 新START条約失効：</span>米露間の最後の核軍縮条約が失効。失効の理由はロシアが条約の査察義務を履行せず、ウクライナ侵攻以降の信頼関係が完全に崩壊したこと。専門家は「アジアの中堅国が結束して国際的圧力を」と提言 — 日本にとっても安全保障環境の悪化を意味する。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.coindesk.com/markets/2026/02/06/weak-earnings-drag-iren-amazon-bitcoin-stocks-rebound-in-pre-market" target="_blank" rel="noopener">CoinDesk — Amazon <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/cr57g1y8286o" target="_blank" rel="noopener">BBC — 米イラン <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015045131000" target="_blank" rel="noopener">NHK — 新START <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- ヨーロッパ -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">ヨーロッパ</span>
+          <h3 class="card-headline">ロシア将軍がモスクワで銃撃 · エプスタイン文書が英政界を直撃 · ギリシャ沖で移民船衝突15人死亡</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. ロシア将軍がモスクワで銃撃される：</span>ロシア軍参謀本部の高官ウラジミール・アレクセーエフ中将が首都モスクワで何者かに銃撃され負傷。この事件の背景にはウクライナ戦争への不満や軍内部の対立があるとの見方も。2024年以来、ロシア軍高官への攻撃が相次いでおり、プーチン政権の安定性に疑問符。<br><br>
+            <span class="list-header">2. エプスタイン文書が英国を揺るがす：</span>米司法省が公開した数百万ページの文書に著名人の名前が多数。ノルウェーでは元首相ヤーグラン氏の捜査が開始。問題が深刻化している理由は、各国で政治家・王族・財界人への波及が止まらないこと。英国ではアンドルー王子の写真の真正性を確認するメールも公開された。<br><br>
+            <span class="list-header">3. ギリシャ沖で移民船と沿岸警備艇が衝突、15人死亡：</span>キオス島沖で発生した事故で、ギリシャ当局は「人身売買業者が意図的に船を衝突させた」と主張。EU全体で続く移民危機の中、地中海ルートでの死者が後を絶たない。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/c3686nzexp3o" target="_blank" rel="noopener">BBC — 将軍銃撃 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/cqxynz2l0g2o" target="_blank" rel="noopener">BBC — エプスタイン <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://edition.cnn.com/2026/02/04/europe/greece-boat-collision-fifteen-migrants-dead-intl" target="_blank" rel="noopener">CNN — ギリシャ <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- アジア（日本除く） -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">アジア（日本除く）</span>
+          <h3 class="card-headline">パキスタン首都モスククで自爆テロ31人死亡 · タイ総選挙、進歩派に試練 · 韓国バッテリー企業がロボット市場へ</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. パキスタン・イスラマバードで自爆テロ、31人死亡169人負傷：</span>金曜礼拝中のモスクで爆発が発生。テロの背景にはバロチスタン州での武装勢力との衝突激化があり、ISやTTPなど複数の組織が活動を活発化。今週だけで南西部での攻撃で120人以上が死亡しており、パキスタンの治安情勢は急速に悪化。<br><br>
+            <span class="list-header">2. タイ総選挙、進歩派野党に立ちはだかる壁：</span>日曜日の投票で進歩派のピタ前党首率いる人民党が優勢だが、2023年と同様に軍・保守派が阻止する可能性も。タイの構造的問題は選挙で勝っても上院と憲法裁判所が政権奪取を阻む仕組み。憲法改正の国民投票も同日実施。<br><br>
+            <span class="list-header">3. 韓国バッテリー企業がロボット市場参入：</span>EV販売の鈍化を受け、サムスンSDIやLGエナジーがロボット向けバッテリーに注力。戦略転換の理由はEV需要の不透明さと、産業用・家庭用ロボットの急成長見込み。日本のバッテリー企業にとっても競争環境の変化を示唆。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://news.web.nhk/newsweb/na/na-k10015045251000" target="_blank" rel="noopener">NHK — パキスタン <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news/articles/cp820jrq3yvo" target="_blank" rel="noopener">BBC — タイ <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://asia.nikkei.com/business/technology/south-korea-s-battery-makers-eye-robot-market-as-evs-slump" target="_blank" rel="noopener">日経 — バッテリー <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 中東・アフリカ -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">中東・アフリカ</span>
+          <h3 class="card-headline">米軍がイラン無人機撃墜 · ナイジェリアで武装勢力が200人殺害 · リビア・カダフィ大佐の息子が暗殺</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. 米F-35Cがイラン無人機を撃墜：</span>アラビア海で空母エイブラハム・リンカーンに接近したイラン製無人機を撃墜。この事件の意味はイラン・米国間の緊張が軍事衝突寸前まで高まっていること。トランプ大統領は「イラン最高指導者は非常に心配すべきだ」と警告。核協議が続く中での軍事的駆け引き。<br><br>
+            <span class="list-header">2. ナイジェリアで武装勢力が約200人殺害：</span>クワラ州とカツィナ州で相次ぐ襲撃。背景には牧畜民と農民の土地紛争、武装盗賊団の活動があり、治安部隊の対応能力が追いついていない。アフリカ最大の人口を抱えるナイジェリアの治安悪化は地域全体に影響。<br><br>
+            <span class="list-header">3. カダフィ大佐の息子サイフ・アルイスラム氏が暗殺：</span>リビアで武装勢力に銃撃され死亡。サイフ氏は父の政権崩壊後も政治的野心を持ち続けていた人物。暗殺の背景にはリビア内戦の複雑な権力闘争があり、国家統一の見通しはさらに遠のいた。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/spotlight/iran-tensions/us-downs-iranian-drone-approaching-aircraft-carrier-american-official-says" target="_blank" rel="noopener">日経 — 無人機 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://edition.cnn.com/2026/02/04/africa/gunmen-attack-kwara-village-nigeria-intl" target="_blank" rel="noopener">CNN — ナイジェリア <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://edition.cnn.com/2026/02/03/world/saif-al-islam-gadhafi-libya-assassinated-intl-hnk" target="_blank" rel="noopener">CNN — リビア <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 中南米 -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">中南米</span>
+          <h3 class="card-headline">キューバが米国との対話に前向き · コスタリカで右派ポピュリスト勝利 · ベネズエラが政治犯恩赦法を準備</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. キューバ、米国との対話に応じる姿勢：</span>ただし体制転換は議題にしないとの条件付き。キューバが対話に前向きな理由はトランプ政権の経済制裁強化で国内経済が危機的状況にあること。エネルギー不足、食料危機が深刻化しており、体制維持のために関係改善を模索する動き。<br><br>
+            <span class="list-header">2. コスタリカ大統領選で右派ポピュリスト勝利：</span>ラウラ・フェルナンデス氏が勝利宣言。勝因は治安悪化と経済停滞への不満。中米全体で左派から右派への揺り戻しが続いており、米国の移民政策にも影響を与える可能性。<br><br>
+            <span class="list-header">3. ベネズエラ、政治犯恩赦と悪名高い刑務所閉鎖を計画：</span>マドゥロ拘束後の新政権が政治犯の釈放を準備。この動きの背景には国際社会からの民主化圧力と、国内和解への模索がある。ただし完全な民主化への道のりは不透明。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://edition.cnn.com/2026/02/04/americas/cuba-us-talks-trump-regime-change-latam-intl" target="_blank" rel="noopener">CNN — キューバ <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://edition.cnn.com/2026/02/01/americas/costa-rica-elections-latam-intl" target="_blank" rel="noopener">CNN — コスタリカ <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://edition.cnn.com/2026/01/30/americas/venezuela-amnesty-law-political-prisoners-latam-intl" target="_blank" rel="noopener">CNN — ベネズエラ <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- オセアニア -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">オセアニア</span>
+          <h3 class="card-headline">エリザベス女王100年記念硬貨のデザインに批判 · 日本でオーストラリア人スノーボーダー死亡</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. 女王記念硬貨に批判：</span>オーストラリア造幣局が発行したエリザベス2世生誕100年記念硬貨のデザインに批判の声。造幣局はデザインを擁護するも、共和制支持派からは「時代遅れ」との指摘。オーストラリアの君主制議論が再燃。<br><br>
+            <span class="list-header">2. 日本のスキー場でオーストラリア人死亡：</span>スキーリフトに巻き込まれる事故で死亡。日本のスキーリゾートへの外国人観光客増加に伴い、安全対策の強化が課題に。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/c70l0wzww50o" target="_blank" rel="noopener">BBC — 硬貨 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://edition.cnn.com/2026/02/01/asia/japan-ski-lift-australian-death-intl-hnk" target="_blank" rel="noopener">CNN — スキー場事故 <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 📊 マーケット・経済 -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <div class="section-icon market">📊</div>
+        <h2 class="section-title market">マーケット・経済</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in" style="background: #fefce8; border-color: #eab308;">
+          <p class="card-body" style="font-size: 0.85rem; color: #854d0e;">⚠️ 注目シグナル：ビットコインが一時$60,000まで急落（2024年10月以来最安値）→その後$65,000台に回復。暗号資産市場で$26億のレバレッジポジションが清算。恐怖・強欲指数は「9」まで低下（FTX崩壊以来の水準）。一方、金は$4,923で史上最高値を更新（+3.03%）、銀は+7.25%と急騰。「グレートローテーション」進行中：暗号資産から貴金属への資金移動がFTX暴落以来最大規模。イラン情勢の緊張がリスクオフを加速。</p>
+        </article>
+
+        <article class="card featured market fade-in">
+          <span class="card-tag market">主要指数</span>
+          <h3 class="card-headline">グローバル株式・債券・商品</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>指数</th>
+                <th>水準</th>
+                <th>日次</th>
+                <th>週次</th>
+                <th>月次</th>
+                <th>年初来</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">S&P 500</td>
+                <td class="idx-level">6,832</td>
+                <td class="chg-pos">+0.50%</td>
+                <td class="chg-neg">−2.0%</td>
+                <td class="chg-neg">−1.28%</td>
+                <td class="chg-pos">+13.38%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">日経225</td>
+                <td class="idx-level">54,254</td>
+                <td class="chg-pos">+0.81%</td>
+                <td class="chg-pos">+1.75%</td>
+                <td class="chg-pos">+6.54%</td>
+                <td class="chg-pos">+42.73%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ドル/円</td>
+                <td class="idx-level">157.10</td>
+                <td class="chg-pos">+0.03%</td>
+                <td class="chg-pos">+1.50%</td>
+                <td class="chg-pos">+0.22%</td>
+                <td class="chg-pos">+3.75%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ユーロ/ドル</td>
+                <td class="idx-level">1.179</td>
+                <td class="chg-pos">+0.14%</td>
+                <td class="chg-neg">−0.48%</td>
+                <td class="chg-pos">+1.02%</td>
+                <td class="chg-pos">+14.19%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">金</td>
+                <td class="idx-level">$4,923</td>
+                <td class="chg-pos">+3.03%</td>
+                <td class="chg-pos">+0.74%</td>
+                <td class="chg-pos">+10.48%</td>
+                <td class="chg-pos">+72.18%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">銀</td>
+                <td class="idx-level">$75.97</td>
+                <td class="chg-pos">+7.25%</td>
+                <td class="chg-neg">−10.24%</td>
+                <td class="chg-neg">−2.84%</td>
+                <td class="chg-pos">+138.95%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">WTI原油</td>
+                <td class="idx-level">$63.04</td>
+                <td class="chg-neg">−0.40%</td>
+                <td class="chg-neg">−3.33%</td>
+                <td class="chg-pos">+12.59%</td>
+                <td class="chg-neg">−11.22%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ビットコイン</td>
+                <td class="idx-level">〜$65,000</td>
+                <td colspan="4" style="font-size: 0.8rem; color: var(--text-muted);">一時$60,000まで急落後回復</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="card featured market fade-in">
+          <span class="card-tag market">ヘルススコア</span>
+          <h3 class="card-headline">経済健全性総合スコア — やや警戒</h3>
+          <div class="health-gauge-wrap">
+            <div class="health-gauge">
+              <div class="gauge-bg"></div>
+              <div class="gauge-needle" id="gaugeNeedle">
+                <div class="gauge-dot"></div>
+              </div>
+            </div>
+            <div class="gauge-scale">
+              <span>0</span>
+              <span>50</span>
+              <span>100</span>
+            </div>
+            <div class="gauge-score" id="gaugeScore">52</div>
+            <div class="gauge-score-label">/ 100点</div>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">2.7%</div>
+              <div class="indicator-name">CPIインフレ率</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● 目標超</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">4.4%</div>
+              <div class="indicator-name">失業率</div>
+              <div class="indicator-sub chg-neg">▲ やや高め</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">3.75%</div>
+              <div class="indicator-name">FF金利</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● 据置</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">$4,923</div>
+              <div class="indicator-name">金（史上最高値）</div>
+              <div class="indicator-sub chg-pos">▲ 安全逃避</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">97.8</div>
+              <div class="indicator-name">ドル指数</div>
+              <div class="indicator-sub chg-neg">▼ 年初来−9.47%</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">9</div>
+              <div class="indicator-name">暗号恐怖指数</div>
+              <div class="indicator-sub chg-neg">▼ 極度の恐怖</div>
+            </div>
+          </div>
+          <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▸</span> 算出方法を見る
+          </div>
+          <div class="methodology-content">
+            <p>GDP成長率、失業率、インフレ率、消費者信頼感、PMI、VIX、資産クラス間のフロー等を加重平均して算出。貴金属への資金流入と暗号資産からの流出が顕著な中、地政学リスクの高まりを反映し52点に低下。</p>
+          </div>
+        </article>
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag market">暗号資産</span>
+          <h3 class="card-headline">ビットコイン$60,000まで暴落 — 「隠れたファンド破綻」の噂、機関投資家の投げ売り</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">ビットコインがアジア時間に一時<span class="stat">$60,000</span>まで急落、2024年10月以来の安値を記録。暴落の原因について市場では香港ファンドの破綻、円キャリー取引の巻き戻し、さらには量子コンピューティングによるセキュリティ懸念まで様々な憶測が飛び交っている。BlackRockのビットコインETFは取引高が過去最高の$100億を記録し、機関投資家のパニック売りを示唆。その後$65,000台に回復したが、ボラティリティ指標BVIVはFTX崩壊時と同水準まで上昇。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.coindesk.com/markets/2026/02/06/bitcoin-s-crash-to-usd60-000-has-traders-hunting-for-a-hidden-fund-blowup" target="_blank" rel="noopener">CoinDesk <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 🔮 予測 -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <div class="section-icon predict">🔮</div>
+        <h2 class="section-title predict">予測</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag predict">今週の注目</span>
+          <h3 class="card-headline">日本総選挙（2/8）· タイ総選挙（2/9）· 米イラン緊張 · 冬季五輪開幕</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">日本衆議院選挙（2/8）：</span>高市政権の継続が大方の予想。悪天候が投票率を押し下げれば与党有利に。市場は選挙後の財政拡張と日銀の出口戦略調整を織り込み中。<br><br>
+            <span class="list-header">タイ総選挙（2/9）：</span>進歩派の勝利が予想されるも、2023年と同様に保守派による阻止の可能性。憲法改正の国民投票も同時実施で注目。<br><br>
+            <span class="list-header">米イラン情勢：</span>無人機撃墜で緊張継続。核協議は続くも、軍事衝突リスクが原油・金価格を押し上げ。日本のエネルギー安全保障にも影響。<br><br>
+            <span class="list-header">ミラノ冬季五輪：</span>開会式は2/7日本時間未明。日本勢のメダルラッシュに期待。
+          </p>
+        </article>
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag predict">年間見通し</span>
+          <h3 class="card-headline">2026年の主要テーマ：AI投資バブル懸念 · 貴金属ラリー · 地政学リスク</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">AIバブル懸念：</span>Amazonの$2,000億AI投資計画への市場の冷ややかな反応は、収益化なき巨額投資への警戒感を示す。テック株のバリュエーション調整が年後半に本格化する可能性。<br><br>
+            <span class="list-header">貴金属スーパーラリー：</span>金が年初来+72%、銀が+139%と歴史的上昇。中央銀行の金買い、ドル離れ、インフレヘッジ需要が背景。ビットコインからの資金シフトも加速。<br><br>
+            <span class="list-header">地政学リスク：</span>新START失効で核軍備管理体制が崩壊。イラン情勢の緊張、ウクライナ戦争の長期化が世界経済の下押し要因に。日本は防衛費増額と同盟強化を加速へ。
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 💡 まとめ -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line">
+        <div class="section-header">
+          <div class="section-icon bottom">💡</div>
+          <h2 class="section-title bottom">まとめ</h2>
+        </div>
+        <p>
+          本日の3つのポイント：<strong>①日本総選挙まであと2日</strong> — トランプ大統領の異例の支持表明を受け、高市政権継続への期待が高まる一方、悪天候が投票率に影響する懸念。<strong>②暗号資産から貴金属への歴史的シフト</strong> — ビットコインが$60,000まで暴落する中、金は史上最高値を更新。FTX崩壊以来最大の「グレートローテーション」が進行中。<strong>③米イラン緊張の高まり</strong> — 無人機撃墜事案と新START失効で地政学リスクが上昇、安全資産への逃避が加速。日本企業は関税・為替・地政学の三重苦に直面するが、日経は選挙期待で堅調。選挙後の政策発表と日銀の次の一手に注目。
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CEOデイリーブリーフィング — AI生成 · 投資助言ではありません · 2026年2月6日 午前7時 JST</p>
+  </footer>
+
+  <script>
+    // Collapsible cards
+    document.querySelectorAll('.card.collapsible').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+      });
+    });
+
+    // Health gauge animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const score = 52;
+      const needle = document.getElementById('gaugeNeedle');
+      const rotation = -90 + (score / 100) * 180;
+      setTimeout(() => {
+        needle.style.transform = `rotate(${rotation}deg)`;
+      }, 300);
+    });
+  </script>
+
+</body>
+</html>
