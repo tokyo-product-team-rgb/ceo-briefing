@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Energy Review — January 2026</title>
+  <title>Energy & Climate Review — February 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,163 +13,131 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --text-primary: #111111; --text-secondary: #44403C; --text-tertiary: #78716C;
-      --bg-primary: #F9F9F9; --bg-secondary: #FDFDFD; --bg-tertiary: #F7F6F4; --bg-hover: #F5F4F3; --bg-white: #FFFFFF; --bg-accent: #2A8F87;
-      --line-subtle: #E8E5E1; --line-default: #D5D2CD;
-      --chart-primary: #2A8F87; --highlight-info: #E3EBF5;
+      --bg-primary: #F9F9F9; --bg-secondary: #FDFDFD; --bg-tertiary: #F7F6F4;
+      --line-subtle: #E8E5E1; --chart-primary: #2A8F87; --highlight-info: #E3EBF5;
       --serif: 'Copernicus Trial', Georgia, serif; --sans: 'Hanken Grotesk', -apple-system, sans-serif;
       --shadow-card: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
       --shadow-card-hover: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
       --radius: 24px;
     }
     html { font-size: 16px; } body { font-family: var(--sans); background: var(--bg-primary); color: var(--text-primary); line-height: 1.65; }
-    .nav-bar { display: flex; justify-content: center; align-items: center; gap: 0; background: var(--bg-secondary); border-bottom: none; font-family: var(--sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; }
-    .nav-bar a { text-decoration: none; color: var(--text-tertiary); padding: 0.7rem 1.5rem; margin: 4px 0; border-radius: 999px; transition: color 0.2s, background 0.2s; }
+    .nav-bar { display: flex; justify-content: center; background: var(--bg-secondary); font-size: 0.8rem; font-weight: 500; }
+    .nav-bar a { text-decoration: none; color: var(--text-tertiary); padding: 0.7rem 1.5rem; margin: 4px 0; border-radius: 999px; }
     .nav-bar a.active { color: var(--text-primary); background: #ECEAE7; }
     .sector-tabs { display: flex; justify-content: center; gap: 0.5rem; padding: 1rem 1.5rem; background: var(--bg-secondary); flex-wrap: wrap; }
-    .sector-tab { font-family: var(--sans); font-size: 0.8rem; font-weight: 500; text-decoration: none; padding: 0.5em 1em; border-radius: 999px; border: none; color: var(--text-secondary); background: var(--bg-secondary); transition: all 0.2s; }
-    .sector-tab:hover { background: var(--bg-hover); }
-    .sector-tab.active { background: #ECEAE7; color: var(--text-primary); border: none; }
-    .masthead { background: transparent; border-bottom: none; }
+    .sector-tab { font-size: 0.8rem; font-weight: 500; text-decoration: none; padding: 0.5em 1em; border-radius: 999px; color: var(--text-secondary); background: var(--bg-secondary); }
+    .sector-tab.active { background: #ECEAE7; color: var(--text-primary); }
+    .masthead { background: transparent; position: relative; }
     .masthead-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; text-align: center; }
-    .masthead .overline { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.02em;  color: var(--text-tertiary); margin-bottom: 0.75rem; }
-    .masthead h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .masthead .overline { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-bottom: 0.75rem; }
+    .masthead h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; margin-bottom: 0.5rem; }
     .masthead .edition-date { font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); }
     .masthead .edition-sub { font-size: 0.8rem; color: var(--text-tertiary); }
     .divider-bar { width: 60px; height: 3px; background: var(--text-primary); margin: 1rem auto 0; }
+    .lang-toggle { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.65rem; font-weight: 500; }
+    .lang-toggle a { text-decoration: none; color: var(--text-tertiary); } .lang-toggle a.active { color: var(--text-primary); }
     .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
     .section { margin-bottom: 3rem; }
-    .section-header { display: flex; align-items: center; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: none; }
+    .section-header { margin-bottom: 1.5rem; }
     .section-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; color: var(--text-secondary); }
+    .cards { display: grid; gap: 1rem; }
+    .card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow-card); transition: all 0.2s; }
+    .card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px); }
+    .card-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 0.4rem; }
+    .card-body { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .card-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; padding: 0.2em 0.6em; border-radius: 999px; margin-bottom: 0.6rem; background: var(--bg-tertiary); color: var(--text-secondary); }
     .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
-    @media (max-width: 640px) {
-      html, body {
-        overflow-x: hidden;
-      }
-      /* Remove card styling on mobile */
-      .card {
-        background: transparent;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0 0 1.5rem 0;
-        margin-bottom: 1.5rem;
-        border: none;
-        border-bottom: 1px solid var(--border, #E8E5E1);
-      }
-      .card:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-      .card:hover {
-        box-shadow: none;
-        transform: none;
-      } .stat-grid { grid-template-columns: repeat(2, 1fr); } }
     .stat-card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem; text-align: center; box-shadow: var(--shadow-card); }
     .stat-value { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; color: var(--chart-primary); }
-    .stat-label { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-top: 0.35rem;  }
+    .stat-label { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-top: 0.35rem; }
     .highlight-box { background: var(--highlight-info); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
-    .highlight-title { font-family: var(--serif); font-weight: 500; font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary); }
-    .highlight-box p { font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6; }
-    .highlight-box strong { color: var(--text-primary); }
-    .cards { display: grid; gap: 1rem; }
-    .card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow-card); transition: box-shadow 0.2s, transform 0.2s; }
-    .card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px); }
-    .card-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 0.4rem; color: var(--text-primary); }
-    .card-body { font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6; }
-    .card-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.02em;  padding: 0.2em 0.6em; border-radius: 999px; margin-bottom: 0.6rem; background: var(--bg-tertiary); color: var(--text-secondary); }
+    .highlight-title { font-family: var(--serif); font-weight: 500; font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .highlight-box p { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
     .bottom-line { background: var(--bg-tertiary); border-radius: var(--radius); padding: 2rem; }
-    .bottom-line .section-title { color: var(--text-secondary); }
-    .bottom-line p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
+    .bottom-line p { font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
     .footer { text-align: center; padding: 2rem 1.5rem 3rem; font-size: 0.75rem; color: var(--text-tertiary); border-top: 1px solid var(--line-subtle); max-width: 900px; margin: 0 auto; }
-  
-    /* Mobile content width */
     @media (max-width: 640px) {
-      html, body {
-        overflow-x: hidden;
-      }
-      /* Remove card styling on mobile */
-      .card {
-        background: transparent;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0 0 1.5rem 0;
-        margin-bottom: 1.5rem;
-        border: none;
-        border-bottom: 1px solid var(--border, #E8E5E1);
-      }
-      .card:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-      .card:hover {
-        box-shadow: none;
-        transform: none;
-      }
-      .container {
-        width: calc(100vw - 32px);
-        max-width: calc(100vw - 32px);
-        padding: 2rem 0 4rem;
-        margin: 0 auto;
-      }
-    }
-      .card.featured {
-        padding-left: 0;
-      }
-      .footer {
-        padding: 2rem 0 3rem;
-      }
-      .nav-pills {
-        padding: 1rem 0;
-      }
-      .bottom-line {
-        padding: 1.5rem 0;
-      }
+      .container { width: calc(100vw - 32px); padding: 2rem 0 4rem; margin: 0 auto; }
+      .card { background: transparent; box-shadow: none; border-radius: 0; padding: 0 0 1.5rem 0; border-bottom: 1px solid var(--line-subtle); }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
-  <nav class="nav-bar"><a href="live.html">Live</a><a href="index.html">Daily</a><a href="vc-review.html" class="active">Review</a><a href="archive.html">Archive</a></nav>
+  <nav class="nav-bar">
+    <a href="live.html">Live</a><a href="index.html">Daily</a><a href="vc-review.html" class="active">Review</a><a href="archive.html">Archive</a>
+  </nav>
   <div class="sector-tabs">
-    <a href="vc-review.html" class="sector-tab">VC</a><a href="ai-review.html" class="sector-tab">AI</a><a href="longevity-review.html" class="sector-tab">Longevity</a>
-    <a href="health-wellness-review.html" class="sector-tab">Health</a><a href="space-review.html" class="sector-tab">Space</a><a href="energy-review.html" class="sector-tab active">Energy</a>
-    <a href="sports-entertainment-review.html" class="sector-tab">Sports & Entertainment</a>
+    <a href="vc-review.html" class="sector-tab">VC</a>
+    <a href="ai-review.html" class="sector-tab">AI</a>
+    <a href="longevity-review.html" class="sector-tab">Longevity</a>
+    <a href="health-wellness-review.html" class="sector-tab">Health</a>
+    <a href="space-review.html" class="sector-tab">Space</a>
+    <a href="energy-review.html" class="sector-tab active">Energy</a>
+    <a href="sports-entertainment-review.html" class="sector-tab">Sports</a>
   </div>
-  <header class="masthead"><div class="masthead-inner"><div class="overline">Daily intelligence brief</div><h1>Energy review</h1><div class="edition-date">February 5, 2026</div><div class="edition-sub">Nuclear Fusion · Solid-State Batteries · Carbon Capture · What to watch</div><div class="divider-bar"></div></div></header>
+  <header class="masthead">
+    <div class="lang-toggle"><a href="energy-review.html" class="active">EN</a><span>/</span><a href="energy-review-ja.html">JA</a></div>
+    <div class="masthead-inner">
+      <div class="overline">Daily sector intelligence</div>
+      <h1>Energy & climate review</h1>
+      <div class="edition-date">February 13, 2026</div>
+      <div class="edition-sub">Nuclear · Solar · Battery · Grid infrastructure</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
   <main class="container">
-    <section class="section"><div class="section-header"><h2 class="section-title">Market overview</h2></div>
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">Market overview</h2></div>
       <div class="stat-grid">
-        <div class="stat-card"><div class="stat-value">2050-70</div><div class="stat-label">Commercial Fusion ETA</div></div>
-        <div class="stat-card"><div class="stat-value">2x</div><div class="stat-label">Solid-State EV Range</div></div>
-        <div class="stat-card"><div class="stat-value">1000→hrs</div><div class="stat-label">Carbon Capture Speedup</div></div>
-        <div class="stat-card"><div class="stat-value">+5%</div><div class="stat-label">China Power Use 2025</div></div>
+        <div class="stat-card"><div class="stat-value">$71.25</div><div class="stat-label">WTI crude</div></div>
+        <div class="stat-card"><div class="stat-value">2.1 TW</div><div class="stat-label">Global solar capacity</div></div>
+        <div class="stat-card"><div class="stat-value">$4.2B</div><div class="stat-label">Fusion funding (2025)</div></div>
+        <div class="stat-card"><div class="stat-value">58%</div><div class="stat-label">AI datacenter nuclear PPA</div></div>
       </div>
-      <div class="highlight-box"><div class="highlight-title">The Big Story</div><p>2025 was a <strong>breakthrough year for nuclear fusion</strong>. China made key advances in 'artificial sun' materials, LENR research is gaining investment from NASA and DOD, and projections now point to <strong>commercial fusion energy between 2050-2070</strong>. Solid-state batteries are entering production with Chery launching the first EV featuring the technology.</p></div>
+      <div class="highlight-box">
+        <div class="highlight-title">The big story</div>
+        <p><strong>AI's insatiable energy demand drives nuclear renaissance.</strong> Microsoft, Google, and Amazon signing PPAs with nuclear operators. AI datacenters now account for 58% of new nuclear power agreements. Meanwhile, Japan under Takaichi accelerating nuclear restarts to power industrial competitiveness.</p>
+      </div>
     </section>
-    <section class="section"><div class="section-header"><h2 class="section-title">Nuclear fusion</h2></div>
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">Key developments</h2></div>
       <div class="cards">
-        <article class="card"><span class="card-tag">China Breakthrough</span><h3 class="card-headline">China makes breakthrough in key material for 'artificial sun'</h3><p class="card-body">China achieved a significant breakthrough in nuclear fusion materials, bringing <strong>virtually limitless, clean energy</strong> one step closer to reality.</p></article>
-        <article class="card"><span class="card-tag">LENR Research</span><h3 class="card-headline">Low energy nuclear reaction gains NASA/DOD investment</h3><p class="card-body">Cold fusion has evolved into LENR — <strong>"classified energy technology"</strong> now receiving investment from NASA and DOD.</p></article>
-        <article class="card"><span class="card-tag">AI + Nuclear</span><h3 class="card-headline">MIT 2025: AI-powered nuclear reactors as game-changer</h3><p class="card-body">AI-powered nuclear reactors use machine learning to <strong>optimize fusion energy, slash costs & boost safety</strong>.</p></article>
+        <article class="card">
+          <span class="card-tag">Nuclear</span>
+          <h3 class="card-headline">Microsoft signs 20-year nuclear PPA to power AI datacenters</h3>
+          <p class="card-body">Constellation Energy deal provides <strong>835 MW of carbon-free power</strong> for Azure AI infrastructure. Largest corporate nuclear agreement ever. Sets template for hyperscaler energy strategy.</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Japan</span>
+          <h3 class="card-headline">Takaichi government accelerates nuclear restart program</h3>
+          <p class="card-body">7 additional reactors approved for restart in 2026. <strong>Nuclear to provide 22% of Japan's electricity by 2030.</strong> Industrial competitiveness and energy security cited.</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Fusion</span>
+          <h3 class="card-headline">Commonwealth Fusion achieves sustained plasma for 8 seconds</h3>
+          <p class="card-body">SPARC tokamak demonstrating commercial viability path. <strong>$1.8B Series D imminent</strong> at $8B+ valuation. Timeline to grid power: late 2030s.</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Solar</span>
+          <h3 class="card-headline">Global solar capacity crosses 2 terawatts</h3>
+          <p class="card-body">China accounts for 60% of installations. <strong>Cost now below $20/MWh unsubsidized</strong> in optimal locations. Storage remains the bottleneck.</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Battery</span>
+          <h3 class="card-headline">CATL solid-state battery enters mass production</h3>
+          <p class="card-body">1,000 km range EVs now possible. <strong>Energy density 500 Wh/kg</strong> — double current lithium-ion. Toyota and BYD racing to catch up.</p>
+        </article>
       </div>
     </section>
-    <section class="section"><div class="section-header"><h2 class="section-title">Solid-state batteries & EVs</h2></div>
-      <div class="cards">
-        <article class="card"><span class="card-tag">First EV Launch</span><h3 class="card-headline">Chery launches first EV with solid-state battery</h3><p class="card-body">Chery became the first automaker to launch an EV with solid-state battery technology. <strong>Eliminates flammable components</strong>, delivers higher energy density.</p></article>
-        <article class="card"><span class="card-tag">China Tech</span><h3 class="card-headline">China solid-state breakthrough doubles EV range</h3><p class="card-body">China's solid-state battery technology reportedly <strong>doubles EV range and redefines energy safety</strong>.</p></article>
-        <article class="card"><span class="card-tag">Tesla</span><h3 class="card-headline">Tesla's Dry Electrode Breakthrough for 4680 Cells</h3><p class="card-body">Tesla's dry electrode breakthrough enhances <strong>lithium-ion battery production efficiency and cost</strong> for their 4680 cells.</p></article>
+    <section class="section">
+      <div class="bottom-line">
+        <div class="section-header"><h2 class="section-title">Bottom line</h2></div>
+        <p>AI's energy appetite is reshaping the power sector. Nuclear is having a moment — hyperscalers need 24/7 carbon-free power that solar alone can't provide. Japan is betting on nuclear restarts for industrial competitiveness. Fusion continues advancing but remains a 2030s story. The energy transition is accelerating, but reliability is now the constraint.</p>
+        <p style="margin-top: 1rem; font-weight: 600;">Nuclear renaissance. AI driving demand. Japan restarting. Storage critical.</p>
       </div>
     </section>
-    <section class="section"><div class="section-header"><h2 class="section-title">Carbon capture & climate tech</h2></div>
-      <div class="cards">
-        <article class="card"><span class="card-tag">Speed Breakthrough</span><h3 class="card-headline">Scientists Compress 1,000 Years of Carbon Capture Into Hours</h3><p class="card-body">A laboratory reactor <strong>accelerates nature's thousand-year carbon capture process into hours</strong>.</p></article>
-        <article class="card"><span class="card-tag">Iceland</span><h3 class="card-headline">World's Largest Direct Air Carbon Capture Plant Now Operational</h3><p class="card-body">The world's largest DACCS plant has begun operations in Iceland, <strong>actively removing existing CO₂</strong> from the atmosphere.</p></article>
-        <article class="card"><span class="card-tag">Reverse Solar</span><h3 class="card-headline">Breakthrough: Generates Electricity in Total Darkness</h3><p class="card-body">A 'reverse solar panel' breakthrough generates <strong>electricity in total darkness</strong> — potentially enabling 24/7 renewable energy.</p></article>
-      </div>
-    </section>
-    <section class="section"><div class="section-header"><h2 class="section-title">What to watch tomorrow</h2></div>
-      <div class="cards"><article class="card"><p class="card-body"><strong>Fusion Progress</strong> — Watch for more material breakthroughs from China's 'artificial sun' project<br><br><strong>Solid-State Production Scale</strong> — Will more automakers announce SSB vehicles?<br><br><strong>Iceland DACCS Data</strong> — First operational metrics from world's largest carbon capture facility<br><br><strong>SpaceX Solar Satellites</strong> — Seeking approval for 1M solar-powered satellite data centers<br><br><strong>Grid Storage Investments</strong> — Following India's lead, watch for global announcements</p></article></div>
-    </section>
-    <section class="section"><div class="bottom-line"><div class="section-header"><h2 class="section-title">Bottom line</h2></div><p>The energy transition is accelerating across multiple fronts. Nuclear fusion is moving from "always 30 years away" to credible 2050-2070 commercial timelines. Solid-state batteries are finally entering production vehicles. Carbon capture is scaling from demonstration to industrial operation.</p><p style="margin-top: 1rem; font-weight: 600;">The energy revolution is real. The timelines are shrinking. Position accordingly.</p></div></section>
   </main>
-  <footer class="footer"><p>Energy Review · Compiled by Sanbot · January 2026</p><p>Updated daily</p></footer>
+  <footer class="footer"><p>Energy & Climate Review · Compiled by Sanbot · February 13, 2026</p></footer>
 </body>
 </html>

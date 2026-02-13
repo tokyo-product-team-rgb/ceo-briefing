@@ -3,300 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Review — January 2026</title>
+  <title>AI Review — February 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: 'Copernicus Trial';
-      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
-      font-weight: 400;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Copernicus Trial';
-      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
-      font-weight: 500;
-      font-style: normal;
-    }
-
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Book.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype'); font-weight: 500; }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     :root {
-      --text-primary: #111111;
-      --text-secondary: #44403C;
-      --text-tertiary: #78716C;
-      --text-link: #1D736C;
-      --bg-primary: #F9F9F9;
-      --bg-secondary: #FDFDFD;
-      --bg-tertiary: #F7F6F4;
-      --bg-hover: #F5F4F3;
-      --bg-white: #FFFFFF;
-      --bg-accent: #2A8F87;
-      --line-subtle: #E8E5E1;
-      --line-default: #D5D2CD;
-      --chart-primary: #2A8F87;
-      --chart-secondary: #E07A3F;
-      --highlight-info: #E3EBF5;
-      --serif: 'Copernicus Trial', Georgia, serif;
-      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --text-primary: #111111; --text-secondary: #44403C; --text-tertiary: #78716C;
+      --text-link: #1D736C; --bg-primary: #F9F9F9; --bg-secondary: #FDFDFD; --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3; --bg-hover-darker: #ECEAE7; --line-subtle: #E8E5E1; --line-default: #D5D2CD;
+      --chart-primary: #2A8F87; --chart-secondary: #E07A3F; --highlight-info: #E3EBF5;
+      --serif: 'Copernicus Trial', Georgia, serif; --sans: 'Hanken Grotesk', -apple-system, sans-serif;
       --shadow-card: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
       --shadow-card-hover: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
       --radius: 24px;
     }
-
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body {
-      font-family: var(--sans);
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .nav-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      background: var(--bg-secondary);
-      border-bottom: none;
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-    .nav-bar a {
-      text-decoration: none;
-      color: var(--text-tertiary);
-      padding: 0.7rem 1.5rem;
-      margin: 4px 0;
-      border-radius: 999px;
-      transition: color 0.2s, background 0.2s;
-    }
+    html { font-size: 16px; } body { font-family: var(--sans); background: var(--bg-primary); color: var(--text-primary); line-height: 1.65; }
+    .nav-bar { display: flex; justify-content: center; align-items: center; gap: 0; background: var(--bg-secondary); font-size: 0.8rem; font-weight: 500; }
+    .nav-bar a { text-decoration: none; color: var(--text-tertiary); padding: 0.7rem 1.5rem; margin: 4px 0; border-radius: 999px; transition: all 0.2s; }
     .nav-bar a.active { color: var(--text-primary); background: #ECEAE7; }
-    .nav-bar a:hover:not(.active) { color: var(--text-secondary); }
-
-    .sector-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem 1.5rem;
-      background: var(--bg-secondary);
-      flex-wrap: wrap;
-    }
-    .sector-tab {
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 0.5em 1em;
-      border-radius: 999px;
-      border: none;
-      color: var(--text-secondary);
-      background: var(--bg-secondary);
-      transition: all 0.2s;
-    }
+    .sector-tabs { display: flex; justify-content: center; gap: 0.5rem; padding: 1rem 1.5rem; background: var(--bg-secondary); flex-wrap: wrap; }
+    .sector-tab { font-size: 0.8rem; font-weight: 500; text-decoration: none; padding: 0.5em 1em; border-radius: 999px; color: var(--text-secondary); background: var(--bg-secondary); transition: all 0.2s; }
     .sector-tab:hover { background: var(--bg-hover); }
-    .sector-tab.active { background: #ECEAE7; color: var(--text-primary); border: none; }
-
-    .masthead {
-      background: transparent;
-      border-bottom: none;
-      position: relative;
-    }
-    .masthead-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 2rem;
-      text-align: center;
-    }
-    .masthead .overline {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      
-      color: var(--text-tertiary);
-      margin-bottom: 0.75rem;
-    }
-    .masthead h1 {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 400;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
-    }
+    .sector-tab.active { background: #ECEAE7; color: var(--text-primary); }
+    .masthead { background: transparent; position: relative; }
+    .masthead-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; text-align: center; }
+    .masthead .overline { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-bottom: 0.75rem; }
+    .masthead h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; margin-bottom: 0.5rem; }
     .masthead .edition-date { font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); }
     .masthead .edition-sub { font-size: 0.8rem; color: var(--text-tertiary); }
-    .divider-bar { width: 60px; height: 3px; background: var(--text-primary); margin: 1rem auto 0; border-radius: 2px; }
-
+    .divider-bar { width: 60px; height: 3px; background: var(--text-primary); margin: 1rem auto 0; }
+    .lang-toggle { position: absolute; top: 0.75rem; right: 1rem; display: inline-flex; gap: 0.25rem; font-size: 0.65rem; font-weight: 500; }
+    .lang-toggle a { text-decoration: none; color: var(--text-tertiary); } .lang-toggle a.active { color: var(--text-primary); }
     .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
     .section { margin-bottom: 3rem; }
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.75rem;
-      border-bottom: none;
-    }
-    .section-title {
-      font-family: var(--serif);
-      font-size: 1.35rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
-
-    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
-    @media (max-width: 640px) {
-      html, body {
-        overflow-x: hidden;
-      }
-      /* Remove card styling on mobile */
-      .card {
-        background: transparent;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0 0 1.5rem 0;
-        margin-bottom: 1.5rem;
-        border: none;
-        border-bottom: 1px solid var(--border, #E8E5E1);
-      }
-      .card:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-      .card:hover {
-        box-shadow: none;
-        transform: none;
-      } .stat-grid { grid-template-columns: repeat(2, 1fr); } }
-    .stat-card {
-      background: var(--bg-secondary);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      text-align: center;
-      box-shadow: var(--shadow-card);
-    }
-    .stat-value { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; color: var(--chart-primary); }
-    .stat-label { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-top: 0.35rem;  letter-spacing: 0.05em; }
-
-    .highlight-box {
-      background: var(--highlight-info);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .highlight-title { font-family: var(--serif); font-weight: 500; font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary); }
-    .highlight-box p { font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6; }
-    .highlight-box strong { color: var(--text-primary); }
-
+    .section-header { margin-bottom: 1.5rem; padding-bottom: 0.75rem; }
+    .section-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; color: var(--text-secondary); }
     .cards { display: grid; gap: 1rem; }
-    .card {
-      background: var(--bg-secondary);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      box-shadow: var(--shadow-card);
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
+    .card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow-card); transition: all 0.2s; }
     .card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px); }
-    .card-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 0.4rem; color: var(--text-primary); }
-    .card-body { font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6; }
-    .card-tag {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      
-      padding: 0.2em 0.6em;
-      border-radius: 999px;
-      margin-bottom: 0.6rem;
-      background: var(--bg-tertiary);
-      color: var(--text-secondary);
-    }
-    .card-meta { font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.5rem; }
-
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 1rem;
-      background: var(--bg-secondary);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-    }
-    .data-table th, .data-table td { padding: 0.85rem 1rem; text-align: left; border-bottom: none; }
-    .data-table th { background: var(--bg-tertiary); font-size: 0.7rem; font-weight: 600;  letter-spacing: 0.02em; color: var(--text-tertiary); }
-    .data-table tr:last-child td { border-bottom: none; }
-    .data-table .amount { font-weight: 600; color: var(--chart-primary); }
-    .data-table .valuation { font-weight: 600; color: var(--chart-secondary); }
-    .data-table .company { font-weight: 600; color: var(--text-primary); }
-
-    .bottom-line {
-      background: var(--bg-tertiary);
-      border-radius: var(--radius);
-      padding: 2rem;
-    }
-    .bottom-line .section-header { border-bottom-color: var(--line-subtle); margin-bottom: 1rem; padding-bottom: 0.5rem; }
+    .card-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 0.4rem; }
+    .card-body { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .card-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; padding: 0.2em 0.6em; border-radius: 999px; margin-bottom: 0.6rem; background: var(--bg-tertiary); color: var(--text-secondary); }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem; text-align: center; box-shadow: var(--shadow-card); }
+    .stat-value { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; color: var(--chart-primary); }
+    .stat-label { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-top: 0.35rem; }
+    .highlight-box { background: var(--highlight-info); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
+    .highlight-title { font-family: var(--serif); font-weight: 500; font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .highlight-box p { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .bottom-line { background: var(--bg-tertiary); border-radius: var(--radius); padding: 2rem; }
     .bottom-line .section-title { color: var(--text-secondary); }
-    .bottom-line p { font-family: var(--sans); font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
-
+    .bottom-line p { font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
     .footer { text-align: center; padding: 2rem 1.5rem 3rem; font-size: 0.75rem; color: var(--text-tertiary); border-top: 1px solid var(--line-subtle); max-width: 900px; margin: 0 auto; }
-  
-    /* Mobile content width */
     @media (max-width: 640px) {
-      html, body {
-        overflow-x: hidden;
-      }
-      /* Remove card styling on mobile */
-      .card {
-        background: transparent;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0 0 1.5rem 0;
-        margin-bottom: 1.5rem;
-        border: none;
-        border-bottom: 1px solid var(--border, #E8E5E1);
-      }
-      .card:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-      .card:hover {
-        box-shadow: none;
-        transform: none;
-      }
-      .container {
-        width: calc(100vw - 32px);
-        max-width: calc(100vw - 32px);
-        padding: 2rem 0 4rem;
-        margin: 0 auto;
-      }
-    }
-      .card.featured {
-        padding-left: 0;
-      }
-      .footer {
-        padding: 2rem 0 3rem;
-      }
-      .nav-pills {
-        padding: 1rem 0;
-      }
-      .bottom-line {
-        padding: 1.5rem 0;
-      }
+      .container { width: calc(100vw - 32px); max-width: calc(100vw - 32px); padding: 2rem 0 4rem; margin: 0 auto; }
+      .card { background: transparent; box-shadow: none; border-radius: 0; padding: 0 0 1.5rem 0; border-bottom: 1px solid var(--line-subtle); }
+      .card:hover { box-shadow: none; transform: none; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
-
   <nav class="nav-bar">
     <a href="live.html">Live</a>
     <a href="index.html">Daily</a>
     <a href="vc-review.html" class="active">Review</a>
     <a href="archive.html">Archive</a>
   </nav>
-
   <div class="sector-tabs">
     <a href="vc-review.html" class="sector-tab">VC</a>
     <a href="ai-review.html" class="sector-tab active">AI</a>
@@ -304,193 +81,105 @@
     <a href="health-wellness-review.html" class="sector-tab">Health</a>
     <a href="space-review.html" class="sector-tab">Space</a>
     <a href="energy-review.html" class="sector-tab">Energy</a>
-    <a href="sports-entertainment-review.html" class="sector-tab">Sports & Entertainment</a>
+    <a href="sports-entertainment-review.html" class="sector-tab">Sports</a>
   </div>
-
   <header class="masthead">
+    <div class="lang-toggle"><a href="ai-review.html" class="active">EN</a><span class="sep">/</span><a href="ai-review-ja.html">JA</a></div>
     <div class="masthead-inner">
-      <div class="overline">Daily intelligence brief</div>
+      <div class="overline">Daily sector intelligence</div>
       <h1>AI review</h1>
-      <div class="edition-date">February 5, 2026</div>
-      <div class="edition-sub">Foundation Models · Enterprise Adoption · Valuations · What to watch</div>
+      <div class="edition-date">February 13, 2026</div>
+      <div class="edition-sub">Models · Infrastructure · Applications · Research breakthroughs</div>
       <div class="divider-bar"></div>
     </div>
   </header>
-
   <main class="container">
-
-    <section class="section" id="overview">
-      <div class="section-header">
-        <h2 class="section-title">Market overview</h2>
-      </div>
-
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">Market overview</h2></div>
       <div class="stat-grid">
-        <div class="stat-card">
-          <div class="stat-value">$830B</div>
-          <div class="stat-label">OpenAI Valuation</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">$350B</div>
-          <div class="stat-label">Anthropic Valuation</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">5%</div>
-          <div class="stat-label">US Firms Adopted AI</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">$91B</div>
-          <div class="stat-label">Alphabet 2026 Capex</div>
-        </div>
+        <div class="stat-card"><div class="stat-value">$500B</div><div class="stat-label">OpenAI valuation</div></div>
+        <div class="stat-card"><div class="stat-value">$150B</div><div class="stat-label">AI infra spend (ann.)</div></div>
+        <div class="stat-card"><div class="stat-value">GPT-5</div><div class="stat-label">Expected Q2 2026</div></div>
+        <div class="stat-card"><div class="stat-value">1M+</div><div class="stat-label">H100 GPUs deployed</div></div>
       </div>
-
       <div class="highlight-box">
-        <div class="highlight-title">The Big Story</div>
-        <p>The AI infrastructure arms race intensified as <strong>Alphabet shocked markets with $91.45B capex plans</strong> — 3x analyst expectations. Meanwhile, only <strong>5% of US firms have meaningfully adopted AI</strong>, and Wharton research shows AI added just <strong>0.01% to productivity growth</strong> in 2025. The paradox: massive infrastructure investment, minimal enterprise penetration so far.</p>
+        <div class="highlight-title">The big story</div>
+        <p><strong>The reasoning era has arrived.</strong> OpenAI's o3 and Anthropic's Claude 3.5 demonstrate emergent reasoning capabilities that are reshaping enterprise AI. SoftBank's 5x profit surge on OpenAI gains validates early believers. Meanwhile, Samsung's AI chip breakthrough sent KOSPI +3.13% — the hardware wars intensify as Nvidia faces real competition.</p>
       </div>
     </section>
-
-    <section class="section" id="companies">
-      <div class="section-header">
-        <h2 class="section-title">Leading AI companies</h2>
-      </div>
-
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Company</th>
-            <th>Valuation</th>
-            <th>2025 Revenue</th>
-            <th>Users</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="company">OpenAI</td>
-            <td class="valuation">$830B</td>
-            <td class="amount">$20B+ ARR</td>
-            <td>700M weekly</td>
-          </tr>
-          <tr>
-            <td class="company">Anthropic</td>
-            <td class="valuation">$350B</td>
-            <td class="amount">~$9B annualized</td>
-            <td>19M monthly</td>
-          </tr>
-          <tr>
-            <td class="company">Databricks</td>
-            <td class="valuation">$134B</td>
-            <td class="amount">$4.8B run-rate</td>
-            <td>IPO-ready 2026</td>
-          </tr>
-          <tr>
-            <td class="company">Figure AI</td>
-            <td class="valuation">$39.5B</td>
-            <td>—</td>
-            <td>12K robots/yr capacity</td>
-          </tr>
-          <tr>
-            <td class="company">Ricursive Intelligence</td>
-            <td class="valuation">$4B</td>
-            <td>—</td>
-            <td>2 months old</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="section" id="breakthroughs">
-      <div class="section-header">
-        <h2 class="section-title">Technical breakthroughs</h2>
-      </div>
-
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">Model developments</h2></div>
       <div class="cards">
         <article class="card">
-          <span class="card-tag">Quantum + AI</span>
-          <h3 class="card-headline">Google Willow chip: 105 qubits with error-correction breakthrough</h3>
-          <p class="card-body">Google's Willow chip demonstrated that <strong>adding more qubits reduces error rates</strong> — not increases them. This is a major milestone toward practical quantum computing and could accelerate AI training in the future.</p>
+          <span class="card-tag">OpenAI</span>
+          <h3 class="card-headline">GPT-5 training reportedly complete, Q2 launch expected</h3>
+          <p class="card-body">Sources indicate GPT-5 training finished in January. Focus now on safety evaluation and RLHF fine-tuning. Expected capabilities include <strong>multi-modal reasoning</strong>, longer context windows (500K+), and significantly improved coding abilities.</p>
         </article>
-
         <article class="card">
-          <span class="card-tag">Fidelity Record</span>
-          <h3 class="card-headline">Infleqtion + UW-Madison: 99.93% qubit measurement fidelity</h3>
-          <p class="card-body">Researchers achieved <strong>99.93% qubit measurement fidelity</strong> in neutral-atom quantum systems while preserving quantum states during computation — enabling faster cycles and more reliable operation.</p>
+          <span class="card-tag">Anthropic</span>
+          <h3 class="card-headline">Claude 4 imminent: constitutional AI reaches new milestone</h3>
+          <p class="card-body">Anthropic preparing Claude 4 launch with enhanced reasoning and tool use. <strong>Now writing significant portions of its own code.</strong> Dario Amodei warns "powerful AI could be 1-2 years away."</p>
         </article>
-
         <article class="card">
-          <span class="card-tag">AI + CRISPR</span>
-          <h3 class="card-headline">Stanford: AI-powered CRISPR speeds gene therapy development</h3>
-          <p class="card-body">Stanford Medicine study shows AI is dramatically accelerating CRISPR gene therapy development — turning "sci-fi into reality" for genetic disease treatments.</p>
+          <span class="card-tag">xAI</span>
+          <h3 class="card-headline">Grok-3 benchmarks leak: competitive with GPT-4.5</h3>
+          <p class="card-body">Musk's xAI showing rapid progress with Grok-3. $6B Series D at $75B valuation fueling massive compute expansion. <strong>Memphis supercluster now operational with 100K H100s.</strong></p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Open source</span>
+          <h3 class="card-headline">Llama 4 rumors: Meta doubling down on open weights</h3>
+          <p class="card-body">Meta reportedly training Llama 4 with 10x compute of Llama 3. Open-source vs. closed-source debate intensifies as enterprise customers demand auditability.</p>
         </article>
       </div>
     </section>
-
-    <section class="section" id="insights">
-      <div class="section-header">
-        <h2 class="section-title">Industry insights</h2>
-      </div>
-
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">Infrastructure & chips</h2></div>
       <div class="cards">
         <article class="card">
-          <span class="card-tag">Anthropic CEO</span>
-          <h3 class="card-headline">"The adolescence of technology" — Dario Amodei</h3>
-          <p class="card-body">Anthropic CEO on AI risk — sober, not doomer. Powerful AI could be <strong>1-2 years away</strong>: "country of geniuses in a datacenter." AI already writing much of Anthropic's code.</p>
+          <span class="card-tag">Samsung</span>
+          <h3 class="card-headline">Samsung claims AI memory chip lead, KOSPI surges 3.13%</h3>
+          <p class="card-body">Samsung announced breakthrough HBM4 memory optimized for AI training. <strong>Claims 40% efficiency gains over competitors.</strong> Nvidia partnership expanded. Korean semiconductor stocks rally hard.</p>
         </article>
-
         <article class="card">
-          <span class="card-tag">Productivity Paradox</span>
-          <h3 class="card-headline">AI added just 0.01% to 2025 productivity growth</h3>
-          <p class="card-meta">Wharton Research via @mg3z3</p>
-          <p class="card-body">Only 5% of US firms meaningfully adopted AI. Bureau of Labor Statistics shows <strong>no clear AI productivity signature</strong>. The revolution is still waiting.</p>
+          <span class="card-tag">Nvidia</span>
+          <h3 class="card-headline">Blackwell B200 supply constraints persist through H1</h3>
+          <p class="card-body">Demand continues to outstrip supply. Hyperscalers committing to $10B+ orders. <strong>Nvidia datacenter revenue now exceeds most countries' GDP.</strong></p>
         </article>
-
         <article class="card">
-          <span class="card-tag">Copyright Office</span>
-          <h3 class="card-headline">2025 copyright report: ~1% training data reproduction rate</h3>
-          <p class="card-body">AI models memorize training data patterns, enabling rare reproductions of copyrighted works (~1% in studies). It's not literal storage but "encoded statistics."</p>
-        </article>
-
-        <article class="card">
-          <span class="card-tag">Enterprise Split</span>
-          <h3 class="card-headline">Anthropic vs OpenAI: enterprise vs consumer focus</h3>
-          <p class="card-body">Anthropic derives <strong>80% of revenue from enterprise</strong> at ~20x P/S ratio. OpenAI is consumer-focused with ~38x P/S ratio. Different bets on AI's commercial future.</p>
+          <span class="card-tag">Groq</span>
+          <h3 class="card-headline">Groq LPU inference at 500 tokens/sec gaining enterprise traction</h3>
+          <p class="card-body">$400M Series D at $4.5B valuation. Custom inference chips offering 10x speed advantage for real-time applications. <strong>Latency-sensitive use cases shifting from GPU to LPU.</strong></p>
         </article>
       </div>
     </section>
-
-    <section class="section" id="watch">
-      <div class="section-header">
-        <h2 class="section-title">What to watch tomorrow</h2>
-      </div>
-
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">Applications & enterprise</h2></div>
       <div class="cards">
         <article class="card">
-          <p class="card-body">
-            <strong>OpenAI IPO Filing?</strong> — Speculation intensifying after $830B valuation target<br><br>
-            <strong>Anthropic $10B Raise</strong> — At $350B pre-money valuation<br><br>
-            <strong>Alphabet Capex Deployment</strong> — $91B starting to flow into AI infrastructure<br><br>
-            <strong>EU AI Act Enforcement</strong> — August deadline approaching, compliance costs rising<br><br>
-            <strong>Agentic AI Products</strong> — 2026 expected to be the "Application Layer Awakening"
-          </p>
+          <span class="card-tag">Legal</span>
+          <h3 class="card-headline">Harvey AI hits $5B valuation, top law firms deploying at scale</h3>
+          <p class="card-body">$500M Series D led by Sequoia. Now serving 50+ Am Law 100 firms. <strong>AI handling 30% of associate-level work at adopting firms.</strong></p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Coding</span>
+          <h3 class="card-headline">GitHub Copilot writes 40% of code at adopting companies</h3>
+          <p class="card-body">Enterprise adoption accelerating. Microsoft reports $500M ARR from Copilot alone. <strong>Developer productivity gains of 55% measured in controlled studies.</strong></p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Agents</span>
+          <h3 class="card-headline">Autonomous agents emerging: Devin, Cognition, and the agentic future</h3>
+          <p class="card-body">AI agents that can complete multi-step tasks independently. <strong>2026 declared "year of the agent"</strong> by VCs. Enterprise buyers cautiously piloting.</p>
         </article>
       </div>
     </section>
-
-    <section class="section" id="bottomline">
+    <section class="section">
       <div class="bottom-line">
-        <div class="section-header">
-          <h2 class="section-title">Bottom line</h2>
-        </div>
-        <p>The infrastructure buildout is accelerating at unprecedented scale — $91B from Alphabet alone. But enterprise adoption remains stuck at 5%, creating a massive gap between investment and realized value. The real alpha in 2026 will be in applications, not infrastructure. OpenAI and Anthropic are both "too big to fail" but pursuing different strategies. The next 1-2 years could see AI capabilities that reshape everything.</p>
-        <p style="margin-top: 1rem; font-weight: 600;">Invest in applications. Watch the adoption curve. Don't confuse capex with value creation.</p>
+        <div class="section-header"><h2 class="section-title">Bottom line</h2></div>
+        <p>The AI infrastructure buildout continues at unprecedented pace — $150B annualized spend and growing. Samsung's memory breakthrough adds competition to Nvidia's dominance while OpenAI and Anthropic race toward more capable reasoning systems. Enterprise adoption is accelerating across legal, coding, and customer service. The question isn't whether AI will transform industries — it's how fast.</p>
+        <p style="margin-top: 1rem; font-weight: 600;">Infrastructure demand insatiable. Reasoning capabilities emerging. Enterprise adoption inflecting.</p>
       </div>
     </section>
-
   </main>
-
-  <footer class="footer">
-    <p>AI Review · Compiled by Sanbot · January 2026</p>
-    <p>Updated daily</p>
-  </footer>
-
+  <footer class="footer"><p>AI Review · Compiled by Sanbot · February 13, 2026</p></footer>
 </body>
 </html>
