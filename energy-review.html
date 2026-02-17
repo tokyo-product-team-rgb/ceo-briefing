@@ -26,6 +26,7 @@
     .nav-bar a.active { color: var(--text-primary); background: #ECEAE7; }
     .sector-tabs { display: flex; justify-content: center; gap: 0.5rem; padding: 1rem 1.5rem; background: var(--bg-secondary); flex-wrap: wrap; }
     .sector-tab { font-size: 0.8rem; font-weight: 500; text-decoration: none; padding: 0.5em 1em; border-radius: 999px; color: var(--text-secondary); background: var(--bg-secondary); }
+    .sector-tab:hover { background: #ECEAE7; }
     .sector-tab.active { background: #ECEAE7; color: var(--text-primary); }
     .masthead { background: transparent; position: relative; }
     .masthead-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; text-align: center; }
@@ -81,7 +82,7 @@
     <div class="masthead-inner">
       <div class="overline">Daily sector intelligence</div>
       <h1>Energy & climate review</h1>
-      <div class="edition-date">February 13, 2026</div>
+      <div class="edition-date">February 17, 2026</div>
       <div class="edition-sub">Nuclear · Solar · Battery · Grid infrastructure</div>
       <div class="divider-bar"></div>
     </div>
@@ -90,54 +91,64 @@
     <section class="section">
       <div class="section-header"><h2 class="section-title">Market overview</h2></div>
       <div class="stat-grid">
-        <div class="stat-card"><div class="stat-value">$71.25</div><div class="stat-label">WTI crude</div></div>
-        <div class="stat-card"><div class="stat-value">2.1 TW</div><div class="stat-label">Global solar capacity</div></div>
-        <div class="stat-card"><div class="stat-value">$4.2B</div><div class="stat-label">Fusion funding (2025)</div></div>
-        <div class="stat-card"><div class="stat-value">58%</div><div class="stat-label">AI datacenter nuclear PPA</div></div>
+        <div class="stat-card"><div class="stat-value">42%</div><div class="stat-label">US electricity cost rise (AI)</div></div>
+        <div class="stat-card"><div class="stat-value">5 GW</div><div class="stat-label">New nat gas plants announced</div></div>
+        <div class="stat-card"><div class="stat-value">18.2 GW</div><div class="stat-label">US battery storage (2025)</div></div>
+        <div class="stat-card"><div class="stat-value">$35/MWh</div><div class="stat-label">Solar LCOE (record low)</div></div>
       </div>
       <div class="highlight-box">
         <div class="highlight-title">The big story</div>
-        <p><strong>AI's insatiable energy demand drives nuclear renaissance.</strong> Microsoft, Google, and Amazon signing PPAs with nuclear operators. AI datacenters now account for 58% of new nuclear power agreements. Meanwhile, Japan under Takaichi accelerating nuclear restarts to power industrial competitiveness.</p>
+        <p><strong>AI's energy appetite triggers "Manhattan Project" response.</strong> US Energy Secretary Chris Wright compared AI's energy demands to a Manhattan Project-scale challenge. AI datacenters drove 42% rise in US electricity costs. Response: 5 GW of new natural gas plants (NRG, GE Vernova, Kiewit) for ERCOT and PJM, plus accelerated nuclear revival. States from Arizona to Wyoming exploring nuclear for AI power.</p>
       </div>
     </section>
     <section class="section">
       <div class="section-header"><h2 class="section-title">Key developments</h2></div>
       <div class="cards">
         <article class="card">
-          <span class="card-tag">Nuclear</span>
-          <h3 class="card-headline">Microsoft signs 20-year nuclear PPA to power AI datacenters</h3>
-          <p class="card-body">Constellation Energy deal provides <strong>835 MW of carbon-free power</strong> for Azure AI infrastructure. Largest corporate nuclear agreement ever. Sets template for hyperscaler energy strategy.</p>
+          <span class="card-tag">AI Demand</span>
+          <h3 class="card-headline">AI datacenters overwhelm grid — unprecedented demand growth</h3>
+          <p class="card-body">Exelon CEO: <strong>"Data center growth overwhelming supply."</strong> Hyperscalers need 24/7 carbon-free power that solar alone can't provide. Microsoft, Google, Amazon signing nuclear PPAs. 58% of new nuclear agreements now going to AI datacenters.</p>
         </article>
         <article class="card">
-          <span class="card-tag">Japan</span>
-          <h3 class="card-headline">Takaichi government accelerates nuclear restart program</h3>
-          <p class="card-body">7 additional reactors approved for restart in 2026. <strong>Nuclear to provide 22% of Japan's electricity by 2030.</strong> Industrial competitiveness and energy security cited.</p>
+          <span class="card-tag">Natural Gas</span>
+          <h3 class="card-headline">5 GW of new gas plants announced for ERCOT and PJM markets</h3>
+          <p class="card-body">NRG Energy, GE Vernova, and Kiewit partnering on new combined-cycle plants. <strong>Operations targeted for 2029-2032.</strong> Grid reliability concerns driving near-term fossil investment despite climate goals.</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Nuclear</span>
+          <h3 class="card-headline">States explore nuclear for AI — Arizona, California, Wyoming leading</h3>
+          <p class="card-body">Federal emphasis on nuclear scalability for AI/tech. <strong>Japan accelerating restarts</strong> — 7 additional reactors approved for 2026, targeting 22% nuclear share by 2030. Takaichi citing industrial competitiveness.</p>
         </article>
         <article class="card">
           <span class="card-tag">Fusion</span>
-          <h3 class="card-headline">Commonwealth Fusion achieves sustained plasma for 8 seconds</h3>
-          <p class="card-body">SPARC tokamak demonstrating commercial viability path. <strong>$1.8B Series D imminent</strong> at $8B+ valuation. Timeline to grid power: late 2030s.</p>
+          <h3 class="card-headline">Fusion advances with AI-driven plasma design — Proxima and Commonwealth progressing</h3>
+          <p class="card-body">AI accelerating fusion development — plasma optimization now uses machine learning. <strong>Commonwealth Fusion $1.8B Series D imminent at $8B+ valuation.</strong> Fusion offers compact, always-on power without long-lived waste.</p>
         </article>
         <article class="card">
           <span class="card-tag">Solar</span>
-          <h3 class="card-headline">Global solar capacity crosses 2 terawatts</h3>
-          <p class="card-body">China accounts for 60% of installations. <strong>Cost now below $20/MWh unsubsidized</strong> in optimal locations. Storage remains the bottleneck.</p>
+          <h3 class="card-headline">Solar LCOE hits $35/MWh — now competitive with US gas plants</h3>
+          <p class="card-body">Global solar LCOE down 2% in 2025, projected 31% lower by 2035. <strong>Inverted perovskite cells hit 25.6% efficiency.</strong> China dominates manufacturing; storage remains the bottleneck for grid reliability.</p>
         </article>
         <article class="card">
           <span class="card-tag">Battery</span>
-          <h3 class="card-headline">CATL solid-state battery enters mass production</h3>
-          <p class="card-body">1,000 km range EVs now possible. <strong>Energy density 500 Wh/kg</strong> — double current lithium-ion. Toyota and BYD racing to catch up.</p>
+          <h3 class="card-headline">US battery storage sets record — 18.2 GW added in 2025</h3>
+          <p class="card-body">EIA reports unprecedented expansion via lithium-ion advances and incentives. <strong>LCOE falls 11% in 2025, 50% projected by 2035.</strong> Alternatives like vanadium flow and sodium batteries gaining interest for grid-scale.</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Geothermal</span>
+          <h3 class="card-headline">AI accelerates geothermal — Zanskar's New Mexico plant advances</h3>
+          <p class="card-body">AI improving subsurface mapping and drilling efficiency. <strong>24/7 baseload power without intermittency.</strong> Growing interest from hyperscalers seeking diverse carbon-free sources.</p>
         </article>
       </div>
     </section>
     <section class="section">
       <div class="bottom-line">
         <div class="section-header"><h2 class="section-title">Bottom line</h2></div>
-        <p>AI's energy appetite is reshaping the power sector. Nuclear is having a moment — hyperscalers need 24/7 carbon-free power that solar alone can't provide. Japan is betting on nuclear restarts for industrial competitiveness. Fusion continues advancing but remains a 2030s story. The energy transition is accelerating, but reliability is now the constraint.</p>
-        <p style="margin-top: 1rem; font-weight: 600;">Nuclear renaissance. AI driving demand. Japan restarting. Storage critical.</p>
+        <p>AI's energy appetite is reshaping the entire power sector. The "Manhattan Project" framing from Energy Secretary Wright captures the scale of the challenge — grid infrastructure can't keep pace with datacenter growth. Near-term response includes 5 GW of new gas plants, but the long-term bet is on nuclear renaissance and fusion development. Solar hits cost parity but storage remains the constraint. Japan leading on nuclear restarts while investing in energy security.</p>
+        <p style="margin-top: 1rem; font-weight: 600;">AI straining grid. Nuclear renaissance accelerating. Solar at parity. Storage critical.</p>
       </div>
     </section>
   </main>
-  <footer class="footer"><p>Energy & Climate Review · Compiled by Sanbot · February 13, 2026</p></footer>
+  <footer class="footer"><p>Energy & Climate Review · Compiled by Sanbot · February 17, 2026</p></footer>
 </body>
 </html>
