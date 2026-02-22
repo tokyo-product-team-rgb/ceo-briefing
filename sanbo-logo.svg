@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Circle with brush-like stroke -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-dasharray="530 540" stroke-dashoffset="20"/>
+  
+  <!-- 参 character - brush stroke style -->
+  <g fill="#111111">
+    <!-- Top horizontal strokes of 参 -->
+    <path d="M55 55 Q58 53 70 54 Q82 55 85 56" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M52 65 Q60 63 75 64 Q90 65 93 67" stroke="#111111" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- 厶 component strokes -->
+    <path d="M60 75 Q62 80 64 90 Q65 95 63 100" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M63 100 Q70 95 78 92 Q85 90 90 92" stroke="#111111" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Three diagonal strokes at bottom -->
+    <path d="M55 108 Q62 118 58 130 Q56 138 52 145" stroke="#111111" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <path d="M70 105 Q75 120 73 135 Q72 142 70 148" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M85 102 Q88 120 88 138 Q88 145 90 150" stroke="#111111" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- 謀 character - brush stroke style -->
+  <g fill="#111111">
+    <!-- 言 radical on left -->
+    <path d="M108 58 Q115 56 122 57" stroke="#111111" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M107 70 Q115 68 125 70" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M110 80 Q115 78 120 79" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M108 90 Q115 88 123 90" stroke="#111111" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M112 100 Q116 98 120 99" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Vertical stroke of 言 -->
+    <path d="M115 58 Q116 70 116 85 Q116 95 115 102" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- 某 right side -->
+    <!-- Top 甘 section -->
+    <path d="M130 55 Q140 54 150 55" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M132 55 Q133 62 133 70" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M148 55 Q148 62 147 70" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M132 70 Q140 68 147 70" stroke="#111111" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M140 55 Q140 62 140 70" stroke="#111111" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- 木 section -->
+    <path d="M128 80 Q140 78 152 80" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M140 80 Q140 95 140 110 Q140 118 142 125" stroke="#111111" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <path d="M140 95 Q132 105 125 115 Q120 122 115 130" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M140 95 Q148 105 155 115 Q160 122 165 130" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    
+    <!-- Bottom horizontal strokes -->
+    <path d="M108 115 Q125 113 140 115 Q155 117 165 115" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M115 130 Q130 128 145 130 Q158 132 162 130" stroke="#111111" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Final stroke dots/accents -->
+    <path d="M125 140 Q127 145 126 150" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M155 140 Q157 145 158 150" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
