@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEOデイリーブリーフィング — 2026年2月28日</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #F9F9F9;
+      --surface: #FFFFFF;
+      --bg-secondary: #FDFDFD;
+      --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3;
+      --bg-hover-darker: #ECEAE7;
+      --bg-accent: #2A8F87;
+      --bg-accent-dark: #1D736C;
+      --text: #111111;
+      --text-secondary: #44403C;
+      --text-muted: #78716C;
+      --text-link: #1D736C;
+      --text-link-hover: #2A8F87;
+      --text-error: #C5624E;
+      --border: #E8E5E1;
+      --border-default: #D5D2CD;
+      --border-accent: #B56AEB;
+      --accent-geo: #44403C;
+      --accent-tech: #44403C;
+      --accent-japan: #44403C;
+      --accent-market: #44403C;
+      --accent-vc: #44403C;
+      --accent-predict: #44403C;
+      --accent-bottom: #111111;
+      --chart-primary: #2A8F87;
+      --chart-secondary: #E07A3F;
+      --chart-tertiary: #E3B341;
+      --chart-reference: #4C78A8;
+      --chart-outlier: #C06C84;
+      --chart-warning: #B94A48;
+      --highlight-emphasis: #F4E3B1;
+      --highlight-info: #E3EBF5;
+      --highlight-warning: #F6E3E1;
+      --highlight-brand: #E5FBF8;
+      --serif: 'Copernicus Trial', 'Shippori Mincho', Georgia, serif;
+      --sans: 'Hanken Grotesk', 'Zen Kaku Gothic New', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --shadow-lg: 0 16px 32px rgba(0,0,0,0.08);
+      --radius: 24px;
+      --green: #2A8F87;
+      --red: #B94A48;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .masthead {
+      background: transparent;
+      border-bottom: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .sanbo-logo {
+      margin-bottom: 1rem;
+    }
+    .sanbo-logo img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: none;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1.5rem;
+      margin: 4px 0;
+      border-radius: 999px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-bar a.active {
+      color: var(--text-primary);
+      background: #ECEAE7;
+    }
+
+    .nav-bar a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-toggle a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .lang-toggle a.active {
+      color: var(--text);
+    }
+
+    .lang-toggle a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle .sep {
+      color: var(--border);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-icon {
+      display: none;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title.geo,
+    .section-title.tech,
+    .section-title.japan,
+    .section-title.market,
+    .section-title.predict,
+    .section-title.vc,
+    .section-title.bottom { color: var(--text-secondary); }
+
+    .cards { display: grid; gap: 1rem; }
+
+    .card {
+      background: var(--surface);
+      border: none;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card.collapsible {
+      cursor: pointer;
+    }
+    .card.collapsible .card-body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, margin 0.2s ease;
+      margin-bottom: 0;
+    }
+    .card.collapsible.expanded .card-body {
+      max-height: 500px;
+      opacity: 1;
+      margin-bottom: 0.4rem;
+    }
+    .card.collapsible .card-headline {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .card.collapsible .card-headline::after {
+      content: '▸';
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .card.collapsible.expanded .card-headline::after {
+      transform: rotate(90deg);
+    }
+    .card.collapsible .tap-hint {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .tap-hint {
+      opacity: 0;
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .card.collapsible .card-sources {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      border: none;
+      transition: max-height 0.3s ease, opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .card-sources {
+      max-height: 100px;
+      opacity: 1;
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.45;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.9;
+    }
+
+    .list-header {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.25em 0.75em;
+      border-radius: 999px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-tag.geo,
+    .card-tag.tech,
+    .card-tag.japan,
+    .card-tag.market,
+    .card-tag.vc,
+    .card-tag.predict { background: var(--bg-tertiary); color: var(--text-secondary); }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+
+    .bottom-line {
+      background: var(--bg-tertiary);
+      color: var(--text);
+      border-radius: var(--radius);
+      padding: 2rem 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .bottom-line .section-header {
+      border-bottom-color: var(--border);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bottom-line .section-icon { display: none; }
+    .bottom-line .section-title { color: var(--text-secondary); }
+
+    .bottom-line p {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-style: normal;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--text);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-body .stat { font-size: 0.95rem; }
+
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .index-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      padding: 0.5rem 0.6rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .index-table td {
+      padding: 0.6rem;
+      border-bottom: none;
+      vertical-align: middle;
+    }
+    .index-table tr:last-child td { border-bottom: none; }
+    .index-table .idx-name { font-weight: 600; color: var(--text); }
+    .index-table .idx-level { font-family: var(--sans); font-weight: 700; font-variant-numeric: tabular-nums; }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+    .health-gauge {
+      position: relative;
+      width: 200px;
+      height: 110px;
+      overflow: hidden;
+    }
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #B94A48 0deg,
+        #E07A3F 72deg,
+        #E3B341 108deg,
+        #2A8F87 144deg,
+        #1D736C 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 60px, black 61px);
+      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
+    }
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 75px;
+      background: var(--text);
+      border-radius: 2px;
+      transform-origin: bottom center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--text);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .gauge-score {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--text);
+      margin-top: 0.25rem;
+    }
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+    }
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 0.15rem;
+    }
+    .gauge-scale span {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .indicator-item {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--bg);
+      border-radius: 6px;
+    }
+    .indicator-value {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .indicator-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .indicator-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+
+    .methodology-toggle {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-market);
+      cursor: pointer;
+      margin-top: 0.75rem;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .methodology-toggle .arrow {
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    .methodology-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .methodology-content.open {
+      max-height: 500px;
+    }
+    .methodology-content p {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 0.5rem;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .source-link:hover { color: var(--text-secondary); }
+    .source-link .src-arrow {
+      font-size: 0.6rem;
+      margin-left: 0.1rem;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .source-link:hover .src-arrow { transform: translate(1px, -1px); }
+    .card-sources {
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1) .card { animation-delay: 0.05s; }
+    .section:nth-child(1) .card:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(1) .card:nth-child(3) { animation-delay: 0.15s; }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.2em 0.7em;
+      border-radius: 10px;
+    }
+    .status-badge.normal { background: #dcfce7; color: #166534; }
+    .status-badge.caution { background: #fef9c3; color: #854d0e; }
+    .status-badge.alert { background: #fecaca; color: #991b1b; }
+
+    @media print {
+      body { background: #fff; }
+      .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+      .bottom-line { background: #333; }
+      .nav-pills { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      .container {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        padding: 2rem 0 4rem;
+        margin: 0 auto;
+      }
+      .card.featured {
+        padding-left: 0;
+      }
+      .footer {
+        padding: 2rem 0 3rem;
+      }
+      .nav-pills {
+        padding: 1rem 0;
+      }
+      .bottom-line {
+        padding: 1.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="live.html">Live</a>
+    <a href="ja.html" class="active">Daily</a>
+    <a href="vc-review.html">Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <header class="masthead">
+    <div class="lang-toggle">
+      <a href="index.html">EN</a>
+      <span class="sep">/</span>
+      <a href="ja.html" class="active">JA</a>
+    </div>
+    <div class="masthead-inner">
+      <div class="sanbo-logo">
+        <img src="sanbo-logo.svg" alt="参謀" width="120" height="120">
+      </div>
+      <div class="overline">朝のインテリジェンスブリーフ</div>
+      <h1>CEOデイリーブリーフィング</h1>
+      <div class="edition-date">2026年2月28日（土）午後10時 JST</div>
+      <div class="edition-sub">日本 · 世界各地域 · マーケット・経済 · 予測</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <nav class="nav-pills">
+    <a href="#japan" class="nav-pill">日本</a>
+    <a href="#global" class="nav-pill">世界</a>
+    <a href="#markets" class="nav-pill">マーケット</a>
+    <a href="#predictions" class="nav-pill">予測</a>
+    <a href="#bottomline" class="nav-pill">まとめ</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- 🇯🇵 日本 -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <div class="section-icon japan">🇯🇵</div>
+        <h2 class="section-title japan">日本 — 詳細分析</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">政治 · 安全保障</span>
+          <h3 class="card-headline">東京で大規模反憲法改正デモ — 高市首相の2月20日施政方針演説での9条改正宣言が国民の反発を招く</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">2月27日金曜夜、<span class="stat">約1,000人の市民が首相官邸前に集結し「憲法改正反対」「平和を守れ」</span>と訴えた。高市首相が2月20日の施政方針演説で戦後初の本格的憲法9条（平和条項）改正に踏み込む決意を表明したことが直接の引き金。高市氏は首相就任前から修正主義的立場を一貫して主張しており、防衛費拡大・殺傷兵器輸出解禁・情報機関強化も同時に打ち出した。デモ参加者は「生活苦の中で軍拡は許されない」と訴え、WWII後の平和主義世論との根深い対立が浮き彫りに。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://english.news.cn/20260228/fe4fe3290d154331bba978c0a710823b/c.html" target="_blank" rel="noopener">新華社 <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">防衛 · 政治</span>
+          <h3 class="card-headline">高市首相、武器輸出の国会事前承認を拒否 — 行政権として閣議決定のみで進める方針に野党が猛反発</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">2月27日の衆院予算委で高市首相は<span class="stat">武器輸出の国会事前承認要求を拒否</span>し、国家安全保障会議の行政判断で十分とする見解を示した。LDP安保調査会は同26日に<span class="stat">武器輸出三原則の大幅緩和</span>を了承 — 紛争地域への輸出容認、共同開発品の第三国移転解禁を含む改定案を3月初旬に政府提出予定。国会審議なしの行政ルートで進める手法に、野党・市民団体が「民主主義の形骸化」と激しく批判。米英との防衛協力資金確保と中国・北朝鮮脅威への対応が推進側の論拠。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://news.cgtn.com/news/2026-02-28/Japanese-PM-under-fire-for-rejecting-Diet-oversight-on-arms-exports-1L7DDC8smPK/p.html" target="_blank" rel="noopener">CGTN <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">外交 · 安全保障</span>
+          <h3 class="card-headline">高市首相、米イスラエルのイラン攻撃に「あらゆるリスクに備える」 — 在イラン邦人約200人の安全確保を急ぐ</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">高市首相は本日Xで<span class="stat">米イスラエル軍のイラン攻撃</span>を受け、邦人保護と経済・安全保障上のリスクに万全を期す方針を表明。首相官邸危機管理センターに情報連絡室を設置。在イラン邦人約200人の安否確認を進めている。中東情勢の不安定化は日本のエネルギー安全保障に直結 — <span class="stat">原油輸入の約9割を中東に依存</span>する日本にとって、ホルムズ海峡封鎖リスクが最大の懸念。外務省も中東情勢に関する特別声明を発表。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.japantimes.co.jp/news/2026/02/28/japan/japan-iran-risks-prepare/" target="_blank" rel="noopener">Japan Times <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.nippon.com/en/news/yjj2026022800565/" target="_blank" rel="noopener">Nippon.com <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <div class="cards-grid">
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">経済 · 貿易摩擦</span>
+            <h3 class="card-headline">中国、日本の防衛関連企業20社をデュアルユース品輸出監視リストに追加 — 1月の包括規制に続く第2弾の圧力</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
+            <p class="card-body">中国が<span class="stat">スバル、住友重機械など20社をデュアルユース品輸出の個別審査対象</span>に追加。1月の軍事強化目的輸出の包括禁止に続く第2段階の圧力で、高市政権下の防衛力増強・武器輸出政策転換への報復措置。防衛関連企業を狙い撃ちすることで産業コストを直接的に課し、東南アジアへの拡大も示唆。日中関係の緊張が産業政策レベルに波及。</p>
+            <div class="card-sources"><a class="source-link" href="https://asiatimes.com/2026/02/chinas-japan-squeeze-is-a-warning-for-southeast-asia/" target="_blank" rel="noopener">Asia Times <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">マーケット · 記録</span>
+            <h3 class="card-headline">日経225が58,850円で2月を終了、月間+10.4%・年初来+16.9% — 企業改革と円安「高市トレード」が牽引</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
+            <p class="card-body">日経225は<span class="stat">58,850.27円で2月最終取引日を終了</span>、月間+10.4%と10月以来最大の月次上昇。年初来+16.9%で先進国株中トップ。<span class="stat">4営業日連続上昇で合計+2,024ポイント（+3.56%）</span>を記録。住友金属鉱山（+11.28%）、同和ホールディングス（+10.44%）が牽引。日銀の緩和的姿勢と高市首相の積極財政が円安を維持し輸出企業に追い風、「高市トレード」が定着。ただしRSI・MACDは買われすぎを示し短期調整リスクも。</p>
+            <div class="card-sources"><a class="source-link" href="https://www.cnbc.com/" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">社会 · 政治</span>
+            <h3 class="card-headline">市民団体、武器輸出緩和を「有権者無視」と非難 — 国会外手続きへの民主的正当性が問題に</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
+            <p class="card-body">愛知平和委員会やオンラインの市民の声が<span class="stat">武器輸出規制緩和を「有権者の意思を無視」</span>と非難。日本製武器が紛争地域に渡るリスクへの懸念が広がる。LDPの国会審議なしの行政手続きと高市首相の予算委での姿勢が引き金。戦後の武器輸出禁止原則が安全保障上の必要性で加速度的に緩和される中、憲法改正反対運動との相乗効果で世論の反発が強まっている。</p>
+            <div class="card-sources"><a class="source-link" href="https://news.cgtn.com/news/2026-02-28/Japanese-PM-under-fire-for-rejecting-Diet-oversight-on-arms-exports-1L7DDC8smPK/p.html" target="_blank" rel="noopener">CGTN <span class="src-arrow">↗</span></a></div>
+          </article>
+
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">エネルギー · 外交</span>
+            <h3 class="card-headline">外務省、中東情勢の日本への影響を特別声明で警告 — エネルギー安保の観点から万全の備え</h3>
+            <div class="tap-hint">タップして詳細を表示</div>
+            <p class="card-body">外務省が<span class="stat">中東情勢が日本に与える影響を「エネルギー安全保障の観点から極めて重大」</span>とする声明を発表。米イスラエルによるイラン攻撃とイランの湾岸諸国への報復ミサイル発射で、日本の原油輸入ルートであるペルシャ湾・ホルムズ海峡の安定が脅かされている。政府は石油備蓄の放出準備と代替調達ルートの確認を進める。</p>
+            <div class="card-sources"><a class="source-link" href="https://www.mofa.go.jp/me_a/me2/pageite_000001_01504.html" target="_blank" rel="noopener">外務省 <span class="src-arrow">↗</span></a></div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 🌍 世界各地域 -->
+    <section class="section" id="global">
+      <div class="section-header">
+        <div class="section-icon geo">🌍</div>
+        <h2 class="section-title geo">世界各地域</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- 北米 -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">北米</span>
+          <h3 class="card-headline">米イスラエル軍がイランに大規模攻撃、湾岸の米軍基地にイラン報復ミサイル · フーシ派がRed Sea攻撃再開宣言 · ダウ−1.05%で週末入り</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. 米イスラエルのイラン攻撃：</span><span class="stat">米イスラエル合同で「大規模空爆作戦」をイランに実施</span>。イランの核施設・軍事拠点が標的。2023年10月のガザ戦争以降のイラン代理勢力（フーシ派、ヒズボラ）による攻撃の累積と核開発進展が直接の引き金。カタール（アル・ウデイド基地）、バーレーン、クウェート、UAEの米軍施設にイランが報復ミサイルを発射。カタールはパトリオットで迎撃成功。<br><br>
+            <span class="list-header">2. フーシ派攻撃再開：</span>イエメンの<span class="stat">フーシ派がRed Sea航路・イスラエルへのミサイル・ドローン攻撃再開</span>を宣言。トランプ政権が締結した停戦合意がイラン攻撃で崩壊 — フーシ派はイランの支援を受けており、後ろ盾への攻撃を停戦破棄の理由に。アジア-欧州間の貿易ルートに再びリスク。<br><br>
+            <span class="list-header">3. 米国株下落：</span><span class="stat">ダウ−1.05%（48,978）、S&P−0.43%（6,879）、ナスダック−0.92%（22,668）</span>。AI関連株への利益確定売りに加え、中東の地政学リスク急上昇が投資家心理を悪化。VIX+6.6%（19.86）と恐怖指数が大幅上昇。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.euronews.com/2026/02/28/israel-launches-attack-on-iran-defence-minister-says" target="_blank" rel="noopener">Euronews <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.middleeasteye.net/news/israel-us-strikes-iran-how-has-world-reacted" target="_blank" rel="noopener">MEE <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- ヨーロッパ -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">ヨーロッパ</span>
+          <h3 class="card-headline">国連事務総長がウクライナ即時停戦を要求（侵攻4年目） · レバノン支援パリ会議に向け準備会合 · シリア政治移行協議が進展</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. ウクライナ停戦呼びかけ：</span>国連事務総長が<span class="stat">ロシアの全面侵攻から4年目を迎え「完全かつ無条件の停戦」</span>を要求。長引く膠着状態、外交の失敗、世界的な資源の中東シフトが背景。欧州NATO前線国が解決を強く求めるも、米国の関心が中東に向かい外交モメンタムが低下。<br><br>
+            <span class="list-header">2. レバノン支援準備：</span>国連特別調整官が<span class="stat">3月5日のパリ会議に向けカイロで準備会合</span>に参加。レバノン軍・治安部隊の強化が焦点。2023年10月以降のヒズボラ-イスラエル国境衝突で国家治安機関が弱体化し、イランの影響力が拡大していることが会議開催の理由。<br><br>
+            <span class="list-header">3. シリア移行協議：</span>国連副特使が<span class="stat">シリア外相アル・シャイバニ氏と会談</span>、政治移行と市民社会参加を議論。2011年内戦以降のアサド政権統合と反政府勢力の後退を受け、国連が包括的プロセスを推進。FTSE100は+0.59%（10,911）と中東リスクの中でも底堅い。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://dppa.un.org/en/week-dppa-21-27-february-2026" target="_blank" rel="noopener">UNDPPA <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- アジア（日本除く） -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">アジア（日本除く）</span>
+          <h3 class="card-headline">イラン報復で湾岸アジア向けエネルギー拠点に被弾 · フーシ派のRed Sea攻撃再開でアジア貿易ルート危機 · 中央アジアで気候安保ワークショップ</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. 湾岸エネルギー拠点への打撃：</span><span class="stat">イランがUAE（ドバイ・アブダビで爆発音）、カタール、バーレーン、クウェートに報復ミサイル</span>を発射。UAEが領空を閉鎖。オマンを除く全湾岸諸国が被弾。アジアへの石油・LNG供給ハブが直接脅威にさらされ、特に日本・韓国・中国のエネルギー安全保障に大きな影響。<br><br>
+            <span class="list-header">2. Red Sea航路リスク再燃：</span>フーシ派の攻撃再開宣言で<span class="stat">アジア-欧州間の海上貿易ルートが再び危機</span>に。イラン攻撃によるトランプ-フーシ派停戦の崩壊が原因。保険料上昇と船舶のケープ迂回で物流コスト増が予想される。<br><br>
+            <span class="list-header">3. 中央アジア気候安保：</span>国連地域予防外交センターが<span class="stat">アシガバートで気候と平和構築のワークショップ</span>を2月17-19日に開催。アフガニスタンの水資源不足と2021年タリバン政権以降の国境緊張が背景。気候変動が紛争リスクを増幅させている。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.euronews.com/2026/02/28/israel-launches-attack-on-iran-defence-minister-says" target="_blank" rel="noopener">Euronews <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://dppa.un.org/en/week-dppa-21-27-february-2026" target="_blank" rel="noopener">UNDPPA <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 中東・アフリカ -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">中東・アフリカ</span>
+          <h3 class="card-headline">イスラエルがソマリランドを承認しトルコと対立 · イラン-米イスラエル攻撃で地域ミサイル危機 · ガザ人道危機が深刻化</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. ソマリランド問題：</span>イスラエルが<span class="stat">ソマリランドを承認し、リチウム取引と反フーシ派拠点を確保</span>。トルコのエルドアン大統領がアラブ諸国を結集して反対し、ソマリアにF-16・ドローンを配備。アブラハム合意後のイスラエルのアフリカ進出と、トルコのアフリカ主導権争いが衝突。アルシャバーブが権力の空白を利用するリスクも。<br><br>
+            <span class="list-header">2. 地域ミサイル危機：</span>イランが<span class="stat">「残酷な空爆作戦」への報復として湾岸全域にミサイル発射</span>。UAE領空閉鎖、カタール・バーレーンで迎撃。2023年ガザ戦争以来のイラン代理勢力攻撃の累積が直接対決にエスカレート。核交渉の停滞も要因。<br><br>
+            <span class="list-header">3. ガザ人道危機：</span>国連副調整官が<span class="stat">2月25-26日にガザを訪問、「イエローライン」付近の援助アクセス問題</span>を報告。2023年のハマス攻撃-侵攻サイクルと2007年以来の封鎖が根本原因。ラファへの援助搬入が依然として困難。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.fdd.org/analysis/2026/02/27/how-turkeys-aggression-in-the-horn-of-africa-could-benefit-al-shabaab/" target="_blank" rel="noopener">FDD <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://dppa.un.org/en/week-dppa-21-27-february-2026" target="_blank" rel="noopener">UNDPPA <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 中南米 -->
+        <article class="card featured geo fade-in collapsible">
+          <span class="card-tag geo">中南米</span>
+          <h3 class="card-headline">ブラジル・ミナスジェライス州で大洪水、53人死亡 · ビザ免除拡大で観光振興 · CITES会議で絶滅危惧種保護が政治化</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. ブラジル大洪水：</span>2月23-24日の<span class="stat">豪雨でミナスジェライス州（ジュイス・デ・フォーラ、ウバ）で土砂崩れ・洪水が発生し53-54人死亡、14-15人行方不明</span>。州知事が公衆災害を宣言し3日間の服喪、連邦軍が出動。気候変動による異常降雨パターンとインフラ整備の遅れが被害を拡大させた。さらなる降雨予報で追加避難も。<br><br>
+            <span class="list-header">2. ビザ免除拡大：</span>ブラジルが<span class="stat">中国、デンマーク、フランス、ハンガリー、アイルランド、ジャマイカ、セントルシア、バハマの国民に最大30日間のビザ免除</span>を2月24日から開始。観光・ビジネス渡航促進が目的で、90日まで延長可能。<br><br>
+            <span class="list-header">3. CITES環境外交：</span>2025年12月のCITES会議で<span class="stat">ブラジル国樹パウ・ブラジルの保護強化が政治的妥協</span>に。マクロン仏大統領がルーラ大統領に直接電話し、附属書II（管理貿易）に留め置くよう働きかけたとされる。環境保護と外交力学の交差点。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/" target="_blank" rel="noopener">AP <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- オセアニア -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">オセアニア</span>
+          <h3 class="card-headline">中東危機の波及でアジア太平洋のエネルギー安全保障に懸念 — 太平洋島嶼国の気候外交も継続</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">オセアニア固有の大きなニュースは限定的だが、<span class="stat">イランの湾岸ミサイル攻撃によるエネルギー供給リスク</span>は豪州・NZを含むアジア太平洋全域に波及。豪州はLNG輸出大国として湾岸の不安定化の恩恵を受ける可能性がある一方、グローバル保険料・輸送費上昇の影響も。太平洋島嶼国は引き続き気候変動対策の国際的な推進力として存在感を示している。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 📊 マーケット・経済 -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <div class="section-icon market">📊</div>
+        <h2 class="section-title market">マーケット・経済</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in" style="background: #fef9c3; border-color: #854d0e;">
+          <p class="card-body" style="font-size: 0.85rem; color: #854d0e;">⚠️ 注目動向：米イスラエルのイラン攻撃で地政学リスクが急上昇 — VIX+6.6%（19.86）、ダウ−1.05%。日経58,850で月間+10.4%の記録的月を終了。金$5,278に急騰（中東危機でセーフヘイブン需要爆発）。WTI原油$67.02（+3.18%、イラン報復でホルムズ海峡リスク）。ビットコイン$67,748と弱含み。</p>
+        </article>
+
+        <article class="card featured market fade-in">
+          <span class="card-tag market">主要指数</span>
+          <h3 class="card-headline">グローバル株式・債券・商品</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>指数</th>
+                <th>水準</th>
+                <th>日次</th>
+                <th>週次</th>
+                <th>月次</th>
+                <th>年初来</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">S&P 500</td>
+                <td class="idx-level">6,879</td>
+                <td class="chg-neg">−0.43%</td>
+                <td class="chg-neg">−0.8%</td>
+                <td class="chg-pos">+1.2%</td>
+                <td class="chg-pos">+17.5%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ナスダック</td>
+                <td class="idx-level">22,668</td>
+                <td class="chg-neg">−0.92%</td>
+                <td class="chg-neg">−1.5%</td>
+                <td class="chg-pos">+0.5%</td>
+                <td class="chg-pos">+18.2%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ダウ平均</td>
+                <td class="idx-level">48,978</td>
+                <td class="chg-neg">−1.05%</td>
+                <td class="chg-neg">−1.2%</td>
+                <td class="chg-pos">+0.8%</td>
+                <td class="chg-pos">+14.8%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">日経225</td>
+                <td class="idx-level">58,850</td>
+                <td class="chg-pos">+0.36%</td>
+                <td class="chg-pos">+3.56%</td>
+                <td class="chg-pos">+10.4%</td>
+                <td class="chg-pos">+16.9%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">FTSE 100</td>
+                <td class="idx-level">10,911</td>
+                <td class="chg-pos">+0.59%</td>
+                <td class="chg-pos">+0.8%</td>
+                <td class="chg-pos">+2.1%</td>
+                <td class="chg-pos">+9.5%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">DAX</td>
+                <td class="idx-level">25,284</td>
+                <td class="chg-neg">−0.02%</td>
+                <td class="chg-pos">+0.3%</td>
+                <td class="chg-pos">+3.8%</td>
+                <td class="chg-pos">+12.4%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">CAC 40</td>
+                <td class="idx-level">8,581</td>
+                <td class="chg-neg">−0.47%</td>
+                <td class="chg-neg">−0.3%</td>
+                <td class="chg-pos">+1.5%</td>
+                <td class="chg-pos">+8.2%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">USD/JPY</td>
+                <td class="idx-level">156.05</td>
+                <td class="chg-pos">+0.03%</td>
+                <td class="chg-pos">+0.5%</td>
+                <td class="chg-pos">+1.7%</td>
+                <td class="chg-pos">+4.8%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ゴールド</td>
+                <td class="idx-level">$5,278</td>
+                <td class="chg-pos">+1.0%</td>
+                <td class="chg-pos">+3.8%</td>
+                <td class="chg-pos">+7.5%</td>
+                <td class="chg-pos">+20.2%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">原油(WTI)</td>
+                <td class="idx-level">$67.02</td>
+                <td class="chg-pos">+3.18%</td>
+                <td class="chg-pos">+1.0%</td>
+                <td class="chg-neg">−1.5%</td>
+                <td class="chg-neg">−4.2%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ビットコイン</td>
+                <td class="idx-level">$67,748</td>
+                <td class="chg-neg">−1.22%</td>
+                <td class="chg-neg">−5.5%</td>
+                <td class="chg-neg">−11.0%</td>
+                <td class="chg-neg">−24.1%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">イーサリアム</td>
+                <td class="idx-level">$2,046</td>
+                <td class="chg-neg">−1.54%</td>
+                <td class="chg-neg">−7.2%</td>
+                <td class="chg-neg">−15.3%</td>
+                <td class="chg-neg">−38.5%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">米10年債利回り</td>
+                <td class="idx-level">3.96%</td>
+                <td class="chg-neg">−0.06pt</td>
+                <td class="chg-neg">−0.08pt</td>
+                <td class="chg-neg">−0.12pt</td>
+                <td class="chg-neg">−0.47pt</td>
+              </tr>
+              <tr>
+                <td class="idx-name">VIX</td>
+                <td class="idx-level">19.86</td>
+                <td class="chg-pos">+6.60%</td>
+                <td class="chg-pos">+4.5%</td>
+                <td class="chg-pos">+8.2%</td>
+                <td class="chg-pos">+2.8%</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="card featured market fade-in">
+          <span class="card-tag market">ヘルススコア</span>
+          <h3 class="card-headline">経済健全性総合スコア — 警戒（中東危機・テック調整・暗号通貨弱気が重なる）</h3>
+          <div class="health-gauge-wrap">
+            <div class="health-gauge">
+              <div class="gauge-bg"></div>
+              <div class="gauge-needle" id="gaugeNeedle">
+                <div class="gauge-dot"></div>
+              </div>
+            </div>
+            <div class="gauge-scale">
+              <span>0</span>
+              <span>50</span>
+              <span>100</span>
+            </div>
+            <div class="gauge-score" id="gaugeScore">48</div>
+            <div class="gauge-score-label">/ 100点</div>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">−1.05%</div>
+              <div class="indicator-name">ダウ日次</div>
+              <div class="indicator-sub chg-neg">▼ 地政学リスク</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">+10.4%</div>
+              <div class="indicator-name">日経月次</div>
+              <div class="indicator-sub chg-pos">▲ 高市トレード</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">$5,278</div>
+              <div class="indicator-name">ゴールド</div>
+              <div class="indicator-sub chg-pos">▲ 過去最高更新</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">−24.1%</div>
+              <div class="indicator-name">ビットコインYTD</div>
+              <div class="indicator-sub chg-neg">▼ 弱気継続</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">156.05</div>
+              <div class="indicator-name">USD/JPY</div>
+              <div class="indicator-sub chg-pos">▲ 円安基調</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">19.86</div>
+              <div class="indicator-name">VIX恐怖指数</div>
+              <div class="indicator-sub chg-neg">▲ +6.6%急騰</div>
+            </div>
+          </div>
+          <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▸</span> 算出方法を見る
+          </div>
+          <div class="methodology-content">
+            <p>GDP成長率、失業率、インフレ率、消費者信頼感、PMI、VIX、資産クラス間フローを加重平均して算出。スコアは前日（59）から48に大幅低下。主因は米イスラエルのイラン攻撃による地政学リスクの急上昇（VIX+6.6%→19.86）。ダウ−1.05%、ナスダック−0.92%と米国株が全面安。日経58,850は月間+10.4%と記録的月を終了したが、週明けのイラン情勢の影響に要注意。金$5,278が過去最高を更新 — イラン攻撃と湾岸へのミサイル報復がセーフヘイブン需要を爆発させた。原油WTI$67.02（+3.18%）もホルムズ海峡リスクで急騰。米10年債3.96%はフライト・トゥ・クオリティで低下。ビットコイン$67,748（−1.22%）はリスクオフで弱含み。</p>
+          </div>
+        </article>
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag market">注目：日本株</span>
+          <h3 class="card-headline">日経225が58,850で2月を終了、月間+10.4% — 史上最高値圏で「高市トレード」全開、ただし週明けのイラン情勢に要警戒</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">日経225は<span class="stat">2月を58,850.27で終了、月間+10.4%</span>と10月以来最大の月次上昇を記録。年初来+16.9%で先進国株中トップの座を維持。<span class="stat">4営業日連続上昇（+3.56%、2,024ポイント）</span>で過去最高値を更新。住友金属鉱山+11.28%、同和HD+10.44%が牽引。日銀の緩和的姿勢と高市首相の積極財政で円安が加速し輸出企業に追い風。ただし週末の米イスラエルのイラン攻撃で、<span class="stat">月曜のアジア市場は大荒れの可能性</span>。RSI・MACDは買われすぎシグナルを発しており、地政学ショックとテクニカル調整が重なるリスクに注意。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag market">コモディティ</span>
+          <h3 class="card-headline">金$5,278で過去最高更新 — イラン攻撃がセーフヘイブン需要を爆発させる。原油+3.18%でホルムズ海峡リスク反映</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">金価格が<span class="stat">$5,278/オンスに急騰し過去最高を更新</span>。前日の$5,226-5,246から急上昇。米イスラエルのイラン攻撃とイランの湾岸報復ミサイルが直接の引き金で、安全資産への資金逃避が加速。年初来+20.2%と全資産クラスで圧倒的パフォーマンス。中央銀行の金準備積み増し（中国・インド）も構造的需要。原油WTI<span class="stat">$67.02（+3.18%）</span>は先週の$66台から急騰 — ホルムズ海峡封鎖リスクとイランの湾岸攻撃が背景。ただしOPEC増産観測と戦略備蓄放出の可能性が上値を一定程度抑制。エネルギーと貴金属が同時に上昇する「パニックモード」入りの兆候。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 🔮 予測 -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <div class="section-icon predict">🔮</div>
+        <h2 class="section-title predict">予測</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag predict">今週の注目</span>
+          <h3 class="card-headline">米PPI発表でインフレ動向確認 · ウィーンでイラン核協議継続 · 中国全人代（両会）開幕間近</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. 米PPI（卸売物価指数）：</span>本日発表の<span class="stat">PPI</span>がFRBの利下げスケジュールに影響。1月の強い雇用統計で利下げ期待が後退しており、PPIが予想を上回れば金利据え置き長期化でテック株にさらなる逆風。<br><br>
+            <span class="list-header">2. イラン核協議：</span>ジュネーブに続く<span class="stat">ウィーンでのフォローアップ協議</span>が最大の地政学イベント。合意なら原油下落・リスクオン、決裂なら原油急騰・金追い風・株安の可能性。米軍の中東増強が交渉のバックストップ。<br><br>
+            <span class="list-header">3. 中国全人代：</span>来週の<span class="stat">全人代（両会）開幕</span>を前に軍幹部粛清が完了。経済成長目標、不動産対策、対日レアアース規制の追加可能性に注目。日本企業のサプライチェーン戦略に直結。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.ft.com/" target="_blank" rel="noopener">FT <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag predict">年間見通し</span>
+          <h3 class="card-headline">日本株「高市トレード」は持続可能か · 金は$6,000到達も · テック調整は長期化リスク</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">日本株：</span>「高市トレード」（円安・株高・財政拡大）は日銀の利上げタイミング次第。年内<span class="stat">65,000円到達</span>も視野だが、中国の対日規制拡大と日銀の利上げが二大リスク。企業改革のモメンタムは健在。<br><br>
+            <span class="list-header">コモディティ：</span>金は中央銀行の買い・地政学不安・ドル信認低下の三重追い風で<span class="stat">年内$6,000突破</span>の可能性。原油はOPEC増産とイラン交渉で$55-70のレンジ。<br><br>
+            <span class="list-header">テック：</span>Nvidia決算の「好調でも失望」は<span class="stat">バリュエーション調整の始まり</span>。AI関連は長期的には強気だが、短期的には利益確定売りの圧力が継続する見通し。SaaS企業のAI代替リスクが新たなテーマ。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bloomberg.com/" target="_blank" rel="noopener">Bloomberg <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 💡 まとめ -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line">
+        <div class="section-header">
+          <div class="section-icon bottom">💡</div>
+          <h2 class="section-title bottom">まとめ</h2>
+        </div>
+        <p>本日のキーポイント：<strong>日経225は前日に59,000円を初めて突破し「高市トレード」が本格化</strong> — 日銀人事観測による円安と企業改革が牽引し年初来+49%。高田審議委員の利上げ発言が今後の転換点に。<strong>Nvidiaは好決算にもかかわらず−5.5%</strong>、AIブームのバリュエーション限界を示唆しナスダック全体を押し下げた。<strong>パキスタンがアフガニスタンとの「公然たる戦争」を宣言</strong>、南アジアの不安定化リスクが急上昇。<strong>米イラン核交渉はジュネーブからウィーンへ継続</strong>、金$5,177の過去最高圏が不確実性を反映。<strong>ラピダスが2,600億円超の出資を確保</strong>し、日本の半導体国産化が本格始動。来週の中国全人代と米PPIが次の大きな分岐点。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CEOデイリーブリーフィングは参謀が作成しています · 2026年2月27日版</p>
+  </footer>
+
+  <script>
+    // Health gauge animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const score = 59;
+      const needle = document.getElementById('gaugeNeedle');
+      const rotation = -90 + (score / 100) * 180;
+      setTimeout(() => {
+        needle.style.transform = `rotate(${rotation}deg)`;
+      }, 300);
+    });
+
+    // Collapsible cards
+    document.querySelectorAll('.card.collapsible').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+      });
+    });
+  </script>
+
+</body>
+</html>

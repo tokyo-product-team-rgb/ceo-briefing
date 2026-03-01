@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1920px; background: #0F172A; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif; color: #F8FAFC; display: flex; flex-direction: column; padding: 120px 80px; overflow: hidden; }
+.tag { display: inline-flex; align-items: center; gap: 10px; background: rgba(16,185,129,0.15); color: #10B981; font-size: 22px; font-weight: 600; padding: 12px 24px; border-radius: 8px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 56px; width: fit-content; }
+.headline { font-size: 60px; font-weight: 800; line-height: 1.15; margin-bottom: 64px; letter-spacing: -1px; }
+.highlight { color: #10B981; }
+.highlight-amber { color: #F59E0B; }
+.big-stats { display: flex; flex-direction: column; gap: 24px; }
+.big-stat { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.12); border-radius: 20px; padding: 36px; display: flex; justify-content: space-between; align-items: center; }
+.big-stat-name { font-size: 28px; font-weight: 600; color: #CBD5E1; }
+.big-stat-sub { font-size: 20px; color: #64748B; margin-top: 4px; }
+.big-stat-value { font-size: 44px; font-weight: 800; }
+.green { color: #10B981; }
+.amber { color: #F59E0B; }
+.blue { color: #3B82F6; }
+.bottom-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: #10B981; }
+</style></head><body>
+<div class="tag">🇯🇵 Japan Focus</div>
+<div class="headline">Nikkei at <span class="highlight">53,375</span><br>BOJ Holds <span class="highlight-amber">0.75%</span></div>
+<div class="big-stats">
+  <div class="big-stat">
+    <div><div class="big-stat-name">Nikkei 225</div><div class="big-stat-sub">Japanese equities</div></div>
+    <div class="big-stat-value green">53,375</div>
+  </div>
+  <div class="big-stat">
+    <div><div class="big-stat-name">BOJ Rate</div><div class="big-stat-sub">Bank of Japan</div></div>
+    <div class="big-stat-value amber">0.75%</div>
+  </div>
+  <div class="big-stat">
+    <div><div class="big-stat-name">USD/JPY</div><div class="big-stat-sub">Currency pair</div></div>
+    <div class="big-stat-value blue">¥153.27</div>
+  </div>
+</div>
+<div class="bottom-bar"></div>
+</body></html>

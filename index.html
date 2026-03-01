@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Morning Briefing — Mar 2, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #F9F9F9;
+      --surface: #FFFFFF;
+      --bg-secondary: #FDFDFD;
+      --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3;
+      --bg-hover-darker: #ECEAE7;
+      --bg-accent: #2A8F87;
+      --bg-accent-dark: #1D736C;
+      --text: #111111;
+      --text-secondary: #44403C;
+      --text-muted: #78716C;
+      --text-link: #1D736C;
+      --text-link-hover: #2A8F87;
+      --text-error: #C5624E;
+      --border: #E8E5E1;
+      --border-default: #D5D2CD;
+      --border-accent: #B56AEB;
+      --serif: 'Copernicus Trial', Georgia, serif;
+      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --shadow-lg: 0 16px 32px rgba(0,0,0,0.08);
+      --radius: 24px;
+      --green: #2A8F87;
+      --red: #B94A48;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .masthead {
+      background: transparent;
+      border-bottom: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: none;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1.5rem;
+      margin: 4px 0;
+      border-radius: 999px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-bar a.active {
+      color: var(--text-primary);
+      background: #ECEAE7;
+    }
+
+    .nav-bar a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-toggle a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .lang-toggle a.active {
+      color: var(--text);
+    }
+
+    .lang-toggle a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle .sep {
+      color: var(--border);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--text);
+      padding-bottom: 0.75rem;
+    }
+
+    .section-icon {
+      font-size: 1.3rem;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--surface);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .card.featured {
+      padding-left: 1.5rem;
+      border-left: 4px solid var(--text);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .tap-hint {
+      display: none;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .collapsible .tap-hint {
+      display: block;
+    }
+
+    .collapsible .card-body {
+      display: none;
+    }
+
+    .collapsible.expanded .card-body {
+      display: block;
+    }
+
+    .collapsible.expanded .tap-hint {
+      display: none;
+    }
+
+    .card-body {
+      font-size: 1rem;
+      font-style: normal;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--text);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-body .stat { font-size: 0.95rem; }
+
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .index-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      padding: 0.5rem 0.6rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .index-table td {
+      padding: 0.6rem;
+      border-bottom: none;
+      vertical-align: middle;
+    }
+    .index-table tr:last-child td { border-bottom: none; }
+    .index-table .idx-name { font-weight: 600; color: var(--text); }
+    .index-table .idx-level { font-family: var(--sans); font-weight: 700; font-variant-numeric: tabular-nums; }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+    .health-gauge {
+      position: relative;
+      width: 200px;
+      height: 110px;
+      overflow: hidden;
+    }
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #B94A48 0deg,
+        #E07A3F 72deg,
+        #E3B341 108deg,
+        #2A8F87 144deg,
+        #1D736C 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 60px, black 61px);
+      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
+    }
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 75px;
+      background: var(--text);
+      border-radius: 2px;
+      transform-origin: bottom center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--text);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .gauge-score {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--text);
+      margin-top: 0.25rem;
+    }
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+    }
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 0.15rem;
+    }
+    .gauge-scale span {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .indicator-item {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--bg);
+      border-radius: 6px;
+    }
+    .indicator-value {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .indicator-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .indicator-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .source-link:hover { color: var(--text-secondary); }
+    .source-link .src-arrow {
+      font-size: 0.6rem;
+      margin-left: 0.1rem;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .source-link:hover .src-arrow { transform: translate(1px, -1px); }
+    .card-sources {
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1) .card { animation-delay: 0.05s; }
+    .section:nth-child(1) .card:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(1) .card:nth-child(3) { animation-delay: 0.15s; }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.2em 0.7em;
+      border-radius: 10px;
+    }
+    .status-badge.normal { background: #dcfce7; color: #166534; }
+    .status-badge.caution { background: #fef9c3; color: #854d0e; }
+    .status-badge.alert { background: #fecaca; color: #991b1b; }
+
+    .bottom-line {
+      background: var(--text);
+      color: var(--surface);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin-top: 2rem;
+    }
+    .bottom-line h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+    .bottom-line p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+      .bottom-line { background: #333; }
+      .nav-pills { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      .container {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        padding: 2rem 0 4rem;
+        margin: 0 auto;
+      }
+      .card.featured {
+        padding-left: 0;
+      }
+      .footer {
+        padding: 2rem 0 3rem;
+      }
+      .nav-pills {
+        padding: 1rem 0;
+      }
+      .bottom-line {
+        padding: 1.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="live.html">Live</a>
+    <a href="index.html" class="active">Daily</a>
+    <a href="vc-review.html">Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <header class="masthead">
+    <div class="lang-toggle">
+      <a href="index.html" class="active">EN</a>
+      <span class="sep">/</span>
+      <a href="ja.html">JA</a>
+    </div>
+    <div class="masthead-inner">
+      <div class="overline">MORNING INTELLIGENCE BRIEF</div>
+      <h1>CEO Morning Briefing</h1>
+      <div class="edition-date">Monday, March 2, 2026 — 7:00 AM JST</div>
+      <div class="edition-sub">⚠️ BREAKING: US-Israel Strike Iran · Markets Closed · Geopolitical Crisis Escalating</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <nav class="nav-pills">
+    <a href="#japan" class="nav-pill">Japan</a>
+    <a href="#global" class="nav-pill">Global</a>
+    <a href="#markets" class="nav-pill">Markets</a>
+    <a href="#predictions" class="nav-pill">Predictions</a>
+    <a href="#bottomline" class="nav-pill">Bottom Line</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- 🇯🇵 Japan -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <div class="section-icon japan">🇯🇵</div>
+        <h2 class="section-title japan">Japan — In Depth</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">GEOPOLITICS · ENERGY SECURITY</span>
+          <h3 class="card-headline">Japan Braces for Oil Shock — Iran Strikes Threaten 5% of Japan's Crude Imports via Strait of Hormuz</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body">The US-Israel strikes on Iran launched overnight Saturday (Feb 28) pose an immediate threat to Japan's energy security. Roughly 90% of Japan's crude imports transit the Strait of Hormuz, and Iran has historically threatened to close the strait in response to military attacks. <strong>Why this matters for Japan:</strong> Unlike European nations with pipeline alternatives, Japan is almost entirely dependent on Middle Eastern seaborne oil. METI is expected to convene an emergency energy security meeting Monday. PM Takaichi's government has maintained strategic petroleum reserves of ~130 days of consumption, but a prolonged Hormuz disruption would force Japan to activate IEA emergency sharing agreements. The yen's weakness (156.06) compounds the problem—higher oil priced in strengthening dollars hits Japan's import bill doubly hard. Expect Nikkei futures to gap down significantly when trading opens Monday.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.reuters.com/world/middle-east/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">MARKETS · FEBRUARY RECAP</span>
+          <h3 class="card-headline">Nikkei Surged 10.4% in February — Best Month Since 2023 Rally, But Iran Crisis Clouds March</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body">The Nikkei 225 closed Friday at <span class="stat">58,850</span> (+0.16%), capping a stunning February with a <span class="stat">+10.37%</span> monthly gain. The broader Topix surged even more, up <span class="stat">+10.44%</span> to 3,939. <strong>Why:</strong> Three converging forces drove the rally: (1) the "Takaichi trade"—dovish BOJ appointments and fiscal expansion under PM Takaichi's supermajority; (2) healthy rotation from tech into financials, industrials, and materials (Sumitomo Metal Mining +11.3%, Pacific Metals +10.8%); (3) global capital rotating out of expensive US equities into cheaper Japanese stocks. However, the Iran strikes overnight threaten to erase much of this momentum when markets reopen Monday—energy-dependent exporters and airlines will be hit hardest, while defense stocks (Mitsubishi Heavy, Kawasaki Heavy) may surge.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://tradingeconomics.com/japan/stock-market" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">CORPORATE · BUYBACKS</span>
+          <h3 class="card-headline">Nintendo ¥100B Buyback, Sony Expands to ¥250B — Corporate Japan's Capital Return Wave Accelerates</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body">Nintendo announced plans to retire up to 1.2% of outstanding shares (¥100B), driving a 3% Friday gain. Sony Group surged 7.2% after expanding its buyback program from ¥150B to ¥250B. <strong>Why:</strong> Tokyo Stock Exchange's ongoing pressure on companies trading below book value is working—Japanese corporates are sitting on record cash piles (~¥100T across listed firms) and responding to governance reform demands by returning capital. The buyback wave is a structural tailwind for Japanese equities, improving ROE metrics and making the market more attractive to foreign investors. This trend is accelerating because Takaichi's pro-growth stance encourages corporate confidence in the domestic outlook.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://tradingeconomics.com/japan/stock-market" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">TECH · AI WEAKNESS</span>
+          <h3 class="card-headline">Japan Semiconductor Stocks Diverge — Advantest and Disco Fall 4.5% Despite Nvidia Earnings Beat</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body">Despite Nvidia posting strong earnings, Japanese semiconductor names sold off hard Friday: Advantest −4.5%, Disco Corporation −4.5%, Fujikura −2.6%. <strong>Why:</strong> The global AI spending skepticism that hammered CoreWeave (−18.6%) in the US is spilling over to Japan's chip equipment makers. Markets are differentiating between AI infrastructure demand (still strong) and the sustainability of the capex cycle—investors fear that hyperscalers may plateau spending after the current buildout wave, reducing future orders for test and packaging equipment. The rotation out of tech into value/materials within Japan reflects this uncertainty.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://tradingeconomics.com/japan/stock-market" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">MONETARY POLICY · BOJ</span>
+          <h3 class="card-headline">BOJ Rate Steady at 0.75% — Iran Crisis Likely Delays Any March Hawkish Signals</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body">The BOJ's key rate remains at 0.75% as of the January meeting, with no change expected. Japan's 10-year JGB yield sits at <span class="stat">2.112%</span>. <strong>Why the Iran crisis matters for BOJ:</strong> Any geopolitical shock that threatens global growth gives the Takaichi-aligned dovish board members additional ammunition to delay rate hikes. The BOJ's Summary of Opinions (due Tuesday Mar 3) was written before the Iran strikes, so markets will need to read between the lines on the board's hawkish vs dovish tilt. Yen weakness (156.06) would normally pressure the BOJ toward tightening, but military conflict changes the calculus—the BOJ will prioritize stability over normalization.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <div class="cards-grid">
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">DIPLOMACY · MIDDLE EAST</span>
+            <h3 class="card-headline">Japan's Diplomatic Response — Takaichi Calls for "Restraint" While Protecting Alliance</h3>
+            <div class="tap-hint">Tap to expand</div>
+            <p class="card-body"><strong>Why this is delicate:</strong> Japan depends on Middle Eastern oil (Saudi Arabia, UAE, Kuwait, Iran historically) but is bound by the US-Japan security alliance. Takaichi must balance calling for restraint to protect energy relationships with Gulf states while not alienating Washington. Japan's MOFA is expected to issue a measured statement urging de-escalation—mirroring Tokyo's traditional approach of quiet diplomacy rather than overt criticism of its primary ally.</p>
+          </article>
+
+          <article class="card fade-in collapsible">
+            <span class="card-tag japan">LABOR · DEMOGRAPHICS</span>
+            <h3 class="card-headline">Japan Unemployment Steady at 2.6% — Labor Shortage Intensifies</h3>
+            <div class="tap-hint">Tap to expand</div>
+            <p class="card-body"><strong>Why:</strong> The latest unemployment figure (December 2025) remains at a near-historic low of 2.6%, confirming Japan's labor market is effectively at full employment. This structural tightness is why companies like Mizuho are investing billions in AI to replace clerical workers rather than competing for scarce labor—Japan's AI adoption is driven by demographic necessity, not Silicon Valley hype.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 🌍 Global -->
+    <section class="section" id="global">
+      <div class="section-header">
+        <div class="section-icon">🌍</div>
+        <h2 class="section-title">Global — By Region</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- North America -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · BREAKING</span>
+          <h3 class="card-headline">US-Israel Launch Operation "Epic Fury" on Iran — Khamenei's Compound Hit, Trump Claims Supreme Leader Dead</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>1) The Strike:</strong> On February 28 at ~9:45 AM Tehran time, the US and Israel launched coordinated strikes (Operations "Epic Fury" and "Roaring Lion") hitting ~500 targets across Tehran, Isfahan, Qom, Karaj, Kermanshah, and Bushehr with Tomahawk missiles and ~200 Israeli jets. Targets included air defenses, missile launchers, nuclear facilities, and Khamenei's compound. <strong>Why:</strong> After three rounds of failed nuclear talks in Geneva, Iran refused to destroy its main enrichment sites (Fordow, Natanz, Isfahan) or accept permanent deal terms without sunset clauses. Trump's 10-15 day ultimatum from February 19 expired, and the symbolic timing ahead of Purim (March 2) aligned with Israeli strategic interests. Trump announced via Truth Social that Iran's leader "is dead" and urged Iranians to overthrow their government. <strong>2) Strikes Ongoing:</strong> Additional US/Israeli strikes continued into early Sunday (March 1 Tehran time). The operation's scope suggests regime change ambitions—not limited to nuclear facilities. <strong>3) Market Implications:</strong> Oil futures (Sunday trading in Middle East) are expected to spike when Western markets open. The VIX is likely to gap above 25 Monday. Defense stocks globally will surge.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.reuters.com/world/middle-east/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · ECONOMY</span>
+          <h3 class="card-headline">February Ends in Red — S&P Down 1.4% Monthly as Stagflation Fears and AI Skepticism Converge</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> The S&P 500 lost 1.42% in February after hot inflation data (core PPI +0.8% vs +0.3% expected) proved companies are passing tariff costs to consumers, complicating the Fed's rate cut path. The Nasdaq was hit hardest (−4.08% monthly) as AI spending skepticism deepened—CoreWeave crashed 18.6% on weak guidance, Nvidia fell 4.1%, and the iShares Software ETF (IGV) is now 31% off its highs. <strong>Bright spots:</strong> Record $233.3B in corporate buyback authorizations in February provides a floor. Dell surged 21.8% on record AI server demand and a massive buyback plan. UBS downgraded US equities, calling MSCI World ex-US (+8% YTD) a better value.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://tradingeconomics.com/united-states/stock-market" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · DIPLOMACY</span>
+          <h3 class="card-headline">Trump Pushes Russia-Ukraine Deal — Moscow Accepts US Security Guarantee Proposal</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> While simultaneously striking Iran, Trump is urging Russia and Ukraine to end "Europe's largest war since 1945." Russia reportedly accepted a US proposal for Ukraine's post-war security guarantees during Geneva talks, though Zelensky faces mounting pressure for territorial concessions. The dual-front approach—war in the Middle East while brokering peace in Europe—reflects Trump's "peace through strength" doctrine and creates an extraordinary diplomatic moment.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Europe -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇪🇺 EUROPE</span>
+          <h3 class="card-headline">EU Emergency Session on Iran — G7 Foreign Ministers Convene as Europe Faces Energy and Security Crosswinds</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>1) G7 Response:</strong> EU and G7 foreign ministers (Italy, UK, France, Germany) are meeting March 1-2 to address the Iran strikes and promote Middle East stability. Italy expressed solidarity with Iranian civilians. <strong>Why:</strong> Europe faces a nightmare scenario—higher oil prices amid already-fragile growth, potential refugee flows, and being caught between its US alliance and its interest in Iran diplomacy. <strong>2) Ukraine Anniversary Session:</strong> European Parliament is holding an extraordinary plenary marking 4 years since Russia's full-scale invasion, debating sustained security commitments. <strong>Why:</strong> The Iran crisis complicates Europe's Ukraine strategy—US military attention and resources shifting to the Middle East could weaken the Western coalition supporting Kyiv. <strong>3) ECB Monetary Dialogue:</strong> Christine Lagarde conducting first 2026 monetary dialogue with Economic Affairs Committee. Key interest rates unchanged as inflation gaps persist—the Iran oil shock will dominate the conversation.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.europarl.europa.eu/" target="_blank" rel="noopener">European Parliament <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇪🇺 EUROPE · WEATHER</span>
+          <h3 class="card-headline">Atlantic Storm Systems Threaten European Supply Chains — Flooding in France/UK, Flash Freeze in Germany</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> Low-pressure systems from the Atlantic are forecast to cause flooding across France and the UK, with potential flash freezes and cold snaps disrupting German logistics. <strong>Cause:</strong> Late-winter Atlantic jet stream instability is creating compound weather events. This comes at the worst time—European supply chains are already strained by energy cost uncertainty, and the Iran crisis adds oil transport disruption fears on top of physical logistics challenges.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/weather" target="_blank" rel="noopener">BBC Weather <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇳🇱 EUROPE · POLITICS</span>
+          <h3 class="card-headline">Netherlands Gets New PM — Rob Jetten Sworn In Leading Minority Government</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> Rob Jetten was sworn in as the Netherlands' new prime minister, leading a minority government. This follows months of coalition negotiations after Geert Wilders' PVV won the most seats but failed to form a majority. Jetten's D66 party is pro-EU, pro-climate, and centrist—a contrast to the populist wave that seemed poised to take Dutch politics rightward. The minority government structure means policy will require cross-party deal-making on every major issue.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.reuters.com/world/europe/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Asia ex-Japan -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🌏 ASIA EX-JAPAN</span>
+          <h3 class="card-headline">China Suspends Canadian Tariffs, NPC Session Looms — Singapore Warns Citizens to Avoid Middle East</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>1) China-Canada Thaw:</strong> China suspended tariffs on some Canadian agricultural goods from March 1 through end of 2026. <strong>Why:</strong> Beijing is selectively easing trade tensions with US allies—isolating Washington while building bilateral goodwill ahead of the NPC session where Xi is expected to announce major stimulus measures targeting consumer spending. <strong>2) Regional Iran Fallout:</strong> Singapore issued travel advisories urging citizens to avoid the Middle East after reports of Iranian retaliatory missile attacks on US bases in Bahrain, Jordan, Kuwait, Qatar, Saudi Arabia, and UAE. The Philippines urged Filipinos in the region to limit movement. <strong>Why:</strong> SE Asian nations have millions of overseas workers in Gulf states—any regional escalation directly threatens their citizens and remittance flows. <strong>3) Afghanistan-Pakistan:</strong> Cross-border strikes continue to escalate, with Pakistan declaring "open war"—the most significant confrontation since the 2021 US withdrawal. China's CPEC corridor is directly threatened.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.reuters.com/world/asia-pacific/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Middle East & Africa -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🌍 MIDDLE EAST & AFRICA · BREAKING</span>
+          <h3 class="card-headline">Iran Retaliates With Missile Strikes on US Bases Across Gulf — 40-Day Mourning Declared, Street Celebrations Reported</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>1) Iranian Retaliation:</strong> Reports indicate Iran launched retaliatory missile attacks on US military bases in Bahrain, Jordan, Kuwait, Qatar, Saudi Arabia, and UAE. Explosions were reported at multiple facilities. <strong>Why:</strong> The IRGC vowed immediate response after strikes hit Tehran and potentially killed Supreme Leader Khamenei. The multi-base targeting suggests Iran is attempting to demonstrate its missile reach rather than hit a single decisive target. <strong>2) Internal Chaos:</strong> A 40-day mourning period was declared in Iran, but street celebrations were also reported—highlighting deep internal divisions between the population and the regime. Khamenei's family deaths confirmed. <strong>Why:</strong> The combination of mourning and celebrations suggests the regime's grip may be weaker than assumed—this echoes the 2022 Mahsa Amini protests. <strong>3) Oil Transit Risk:</strong> The Strait of Hormuz remains the critical chokepoint—~20% of global oil passes through it daily. Any Iranian naval action to block the strait would trigger the most severe energy crisis since 1973.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.aljazeera.com/news/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.reuters.com/world/middle-east/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🌍 MIDDLE EAST · DIPLOMACY</span>
+          <h3 class="card-headline">Hungary Blocks All EU Ukraine Aid — Orbán Demands Druzhba Pipeline Oil Resumption</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> Hungary's Viktor Orbán has ended all support for Ukraine, including blocking EU aid packages, until Russian oil flows resume via the Druzhba pipeline. <strong>Cause:</strong> Hungary's economy is uniquely dependent on Russian energy among EU members, and Orbán is leveraging the EU's unanimity requirement on foreign policy to force concessions. This creates a three-way crisis: Iran strikes pushing oil prices up, Orbán blocking Ukraine aid, and the EU unable to present a unified front on either the Middle East or Eastern Europe simultaneously.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.reuters.com/world/europe/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🌍 MIDDLE EAST · IRAQ</span>
+          <h3 class="card-headline">Kata'ib Hezbollah HQ Near Baghdad Hit — 2 Dead as US Strikes Expand Beyond Iran</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> The US struck Iraqi Kata'ib Hezbollah headquarters near Baghdad as part of the broader Iran operation, killing at least 2 people. <strong>Cause:</strong> Kata'ib Hezbollah is an Iran-backed Shia militia that has launched drone and rocket attacks on US bases in Iraq and Syria throughout 2025-2026. The strike signals the US is targeting Iran's entire proxy network simultaneously—not just the homeland—to degrade Tehran's ability to coordinate retaliatory operations across the region.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.reuters.com/world/middle-east/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Latin America -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🌎 LATIN AMERICA</span>
+          <h3 class="card-headline">Peru Names New PM Denisse Miralles — Political Instability Continues as Cabinet Reshuffles</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> Denisse Miralles was sworn in as Peru's prime minister, succeeding Ernesto Álvarez Miranda. Peru has cycled through multiple PMs in recent years. <strong>Cause:</strong> Ongoing political fragmentation under President Boluarte—congressional opposition and protest movements continue to undermine governance stability. Peru's copper production (2nd globally) makes political instability relevant to commodity markets. The Iran crisis adding oil price pressure compounds Peru's already-challenging fiscal position.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.reuters.com/world/americas/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🌎 LATIN AMERICA · ENERGY</span>
+          <h3 class="card-headline">Oil Shock Hits LatAm Importers — Mexico and Brazil Positioned as Beneficiaries</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> The Iran crisis creates stark winners and losers across Latin America. <strong>Winners:</strong> Mexico (Pemex) and Brazil (Petrobras) as oil exporters benefit from price spikes—Brazilian real already strengthened 1.2% in February. <strong>Losers:</strong> Chile, Peru, and Central American nations that import nearly all their crude will face immediate inflationary pressure. Argentina's peso continues weakening (−3.3% monthly). The region's divergent energy positions mean the Iran crisis will widen the economic gap between oil producers and importers.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://tradingeconomics.com/currencies" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🌎 LATIN AMERICA · CHINA</span>
+          <h3 class="card-headline">China Eases Canada Tariffs — Broader Signal of Beijing's Selective Alliance-Splitting Strategy</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> China's suspension of Canadian agricultural tariffs starting March 1 is part of a deliberate strategy to peel US allies away from Washington's trade coalition. <strong>Cause:</strong> With the US focused on Iran and maintaining tariffs on allies, Beijing is offering targeted concessions to countries like Canada, Australia, and select LatAm nations—creating economic incentives to distance from US trade positions. This has implications for Latin American commodity exporters who may find China an increasingly willing buyer at better terms.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.reuters.com/world/china/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 📊 Markets -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <div class="section-icon">📊</div>
+        <h2 class="section-title">Markets & Economy</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in">
+          <span class="card-tag">⚠️ NOTE: MARKETS CLOSED — FRIDAY FEB 27 CLOSE DATA. EXPECT MAJOR MOVES MONDAY.</span>
+          <h3 class="card-headline">Global Equity Indices</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Level</th>
+                <th>Daily</th>
+                <th>Weekly</th>
+                <th>Monthly</th>
+                <th>YTD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">S&P 500</td>
+                <td class="idx-level">6,879</td>
+                <td class="chg-neg">−0.43%</td>
+                <td class="chg-neg">−1.8%</td>
+                <td class="chg-neg">−1.42%</td>
+                <td class="chg-pos">+15.5%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nasdaq 100</td>
+                <td class="idx-level">24,960</td>
+                <td class="chg-neg">−0.30%</td>
+                <td class="chg-neg">−3.2%</td>
+                <td class="chg-neg">−4.08%</td>
+                <td class="chg-pos">+14.8%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Dow Jones</td>
+                <td class="idx-level">48,978</td>
+                <td class="chg-neg">−1.05%</td>
+                <td class="chg-neg">−1.1%</td>
+                <td class="chg-neg">−0.08%</td>
+                <td class="chg-pos">+11.5%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nikkei 225</td>
+                <td class="idx-level">58,850</td>
+                <td class="chg-pos">+0.16%</td>
+                <td class="chg-pos">+3.3%</td>
+                <td class="chg-pos">+10.29%</td>
+                <td class="chg-pos">+58.4% YoY</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Topix</td>
+                <td class="idx-level">3,939</td>
+                <td class="chg-pos">+1.50%</td>
+                <td class="chg-pos">+4.1%</td>
+                <td class="chg-pos">+10.44%</td>
+                <td class="chg-pos">+14.8%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Hang Seng</td>
+                <td class="idx-level">26,631</td>
+                <td class="chg-pos">+0.95%</td>
+                <td class="chg-pos">+2.2%</td>
+                <td class="chg-neg">−4.30%</td>
+                <td class="chg-pos">+15.8%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">FTSE 100</td>
+                <td class="idx-level">10,911</td>
+                <td class="chg-pos">+0.59%</td>
+                <td class="chg-pos">+1.2%</td>
+                <td class="chg-pos">+7.45%</td>
+                <td class="chg-pos">+9.4%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">DAX</td>
+                <td class="idx-level">25,284</td>
+                <td class="chg-neg">−0.02%</td>
+                <td class="chg-pos">+0.5%</td>
+                <td class="chg-pos">+1.86%</td>
+                <td class="chg-pos">+12.1%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Shanghai</td>
+                <td class="idx-level">4,163</td>
+                <td class="chg-pos">+0.39%</td>
+                <td class="chg-pos">+0.8%</td>
+                <td class="chg-pos">+0.28%</td>
+                <td class="chg-pos">+8.2%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Sensex</td>
+                <td class="idx-level">81,287</td>
+                <td class="chg-neg">−1.17%</td>
+                <td class="chg-neg">−1.5%</td>
+                <td class="chg-neg">−1.28%</td>
+                <td class="chg-neg">−2.1%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem;"><strong>February scorecard:</strong> Japan dominated (+10.3% Nikkei, +10.4% Topix), FTSE surged +7.5%, while the US lagged (S&P −1.4%, Nasdaq −4.1%). <strong>Monday outlook:</strong> Iran strikes will dominate—expect significant gaps down across equities globally, with defense stocks (Raytheon, L3Harris, Mitsubishi Heavy, BAE Systems) as the primary beneficiaries. Oil-sensitive indices (Nikkei, Sensex) face the largest downside risk.</p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag">BONDS — FEB 27 CLOSE</span>
+          <h3 class="card-headline">Government Bond Yields</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Instrument</th>
+                <th>Yield</th>
+                <th>Daily Chg</th>
+                <th>Monthly</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">US 10-Year</td>
+                <td class="idx-level">3.952%</td>
+                <td class="chg-pos">+5.6 bps</td>
+                <td class="chg-neg">−0.29%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Japan 10-Year</td>
+                <td class="idx-level">2.112%</td>
+                <td class="chg-pos">+4.5 bps</td>
+                <td class="chg-neg">−0.13%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Germany 10-Year</td>
+                <td class="idx-level">2.653%</td>
+                <td class="chg-pos">+4.6 bps</td>
+                <td class="chg-neg">−0.20%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">UK 10-Year</td>
+                <td class="idx-level">4.234%</td>
+                <td class="chg-pos">+4.3 bps</td>
+                <td class="chg-neg">−0.32%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Canada 10-Year</td>
+                <td class="idx-level">3.128%</td>
+                <td class="chg-pos">+4.7 bps</td>
+                <td class="chg-neg">−0.30%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Monday flight-to-safety:</strong> Expect a massive bid for Treasuries and JGBs when trading opens. The 10-year yield could plunge below 3.8% as investors flee equities into sovereign bonds. <strong>Why:</strong> Geopolitical shocks historically drive 20-50 bps moves in safe-haven bonds in the first session—the Iran strikes represent the most significant geopolitical event since Russia's invasion of Ukraine.</p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag">COMMODITIES — FEB 27 CLOSE (PRE-IRAN STRIKES)</span>
+          <h3 class="card-headline">Key Commodities</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Commodity</th>
+                <th>Price</th>
+                <th>Daily</th>
+                <th>Monthly</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">Gold</td>
+                <td class="idx-level">$5,278/oz</td>
+                <td class="chg-pos">+1.80%</td>
+                <td class="chg-neg">−2.62%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Silver</td>
+                <td class="idx-level">$93.82/oz</td>
+                <td class="chg-pos">+6.28%</td>
+                <td class="chg-neg">−19.52%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">WTI Crude</td>
+                <td class="idx-level">$67.02/bbl</td>
+                <td class="chg-pos">+2.78%</td>
+                <td class="chg-pos">+6.03%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Brent Crude</td>
+                <td class="idx-level">$72.87/bbl</td>
+                <td class="chg-pos">+2.87%</td>
+                <td class="chg-pos">+8.16%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Natural Gas</td>
+                <td class="idx-level">$2.86/MMBtu</td>
+                <td class="chg-pos">+1.13%</td>
+                <td class="chg-neg">−23.39%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Copper</td>
+                <td class="idx-level">$6.00/lbs</td>
+                <td class="chg-pos">+0.97%</td>
+                <td class="chg-pos">+1.34%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Platinum</td>
+                <td class="idx-level">$2,374/oz</td>
+                <td class="chg-pos">+5.98%</td>
+                <td class="chg-neg">−9.74%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Wheat</td>
+                <td class="idx-level">593¢/Bu</td>
+                <td class="chg-pos">+3.76%</td>
+                <td class="chg-pos">+10.68%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem;"><strong>⚠️ These are PRE-STRIKE prices.</strong> Friday's late surge in oil (+2.8% WTI, +2.9% Brent), gold (+1.8%), silver (+6.3%), and platinum (+6.0%) suggests markets were already pricing in military action risk. <strong>Monday projections:</strong> Oil could spike 10-20% (Brent $80-$87 range) on Hormuz disruption fears. Gold likely breaks $5,500 on safe-haven demand. Wheat +10.68% monthly already reflects Black Sea conflict supply fears—Middle East escalation adds more upward pressure on food commodities.</p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag">CRYPTO — LIVE MAR 1</span>
+          <h3 class="card-headline">Digital Assets (24/7 Trading)</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>Price</th>
+                <th>Daily</th>
+                <th>Monthly</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">Bitcoin</td>
+                <td class="idx-level">$67,321</td>
+                <td class="chg-pos">+0.51%</td>
+                <td class="chg-neg">−14.45%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Ethereum</td>
+                <td class="idx-level">$2,011</td>
+                <td class="chg-pos">+2.34%</td>
+                <td class="chg-neg">−14.20%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Solana</td>
+                <td class="idx-level">$87.30</td>
+                <td class="chg-pos">+3.51%</td>
+                <td class="chg-neg">−16.40%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">XRP</td>
+                <td class="idx-level">$1.41</td>
+                <td class="chg-pos">+2.35%</td>
+                <td class="chg-neg">−12.97%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">BNB</td>
+                <td class="idx-level">$630</td>
+                <td class="chg-pos">+2.11%</td>
+                <td class="chg-neg">−18.85%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Crypto's muted reaction is the story.</strong> Despite the biggest geopolitical event in years, Bitcoin is up just 0.5% and hasn't spiked as a "digital gold" safe haven. <strong>Why:</strong> Crypto remains correlated with risk assets rather than acting as a hedge—institutional investors prefer actual gold ($5,278 and rising) for geopolitical hedging. February was brutal for crypto: BTC −14.5%, ETH −14.2%, SOL −16.4%. The "Crypto President" narrative has completely failed to support prices as macro fears dominate.</p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag">FOREX — FEB 27 CLOSE</span>
+          <h3 class="card-headline">Major Currency Pairs</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Pair</th>
+                <th>Rate</th>
+                <th>Daily</th>
+                <th>Monthly</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">USD/JPY</td>
+                <td class="idx-level">156.06</td>
+                <td class="chg-neg">−0.04%</td>
+                <td class="chg-pos">+1.73%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">EUR/USD</td>
+                <td class="idx-level">1.1812</td>
+                <td class="chg-pos">+0.12%</td>
+                <td class="chg-neg">−1.19%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">GBP/USD</td>
+                <td class="idx-level">1.3483</td>
+                <td class="chg-pos">+0.01%</td>
+                <td class="chg-neg">−2.36%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">USD/CNY</td>
+                <td class="idx-level">6.8634</td>
+                <td class="chg-pos">+0.28%</td>
+                <td class="chg-neg">−1.16%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">DXY Index</td>
+                <td class="idx-level">97.61</td>
+                <td class="chg-neg">−0.09%</td>
+                <td class="chg-pos">+1.20%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Monday FX outlook:</strong> Expect a massive flight to USD and JPY as safe havens. USD/JPY is the wild card—normally both currencies strengthen in risk-off, but the yen's oil import vulnerability may offset its haven status. <strong>Why JPY at 156:</strong> Takaichi's dovish BOJ appointments and fiscal expansion keep the yen weak structurally, but a geopolitical shock of this magnitude could trigger MOF intervention if USD/JPY spikes above 160 on oil fears. Watch the DXY for a potential surge above 100 on pure flight-to-safety flows.</p>
+        </article>
+
+        <!-- Health Gauge -->
+        <article class="card fade-in">
+          <span class="card-tag">HEALTH SCORE</span>
+          <h3 class="card-headline">Global Market Health</h3>
+          <div class="health-gauge-wrap">
+            <div class="health-gauge">
+              <div class="gauge-bg"></div>
+              <div class="gauge-needle" id="gauge-needle" style="transform: rotate(-36deg);"></div>
+              <div class="gauge-dot"></div>
+            </div>
+            <div class="gauge-scale"><span>0</span><span>100</span></div>
+            <div class="gauge-score">30</div>
+            <div class="gauge-score-label">HIGH RISK</div>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">⚠️</div>
+              <div class="indicator-name">VIX</div>
+              <div class="indicator-sub">19.9 → expect 28+ Mon</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">↑</div>
+              <div class="indicator-name">Oil Shock Risk</div>
+              <div class="indicator-sub">CRITICAL — Hormuz</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">⚠️</div>
+              <div class="indicator-name">Geopolitical</div>
+              <div class="indicator-sub">EXTREME</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">↓</div>
+              <div class="indicator-name">Sentiment</div>
+              <div class="indicator-sub">Panic imminent</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value chg-pos">↑</div>
+              <div class="indicator-name">Safe Havens</div>
+              <div class="indicator-sub">Gold/Bonds bid</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">↓</div>
+              <div class="indicator-name">Liquidity</div>
+              <div class="indicator-sub">Weekend thin</div>
+            </div>
+          </div>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Score crashes to 30 from 55.</strong> <strong>Why:</strong> The US-Israel strikes on Iran represent the most significant geopolitical shock to markets since Russia's 2022 invasion of Ukraine. Key risk factors: (1) Strait of Hormuz disruption could remove 20% of global oil supply; (2) Iranian retaliation across Gulf states threatens regional stability; (3) Stagflation fears (already elevated from hot PPI) are now compounded by oil shock inflation; (4) Multiple simultaneous conflict theaters (Iran, Pakistan-Afghanistan, Russia-Ukraine). <strong>Counterbalance:</strong> Record corporate buybacks provide a floor, and central banks (including BOJ) will likely signal accommodation to prevent a financial crisis. But this is a genuinely dangerous moment for markets.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 🔮 Predictions -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <div class="section-icon">🔮</div>
+        <h2 class="section-title">Predictions</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag">TOMORROW — CRITICAL</span>
+          <h3 class="card-headline">Monday March 2 Will Be the Most Important Trading Day of 2026</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body">
+            <strong>Oil:</strong> Brent crude likely opens $78-$87 range (7-20% spike) depending on overnight Hormuz developments. If Iran makes any move to block the strait, oil could breach $100. If the US signals operations are limited/concluding, expect a more muted 5-8% spike.<br><br>
+            <strong>Equities:</strong> S&P futures likely gap down 2-4% at open. Nikkei faces the steepest drop risk (3-5%) given Japan's oil import dependency. Defense stocks (RTX, LMT, Mitsubishi Heavy, BAE) will surge 5-10%. Energy stocks benefit from oil spike.<br><br>
+            <strong>Safe Havens:</strong> Gold likely breaks $5,500. US 10-year yield drops to 3.7-3.8% range. VIX spikes to 28-35 range. JPY and CHF strengthen on risk-off flows.<br><br>
+            <strong>Crypto:</strong> Watch if Bitcoin can finally decouple from equities and act as a safe haven. Current muted reaction (+0.5%) suggests it won't—gold remains the preferred hedge.<br><br>
+            <strong>Central Banks:</strong> Watch for emergency statements from BOJ, ECB, Fed. If markets drop >5%, expect coordinated central bank language about "providing liquidity" and "monitoring conditions."
+          </p>
+        </article>
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag">WEEK AHEAD — DOMINATED BY IRAN</span>
+          <h3 class="card-headline">Key Events — Mar 2 - Mar 6</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body">
+            <strong>Mon Mar 2:</strong> Markets reopen into Iran crisis. China Manufacturing PMI (may be overshadowed). US ISM Manufacturing. Purim in Israel—symbolic timing of strikes. Oil and defense stocks in focus.<br><br>
+            <strong>Tue Mar 3:</strong> BOJ Summary of Opinions (pre-Iran, but markets will read for dovish/hawkish tilt). Iran diplomatic developments critical—will there be a ceasefire or escalation?<br><br>
+            <strong>Wed Mar 4:</strong> China NPC session opens—household consumption targets, military budget (likely increased given Iran context). US ADP Employment. Fed Beige Book.<br><br>
+            <strong>Thu Mar 5:</strong> G7 emergency coordination likely. US Initial Jobless Claims. Strait of Hormuz status updates hourly.<br><br>
+            <strong>Fri Mar 6:</strong> US Non-Farm Payrolls—normally the week's main event but may be overshadowed by Iran. Strong jobs = fewer rate cuts but markets may not care amid geopolitical chaos.<br><br>
+            <strong>Wildcard:</strong> Iranian regime collapse scenario. If Khamenei is confirmed dead and internal celebrations continue, the IRGC may splinter—creating either an opportunity for regime change or a dangerous power vacuum. This would be the most significant Middle East event since the 1979 revolution.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 💡 Bottom Line -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line">
+        <h3>💡 Bottom Line</h3>
+        <p>The world changed overnight. The US-Israel strikes on Iran—Operation "Epic Fury"—represent the most significant military action in the Middle East since the 2003 Iraq invasion, and the market implications are enormous. <strong>Three immediate concerns:</strong> First, <strong>oil supply disruption is the primary risk</strong>—20% of global crude transits the Strait of Hormuz, and any Iranian naval response could trigger the worst energy crisis since 1973. Japan is uniquely vulnerable, with 90% of its crude imports passing through the strait. Second, <strong>stagflation just became the base case</strong>—Friday's hot PPI data already had markets worried about inflation, and an oil shock layered on top transforms "risk" into "reality." Third, <strong>multiple simultaneous conflicts</strong> (Iran, Pakistan-Afghanistan, Russia-Ukraine, US-China trade) create compounding uncertainty that markets cannot easily price. <strong>For Japan specifically:</strong> The Nikkei's stellar February (+10.3%) is at risk of a sharp Monday correction. Energy-dependent exporters and airlines face the most pressure, while defense stocks (Mitsubishi Heavy, Kawasaki Heavy, IHI) will benefit. The BOJ will almost certainly delay any hawkish signals, giving the Takaichi government cover for extended accommodation. <strong>What to do:</strong> Monday will be the most volatile trading day of 2026. Watch the Strait of Hormuz, watch oil futures in Sunday Middle East trading, and watch for central bank emergency statements. Gold above $5,500, Brent above $80, and VIX above 25 are the likely new realities. This crisis has weeks to play out—not days.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CEO Morning Briefing · Generated by Sanbot · Monday, March 2, 2026 7:00 AM JST</p>
+    <p style="margin-top: 0.5rem;">Data sources: Reuters, BBC, Al Jazeera, Trading Economics, Perplexity, CNBC, Nikkei Asia</p>
+  </footer>
+
+  <script>
+    // Collapsible cards
+    document.querySelectorAll('.collapsible').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+      });
+    });
+
+    // Gauge animation
+    const needle = document.getElementById('gauge-needle');
+    if (needle) {
+      const score = 30;
+      const rotation = -90 + (score / 100) * 180;
+      setTimeout(() => {
+        needle.style.transform = `rotate(${rotation}deg)`;
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>

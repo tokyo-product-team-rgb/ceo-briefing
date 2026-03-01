@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Daily Briefing — Feb 12, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --text-primary: #111111;
+      --text-secondary: #44403C;
+      --text-tertiary: #78716C;
+      --text-link: #1D736C;
+      --text-link-hover: #2A8F87;
+      --text-error: #C5624E;
+      
+      --bg-primary: #F9F9F9;
+      --bg-secondary: #FDFDFD;
+      --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3;
+      --bg-hover-darker: #ECEAE7;
+      --bg-white: #FFFFFF;
+      --bg-accent: #2A8F87;
+      --bg-accent-dark: #1D736C;
+      
+      --line-subtle: #E8E5E1;
+      --line-default: #D5D2CD;
+      --line-neutral: rgba(0,0,0,0.06);
+      
+      --chart-primary: #2A8F87;
+      --chart-secondary: #E07A3F;
+      --chart-tertiary: #E3B341;
+      --chart-reference: #4C78A8;
+      --chart-outlier: #C06C84;
+      --chart-warning: #B94A48;
+      
+      --highlight-emphasis: #F4E3B1;
+      --highlight-info: #E3EBF5;
+      --highlight-warning: #F6E3E1;
+      --highlight-brand: #E5FBF8;
+      
+      --bg: var(--bg-primary);
+      --surface: var(--bg-white);
+      --text: var(--text-primary);
+      --border: var(--line-subtle);
+      
+      --serif: 'Copernicus Trial', Georgia, serif;
+      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      
+      --radius: 24px;
+      
+      --green: #2A8F87;
+      --red: #B94A48;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .masthead {
+      background: transparent;
+      border-bottom: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: none;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .nav-bar a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      transition: all 0.2s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-bar a:hover {
+      color: var(--text-primary);
+      background: var(--bg-hover);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 2rem 2rem 1.5rem;
+      margin-bottom: 1.75rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header .icon {
+      font-size: 1.5rem;
+    }
+
+    .section-header h2 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .news-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line-neutral);
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-item h3 {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .news-item p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .news-item .source {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      margin-top: 0.5rem;
+    }
+
+    .news-item .source a {
+      color: var(--text-link);
+      text-decoration: none;
+    }
+
+    .news-item .source a:hover {
+      text-decoration: underline;
+    }
+
+    .continent-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .continent-section h3 {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .market-card {
+      background: var(--bg-tertiary);
+      border-radius: 16px;
+      padding: 1.25rem;
+      border: 1px solid var(--border);
+    }
+
+    .market-card .label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .market-card .value {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .market-card .change {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .market-card .change.up { color: var(--green); }
+    .market-card .change.down { color: var(--red); }
+
+    .market-card .details {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: var(--highlight-brand);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin: 1rem 0;
+      border-left: 4px solid var(--bg-accent);
+    }
+
+    .highlight-box.warning {
+      background: var(--highlight-warning);
+      border-left-color: var(--chart-warning);
+    }
+
+    .highlight-box.info {
+      background: var(--highlight-info);
+      border-left-color: var(--chart-reference);
+    }
+
+    .highlight-box p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .predictions-list {
+      list-style: none;
+    }
+
+    .predictions-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--line-neutral);
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .predictions-list li:last-child {
+      border-bottom: none;
+    }
+
+    .predictions-list li strong {
+      color: var(--text-primary);
+    }
+
+    .bottom-line {
+      background: linear-gradient(135deg, var(--bg-accent) 0%, var(--bg-accent-dark) 100%);
+      color: white;
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .bottom-line h2 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .bottom-line p {
+      font-size: 1rem;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+
+    .health-score {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-tertiary);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .health-score.bullish { color: var(--green); }
+    .health-score.bearish { color: var(--red); }
+    .health-score.neutral { color: var(--text-tertiary); }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+    }
+
+    @media (max-width: 600px) {
+      .section { padding: 1.5rem 1.25rem; }
+      .market-grid { grid-template-columns: 1fr; }
+      .nav-bar { flex-wrap: wrap; }
+      .nav-bar a { padding: 0.6rem 0.8rem; font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="overline">EXECUTIVE INTELLIGENCE</div>
+      <h1>CEO Daily Briefing</h1>
+      <div class="edition-date">Thursday, February 12, 2026</div>
+      <div class="edition-sub">Afternoon Edition • 3:00 PM JST</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <a href="#japan">Japan</a>
+    <a href="#global">Global</a>
+    <a href="#markets">Markets</a>
+    <a href="#predictions">Outlook</a>
+  </nav>
+
+  <main>
+    <!-- JAPAN SECTION -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <span class="icon">🇯🇵</span>
+        <h2>Japan Update</h2>
+      </div>
+
+      <div class="highlight-box">
+        <p><strong>📈 NIKKEI BREACHES 58,000:</strong> Markets roared back from the holiday with the Nikkei touching 58,030 intraday—a fresh all-time high—as investors continued buying into the Takaichi rally. Broader Topix also hit new records. The surge was driven by continued election optimism, strong US tech performance during the break, and foreign investor FOMO as Japan becomes the consensus "overweight" trade.</p>
+      </div>
+
+      <div class="news-item">
+        <h3>Furukawa Electric Soars 22.9%—Leads Nikkei Gainers</h3>
+        <p>Cable and electronics maker Furukawa Electric exploded 22.9% higher—the Nikkei's top gainer—after posting blowout earnings that crushed analyst expectations. The surge reflects broader investor enthusiasm for Japan's infrastructure and connectivity plays, as the Takaichi government signals major defense and digital infrastructure spending. Industrial stocks outperformed across the board.</p>
+        <div class="source">Source: <a href="https://tradingeconomics.com/japan/stock-market" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="news-item">
+        <h3>NEC Jumps 7.3% on Share Buyback Announcement</h3>
+        <p>IT giant NEC surged 7.3% after announcing a significant share buyback program, signaling management confidence in future growth prospects. The move comes as Japanese corporates increasingly return cash to shareholders—a structural shift that's attracting foreign investors who long criticized Japan Inc's cash hoarding. Other tech winners: Fujikura +8%, SoftBank Group +6.9%, Tokyo Electron +2.7%.</p>
+        <div class="source">Source: <a href="https://tradingeconomics.com/japan/stock-market" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="news-item">
+        <h3>Taiwan's Lai Issues Stark Warning: Japan "Next" If Taiwan Falls</h3>
+        <p>Taiwan President Lai Ching-te warned that Japan and the Philippines would be China's "next targets" if Beijing seizes Taiwan, calling for a $40 billion defense budget increase including US weapons purchases. The warning came in Lai's first global interview since May 2024, and is clearly aimed at rallying support from Takaichi's newly defense-hawkish Japan. Lai cited China's recent military purges as "unusual" but not reducing the threat—effectively urging Japan to accelerate its defense buildup.</p>
+        <div class="source">Source: <a href="https://www.japantimes.co.jp" target="_blank">Japan Times</a></div>
+      </div>
+
+      <div class="news-item">
+        <h3>Yen Stabilizes Around ¥154 After Holiday Swings</h3>
+        <p>USD/JPY settled near ¥154.26 as trading resumed, after swinging between ¥152.82 and ¥157.71 during the holiday period on thin liquidity. The yen's volatility reflects conflicting forces: weak US retail data increased Fed cut expectations (yen positive), but Japan's stock rally attracts foreign capital that often stays unhedged (yen negative). BOJ watchers are focused on whether the central bank will use the strong equity backdrop to accelerate normalization.</p>
+        <div class="source">Source: <a href="https://www.investing.com" target="_blank">Investing.com</a>, <a href="https://wise.com" target="_blank">Wise</a></div>
+      </div>
+
+      <div class="news-item">
+        <h3>Takaichi-Xi Axis Takes Shape: Trump May Extend China Tariff Truce</h3>
+        <p>Reports emerged that President Trump may extend the US-China tariff truce—agreed in November 2025 after a Busan summit—for another year at an April Beijing meeting. This is the backdrop for Japan's own China calculus: Takaichi must balance her nationalist base's hawkish preferences against the reality that a US-China détente could leave Japan exposed if it positions too aggressively on Taiwan. The Asia trade is up 13% YTD on de-escalation hopes.</p>
+        <div class="source">Source: <a href="https://www.cnbctv18.com" target="_blank">CNBC TV18</a>, <a href="https://asiatimes.com" target="_blank">Asia Times</a></div>
+      </div>
+
+      <div class="news-item">
+        <h3>China's Zhipu Unveils AI Model, Intensifying DeepSeek Competition</h3>
+        <p>Chinese AI startup Zhipu unveiled a new large language model, escalating the domestic AI race that's rattling global tech valuations. The release matters for Japan because it demonstrates China's AI self-sufficiency efforts are progressing despite US export controls—potentially reducing Beijing's need for Japanese semiconductor equipment over time. Tokyo Electron and other chip equipment makers remain exposed to any further restrictions.</p>
+        <div class="source">Source: <a href="https://www.youtube.com/watch?v=Dur44xOtPiQ" target="_blank">Asia Trade</a></div>
+      </div>
+    </section>
+
+    <!-- GLOBAL SECTION -->
+    <section class="section" id="global">
+      <div class="section-header">
+        <span class="icon">🌍</span>
+        <h2>Global by Continent</h2>
+      </div>
+
+      <!-- NORTH AMERICA -->
+      <div class="continent-section">
+        <h3>🌎 North America</h3>
+        
+        <div class="news-item">
+          <h3>House Democrats Force Vote on Trump Tariffs After GOP Defections</h3>
+          <p>Four Republican representatives broke party lines to enable Democrats to force a vote challenging President Trump's proposed tariffs—a rare bipartisan rebuke that signals growing GOP concern about trade policy's economic impact. The defections came because moderate Republicans in manufacturing districts fear tariff-driven price increases will hurt their constituents ahead of midterms. The vote is symbolic but reveals cracks in Trump's trade coalition.</p>
+          <div class="source">Source: <a href="https://www.youtube.com/watch?v=Dur44xOtPiQ" target="_blank">Asia Trade</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>Democrats Accuse AG Bondi of Epstein File "Cover-Up"</h3>
+          <p>Congressional Democrats accused Attorney General Pam Bondi of lying about Epstein documents during heated testimony, demanding apologies to survivors. The escalation follows revelations that Dubai Ports World CEO Sultan Ahmed bin Sulayem received disturbing communications from Epstein—triggering British International Investment to suspend DP World ties. The Epstein fallout continues to claim corporate casualties as more documents emerge.</p>
+          <div class="source">Source: <a href="https://globalnation.inquirer.net" target="_blank">Inquirer</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>FAA Closes El Paso Airspace for 10 Days Over Cartel Drone Threats</h3>
+          <p>The FAA halted all flights to El Paso until February 20, citing "special security reasons" linked to Mexican cartel surveillance drones near the border. The unprecedented closure for a major airport reflects escalating cartel sophistication—they're now using commercial drones to monitor law enforcement movements and potentially threaten aircraft. DHS declined to comment on specific threats.</p>
+          <div class="source">Source: <a href="https://www.theguardian.com" target="_blank">Guardian</a></div>
+        </div>
+      </div>
+
+      <!-- EUROPE -->
+      <div class="continent-section">
+        <h3>🇪🇺 Europe</h3>
+        
+        <div class="news-item">
+          <h3>UK MPs Debate State Pension Increases Amid Fiscal Pressure</h3>
+          <p>British MPs debated annual pension and social security increases alongside police funding (up 4.2% nominally, 2.0% real), as the Labour government struggles to balance inflation-driven benefit costs against fiscal constraints. The debate reflects Britain's post-Brexit economic squeeze: higher inflation, slower growth, and competing demands for limited resources. Watch for benefit indexation fights to intensify.</p>
+          <div class="source">Source: <a href="https://www.hansardsociety.org.uk" target="_blank">Hansard Society</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>UK "Earned Settlement" Immigration Consultation Closes</h3>
+          <p>The consultation period for Britain's proposed "earned settlement" pathway to permanent residency closed today, marking a major shift toward contribution-based migration policy. The reform ties long-term residency to economic contributions—part of broader efforts to control migration levels after years of rising inflows strained public services. ETA enforcement begins February 25.</p>
+          <div class="source">Source: <a href="https://www.youtube.com/watch?v=c81lQnsITtw" target="_blank">UK Immigration News</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>Starmer Calls Ratcliffe Comments "Offensive" Amid Political Row</h3>
+          <p>PM Keir Starmer condemned Manchester United owner Sir Jim Ratcliffe's criticism of Britain's political and economic management as "offensive and wrong." Ratcliffe had highlighted unprecedented immigration rises and growth stagnation—touching a nerve because Labour inherited these problems but has struggled to show improvement. The public spat reflects business frustration with policy uncertainty.</p>
+          <div class="source">Source: <a href="https://news.sky.com" target="_blank">Sky News</a></div>
+        </div>
+      </div>
+
+      <!-- ASIA EX-JAPAN -->
+      <div class="continent-section">
+        <h3>🌏 Asia ex-Japan</h3>
+        
+        <div class="news-item">
+          <h3>Trump's China Policy Pivot: "Strategic Ambiguity" Returns</h3>
+          <p>Analysis shows Trump's foreign policy has shifted toward "moderation" vis-à-vis China, reverting to "strategic ambiguity" on Taiwan by omitting it from the January 2026 National Defense Strategy. The pivot from Biden-era "strategic clarity" acknowledges China's military buildup (including hypersonic missiles revealed in September 2025) while prioritizing business interests like TikTok and Nvidia chip sales over confrontation.</p>
+          <div class="source">Source: <a href="https://asiatimes.com" target="_blank">Asia Times</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>Beijing Refutes US Nuclear Test Accusations</h3>
+          <p>China strongly denied US accusations of conducting nuclear tests (including one allegedly in 2020), calling them "fabrications to justify US nuclear hegemony." The denial came as Trump threatened Iran with carrier strikes if nuclear talks fail—Beijing sees the accusations as part of US efforts to maintain global nuclear dominance while restricting others' programs. China reaffirmed its self-defense nuclear policy.</p>
+          <div class="source">Source: <a href="https://asianews.network" target="_blank">Asia News Network</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>Indian Markets Open Lower on Global Caution</h3>
+          <p>The Sensex fell 227 points (-0.27%) to 84,007 while Nifty slipped 0.18% to 25,907 as Indian markets tracked cautious global sentiment ahead of US CPI data. Indian IT firms (Infosys, TCS, Wipro) face continued scrutiny as global AI investment concerns persist—the fear being that AI automation reduces demand for Indian IT outsourcing over time.</p>
+          <div class="source">Source: <a href="https://www.etnownews.com" target="_blank">ET Now</a>, <a href="https://dhan.co" target="_blank">Dhan</a></div>
+        </div>
+      </div>
+
+      <!-- MIDDLE EAST & AFRICA -->
+      <div class="continent-section">
+        <h3>🌍 Middle East & Africa</h3>
+        
+        <div class="news-item">
+          <h3>Trump Threatens Iran with Carrier Strike If Nuclear Talks Fail</h3>
+          <p>President Trump warned Iran he would authorize aircraft carrier strikes if nuclear negotiations collapse—echoing aggressive tactics used during the 12-day US-Iran conflict in June 2025. The threat came as talks in Oman stall over what Tehran calls "excessive US conditions." Iran's president and protesters alike have rejected US demands, creating a dangerous escalation spiral.</p>
+          <div class="source">Source: <a href="https://www.youtube.com/watch?v=PYd22Wss_N8" target="_blank">Geo News</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>Sudan Crisis Worsens: 30 Million Need Aid, UAE Accused of Funding Paramilitaries</h3>
+          <p>The UN reports 30 million Sudanese now need humanitarian aid as the civil conflict escalates. Reports allege the UAE is funding Rapid Support Forces via Ethiopia training—a charge Abu Dhabi denies. The crisis has become a proxy battleground with regional powers backing different factions, while the civilian population suffers catastrophic displacement and famine conditions.</p>
+          <div class="source">Source: <a href="https://www.aljazeera.com" target="_blank">Al Jazeera</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>Saudi Arabia Signs $1B Aviation and Telecom Deals with Syria</h3>
+          <p>Riyadh signed $1 billion in aviation, airport, and telecom agreements with Damascus—enabled by recent US sanction lifts on Syria. The deals signal normalized Saudi-Syrian relations and Gulf states' effort to reintegrate Assad's regime as a counterweight to Iranian influence. Western critics warn the move legitimizes Assad without meaningful political reform.</p>
+          <div class="source">Source: <a href="https://en.wikipedia.org/wiki/Portal:Current_events" target="_blank">Wikipedia Current Events</a></div>
+        </div>
+      </div>
+
+      <!-- LATIN AMERICA -->
+      <div class="continent-section">
+        <h3>🌎 Latin America</h3>
+        
+        <div class="news-item">
+          <h3>Panama Supreme Court Voids Chinese Port Contract—US Pressure Wins</h3>
+          <p>Panama's supreme court invalidated a contract allowing a Chinese subsidiary (Panama Ports Company, under Hong Kong's CK Hutchison) to operate two key Panama Canal ports, ruling the enabling laws unconstitutional. The decision followed Trump's threats to "reclaim" canal control and reflects Panama's February 2025 exit from China's Belt and Road Initiative after Rubio's visit. Beijing's Latin America influence is retreating under sustained US pressure.</p>
+          <div class="source">Source: <a href="https://asiatimes.com" target="_blank">Asia Times</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>Mexico Sends Navy Aid to Cuba as Crisis Deepens</h3>
+          <p>Mexico dispatched navy vessels carrying 800 tonnes of humanitarian aid to Cuba, responding to critical shortages that Havana blames on the US blockade. Airlines are also sending empty flights to rescue stranded travelers. The gesture reflects Mexico's traditional solidarity with Cuba and AMLO-successor Sheinbaum's effort to maintain Latin American leftist ties despite US pressure.</p>
+          <div class="source">Source: <a href="https://en.wikipedia.org/wiki/Portal:Current_events" target="_blank">Wikipedia Current Events</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>Patagonia Wildfires Kill 21, Threaten Ancient Forests</h3>
+          <p>Catastrophic wildfires in Argentina's Patagonia have killed 21 people after spreading to Chile's Concepción region, destroying hundreds of homes. The fires threaten UNESCO-protected ancient araucaria forests (trees over 3,000 years old). A lightning strike ignited the initial blaze, but record heat (6°C above normal), 70 km/h winds, and drought since 2008 made it uncontrollable. Researchers say climate change made these fires three times more likely.</p>
+          <div class="source">Source: <a href="https://kathmandupost.com" target="_blank">Kathmandu Post</a></div>
+        </div>
+      </div>
+
+      <!-- OCEANIA -->
+      <div class="continent-section">
+        <h3>🌏 Oceania</h3>
+        
+        <div class="news-item">
+          <h3>Australia Suffers Worst Fire Season Since 2019-2020</h3>
+          <p>Southeastern Australia is experiencing its most severe fire season since the deadly 2019-2020 Black Summer that killed 33 people. A January heat dome pushed temperatures near 50°C (122°F), and climate change is making fires more intense and harder to extinguish. Tourist areas including Mossel Bay and Franschhoek have suffered significant damage.</p>
+          <div class="source">Source: <a href="https://kathmandupost.com" target="_blank">Kathmandu Post</a></div>
+        </div>
+
+        <div class="news-item">
+          <h3>South Africa Fires Ravage Tourist Destinations</h3>
+          <p>South Africa is enduring its worst wildfires in a decade during the 2025-2026 season, killing wildlife and damaging famous tourist destinations. Like Australia, the fires are intensified by record Southern Hemisphere heat and prolonged drought—part of a global pattern of climate-driven fire season intensification affecting previously "safe" regions.</p>
+          <div class="source">Source: <a href="https://kathmandupost.com" target="_blank">Kathmandu Post</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETS SECTION -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <span class="icon">📊</span>
+        <h2>Markets & Economy</h2>
+      </div>
+
+      <div class="highlight-box info">
+        <p><strong>Market Theme:</strong> Japan hits fresh ATH at 58,030. US markets flat overnight—S&P stuck at 7,000 resistance. Asian markets broadly higher on US-China truce extension hopes. Crypto stabilizing after recent selloff. Dollar weakening supports gold.</p>
+      </div>
+
+      <h3 style="font-size: 0.9rem; color: var(--text-tertiary); margin: 1.5rem 0 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Equities</h3>
+      <div class="market-grid">
+        <div class="market-card">
+          <div class="label">Nikkei 225</div>
+          <div class="value">57,880</div>
+          <div class="change up">▲ +0.40% (ATH touch 58,030)</div>
+          <div class="details">Week: +8.10% | Month: +8.10%<br>YTD: +48.55% | New records</div>
+        </div>
+        <div class="market-card">
+          <div class="label">S&P 500</div>
+          <div class="value">6,941</div>
+          <div class="change neutral">— 0.00%</div>
+          <div class="details">Week: -0.36% | Month: -0.36%<br>YTD: +14.67% | 7K resistance</div>
+        </div>
+        <div class="market-card">
+          <div class="label">Dow Jones</div>
+          <div class="value">50,121</div>
+          <div class="change down">▼ -0.13%</div>
+          <div class="details">Week: +0.10% | Month: +0.10%<br>YTD: +4.28% | Above 50K</div>
+        </div>
+        <div class="market-card">
+          <div class="label">Nasdaq</div>
+          <div class="value">23,066</div>
+          <div class="change down">▼ -0.16%</div>
+          <div class="details">Week: -0.50% | Month: -0.50%<br>YTD: -0.76% | Tech cautious</div>
+        </div>
+        <div class="market-card">
+          <div class="label">Sensex (India)</div>
+          <div class="value">84,007</div>
+          <div class="change down">▼ -0.27%</div>
+          <div class="details">Nifty: 25,907 (-0.18%)<br>IT sector under pressure</div>
+        </div>
+        <div class="market-card">
+          <div class="label">Shanghai Comp</div>
+          <div class="value">4,137</div>
+          <div class="change up">▲ +0.12%</div>
+          <div class="details">China rally on trade hopes<br>MSCI Asia +13% YTD</div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 0.9rem; color: var(--text-tertiary); margin: 1.5rem 0 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Currencies</h3>
+      <div class="market-grid">
+        <div class="market-card">
+          <div class="label">USD/JPY</div>
+          <div class="value">¥154.26</div>
+          <div class="change down">▼ -1.00% (from ¥155.82)</div>
+          <div class="details">Week range: 152.82-157.71<br>Yen volatility elevated</div>
+        </div>
+        <div class="market-card">
+          <div class="label">EUR/USD</div>
+          <div class="value">$1.1873</div>
+          <div class="change up">▲ +0.04%</div>
+          <div class="details">Month: +2.00% | YTD: +1.36%<br>Dollar weakness persists</div>
+        </div>
+        <div class="market-card">
+          <div class="label">DXY Index</div>
+          <div class="value">96.70</div>
+          <div class="change down">▼ -0.10%</div>
+          <div class="details">Week: -0.95% | Month: -2.20%<br>YTD: -1.65% | Weak</div>
+        </div>
+        <div class="market-card">
+          <div class="label">USD/CNY</div>
+          <div class="value">6.91</div>
+          <div class="change down">▼ -0.02%</div>
+          <div class="details">Month: -0.85% | YTD: -0.96%<br>Yuan strong on trade optimism</div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 0.9rem; color: var(--text-tertiary); margin: 1.5rem 0 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Commodities</h3>
+      <div class="market-grid">
+        <div class="market-card">
+          <div class="label">Gold</div>
+          <div class="value">$5,095</div>
+          <div class="change up">▲ +0.26%</div>
+          <div class="details">Week: +2.60% | Month: +10.75%<br>YTD: +18.00% | YoY: <strong>+75%</strong></div>
+        </div>
+        <div class="market-card">
+          <div class="label">Silver</div>
+          <div class="value">$86.50</div>
+          <div class="change up">▲ +0.88%</div>
+          <div class="details">Week: -1.90% | Month: +1.55%<br>YTD: +21.20% | YoY: <strong>+166%</strong></div>
+        </div>
+        <div class="market-card">
+          <div class="label">WTI Crude</div>
+          <div class="value">$66.10</div>
+          <div class="change up">▲ +0.99%</div>
+          <div class="details">Week: +1.45% | Month: +11.10%<br>YTD: +15.00% | Iran premium</div>
+        </div>
+        <div class="market-card">
+          <div class="label">Brent Crude</div>
+          <div class="value">$70.90</div>
+          <div class="change up">▲ +0.88%</div>
+          <div class="details">Week: +2.05% | Month: +11.00%<br>YTD: +16.50% | Geopolitics</div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 0.9rem; color: var(--text-tertiary); margin: 1.5rem 0 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Crypto</h3>
+      <div class="market-grid">
+        <div class="market-card">
+          <div class="label">Bitcoin</div>
+          <div class="value">$67,568</div>
+          <div class="change down">▼ -3.30%</div>
+          <div class="details">24h range: $65,793-$68,750<br>YTD: -22.80% | Stabilizing</div>
+        </div>
+        <div class="market-card">
+          <div class="label">Ethereum</div>
+          <div class="value">$1,920</div>
+          <div class="change down">▼ -3.50%</div>
+          <div class="details">Week: -9.50% | Month: -37.50%<br>YTD: -35.30% | Under pressure</div>
+        </div>
+        <div class="market-card">
+          <div class="label">Solana</div>
+          <div class="value">$79.50</div>
+          <div class="change down">▼ -2.80%</div>
+          <div class="details">Week: -12.50% | Month: -42.50%<br>YTD: -36.00%</div>
+        </div>
+        <div class="market-card">
+          <div class="label">VIX</div>
+          <div class="value">17.65</div>
+          <div class="change down">▼ -0.79%</div>
+          <div class="details">Low volatility regime<br>Complacency risk</div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 0.9rem; color: var(--text-tertiary); margin: 1.5rem 0 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Bonds & Rates</h3>
+      <div class="market-grid">
+        <div class="market-card">
+          <div class="label">US 10Y Treasury</div>
+          <div class="value">4.14%</div>
+          <div class="change down">▼ -0.10% w/w</div>
+          <div class="details">Month: -0.05% | YTD: -0.04%<br>Yields easing on soft data</div>
+        </div>
+        <div class="market-card">
+          <div class="label">Japan 10Y JGB</div>
+          <div class="value">2.24%</div>
+          <div class="change up">▲ +0.01% d/d</div>
+          <div class="details">YTD: +0.16% | YoY: +0.92%<br>BOJ normalization continues</div>
+        </div>
+        <div class="market-card">
+          <div class="label">US Fed Rate</div>
+          <div class="value">3.75%</div>
+          <div class="details">Markets pricing 2 cuts in 2026<br>Next meeting: March</div>
+        </div>
+        <div class="market-card">
+          <div class="label">Germany 10Y</div>
+          <div class="value">2.80%</div>
+          <div class="change down">▼ -0.05% w/w</div>
+          <div class="details">ECB cut expectations rising<br>Growth concerns persist</div>
+        </div>
+      </div>
+
+      <div class="health-score bullish">
+        📈 Market Health: <strong>BULLISH</strong> — Japan ATH breakthrough validates risk-on. US-China trade optimism lifts Asia. Watch S&P 7,000 resistance and crypto stabilization for confirmation.
+      </div>
+    </section>
+
+    <!-- PREDICTIONS SECTION -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <span class="icon">🔮</span>
+        <h2>Predictions & Outlook</h2>
+      </div>
+
+      <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--text-primary);">Tomorrow & Week Ahead</h3>
+      <ul class="predictions-list">
+        <li><strong>Friday (Feb 13):</strong> Japan Q4 GDP preliminary data—consensus expects +0.3% q/q. A beat would validate the Takaichi trade; a miss could trigger profit-taking from extended levels. US retail sales follow-up also due.</li>
+        <li><strong>SoftBank Earnings:</strong> Reports after close today (Thursday). Masa Son's AI narrative will be tested—watch for Vision Fund performance and any StarLink commentary. Stock +6.9% today suggests high expectations baked in.</li>
+        <li><strong>Munich Security Conference (Weekend):</strong> China's Wang Yi and EU's Kallas both attending. Any EU-China talks could signal geopolitical de-escalation—or the opposite if tensions flare publicly.</li>
+        <li><strong>Iran Nuclear Talks:</strong> Trump's carrier strike threat raises stakes. Watch for any breakthrough or breakdown signals from Oman negotiations. Oil prices highly sensitive to outcome.</li>
+        <li><strong>El Paso Airspace:</strong> FAA closure through Feb 20 suggests ongoing border security operations. Any public explanation could move defense/security stocks.</li>
+      </ul>
+
+      <h3 style="font-size: 1rem; margin: 1.5rem 0 1rem; color: var(--text-primary);">2026 Themes Update</h3>
+      <ul class="predictions-list">
+        <li><strong>Japan Exceptionalism:</strong> Nikkei +48.55% YTD vs S&P +14.67% continues the outperformance story. The Takaichi supermajority removes political risk for at least two years. Foreign investors remain underweight—more inflows likely if corporate governance reforms accelerate.</li>
+        <li><strong>US-China Détente:</strong> Tariff truce extension reports suggest both sides want stability. This is bullish for Asian assets but raises questions about Japan's Taiwan positioning if the US pulls back from "strategic clarity."</li>
+        <li><strong>Precious Metals:</strong> Gold +75% YoY, Silver +166% YoY reflects structural demand from central banks and retail. Any geopolitical flare-up (Iran, Taiwan) supports further gains; peace would trigger profit-taking.</li>
+        <li><strong>Crypto Correction:</strong> BTC down 23% YTD, ETH down 35% YTD. The 2025 rally has fully unwound. Current levels ($67K BTC) could be accumulation zone if macro stabilizes, but momentum is clearly negative.</li>
+        <li><strong>Climate Reality:</strong> Simultaneous extreme fires in Australia, South Africa, and Patagonia underscore accelerating climate impacts. ESG themes remain investable despite political pushback in some markets.</li>
+      </ul>
+    </section>
+
+    <!-- BOTTOM LINE -->
+    <div class="bottom-line">
+      <h2>💡 Bottom Line</h2>
+      <p>Japan is the star of today's session—the Nikkei touched 58,030, a fresh all-time high, as the post-election rally resumed with force. Furukawa Electric's 23% surge and NEC's buyback-driven 7% jump show that both value and growth are participating. But Taiwan President Lai's stark warning that Japan is "next" if Taiwan falls reminds us that geopolitical risk hasn't disappeared—it's just being priced as opportunity rather than threat. The potential Trump-Xi tariff truce extension is the macro catalyst supporting Asia broadly (+13% YTD), but it complicates Japan's strategic positioning. Meanwhile, crypto continues bleeding (BTC -3.3% today), gold holds near records, and US markets are stuck at S&P 7,000 resistance awaiting tomorrow's CPI catalyst. The VIX at 17.65 suggests complacency—watch for vol to spike if any of the simmering risks (Iran, Epstein fallout, cartel drones forcing airport closures) suddenly demand attention. For now, ride the Japan trade but keep stops tight—these levels are historically extended.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>CEO Daily Briefing • Generated Feb 12, 2026 3:00 PM JST • Afternoon Edition</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1080px; background: #0F172A; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif; color: #F8FAFC; display: flex; flex-direction: column; padding: 80px; overflow: hidden; }
+.header { font-size: 28px; font-weight: 700; color: #94A3B8; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 48px; }
+.section-title { font-size: 20px; font-weight: 600; color: #64748B; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; margin-top: 8px; }
+.market-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.market-item { background: #1E293B; border-radius: 14px; padding: 24px; }
+.market-name { font-size: 18px; color: #94A3B8; margin-bottom: 6px; font-weight: 500; }
+.market-value { font-size: 32px; font-weight: 800; }
+.market-change { font-size: 18px; font-weight: 600; margin-top: 4px; }
+.green { color: #10B981; }
+.red { color: #EF4444; }
+.amber { color: #F59E0B; }
+.blue { color: #3B82F6; }
+.divider { height: 1px; background: #1E293B; margin: 8px 0; }
+.bottom-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #10B981, #3B82F6); }
+.slide-num { position: absolute; top: 40px; right: 60px; font-size: 18px; color: #475569; font-weight: 500; }
+</style></head><body>
+<div class="slide-num">09 / 10</div>
+<div class="header">📊 Markets Snapshot</div>
+
+<div class="section-title">Indices & FX</div>
+<div class="market-grid">
+  <div class="market-item">
+    <div class="market-name">Nikkei 225</div>
+    <div class="market-value green">53,375</div>
+  </div>
+  <div class="market-item">
+    <div class="market-name">USD/JPY</div>
+    <div class="market-value amber">¥153.27</div>
+  </div>
+  <div class="market-item">
+    <div class="market-name">Fed Rate</div>
+    <div class="market-value blue">3.50–3.75%</div>
+  </div>
+  <div class="market-item">
+    <div class="market-name">BOJ Rate</div>
+    <div class="market-value blue">0.75%</div>
+  </div>
+</div>
+
+<div class="section-title">Commodities</div>
+<div class="market-grid">
+  <div class="market-item">
+    <div class="market-name">Gold</div>
+    <div class="market-value green">$5,547</div>
+  </div>
+  <div class="market-item">
+    <div class="market-name">Copper</div>
+    <div class="market-value green">+8%</div>
+    <div class="market-change green">Breakout</div>
+  </div>
+</div>
+
+<div class="section-title">Crypto</div>
+<div class="market-grid">
+  <div class="market-item">
+    <div class="market-name">Bitcoin</div>
+    <div class="market-value red">−2.3%</div>
+    <div class="market-change red">Pullback</div>
+  </div>
+  <div class="market-item">
+    <div class="market-name">Intel</div>
+    <div class="market-value green">+11%</div>
+    <div class="market-change green">Surge</div>
+  </div>
+</div>
+
+<div class="bottom-bar"></div>
+</body></html>

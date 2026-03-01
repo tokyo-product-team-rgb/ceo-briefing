@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260" width="300" height="260">
+  <!-- Diagonal stroke from lower-left going up to upper-right (the slash through the circle) -->
+  <path d="M70 180 Q110 120 150 70 Q190 30 240 15" 
+        stroke="#111111" stroke-width="10" fill="none" stroke-linecap="round"/>
+  
+  <!-- Curved stroke forming the circle/oval shape - right side curving down -->
+  <path d="M240 15 Q285 45 290 110 Q292 175 250 210" 
+        stroke="#111111" stroke-width="10" fill="none" stroke-linecap="round"/>
+  
+  <!-- Bottom sweeping stroke extending to the right -->
+  <path d="M250 210 Q200 245 130 250 Q60 252 10 235" 
+        stroke="#111111" stroke-width="10" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="300">
+  <title>Live Markets — CEO Briefing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Book.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype'); font-weight: 500; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #F9F9F9;
+      --bg-secondary: #FDFDFD;
+      --surface: #FFFFFF;
+      --text: #111111;
+      --text-secondary: #44403C;
+      --text-muted: #78716C;
+      --border: #E8E5E1;
+      --accent-market: #2A8F87;
+      --accent-geo: #44403C;
+      --accent-tech: #44403C;
+      --accent-japan: #44403C;
+      --accent-predict: #44403C;
+      --serif: 'Copernicus Trial', Georgia, serif;
+      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 24px;
+      --green: #2A8F87;
+      --red: #B94A48;
+      --yellow: #E3B341;
+      --orange: #E07A3F;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: none;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1.5rem;
+      margin: 4px 0;
+      border-radius: 999px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-bar a.active {
+      color: var(--text-primary);
+      background: #ECEAE7;
+    }
+
+    .nav-bar a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .masthead {
+      background: transparent;
+      border-bottom: none;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+      margin-left: 0.5rem;
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      background: #16a34a;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: none;
+    }
+
+    .section-icon {
+      display: none;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text-secondary);
+    }
+
+    .section-title.market,
+    .section-title.action,
+    .section-title.regime,
+    .section-title.history { color: var(--text-secondary); }
+
+    /* Score Hero */
+    .score-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.5rem;
+    }
+
+    .score-number {
+      font-family: var(--serif);
+      font-size: 5rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+    .score-number.green { color: var(--green); }
+    .score-number.yellow { color: var(--yellow); }
+    .score-number.orange { color: var(--orange); }
+    .score-number.red { color: var(--red); }
+
+    .score-label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      color: var(--text-secondary);
+    }
+
+    .score-zone {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-top: 0.75rem;
+      
+      letter-spacing: 0.05em;
+    }
+    .score-zone.green { background: #dcfce7; color: #166534; }
+    .score-zone.yellow { background: #fef9c3; color: #854d0e; }
+    .score-zone.orange { background: #ffedd5; color: #c2410c; }
+    .score-zone.red { background: #fee2e2; color: #991b1b; }
+
+    /* Delta Grid */
+    .delta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      .delta-grid { grid-template-columns: 1fr; }
+    }
+
+    .delta-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .delta-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .delta-value {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 500;
+    }
+    .delta-value.pos { color: var(--green); }
+    .delta-value.neg { color: var(--red); }
+
+    /* Regime Indicator */
+    .regime-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .regime-cycle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 0 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .regime-cycle::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 2rem;
+      right: 2rem;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      z-index: 0;
+      transform: translateY(-50%);
+    }
+
+    .regime-phase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 1;
+    }
+
+    .regime-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 3px solid var(--border);
+      transition: all 0.3s;
+    }
+    .regime-dot.active { width: 36px; height: 36px; border-width: 4px; }
+    .regime-dot.expansion { border-color: var(--green); }
+    .regime-dot.expansion.active { background: var(--green); }
+    .regime-dot.slowdown { border-color: var(--yellow); }
+    .regime-dot.slowdown.active { background: var(--yellow); }
+    .regime-dot.contraction { border-color: var(--red); }
+    .regime-dot.contraction.active { background: var(--red); }
+    .regime-dot.recovery { border-color: #3b82f6; }
+    .regime-dot.recovery.active { background: #3b82f6; }
+
+    .regime-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .regime-label.active { color: var(--text); font-weight: 700; }
+
+    .regime-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      .regime-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .regime-stat {
+      text-align: center;
+    }
+
+    .regime-stat-value {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .regime-stat-label {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      
+      letter-spacing: 0.04em;
+      margin-top: 0.2rem;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1rem;
+    }
+
+    .card.featured {
+      border-left: 4px solid;
+      padding-left: 1.5rem;
+    }
+    .card.featured.market { border-left-color: var(--accent-market); }
+    .card.featured.action { border-left-color: var(--accent-predict); }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .card-body {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Action Items */
+    .action-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .action-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: var(--bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .action-tag {
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+    }
+    .action-tag.risk { background: #fee2e2; color: #991b1b; }
+    .action-tag.opportunity { background: #dcfce7; color: #166534; }
+    .action-tag.monitor { background: #f3f4f6; color: #6b7280; }
+    .action-tag.act-now { background: #dc2626; color: #fff; }
+    .action-tag.this-week { background: #fbbf24; color: #78350f; }
+
+    .action-text {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .action-text strong { color: var(--text); }
+
+    /* Indicator Sections */
+    .indicator-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .indicator-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: none;
+    }
+
+    .indicator-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+    }
+
+    .indicator-score {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+    .indicator-score.pos { color: var(--green); }
+    .indicator-score.neg { color: var(--red); }
+    .indicator-score.neutral { color: var(--text-muted); }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .indicator-item {
+      background: var(--bg);
+      border-radius: 8px;
+      padding: 0.85rem;
+      text-align: center;
+    }
+
+    .ind-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .ind-name {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+      
+      letter-spacing: 0.04em;
+    }
+
+    .ind-spark {
+      height: 24px;
+      margin-top: 0.5rem;
+    }
+
+    .ind-change {
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-top: 0.3rem;
+    }
+    .ind-change.pos { color: var(--green); }
+    .ind-change.neg { color: var(--red); }
+
+    /* Context Grid */
+    .context-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      .context-grid { grid-template-columns: 1fr; }
+    }
+
+    .context-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+
+    .context-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .context-value {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .context-sub {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: 0.25rem;
+    }
+
+    /* Tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1rem;
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 0.65rem 0.5rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 0.75rem 0.5rem;
+      border-bottom: none;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table .symbol { font-weight: 600; color: var(--text); }
+    .data-table .price { font-weight: 600; }
+    .data-table .pos { color: var(--green); font-weight: 600; }
+    .data-table .neg { color: var(--red); font-weight: 600; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  
+    /* Mobile content width */
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden;
+      }
+      /* Remove card styling on mobile */
+      .card {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid var(--border, #E8E5E1);
+      }
+      .card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      /* Remove indicator card styling on mobile */
+      .indicator-section {
+        background: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border, #E8E5E1) !important;
+        border-radius: 0 !important;
+        padding: 0 0 1.5rem 0 !important;
+        margin-bottom: 1.5rem;
+        box-shadow: none !important;
+      }
+      .indicator-section:last-child {
+        border-bottom: none !important;
+      }
+      .indicator-grid {
+        background: transparent !important;
+      }
+      .indicator-item {
+        background: transparent !important;
+        border-radius: 0 !important;
+        padding: 0.5rem 0 !important;
+        box-shadow: none !important;
+      }
+      .card.featured {
+        background: transparent !important;
+        border-left: none !important;
+        box-shadow: none !important;
+      }
+      .container {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        padding: 2rem 0 4rem;
+        margin: 0 auto;
+      }
+    }
+      .card.featured {
+        padding-left: 0;
+      }
+      .footer {
+        padding: 2rem 0 3rem;
+      }
+      .nav-pills {
+        padding: 1rem 0;
+      }
+      .bottom-line {
+        padding: 1.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="live.html" class="active">Live</a>
+    <a href="index.html">Daily</a>
+    <a href="vc-review.html">Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="overline">Real-time market intelligence <span class="live-badge"><span class="live-dot"></span> LIVE</span></div>
+      <h1>CEO live dashboard</h1>
+      <div class="edition-date">Auto-updates every 5 minutes · Last update: <span id="lastUpdate">--</span></div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- SCORE HERO -->
+    <section class="section">
+      <div class="score-hero">
+        <div class="score-number yellow">64</div>
+        <div class="score-label">Economic health composite</div>
+        <div class="score-zone yellow">🟡 Yellow Zone — Caution</div>
+      </div>
+
+      <div class="delta-grid">
+        <div class="delta-card">
+          <div class="delta-label">Daily change</div>
+          <div class="delta-value pos">+0.8</div>
+        </div>
+        <div class="delta-card">
+          <div class="delta-label">Weekly change</div>
+          <div class="delta-value neg">−1.2</div>
+        </div>
+        <div class="delta-card">
+          <div class="delta-label">Monthly change</div>
+          <div class="delta-value neg">−3.4</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGIME INDICATOR -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon regime">📊</div>
+        <h2 class="section-title regime">Economic regime indicator</h2>
+      </div>
+
+      <div class="regime-card">
+        <div class="regime-cycle">
+          <div class="regime-phase">
+            <div class="regime-dot expansion"></div>
+            <span class="regime-label">Expansion</span>
+          </div>
+          <div class="regime-phase">
+            <div class="regime-dot slowdown active"></div>
+            <span class="regime-label active">Slowdown</span>
+          </div>
+          <div class="regime-phase">
+            <div class="regime-dot contraction"></div>
+            <span class="regime-label">Contraction</span>
+          </div>
+          <div class="regime-phase">
+            <div class="regime-dot recovery"></div>
+            <span class="regime-label">Recovery</span>
+          </div>
+        </div>
+        <div class="regime-stats">
+          <div class="regime-stat">
+            <div class="regime-stat-value" style="color: var(--yellow);">SLOWDOWN</div>
+            <div class="regime-stat-label">Current regime</div>
+          </div>
+          <div class="regime-stat">
+            <div class="regime-stat-value">+4.2%</div>
+            <div class="regime-stat-label">Avg S&P Return (12mo)</div>
+          </div>
+          <div class="regime-stat">
+            <div class="regime-stat-value">8.3 mo</div>
+            <div class="regime-stat-label">Avg duration</div>
+          </div>
+          <div class="regime-stat">
+            <div class="regime-stat-value">3.1 mo</div>
+            <div class="regime-stat-label">Time in Regime</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTION ITEMS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon action">⚡</div>
+        <h2 class="section-title action">Action items</h2>
+      </div>
+
+      <div class="action-list">
+        <div class="action-item">
+          <span class="action-tag act-now">Act now</span>
+          <span class="action-text"><strong>US-Iran Oman Talks (Fri Feb 7)</strong> — Could swing oil ±10%. Consider hedging energy exposure or positioning for volatility.</span>
+        </div>
+        <div class="action-item">
+          <span class="action-tag this-week">This week</span>
+          <span class="action-text"><strong>Japan Snap Election (Sun Feb 9)</strong> — BOJ policy implications. Watch USD/JPY and Nikkei futures Sunday night.</span>
+        </div>
+        <div class="action-item">
+          <span class="action-tag risk">Risk</span>
+          <span class="action-text"><strong>Consumer Sentiment at 56.4</strong> — Near June 2022 lows. Historically precedes spending slowdown by 2-3 quarters.</span>
+        </div>
+        <div class="action-item">
+          <span class="action-tag opportunity">Opportunity</span>
+          <span class="action-text"><strong>AI Infrastructure</strong> — Alphabet's $91B capex signals multi-year buildout. NVDA, AVGO, custom silicon plays benefiting.</span>
+        </div>
+        <div class="action-item">
+          <span class="action-tag monitor">Monitor</span>
+          <span class="action-text"><strong>Indonesia Market Crisis</strong> — Jakarta −14.8% YTD. Contagion risk to EM if billionaire forced selling continues.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDICATORS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon market">📈</div>
+        <h2 class="section-title market">Live indicators</h2>
+      </div>
+
+      <div class="indicator-section">
+        <div class="indicator-header">
+          <span class="indicator-title">⚡ Daily Indicators (30%)</span>
+          <span class="indicator-score pos">72</span>
+        </div>
+        <div class="indicator-grid">
+          <div class="indicator-item">
+            <div class="ind-value">6,945</div>
+            <div class="ind-name">S&P 500</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,18 10,15 20,17 30,12 40,10 50,11 60,8"/></svg>
+            <div class="ind-change pos">+0.4%</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">17.7</div>
+            <div class="ind-name">VIX</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,12 10,10 20,14 30,18 40,20 50,18 60,16"/></svg>
+            <div class="ind-change neg">▲ Elevated</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">+0.32%</div>
+            <div class="ind-name">Yield curve</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,20 10,18 20,16 30,14 40,12 50,10 60,9"/></svg>
+            <div class="ind-change pos">Normalizing</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">1.12%</div>
+            <div class="ind-name">Credit spread</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,14 10,13 20,12 30,12 40,11 50,10 60,10"/></svg>
+            <div class="ind-change pos">Tight</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">$5,082</div>
+            <div class="ind-name">Gold</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#ca8a04" stroke-width="2" points="0,18 10,15 20,12 30,10 40,8 50,6 60,5"/></svg>
+            <div class="ind-change pos">+2.9%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="indicator-section">
+        <div class="indicator-header">
+          <span class="indicator-title">📅 Weekly Indicators (25%)</span>
+          <span class="indicator-score neutral">65</span>
+        </div>
+        <div class="indicator-grid">
+          <div class="indicator-item">
+            <div class="ind-value">219K</div>
+            <div class="ind-name">Jobless claims</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,12 10,13 20,12 30,11 40,12 50,11 60,10"/></svg>
+            <div class="ind-change pos">Low</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">−2.1%</div>
+            <div class="ind-name">Mortgage apps</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,10 10,12 20,13 30,14 40,15 50,16 60,17"/></svg>
+            <div class="ind-change neg">Declining</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">$3.12</div>
+            <div class="ind-name">Gas price</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,10 10,12 20,14 30,13 40,12 50,11 60,12"/></svg>
+            <div class="ind-change pos">Easing</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">+1.8%</div>
+            <div class="ind-name">Rail traffic</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,14 10,13 20,12 30,11 40,10 50,10 60,9"/></svg>
+            <div class="ind-change pos">Growing</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="indicator-section">
+        <div class="indicator-header">
+          <span class="indicator-title">📊 Monthly Indicators (25%)</span>
+          <span class="indicator-score neg">62</span>
+        </div>
+        <div class="indicator-grid">
+          <div class="indicator-item">
+            <div class="ind-value">4.4%</div>
+            <div class="ind-name">GDP Growth</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#16a34a" stroke-width="2" points="0,18 10,15 20,12 30,10 40,8 50,7 60,5"/></svg>
+            <div class="ind-change pos">Strong</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">4.4%</div>
+            <div class="ind-name">Unemployment</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#888" stroke-width="2" points="0,12 10,12 20,12 30,12 40,12 50,12 60,12"/></svg>
+            <div class="ind-change" style="color: var(--text-muted);">Stable</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">2.7%</div>
+            <div class="ind-name">CPI Inflation</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#ca8a04" stroke-width="2" points="0,6 10,9 20,12 30,14 40,13 50,12 60,12"/></svg>
+            <div class="ind-change neg">Above target</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">56.4</div>
+            <div class="ind-name">Consumer Sent.</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,6 10,10 20,12 30,14 40,16 50,17 60,18"/></svg>
+            <div class="ind-change neg">⚠️ Weak</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">51.9</div>
+            <div class="ind-name">Mfg PMI</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#888" stroke-width="2" points="0,14 10,13 20,12 30,12 40,12 50,12 60,12"/></svg>
+            <div class="ind-change" style="color: var(--text-muted);">Barely expanding</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="indicator-section">
+        <div class="indicator-header">
+          <span class="indicator-title">🌍 Geopolitical Risk (20%)</span>
+          <span class="indicator-score neg">52</span>
+        </div>
+        <div class="indicator-grid">
+          <div class="indicator-item">
+            <div class="ind-value">160</div>
+            <div class="ind-name">GPR Index</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,18 10,15 20,12 30,10 40,11 50,10 60,8"/></svg>
+            <div class="ind-change neg">Elevated</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">55</div>
+            <div class="ind-name">Oil Supply Risk</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#ea580c" stroke-width="2" points="0,14 10,12 20,10 30,12 40,10 50,9 60,10"/></svg>
+            <div class="ind-change neg">⚠️ Iran/Hormuz</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">50</div>
+            <div class="ind-name">US-China</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#888" stroke-width="2" points="0,12 10,12 20,12 30,12 40,12 50,12 60,12"/></svg>
+            <div class="ind-change" style="color: var(--text-muted);">Stable tension</div>
+          </div>
+          <div class="indicator-item">
+            <div class="ind-value">50</div>
+            <div class="ind-name">Active conflicts</div>
+            <svg class="ind-spark" viewBox="0 0 60 24"><polyline fill="none" stroke="#dc2626" stroke-width="2" points="0,14 10,12 20,10 30,10 40,10 50,10 60,10"/></svg>
+            <div class="ind-change neg">Ukraine/Gaza</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORICAL CONTEXT -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon history">📜</div>
+        <h2 class="section-title history">Historical context</h2>
+      </div>
+
+      <div class="context-grid">
+        <div class="context-card">
+          <div class="context-label">This Day Last Year</div>
+          <div class="context-value">71</div>
+          <div class="context-sub">Score was 7 points higher (GREEN zone)</div>
+        </div>
+        <div class="context-card">
+          <div class="context-label">When Score = 64</div>
+          <div class="context-value">+6.8%</div>
+          <div class="context-sub">Avg S&P 500 return over next 12 months</div>
+        </div>
+        <div class="context-card">
+          <div class="context-label">Similar period</div>
+          <div class="context-value">Q2 2019</div>
+          <div class="context-sub">Trade war uncertainty, strong labor market</div>
+        </div>
+        <div class="context-card">
+          <div class="context-label">Risk of RED in 90 Days</div>
+          <div class="context-value">18%</div>
+          <div class="context-sub">Based on current trajectory</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon market">💹</div>
+        <h2 class="section-title market">Global markets</h2>
+      </div>
+
+      <div class="card">
+        <div class="live-indicator" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: var(--text-muted);">
+          <span class="live-dot" style="width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite;"></span>
+          <span id="market-status">Fetching live data...</span>
+        </div>
+        <style>
+          @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+          @keyframes flash { 0% { background: transparent; } 50% { background: rgba(34, 197, 94, 0.2); } 100% { background: transparent; } }
+          .price-updated { animation: flash 0.6s ease-out; }
+          .price-up { color: #22c55e !important; }
+          .price-down { color: #ef4444 !important; }
+        </style>
+        <table class="data-table" id="markets-table">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Price</th>
+              <th>Day</th>
+              <th>Week</th>
+              <th>YTD</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-symbol="^GSPC" data-type="index">
+              <td class="symbol">🇺🇸 S&P 500</td>
+              <td class="price" data-field="price">—</td>
+              <td data-field="day">—</td>
+              <td data-field="week">—</td>
+              <td data-field="ytd">—</td>
+            </tr>
+            <tr data-symbol="^IXIC" data-type="index">
+              <td class="symbol">🇺🇸 Nasdaq</td>
+              <td class="price" data-field="price">—</td>
+              <td data-field="day">—</td>
+              <td data-field="week">—</td>
+              <td data-field="ytd">—</td>
+            </tr>
+            <tr data-symbol="^N225" data-type="index">
+              <td class="symbol">🇯🇵 Nikkei</td>
+              <td class="price" data-field="price">—</td>
+              <td data-field="day">—</td>
+              <td data-field="week">—</td>
+              <td data-field="ytd">—</td>
+            </tr>
+            <tr data-symbol="^JKSE" data-type="index">
+              <td class="symbol">🇮🇩 Jakarta</td>
+              <td class="price" data-field="price">—</td>
+              <td data-field="day">—</td>
+              <td data-field="week">—</td>
+              <td data-field="ytd">—</td>
+            </tr>
+            <tr data-symbol="GC=F" data-type="commodity" data-prefix="$">
+              <td class="symbol">🥇 Gold</td>
+              <td class="price" data-field="price">—</td>
+              <td data-field="day">—</td>
+              <td data-field="week">—</td>
+              <td data-field="ytd">—</td>
+            </tr>
+            <tr data-symbol="CL=F" data-type="commodity" data-prefix="$">
+              <td class="symbol">🛢️ WTI Oil</td>
+              <td class="price" data-field="price">—</td>
+              <td data-field="day">—</td>
+              <td data-field="week">—</td>
+              <td data-field="ytd">—</td>
+            </tr>
+            <tr data-symbol="bitcoin" data-type="crypto" data-prefix="$">
+              <td class="symbol">🪙 Bitcoin</td>
+              <td class="price" data-field="price">—</td>
+              <td data-field="day">—</td>
+              <td data-field="week">—</td>
+              <td data-field="ytd">—</td>
+            </tr>
+            <tr data-symbol="JPY=X" data-type="forex">
+              <td class="symbol">💴 USD/JPY</td>
+              <td class="price" data-field="price">—</td>
+              <td data-field="day">—</td>
+              <td data-field="week">—</td>
+              <td data-field="ytd">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <script>
+        // Live Market Data Fetcher
+        (function() {
+          const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+          const REFRESH_INTERVAL = 60000; // 1 minute
+          
+          // Format number with commas
+          const formatNum = (n, decimals = 2) => {
+            if (n >= 1000) return n.toLocaleString('en-US', { maximumFractionDigits: decimals });
+            return n.toFixed(decimals);
+          };
+          
+          // Format percentage change
+          const formatChange = (pct) => {
+            const sign = pct >= 0 ? '+' : '−';
+            return `${sign}${Math.abs(pct).toFixed(2)}%`;
+          };
+          
+          // Update cell with animation
+          const updateCell = (cell, value, isPositive) => {
+            const oldValue = cell.textContent;
+            if (oldValue !== value) {
+              cell.textContent = value;
+              cell.classList.add('price-updated');
+              setTimeout(() => cell.classList.remove('price-updated'), 600);
+            }
+            cell.className = cell.className.replace(/pos|neg/g, '').trim();
+            if (isPositive !== null) {
+              cell.classList.add(isPositive ? 'pos' : 'neg');
+            }
+          };
+          
+          // Fetch Yahoo Finance data via CORS proxy
+          async function fetchYahooData(symbols) {
+            const results = {};
+            for (const symbol of symbols) {
+              try {
+                const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1y`;
+                const resp = await fetch(CORS_PROXY + encodeURIComponent(url));
+                const data = await resp.json();
+                const quote = data.chart.result[0];
+                const meta = quote.meta;
+                const closes = quote.indicators.quote[0].close.filter(c => c !== null);
+                const price = meta.regularMarketPrice;
+                const prevClose = meta.chartPreviousClose || closes[closes.length - 2];
+                const weekAgo = closes[Math.max(0, closes.length - 6)] || prevClose;
+                const ytdStart = closes[0];
+                
+                results[symbol] = {
+                  price,
+                  dayChange: ((price - prevClose) / prevClose) * 100,
+                  weekChange: ((price - weekAgo) / weekAgo) * 100,
+                  ytdChange: ((price - ytdStart) / ytdStart) * 100
+                };
+              } catch (e) {
+                console.warn(`Failed to fetch ${symbol}:`, e);
+              }
+            }
+            return results;
+          }
+          
+          // Fetch CoinGecko data for crypto
+          async function fetchCryptoData() {
+            try {
+              const resp = await fetch('https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&community_data=false&developer_data=false');
+              const data = await resp.json();
+              const price = data.market_data.current_price.usd;
+              return {
+                bitcoin: {
+                  price,
+                  dayChange: data.market_data.price_change_percentage_24h,
+                  weekChange: data.market_data.price_change_percentage_7d,
+                  ytdChange: data.market_data.price_change_percentage_1y || 0
+                }
+              };
+            } catch (e) {
+              console.warn('Failed to fetch crypto:', e);
+              return {};
+            }
+          }
+          
+          // Update all market data
+          async function updateMarkets() {
+            const statusEl = document.getElementById('market-status');
+            statusEl.textContent = 'Updating...';
+            
+            const yahooSymbols = ['^GSPC', '^IXIC', '^N225', '^JKSE', 'GC=F', 'CL=F', 'JPY=X'];
+            
+            const [yahooData, cryptoData] = await Promise.all([
+              fetchYahooData(yahooSymbols),
+              fetchCryptoData()
+            ]);
+            
+            const allData = { ...yahooData, ...cryptoData };
+            
+            document.querySelectorAll('#markets-table tbody tr').forEach(row => {
+              const symbol = row.dataset.symbol;
+              const data = allData[symbol];
+              if (!data) return;
+              
+              const prefix = row.dataset.prefix || '';
+              const priceCell = row.querySelector('[data-field="price"]');
+              const dayCell = row.querySelector('[data-field="day"]');
+              const weekCell = row.querySelector('[data-field="week"]');
+              const ytdCell = row.querySelector('[data-field="ytd"]');
+              
+              // Format price based on type
+              let priceStr;
+              if (symbol === 'JPY=X') {
+                priceStr = formatNum(data.price, 2);
+              } else if (data.price >= 10000) {
+                priceStr = prefix + formatNum(data.price, 0);
+              } else if (data.price >= 100) {
+                priceStr = prefix + formatNum(data.price, 2);
+              } else {
+                priceStr = prefix + formatNum(data.price, 2);
+              }
+              
+              updateCell(priceCell, priceStr, null);
+              updateCell(dayCell, formatChange(data.dayChange), data.dayChange >= 0);
+              updateCell(weekCell, formatChange(data.weekChange), data.weekChange >= 0);
+              updateCell(ytdCell, formatChange(data.ytdChange), data.ytdChange >= 0);
+            });
+            
+            const now = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+            statusEl.textContent = `Live · Updated ${now}`;
+          }
+          
+          // Initial load and set interval
+          updateMarkets();
+          setInterval(updateMarkets, REFRESH_INTERVAL);
+        })();
+      </script>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CEO Live Dashboard · Auto-refreshes every 5 minutes</p>
+    <p>Data sources: Yahoo Finance, FRED, BLS, GPR Index</p>
+  </footer>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('lastUpdate').textContent = now.toLocaleTimeString('en-US', { 
+        hour: '2-digit', 
+        minute: '2-digit',
+        hour12: false 
+      }) + ' JST';
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+
+</body>
+</html>

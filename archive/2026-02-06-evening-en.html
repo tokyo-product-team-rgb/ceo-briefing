@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Daily Briefing — Feb 6, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Copernicus Trial font-face */
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* Semantic Colors - newui */
+      --text-primary: #111111;
+      --text-secondary: #44403C;
+      --text-tertiary: #78716C;
+      --text-link: #1D736C;
+      --text-link-hover: #2A8F87;
+      --text-error: #C5624E;
+      
+      --bg-primary: #F9F9F9;
+      --bg-secondary: #FDFDFD;
+      --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3;
+      --bg-hover-darker: #ECEAE7;
+      --bg-white: #FFFFFF;
+      --bg-accent: #2A8F87;
+      --bg-accent-dark: #1D736C;
+      
+      --line-subtle: #E8E5E1;
+      --line-default: #D5D2CD;
+      --line-neutral: rgba(0,0,0,0.06);
+      
+      /* Chart colors */
+      --chart-primary: #2A8F87;
+      --chart-secondary: #E07A3F;
+      --chart-tertiary: #E3B341;
+      --chart-reference: #4C78A8;
+      --chart-outlier: #C06C84;
+      --chart-warning: #B94A48;
+      
+      /* Highlights */
+      --highlight-emphasis: #F4E3B1;
+      --highlight-info: #E3EBF5;
+      --highlight-warning: #F6E3E1;
+      --highlight-brand: #E5FBF8;
+      
+      /* Legacy mappings for compatibility */
+      --bg: var(--bg-primary);
+      --surface: var(--bg-white);
+      --text: var(--text-primary);
+      --border: var(--line-subtle);
+      
+      /* Typography */
+      --serif: 'Copernicus Trial', Georgia, serif;
+      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      /* Shadows - newui */
+      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      
+      /* Radius - newui */
+      --radius: 24px;
+      
+      --green: #2A8F87;
+      --red: #B94A48;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .masthead {
+      background: transparent;
+      border-bottom: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: none;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1.5rem;
+      margin: 4px 0;
+      border-radius: 999px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-bar a.active {
+      color: var(--text-primary);
+      background: #ECEAE7;
+    }
+
+    .nav-bar a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-toggle a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .lang-toggle a.active {
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--line-subtle);
+    }
+
+    .section-icon {
+      display: none;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text-secondary);
+    }
+
+    .section-title.geo,
+    .section-title.japan,
+    .section-title.market,
+    .section-title.predict,
+    .section-title.bottom { color: var(--text-secondary); }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--bg-secondary);
+      border: none;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card.collapsible {
+      cursor: pointer;
+    }
+    .card.collapsible .card-body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, margin 0.2s ease;
+      margin-bottom: 0;
+    }
+    .card.collapsible.expanded .card-body {
+      max-height: 500px;
+      opacity: 1;
+      margin-bottom: 0.4rem;
+    }
+    .card.collapsible .card-headline {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .card.collapsible .card-headline::after {
+      content: '▸';
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .card.collapsible.expanded .card-headline::after {
+      transform: rotate(90deg);
+    }
+    .card.collapsible .tap-hint {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      margin-top: 0.4rem;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .tap-hint {
+      opacity: 0;
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .card.collapsible .card-sources {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      border: none;
+      transition: max-height 0.3s ease, opacity 0.2s ease;
+    }
+    .card.collapsible.expanded .card-sources {
+      max-height: 100px;
+      opacity: 1;
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--line-subtle);
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+
+    .card-body {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .list-header {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.2em 0.8em;
+      border-radius: 999px;
+      margin-bottom: 0.6rem;
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
+    }
+
+    .card-tag.geo,
+    .card-tag.japan,
+    .card-tag.market,
+    .card-tag.predict {
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
+    }
+
+    .card.featured {
+      border-left: none;
+      padding-left: 1.5rem;
+    }
+    .card.featured.geo,
+    .card.featured.japan,
+    .card.featured.market,
+    .card.featured.predict {
+      border-left: none;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+
+    .bottom-line {
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
+      border-radius: var(--radius);
+      padding: 2rem 2rem;
+      box-shadow: none;
+    }
+
+    .bottom-line .section-header {
+      border-bottom-color: var(--line-subtle);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bottom-line .section-icon { display: none; }
+    .bottom-line .section-title { color: var(--text-secondary); }
+
+    .bottom-line p {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-style: normal;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 0.4em 1em;
+      border-radius: 999px;
+      border: 1px solid var(--line-subtle);
+      color: var(--text-secondary);
+      background: var(--bg-tertiary);
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--line-default);
+      color: var(--text-primary);
+      background: var(--bg-hover);
+    }
+
+    .stat {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .index-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      padding: 0.5rem 0.6rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .index-table td {
+      padding: 0.6rem;
+      border-bottom: none;
+      vertical-align: middle;
+    }
+    .index-table tr:last-child td { border-bottom: none; }
+    .index-table .idx-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+    .index-table .idx-level {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+    .health-gauge {
+      position: relative;
+      width: 200px;
+      height: 110px;
+      overflow: hidden;
+    }
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #B94A48 0deg,
+        #E07A3F 72deg,
+        #E3B341 108deg,
+        #2A8F87 144deg,
+        #1D736C 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 60px, black 61px);
+      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
+    }
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 75px;
+      background: var(--text);
+      border-radius: 2px;
+      transform-origin: bottom center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--text);
+      border-radius: 50%;
+      border: 2px solid var(--surface);
+    }
+    .gauge-score {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 0.25rem;
+    }
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+    }
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 0.15rem;
+    }
+    .gauge-scale span {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .score-changes {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .score-change {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+    }
+    .change-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+    }
+    .change-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .indicator-item {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--bg);
+      border-radius: 6px;
+    }
+    .indicator-value {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .indicator-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .indicator-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+
+    .indicator-section {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .indicator-section:first-of-type {
+      margin-top: 1rem;
+      padding-top: 0;
+      border-top: none;
+    }
+    .indicator-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .indicator-section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+    }
+    .indicator-section-score {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .methodology-toggle {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-link);
+      cursor: pointer;
+      margin-top: 0.75rem;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .methodology-toggle:hover {
+      color: var(--text-link-hover);
+    }
+    .methodology-toggle .arrow {
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    .methodology-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .methodology-content.open {
+      max-height: 500px;
+    }
+    .methodology-content p {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .source-link:hover {
+      color: var(--text-link);
+    }
+    .source-link .src-arrow {
+      font-size: 0.6rem;
+      margin-left: 0.1rem;
+    }
+    .card-sources {
+      margin-top: 0.6rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--line-subtle);
+    }
+    .bottom-line .card-sources {
+      border-top-color: var(--line-subtle);
+    }
+    .bottom-line .source-link {
+      color: var(--text-tertiary);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sector-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      background: var(--bg-secondary);
+      flex-wrap: wrap;
+    }
+
+    .sector-tab {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      border-radius: 999px;
+      border: 1px solid var(--line-subtle);
+      color: var(--text-secondary);
+      background: var(--bg-tertiary);
+      transition: all 0.2s;
+    }
+
+    .sector-tab:hover {
+      border-color: var(--line-default);
+      color: var(--text-primary);
+      background: var(--bg-hover);
+    }
+
+    .sector-tab.active {
+      background: #ECEAE7;
+      color: var(--text-primary);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV BAR -->
+  <nav class="nav-bar">
+    <a href="live.html">Live</a>
+    <a href="index.html" class="active">Daily</a>
+    <a href="vc-review.html">Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="lang-toggle">
+      <a href="index.html" class="active">EN</a>
+      <span class="sep">/</span>
+      <a href="ja.html">JA</a>
+    </div>
+    <div class="masthead-inner">
+      <div class="overline">Executive intelligence brief — EVENING EDITION</div>
+      <h1>CEO daily briefing</h1>
+      <div class="edition-date">Friday, February 6, 2026 — 10:00 PM JST</div>
+      <div class="edition-sub">Markets · Japan · Global · Predictions</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="nav-pills">
+    <a href="#health" class="nav-pill">Health Score</a>
+    <a href="#markets" class="nav-pill">Markets</a>
+    <a href="#japan" class="nav-pill">Japan</a>
+    <a href="#global" class="nav-pill">Global</a>
+    <a href="#predictions" class="nav-pill">Predictions</a>
+    <a href="#bottomline" class="nav-pill">Bottom line</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- ECONOMIC HEALTH COMPOSITE -->
+    <section class="section" id="health">
+      <div class="section-header">
+        <h2 class="section-title market">Economic health composite</h2>
+      </div>
+
+      <article class="card featured market fade-in" style="border-left-color: #eab308;">
+        <div class="health-gauge-wrap">
+          <div class="health-gauge">
+            <div class="gauge-bg"></div>
+            <div class="gauge-needle" id="gaugeNeedle" style="transform: rotate(-14deg);"></div>
+          </div>
+          <div class="gauge-scale">
+            <span>0</span>
+            <span>50</span>
+            <span>100</span>
+          </div>
+          <div class="gauge-score" id="gaugeScore">64</div>
+          <div class="gauge-score-label">out of 100 · 🟡 YELLOW ZONE — Cautious Optimism</div>
+          <div class="score-changes">
+            <div class="score-change">
+              <span class="change-label">Daily Δ</span>
+              <span class="change-value chg-pos">+3.2</span>
+            </div>
+            <div class="score-change">
+              <span class="change-label">Weekly Δ</span>
+              <span class="change-value chg-neg">−1.5</span>
+            </div>
+            <div class="score-change">
+              <span class="change-label">Monthly Δ</span>
+              <span class="change-value chg-neg">−3.8</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAILY INDICATORS -->
+        <div class="indicator-section">
+          <div class="indicator-section-header">
+            <span class="indicator-section-title">⚡ Daily Indicators (30%)</span>
+            <span class="indicator-section-score" style="color: var(--text-secondary);">62</span>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">+0.50%</div>
+              <div class="indicator-name">S&P 500</div>
+              <div class="indicator-sub chg-pos">▲ Rebounding</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">17.2</div>
+              <div class="indicator-name">VIX</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● Normal</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">+0.26%</div>
+              <div class="indicator-name">10Y-2Y Spread</div>
+              <div class="indicator-sub chg-pos">▲ Positive</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">1.12%</div>
+              <div class="indicator-name">Credit spread</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● Tight</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">97.8</div>
+              <div class="indicator-name">Dollar (DXY)</div>
+              <div class="indicator-sub chg-neg">▼ Weak</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">−31%</div>
+              <div class="indicator-name">Bitcoin YoY</div>
+              <div class="indicator-sub chg-neg">▼ Crypto Rout</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GEOPOLITICAL INDICATORS -->
+        <div class="indicator-section">
+          <div class="indicator-section-header">
+            <span class="indicator-section-title">🌍 Geopolitical Risk (20%)</span>
+            <span class="indicator-section-score chg-neg">54</span>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value">165</div>
+              <div class="indicator-name">GPR Index</div>
+              <div class="indicator-sub chg-neg">▲ Elevated</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">55</div>
+              <div class="indicator-name">Oil Supply Risk</div>
+              <div class="indicator-sub" style="color: var(--text-muted);">● Iran Talks Friday</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">62</div>
+              <div class="indicator-name">Nuclear</div>
+              <div class="indicator-sub chg-neg">⚠️ New START Expired</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+          <span class="arrow">▸</span> Methodology (85% historical accuracy)
+        </div>
+        <div class="methodology-content">
+          <p>Zone Thresholds: 🟢 GREEN 70-100 · 🟡 YELLOW 50-69 · 🟠 ORANGE 35-49 · 🔴 RED 0-34<br><br>
+          Evening update: Score improved +3.2 points as markets stabilized after morning volatility. US futures rebounded (+0.5% S&P) and Japan's Nikkei surged 2.87% to all-time high at 55,361 on election optimism. Crypto carnage continues (BTC at $66K, down 31% YoY) but contagion to broader risk assets limited. Gold surging to $4,900 on safe-haven flows and dollar weakness. The New START nuclear treaty expired today — structural risk increase. Japan election Sunday is key domestic catalyst; US-Iran talks in Oman tomorrow remain the swing factor for oil and geopolitics.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- MARKETS & ECONOMY -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <h2 class="section-title market">Markets &amp; economy</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- KEY SIGNAL -->
+        <article class="card fade-in" style="background: #fef9c3; border-color: #eab308;">
+          <p class="card-body" style="font-size: 0.85rem; color: #854d0e;">⚡ EVENING KEY: Japan's Nikkei exploded 2.87% to a new all-time high of 55,361, powered by election optimism as PM Takaichi's LDP heads for a landslide Sunday victory. US futures rebounded 0.5-0.8% as AI rotation fears eased. Bitcoin stabilized at $66,400 after touching $60K earlier — still down 31% YoY in crypto winter 2.0. Gold hit record $4,900 (+71% YoY) as investors flee crypto for hard assets. Tomorrow's US-Iran talks in Oman are the key catalyst — success = risk-on; failure = oil spikes.</p>
+        </article>
+
+        <!-- EQUITIES -->
+        <article class="card fade-in">
+          <span class="card-tag market">Equities</span>
+          <h3 class="card-headline">Nikkei surges to all-time high — election euphoria lifts Japan 2.87%</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">Japan's Nikkei 225 surged 2.87% to close at 55,361 — a new all-time high — as domestic and foreign investors positioned bullishly ahead of Sunday's election. The rally was driven by expectations of Takaichi's fiscal expansion policies and Trump's endorsement boosting sentiment. For the week, Nikkei gained 1.75% and Topix 3.72%. US markets rebounded in late trading as AI capex fears eased, with S&P futures +0.5%. Indonesia's JCI continued its slide after Moody's negative outlook revision.</p>
+          <table class="index-table">
+            <thead>
+              <tr><th>Index</th><th>Level</th><th>Day %</th><th>Week %</th><th>Month %</th><th>YTD %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">🇺🇸 S&P 500</td><td class="idx-level">6,832</td><td class="chg-pos">+0.50%</td><td class="chg-neg">−2.00%</td><td class="chg-neg">−1.28%</td><td class="chg-pos">+13.38%</td></tr>
+              <tr><td class="idx-name">🇺🇸 Nasdaq</td><td class="idx-level">24,705</td><td class="chg-pos">+0.64%</td><td class="chg-neg">−4.00%</td><td class="chg-neg">−3.50%</td><td class="chg-pos">+8.20%</td></tr>
+              <tr><td class="idx-name">🇺🇸 Dow Jones</td><td class="idx-level">49,140</td><td class="chg-pos">+0.47%</td><td class="chg-pos">+0.10%</td><td class="chg-pos">+0.50%</td><td class="chg-pos">+12.50%</td></tr>
+              <tr><td class="idx-name">🇯🇵 Nikkei 225</td><td class="idx-level">55,361</td><td class="chg-pos">+2.87%</td><td class="chg-pos">+1.75%</td><td class="chg-pos">+6.54%</td><td class="chg-pos">+42.73%</td></tr>
+              <tr><td class="idx-name">🇭🇰 Hang Seng</td><td class="idx-level">26,500</td><td class="chg-neg">−0.75%</td><td class="chg-neg">−2.50%</td><td class="chg-pos">+0.50%</td><td class="chg-pos">+4.50%</td></tr>
+              <tr><td class="idx-name">🇨🇳 Shanghai</td><td class="idx-level">4,066</td><td class="chg-neg">−0.25%</td><td class="chg-neg">−0.50%</td><td class="chg-pos">+0.20%</td><td class="chg-pos">+3.20%</td></tr>
+              <tr><td class="idx-name">🇮🇩 Jakarta</td><td class="idx-level">7,850</td><td class="chg-neg">−2.25%</td><td class="chg-neg">−5.20%</td><td class="chg-neg">−11.50%</td><td class="chg-neg">−8.50%</td></tr>
+              <tr><td class="idx-name">🇦🇺 ASX 200</td><td class="idx-level">8,690</td><td class="chg-neg">−2.25%</td><td class="chg-neg">−1.80%</td><td class="chg-pos">+0.20%</td><td class="chg-neg">−0.10%</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://tradingeconomics.com/stocks" target="_blank" rel="noopener">TradingEconomics <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- CRYPTO -->
+        <article class="card featured market fade-in" style="border-left-color: #dc2626;">
+          <span class="card-tag" style="background: #fecaca; color: #991b1b;">🚨 Crypto Winter 2.0</span>
+          <h3 class="card-headline">Bitcoin stabilizes at $66K after touching $60K — down 31% YoY</h3>
+          <p class="card-body">Bitcoin rebounded to $66,421 from an earlier low of $60,000, still down 31% YoY and trading well below the estimated $87K mining production cost. The crypto crash was caused by a perfect storm: (1) institutional derisking as AI rotation draws capital away, (2) margin-call cascade across crypto and precious metals forcing liquidations, (3) deteriorating narrative as BTC failed to act as an inflation hedge like gold. ETH is at $1,920 (−27% monthly), SOL at $81.62 (−58% YoY). The broader crypto market cap is $2.27T, down 4.3% in 24 hours. Some analysts see BTC below production cost as a "capitulation signal" marking a potential bottom.</p>
+          <div class="card-sources"><a class="source-link" href="https://coinmarketcap.com/" target="_blank" rel="noopener">CoinMarketCap <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://tradingeconomics.com/btcusd:cur" target="_blank" rel="noopener">TradingEconomics <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- COMMODITIES -->
+        <article class="card fade-in">
+          <span class="card-tag market">Commodities</span>
+          <h3 class="card-headline">Gold explodes to record $4,900 — safe haven bid as crypto collapses</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">Gold surged 2.58% to $4,902, extending its incredible run (+71% YoY) as investors flee crypto and seek hard assets amid the New START expiration and US-Iran tensions. The move was amplified by the weak dollar (DXY at 97.8, down 9.5% YoY). Silver rallied 5.4% to $74.68 after yesterday's margin-call massacre as bargain hunters stepped in. Oil held near $67 Brent as markets await tomorrow's Oman talks — success would ease supply fears, failure could spike prices.</p>
+          <table class="index-table">
+            <thead>
+              <tr><th>Commodity</th><th>Price</th><th>Day %</th><th>Week %</th><th>Month %</th><th>YTD %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">🥇 Gold</td><td class="idx-level">$4,902</td><td class="chg-pos">+2.58%</td><td class="chg-pos">+0.30%</td><td class="chg-pos">+9.99%</td><td class="chg-pos">+71.42%</td></tr>
+              <tr><td class="idx-name">🥈 Silver</td><td class="idx-level">$74.68</td><td class="chg-pos">+5.42%</td><td class="chg-neg">−11.20%</td><td class="chg-neg">−3.80%</td><td class="chg-pos">+5.50%</td></tr>
+              <tr><td class="idx-name">🛢️ WTI Crude</td><td class="idx-level">$63.02</td><td class="chg-neg">−0.43%</td><td class="chg-neg">−1.50%</td><td class="chg-pos">+12.31%</td><td class="chg-neg">−9.80%</td></tr>
+              <tr><td class="idx-name">🛢️ Brent Crude</td><td class="idx-level">$67.34</td><td class="chg-neg">−0.31%</td><td class="chg-neg">−1.42%</td><td class="chg-pos">+12.31%</td><td class="chg-neg">−9.80%</td></tr>
+              <tr><td class="idx-name">🔧 Copper</td><td class="idx-level">$5.81</td><td class="chg-neg">−0.22%</td><td class="chg-neg">−2.00%</td><td class="chg-neg">−1.00%</td><td class="chg-pos">+2.00%</td></tr>
+              <tr><td class="idx-name">⚡ Natural Gas</td><td class="idx-level">$3.64</td><td class="chg-pos">+3.63%</td><td class="chg-pos">+2.50%</td><td class="chg-pos">+8.00%</td><td class="chg-pos">+15.00%</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://tradingeconomics.com/commodities" target="_blank" rel="noopener">TradingEconomics <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- FX & BONDS -->
+        <article class="card fade-in">
+          <span class="card-tag market">FX &amp; Bonds</span>
+          <h3 class="card-headline">Yen steady at ¥157 ahead of election — dollar weakness persists</h3>
+          <p class="card-body" style="margin-bottom: 0.75rem;">USD/JPY held at ¥157.08, with markets avoiding large yen bets until Sunday's election clarifies Japan's fiscal direction. PM Takaichi has talked up the benefits of a weaker yen citing Japan's massive forex reserves, which could signal BOJ policy divergence if she wins as expected. The dollar index (DXY) remains weak at 97.8, down nearly 10% YoY, as markets question Trump's tariff threats. US 10Y yield at 4.19% steady; Japan 10Y at 2.23% reflecting BOJ normalization.</p>
+          <table class="index-table">
+            <thead>
+              <tr><th>Pair / Rate</th><th>Level</th><th>Day %</th><th>Week %</th><th>YTD %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="idx-name">💵 DXY</td><td class="idx-level">97.82</td><td class="chg-neg">−0.01%</td><td class="chg-pos">+0.80%</td><td class="chg-neg">−9.50%</td></tr>
+              <tr><td class="idx-name">💴 USD/JPY</td><td class="idx-level">157.08</td><td class="chg-pos">+0.02%</td><td class="chg-pos">+0.20%</td><td class="chg-pos">+3.73%</td></tr>
+              <tr><td class="idx-name">🇪🇺 EUR/USD</td><td class="idx-level">1.1792</td><td class="chg-pos">+0.12%</td><td class="chg-neg">−0.40%</td><td class="chg-pos">+8.50%</td></tr>
+              <tr><td class="idx-name">🇬🇧 GBP/USD</td><td class="idx-level">1.3590</td><td class="chg-pos">+0.46%</td><td class="chg-neg">−0.80%</td><td class="chg-pos">+7.20%</td></tr>
+              <tr><td class="idx-name">🇺🇸 10Y Yield</td><td class="idx-level">4.19%</td><td>+1bp</td><td>−5bp</td><td>+2bp</td></tr>
+              <tr><td class="idx-name">🇯🇵 10Y Yield</td><td class="idx-level">2.23%</td><td>+1bp</td><td>−2bp</td><td>+16bp</td></tr>
+            </tbody>
+          </table>
+          <div class="card-sources"><a class="source-link" href="https://tradingeconomics.com/currencies" target="_blank" rel="noopener">TradingEconomics <span class="src-arrow">↗</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- JAPAN IN-DEPTH -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <h2 class="section-title japan">Japan — in-depth</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- 1. TRUMP ENDORSEMENT -->
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">Politics · Breaking</span>
+          <h3 class="card-headline">Trump endorses Takaichi — rare US presidential backing for foreign election</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">In an extraordinary diplomatic move, President Trump publicly endorsed PM Sanae Takaichi two days before Japan's election because Takaichi's strong pro-US security stance and commitment to increased defense spending aligns with Trump's demands that allies "pay their fair share." This is extremely rare — US presidents almost never endorse foreign candidates. Trump and Takaichi are scheduled to meet March 19 at the White House. Why it matters: The endorsement could boost turnout among nationalist voters, though may trigger backlash from voters wary of foreign interference.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/trump-endorses-japanese-pm-takaichi-ahead-of-sunday-election" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/articles/c5yd14r2mgno" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 2. NIKKEI ATH -->
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">Markets · Breaking</span>
+          <h3 class="card-headline">Nikkei surges to all-time high at 55,361 — election euphoria ignites rally</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">The Nikkei 225 exploded 2.87% to 55,361, smashing through its previous record, because investors are positioning bullishly ahead of Sunday's election expecting Takaichi's LDP coalition to win by a landslide. The rally was driven by tech stocks (SoftBank +2.2%, Advantest +1.2%, Lasertec +4.5%) and export giants (Toyota +2%, Sony +4.8%) that benefit from the weaker yen. For the week, Nikkei gained 1.75% and Topix 3.72%. Japan's top 3 banks are on track for record profits due to higher interest rates boosting lending income.</p>
+          <div class="card-sources"><a class="source-link" href="https://tradingeconomics.com/japan/stock-market" target="_blank" rel="noopener">TradingEconomics <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://asia.nikkei.com/business/markets/equities/nikkei-stock-index-ends-at-record-high-on-election-speculation" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 3. TOYOTA CEO -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Corporate · Breaking</span>
+          <h3 class="card-headline">Toyota names CFO Kenta Kon as new CEO in surprise leadership change</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">Toyota announced CEO Koji Sato will be replaced by CFO Kenta Kon in a surprise leadership reshuffle because the company needs financial discipline during the costly EV transition and massive investment in next-generation solid-state batteries. Kon's finance background signals Toyota is prioritizing capital efficiency over engineering vision. The timing — announced during Japan's election campaign — suggests Toyota wants to present stability to markets ahead of potential policy shifts under a Takaichi government.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/companies/toyota-replaces-chief-executive-sato-with-cfo-kon-in-surprise-move" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 4. ELECTION POLL -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Politics · Election</span>
+          <h3 class="card-headline">LDP set for 60%+ lower house win — opposition may lose half its seats</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">Latest Nikkei polls show Takaichi's LDP coalition could win over 60% of lower house seats because she ran a "safe driving" campaign pushing fiscal stimulus while deliberately avoiding controversial policies like the spy prevention law and constitutional revision. The opposition Centrist Reform Alliance may lose half its 167 seats. Key dynamic: "Sana-mania" among young voters continues, with Takaichi's image as a "different kind of PM" resonating despite her conservative credentials. Heavy snowfall forecast for election day could suppress rural turnout.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/japan-election/japan-s-ruling-parties-could-win-over-60-of-lower-house-nikkei-poll-shows" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 5. RENESAS -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Semiconductors</span>
+          <h3 class="card-headline">Renesas sinks into red — Japan's legacy chipmaker misses AI boom</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">Renesas Electronics reported a surprise loss because the company's focus on automotive and industrial chips — segments experiencing an inventory correction — left it without exposure to the data center GPU market driving Nvidia's gains. The contrast with TSMC's Japan expansion (now confirmed for 3nm production) highlights the bifurcation within Japan's chip sector: foundry winners vs. legacy chip losers. Analysts warn Renesas needs a strategic pivot to remain competitive.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/business/tech/semiconductors/japan-chipmaker-renesas-sinks-into-red-missing-out-on-ai-boom" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 6. TOURISM -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Tourism · Crisis</span>
+          <h3 class="card-headline">Cherry blossom festival cancelled — "foreigner fatigue" hits breaking point</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">Arakurayama Sengen park near Mt. Fuji cancelled its famous cherry blossom festival because of unruly tourist behavior including trespassing, littering, and "defecating in private yards." The cancellation reflects growing "foreigner fatigue" nationwide as record visitor numbers (39M+ in 2025) strain infrastructure. This underscores Japan's tourism dilemma: needing foreign spending for economic growth but facing intense backlash from residents in popular destinations. Local officials say the situation has become "unmanageable."</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/c1wzrlndzjro" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- 7. MACRON VISIT -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag japan">Diplomacy</span>
+          <h3 class="card-headline">Macron to visit Japan in late March — France seeks closer Asia ties</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body">French President Macron will visit Japan in late March because Paris is seeking to strengthen Indo-Pacific partnerships amid growing China tensions and Trump's transactional approach to alliances. The visit follows Takaichi's scheduled March 19 meeting with Trump, positioning Japan as a key diplomatic hub. France and Japan are expected to discuss defense cooperation, nuclear energy, and technology partnerships.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/politics/international-relations/france-s-macron-to-visit-japan-in-late-march" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- GLOBAL BY CONTINENT -->
+    <section class="section" id="global">
+      <div class="section-header">
+        <h2 class="section-title geo">Global by continent</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- NORTH AMERICA -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🇺🇸 North America</span>
+          <h3 class="card-headline">US-Iran talks tomorrow in Oman · Amazon $200B capex shock · Job cuts hit 2009 high</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><span class="list-header">1. US-Iran nuclear talks Friday:</span> Critical negotiations begin in Oman because Tehran conditionally agreed after the US shot down an Iranian drone approaching a carrier. Trump is pushing for a broader discussion including missiles and regional activities; Iran wants focus on sanctions relief. Success = oil down, risk-on; failure = escalation fears spike. Trump warned Khamenei to be "very worried."<br><br><span class="list-header">2. Amazon's $200B capex bombshell:</span> Amazon shocked Wall Street by announcing plans to spend $200 billion on AI infrastructure in 2026, causing shares to slide nearly 8% in premarket because spending is outpacing cloud revenue growth, sparking fears of an AI capex bubble across the tech sector.<br><br><span class="list-header">3. Job cuts at 2009 highs:</span> US job cuts reached 108,400 in January — the highest for the month since 2009 — because companies are restructuring ahead of potential tariffs and AI automation, while initial claims rose to 231K.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cr57g1y8286o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- EUROPE -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🇪🇺 Europe</span>
+          <h3 class="card-headline">Russian general shot in Moscow · New START expires · Winter Olympics open</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><span class="list-header">1. Russian general shot in Moscow:</span> Lt Gen Vladimir Alexeyev, a senior figure in Russia's military general staff, was shot several times in Moscow because anti-war sabotage operations have intensified as Ukraine announced 55,000 soldiers killed in the conflict. Russia and Ukraine exchanged 317 prisoners in the first swap since October as peace talks stalled.<br><br><span class="list-header">2. New START expires without replacement:</span> The US-Russia nuclear arms control treaty expired today because Trump rejected Putin's extension offer. For the first time since 1972, there's no binding limit on superpower nuclear arsenals — a structural risk increase for global stability. Trump wants a trilateral US-China-Russia deal instead.<br><br><span class="list-header">3. Milan-Cortina Winter Olympics open:</span> The Winter Olympics opening ceremony takes place Friday, with Italy foiling "Russian origin" cyber-attacks targeting the games. Lindsey Vonn competing despite a torn ACL has captured global attention.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/c3686nzexp3o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/articles/c4g31n4ey9go" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- ASIA EX-JAPAN -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🌏 Asia ex-Japan</span>
+          <h3 class="card-headline">Thailand election Sunday · Indonesia Moody's downgrade · Pakistan mosque blast kills 31</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><span class="list-header">1. Thailand also votes Sunday:</span> Thailand's election will test the military-royalist establishment because the opposition People's Party leads polls after its predecessor was dissolved by courts. A progressive win would escalate the constitutional confrontation. Key to watch: whether progressives can translate polls into actual power.<br><br><span class="list-header">2. Indonesia's Moody's blow:</span> Moody's revised Indonesia's outlook to "negative" because of fiscal deterioration and the ongoing stock market manipulation scandal. Jakarta's JCI crashed 2.25% today, now down nearly 9% YTD — Asia's worst performer. Experts warn of a "crisis of confidence."<br><br><span class="list-header">3. Pakistan mosque bombing:</span> At least 31 people were killed in an explosion at a mosque in Islamabad during Friday prayers because security failures allowed a suspected suicide bomber to reach the site. Dozens more were injured in one of Pakistan's deadliest attacks this year.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cp820jrq3yvo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://asia.nikkei.com/economy/indonesia-s-stocks-tumble-as-moody-s-revises-outlook-to-negative" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- MIDDLE EAST & AFRICA -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🌍 Middle East & Africa</span>
+          <h3 class="card-headline">US-Iran Oman talks tomorrow · Israel herbicide accusations · Nigeria massacre 170+</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><span class="list-header">1. US-Iran Oman talks Friday:</span> Critical nuclear negotiations begin in Oman because both sides want to avoid escalation after the US shot down an Iranian drone approaching an aircraft carrier. Iran's president said Tehran is ready for "fair and equitable" talks, while US has built up military presence. Success = oil down, risk-on; failure = regional war fears spike.<br><br><span class="list-header">2. Israel herbicide accusations:</span> Lebanon accused Israel of spraying cancer-linked glyphosate herbicide over southern villages with extensive farmland because tensions continue post-ceasefire. Israel declined to comment. The accusation could complicate fragile peace arrangements.<br><br><span class="list-header">3. Nigeria massacre 170+:</span> Gunmen massacred at least 170 Muslims in Nigeria's Kwara and Katsina states because victims refused to join jihadist groups. At least 78 bodies have been buried, with fears the toll could reach 200. This highlights the security vacuum in Nigeria's north.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cr57g1y8286o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/articles/ckgvllk3lx9o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- LATIN AMERICA -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🌎 Latin America</span>
+          <h3 class="card-headline">Costa Rica elects tough-on-crime president · Mexico tariffs hit India · Cuba signals talks</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><span class="list-header">1. Costa Rica election winner:</span> Laura Fernández won Costa Rica's presidential election outright in the first round because voters prioritized her tough-on-crime platform amid rising concern about organized crime infiltration. The decisive victory reflects a regional trend toward security-focused candidates.<br><br><span class="list-header">2. Mexico tariffs devastate India:</span> Mexico's steep tariff hikes are devastating several Indian industries because exporters are facing a "double whammy" — already reeling from crushing US tariffs, now hit by Mexican barriers. The moves reflect global trade fragmentation under Trump's influence.<br><br><span class="list-header">3. Cuba open to talks:</span> Cuba signaled readiness for US talks "without pressure" because Havana desperately needs sanctions relief amid ongoing fuel shortages and economic crisis. The overture comes despite months of Trump threats against the island.</p>
+          <div class="card-sources"><a class="source-link" href="https://www.bbc.com/news/articles/cdre7me407yo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.aljazeera.com/economy/2026/2/6/mexicos-tariffs-on-india-are-a-double-whammy-after-us-tariffs" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a></div>
+        </article>
+
+        <!-- OCEANIA -->
+        <article class="card fade-in collapsible">
+          <span class="card-tag geo">🌏 Oceania</span>
+          <h3 class="card-headline">ASX tumbles 2.25% · RBA hikes rates · Queen coin controversy</h3>
+          <div class="tap-hint">Tap to read more</div>
+          <p class="card-body"><span class="list-header">1. ASX selloff:</span> Australia's ASX 200 fell 2.25% because global risk-off sentiment from the crypto crash and AI rotation fears spread to commodity-heavy markets. Mining stocks led losses as copper and iron ore weakened.<br><br><span class="list-header">2. RBA rate hike:</span> Australia's central bank raised rates to 3.85% — the first hike in over 2 years — because inflation ticked up despite slowing growth. The hawkish surprise pressured equities and strengthened AUD.<br><br><span class="list-header">3. Queen coin controversy:</span> Australia's Royal Mint faced criticism over a coin portrait of the late Queen Elizabeth II because the design was deemed unflattering. The Mint defended the coins marking 100 years since her birth, but the backlash highlights sensitivity around royal imagery.</p>
+          <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/economy/australian-central-bank-raises-key-interest-rate-to-3.85" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news/articles/c70l0wzww50o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PREDICTIONS -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <h2 class="section-title predict">Predictions</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in">
+          <span class="card-tag predict">Week Ahead</span>
+          <h3 class="card-headline">Election double-header · Iran talks · Fed speak</h3>
+          <p class="card-body"><span class="list-header">Sunday Feb 8:</span> Japan & Thailand elections — both expected to produce significant results. Japan's LDP poised for 60%+ win; Thailand's progressives leading polls.<br><br><span class="list-header">Friday Feb 7:</span> US-Iran nuclear talks in Oman — the key swing factor for oil and geopolitics. Success = oil drops to $60, risk-on rally; failure = oil spikes to $75+, defense stocks surge.<br><br><span class="list-header">Weekly:</span> Fed officials speaking throughout — watch for signals on rate path. Jobs data already weak (108K cuts), but markets pricing June rate cut. Crypto volatility likely to continue as BTC tests support.</p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag predict">Year Outlook</span>
+          <h3 class="card-headline">2026 themes crystallizing — Japan boom, crypto winter, gold supercycle</h3>
+          <p class="card-body"><span class="list-header">Japan renaissance:</span> Nikkei at all-time highs (+43% YoY), driven by BOJ normalization, weak yen, and Takaichi's fiscal expansion. Market pricing in structural outperformance.<br><br><span class="list-header">Crypto winter 2.0:</span> Bitcoin down 31% YoY, below production cost. The "digital gold" narrative has collapsed as actual gold surges. Recovery requires new catalysts.<br><br><span class="list-header">Gold supercycle:</span> At $4,900 (+71% YoY), gold is the clear winner of 2025-2026. Weak dollar, geopolitical uncertainty, and central bank buying support further gains. Analysts target $5,500.<br><br><span class="list-header">Nuclear risk premium:</span> New START expiration introduces structural risk. Defense spending globally set to surge. Watch for NATO/AUKUS acceleration.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BOTTOM LINE -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line">
+        <div class="section-header">
+          <h2 class="section-title bottom">💡 Bottom line</h2>
+        </div>
+        <p>Japan is having a moment. The Nikkei hit an all-time high today, up 43% year-over-year, as markets bet on a Takaichi landslide Sunday and her fiscally expansive agenda. Trump's endorsement — extraordinarily rare for a foreign election — signals the US-Japan alliance will only deepen. Meanwhile, crypto winter 2.0 is brutal: Bitcoin at $66K is now below mining production cost, down 31% from last year, while gold explodes to $4,900 (+71% YoY) as the "real" safe haven asset. Tomorrow's US-Iran talks in Oman are the week's swing factor — success brings relief, failure brings escalation. The New START expiration today adds a new nuclear risk premium to global markets. Bottom line: Position for Japanese outperformance, avoid crypto until capitulation completes, and watch Oman closely.</p>
+        <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp; <a class="source-link" href="https://tradingeconomics.com/" target="_blank" rel="noopener">TradingEconomics <span class="src-arrow">↗</span></a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CEO Daily Briefing · Evening Edition · Feb 6, 2026 · 10:00 PM JST<br>
+    Updated in real-time as stories develop · <a href="archive.html">View archives</a></p>
+  </footer>
+
+  <script>
+    // Collapsible cards
+    document.querySelectorAll('.card.collapsible').forEach(card => {
+      card.addEventListener('click', () => card.classList.toggle('expanded'));
+    });
+
+    // Methodology toggle
+    document.querySelectorAll('.methodology-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggle.querySelector('.arrow').classList.toggle('open');
+        toggle.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    // Health gauge animation
+    const score = 64;
+    const needle = document.getElementById('gaugeNeedle');
+    const rotation = ((score / 100) * 180) - 90;
+    setTimeout(() => {
+      needle.style.transform = `rotate(${rotation}deg)`;
+    }, 300);
+  </script>
+
+</body>
+</html>
