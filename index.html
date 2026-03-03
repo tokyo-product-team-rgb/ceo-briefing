@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEO Morning Briefing — Mar 2, 2026</title>
+  <title>CEO Afternoon Briefing — Mar 3, 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -198,87 +198,122 @@
     }
 
     .section-icon {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
 
     .section-title {
       font-family: var(--serif);
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 500;
-      color: var(--text);
+      letter-spacing: -0.02em;
     }
 
     .cards {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .cards-grid {
-        grid-template-columns: 1fr;
-      }
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
     }
 
     .card {
       background: var(--surface);
-      padding: 1.5rem;
+      border: 1px solid var(--border);
       border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow 0.2s, transform 0.2s;
+      padding: 1.5rem;
+      transition: box-shadow 0.2s ease;
     }
 
     .card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
     }
 
     .card.featured {
-      padding-left: 1.5rem;
-      border-left: 4px solid var(--text);
+      border-left: 3px solid var(--bg-accent);
+    }
+
+    .card.featured.japan {
+      border-left: 3px solid #C53030;
     }
 
     .card-tag {
       display: inline-block;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
       color: var(--text-muted);
       margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .card-tag.japan {
+      color: #C53030;
     }
 
     .card-headline {
       font-family: var(--serif);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 500;
-      line-height: 1.4;
+      line-height: 1.35;
       color: var(--text);
       margin-bottom: 0.75rem;
     }
 
+    .card-body {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .card-sources {
+      margin-top: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .source-link {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-link);
+      text-decoration: none;
+      padding: 0.15rem 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    .source-link:hover {
+      border-color: var(--text-link);
+      background: var(--bg-tertiary);
+    }
+
+    .src-arrow { font-size: 0.6rem; }
+
+    .stat {
+      font-weight: 600;
+      color: var(--text);
+    }
+
     .tap-hint {
-      display: none;
       font-size: 0.7rem;
       color: var(--text-muted);
       margin-bottom: 0.5rem;
+      font-style: italic;
     }
 
-    .collapsible .tap-hint {
-      display: block;
-    }
-
-    .collapsible .card-body {
+    .collapsible .card-body,
+    .collapsible .card-sources {
       display: none;
     }
 
-    .collapsible.expanded .card-body {
+    .collapsible.expanded .card-body,
+    .collapsible.expanded .card-sources {
       display: block;
     }
 
@@ -286,21 +321,8 @@
       display: none;
     }
 
-    .card-body {
-      font-size: 1rem;
-      font-style: normal;
-      line-height: 1.85;
-      color: var(--text-secondary);
-    }
-
-    .footer {
-      text-align: center;
-      padding: 2rem 1.5rem 3rem;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-      max-width: 900px;
-      margin: 0 auto;
+    .collapsible {
+      cursor: pointer;
     }
 
     .nav-pills {
@@ -308,76 +330,70 @@
       justify-content: center;
       gap: 0.5rem;
       padding: 1rem 1.5rem;
-      max-width: 900px;
-      margin: 0 auto;
       flex-wrap: wrap;
     }
 
     .nav-pill {
       font-family: var(--sans);
       font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
+      font-weight: 500;
       text-decoration: none;
-      padding: 0.4em 1em;
-      border-radius: 20px;
+      color: var(--text-muted);
+      padding: 0.35rem 0.85rem;
       border: 1px solid var(--border);
-      color: var(--text-secondary);
-      background: var(--surface);
+      border-radius: 999px;
       transition: all 0.2s;
     }
 
     .nav-pill:hover {
-      border-color: var(--text);
-      color: var(--text);
-      box-shadow: var(--shadow-sm);
+      border-color: var(--text-secondary);
+      color: var(--text-secondary);
     }
 
-    .stat {
-      font-family: var(--sans);
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .card-body .stat { font-size: 0.95rem; }
-
+    /* Tables */
     .index-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
     }
+
     .index-table th {
-      text-align: left;
       font-weight: 600;
-      font-size: 0.7rem;
-      letter-spacing: 0.02em;
-      color: var(--text-muted);
-      padding: 0.5rem 0.6rem;
+      text-align: left;
+      padding: 0.5rem 0.75rem;
       border-bottom: 2px solid var(--border);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
     }
+
     .index-table td {
-      padding: 0.6rem;
-      border-bottom: none;
-      vertical-align: middle;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
     }
-    .index-table tr:last-child td { border-bottom: none; }
-    .index-table .idx-name { font-weight: 600; color: var(--text); }
-    .index-table .idx-level { font-family: var(--sans); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+    .idx-name { font-weight: 500; }
+    .idx-level { font-weight: 600; }
     .chg-pos { color: var(--green); font-weight: 600; }
     .chg-neg { color: var(--red); font-weight: 600; }
 
+    /* Health Gauge */
     .health-gauge-wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 1.5rem 0 0.5rem;
+      padding: 1.5rem 0;
     }
+
     .health-gauge {
       position: relative;
       width: 200px;
-      height: 110px;
+      height: 100px;
       overflow: hidden;
     }
+
     .gauge-bg {
       position: absolute;
       width: 200px;
@@ -385,26 +401,29 @@
       border-radius: 50%;
       background: conic-gradient(
         from 180deg,
-        #B94A48 0deg,
-        #E07A3F 72deg,
-        #E3B341 108deg,
-        #2A8F87 144deg,
-        #1D736C 180deg
+        #e74c3c 0deg,
+        #e67e22 45deg,
+        #f1c40f 90deg,
+        #2ecc71 135deg,
+        #27ae60 180deg
       );
       mask: radial-gradient(circle at center, transparent 60px, black 61px);
       -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
     }
+
     .gauge-needle {
       position: absolute;
       bottom: 0;
       left: 50%;
       width: 3px;
-      height: 75px;
+      height: 80px;
       background: var(--text);
-      border-radius: 2px;
       transform-origin: bottom center;
-      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform: rotate(-90deg);
+      transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+      border-radius: 2px;
     }
+
     .gauge-dot {
       position: absolute;
       bottom: -5px;
@@ -414,179 +433,108 @@
       height: 12px;
       background: var(--text);
       border-radius: 50%;
-      border: 2px solid var(--surface);
     }
-    .gauge-score {
-      font-family: var(--serif);
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--text);
-      margin-top: 0.25rem;
-    }
-    .gauge-score-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: var(--text-muted);
-    }
+
     .gauge-scale {
       display: flex;
       justify-content: space-between;
       width: 200px;
-      margin-top: 0.15rem;
-    }
-    .gauge-scale span {
-      font-size: 0.6rem;
-      font-weight: 600;
+      font-size: 0.7rem;
       color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .gauge-score {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 0.5rem;
+    }
+
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--red);
     }
 
     .indicator-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
-      margin-top: 1rem;
+      gap: 1rem;
+      margin-top: 1.5rem;
     }
-    @media (max-width: 640px) {
-      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+
     .indicator-item {
       text-align: center;
-      padding: 0.75rem 0.5rem;
-      background: var(--bg);
-      border-radius: 6px;
     }
+
     .indicator-value {
-      font-family: var(--sans);
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      color: var(--text);
     }
+
     .indicator-name {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      margin-top: 0.15rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-top: 0.25rem;
     }
+
     .indicator-sub {
       font-size: 0.65rem;
-      font-weight: 600;
-      margin-top: 0.1rem;
-    }
-
-    .source-link {
-      display: inline-block;
-      margin-top: 0.6rem;
-      font-size: 0.68rem;
-      font-weight: 500;
       color: var(--text-muted);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: color 0.2s;
     }
-    .source-link:hover { color: var(--text-secondary); }
-    .source-link .src-arrow {
-      font-size: 0.6rem;
-      margin-left: 0.1rem;
-      display: inline-block;
-      transition: transform 0.2s;
-    }
-    .source-link:hover .src-arrow { transform: translate(1px, -1px); }
-    .card-sources {
-      margin-top: 0.6rem;
-      padding-top: 0.45rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(12px);
-      animation: fadeUp 0.5s ease forwards;
-    }
-
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .section:nth-child(1) .card { animation-delay: 0.05s; }
-    .section:nth-child(1) .card:nth-child(2) { animation-delay: 0.1s; }
-    .section:nth-child(1) .card:nth-child(3) { animation-delay: 0.15s; }
-
-    .status-badge {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      padding: 0.2em 0.7em;
-      border-radius: 10px;
-    }
-    .status-badge.normal { background: #dcfce7; color: #166534; }
-    .status-badge.caution { background: #fef9c3; color: #854d0e; }
-    .status-badge.alert { background: #fecaca; color: #991b1b; }
 
     .bottom-line {
       background: var(--text);
-      color: var(--surface);
-      padding: 1.5rem;
+      color: #f5f5f5;
       border-radius: var(--radius);
-      margin-top: 2rem;
-    }
-    .bottom-line h3 {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      margin-bottom: 0.75rem;
-    }
-    .bottom-line p {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      opacity: 0.9;
+      padding: 2rem;
     }
 
-    @media print {
-      body { background: #fff; }
-      .card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
-      .bottom-line { background: #333; }
-      .nav-pills { display: none; }
+    .bottom-line h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .bottom-line p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #d4d4d4;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 640px) {
-      html, body {
-        overflow-x: hidden;
-      }
-      .card {
-        background: transparent;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0 0 1.5rem 0;
-        margin-bottom: 1.5rem;
-        border: none;
-        border-bottom: 1px solid var(--border, #E8E5E1);
-      }
-      .card:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-      .card:hover {
-        box-shadow: none;
-        transform: none;
-      }
-      .container {
-        width: calc(100vw - 32px);
-        max-width: calc(100vw - 32px);
-        padding: 2rem 0 4rem;
-        margin: 0 auto;
-      }
-      .card.featured {
-        padding-left: 0;
-      }
-      .footer {
-        padding: 2rem 0 3rem;
-      }
+      .cards-grid { grid-template-columns: 1fr; }
+      .card { border-radius: 0; border-left: none; border-right: none; border-top: none; border-bottom: 1px solid var(--border); box-shadow: none; }
+      .card.featured { border-left: none; border-bottom: 2px solid var(--bg-accent); }
+      .card.featured.japan { border-left: none; border-bottom: 2px solid #C53030; }
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+      .bottom-line { border-radius: 0; }
+      .nav-pills { display: none; }
+      .bottom-line { background: #333; }
+      .index-table { font-size: 0.7rem; }
+      .index-table td, .index-table th { padding: 0.4rem 0.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .masthead-inner { padding: 1.5rem 1rem 1.5rem; }
+      .container { padding: 1.5rem 1rem 3rem; }
       .nav-pills {
-        padding: 1rem 0;
+        justify-content: flex-start;
+        overflow-x: auto;
       }
       .bottom-line {
-        padding: 1.5rem 0;
+        padding: 1.5rem;
       }
     }
   </style>
@@ -607,10 +555,10 @@
       <a href="ja.html">JA</a>
     </div>
     <div class="masthead-inner">
-      <div class="overline">EVENING INTELLIGENCE BRIEF</div>
-      <h1>CEO Evening Briefing</h1>
-      <div class="edition-date">Monday, March 2, 2026 — 10:00 PM JST</div>
-      <div class="edition-sub">⚠️ DAY 3: Iran Conflict Widens · Nikkei −1.35% · Oil +8% · US Futures −1.3% · Gold $5,368 · Hormuz Blocked</div>
+      <div class="overline">AFTERNOON INTELLIGENCE BRIEF</div>
+      <h1>CEO Afternoon Briefing</h1>
+      <div class="edition-date">Tuesday, March 3, 2026 — 3:00 PM JST</div>
+      <div class="edition-sub">⚠️ DAY 4: US Embassy in Riyadh Hit · Nikkei −2.49% · KOSPI −5.37% · Brent $79 · 6 US KIA · Hormuz Blockade Deepens</div>
       <div class="divider-bar"></div>
     </div>
   </header>
@@ -636,88 +584,77 @@
 
         <article class="card featured japan fade-in collapsible">
           <span class="card-tag japan">MARKETS · CLOSE</span>
-          <h3 class="card-headline">Nikkei Closes at 58,057 (−1.35%) — Airlines Crushed but Index Pares Losses as Panic Moderates</h3>
+          <h3 class="card-headline">Nikkei Crashes −2.49% to 56,612 — Extends Monday Losses as Oil Shock and KOSPI Panic Drag Asia</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body">The Nikkei 225 closed Monday at <span class="stat">58,057.24</span>, down <span class="stat">793.03 points (−1.35%)</span>, paring from intraday lows of nearly −2%. The Topix fell <span class="stat">−1.02% to 3,898.42</span>. <strong>Why:</strong> Japan's near-total dependence on Middle Eastern seaborne oil (90% of crude imports transit the Strait of Hormuz) made it one of the hardest-hit major markets as the US-Iran conflict entered its third day. Airlines were devastated—ANA and JAL each dropped over 5% as surging jet fuel costs and Middle East airspace closures disrupted operations. Singapore Airlines fell more than 5%, Cathay Pacific −4.2%. The sell-off pared from worse intraday lows as investors digested that the conflict, while severe, hasn't yet produced a full physical Hormuz blockade. February's rally absorbed the hit—March is starting from a much more cautious posture.</p>
+          <p class="card-body">The Nikkei 225 closed Tuesday at <span class="stat">56,612</span>, down <span class="stat">−2.49%</span>, extending Monday's −1.35% decline. The Topix fell <span class="stat">−2.47%</span>. <strong>Why:</strong> Three factors drove the deepening sell-off: (1) South Korea's KOSPI plunged −5.37% on its first trading day back from holiday, triggering a sidecar circuit breaker on futures — the panic in Seoul cascaded across Asian markets; (2) Iran's announcement of the Hormuz blockade hardened overnight, with threats to target any vessel attempting transit, directly threatening Japan's ~3.5 million barrel/day oil imports; (3) the US Embassy in Riyadh was struck by drones overnight, signaling the conflict is widening beyond Iran into key Gulf ally territory. Energy and consumer cyclicals led losses. Airlines, shipping, and import-dependent manufacturers were hit hardest.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.nikkei.com/" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://www.cnbc.com/2026/03/02/asia-markets-live-trump-iran-oil-prices-nikkei-hang-seng-us-israel-strikes-oil.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/03/asia-markets-live-iran-oil-trump-nikkei-kospi-hang-seng.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible">
-          <span class="card-tag japan">ENERGY · DEFENSE ROTATION</span>
-          <h3 class="card-headline">Inpex Surges 5%, Defense Stocks Rise — Sharp Sector Rotation as Oil Shock Creates Winners and Losers</h3>
+          <span class="card-tag japan">ENERGY · CRITICAL</span>
+          <h3 class="card-headline">Japan's Hormuz Exposure Now Center Stage — 90% of Crude Imports at Risk as Blockade Enters Day 2</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> While the broader market fell, energy and defense stocks diverged sharply upward. Inpex (Japan's largest oil producer) surged as much as <span class="stat">5%</span> as crude prices spiked, directly benefiting from higher oil realizations. Defense names also gained: Kawasaki Heavy Industries <span class="stat">+2%+</span>, IHI <span class="stat">+2%+</span>, and Mitsubishi Heavy Industries <span class="stat">+0.47%</span>. <strong>Cause:</strong> The market is repricing Japan's defense sector on expectations that the Iran conflict will accelerate Tokyo's defense spending plans under PM Takaichi's already-hawkish security posture. The rotation out of airlines/transport into energy/defense is classic wartime market behavior—investors hedging oil exposure while positioning for increased military procurement budgets.</p>
+          <p class="card-body"><strong>Why this escalated since yesterday:</strong> Iran's Revolutionary Guard confirmed the Strait of Hormuz is "closed" and warned any vessel attempting passage will be targeted. Japan imports ~90% of its crude oil through the Strait, making it one of the most vulnerable major economies. <strong>What changed today:</strong> Nomura issued a note identifying Thailand, India, Korea, and the Philippines as the most oil-price-vulnerable Asian economies, with Japan's energy import bill projected to balloon by ¥1.5-2 trillion annually if Brent sustains above $80. METI is coordinating with IEA partners on emergency strategic petroleum reserve releases — Japan holds ~130 days of reserves. Shipping insurers are now quoting war risk premiums of $5-8/barrel for Japan-bound tankers, up from $2-5 yesterday.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/02/asia-markets-live-trump-iran-oil-prices-nikkei-hang-seng-us-israel-strikes-oil.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured japan fade-in collapsible">
-          <span class="card-tag japan">DIPLOMACY · ENERGY SECURITY</span>
-          <h3 class="card-headline">METI Activates Emergency Energy Monitoring — Japan Walks Diplomatic Tightrope Between Gulf Allies and Washington</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why this escalated since morning:</strong> Iran's Revolutionary Guard issued VHF radio warnings that "no ship is allowed to pass the Strait of Hormuz," and global shipping giants Maersk, MSC, and Hapag-Lloyd have suspended all vessel transit through the route. Iran's IRGC also struck oil tankers in the Gulf. For Japan, which imports ~3.5 million barrels/day through Hormuz, this is an existential energy threat. METI is monitoring strategic petroleum reserves (~130 days of consumption) and coordinating with IEA partners on potential emergency oil sharing. <strong>Diplomatic bind:</strong> Japan must support its US alliance while protecting relationships with Gulf states (UAE, Saudi, Kuwait) that are themselves under Iranian missile attack—Tokyo is calling for "restraint from all parties" while quietly securing alternative supply commitments.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.reuters.com/world/middle-east/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/03/strait-of-hormuz-closure-which-countries-will-be-hit-the-most.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible">
           <span class="card-tag japan">BOJ · MONETARY POLICY</span>
-          <h3 class="card-headline">BOJ Summary of Opinions Due Tomorrow — But Iran Shock Has Already Changed the Calculus</h3>
+          <h3 class="card-headline">BOJ Summary of Opinions Released — But Iran Oil Shock Has Already Overtaken the January Narrative</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> The BOJ's Summary of Opinions from the January meeting (due Tuesday Mar 3) was drafted before the Iran strikes, making it partially stale on arrival. However, markets will scrutinize it for any hawkish vs dovish tilt. The real question: <strong>does the oil shock change the BOJ's rate path?</strong> Higher oil pushes inflation up (bad for consumers, argues for tightening) but also threatens growth (argues for accommodation). Under Takaichi's dovish BOJ appointments, the board is likely to prioritize stability over normalization. USD/JPY is being pulled in two directions—risk-off yen strength vs. oil-import-driven weakness. If the conflict persists, the BOJ may delay any rate action well into Q2.</p>
+          <p class="card-body"><strong>Why:</strong> The BOJ's Summary of Opinions from its January meeting was published today as scheduled. Board members discussed inflation trends and gradual normalization, but the document is effectively stale — drafted weeks before the Iran conflict erupted. <strong>What markets are actually pricing:</strong> The oil shock creates a dilemma — higher energy costs push CPI up (arguing for tightening), but threaten growth and consumer spending (arguing for accommodation). Under PM Takaichi's dovish BOJ appointments, markets now expect the board to prioritize stability and delay any rate action into Q3 or beyond. USD/JPY is caught between risk-off yen strength and oil-import-driven yen weakness.</p>
           <div class="card-sources">
             <a class="source-link" href="https://www.boj.or.jp/en/" target="_blank" rel="noopener">Bank of Japan <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible">
-          <span class="card-tag japan">SPORTS · TOKYO MARATHON</span>
-          <h3 class="card-headline">Kenya's Kosgei Wins Tokyo Marathon in Course Record 2:14:29 — Rare Bright Spot in Grim Monday</h3>
+          <span class="card-tag japan">DEFENSE · SECTOR</span>
+          <h3 class="card-headline">Japanese Defense Stocks Outperform as KOSPI Defense Peers Surge 20%+ — Takaichi's Security Pivot Accelerates</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why notable:</strong> Brigid Kosgei's commanding victory set a new course record at the Tokyo Marathon with a time of <span class="stat">2:14:29</span>, providing a rare moment of positivity on an otherwise tense Monday. The marathon proceeded as planned despite the geopolitical situation, with Tokyo Metropolitan Police maintaining heightened security. The event drew significant international participation and media attention, offering a brief respite from the wall-to-wall Iran coverage dominating Japanese media.</p>
+          <p class="card-body"><strong>Why:</strong> While the broader Nikkei fell −2.49%, defense names showed relative strength. The signal came from Seoul: Hanwha Aerospace surged <span class="stat">+22%</span>, Lignex1 (air defense) <span class="stat">+30%</span>, Victek and Firstec <span class="stat">+20%+</span> as Korean markets caught up on Iran war pricing. Japanese defense plays — Mitsubishi Heavy, Kawasaki Heavy, IHI — are following the same thematic repricing. <strong>Cause:</strong> The Iran conflict validates PM Takaichi's hawkish defense posture and accelerates expectations for Japan's defense budget to exceed 2% of GDP. Global defense procurement cycles are being pulled forward as governments realize asymmetric threats (drones, missiles) require new air defense and early warning capabilities that these companies supply.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/sport" target="_blank" rel="noopener">BBC Sport <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/03/south-korea-defense-stocks-soar-hanwha-aerospace-iran-us-israel-war.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible">
-          <span class="card-tag japan">POLITICS · FISCAL</span>
-          <h3 class="card-headline">Takaichi Plans Food Tax Suspension Bill — 0% Consumption Tax on Food for Two Years to Ease Inflation Pain</h3>
+          <span class="card-tag japan">DIPLOMACY · EVACUATIONS</span>
+          <h3 class="card-headline">Japan Evacuation of Nationals Continues — FM Motegi Holds Emergency Gulf Diplomacy as Conflict Widens</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> PM Takaichi announced plans to submit a bill suspending the consumption tax on food (cutting it from 8% to 0% for two years) through a cross-party forum agreement expected by summer, with the bill targeted for autumn. <strong>Cause:</strong> Persistent inflation has eroded household purchasing power—the Iran-driven oil shock will make this worse by pushing up food transport and production costs. The tax suspension is a politically palatable stimulus that avoids permanent revenue damage while providing immediate relief. Takaichi is also using this as a coalition-building tool ahead of potential snap elections, offering opposition parties a policy win they can't easily refuse.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.nikkei.com/" target="_blank" rel="noopener">Nikkei <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured japan fade-in collapsible">
-          <span class="card-tag japan">DIPLOMACY · MIDDLE EAST</span>
-          <h3 class="card-headline">FM Motegi Meets 11 Middle East Ambassadors in Marathon Diplomacy — Japan Evacuates Nationals from Israel</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> Foreign Minister Motegi held back-to-back meetings with ambassadors from UAE, Iraq, Oman, Qatar, Kuwait, Saudi Arabia, Syria, Bahrain, Jordan, Israel, and Iran on Monday—an extraordinary diplomatic sprint. Japan expressed condolences over Khamenei's death while opposing Iran's nuclear program and urging de-escalation. Simultaneously, SDF buses began evacuating ~600 Japanese nationals from Israel. <strong>Cause:</strong> Japan's energy dependence on the Gulf makes it uniquely vulnerable—Tokyo must maintain relationships with all sides (Arab Gulf states for oil, Iran for regional stability, US for security alliance) while none of those relationships are fully compatible in the current crisis. The 11-ambassador marathon signals Japan is positioning itself as a potential mediator, leveraging its unique non-combatant status.</p>
+          <p class="card-body"><strong>What's new today:</strong> SDF evacuation operations for ~600 Japanese nationals from Israel and Gulf states continue into their second day. FM Motegi's diplomatic sprint — meeting 11 ambassadors Monday — has shifted to crisis mode as the US Embassy in Riyadh (a key Japanese trade partner) was attacked by drones. <strong>Why Japan's position is uniquely difficult:</strong> Tokyo must simultaneously support the US alliance, protect relationships with Gulf energy suppliers (UAE, Saudi, Qatar), and maintain Japan's non-combatant status — all while Iran threatens the very shipping lanes Japan depends on for survival. The government is walking a tightrope of "restraint from all parties" messaging while quietly coordinating alternative energy supply routes with IEA partners.</p>
           <div class="card-sources">
             <a class="source-link" href="https://mainichi.jp/english/" target="_blank" rel="noopener">Mainichi <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">AWS · TECH IMPACT</span>
+          <h3 class="card-headline">AWS Data Center Outages Hit Japanese Companies — Iran Drone Strikes Take Gulf Cloud Infrastructure Offline</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> Amazon Web Services confirmed drone strikes damaged two data centers in the UAE and one in Bahrain, taking EC2, S3, and other services offline across the Middle East region. Japanese companies with workloads in AWS's me-south-1 (Bahrain) and me-central-1 (UAE) regions face service disruptions. <strong>Broader impact:</strong> Qatar's LNG production halt (after Iranian drones hit Ras Laffan and Mesaieed facilities) also affects Japan — Qatar supplies a significant portion of Japan's LNG imports. The conflict is disrupting not just oil but digital infrastructure and gas supply chains simultaneously. This underscores the concentration risk of Middle East-hosted cloud and energy infrastructure for Japanese businesses.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/02/amazon-says-drone-strikes-damaged-3-facilities-in-uae-and-bahrain.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <div class="cards-grid">
           <article class="card fade-in collapsible">
             <span class="card-tag japan">INSURANCE · SHIPPING</span>
-            <h3 class="card-headline">War Risk Premiums Spike for Japan-Bound Tankers</h3>
+            <h3 class="card-headline">War Risk Premiums Jump to $5-8/bbl for Japan-Bound Tankers</h3>
             <div class="tap-hint">Tap to expand</div>
-            <p class="card-body"><strong>Why:</strong> Insurers are raising prices sharply for tankers transiting the Strait of Hormuz, directly increasing the cost of oil deliveries to Japan. War risk insurance premiums could add $2-5/barrel to Japan's import costs on top of the commodity price spike itself. Japanese trading houses (Mitsui, Mitsubishi Corp, Itochu) that handle physical oil logistics face margin pressure as counterparty risk and transit uncertainty surge.</p>
+            <p class="card-body"><strong>Why:</strong> Insurers doubled war risk premiums overnight as Iran hardened its Hormuz blockade threats. Japan-bound tanker premiums now at $5-8/barrel (up from $2-5 yesterday), directly adding to the cost of every barrel Japan imports. Trading houses Mitsui, Mitsubishi Corp, and Itochu face mounting margin pressure as transit uncertainty compounds commodity price spikes.</p>
           </article>
 
           <article class="card fade-in collapsible">
-            <span class="card-tag japan">CONGRESS · WAR POWERS</span>
-            <h3 class="card-headline">Japan Watches US Congress War Powers Vote</h3>
+            <span class="card-tag japan">POLITICS · FISCAL</span>
+            <h3 class="card-headline">Takaichi's Food Tax Cut Gains Urgency</h3>
             <div class="tap-hint">Tap to expand</div>
-            <p class="card-body"><strong>Why:</strong> The US Congress aims to vote on a war powers resolution this week, which could constrain or authorize extended military operations in Iran. For Japan, the outcome determines whether this is a short surgical operation or a prolonged conflict—the difference between a temporary oil spike and a structural energy crisis. Tokyo is lobbying Washington through diplomatic channels for rapid de-escalation while preparing contingency plans for both scenarios.</p>
+            <p class="card-body"><strong>Why:</strong> PM Takaichi's plan to suspend consumption tax on food (cutting 8% to 0% for two years) gains new urgency as the Iran oil shock will spike food transport and production costs. The bill, targeted for autumn submission, is now being discussed for acceleration as a crisis-response measure. The combination of energy price surges and rising food costs risks a severe cost-of-living squeeze for Japanese households.</p>
           </article>
         </div>
 
@@ -735,71 +672,62 @@
 
         <!-- North America -->
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🇺🇸 NORTH AMERICA · DAY 3</span>
-          <h3 class="card-headline">3 US Service Members Killed — Trump Vows to Continue Operations, Iran Rejects Talks</h3>
+          <span class="card-tag">🇺🇸 NORTH AMERICA · DAY 4</span>
+          <h3 class="card-headline">US Embassy in Riyadh Hit by Drones — 6 US Service Members KIA, Trump Promises Response 'Soon'</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>What's new since morning:</strong> The US confirmed three American service members have been killed and five seriously wounded in Iran operations. President Trump warned of further casualties and said the conflict could last up to <span class="stat">four weeks</span>. Trump claimed Iran's new leadership was seeking negotiations, but Iran's security chief Ali Larijani publicly rejected talks, saying "We will not negotiate with the United States" and accusing Trump of "plunging the region into chaos." <strong>Why this matters:</strong> The rejection of negotiations eliminates the near-term diplomatic off-ramp that markets had been hoping for. A 4-week timeline means oil supply disruption is not a one-week event but potentially a month-long crisis. US Congress is moving to vote on a war powers resolution this week—bipartisan support for the operation is uncertain.</p>
+          <p class="card-body"><strong>What's new since morning:</strong> The US Embassy in Saudi Arabia's capital Riyadh was struck by drones — a dramatic escalation that brings the conflict directly to US diplomatic territory in a Gulf ally. Six US service members are now confirmed killed in action. Three US F-15 jets crashed over Kuwait in an apparent friendly fire incident (no casualties). <strong>Why this matters:</strong> The Riyadh embassy strike forces the US to respond — Trump promised retaliation "soon." The US State Department urged Americans in <span class="stat">14 countries</span> to "depart now." Trump said the conflict could go "far longer" than his initial 4-week estimate. Congress aims to vote on a war powers resolution this week, with bipartisan support uncertain. <strong>Cause:</strong> Iran is deliberately targeting US assets across the Gulf to demonstrate reach and impose costs, hoping domestic political pressure in the US will constrain the operation.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/02/us-iran-live-updates-trump-oil-gold.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/03/us-iran-war-live-updates.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/live/cy0dp1l57nxt" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · AI/DEFENSE</span>
+          <h3 class="card-headline">OpenAI's Altman Admits Pentagon Deal 'Looked Opportunistic and Sloppy' — Amends Contract After Backlash</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> OpenAI CEO Sam Altman publicly admitted the company "shouldn't have rushed" its Pentagon defense deal, which was announced Friday — hours after Anthropic was blacklisted and hours before the Iran strikes began. The timing made it appear opportunistic. <strong>What changed:</strong> OpenAI amended the contract to explicitly prohibit use for domestic surveillance of US persons and confirmed the tools won't be used by intelligence agencies like the NSA. <strong>Cause of the backlash:</strong> Anthropic was designated a "supply chain threat" by Defense Secretary Hegseth after refusing unrestricted military use of Claude — then OpenAI immediately signed a deal, looking like it was profiting from a competitor's principled stance. The AI military ethics debate is now the defining industry issue alongside the war itself.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/03/openai-sam-altman-pentagon-deal-amended-surveillance-limits.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible">
           <span class="card-tag">🇺🇸 NORTH AMERICA · MARKETS</span>
-          <h3 class="card-headline">Dow Futures −600pts (−1.28%), S&P −1.32%, Nasdaq −1.71% — Monday Open Will Be Brutal</h3>
+          <h3 class="card-headline">US Futures −0.75% Ahead of Tuesday Open — Monday's Dip-Buying Evaporates as Embassy Strike Rattles Nerves</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> US stock futures tumbled in overnight trading as the Iran conflict entered its third day with no end in sight. Dow futures dropped <span class="stat">over 600 points (−1.28%)</span>, S&P 500 futures lost <span class="stat">−1.32%</span>, and Nasdaq 100 futures declined <span class="stat">−1.71%</span>. The sell-off is driven by three compounding factors: (1) oil surging 8% and feeding directly into inflation fears already elevated from hot PPI data; (2) Hormuz shipping disruption raising the specter of a 1970s-style energy shock; (3) the four-week conflict timeline eliminating hopes for a quick resolution. Defense stocks (RTX, LMT, NOC) are expected to gap up significantly at the US open. The S&P closed Friday at 6,878.88.</p>
+          <p class="card-body"><strong>Why:</strong> S&P 500 futures dropped <span class="stat">−0.75%</span>, Nasdaq 100 futures <span class="stat">−0.89%</span>, Dow futures <span class="stat">−351 points (−0.72%)</span> in pre-market Tuesday. This reverses Monday's late-session dip-buying that saw the S&P close flat (+0.04%) after being down sharply. The Dow had recovered from −600 points intraday to close down just 73 points at <span class="stat">48,904.78</span>. <strong>Cause:</strong> Overnight escalation — the Riyadh embassy drone strike and Iran's continued Hormuz blockade — erased the brief relief from Monday's rebound. Defense stocks (Northrop +6%, Palantir +5.8%) and Nvidia (+3%) propped up Monday's session but futures signal renewed selling. CrowdStrike and Target earnings today provide non-war catalysts.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/02/us-iran-live-updates-trump-oil-gold.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured fade-in collapsible">
-          <span class="card-tag">🇨🇦 NORTH AMERICA · DIPLOMACY</span>
-          <h3 class="card-headline">Canada PM Mark Carney Meets Modi in Historic India Trip — Resetting Relations After 2023 Crisis</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> Canadian PM Mark Carney met Indian PM Narendra Modi in what's being described as a historic trip to reset bilateral relations strained since the 2023 diplomatic crisis over allegations of Indian intelligence involvement in the killing of a Sikh activist in Canada. <strong>Cause:</strong> Both nations have strategic incentives to normalize—Canada needs to diversify trade away from US dependency (especially given Trump's tariff aggression), while India wants to maintain its network of Western partnerships as a counterweight to China. The timing during the Iran crisis adds urgency, as both nations need coordinated energy security strategies.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured fade-in collapsible">
-          <span class="card-tag">🇺🇸 NORTH AMERICA · TRADE</span>
-          <h3 class="card-headline">US Supreme Court Reverses Trump China Tariffs — One-Year Trade Deal Extends Reduced Duties to Nov 2026</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> In a landmark ruling, the US Supreme Court reversed President Trump's unilateral tariffs on China, ruling they exceeded executive authority. This forced the administration to negotiate a one-year trade deal extending reciprocal tariff reductions (US duties on Chinese goods cut to 24% via Executive Order until November 2026), while China suspended its retaliatory tariffs from March 2025, dropping them to 21.9% on US exports. <strong>The deeper cause:</strong> The legal challenge succeeded because courts found Section 301 tariff authority had been stretched beyond Congressional intent. China also lifted non-tariff barriers including entity list restrictions. However, strategic tensions persist—US firms face persistent shortages in rare earths (yttrium, scandium) due to China's export curbs, disrupting aerospace coatings and 5G chip production. Beijing's monopoly leverage on critical minerals remains the unresolved structural issue that no trade deal addresses.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.reuters.com/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/02/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- Europe -->
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🇪🇺 EUROPE · ESCALATION</span>
-          <h3 class="card-headline">RAF Base in Cyprus Hit by Suspected Drone — Lebanon Hezbollah Exchanges Fire with Israel as Conflict Widens</h3>
+          <span class="card-tag">🇪🇺 EUROPE · NUCLEAR DEFENSE</span>
+          <h3 class="card-headline">France Extends Nuclear Umbrella to 8 European Allies — Macron Announces Biggest Defense Shift Since 1960</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>What's new:</strong> RAF Akrotiri in southern Cyprus was targeted in a suspected drone strike, though no casualties were reported. Simultaneously, Hezbollah in Lebanon exchanged fire with Israel, with the IDF ordering residents of 50+ villages in southern Lebanon to evacuate. <strong>Why this is critical:</strong> The conflict is no longer confined to Iran—it's spreading across the entire region. The Cyprus strike brings NATO territory into the firing line for the first time, potentially triggering Article 5 consultations. Hezbollah's reactivation opens a second front that Israel has long feared, and the Lebanon escalation could draw in additional resources away from Iran operations.</p>
+          <p class="card-body"><strong>Why:</strong> President Macron announced France will boost its nuclear arsenal (currently ~300 warheads) and extend deterrence to the UK, Germany, Poland, Netherlands, Belgium, Greece, Sweden, and Denmark under a new "advanced deterrence" strategy. A new nuclear submarine "The Invincible" will launch in 2036. Partner nations can host French nuclear bomber bases and participate in nuclear exercises. <strong>Cause:</strong> The Iran conflict — combined with Russia-Ukraine, Trump's NATO ambiguity, and rising China tensions — has convinced Paris that Europe needs autonomous nuclear deterrence. Polish PM Tusk endorsed it immediately: "We are arming up together with our friends." This is Europe's most significant strategic pivot in 65 years, signaling the continent is preparing for a world where US security guarantees are unreliable.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/articles/cj4zlnezrl7o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🇪🇺 EUROPE · ENERGY</span>
-          <h3 class="card-headline">European Energy Stocks Surge as Oil Shock Fears Compound Existing Fragility</h3>
+          <span class="card-tag">🇬🇧 EUROPE · CLINTON-EPSTEIN</span>
+          <h3 class="card-headline">Clinton Deposition Videos Released in Epstein Case — Leaked Photos and Pizzagate References Surface</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> European energy companies are surging on higher crude prices, but the broader market faces a nightmare scenario—the EU already had fragile growth, and an oil shock layered on top could tip the eurozone into recession. The ECB's monetary dialogue this week will be dominated by the Iran situation rather than planned agenda items. Europe's vulnerability is compounded by multiple energy stress points: the Hormuz closure disrupts LNG supplies to Europe (which shifted from Russian pipeline gas after 2022), winter demand remains elevated, and the war risk premiums on shipping are spiking across all routes through the Middle East.</p>
+          <p class="card-body"><strong>Why:</strong> Newly released videos show Bill and Hillary Clinton sitting through separate depositions about their ties to Jeffrey Epstein. The depositions include references to leaked photos, a hot tub, and Pizzagate conspiracy claims. <strong>Cause:</strong> The release comes from ongoing civil litigation related to Epstein's trafficking network. While overshadowed by the Iran war in global news, this is dominating US domestic political media and adding to an already volatile information environment. The timing is notable — with midterm elections approaching, the deposition content feeds into partisan narratives on both sides.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/articles/c20zg7prz12o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🇪🇺 EUROPE · AVIATION</span>
-          <h3 class="card-headline">19,000+ Flights Delayed Globally — BA, Virgin Cancel All Middle East Services</h3>
+          <span class="card-tag">🇬🇧 EUROPE · CORPORATE</span>
+          <h3 class="card-headline">BrewDog Sold to Tilray for £33M — Bars Close, Hundreds Lose Jobs as Cannabis Company Acquires Brewery</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> The biggest disruption to global air transport since COVID continues into its third day, with over <span class="stat">1,500 flights cancelled</span> across the Middle East on Sunday alone and more than <span class="stat">19,000 flights delayed globally</span> according to FlightAware. Almost all Middle East airspace remains closed. Dubai and Doha airports—critical global transit hubs—have been shuttered since the strikes began. BA and Virgin Atlantic have grounded all Middle East services. <strong>Cause:</strong> Iran's retaliatory drone and missile strikes across the Gulf (targeting Dubai, Abu Dhabi, Bahrain, Kuwait, Saudi Arabia) have made the entire region's airspace unsafe for commercial aviation. Airlines are rerouting over Africa, adding 4-8 hours and significant fuel costs to Asia-Europe routes.</p>
+          <p class="card-body"><strong>Why:</strong> Scottish brewery BrewDog was acquired by Canadian beverage and cannabis company Tilray for just £33 million — a fraction of its peak $2 billion valuation. The deal results in bar closures and hundreds of job losses. <strong>Cause:</strong> BrewDog's implosion stems from years of governance scandals (toxic workplace culture allegations), overexpansion, and the post-pandemic craft beer market contraction. The fire-sale price to a cannabis company reflects how far the brand has fallen. For the UK market, it signals continued distress in the hospitality sector as rising energy and input costs (now worsened by the Iran oil shock) squeeze margins.</p>
           <div class="card-sources">
             <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
@@ -807,106 +735,107 @@
 
         <!-- Asia ex-Japan -->
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🌏 ASIA EX-JAPAN · MARKETS</span>
-          <h3 class="card-headline">Hong Kong −2.14% Leads Losses, Singapore Airlines −5% — China Bucks Trend as Asia Digests Iran Shock</h3>
+          <span class="card-tag">🌏 ASIA EX-JAPAN · KOREA</span>
+          <h3 class="card-headline">KOSPI Crashes −5.37%, Triggers Circuit Breaker — Samsung and SK Hynix Plunge 6%+ as Korea Catches Up on War</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> Asian markets diverged sharply as the Iran conflict's economic impact became clear. Hong Kong's Hang Seng was the worst performer, plunging <span class="stat">−2.14% to 26,059.85</span>, with Cathay Pacific sliding −4.2% on aviation disruption. Singapore Airlines fell more than <span class="stat">5%</span> because of its heavy reliance on Middle East transit routes. India's SENSEX dropped <span class="stat">−1.29% to 80,238.85</span>. <strong>China bucked the trend:</strong> CSI 300 rose +0.38% to 4,728.67 and SSE Composite gained +0.47% to 4,182.59, suggesting Beijing is actively supporting markets ahead of Wednesday's NPC session. Australia's ASX 200 was flat at 9,200.90 with gains in gold miners and Woodside Energy (+5%) offsetting broader weakness. South Korea was closed for a public holiday, so the KOSPI reaction is deferred to Tuesday. <strong>Energy winners:</strong> CNOOC in Hong Kong rose +3% on higher crude.</p>
+          <p class="card-body"><strong>Why:</strong> South Korea's KOSPI plunged <span class="stat">−5.37%</span> on Tuesday, its first trading day after a Monday public holiday. Samsung Electronics and SK Hynix each fell more than <span class="stat">6%</span>. KOSPI-200 futures dropped over 5%, triggering a sidecar circuit breaker that halted futures trading for five minutes. <strong>Cause:</strong> Korean markets had to absorb three days of Iran war pricing in a single session. Korea is particularly vulnerable to oil shocks as a major energy importer — Nomura flagged it among Asia's most oil-price-sensitive economies. The concentrated sell-off in Samsung and SK Hynix reflects foreign investor liquidation of Korea's highest-liquidity tech names as a source of cash to cover losses elsewhere.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/02/asia-markets-live-trump-iran-oil-prices-nikkei-hang-seng-us-israel-strikes-oil.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/03/asia-markets-live-iran-oil-trump-nikkei-kospi-hang-seng.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🌏 ASIA EX-JAPAN · INDIA-CANADA</span>
+          <h3 class="card-headline">India-Canada Sign 10-Year Nuclear Deal — Carney-Modi Reset Includes Free Trade, Defense, Critical Minerals</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why:</strong> India and Canada announced a landmark 10-year nuclear energy deal along with agreements on technology, critical minerals, space, defense, and education. PM Carney and PM Modi agreed to conclude a free trade deal by end of 2026. <strong>Cause:</strong> Both nations want to reduce exposure to US trade tariffs under Trump and diversify their economic partnerships. The diplomatic thaw reverses the deep freeze since 2023, when Trudeau accused India of involvement in the assassination of Sikh separatist Hardeep Singh Nijjar on Canadian soil. Carney's government has said it believes India is not currently linked to violent crimes in Canada. <strong>Strategic context:</strong> The Iran crisis adds urgency — both nations need coordinated energy security strategies as Gulf supply chains are disrupted.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/cx24gl7jrgno" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible">
           <span class="card-tag">🌏 ASIA EX-JAPAN · CHINA</span>
-          <h3 class="card-headline">China NPC Opens Wednesday — Stimulus Package Expected as Iran Crisis Gives Beijing Strategic Leverage</h3>
+          <h3 class="card-headline">China Markets Resilient — CSI 300 −0.24%, Hang Seng −0.29% as Beijing Supports Ahead of NPC</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> China's National People's Congress opens March 4, where Xi Jinping is expected to announce major consumer stimulus and a likely increased military budget. <strong>The Iran angle:</strong> The conflict gives China enormous strategic leverage—as a major Iranian oil buyer, Beijing could offer Tehran a diplomatic lifeline while positioning itself as a stabilizing force in the Middle East (echoing its 2023 Saudi-Iran mediation). China's selective tariff easing with Canada (agricultural tariff suspension from March 1) signals a broader strategy of peeling US allies away from Washington while the US is distracted by Iran.</p>
+          <p class="card-body"><strong>Why:</strong> While Korea crashed and Japan fell sharply, Chinese markets held relatively steady — CSI 300 fell just <span class="stat">−0.24%</span> and the Hang Seng <span class="stat">−0.29%</span>. <strong>Cause:</strong> Beijing is actively supporting markets ahead of Wednesday's NPC opening, where Xi Jinping is expected to announce major consumer stimulus and an increased military budget. China's strategic position is strengthened by the Iran crisis — as a major Iranian oil buyer, Beijing can offer Tehran a diplomatic lifeline while positioning as a stabilizing force. China's state funds are likely intervening to prevent panic selling ahead of the politically sensitive NPC session.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured fade-in collapsible">
-          <span class="card-tag">🌏 ASIA EX-JAPAN · AI/TECH</span>
-          <h3 class="card-headline">Anthropic's Claude Used in Iran Strikes Despite Pentagon Blacklist — AI Military Ethics Crisis Deepens</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> According to Axios, the US military used Anthropic's Claude AI to support strike operations in Iran—even as the Pentagon had recently blacklisted Anthropic as a "supply chain risk" after the company resisted unrestricted military use of its technology. Anthropic's Claude app simultaneously hit #1 on Apple's App Store amid public interest. <strong>The paradox:</strong> The government is simultaneously using and punishing the same AI company, highlighting the unresolved tension between AI safety principles and national security demands. This has major implications for the entire AI industry—if companies can be forced to support military operations regardless of their stated policies, the "responsible AI" framework is essentially meaningless. OpenAI, by contrast, struck a Pentagon deal voluntarily after Anthropic's blacklisting.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/02/global-week-ahead-operation-epic-fury-us-israel-iran-strikes-oil-shipping-markets-volatility.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/03/asia-markets-live-iran-oil-trump-nikkei-kospi-hang-seng.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- Middle East & Africa -->
         <article class="card featured fade-in collapsible">
           <span class="card-tag">🌍 MIDDLE EAST · BREAKING</span>
-          <h3 class="card-headline">Blasts in Dubai and Abu Dhabi for Third Day — UAE Recalls Ambassador, Closes Tehran Embassy</h3>
+          <h3 class="card-headline">Hormuz Blockade Day 2 — Iran Threatens to Set Ships Ablaze, 31% of Global Seaborne Oil at Risk</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>What's new:</strong> Loud explosions rocked Dubai and Abu Dhabi for a third consecutive day Monday morning. The UAE Ministry of Defence reported intercepting <span class="stat">165 ballistic missiles, 2 cruise missiles, and 541 Iranian drones</span> since the strikes began. Targets included the Burj Al Arab, Fairmont Hotel on the Palm, Jebel Ali Port, Etihad Towers, and both international airports. The UAE recalled its ambassador from Tehran and shut its embassy in response. Saudi Arabia also summoned its ambassador from Tehran. <strong>Why:</strong> Iran is deliberately targeting Gulf states to punish US allies and demonstrate that the entire region pays a price for hosting American military assets. The targeting of civilian infrastructure (hotels, ports, airports) marks a dramatic escalation—Iran is treating Gulf states as combatants, not neutral bystanders.</p>
+          <p class="card-body"><strong>What's new:</strong> Iran's IRGC commander reiterated the Strait of Hormuz is closed and warned any vessel attempting passage "will be set ablaze." More than <span class="stat">14 million barrels/day</span> transited the Strait last year — roughly a third of global seaborne crude. Brent crude up <span class="stat">1.87% to $79.20</span>, WTI up <span class="stat">1.4% to $72.23</span>, now almost 10% higher since the conflict began. Analysts warn oil could cross $100 if blockade persists. <strong>Why this is the #1 global economic risk:</strong> A prolonged Hormuz closure would trigger the most severe energy supply shock since 1973. South Asia faces the worst impact — Qatar and UAE account for 99% of Pakistan's LNG imports and 72% of Bangladesh's. Qatar halted LNG production after Iranian drones struck its facilities.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/02/us-iran-live-updates-trump-oil-gold.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/03/strait-of-hormuz-closure-which-countries-will-be-hit-the-most.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🌍 MIDDLE EAST · HORMUZ</span>
-          <h3 class="card-headline">Strait of Hormuz Effectively Blocked — Shipping Giants Suspend Transit, Oil Tankers Struck</h3>
+          <span class="card-tag">🌍 MIDDLE EAST · CASUALTIES</span>
+          <h3 class="card-headline">Death Toll: 555 in Iran, 10+ in Israel, 6 US Soldiers, 5 in Gulf — Iran Retaliates Across Region</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why this is the most critical development:</strong> Maersk, MSC, Hapag-Lloyd, and other global shipping companies have suspended all vessel transit through the Strait of Hormuz. Iran's Revolutionary Guard struck oil tankers in the Gulf and issued radio warnings banning all ships from passing. The strait handles ~13 million barrels/day of crude—31% of all seaborne oil flows globally. Some vessels are being rerouted around Africa, adding weeks and massive costs to shipments. <strong>Cause:</strong> Iran is using Hormuz as asymmetric leverage—unable to match US/Israeli military firepower directly, Tehran is targeting the global economy's most vulnerable chokepoint. The US and Gulf nations issued a joint statement condemning Iran's actions and affirming "the right to self-defense," but clearing the strait requires defeating Iran's naval and missile capabilities—a task that could take weeks.</p>
+          <p class="card-body"><strong>Why:</strong> The human toll is mounting rapidly as the conflict enters Day 4. Preliminary figures from Al Jazeera's live tracker show <span class="stat">555 dead in Iran</span>, at least <span class="stat">10 in Israel</span>, <span class="stat">6 US soldiers KIA</span>, and <span class="stat">5 killed in Gulf states</span>. Iran launched fresh missile barrages at Tel Aviv and struck British RAF Akrotiri in Cyprus. Iran claims to have "destroyed" a building at a US air base in Bahrain. <strong>Cause:</strong> Iran's retaliatory doctrine targets not just the US and Israel but all regional hosts of American military assets — UAE, Bahrain, Saudi Arabia, Kuwait, and now NATO's Cyprus base. The strategy is to make the war as costly as possible across the maximum number of fronts to force political exhaustion in Washington.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/01/experts-weigh-potential-scenarios-for-oil-if-strait-of-hormuz-closes.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/live/cy0dp1l57nxt" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🌍 MIDDLE EAST · IRAN INTERNAL</span>
-          <h3 class="card-headline">153 Dead in Reported School Strike — Iran Civilian Toll Mounts as Leadership Scrambles</h3>
+          <span class="card-tag">🌍 MIDDLE EAST · TECH</span>
+          <h3 class="card-headline">AWS Data Centers Offline in UAE and Bahrain — Cloud Infrastructure Becomes Collateral Damage</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> Iran reported at least 153 people killed in a strike on a school, blaming the US and Israel. The US said it is "looking into" the reports; the IDF said it is "not aware" of operations in that area. Total Iranian civilian deaths now exceed 200. Meanwhile, a temporary governing council (including cleric Ayatollah Alireza Arafi and President Masoud Pezeshkian) is managing the post-Khamenei transition. <strong>The internal fracture:</strong> Street celebrations of Khamenei's death were reported alongside the official 40-day mourning period—a sign of deep regime-population division echoing the 2022 Mahsa Amini protests. Iranian Americans also celebrated in US cities. This internal instability is why Trump and Netanyahu have explicitly stated regime change as their ultimate goal, though analysts warn that achieving it from the outside would be extremely difficult.</p>
+          <p class="card-body"><strong>Why:</strong> Amazon Web Services confirmed two UAE data centers and one Bahrain facility were damaged by drone strikes tied to the conflict. EC2 and S3 services are offline across Middle East regions. Structural damage, power disruption, and water damage from fire suppression were reported. <strong>Cause:</strong> Cloud infrastructure concentrated in the Gulf is collateral damage as Iran targets the region indiscriminately. This is an unprecedented event — a major hyperscaler losing physical data centers to military conflict. Companies globally that relied on Gulf-region AWS infrastructure for disaster recovery or latency-sensitive Middle East operations are now scrambling to failover.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://www.aljazeera.com/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/02/amazon-says-drone-strikes-damaged-3-facilities-in-uae-and-bahrain.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- Latin America -->
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🌎 LATIN AMERICA</span>
-          <h3 class="card-headline">Oil Exporters Mexico and Brazil Win as Crude Spikes — Importers Chile and Peru Face Inflationary Pressure</h3>
+          <span class="card-tag">🌎 LATIN AMERICA · BOLIVIA</span>
+          <h3 class="card-headline">Military Plane Carrying Banknotes Crashes in Bolivia — 20+ Dead, Crowds Loot Crash Site</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> The Iran conflict is creating stark winners and losers across Latin America. Petrobras and Pemex shares are expected to surge as oil prices rise, benefiting Brazil and Mexico's fiscal positions. Conversely, oil-importing nations (Chile, Peru, Central America) face immediate inflation spikes from higher energy costs. <strong>Cause:</strong> Latin America's divergent energy profiles mean the same global event widens the economic gap between producers and importers. Argentina's ongoing currency weakness (peso −3.3% in February) compounds the pain for import-dependent economies.</p>
+          <p class="card-body"><strong>Why:</strong> A Bolivian military plane carrying banknotes crashed, killing at least 20 people. Police fired tear gas to disperse crowds attempting to take cash from the wreckage. <strong>Cause:</strong> Bolivia has been grappling with severe economic instability — a dollar shortage, fuel crisis, and declining natural gas revenues have pushed the country toward economic crisis. The central bank has been physically transporting large amounts of cash as part of emergency liquidity measures. The incident underscores the fragility of Bolivia's economic infrastructure.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.reuters.com/world/americas/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/articles/c0rjpxxpp49o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🌎 LATIN AMERICA · IRAN</span>
-          <h3 class="card-headline">FIFA World Cup 2026 in Doubt? — Iran Conflict Casts Shadow Over Summer Tournament in US/Canada/Mexico</h3>
+          <span class="card-tag">🌎 LATIN AMERICA · BRAZIL</span>
+          <h3 class="card-headline">Brazil Floods Kill 25 in Minas Gerais — Climate Disasters Compound as Oil Prices Add Fiscal Pressure</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> With the FIFA World Cup starting in just three months across the US, Canada, and Mexico, the Iran conflict raises security and logistical concerns for what was already set to be a highly politicized tournament. Iran's national team is qualified and participating—the question of whether they can or should compete while their country is under active US military attack creates an unprecedented diplomatic situation. <strong>Cause:</strong> Previous precedents (Yugoslavia 1992, Russia 2022) saw nations excluded from international sports during conflicts, but those were initiated by the excluded nation—this case inverts that dynamic.</p>
+          <p class="card-body"><strong>Why:</strong> Severe flooding and landslides in Brazil's Minas Gerais state have killed at least 25 people, displaced hundreds, and left dozens missing. <strong>Cause:</strong> Extreme rainfall overwhelmed infrastructure in Juiz de Fora and surrounding areas. Brazil's vulnerability to climate-linked disasters is worsening — this follows deadly floods in Rio Grande do Sul last year. Meanwhile, the Iran oil shock provides a rare fiscal upside for Petrobras and Brazil's state coffers, but rising global energy costs will feed domestic inflation and pressure the Banco Central's rate path.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/sport" target="_blank" rel="noopener">BBC Sport <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/articles/c70k7vjllzeo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible">
-          <span class="card-tag">🌎 LATIN AMERICA · TRADE</span>
-          <h3 class="card-headline">China Suspends Canadian Ag Tariffs — Beijing's Alliance-Splitting Strategy Accelerates</h3>
+          <span class="card-tag">🌎 LATIN AMERICA · CUBA</span>
+          <h3 class="card-headline">Trump's Pressure Campaign Puts Cuban Revolution Under 'Biggest Threat Yet' — Internal Crisis Deepens</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> Effective March 1, China suspended tariffs on Canadian agricultural goods through end of 2026. This is part of Beijing's deliberate strategy to offer concessions to US allies while Washington is focused on Iran. <strong>LatAm implications:</strong> If China is willing to ease trade tensions with Canada, Latin American commodity exporters (Brazil soybeans, Argentine grain, Chilean copper) may find Beijing an increasingly willing buyer at favorable terms—creating economic incentives to distance from US trade positions. The timing, with Carney meeting Modi this week, suggests a coordinated anti-isolation strategy among US trading partners.</p>
+          <p class="card-body"><strong>Why:</strong> Analysis from BBC indicates the Cuban Revolution faces its most serious existential threat as Trump's maximum pressure campaign compounds an already severe internal crisis — food shortages, power outages, and mass emigration. An American citizen was among those killed in a recent boat shooting near Cuba, with Havana accusing those on board of planning "infiltration with terrorist aims." <strong>Cause:</strong> Cuba's economy has never recovered from the pandemic-era collapse of tourism, and US sanctions under Trump are being tightened. The Iran conflict further complicates Cuba's position — Venezuela, a key Cuban ally and oil supplier, may redirect oil exports to take advantage of higher global prices, squeezing Cuba's already critical fuel supply.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.reuters.com/world/china/" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/articles/c9q5wdeg4j8o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- Oceania -->
         <article class="card featured fade-in collapsible">
           <span class="card-tag">🌏 OCEANIA</span>
-          <h3 class="card-headline">ASX −0.22% but Gold Miners and Woodside Energy Surge — Australia's Commodity Mix Provides Partial Shield</h3>
+          <h3 class="card-headline">ASX 200 Down −1.24% as Tuesday Reverses Monday's Gains — Ardern Moves to Australia, Brain Drain Debate Resurfaces</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why:</strong> Australia's S&P/ASX 200 fell just −0.22%—far less than Asian peers—because its commodity-heavy market benefited from surging gold and oil prices offsetting broader risk-off selling. Woodside Energy gained ~5% on higher crude, and gold miners rallied on safe-haven demand. <strong>Cause:</strong> Australia's unique position as both a commodity exporter and a geographically distant US ally means it benefits from the price impact of Middle East conflict while facing limited direct security exposure.</p>
+          <p class="card-body"><strong>Why:</strong> Australia's S&P/ASX 200 fell <span class="stat">−1.24%</span>, reversing Monday's marginal gains as the Iran conflict deepened. Gold miners and energy stocks (Woodside) continued to outperform but couldn't offset broader risk-off selling. <strong>Separately:</strong> Former NZ PM Jacinda Ardern's decision to move to Australia renewed focus on New Zealand's brain drain crisis — about 180 Kiwis leave per day. <strong>Cause of ASX weakness:</strong> While Australia benefits from commodity exposure, the deepening Hormuz crisis and KOSPI crash spooked investors who had been treating Australia as a relative safe haven. PM Carney is visiting Canberra to discuss defense, trade, and the "middle power" strategy with PM Albanese.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/02/asia-markets-live-trump-iran-oil-prices-nikkei-hang-seng-us-israel-strikes-oil.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.cnbc.com/2026/03/03/asia-markets-live-iran-oil-trump-nikkei-kospi-hang-seng.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/articles/clyx93597l4o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
@@ -923,7 +852,7 @@
       <div class="cards">
 
         <article class="card fade-in">
-          <span class="card-tag">ASIA CLOSE / US PRE-MARKET — MAR 2 10:00 PM JST</span>
+          <span class="card-tag">ASIA CLOSE / US PRE-MARKET — MAR 3 3:00 PM JST</span>
           <h3 class="card-headline">Global Equity Indices</h3>
           <table class="index-table">
             <thead>
@@ -938,105 +867,96 @@
             </thead>
             <tbody>
               <tr>
-                <td class="idx-name">S&P 500 (Fri)</td>
-                <td class="idx-level">6,878.88</td>
-                <td class="chg-neg">Futures −1.32%</td>
+                <td class="idx-name">S&P 500 (Mon)</td>
+                <td class="idx-level">6,882</td>
+                <td class="chg-pos">+0.04%</td>
                 <td class="chg-neg">−2.8%</td>
-                <td class="chg-neg">−1.3%*</td>
+                <td class="chg-neg">−1.3%</td>
                 <td class="chg-pos">+14.3%</td>
               </tr>
               <tr>
-                <td class="idx-name">Nasdaq Futures</td>
+                <td class="idx-name">S&P 500 Futures</td>
                 <td class="idx-level">—</td>
-                <td class="chg-neg">−1.71%</td>
+                <td class="chg-neg">−0.75%</td>
+                <td colspan="3" style="font-size:0.75rem; color:var(--text-muted);">Pre-market Tue</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nasdaq (Mon)</td>
+                <td class="idx-level">—</td>
+                <td class="chg-pos">+0.36%</td>
                 <td class="chg-neg">−4.2%</td>
-                <td class="chg-neg">−1.7%*</td>
+                <td class="chg-neg">−1.7%</td>
                 <td class="chg-pos">+13.7%</td>
               </tr>
               <tr>
-                <td class="idx-name">Dow (Fri: 44,922)</td>
-                <td class="idx-level">44,922.27</td>
-                <td class="chg-neg">Futures −600pts (−1.28%)</td>
+                <td class="idx-name">Nasdaq 100 Futures</td>
+                <td class="idx-level">—</td>
+                <td class="chg-neg">−0.89%</td>
+                <td colspan="3" style="font-size:0.75rem; color:var(--text-muted);">Pre-market Tue</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Dow (Mon: 48,905)</td>
+                <td class="idx-level">48,904.78</td>
+                <td class="chg-neg">−0.15%</td>
                 <td class="chg-neg">−2.1%</td>
-                <td class="chg-neg">−1.3%*</td>
+                <td class="chg-neg">−1.3%</td>
                 <td class="chg-pos">+10.3%</td>
               </tr>
               <tr>
                 <td class="idx-name">Nikkei 225</td>
-                <td class="idx-level">58,057.24</td>
-                <td class="chg-neg">−1.35%</td>
-                <td class="chg-pos">+1.4%</td>
-                <td class="chg-neg">−1.35%*</td>
-                <td class="chg-pos">+46.8% YoY</td>
+                <td class="idx-level">56,612</td>
+                <td class="chg-neg">−2.49%</td>
+                <td class="chg-neg">−1.1%</td>
+                <td class="chg-neg">−3.8%</td>
+                <td class="chg-pos">+43.5%</td>
               </tr>
               <tr>
                 <td class="idx-name">Topix</td>
-                <td class="idx-level">3,898.42</td>
-                <td class="chg-neg">−1.02%</td>
-                <td class="chg-pos">+2.8%</td>
-                <td class="chg-neg">−1.02%*</td>
-                <td class="chg-pos">+13.4%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">Hang Seng</td>
-                <td class="idx-level">26,059.85</td>
-                <td class="chg-neg">−2.14%</td>
-                <td class="chg-pos">+0.6%</td>
-                <td class="chg-neg">−2.14%*</td>
-                <td class="chg-pos">+14.0%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">CSI 300</td>
-                <td class="idx-level">4,728.67</td>
-                <td class="chg-pos">+0.38%</td>
-                <td class="chg-pos">+0.7%</td>
-                <td class="chg-pos">+0.38%*</td>
-                <td class="chg-pos">+8.1%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">SSE Composite</td>
-                <td class="idx-level">4,182.59</td>
-                <td class="chg-pos">+0.47%</td>
-                <td class="chg-pos">+0.5%</td>
-                <td class="chg-pos">+0.47%*</td>
-                <td class="chg-pos">+7.2%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">SENSEX</td>
-                <td class="idx-level">80,238.85</td>
-                <td class="chg-neg">−1.29%</td>
-                <td class="chg-neg">−1.5%</td>
-                <td class="chg-neg">−1.29%*</td>
-                <td class="chg-pos">+2.8%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">FTSE 100</td>
-                <td class="idx-level">8,872.60</td>
-                <td class="chg-pos">+0.52%</td>
-                <td class="chg-pos">+0.3%</td>
-                <td class="chg-pos">+0.52%*</td>
-                <td class="chg-pos">+7.4%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">ASX 200</td>
-                <td class="idx-level">9,200.90</td>
-                <td class="chg-pos">+0.01%</td>
-                <td class="chg-neg">−0.6%</td>
-                <td class="chg-pos">+0.01%*</td>
-                <td class="chg-pos">+0.4%</td>
+                <td class="idx-level">~3,802</td>
+                <td class="chg-neg">−2.47%</td>
+                <td class="chg-neg">−0.5%</td>
+                <td class="chg-neg">−3.5%</td>
+                <td class="chg-pos">+11.0%</td>
               </tr>
               <tr>
                 <td class="idx-name">KOSPI</td>
-                <td class="idx-level">—</td>
-                <td colspan="4" style="font-size:0.75rem; color:var(--text-muted);">Closed — Holiday (reaction deferred to Tue)</td>
+                <td class="idx-level">~2,480</td>
+                <td class="chg-neg">−5.37%</td>
+                <td class="chg-neg">−5.4%</td>
+                <td class="chg-neg">−5.4%</td>
+                <td class="chg-neg">−3.2%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Hang Seng</td>
+                <td class="idx-level">~25,985</td>
+                <td class="chg-neg">−0.29%</td>
+                <td class="chg-neg">−1.9%</td>
+                <td class="chg-neg">−2.4%</td>
+                <td class="chg-pos">+13.7%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">CSI 300</td>
+                <td class="idx-level">~4,717</td>
+                <td class="chg-neg">−0.24%</td>
+                <td class="chg-pos">+0.5%</td>
+                <td class="chg-pos">+0.14%</td>
+                <td class="chg-pos">+7.9%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ASX 200</td>
+                <td class="idx-level">~9,086</td>
+                <td class="chg-neg">−1.24%</td>
+                <td class="chg-neg">−1.8%</td>
+                <td class="chg-neg">−1.2%</td>
+                <td class="chg-neg">−0.8%</td>
               </tr>
             </tbody>
           </table>
-          <p class="card-body" style="margin-top: 1rem; font-size: 0.85rem;">* March just started; monthly = today's move only. <strong>Key takeaway:</strong> Asia absorbed the Iran shock better than feared—Nikkei closed −1.35% after being down nearly −2% intraday. Hong Kong was the hardest hit at −2.14%. China bucked the trend (CSI 300 +0.38%, SSE +0.47%) as Beijing likely supported markets ahead of Wednesday's NPC. FTSE 100 gained +0.52% as energy-heavy UK index benefited from oil surge. US futures pointing to −1.3% gap down at the open (10:30 PM JST). Defense and energy stocks are the only green sectors globally.</p>
+          <p class="card-body" style="margin-top: 1rem; font-size: 0.85rem;"><strong>Key takeaway:</strong> KOSPI's −5.37% crash was today's defining event — the catch-up selling from Korea's holiday closure triggered circuit breakers and cascaded across Asia. Nikkei's −2.49% takes the two-day decline to nearly 4%. China continues to hold up best (CSI 300 −0.24%) with state support ahead of NPC. US markets showed resilience Monday — S&P barely moved (+0.04%) after a massive intraday swing — but pre-market futures signal renewed selling on the embassy strike news.</p>
         </article>
 
         <article class="card fade-in">
-          <span class="card-tag">COMMODITIES — LIVE</span>
+          <span class="card-tag">COMMODITIES — MAR 3 AFTERNOON</span>
           <h3 class="card-headline">Key Commodities</h3>
           <table class="index-table">
             <thead>
@@ -1044,41 +964,41 @@
                 <th>Commodity</th>
                 <th>Price</th>
                 <th>Daily</th>
-                <th>vs Fri Close</th>
+                <th>Since Conflict Start</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="idx-name">WTI Crude</td>
-                <td class="idx-level">$72.92/bbl</td>
-                <td class="chg-pos">+8.0%</td>
-                <td class="chg-pos">+8.8% (from $67.02)</td>
+                <td class="idx-level">$72.23/bbl</td>
+                <td class="chg-pos">+1.4%</td>
+                <td class="chg-pos">+~8% (from ~$67)</td>
               </tr>
               <tr>
                 <td class="idx-name">Brent Crude</td>
-                <td class="idx-level">$79.79/bbl</td>
-                <td class="chg-pos">+8.0%</td>
-                <td class="chg-pos">+9.5% (from $72.87)</td>
+                <td class="idx-level">$79.20/bbl</td>
+                <td class="chg-pos">+1.87%</td>
+                <td class="chg-pos">+~10% (from ~$73)</td>
               </tr>
               <tr>
                 <td class="idx-name">Gold</td>
-                <td class="idx-level">$5,368/oz</td>
-                <td class="chg-pos">+2.43%</td>
-                <td class="chg-pos">+2.43% (from $5,241)</td>
+                <td class="idx-level">~$5,400/oz</td>
+                <td class="chg-pos">+0.6%</td>
+                <td class="chg-pos">+~3% (ATH)</td>
               </tr>
               <tr>
                 <td class="idx-name">Natural Gas</td>
-                <td class="idx-level">~$3.05/MMBtu</td>
-                <td class="chg-pos">+6.6%</td>
-                <td class="chg-pos">+6.6% (from $2.86)</td>
+                <td class="idx-level">~$3.10/MMBtu</td>
+                <td class="chg-pos">+1.6%</td>
+                <td class="chg-pos">+~8% (Qatar halt)</td>
               </tr>
             </tbody>
           </table>
-          <p class="card-body" style="margin-top: 1rem;"><strong>Oil surging +8% — the biggest single-day move since 2022.</strong> <strong>Why:</strong> The death of Khamenei and Iran's retaliatory strikes on Gulf shipping pushed crude sharply higher as markets price in prolonged Hormuz disruption. Brent approaching $80 is the critical threshold—above that level, recession fears compound with inflation fears. <strong>Gold at $5,368</strong> confirms the classic safe-haven bid, hitting fresh all-time highs. Natural gas is surging on LNG supply disruption fears as Gulf export terminals are affected. Bitcoin dropped to ~$65,700 (−0.29% daily, −20% monthly) as crypto fails to act as a safe haven in genuine geopolitical crises.</p>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Brent at $79.20 — closing in on $80 psychological level.</strong> <strong>Why:</strong> Iran's Hormuz blockade hardened overnight, with threats to "set ablaze" any transiting vessel. Oil is now 10% above pre-conflict levels. Analysts warn $100/bbl is possible if the blockade persists through Trump's stated 4+ week timeline. <strong>Gold near $5,400</strong> — fresh all-time highs as safe-haven demand intensifies. <strong>Natural gas</strong> elevated after Qatar's LNG production halt from Iranian drone strikes on Ras Laffan facilities.</p>
         </article>
 
         <article class="card fade-in">
-          <span class="card-tag">FOREX — LIVE</span>
+          <span class="card-tag">FOREX — MAR 3 AFTERNOON</span>
           <h3 class="card-headline">Major Currency Pairs</h3>
           <table class="index-table">
             <thead>
@@ -1092,31 +1012,25 @@
             <tbody>
               <tr>
                 <td class="idx-name">USD/JPY</td>
-                <td class="idx-level">157.36</td>
-                <td class="chg-pos">+0.83%</td>
-                <td style="font-size:0.75rem;">USD bid on safe-haven demand</td>
+                <td class="idx-level">~157.50</td>
+                <td class="chg-pos">+0.1%</td>
+                <td style="font-size:0.75rem;">Yen weak on oil import fears</td>
               </tr>
               <tr>
                 <td class="idx-name">DXY Index</td>
-                <td class="idx-level">~98.10</td>
-                <td class="chg-pos">+0.50%</td>
-                <td style="font-size:0.75rem;">USD bid as safe haven</td>
+                <td class="idx-level">~98.20</td>
+                <td class="chg-pos">+0.1%</td>
+                <td style="font-size:0.75rem;">USD broadly bid</td>
               </tr>
               <tr>
                 <td class="idx-name">EUR/USD</td>
-                <td class="idx-level">~1.1760</td>
-                <td class="chg-neg">−0.44%</td>
-                <td style="font-size:0.75rem;">Euro weak on energy fears</td>
-              </tr>
-              <tr>
-                <td class="idx-name">USD/CHF</td>
-                <td class="idx-level">—</td>
-                <td class="chg-neg">CHF bid</td>
-                <td style="font-size:0.75rem;">Classic safe-haven flow</td>
+                <td class="idx-level">~1.1740</td>
+                <td class="chg-neg">−0.2%</td>
+                <td style="font-size:0.75rem;">Euro pressured on energy</td>
               </tr>
             </tbody>
           </table>
-          <p class="card-body" style="margin-top: 1rem;"><strong>USD winning the safe-haven battle over JPY.</strong> USD/JPY pushed to 157.36 as dollar demand dominated. <strong>Why:</strong> Despite the yen's traditional safe-haven status, Japan's acute oil import vulnerability is weighing on it—the market is pricing in a ballooning energy import bill if the Hormuz disruption persists. The dollar is also bid broadly (DXY higher) as US Treasury demand surges. If the crisis extends to Trump's stated 4 weeks, JPY weakness could accelerate further, potentially testing 160. MOF is watching but unlikely to intervene against yen weakness driven by fundamental energy concerns.</p>
+          <p class="card-body" style="margin-top: 1rem;"><strong>USD/JPY holding above 157.</strong> The yen continues to lose the safe-haven battle against the dollar because Japan's oil import vulnerability outweighs its traditional risk-off appeal. If Brent crosses $80 and holds, the trade-weighted yen weakness will accelerate as Japan's current account deteriorates. MOF intervention remains unlikely while yen weakness is driven by fundamental energy economics rather than speculation.</p>
         </article>
 
         <!-- Health Gauge -->
@@ -1126,46 +1040,46 @@
           <div class="health-gauge-wrap">
             <div class="health-gauge">
               <div class="gauge-bg"></div>
-              <div class="gauge-needle" id="gauge-needle" style="transform: rotate(-54deg);"></div>
+              <div class="gauge-needle" id="gauge-needle" style="transform: rotate(-58.5deg);"></div>
               <div class="gauge-dot"></div>
             </div>
             <div class="gauge-scale"><span>0</span><span>100</span></div>
-            <div class="gauge-score">20</div>
+            <div class="gauge-score">17</div>
             <div class="gauge-score-label">EXTREME RISK</div>
           </div>
           <div class="indicator-grid">
             <div class="indicator-item">
               <div class="indicator-value" style="color: var(--red);">⚠️</div>
               <div class="indicator-name">VIX</div>
-              <div class="indicator-sub">Expect 28-35 at US open</div>
+              <div class="indicator-sub">Expect 30-38 at US open</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value" style="color: var(--red);">🚨</div>
               <div class="indicator-name">Oil Shock</div>
-              <div class="indicator-sub">CRITICAL — Hormuz blocked</div>
+              <div class="indicator-sub">CRITICAL — Brent near $80</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value" style="color: var(--red);">🔴</div>
               <div class="indicator-name">Geopolitical</div>
-              <div class="indicator-sub">EXTREME — multi-front</div>
+              <div class="indicator-sub">EXTREME — embassy strike</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value" style="color: var(--red);">↓</div>
               <div class="indicator-name">Sentiment</div>
-              <div class="indicator-sub">Fear / panic</div>
+              <div class="indicator-sub">Fear / KOSPI circuit breaker</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value chg-pos">↑</div>
               <div class="indicator-name">Safe Havens</div>
-              <div class="indicator-sub">Gold +2.3%, bonds bid</div>
+              <div class="indicator-sub">Gold ATH ~$5,400</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value" style="color: var(--red);">⚠️</div>
               <div class="indicator-name">Contagion</div>
-              <div class="indicator-sub">Lebanon, Cyprus, Gulf</div>
+              <div class="indicator-sub">Embassy, Cyprus, Lebanon</div>
             </div>
           </div>
-          <p class="card-body" style="margin-top: 1rem;"><strong>Score holds at 20 — EXTREME RISK.</strong> <strong>Why:</strong> Oil +8% is the loudest alarm bell—this is the biggest crude surge since 2022. Three factors keeping the score at rock-bottom: (1) Iran's Larijani rejected all negotiations, eliminating the near-term diplomatic off-ramp; (2) the conflict has spread to Lebanon (Hezbollah-Israel exchange) and Cyprus (RAF base drone strike), indicating multi-front escalation; (3) Trump's 4-week timeline means this is a sustained crisis, not a one-day shock. US futures −1.3% with the open minutes away. The Hormuz blockade is the single biggest threat to the global economy since 2022.</p>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Score drops to 17 — EXTREME RISK, deteriorating.</strong> <strong>Why worse than yesterday (20):</strong> Three factors: (1) US Embassy in Riyadh struck by drones — conflict now hitting US diplomatic assets in Gulf allies; (2) KOSPI crashed −5.37% triggering circuit breakers, demonstrating how sharp catch-up selling can be; (3) Trump warning the war could go "far longer" than 4 weeks eliminates the timeline anchor markets were using. The Hormuz blockade is now in its second day with no signs of easing. Brent at $79.20 is one bad headline from $80+. Gold at all-time highs. The only thing preventing single digits is China's relative stability and the US market's surprising resilience on Monday (S&P closed flat after being down 1.5% intraday).</p>
         </article>
 
       </div>
@@ -1181,27 +1095,26 @@
       <div class="cards">
 
         <article class="card fade-in collapsible">
-          <span class="card-tag">TONIGHT — US OPEN 10:30 PM JST</span>
-          <h3 class="card-headline">US Open Will Set the Tone — Watch for VIX Spike Above 30 and Oil's Next Move</h3>
+          <span class="card-tag">TONIGHT — US OPEN 11:30 PM JST</span>
+          <h3 class="card-headline">Tuesday US Open: Embassy Strike Will Test Monday's Dip-Buying Thesis</h3>
           <div class="tap-hint">Tap to expand</div>
           <p class="card-body">
-            <strong>Equities:</strong> S&P likely opens down 1-1.5% based on futures. If no new escalation occurs before the bell, the sell-off could be orderly. If Hormuz situation worsens or US casualties mount, expect 2-3% down.<br><br>
-            <strong>Oil:</strong> The +4% move in Asian trading is the floor, not the ceiling. If Iranian mines are deployed in Hormuz or more tankers are struck during US trading hours, Brent goes to $80+ and WTI to $75+. The "$100 oil" scenario remains on the table if the conflict lasts Trump's stated 4 weeks.<br><br>
-            <strong>Bonds:</strong> Expect a massive flight-to-quality bid. US 10-year yield could drop 15-25 bps from Friday's 3.95% to the 3.70-3.80% range.<br><br>
-            <strong>VIX:</strong> Likely spikes to 28-35 range from Friday's 19.9. Any move above 35 signals genuine panic and potential for cascading liquidations.
+            <strong>Equities:</strong> S&P futures at −0.75% suggest a gap down, but Monday showed dip-buyers are active — the S&P recovered from −1.5% intraday to close flat. Watch whether that pattern repeats or if the embassy strike erodes buy-the-dip conviction. Earnings from CrowdStrike and Target could move individual names but won't overcome macro sentiment.<br><br>
+            <strong>Oil:</strong> Brent at $79.20 — $80 is the line. Above $80, recession fears compound with inflation fears and the sell-off in equities could accelerate. Watch for any US Navy action to clear Hormuz — that would be bullish for equities, bearish for oil.<br><br>
+            <strong>Defense:</strong> Monday's winners (Northrop +6%, Palantir +5.8%) will likely extend gains. The KOSPI defense surge (Hanwha +22%, Lignex1 +30%) signals how much upside remains in the sector globally.<br><br>
+            <strong>VIX:</strong> If VIX stays below 30, the market is managing. Above 35, systemic risk rises. The KOSPI circuit breaker is a warning sign — if US markets trigger similar mechanisms, liquidity could dry up fast.
           </p>
         </article>
 
         <article class="card fade-in collapsible">
-          <span class="card-tag">WEEK AHEAD — MAR 2-6</span>
-          <h3 class="card-headline">Five Days That Could Reshape Global Markets</h3>
+          <span class="card-tag">WEEK AHEAD — MAR 3-7</span>
+          <h3 class="card-headline">Remaining Week: NPC, War Powers Vote, and the $80 Oil Threshold</h3>
           <div class="tap-hint">Tap to expand</div>
           <p class="card-body">
-            <strong>Tue Mar 3:</strong> BOJ Summary of Opinions — stale but watched. Iran diplomatic moves critical: any ceasefire signals would spark immediate relief rally. KOSPI reopens and catches up on Monday's Asia sell-off.<br><br>
-            <strong>Wed Mar 4:</strong> China NPC opens — Xi's stimulus announcement could stabilize Asian sentiment. US ADP Employment. Strait of Hormuz status is the hourly variable.<br><br>
-            <strong>Thu Mar 5:</strong> US Congress war powers vote possible. G7 emergency coordination likely. Insurance and shipping premium data will quantify the Hormuz impact.<br><br>
-            <strong>Fri Mar 6:</strong> US Non-Farm Payrolls — normally the week's main event but will be background noise vs. Iran. Strong jobs = fewer rate cuts but markets won't care amid geopolitical chaos.<br><br>
-            <strong>Wildcards:</strong> (1) Iran deploys mines in Hormuz → oil to $100, global recession fears; (2) IRGC splinters post-Khamenei → regime instability creates both opportunity and danger; (3) China mediates → instant de-escalation and massive relief rally; (4) Conflict spreads to Saudi oil infrastructure → energy crisis goes from risk to reality.
+            <strong>Wed Mar 4:</strong> China NPC opens — Xi's stimulus package and military budget increase will be closely watched. A strong stimulus announcement could stabilize Asian sentiment. US ADP Employment data.<br><br>
+            <strong>Thu Mar 5:</strong> US Congress war powers vote possible — if it constrains Trump's authority, markets rally on shorter conflict expectations. Broadcom earnings. G7 emergency coordination likely.<br><br>
+            <strong>Fri Mar 6:</strong> US Non-Farm Payrolls — normally the week's headline but will be background noise vs. Iran. Costco earnings.<br><br>
+            <strong>Wildcards:</strong> (1) US Navy moves to forcibly reopen Hormuz → massive oil drop, equity rally; (2) Iran deploys naval mines → oil to $100, global recession; (3) China mediates ceasefire → instant relief rally; (4) Conflict spreads to Saudi oil infrastructure → energy crisis goes from risk to reality; (5) Congressional war powers vote constrains operations → shorter timeline, market relief.
           </p>
         </article>
 
@@ -1212,15 +1125,15 @@
     <section class="section" id="bottomline">
       <div class="bottom-line">
         <h3>💡 Bottom Line</h3>
-        <p>Day 3 of the Iran conflict is worse than Day 1. Iran rejected talks, the conflict spread to Lebanon and Cyprus, blasts continued in Dubai and Abu Dhabi, and Trump signaled up to four weeks of operations. <strong>The Hormuz blockade is now the defining risk:</strong> with shipping giants suspending transit and Iran striking tankers, 31% of global seaborne oil flow is disrupted. Oil surged 8%—the biggest single-day move since 2022—with Brent nearing $80. Japan is uniquely exposed—the Nikkei's −1.35% close pared from −2% intraday, but a prolonged Hormuz closure would be catastrophic for Japan's energy-dependent economy. USD/JPY pushed to 157.36 as the dollar won the safe-haven bid over the yen, reflecting markets pricing Japan's oil vulnerability. <strong>The silver linings:</strong> China bucked the selloff (CSI 300 +0.38%) ahead of NPC. The US-China trade deal extension provides some economic stability. FTSE gained on energy-heavy composition. <strong>What to watch now:</strong> The US open at 10:30 PM JST is imminent—futures pointing to S&P −1.32%, Nasdaq −1.71%. If VIX stays below 30 and Brent stays below $80, markets are managing the crisis. Above those levels, we're in uncharted territory. Gold at all-time highs ($5,368) tells you where the smart money is.</p>
+        <p>Day 4 of the Iran conflict is worse on every axis. The US Embassy in Riyadh was hit by drones. Six American soldiers are dead. KOSPI crashed −5.37% and triggered circuit breakers. Nikkei fell −2.49%, taking its two-day loss to nearly 4%. Brent crude at $79.20 is knocking on $80 — the level where oil shock becomes recession risk. <strong>Japan's position is critical:</strong> with 90% of crude imports flowing through the blocked Strait of Hormuz, every day the blockade persists widens Japan's energy security crisis. War risk insurance premiums have doubled. The BOJ's rate path is in limbo as the oil shock creates competing inflation and growth signals. <strong>What's different from yesterday:</strong> The US market showed surprising resilience on Monday — the S&P recovered a −1.5% intraday drop to close flat — suggesting dip-buyers remain active. But pre-market futures are down again on the embassy strike. France announced Europe's most significant defense shift in 65 years, extending its nuclear umbrella to 8 allies. China holds steady ahead of NPC. <strong>The variable that matters most:</strong> Hormuz. If the US Navy moves to forcibly reopen the strait, oil drops and markets rally. If Iran deploys mines or strikes more tankers, $100 oil becomes reality and the global recession clock starts ticking. Everything else is noise until Hormuz is resolved.</p>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>CEO Evening Briefing · Generated by Sanbot · Monday, March 2, 2026 10:00 PM JST</p>
-    <p style="margin-top: 0.5rem;">Data sources: CNBC, BBC, Reuters, Al Jazeera, Nikkei, Nikkei Asia</p>
+    <p>CEO Afternoon Briefing · Generated by Sanbot · Tuesday, March 3, 2026 3:00 PM JST</p>
+    <p style="margin-top: 0.5rem;">Data sources: CNBC, BBC, Reuters, Al Jazeera, Nikkei</p>
   </footer>
 
   <script>
@@ -1234,7 +1147,7 @@
     // Gauge animation
     const needle = document.getElementById('gauge-needle');
     if (needle) {
-      const score = 20;
+      const score = 17;
       const rotation = -90 + (score / 100) * 180;
       setTimeout(() => {
         needle.style.transform = `rotate(${rotation}deg)`;
