@@ -1,0 +1,7 @@
+{
+  "name": "ceo-briefing",
+  "private": true,
+  "dependencies": {
+    "jsdom": "^25.0.0"
+  }
+}
