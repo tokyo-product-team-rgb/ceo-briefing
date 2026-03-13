@@ -13,6 +13,46 @@ async function fetchAndParse(path) {
   return { parsed: parseBriefing(html, path), html };
 }
 
+
+function extractTable(card) {
+  const gaugeScore = card.querySelector('.gauge-score');
+  if (gaugeScore) {
+    const score = parseInt(gaugeScore.textContent.trim(), 10);
+    const label = card.querySelector('.gauge-score-label')?.textContent?.trim() || '';
+    const indicators = [];
+    card.querySelectorAll('.indicator-item').forEach(item => {
+      const name = item.querySelector('.indicator-name')?.textContent?.trim() || '';
+      const sub = item.querySelector('.indicator-sub')?.textContent?.trim() || '';
+      const emoji = item.querySelector('.indicator-value')?.textContent?.trim() || '';
+      if (name) indicators.push({ name, detail: sub, icon: emoji });
+    });
+    return { score, label, indicators };
+  }
+  const table = card.querySelector('table');
+  if (!table) return null;
+  const columns = [];
+  table.querySelectorAll('thead th').forEach(th => columns.push(th.textContent.trim()));
+  if (!columns.length) return null;
+  const keyMap = {
+    'index': 'name', 'commodity': 'name', 'pair': 'name', 'country': 'name', 'asset': 'name',
+    'level': 'value', 'price': 'value', 'rate': 'value', '10y yield': 'value',
+    'daily': 'daily', 'weekly': 'weekly', 'monthly': 'monthly', 'ytd': 'ytd', 'signal': 'signal'
+  };
+  const rows = [];
+  table.querySelectorAll('tbody tr').forEach(tr => {
+    const cells = tr.querySelectorAll('td');
+    const row = {};
+    cells.forEach((td, i) => {
+      if (i < columns.length) {
+        const key = keyMap[columns[i].toLowerCase()] || columns[i].toLowerCase().replace(/\s+/g, '_');
+        row[key] = td.textContent.trim();
+      }
+    });
+    if (Object.keys(row).length) rows.push(row);
+  });
+  return { columns, rows };
+}
+
 function parseBriefing(html, filename) {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
@@ -38,7 +78,8 @@ function parseBriefing(html, filename) {
         || card.getAttribute('data-image')
         || card.querySelector('[data-image]')?.getAttribute('data-image')
         || '';
-      if (headline) stories.push({ headline, summary: summary, tag, bullets: bullets.slice(0, 10), ...(imageUrl ? { image_url: imageUrl } : {}) });
+      const tableData = extractTable(card);
+      if (headline) stories.push({ headline, summary: summary, tag, bullets: bullets.slice(0, 10), ...(imageUrl ? { image_url: imageUrl } : {}) ...(tableData ? { table: tableData } : {}) });
     });
     if (sectionTitle || stories.length) sections.push({ id: sectionId, title: sectionTitle, stories });
   });
