@@ -1,7 +1,9 @@
 const { fetchAndParse } = require('../_parser');
 module.exports = async (req, res) => {
   try {
-    const { parsed } = await fetchAndParse('/index.html');
+    const lang = req.query.lang || 'en';
+    const page = lang === 'ja' ? '/ja.html' : '/index.html';
+    const { parsed } = await fetchAndParse(page);
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=600');
     res.json(parsed);

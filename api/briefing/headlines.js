@@ -1,7 +1,9 @@
 const { fetchAndParse } = require('../_parser');
 module.exports = async (req, res) => {
   try {
-    const { parsed } = await fetchAndParse('/index.html');
+    const lang = req.query.lang || 'en';
+    const page = lang === 'ja' ? '/ja.html' : '/index.html';
+    const { parsed } = await fetchAndParse(page);
     const headlines = parsed.sections.flatMap(s =>
       s.stories.map(st => ({ section: s.title, headline: st.headline, tag: st.tag }))
     );
