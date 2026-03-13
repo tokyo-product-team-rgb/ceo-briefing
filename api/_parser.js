@@ -32,7 +32,10 @@ function extractTable(card) {
   const keyMap = {
     'index': 'name', 'commodity': 'name', 'pair': 'name', 'country': 'name', 'asset': 'name',
     'level': 'value', 'price': 'value', 'rate': 'value', '10y yield': 'value',
-    'daily': 'daily', 'weekly': 'weekly', 'monthly': 'monthly', 'ytd': 'ytd', 'signal': 'signal'
+    'daily': 'daily', 'weekly': 'weekly', 'monthly': 'monthly', 'ytd': 'ytd', 'signal': 'signal',
+    '指数': 'name', '商品': 'name', '通貨ペア': 'name', '国': 'name', '資産': 'name',
+    '水準': 'value', '価格': 'value', 'レート': 'value', '10年利回り': 'value',
+    '日次': 'daily', '週次': 'weekly', '月次': 'monthly', '年初来': 'ytd', 'シグナル': 'signal'
   };
   const rows = [];
   table.querySelectorAll('tbody tr').forEach(tr => {
