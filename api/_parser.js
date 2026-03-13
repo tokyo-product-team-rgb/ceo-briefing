@@ -1,9 +1,6 @@
 const { JSDOM } = require('jsdom');
 
-// When running on Vercel, fetch from own deployment
-const SOURCE_BASE = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : 'https://ceo-briefing.vercel.app';
+const SOURCE_BASE = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ceo-briefing.vercel.app';
 
 async function fetchAndParse(path) {
   const url = `${SOURCE_BASE}${path}`;
@@ -12,7 +9,6 @@ async function fetchAndParse(path) {
   const html = await res.text();
   return { parsed: parseBriefing(html, path), html };
 }
-
 
 function extractTable(card) {
   const gaugeScore = card.querySelector('.gauge-score');
@@ -53,6 +49,26 @@ function extractTable(card) {
   return { columns, rows };
 }
 
+function parseSectionTable(section) {
+  const table = section.querySelector('.data-table');
+  if (!table) return null;
+  const columns = [];
+  table.querySelectorAll('thead th').forEach(th => columns.push(th.textContent.trim()));
+  const rows = [];
+  table.querySelectorAll('tbody tr').forEach(tr => {
+    const cells = tr.querySelectorAll('td');
+    const row = {};
+    cells.forEach((td, i) => {
+      if (i < columns.length) {
+        const key = columns[i].toLowerCase().replace(/\s+/g, '_');
+        row[key] = td.textContent.trim();
+      }
+    });
+    if (Object.keys(row).length) rows.push(row);
+  });
+  return columns.length ? { columns, rows } : null;
+}
+
 function parseBriefing(html, filename) {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
@@ -67,24 +83,108 @@ function parseBriefing(html, filename) {
   doc.querySelectorAll('.section').forEach(section => {
     const sectionId = section.id || '';
     const sectionTitle = section.querySelector('.section-title, h2, h3')?.textContent?.trim() || '';
+
     const stories = [];
     section.querySelectorAll('.card').forEach(card => {
       const headline = card.querySelector('.card-headline')?.textContent?.trim() || '';
       const summary = card.querySelector('.card-summary, .card-body, p')?.textContent?.trim() || '';
       const tag = card.querySelector('.card-tag, .tag')?.textContent?.trim() || '';
+      const meta = card.querySelector('.card-meta')?.textContent?.trim() || '';
       const bullets = [];
       card.querySelectorAll('li').forEach(li => bullets.push(li.textContent.trim()));
+      const sources = [];
+      card.querySelectorAll('.card-sources .source-link').forEach(a => {
+        const name = a.textContent.replace(/[\s\u2197]+$/g, '').trim();
+        const url = a.getAttribute('href') || '';
+        if (name || url) sources.push({ name, url });
+      });
       const imageUrl = card.querySelector('img')?.getAttribute('src')
         || card.getAttribute('data-image')
         || card.querySelector('[data-image]')?.getAttribute('data-image')
         || '';
       const tableData = extractTable(card);
-      if (headline) stories.push({ headline, summary: summary, tag, bullets: bullets.slice(0, 10), ...(imageUrl ? { image_url: imageUrl } : {}) ...(tableData ? { table: tableData } : {}) });
+      const isQuote = headline.startsWith('"') || headline.startsWith('\u201c');
+
+      const story = {
+        headline, summary, tag,
+        bullets: bullets.slice(0, 10),
+        sources,
+        ...(imageUrl ? { image_url: imageUrl } : {}),
+        ...(tableData ? { table: tableData } : {}),
+        ...(meta ? { meta } : {}),
+        ...(isQuote ? { quote: headline } : {})
+      };
+      if (headline) stories.push(story);
     });
-    if (sectionTitle || stories.length) sections.push({ id: sectionId, title: sectionTitle, stories });
+
+    const sectionData = { id: sectionId, title: sectionTitle, stories };
+
+    // Stat cards
+    const statCards = section.querySelectorAll('.stat-card');
+    if (statCards.length) {
+      sectionData.stats = [];
+      statCards.forEach(sc => {
+        const value = sc.querySelector('.stat-value')?.textContent?.trim() || '';
+        const labelText = sc.querySelector('.stat-label')?.textContent?.trim() || '';
+        const labelMatch = labelText.match(/^([^(]+?)(?:\s*\((.+)\))?$/);
+        const label = labelMatch ? labelMatch[1].trim() : labelText;
+        const context = labelMatch && labelMatch[2] ? labelMatch[2].trim() : null;
+        if (value) sectionData.stats.push({ value, label, ...(context ? { context } : {}) });
+      });
+    }
+
+    // Section-level data tables
+    const sectionTable = parseSectionTable(section);
+    if (sectionTable) sectionData.table = sectionTable;
+
+    // Fund cards
+    const fundCards = section.querySelectorAll('.fund-card');
+    if (fundCards.length) {
+      sectionData.table = { columns: ['Fund', 'Amount', 'Focus'], rows: [] };
+      fundCards.forEach(fc => {
+        const name = fc.querySelector('.fund-name')?.textContent?.trim() || '';
+        const value = fc.querySelector('.fund-size')?.textContent?.trim() || '';
+        const focus = fc.querySelector('.fund-focus')?.textContent?.trim() || '';
+        if (name) sectionData.table.rows.push({ name, value, focus });
+      });
+    }
+
+    // Highlight box
+    const highlightBox = section.querySelector('.highlight-box');
+    if (highlightBox) {
+      const ht = highlightBox.querySelector('.highlight-title')?.textContent?.trim() || '';
+      const hp = highlightBox.querySelector('p')?.textContent?.trim() || '';
+      sectionData.highlight = { title: ht, text: hp };
+    }
+
+    // Bottom line with takeaway
+    const bottomLine = section.querySelector('.bottom-line');
+    if (bottomLine) {
+      const paragraphs = bottomLine.querySelectorAll('p');
+      const texts = [];
+      let takeaway = '';
+      paragraphs.forEach(p => {
+        texts.push(p.textContent.trim());
+        if (p.getAttribute('style')?.includes('font-weight') || p.querySelector('strong')) {
+          takeaway = p.textContent.trim();
+        }
+      });
+      if (texts.length && !stories.length) {
+        sectionData.stories.push({
+          headline: sectionTitle || 'Bottom line',
+          summary: texts.join(' '),
+          tag: '', bullets: [], sources: [],
+          ...(takeaway ? { takeaway } : {})
+        });
+      }
+    }
+
+    if (sectionTitle || stories.length || sectionData.stats || sectionData.table) {
+      sections.push(sectionData);
+    }
   });
 
-  const bottomLine = doc.querySelector('#bottomline p, #bottomline .card-body')?.textContent?.trim() || '';
+  const bottomLine = doc.querySelector('#bottomline p, #bottomline .card-body, .bottom-line p')?.textContent?.trim() || '';
   return { date, editionDate, editionLabel, title, sections, bottomLine };
 }
 
