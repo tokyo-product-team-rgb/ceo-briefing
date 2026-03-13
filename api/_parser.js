@@ -34,7 +34,11 @@ function parseBriefing(html, filename) {
       const tag = card.querySelector('.card-tag, .tag')?.textContent?.trim() || '';
       const bullets = [];
       card.querySelectorAll('li').forEach(li => bullets.push(li.textContent.trim()));
-      if (headline) stories.push({ headline, summary: summary.substring(0, 500), tag, bullets: bullets.slice(0, 10) });
+      const imageUrl = card.querySelector('img')?.getAttribute('src')
+        || card.getAttribute('data-image')
+        || card.querySelector('[data-image]')?.getAttribute('data-image')
+        || '';
+      if (headline) stories.push({ headline, summary: summary.substring(0, 500), tag, bullets: bullets.slice(0, 10), ...(imageUrl ? { image_url: imageUrl } : {}) });
     });
     if (sectionTitle || stories.length) sections.push({ id: sectionId, title: sectionTitle, stories });
   });
