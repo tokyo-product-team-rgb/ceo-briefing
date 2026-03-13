@@ -38,7 +38,7 @@ function parseBriefing(html, filename) {
         || card.getAttribute('data-image')
         || card.querySelector('[data-image]')?.getAttribute('data-image')
         || '';
-      if (headline) stories.push({ headline, summary: summary.substring(0, 500), tag, bullets: bullets.slice(0, 10), ...(imageUrl ? { image_url: imageUrl } : {}) });
+      if (headline) stories.push({ headline, summary: summary, tag, bullets: bullets.slice(0, 10), ...(imageUrl ? { image_url: imageUrl } : {}) });
     });
     if (sectionTitle || stories.length) sections.push({ id: sectionId, title: sectionTitle, stories });
   });
