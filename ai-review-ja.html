@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIレビュー — 2026年2月</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Book.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype'); font-weight: 500; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --text-primary: #111111; --text-secondary: #44403C; --text-tertiary: #78716C;
+      --text-link: #1D736C; --bg-primary: #F9F9F9; --bg-secondary: #FDFDFD; --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3; --bg-hover-darker: #ECEAE7; --line-subtle: #E8E5E1; --line-default: #D5D2CD;
+      --chart-primary: #2A8F87; --chart-secondary: #E07A3F; --highlight-info: #E3EBF5;
+      --serif: 'Copernicus Trial', Georgia, serif; --sans: 'Hanken Grotesk', -apple-system, sans-serif;
+      --shadow-card: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-card-hover: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --radius: 24px;
+    }
+    html { font-size: 16px; } body { font-family: var(--sans); background: var(--bg-primary); color: var(--text-primary); line-height: 1.65; }
+    .nav-bar { display: flex; justify-content: center; align-items: center; gap: 0; background: var(--bg-secondary); font-size: 0.8rem; font-weight: 500; }
+    .nav-bar a { text-decoration: none; color: var(--text-tertiary); padding: 0.7rem 1.5rem; margin: 4px 0; border-radius: 999px; transition: all 0.2s; }
+    .nav-bar a.active { color: var(--text-primary); background: #ECEAE7; }
+    .sector-tabs { display: flex; justify-content: center; gap: 0.5rem; padding: 1rem 1.5rem; background: var(--bg-secondary); flex-wrap: wrap; }
+    .sector-tab { font-size: 0.8rem; font-weight: 500; text-decoration: none; padding: 0.5em 1em; border-radius: 999px; color: var(--text-secondary); background: var(--bg-secondary); transition: all 0.2s; }
+    .sector-tab:hover { background: var(--bg-hover); }
+    .sector-tab.active { background: #ECEAE7; color: var(--text-primary); }
+    .masthead { background: transparent; position: relative; }
+    .masthead-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; text-align: center; }
+    .masthead .overline { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-bottom: 0.75rem; }
+    .masthead h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; margin-bottom: 0.5rem; }
+    .masthead .edition-date { font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); }
+    .masthead .edition-sub { font-size: 0.8rem; color: var(--text-tertiary); }
+    .divider-bar { width: 60px; height: 3px; background: var(--text-primary); margin: 1rem auto 0; }
+    .lang-toggle { position: absolute; top: 0.75rem; right: 1rem; display: inline-flex; gap: 0.25rem; font-size: 0.65rem; font-weight: 500; }
+    .lang-toggle a { text-decoration: none; color: var(--text-tertiary); } .lang-toggle a.active { color: var(--text-primary); }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .section { margin-bottom: 3rem; }
+    .section-header { margin-bottom: 1.5rem; padding-bottom: 0.75rem; }
+    .section-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; color: var(--text-secondary); }
+    .cards { display: grid; gap: 1rem; }
+    .card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow-card); transition: all 0.2s; }
+    .card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px); }
+    .card-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 0.4rem; }
+    .card-body { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .card-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; padding: 0.2em 0.6em; border-radius: 999px; margin-bottom: 0.6rem; background: var(--bg-tertiary); color: var(--text-secondary); }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem; text-align: center; box-shadow: var(--shadow-card); }
+    .stat-value { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; color: var(--chart-primary); }
+    .stat-label { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-top: 0.35rem; }
+    .highlight-box { background: var(--highlight-info); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
+    .highlight-title { font-family: var(--serif); font-weight: 500; font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .highlight-box p { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .bottom-line { background: var(--bg-tertiary); border-radius: var(--radius); padding: 2rem; }
+    .bottom-line .section-title { color: var(--text-secondary); }
+    .bottom-line p { font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
+    .footer { text-align: center; padding: 2rem 1.5rem 3rem; font-size: 0.75rem; color: var(--text-tertiary); border-top: 1px solid var(--line-subtle); max-width: 900px; margin: 0 auto; }
+    @media (max-width: 640px) {
+      .container { width: calc(100vw - 32px); max-width: calc(100vw - 32px); padding: 2rem 0 4rem; margin: 0 auto; }
+      .card { background: transparent; box-shadow: none; border-radius: 0; padding: 0 0 1.5rem 0; border-bottom: 1px solid var(--line-subtle); }
+      .card:hover { box-shadow: none; transform: none; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="live.html">Live</a>
+    <a href="ja.html">Daily</a>
+    <a href="vc-review-ja.html" class="active">Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+  <div class="sector-tabs">
+    <a href="vc-review-ja.html" class="sector-tab">VC</a>
+    <a href="ai-review-ja.html" class="sector-tab active">AI</a>
+    <a href="longevity-review-ja.html" class="sector-tab">Longevity</a>
+    <a href="health-wellness-review-ja.html" class="sector-tab">Health</a>
+    <a href="space-review-ja.html" class="sector-tab">Space</a>
+    <a href="energy-review-ja.html" class="sector-tab">Energy</a>
+    <a href="sports-entertainment-review-ja.html" class="sector-tab">Sports</a>
+  </div>
+  <header class="masthead">
+    <div class="lang-toggle"><a href="ai-review.html">EN</a><span class="sep">/</span><a href="ai-review-ja.html" class="active">JA</a></div>
+    <div class="masthead-inner">
+      <div class="overline">デイリーセクターインテリジェンス</div>
+      <h1>AIレビュー</h1>
+      <div class="edition-date">2026年2月17日</div>
+      <div class="edition-sub">モデル · インフラ · アプリケーション · 研究ブレイクスルー</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">市場概況</h2></div>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-value">$500B</div><div class="stat-label">OpenAI 評価額</div></div>
+        <div class="stat-card"><div class="stat-value">$500B</div><div class="stat-label">Project Stargate（4年間）</div></div>
+        <div class="stat-card"><div class="stat-value">$3B</div><div class="stat-label">Google → Anthropic 累計</div></div>
+        <div class="stat-card"><div class="stat-value">DeepSeek</div><div class="stat-label">中国の効率性ブレイクスルー</div></div>
+      </div>
+      <div class="highlight-box">
+        <div class="highlight-title">注目トピック</div>
+        <p><strong>DeepSeekがAIコストカーブを揺るがす。</strong>中国のDeepSeekがR1を発表し、GPT-4oやClaude 3.5 Sonetに匹敵する性能をごく一部の計算コストで実現 — フロンティアAIに必要な資本要件に関する前提を覆した。一方、Project Stargate（4年間で$500B）は米国政府のAIインフラ覇権へのコミットメントを示す。GoogleはAnthropicに追加$1B投資（累計$3B）、OpenAIのGPT-5のトレーニングは完了し、Q2ローンチが予想されている。</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">モデル開発</h2></div>
+      <div class="cards">
+        <article class="card" data-image="https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/canvas/2025/03/20/002972ba-40ba-45c9-9b29-6bc7a2cf861b_1d45d9be.jpg?itok=sT0zj7fA&amp;v=1742469718">
+          <span class="card-tag">DeepSeek</span>
+          <h3 class="card-headline">DeepSeek R1がフロンティアモデルにコストの一部で匹敵</h3>
+          <p class="card-body">中国の研究所のR1モデルが、大幅に少ない計算量でGPT-4oやClaude 3.5 Sonetの主要ベンチマークに匹敵。<strong>DeepSeekは勢いを活かすため次期モデルのタイムラインを5月から前倒し。</strong>ブルートフォースのスケーリングが有能なAIへの唯一の道なのかという疑問を提起。</p>
+        </article>
+        <article class="card" data-image="https://s3.amazonaws.com/cms.ipressroom.com/219/files/202508/68af68fe3d6332f1d02dec8d_24a5522e-6258-4e72-9c8a-a57178db4b4/24a5522e-6258-4e72-9c8a-a57178db4b4_9c0cabfb-e23b-4e8e-bf2d-7c4f9015609e-prv.jpg">
+          <span class="card-tag">OpenAI</span>
+          <h3 class="card-headline">GPT-5トレーニング完了、2026年Q2ローンチ予定</h3>
+          <p class="card-body">情報筋によるとGPT-5のトレーニングは1月に完了。現在は安全性評価とRLHFファインチューニングに注力。<strong>Advanced Voice機能がChatGPT無料ユーザーにも展開</strong>され、GPT-5ローンチに先立ちアクセシビリティを拡大。</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Anthropic</span>
+          <h3 class="card-headline">Googleが追加$1B投資、累計コミットメントは$3Bに</h3>
+          <p class="card-body">GoogleがAnthropicに新たに$1B投資。Claudeは現在<strong>自身のコードの相当部分を自ら記述</strong>。安全性と解釈可能性を重視する企業が増え、Constitutional AIアプローチがエンタープライズで支持拡大。</p>
+        </article>
+        <article class="card" data-image="https://tmv-files-production.s3.ap-south-1.amazonaws.com/articles/2025-11-23/en/7b9e00a80ef53e73519414d4181dd356/THUMBNAIL_IMAGE/Google%20Seizes%20AI%20Crown%20with%20Gemini%203%20and%20Nano%20Banana%20Pro.png">
+          <span class="card-tag">Google</span>
+          <h3 class="card-headline">Gemini Advanced：新しい動画・画像・音声生成ツールを予告</h3>
+          <p class="card-body">Google Labs責任者：<strong>「5〜10年分の能力を製品化する余地がある。」</strong>複雑なマルチステップの自律タスク向けに設計された新しいエージェントAI機能。Project MarinerはGemini 2.0を活用してブラウザベースのワークフローを自動化。</p>
+        </article>
+        <article class="card" data-image="https://tech-noisy.com/wp-content/uploads/2026/02/3.5banner.jpg">
+          <span class="card-tag">Alibaba</span>
+          <h3 class="card-headline">Qwen-3.5マルチモーダルモデルをリリース</h3>
+          <p class="card-body">Alibabaの最新オープンウェイトリリースは開発者コミュニティの採用を目指す。マルチモーダル機能にはビジョン、オーディオ、テキストが含まれる。<strong>中国のオープンソースAIエコシステムが西側の研究所との差を急速に縮めている。</strong></p>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">インフラ＆チップ</h2></div>
+      <div class="cards">
+        <article class="card" data-image="https://image.cnbcfm.com/api/v1/image/108160114-1761664651660-108160114-1750110952312-gettyimages-2218344193-_75a5554_i65po0rn.jpeg?v=1761664667&amp;w=1920&amp;h=1080">
+          <span class="card-tag">Project Stargate</span>
+          <h3 class="card-headline">$500B 米国AIインフラ構想が始動</h3>
+          <p class="card-body">OpenAI、Oracle、SoftBank、Nvidia、Arm、Microsoftが米国政府との連携で4年間のインフラプロジェクトを推進。<strong>史上最大の官民AIインフラ投資</strong> — 最初のデータセンター建設地の発表が近い。</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">Nvidia</span>
+          <h3 class="card-headline">Blackwell B200の供給制約がH1まで継続</h3>
+          <p class="card-body">木曜日の決算発表が注目される。生産拡大にもかかわらず需要が供給を上回り続ける。<strong>データセンター収益は多くの国のGDPを超える規模に。</strong>DeepSeekの効率性向上が長期的な需要見通しに疑問を投げかける。</p>
+        </article>
+        <article class="card" data-image="https://wimg.heraldcorp.com/news/cms/2026/02/13/news-p.v1.20260213.a720d140a6734821964904e45d3ef3d9_T1.png">
+          <span class="card-tag">Samsung</span>
+          <h3 class="card-headline">HBM4メモリのブレイクスルー、KOSPIが急騰</h3>
+          <p class="card-body">SamsungがAIトレーニングに最適化したHBM4メモリのブレイクスルーを発表、<strong>競合比40%の効率改善</strong>を主張。Nvidiaとのパートナーシップが拡大。メモリ戦争が激化する中、韓国半導体株が上昇。</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">買収</span>
+          <h3 class="card-headline">IBMがHashiCorpを$6.4Bで買収、HPがHumaneを$116Mで買収</h3>
+          <p class="card-body">IBMのHashiCorp買収はハイブリッドクラウド/AIインフラを対象。HPのHumane買収（AI Pinの会社）は製品継続ではなく<strong>AIエンジニアリング人材の獲得</strong>に焦点。</p>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">アプリケーション＆エンタープライズ</h2></div>
+      <div class="cards">
+        <article class="card" data-image="https://techcrunch.com/wp-content/uploads/2018/09/GettyImages-956088114.jpg?w=1024">
+          <span class="card-tag">エージェント</span>
+          <h3 class="card-headline">Google Project Mariner：ブラウザ自動化のためのエージェントAI</h3>
+          <p class="card-body">DeepMindのProject MarinerがGemini 2.0を活用し、複雑なWebインターフェースと対話。<strong>自律エージェントがマルチステップタスクを人間の介入なしに完了</strong> — 2026年は「エージェントの年」として浮上。</p>
+        </article>
+        <article class="card" data-image="https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK467_AI_MUSIC_CVirginia_A.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200">
+          <span class="card-tag">メディア</span>
+          <h3 class="card-headline">SpotifyがElevenLabsを統合、29言語でAIナレーション対応</h3>
+          <p class="card-body">AI生成ナレーションがオーディオブックを超えて拡大。<strong>音声クローンと生成がコンテンツプラットフォーム全体で標準機能に。</strong>合成メディアに関する規制上の疑問が増大。</p>
+        </article>
+        <article class="card" data-image="https://news.mit.edu/sites/default/files/images/202502/mit-fragfold.jpg">
+          <span class="card-tag">研究</span>
+          <h3 class="card-headline">MIT FragFold：AIがタンパク質結合フラグメントを予測し創薬を加速</h3>
+          <p class="card-body">新しいAIシステムが標的タンパク質に結合・阻害できるタンパク質フラグメントを特定。<strong>AIがバイオテック全体のウェットラボ研究を加速し、創薬タイムラインが50%以上短縮。</strong></p>
+        </article>
+        <article class="card" data-image="https://ichef.bbci.co.uk/news/1024/branded_news/6f87/live/150ed810-0aec-11f1-88b9-a5144df8a4fa.jpg">
+          <span class="card-tag">著作権</span>
+          <h3 class="card-headline">ByteDance SeedanceがAI動画でDisneyの法的脅威に直面</h3>
+          <p class="card-body">TikTok親会社の動画生成AIが、Disneyキャラクター動画のバイラル拡散後に著作権の精査を受ける。<strong>IP保有者がAI生成コンテンツに対して攻勢を強化。</strong>Seedanceは対応として制限を追加。</p>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="bottom-line">
+        <div class="section-header"><h2 class="section-title">ボトムライン</h2></div>
+        <p>DeepSeekの効率性ブレイクスルーが今週の注目ストーリー — フロンティアAIには無限の資本が必要だという前提に挑戦。しかし米国の対応は明確：Project Stargateの$500Bインフラ投資はAIが国家安全保障の問題であることを示す。GoogleのAnthropicへの$3Bポジション、OpenAIの$500B評価額、GPT-5の差し迫ったローンチは西側の研究所が減速していないことを示す。2026年の問いは：すべてを上回る支出ができるなら、計算効率は重要なのか？</p>
+        <p style="margin-top: 1rem; font-weight: 600;">DeepSeekがコスト前提を覆す。Stargateがインフラ競争を示唆。エージェント台頭。エンタープライズ採用加速。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><p>AIレビュー · Compiled by Sanbot · 2026年2月17日</p></footer>
+</body>
+</html>

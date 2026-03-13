@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エネルギー＆気候レビュー — 2026年2月</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Book.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype'); font-weight: 500; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --text-primary: #111111; --text-secondary: #44403C; --text-tertiary: #78716C;
+      --bg-primary: #F9F9F9; --bg-secondary: #FDFDFD; --bg-tertiary: #F7F6F4;
+      --line-subtle: #E8E5E1; --chart-primary: #2A8F87; --highlight-info: #E3EBF5;
+      --serif: 'Copernicus Trial', Georgia, serif; --sans: 'Hanken Grotesk', -apple-system, sans-serif;
+      --shadow-card: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-card-hover: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --radius: 24px;
+    }
+    html { font-size: 16px; } body { font-family: var(--sans); background: var(--bg-primary); color: var(--text-primary); line-height: 1.65; }
+    .nav-bar { display: flex; justify-content: center; background: var(--bg-secondary); font-size: 0.8rem; font-weight: 500; }
+    .nav-bar a { text-decoration: none; color: var(--text-tertiary); padding: 0.7rem 1.5rem; margin: 4px 0; border-radius: 999px; }
+    .nav-bar a.active { color: var(--text-primary); background: #ECEAE7; }
+    .sector-tabs { display: flex; justify-content: center; gap: 0.5rem; padding: 1rem 1.5rem; background: var(--bg-secondary); flex-wrap: wrap; }
+    .sector-tab { font-size: 0.8rem; font-weight: 500; text-decoration: none; padding: 0.5em 1em; border-radius: 999px; color: var(--text-secondary); background: var(--bg-secondary); }
+    .sector-tab:hover { background: #ECEAE7; }
+    .sector-tab.active { background: #ECEAE7; color: var(--text-primary); }
+    .masthead { background: transparent; position: relative; }
+    .masthead-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; text-align: center; }
+    .masthead .overline { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-bottom: 0.75rem; }
+    .masthead h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; margin-bottom: 0.5rem; }
+    .masthead .edition-date { font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); }
+    .masthead .edition-sub { font-size: 0.8rem; color: var(--text-tertiary); }
+    .divider-bar { width: 60px; height: 3px; background: var(--text-primary); margin: 1rem auto 0; }
+    .lang-toggle { position: absolute; top: 0.75rem; right: 1rem; font-size: 0.65rem; font-weight: 500; }
+    .lang-toggle a { text-decoration: none; color: var(--text-tertiary); } .lang-toggle a.active { color: var(--text-primary); }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .section { margin-bottom: 3rem; }
+    .section-header { margin-bottom: 1.5rem; }
+    .section-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; color: var(--text-secondary); }
+    .cards { display: grid; gap: 1rem; }
+    .card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow-card); transition: all 0.2s; }
+    .card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px); }
+    .card-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 0.4rem; }
+    .card-body { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .card-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; padding: 0.2em 0.6em; border-radius: 999px; margin-bottom: 0.6rem; background: var(--bg-tertiary); color: var(--text-secondary); }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.25rem; text-align: center; box-shadow: var(--shadow-card); }
+    .stat-value { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; color: var(--chart-primary); }
+    .stat-label { font-size: 0.7rem; font-weight: 500; color: var(--text-tertiary); margin-top: 0.35rem; }
+    .highlight-box { background: var(--highlight-info); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; }
+    .highlight-title { font-family: var(--serif); font-weight: 500; font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .highlight-box p { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .bottom-line { background: var(--bg-tertiary); border-radius: var(--radius); padding: 2rem; }
+    .bottom-line p { font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
+    .footer { text-align: center; padding: 2rem 1.5rem 3rem; font-size: 0.75rem; color: var(--text-tertiary); border-top: 1px solid var(--line-subtle); max-width: 900px; margin: 0 auto; }
+    @media (max-width: 640px) {
+      .container { width: calc(100vw - 32px); padding: 2rem 0 4rem; margin: 0 auto; }
+      .card { background: transparent; box-shadow: none; border-radius: 0; padding: 0 0 1.5rem 0; border-bottom: 1px solid var(--line-subtle); }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="live.html">Live</a><a href="ja.html">Daily</a><a href="vc-review-ja.html" class="active">Review</a><a href="archive.html">Archive</a>
+  </nav>
+  <div class="sector-tabs">
+    <a href="vc-review-ja.html" class="sector-tab">VC</a>
+    <a href="ai-review-ja.html" class="sector-tab">AI</a>
+    <a href="longevity-review-ja.html" class="sector-tab">Longevity</a>
+    <a href="health-wellness-review-ja.html" class="sector-tab">Health</a>
+    <a href="space-review-ja.html" class="sector-tab">Space</a>
+    <a href="energy-review-ja.html" class="sector-tab active">Energy</a>
+    <a href="sports-entertainment-review-ja.html" class="sector-tab">Sports</a>
+  </div>
+  <header class="masthead">
+    <div class="lang-toggle"><a href="energy-review.html">EN</a><span>/</span><a href="energy-review-ja.html" class="active">JA</a></div>
+    <div class="masthead-inner">
+      <div class="overline">デイリーセクターインテリジェンス</div>
+      <h1>エネルギー＆気候レビュー</h1>
+      <div class="edition-date">2026年2月17日</div>
+      <div class="edition-sub">原子力 · 太陽光 · バッテリー · 送電インフラ</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">市場概況</h2></div>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-value">42%</div><div class="stat-label">米国電力コスト上昇（AI）</div></div>
+        <div class="stat-card"><div class="stat-value">5 GW</div><div class="stat-label">新規天然ガス発電所発表</div></div>
+        <div class="stat-card"><div class="stat-value">18.2 GW</div><div class="stat-label">米国蓄電池容量（2025年）</div></div>
+        <div class="stat-card"><div class="stat-value">$35/MWh</div><div class="stat-label">太陽光LCOE（過去最低）</div></div>
+      </div>
+      <div class="highlight-box">
+        <div class="highlight-title">注目トピック</div>
+        <p><strong>AIのエネルギー需要が「マンハッタン計画」級の対応を招く。</strong>米国エネルギー長官Chris Wrightは、AIのエネルギー需要をマンハッタン計画規模の課題と比較。AIデータセンターが米国の電力コストを42%押し上げた。対応策：ERCOTおよびPJM向けに5 GWの新規天然ガス発電所（NRG、GE Vernova、Kiewit）、さらに原子力復興の加速。アリゾナからワイオミングまで各州がAI電力のための原子力を検討中。</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header"><h2 class="section-title">主要動向</h2></div>
+      <div class="cards">
+        <article class="card">
+          <span class="card-tag">AI需要</span>
+          <h3 class="card-headline">AIデータセンターが送電網を圧倒 — 前例のない需要成長</h3>
+          <p class="card-body">Exelon CEO：<strong>「データセンターの成長が供給を圧倒している。」</strong>ハイパースケーラーは太陽光だけでは提供できない24/7カーボンフリー電力を必要としている。Microsoft、Google、Amazonが原子力PPAを締結。新規原子力契約の58%がAIデータセンター向け。</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">天然ガス</span>
+          <h3 class="card-headline">ERCOTおよびPJM市場向けに5 GWの新規ガス発電所を発表</h3>
+          <p class="card-body">NRG Energy、GE Vernova、Kiewitが新規コンバインドサイクル発電所で提携。<strong>2029〜2032年の運転開始を目標。</strong>気候目標にもかかわらず、送電網の信頼性懸念が短期的な化石燃料投資を促進。</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">原子力</span>
+          <h3 class="card-headline">各州がAI向け原子力を検討 — アリゾナ、カリフォルニア、ワイオミングが先導</h3>
+          <p class="card-body">連邦政府がAI/テック向けの原子力スケーラビリティを強調。<strong>日本は再稼働を加速</strong> — 2026年に追加7基が承認、2030年までに原子力シェア22%を目標。高市首相が産業競争力を理由に推進。</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">核融合</span>
+          <h3 class="card-headline">核融合がAI駆動のプラズマ設計で前進 — ProximaとCommonwealthが進展</h3>
+          <p class="card-body">AIが核融合開発を加速 — プラズマ最適化に機械学習を活用。<strong>Commonwealth Fusionが$8B+評価額で$1.8B Series D間近。</strong>核融合は長寿命廃棄物なしでコンパクトな常時稼働電力を提供。</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">太陽光</span>
+          <h3 class="card-headline">太陽光LCOEが$35/MWhに — 米国ガス発電所と競争力</h3>
+          <p class="card-body">グローバル太陽光LCOEは2025年に2%低下、2035年までに31%低下見込み。<strong>逆構造ペロブスカイトセルが25.6%の効率を達成。</strong>中国が製造で優位；蓄電が送電網信頼性のボトルネック。</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">バッテリー</span>
+          <h3 class="card-headline">米国蓄電池が記録更新 — 2025年に18.2 GW追加</h3>
+          <p class="card-body">EIAがリチウムイオンの進歩とインセンティブによる前例のない拡大を報告。<strong>LCOEは2025年に11%低下、2035年までに50%低下見込み。</strong>バナジウムフロー電池やナトリウム電池などの代替技術がグリッド規模で注目。</p>
+        </article>
+        <article class="card">
+          <span class="card-tag">地熱</span>
+          <h3 class="card-headline">AIが地熱を加速 — Zanskarのニューメキシコプラントが前進</h3>
+          <p class="card-body">AIが地下マッピングと掘削効率を改善。<strong>間欠性のない24/7ベースロード電力。</strong>多様なカーボンフリー電源を求めるハイパースケーラーからの関心が増大。</p>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="bottom-line">
+        <div class="section-header"><h2 class="section-title">ボトムライン</h2></div>
+        <p>AIのエネルギー需要がエネルギーセクター全体を再形成している。Wright エネルギー長官の「マンハッタン計画」という表現が課題の規模を端的に示す — 送電インフラがデータセンターの成長に追いつけない。短期的な対応として5 GWの新規ガス発電所が含まれるが、長期的な賭けは原子力ルネサンスと核融合開発。太陽光はコストパリティに到達したが、蓄電が制約要因。日本は原子力再稼働をリードしつつエネルギー安全保障に投資。</p>
+        <p style="margin-top: 1rem; font-weight: 600;">AIが送電網に負荷。原子力ルネサンス加速。太陽光がパリティに。蓄電が鍵。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><p>エネルギー＆気候レビュー · Compiled by Sanbot · 2026年2月17日</p></footer>
+</body>
+</html>
