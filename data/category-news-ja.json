@@ -1,0 +1,665 @@
+{
+  "date": "2026-03-13",
+  "generatedAt": "2026-03-13T13:30:00.000000+09:00",
+  "categoryNews": [
+    {
+      "id": "us",
+      "title": "米国",
+      "stories": [
+        {
+          "headline": "トランプ大統領、イラン戦争で米国は「勝利した」と宣言も「仕上げが必要」と強調",
+          "summary": "トランプ大統領は開戦以来初めて国民に演説し、イランの「悪の帝国」に対する作戦完了の必要性を強調しつつ勝利を宣言。開戦6日間で国防総省の費用は113億ドルを超えた。イランの新最高指導者はタンカー攻撃を含む報復継続を誓い、世界のエネルギー供給への長期的紛争の懸念が広がる中、市場と国民への安心を目指した声明となった。",
+          "tag": "政策 · イラン",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ABC News",
+              "url": "https://abcnews.go.com"
+            }
+          ],
+          "image_url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_16x9_992.jpg"
+        },
+        {
+          "headline": "イラン、ホルムズ海峡封鎖を強化し原油価格が急騰——戦争2週目に突入",
+          "summary": "イランはタンカー攻撃を激化させホルムズ海峡の封鎖維持を宣言。IEAは史上最大の石油供給途絶を警告した。トランプ大統領は原油価格よりイラン打倒を優先し、イランが世界石油輸送の20%を管理する中、米軍基地への脅威や地域攻撃で紛争は激化している。",
+          "tag": "経済 · エネルギー",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "YouTube / ILTV",
+              "url": "https://www.youtube.com/watch?v=0GNsFtAiY3I"
+            }
+          ],
+          "image_url": "https://i.ytimg.com/vi/0GNsFtAiY3I/maxresdefault.jpg"
+        },
+        {
+          "headline": "ミシガン州シナゴーグへのトラック突入事件、反ユダヤ主義暴力として捜査",
+          "summary": "100人以上の園児がいたミシガン州のシナゴーグにトラックが突入。FBIはユダヤ人コミュニティを狙った意図的な行為として捜査中で、イラン関連の報復に対する米国の警戒が高まっている。職員のアクティブシューター訓練が最悪の事態を防いだが、イラン戦争に関連するスリーパーセルやサイバー攻撃への懸念が広がっている。",
+          "tag": "安全保障 · 国内",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ABC News",
+              "url": "https://abcnews.go.com"
+            }
+          ],
+          "image_url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_16x9_992.jpg"
+        },
+        {
+          "headline": "米空軍給油機がイラク上空で墜落——中東緊張が激化する中",
+          "summary": "イラン戦争の支援作戦中に米空軍の給油機がイラクで墜落。軍は乗組員の救出に急行しており、2週間の紛争で死傷者が増加している。イランが地域攻撃を激化させる中、敵対的な空域での継続的な作戦の人的・兵站的コストが浮き彫りとなった。",
+          "tag": "軍事 · イラン",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "YouTube",
+              "url": "https://www.youtube.com/watch?v=gqAbaSc2Woo"
+            }
+          ],
+          "image_url": "https://i.ytimg.com/vi/gqAbaSc2Woo/maxresdefault.jpg"
+        },
+        {
+          "headline": "FBIがカリフォルニアへのイランによるドローン攻撃の可能性を警告",
+          "summary": "FBIはイランがドローンでカリフォルニアを標的にする可能性について警報を発した。ミシガン州シナゴーグ突入事件やOld Dominion大学銃撃事件などを受け、スリーパーセル、サイバー脅威、中東戦争に関連する国内攻撃への懸念が高まり、法執行機関は米国本土でのリスク増大に備えている。",
+          "tag": "安全保障 · 国土防衛",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ABC News",
+              "url": "https://abcnews.go.com"
+            }
+          ],
+          "image_url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_16x9_992.jpg"
+        },
+        {
+          "headline": "「Save America法案」が下院通過も、移民政策をめぐり上院でフィリバスターの見込み",
+          "summary": "テキサス州司法長官Ken Paxtonとの激しい決選投票を控えるCornyn上院議員が支持するSave America法案が下院を通過したが、上院民主党は厳しい家族収容条項をめぐりフィリバスターを宣言。トランプ大統領の二期目の移民取り締まり強化の中、収容施設での医療怠慢や宗教軽視が批判されている。",
+          "tag": "政策 · 移民",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Democracy Now",
+              "url": "https://www.youtube.com/watch?v=SFc22KkNH0Q"
+            }
+          ],
+          "image_url": "https://i.ytimg.com/vi/SFc22KkNH0Q/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "人工知能",
+      "stories": [
+        {
+          "headline": "OpenAI、100万トークンコンテキストのGPT-5.4およびGPT-5.4 Proを発表",
+          "summary": "GPT-5.3の急速なフォローアップとして、激しい競争の中でのOpenAIの危機モード的反復を示す。推論能力、エージェント機能、ハルシネーション低減を強化しフロンティアのリーダーシップを維持。100万トークンのコンテキストウィンドウにより、コードベース全体の分析やマルチドキュメント推論など、より複雑な実世界タスクが可能となり、エンタープライズワークフローにおけるエージェントAIへのシフトを示唆している。",
+          "tag": "モデル",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Champaign Magazine",
+              "url": "https://champaignmagazine.com/2026/03/08/ai-by-ai-weekly-top-5-march-2-8-2026/"
+            }
+          ],
+          "image_url": "https://champaignmagazine.com/wp-content/uploads/2025/08/cropped-cm_site_icon_gemini_08262025-1.jpg?w=200"
+        },
+        {
+          "headline": "DeepSeek、中国製チップのみで構築した1兆パラメータモデルV4を予告",
+          "summary": "NvidiaとAMDを排除しHuaweiとCambriconのハードウェアで構築されたマルチモーダルモデル。AnthropicがDeepSeekのデータ蒸留を非難する中、米国のチップ支配に挑戦し地政学的緊張を激化させている。グローバルなサプライチェーン争いと輸出規制の中での中国のAI自給自足インフラ推進を示す。",
+          "tag": "モデル · 地政学",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Champaign Magazine",
+              "url": "https://champaignmagazine.com/2026/03/08/ai-by-ai-weekly-top-5-march-2-8-2026/"
+            }
+          ],
+          "image_url": "https://champaignmagazine.com/wp-content/uploads/2025/08/cropped-cm_site_icon_gemini_08262025-1.jpg?w=200"
+        },
+        {
+          "headline": "Yann LeCunのAMI Labs、欧州史上最大のシードラウンドで10.3億ドルを調達",
+          "summary": "Nvidia、Temasek、Bezos関連ファンドの支援を受け、次トークン予測を超える優れた推論、計画、ロボティクスのための「ワールドモデル」に資金を投入する欧州史上最大のシードラウンド。AIアーキテクチャの多様化と、チャットボットを超えた産業・実世界応用への投資家の賭けを広げている。",
+          "tag": "モデル · 資金調達",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "TechStartups",
+              "url": "https://techstartups.com/2026/03/10/top-tech-news-today-march-10-2026/"
+            }
+          ],
+          "image_url": "https://techstartups.com/wp-content/uploads/2024/07/Google.jpg"
+        },
+        {
+          "headline": "トランプ政権、監視・兵器利用拒否を理由にAnthropicをブラックリストに",
+          "summary": "Anthropicが大量監視と自律型兵器への応用を拒否したことで、トランプ政権が「国家安全保障」名目でブラックリスト入りさせた一方、OpenAIは国防総省との提携を確保。政府とAI企業の対立が激化し、軍事AIの境界に関する規制の方向性が形成されつつある。",
+          "tag": "規制 · 政策",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "AI Weekly",
+              "url": "https://ai-weekly.ai/newsletter-03-03-2026/"
+            }
+          ],
+          "image_url": "https://ai-weekly.ai/wp-content/uploads/2026/03/ai-weekly-206-1920x1080-at-100.jpg"
+        },
+        {
+          "headline": "Google DeepMind、Gemini 3.1 Flash-LiteとDeep Thinkを公開——未解決の数学問題を解決",
+          "summary": "Gemini 3.1 Flash-Liteは効率的な開発者ワークロードを対象とし、Deep ThinkはErdős予想に自律的に取り組みIMO-ProofBenchで90%を達成、ARC-AGI-2などのベンチマークを倍増させた。これまで到達不可能とされていた専門家レベルの数学的推論領域へのAIの拡張を示している。",
+          "tag": "モデル · 研究",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Champaign Magazine",
+              "url": "https://champaignmagazine.com/2026/03/08/ai-by-ai-weekly-top-5-march-2-8-2026/"
+            }
+          ],
+          "image_url": "https://champaignmagazine.com/wp-content/uploads/2025/08/cropped-cm_site_icon_gemini_08262025-1.jpg?w=200"
+        },
+        {
+          "headline": "Nvidia、1兆パラメータモデル向けVera RubinプラットフォームとH300 GPUを発表",
+          "summary": "大規模トレーニングを対象とするVera Rubinプラットフォームは、AMDのRyzen AI 400 NPUや次世代ネットワーキングと組み合わせエッジ処理に対応。H300 GPUはコンシューマーデバイスとデータセンターインフラの両方で、次世代AIスケーリングに不可欠な効率向上を実現する。",
+          "tag": "インフラ · チップ",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Mean CEO Blog",
+              "url": "https://blog.mean.ceo/new-ai-model-releases-news-march-2026/"
+            }
+          ],
+          "image_url": null
+        }
+      ]
+    },
+    {
+      "id": "vc",
+      "title": "ベンチャーキャピタル＆スタートアップ",
+      "stories": [
+        {
+          "headline": "A16z、150億ドルのメガファンドを調達しAIリーダーに数十億を配分",
+          "summary": "Andreessen Horowitzの大型ファンドレイズは、グロース向け67.5億ドル、AIアプリとインフラにそれぞれ17億ドルを含み、コンピュート集約型プロジェクトへの需要急増の中で米国AI投資を形作る同社の圧倒的影響力を示している。エリートVCファームがメガディールを主導する投資家の信頼感を示す一方、小規模ラウンドはより厳しい条件に直面。",
+          "tag": "資金調達",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Gardenzhome",
+              "url": "https://gardenzhome.com/top-best-venture-capital-firms-in-america-list/"
+            }
+          ],
+          "image_url": "https://gardenzhome.com/wp-content/uploads/2025/11/Andreessen-Horowitz-1.png"
+        },
+        {
+          "headline": "Thinking Machines Lab（Mira Murati）、AIインフラ向けNvidiaパートナーシップを確保",
+          "summary": "元OpenAI CTOのMira Muratiが設立したThinking Machines Labが、次世代Nvidiaコンピューティングリソースへの重要なアクセスを確保。2026年のAIスタートアップ評価がチップやエネルギーなどの希少なインフラに左右されるシフトを体現し、AIの産業プラットフォーム時代における主要プレイヤーとしての地位を確立。",
+          "tag": "提携 · AI",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Sergey Tereshkin",
+              "url": "https://sergeytereshkin.com/publications/startup-and-venture-investment-market-overview-march-2026"
+            }
+          ],
+          "image_url": "https://sergeytereshkin.com/upload/resize_cache/iblock/298/1200_630_1/09mpc3ciobesxxp48z9iegawi37kmiii.png"
+        },
+        {
+          "headline": "Yann LeCunのAMI、欧州史上最大のシードラウンドで10億ドル超を調達",
+          "summary": "この記録的なシードラウンドはAMIを欧州史上最大規模に位置づけ、ディープテックAIにグローバル資本を呼び込み、人材輸出国からワールドクラスのAIプラットフォームのハブへの転換を示している。米国以外へのVC地理の多様化と、欧州の基礎的AI投資の活性化を促進。",
+          "tag": "資金調達 · シード",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Sergey Tereshkin",
+              "url": "https://sergeytereshkin.com/publications/startup-and-venture-investment-market-overview-march-2026"
+            }
+          ],
+          "image_url": "https://sergeytereshkin.com/upload/resize_cache/iblock/298/1200_630_1/09mpc3ciobesxxp48z9iegawi37kmiii.png"
+        },
+        {
+          "headline": "Waymo、Google主導でA16z・Sequoia参加のシリーズDで160億ドルを調達",
+          "summary": "2月最大級のラウンドの一つで、Googleからの120億ドルを含むWaymoの160億ドルシリーズDは、AIと防衛テックの急成長の中で自動運転を加速。a16z、Dragoneer、Sequoiaの参加はロボタクシーの成熟度と、エリート投資家の高バリュエーション成長ステージへの注力を示す。",
+          "tag": "資金調達 · 自動運転",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Gardenzhome",
+              "url": "https://gardenzhome.com/top-best-venture-capital-firms-in-america-list/"
+            }
+          ],
+          "image_url": "https://gardenzhome.com/wp-content/uploads/2025/11/Andreessen-Horowitz-1.png"
+        },
+        {
+          "headline": "Inferact、AI推論最適化で1.5億ドルのシードラウンドを確保",
+          "summary": "vLLMを活用したAI推論最適化への大型シードラウンド。a16zやSequoiaなどのトップVCがシードの10%にしか参加しない中、高性能モデルのスケーリングに向けたAIインフラを優先していることを示す。エリートファームの初期ステージAIインフラ案件における支配力を体現。",
+          "tag": "資金調達 · シード",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "CDP Center",
+              "url": "https://www.cdp.center/post/startup-report-venture-funds-deals-and-trends-jan-2026"
+            }
+          ],
+          "image_url": "https://cdn.prod.website-files.com/63bacaaee91f66603937d3ea/69993fb2f87f83a8f5bed404_january%202026.jpg"
+        },
+        {
+          "headline": "A16z、2月に14件の投資で最も活発な投資家に——YCが続く",
+          "summary": "OpenAIやAnthropicのラウンドを含む、件数は減少したが大型化した案件の中で、a16zの活動はシードからメガラウンドまでのディールパイプラインに対するトップVCの支配力を強化。YCの15ラウンド参加がアーリーステージの勢いを維持。AI優先の中でエリートプレイヤーへの集中が浮き彫りに。",
+          "tag": "市場トレンド",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Crunchbase News",
+              "url": "https://news.crunchbase.com/venture/active-investors-big-deals-february-2026-yc-a16z-nvidia/"
+            }
+          ],
+          "image_url": "https://news.crunchbase.com/wp-content/uploads/Top_Investors_feb.jpg"
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "title": "エネルギー＆気候",
+      "stories": [
+        {
+          "headline": "米国、2026年に過去最大の86GW発電容量を追加見込み——太陽光が51%をリード",
+          "summary": "2002年以来最大となるこの拡大予測は、2025年の53GW追加に続くもの。テキサス州が40%を占め、太陽光が43.4GW（60%増）で主導する。AIデータセンターや電化による需要増加の中、再生可能エネルギーの成長加速とグリッド信頼性の向上を示す。",
+          "tag": "再エネ · 太陽光",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Solar Quarter",
+              "url": "https://solarquarter.com/2026/02/24/u-s-power-capacity-additions-to-hit-record-86-gw-in-2026-led-by-solar-and-storage-eia/"
+            }
+          ],
+          "image_url": null
+        },
+        {
+          "headline": "蓄電池導入量、2026年に70GWhへ急増——前年比23%増",
+          "summary": "SEIAは2026年の総容量追加の28%を占めるバッテリーエネルギー貯蔵システムの大幅な拡大を予測。ハイパースケーラーのデータセンターによる安定的なクリーン電力需要が牽引。蓄電池は再エネの間欠性に対応し、グリッド安定性を向上させ、24時間365日の低炭素エネルギーへの最短経路としての地位を確立。",
+          "tag": "グリッド · 蓄電",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "JD Supra",
+              "url": "https://www.jdsupra.com/legalnews/renewable-energy-update-3-3-26-1275556/"
+            }
+          ],
+          "image_url": "https://jdsupra-static.s3.amazonaws.com/profile-images/og.865_1359.jpg"
+        },
+        {
+          "headline": "風力発電容量、大規模SunZiaプロジェクトを含む11.8GW追加で回復",
+          "summary": "風力発電容量は2025年の水準から倍増し、ニューメキシコ、テキサス、イリノイ、ワイオミングに集中。洋上プロジェクトのVineyard Wind 1（800MW）とRevolution Wind（715MW）は2026年完成を目指す。3,650MWのSunZiaプロジェクトは陸上風力大型案件の勢い回復を示す。",
+          "tag": "再エネ · 風力",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "EIA",
+              "url": "https://www.eia.gov/todayinenergy/detail.php?id=67205"
+            }
+          ],
+          "image_url": null
+        },
+        {
+          "headline": "カリフォルニア州、2032年までに6GWの非化石燃料容量調達を公益事業者に命令",
+          "summary": "CPUCの命令は2029-2032年の需要主導の不足に対応し、太陽光＋蓄電ハイブリッドなどのゼロエミッションまたはRPS適格リソースを要求。停電回避に向けたクリーン容量を推進する州レベルの政策を強調し、レジリエントなグリッドのための蓄電と再エネの全国的トレンドに沿う。",
+          "tag": "グリッド · 政策",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "JD Supra",
+              "url": "https://www.jdsupra.com/legalnews/renewable-energy-update-3-3-26-1275556/"
+            }
+          ],
+          "image_url": "https://jdsupra-static.s3.amazonaws.com/profile-images/og.865_1359.jpg"
+        },
+        {
+          "headline": "天然ガス、再エネ急成長の中でグリッドバックアップとして6.3GW追加",
+          "summary": "テキサス、オクラホマ、オハイオ、テネシー、フロリダで計画されたガス発電容量は、太陽光・風力・蓄電の記録的成長期における再エネの間欠性を補完する柔軟な安定電力を提供。クリーンテックが拡大する中、グリッド安定性のために化石燃料バックアップを維持するバランスの取れたエネルギー転換を反映。",
+          "tag": "ガス · グリッド",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Solar Quarter",
+              "url": "https://solarquarter.com/2026/02/24/u-s-power-capacity-additions-to-hit-record-86-gw-in-2026-led-by-solar-and-storage-eia/"
+            }
+          ],
+          "image_url": "https://solarquarter.com/wp-content/uploads/2020/04/11.png"
+        },
+        {
+          "headline": "原子力再稼働が勢いを増す——PalisadesとDwayne Arnold発電所が前進",
+          "summary": "HoltecのPalisades再稼働とNextEraの600MW Dwayne Arnold原子炉のNRC申請は、ハイパースケーラーのデータセンターエネルギー需要を補完するベースロードクリーン電力としての原子力復活を示す。長期的な気候目標に向け、蓄電池を超えた24時間安定容量の多様化を強化。",
+          "tag": "原子力",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "YouTube",
+              "url": "https://www.youtube.com/watch?v=hsiq7WUou0U"
+            }
+          ],
+          "image_url": "https://i.ytimg.com/vi/hsiq7WUou0U/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "health-wellness",
+      "title": "ヘルスケア＆ウェルネス",
+      "stories": [
+        {
+          "headline": "ミネソタ州知事、不正疑惑を受けメディケイドMCO廃止を提案",
+          "summary": "この提案は、広範な不正疑惑を理由にマネージドケア組織から出来高払いモデルへの転換を図る、州メディケイド提供体制の大きな変革の可能性を示す。他州の前例となり数十億ドルの連邦資金に影響を及ぼす可能性があり、MCOの説明責任に対する超党派の監視強化を浮き彫りにしている。",
+          "tag": "医療政策",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Healthcare Finance",
+              "url": "https://www.healthcarefinancenews.com"
+            }
+          ],
+          "image_url": null
+        },
+        {
+          "headline": "CMS、DMEサプライヤーに15億ドルのメディケア不正モラトリアムを実施",
+          "summary": "耐久医療機器サプライヤーの新規登録を6ヶ月間全国的に停止し、15億ドル以上の不正疑惑に対処。メディケア資金を保護するための積極的な連邦措置を示し、サプライヤーの業務に直接影響を与え、CMSのより強力な登録保護策の推進を強調。",
+          "tag": "医療政策",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "CMS.gov",
+              "url": "https://www.cms.gov"
+            }
+          ],
+          "image_url": null
+        },
+        {
+          "headline": "製薬各社、トランプ政権の圧力にもかかわらず350以上の薬品の値上げを計画",
+          "summary": "PfizerをはじめとするCOVIDワクチン（15%値上げ）やがん治療薬など数百の薬品の表示価格引き上げを計画し、政権の値下げ要求に反発。インフレ削減法による交渉で得られた一部の節約を相殺し、患者コストに直接影響を与え、薬価の手頃さをめぐる緊張が激化。",
+          "tag": "製薬 · 価格",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Reuters",
+              "url": "https://www.reuters.com"
+            }
+          ],
+          "image_url": null
+        },
+        {
+          "headline": "メディケア薬価引き下げが2026年に発効——年間60億ドルの節約",
+          "summary": "StelaraやインスリンなどのパートD高額薬10品目の交渉価格引き下げと新たな自己負担上限により、メディケア支出を60億ドル、受益者コストを年間15億ドル削減。インフレ削減法の成果を実現し、政府主導の価格管理における画期的な出来事で、製薬収益に広範な影響を持つ。",
+          "tag": "製薬 · 政策",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "CMS.gov",
+              "url": "https://www.cms.gov"
+            }
+          ],
+          "image_url": null
+        },
+        {
+          "headline": "Honest Health、ACO事業の全国展開に向け1.4億ドルを調達",
+          "summary": "元CMMIリーダーの支援を受けたACO運営者が、IPAやヘルスシステムを通じてメディケア共有貯蓄プログラムとREACHプログラムをより多くの州に拡大するための資金を確保。政策転換の中でバリューベースドケアの成長を促進し、数百万人の受益者向けの競争とコスト削減モデルに影響を与える可能性がある。",
+          "tag": "ヘルスケア · 資金調達",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Fierce Healthcare",
+              "url": "https://www.fiercehealthcare.com"
+            }
+          ],
+          "image_url": null
+        },
+        {
+          "headline": "FDA、超希少疾患向け「妥当なメカニズム」フレームワークのドラフトガイダンスを公開",
+          "summary": "新フレームワークは遺伝性疾患向けの個別化治療の開発を加速し、超希少疾患に対するFDA審査を効率化。2026年4月までのコメント期間が設けられている。希少疾患イノベーションの長年の障壁に対応し、標的バイオテック治療へのより迅速なアクセスを約束。",
+          "tag": "バイオテック · 規制",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "FDA.gov",
+              "url": "https://www.fda.gov"
+            }
+          ],
+          "image_url": null
+        }
+      ]
+    },
+    {
+      "id": "longevity",
+      "title": "長寿＆エイジング",
+      "stories": [
+        {
+          "headline": "ARPA-H、大規模老化介入試験のためのPROSPRプログラムに1.44億ドルを投入",
+          "summary": "「内在的能力」スコアなどの代替バイオマーカーを使用し、数十年のフォローアップなしに試験を加速する初の大規模ヒト臨床研究に資金を提供。専門家はこれを画期的な瞬間と呼び、長寿研究を動物モデルからヒトへと転換することで5年以内に人口の健康に大きな影響を与える可能性があるとしている。",
+          "tag": "研究 · 資金調達",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ARPA-H",
+              "url": "https://arpa-h.gov"
+            }
+          ],
+          "image_url": "https://arpa-h.gov/sites/default/files/2023-11/ARPA-H_1200x600.png"
+        },
+        {
+          "headline": "Cambrian BioPharma、次世代ラパマイシンアナログのヒト試験に3,080万ドルを確保",
+          "summary": "加齢関連の代謝低下の主要ドライバーである調節不全のmTORC1シグナリングを選択的に阻害する経口薬の試験を支援。健康寿命改善の迅速な評価のための検証済みバイオマーカーを使用。長寿科学で最も研究されている経路の一つを実用的なヒト応用に前進させる。",
+          "tag": "バイオテック · 臨床",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Cambrian Bio",
+              "url": "https://www.cambrianbio.com"
+            }
+          ],
+          "image_url": "https://cdn.prod.website-files.com/600be113c4111047016de64a/601755374a93050ea79a2c7c_CAMP.metagraphic%402x.png"
+        },
+        {
+          "headline": "Linnaeus、GPER標的薬のヒト試験推進にARPA-Hから2,200万ドルを獲得",
+          "summary": "ARPA-Hの助成金は、身体的・代謝的レジリエンスを維持するためのGタンパク質共役型エストロゲン受容体（GPER）を標的とする薬の臨床試験に資金を提供。加齢関連の衰退に対抗する新しいメカニズムに取り組み、迅速な有効性評価のためにWHO定義の内在的能力指標と直接結びついている。",
+          "tag": "バイオテック · 臨床",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ARPA-H",
+              "url": "https://arpa-h.gov"
+            }
+          ],
+          "image_url": "https://arpa-h.gov/sites/default/files/2023-11/ARPA-H_1200x600.png"
+        },
+        {
+          "headline": "多機関チーム、加齢関連炎症に対するHIV治療薬の試験に2,200万ドルを獲得",
+          "summary": "University of Rochesterが主導しUConnとBrownが参加するPROSPR資金の試験で、200人の高齢者を対象にLINE-1レトロトランスポゾンによる慢性DNA誘発炎症を低減する抗レトロウイルス療法を評価。安全で確立された薬剤を運動能力、認知、活力を標的とする直接的な老化介入に転用。",
+          "tag": "研究 · 臨床",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "University of Rochester",
+              "url": "https://www.rochester.edu"
+            }
+          ],
+          "image_url": "https://www.rochester.edu/assets/images/brand/homepage-link-preview.png"
+        },
+        {
+          "headline": "Salk Institute、予測AIモデルを備えた包括的な脳老化アトラスを公開",
+          "summary": "Cell誌に発表されたこのアトラスは、老化する脳のマルチオミクス変化をマッピングし、強化されたTAD境界とCTCFサイトを新しいバイオマーカーとして特定。ディープラーニングツールにより遺伝子発現の変化を予測し仮想老化モデルを構築可能で、オープンアクセスにより脳の健康寿命に関するグローバル研究を加速。",
+          "tag": "研究 · AI",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Cell",
+              "url": "https://www.cell.com"
+            }
+          ],
+          "image_url": null
+        }
+      ]
+    },
+    {
+      "id": "space",
+      "title": "宇宙",
+      "stories": [
+        {
+          "headline": "SpaceX、Cape CanaveralからFalcon 9でEchoStar XXV衛星を打ち上げ",
+          "summary": "15,000ポンドの直接放送TV衛星を静止遷移軌道に投入するミッションが成功し、SpaceXの2026年30回目の打ち上げとなった。商業衛星需要の高まりの中、信頼性の高い大型ペイロード能力とSpaceXの圧倒的な打ち上げペースを実証。",
+          "tag": "打ち上げ · 商業",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "YouTube / SpaceX",
+              "url": "https://www.youtube.com/watch?v=ijBv_MUtG9k"
+            }
+          ],
+          "image_url": "https://i.ytimg.com/vi/ijBv_MUtG9k/maxresdefault.jpg"
+        },
+        {
+          "headline": "SpaceX、2026年のStarlink衛星打ち上げ600基を達成",
+          "summary": "Cape Canaveralからの早朝のFalcon 9飛行で29基のブロードバンドインターネット衛星をLEOに追加し、25回目の再使用となるブースターでコンステレーション拡張を推進。商業宇宙セクターにおけるSpaceXの比類なき打ち上げペースの支配力を示すマイルストーン。",
+          "tag": "衛星 · Starlink",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Spaceflight Now",
+              "url": "https://spaceflightnow.com/2026/03/03/live-coverage-spacex-to-launch-29-starlink-satellites-on-falcon-9-rocket-from-cape-canaveral-10/"
+            }
+          ],
+          "image_url": null
+        },
+        {
+          "headline": "SpaceX、カリフォルニアとフロリダからの同日打ち上げで54基のStarlink衛星を展開",
+          "summary": "カリフォルニアとフロリダのFalcon 9ロケットが同日に54基のStarlink衛星を展開し、軌道上の衛星数は9,900基を超えた。20回目と26回目の再使用ブースターがドローン船への着陸に成功し、衛星インターネットインフラの成長が加速。",
+          "tag": "衛星 · Starlink",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Space.com",
+              "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starlink-10-41-b1078-ccsfs-jrti-17-23-b1082-vsfb-ocisly"
+            }
+          ],
+          "image_url": "https://cdn.mos.cms.futurecdn.net/eZ4Pi4pSFg8m8m5oHJqmwH-1920-80.jpg"
+        },
+        {
+          "headline": "中国の実践32号ミッション、長征3B/Eロケットで打ち上げ失敗",
+          "summary": "西昌衛星発射センターからの打ち上げが失敗し、中国の実験衛星プログラムに支障をきたし長征ロケットの信頼性に疑問が生じた。最近の中国の成功と対照的な稀な挫折で、世界的な宇宙競争の議論を激化させている。",
+          "tag": "打ち上げ · 失敗",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Space Launch Schedule",
+              "url": "https://www.spacelaunchschedule.com/2026-launch-schedule/"
+            }
+          ],
+          "image_url": "https://www.spacelaunchschedule.com/wp-content/uploads/2026/02/social-1920x1080-1.png"
+        },
+        {
+          "headline": "中国、2026年初頭に複数の衛星打ち上げに成功",
+          "summary": "遥感50-01、SatNet LEOグループ18・19、AlSat 3Aなどのミッションが成功し、複数の長征ロケットバリアントにわたる偵察、ネットワーキング、地球観測能力を向上。軍事・商業衛星の両分野における中国の積極的な展開拡大を実証。",
+          "tag": "衛星 · 防衛",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Space Launch Schedule",
+              "url": "https://www.spacelaunchschedule.com/2026-launch-schedule/"
+            }
+          ],
+          "image_url": "https://www.spacelaunchschedule.com/wp-content/uploads/2026/02/social-1920x1080-1.png"
+        },
+        {
+          "headline": "Artemis II有人月周回飛行、2026年4月以降に延期",
+          "summary": "SLSとOrionで4人の宇宙飛行士を10日間の月周回飛行に送るNASA初の有人Artemisミッションがさらなる遅延に直面し、深宇宙探査のタイムラインにおける持続的な課題を示唆。後続のArtemis III月面着陸ミッションのスケジュールと国際的な月探査の野心に影響。",
+          "tag": "探査 · NASA",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Space Calendar",
+              "url": "https://spacecalendar.com"
+            }
+          ],
+          "image_url": null
+        }
+      ]
+    },
+    {
+      "id": "sports-entertainment",
+      "title": "スポーツ＆エンタメ",
+      "stories": [
+        {
+          "headline": "CB Cobie Durant、NFLフリーエージェンシーでCowboysと1年550万ドルで合意",
+          "summary": "2026年NFLフリーエージェンシー期間における初期の重要な動きとして、実績のあるコーナーバックでCowboysのセカンダリーを強化。守備人材をめぐる激しい競争の中、リーグ全体のチーム戦略に影響を与えるフリーエージェンシー取引の急速なペースを示す。",
+          "tag": "NFL · フリーエージェンシー",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ESPN",
+              "url": "https://www.espn.com"
+            }
+          ],
+          "image_url": "https://a1.espncdn.com/combiner/i?img=%2Fi%2Fespn%2Fespn_logos%2Fespn_red.png"
+        },
+        {
+          "headline": "Vikings、Kyler Murrayを獲得——Kevin O'Connell HCがQB状況について言及",
+          "summary": "VikingsのKyler Murray獲得はフリーエージェンシー期間のNFL QBマーケットにおける大きな転換を意味し、攻撃力とプレーオフ争いを再形成する可能性がある。O'Connell HCのコメントはMurrayをフランチャイズの柱とする姿勢を示し、NFC Northのダイナミクスに注目が集まる。",
+          "tag": "NFL · フリーエージェンシー",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Sports Illustrated",
+              "url": "https://www.si.com"
+            }
+          ],
+          "image_url": "https://images2.minutemediacdn.com/image/upload/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/v1714489071/images/voltaxMediaLibrary/mmsport/si/01hwqr65mjwfyv2ckzp9.jpg"
+        },
+        {
+          "headline": "ワールド・ベースボール・クラシック、米国敗退にもかかわらずFoxで高視聴率を記録",
+          "summary": "WBCはFoxで記録的な初期視聴率を達成し、MLB選手の国際的な魅力と商業的訴求力の高まりを示した。しかし米国チームの敗退が決勝トーナメントに向けた興奮を抑え、放送への期待とトーナメントの物語に影響。",
+          "tag": "メディア · 野球",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Front Office Sports",
+              "url": "https://frontofficesports.com"
+            }
+          ],
+          "image_url": "https://frontofficesports.com/wp-content/uploads/2025/04/centered-fullfos-v2-scaled-.jpg?quality=100"
+        },
+        {
+          "headline": "WNBAとWNBPA、労使交渉が2夜連続で深夜まで続くも合意に至らず",
+          "summary": "収益分配と選手福祉をめぐる労使交渉の緊張が高まり、WNBAシーズン開幕を前に混乱のリスクが浮上。深夜0時を過ぎた会議後の決裂は、リーグの人気とメディア注目が拡大する中でのビジネスモデルの亀裂を露呈。",
+          "tag": "リーグ · 労使",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Front Office Sports",
+              "url": "https://frontofficesports.com"
+            }
+          ],
+          "image_url": "https://frontofficesports.com/wp-content/uploads/2025/04/centered-fullfos-v2-scaled-.jpg?quality=100"
+        },
+        {
+          "headline": "Michael Johnson、Grand Slam Track破綻で詐欺疑惑——債権者が提訴",
+          "summary": "債権者がオリンピックレジェンドのMichael JohnsonとWinners Allianceに対し、破綻したGrand Slam Trackリーグにおける詐欺と無能を主張し数百万ドルの訴訟を提起。陸上競技の革新的事業を脅かし、新興スポーツエンターテインメントビジネスにおけるガバナンスリスクを露呈。",
+          "tag": "エンタメ · スキャンダル",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Front Office Sports",
+              "url": "https://frontofficesports.com"
+            }
+          ],
+          "image_url": "https://frontofficesports.com/wp-content/uploads/2025/04/centered-fullfos-v2-scaled-.jpg?quality=100"
+        },
+        {
+          "headline": "マーチ・マッドネス、波乱減少もTV局は視聴率に楽観的",
+          "summary": "予測通りの結果が増えNCAAトーナメントの波乱が減少しているにもかかわらず、強力なブランド力、スポンサーシップ、トーナメントの文化的存在感により放送局は視聴率に楽観的。フォーマットへの批判がある中でも、カレッジバスケットボールのメディアエコシステムの回復力を反映。",
+          "tag": "メディア · カレッジ",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Front Office Sports",
+              "url": "https://frontofficesports.com"
+            }
+          ],
+          "image_url": "https://frontofficesports.com/wp-content/uploads/2025/04/centered-fullfos-v2-scaled-.jpg?quality=100"
+        }
+      ]
+    }
+  ]
+}
