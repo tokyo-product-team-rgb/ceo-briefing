@@ -94,6 +94,84 @@ def split_markets(html):
     html = html[:m.start()] + replacement + html[m.end():]
     return html
 
+def inject_signals(html):
+    """Fetch English signals and inject Japanese translations into currency/bond tables."""
+    import urllib.request, json
+    
+    try:
+        with urllib.request.urlopen("https://ceo-briefing-api.vercel.app/api/briefing/latest", timeout=10) as resp:
+            en_data = json.loads(resp.read())
+    except:
+        print("  Could not fetch English signals")
+        return html
+    
+    # Build English signal map
+    en_signals = {}
+    for s in en_data.get('sections', []):
+        for st in s['stories']:
+            t = st.get('table')
+            if t and 'rows' in t:
+                for r in t['rows']:
+                    if r.get('signal'):
+                        en_signals[r['name'].upper().strip()] = r['signal']
+    
+    # Japanese name → English name mapping
+    ja_to_en = {
+        'ドル円': 'USD/JPY', 'ユーロドル': 'EUR/USD', 'ポンドドル': 'GBP/USD',
+        '豪ドル': 'AUD/USD', 'DXY（ドル指数）': 'DXY', 'USD/INR': 'USD/INR', 'USD/CNH': 'USD/CNH',
+        '米10年債利回り': 'US TREASURY', 'JGB10年利回り': 'JAPAN JGB',
+        'ドイツ': 'GERMANY BUND', '英国': 'UK GILT',
+    }
+    
+    # Signal translations
+    translations = {
+        '¥160 intervention zone imminent': '¥160介入ゾーン接近',
+        'Euro weakening on energy costs': 'ユーロ：エネルギーコスト圧力で下落',
+        'Sterling under oil-inflation pressure': 'ポンド：原油インフレ圧力',
+        'AUD resilient as commodity exporter': '豪ドル：資源輸出国として底堅い',
+        'Rupee weakening on oil/outflows': 'ルピー：原油高と資金流出で下落',
+        'Yuan under pressure from capital flight': '人民元：資本流出圧力',
+        'PCE data today is key risk': '本日のPCEデータがリスク要因',
+        'Stable ahead of BOJ Mar 18-19': '日銀3/18-19会合前で安定',
+        'Defense spending + energy inflation': '防衛支出＋エネルギーインフレ',
+        'Oil-driven inflation premium rising': '原油インフレプレミアム上昇',
+    }
+    
+    # For each Japanese asset name, find signal and inject into HTML
+    changes = 0
+    for ja_name, en_name in ja_to_en.items():
+        en_key = en_name.upper().strip()
+        if en_key not in en_signals:
+            continue
+        en_sig = en_signals[en_key]
+        ja_sig = translations.get(en_sig, en_sig)
+        
+        # Find the row with this Japanese name and add/fix signal cell
+        # Pattern: <td ...>ja_name</td> ... rest of cells in that <tr>
+        escaped = re.escape(ja_name)
+        row_pattern = rf'(<tr>\s*<td[^>]*>{escaped}</td>.*?)(</tr>)'
+        row_match = re.search(row_pattern, html, re.DOTALL)
+        if row_match:
+            row_content = row_match.group(1)
+            cells = re.findall(r'<td[^>]*>.*?</td>', row_content, re.DOTALL)
+            # For currency/bond tables with シグナル column, the last cell should be the signal
+            # Check if シグナル header exists nearby
+            # Simply add a signal cell at the end
+            signal_cell = f'<td class="idx-signal">{ja_sig}</td>'
+            # Replace last cell if it looks numeric (wrong signal data)
+            if len(cells) >= 4:
+                last_cell = cells[-1]
+                last_text = re.sub(r'<[^>]+>', '', last_cell).strip()
+                if re.match(r'^[+−\-]?\d', last_text) or last_text.endswith('bp'):
+                    # This is numeric data misplaced as signal — append signal instead
+                    new_row = row_content + signal_cell
+                    html = html[:row_match.start()] + new_row + row_match.group(2) + html[row_match.end():]
+                    changes += 1
+                    print(f"  Signal: {ja_name} → {ja_sig}")
+    
+    print(f"  Injected {changes} signals")
+    return html
+
 if __name__ == '__main__':
     filepath = '/Users/xand/.openclaw/workspace/ceo-briefing/ja.html'
     with open(filepath) as f:
@@ -106,5 +184,14 @@ if __name__ == '__main__':
         with open(filepath, 'w') as f:
             f.write(new_html)
         print("  ✅ Split combined markets table into separate stories")
+    
+    # Re-read and inject signals
+    with open(filepath) as f:
+        html = f.read()
+    new_html = inject_signals(html)
+    if new_html != html:
+        with open(filepath, 'w') as f:
+            f.write(new_html)
+        print("  ✅ Injected Japanese signals")
     else:
-        print("  No changes needed")
+        print("  No signal changes needed")
