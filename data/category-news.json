@@ -1,101 +1,58 @@
 {
-  "date": "2026-03-14",
-  "generatedAt": "2026-03-14T13:24:12.828626+00:00",
+  "date": "2026-03-15",
+  "generatedAt": "2026-03-15T22:15:00+09:00",
   "categoryNews": [
     {
       "id": "us",
       "title": "United States",
       "stories": [
         {
-          "headline": "Senate Confirms New NSA and Cyber Command Leader",
-          "summary": "The Senate voted to confirm Lt. Gen. Joshua Rudd to lead both the NSA and U.S. Cyber Command, marking a significant leadership change in cybersecurity and intelligence. The dual-hat appointment reflects ongoing concerns about state-sponsored cyber threats and the need for unified command structures in an era of escalating digital warfare.",
-          "tag": "SECURITY · CYBER",
+          "headline": "US Strikes 90 Targets on Iran's Kharg Island Oil Terminal as War Enters Third Week",
+          "summary": "The US military struck 90 targets on Kharg Island, Iran's main oil export terminal, escalating the conflict now in its third week. The strikes aim to cripple Iran's oil revenue funding its military operations, prompting President Trump to deploy over 2,000 additional Marines to the Middle East. Energy markets have been rattled as the action risks broader regional instability and disrupted global supply chains.",
+          "tag": "DEFENSE · MILITARY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "C-SPAN",
-              "url": "https://www.c-span.org"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "ABC News", "url": "https://www.youtube.com/watch?v=IehEtxqnEx4"}],
+          "image_url": "https://img.youtube.com/vi/IehEtxqnEx4/maxresdefault.jpg"
         },
         {
-          "headline": "Bipartisan Housing Reform Bill Set to Pass Senate",
-          "summary": "The 21st Century Road to Housing Act is expected to pass the Senate with bipartisan support, addressing chronic affordability issues through zoning reform and funding mechanisms. However, House Republicans oppose a provision restricting the Federal Reserve from using a central bank digital currency through 2030, creating potential friction with the Trump administration.",
-          "tag": "POLICY · HOUSING",
+          "headline": "Trump Urges Allies to Send Warships to Secure Strait of Hormuz",
+          "summary": "President Trump called on US allies to deploy warships to keep the Strait of Hormuz open after Iran warned UAE ports to evacuate, threatening broader Gulf involvement. Iran's threats stem from US strikes on its oil facilities using alleged UAE-based assets. The escalation has heightened tensions as the US sends additional troops to counter Iranian aggression in the region.",
+          "tag": "FOREIGN POLICY · MILITARY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Reuters",
-              "url": "https://www.reuters.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Associated Press", "url": "https://www.clickorlando.com/news/world/2026/03/15/the-latest-iran-threatens-uae-as-trump-urges-us-allies-to-send-warships-to-strait-of-hormuz/"}],
+          "image_url": null
         },
         {
-          "headline": "DHS Shutdown Enters Fourth Week as Senate Rejects Funding",
-          "summary": "The Department of Homeland Security shutdown has now lasted four weeks after the Senate rejected House funding measures, disrupting travel operations and border services. The impasse stems from disagreements over immigration enforcement provisions attached to the spending bill, with neither chamber willing to compromise ahead of midterm positioning.",
-          "tag": "POLICY · GOVERNMENT",
+          "headline": "War with Iran Rattles Global Economy, Raises Food Crisis Fears",
+          "summary": "The ongoing US-Iran war is disrupting supply chains and energy markets as strikes on oil terminals have spiked prices and halted shipments through key chokepoints. The economic fallout threatens a global food crisis due to higher transport costs and reduced trade volumes. White House reports highlight these risks as markets react to the prospect of prolonged conflict.",
+          "tag": "ECONOMY · MARKETS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Politico",
-              "url": "https://www.politico.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "ABC News", "url": "https://www.youtube.com/watch?v=IehEtxqnEx4"}],
+          "image_url": "https://img.youtube.com/vi/IehEtxqnEx4/maxresdefault.jpg"
         },
         {
-          "headline": "Trump Refuses to Sign Legislation Until SAVE America Act Passes",
-          "summary": "President Trump has declared he will not sign any legislation until Congress passes the SAVE America Act, which would significantly overhaul U.S. voting laws including stricter ID requirements. The bill remains stalled in the Senate without a clear path forward, with some GOP members advocating for eliminating the filibuster to force passage.",
-          "tag": "POLICY · ELECTIONS",
+          "headline": "Six US Service Members Killed in Military Aircraft Crash in Iraq",
+          "summary": "A US refueling aircraft crashed in western Iraq during operations against Iran, killing six service members. The crash occurred in the high-risk environment created by ongoing airstrikes and regional threats, following an incident with another plane in friendly airspace. The DoD identified the victims, underscoring the human cost of the escalating conflict.",
+          "tag": "MILITARY · DEFENSE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "The Hill",
-              "url": "https://thehill.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Associated Press", "url": "https://www.clickorlando.com/news/world/2026/03/15/the-latest-iran-threatens-uae-as-trump-urges-us-allies-to-send-warships-to-strait-of-hormuz/"}],
+          "image_url": null
         },
         {
-          "headline": "Trump Signs Executive Order Restricting Institutional Home Buying",
-          "summary": "President Trump signed an executive order directing Treasury, DOJ, and the FTC to restrict large institutional investors from purchasing single-family homes. The administration argues that Wall Street buying has reduced housing supply for families and driven up prices, and is preparing legislative recommendations to codify these protections permanently.",
-          "tag": "ECONOMY · HOUSING",
+          "headline": "Trump PAC Under Fire for Using Iran War Imagery in Fundraising",
+          "summary": "President Trump's political action committee is facing criticism for using footage and rhetoric from the Iran war in fundraising appeals. The tactic capitalizes on national security fears to boost donations amid conflicting messages on war duration. Critics argue it politicizes the conflict and could undermine public support for military efforts.",
+          "tag": "POLITICS · REGULATION",
           "bullets": [],
-          "sources": [
-            {
-              "name": "CNBC",
-              "url": "https://www.cnbc.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "ABC News", "url": "https://www.youtube.com/watch?v=IehEtxqnEx4"}],
+          "image_url": "https://img.youtube.com/vi/IehEtxqnEx4/maxresdefault.jpg"
         },
         {
-          "headline": "ACA Premiums Double as Enhanced Subsidies Expire",
-          "summary": "With enhanced Affordable Care Act tax subsidies expiring, insurance premiums have doubled on average, causing over a million people to drop coverage. Trump has renewed criticism of the ACA as the 'unaffordable care act,' framing healthcare costs as a central campaign issue for the 2026 midterms.",
-          "tag": "HEALTHCARE · POLICY",
+          "headline": "Synagogue Attack in Michigan Prompts Heightened Security Nationwide",
+          "summary": "A truck ramming attack targeted Temple Israel synagogue in Michigan during Shabbat services, linked to rising antisemitic incidents fueled by Middle East tensions. The synagogue's prior security investments and staff training were credited with preventing worse outcomes. Similar attacks in Europe have amplified domestic concerns about antisemitic violence.",
+          "tag": "SECURITY · DOMESTIC POLICY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Kaiser Health News",
-              "url": "https://khn.org"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Middle East Conflict Threatens Global Markets and Oil Prices",
-          "summary": "Following U.S.-Israeli strikes on Iran under 'Operation Epic Fury,' ongoing Middle East violence is creating uncertainty for global markets, oil prices, and international shipping routes. Energy price increases from the conflict are adding to domestic affordability concerns, though most GOP lawmakers expect prices to decline soon as operations conclude.",
-          "tag": "GEOPOLITICS · MARKETS",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "url": "https://www.bloomberg.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "ABC News", "url": "https://www.youtube.com/watch?v=IehEtxqnEx4"}],
+          "image_url": "https://img.youtube.com/vi/IehEtxqnEx4/maxresdefault.jpg"
         }
       ]
     },
@@ -104,82 +61,52 @@
       "title": "Artificial Intelligence",
       "stories": [
         {
-          "headline": "Industry Shifts to Domain-Specific Reasoning Models Over Giant LLMs",
-          "summary": "IBM and other major players are forecasting a decisive move from massive general-purpose models to smaller, multimodal reasoning systems tuned for specific domains like healthcare and finance. This shift enables higher accuracy, easier enterprise adoption via open-source fine-tuning, and cost efficiency over brute-force scaling approaches.",
-          "tag": "MODELS · ENTERPRISE",
+          "headline": "Microsoft Launches Copilot Cowork to Compete in AI Coworker Category",
+          "summary": "Microsoft introduced Copilot Cowork, an enterprise AI agent designed to help workers read, analyze, and manipulate files on their computers. The launch follows Anthropic's earlier release of a similar product and reflects intensifying competition among AI vendors to embed assistants deeply into workplace productivity tools. This marks a shift from chatbot-style AI to autonomous desktop agents.",
+          "tag": "ENTERPRISE · AI AGENTS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "IBM Think",
-              "url": "https://www.ibm.com/think/news/ai-tech-trends-predictions-2026"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "MarketingProfs", "url": "https://www.marketingprofs.com/opinions/2026/54427/ai-update-march-13-2026-ai-news-and-views-from-the-past-week"}],
+          "image_url": null
         },
         {
-          "headline": "First Gigawatt-Scale AI Data Centers Come Online",
-          "summary": "The first gigawatt-scale data centers have activated in early 2026, providing AI firms vastly more computational resources for advanced model training. Despite diminishing returns in pure training scale, this infrastructure surge sustains U.S. momentum against Chinese competitors and supports the growing demand from multi-agent systems.",
-          "tag": "INFRASTRUCTURE · COMPUTE",
+          "headline": "Nvidia Plans Open Source Platform for Enterprise AI Agents",
+          "summary": "Nvidia is preparing to launch NemoClaw, an open source platform to help enterprise software companies deploy AI agents that perform tasks for their workforces. The platform allows developers to build and run agents regardless of hardware dependencies, reflecting Nvidia's growing push into software ecosystems beyond GPU sales. This could democratize enterprise agent deployment across different infrastructure stacks.",
+          "tag": "INFRASTRUCTURE · OPEN SOURCE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Understanding AI",
-              "url": "https://www.understandingai.org/p/17-predictions-for-ai-in-2026"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "MarketingProfs", "url": "https://www.marketingprofs.com/opinions/2026/54427/ai-update-march-13-2026-ai-news-and-views-from-the-past-week"}],
+          "image_url": null
         },
         {
-          "headline": "Text Diffusion Models Enter Mainstream for Faster Generation",
-          "summary": "Diffusion models that generate tokens in parallel—unlike traditional autoregressive LLMs—are gaining serious traction after Mercury and Gemini Diffusion releases. Major labs in both the U.S. and China are deploying diffusion-based LLMs for coding and general use, offering significant speed and efficiency advantages.",
-          "tag": "MODELS · ARCHITECTURE",
+          "headline": "Nvidia Releases Nemotron 3 Super Model for Agentic AI Systems",
+          "summary": "Nvidia released Nemotron 3 Super, a new open model specifically designed for multi-agent AI systems handling reasoning, coding, and long-context tasks. The hybrid architecture combines Mamba and Transformer techniques with mixture-of-experts routing to improve efficiency and throughput. This positions Nvidia as both a hardware and model provider in the agentic AI stack.",
+          "tag": "MODEL RELEASE · INFRASTRUCTURE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Understanding AI",
-              "url": "https://www.understandingai.org/p/17-predictions-for-ai-in-2026"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "MarketingProfs", "url": "https://www.marketingprofs.com/opinions/2026/54427/ai-update-march-13-2026-ai-news-and-views-from-the-past-week"}],
+          "image_url": null
         },
         {
-          "headline": "Multi-Agent AI Platforms Redefine Enterprise Automation",
-          "summary": "AI is evolving to multi-agent systems where specialized agents collaborate on planning, execution, and refinement for end-to-end workflows. This architecture democratizes innovation for non-technical users and embeds intelligence across operations, outperforming single-agent approaches in complex business processes.",
-          "tag": "ENTERPRISE · AGENTS",
+          "headline": "Block Announces 40% Layoff Attributed Directly to AI Capabilities",
+          "summary": "Fintech company Block (formerly Square) cut nearly 4,000 staff, with CEO Jack Dorsey citing AI as the sole reason for the reductions. This represents one of the most dramatic examples of mass layoffs attributed directly to advancing AI capabilities rather than cost-cutting. The move signals that AI displacement is accelerating in the financial technology sector.",
+          "tag": "ENTERPRISE · WORKFORCE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Prolifics",
-              "url": "https://prolifics.com/usa/resource-center/blog/ai-technology-trends-2026"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Darden School of Business", "url": "https://news.darden.virginia.edu/2026/03/13/is-ai-the-strategy-or-the-scapegoat-behind-blocks-40-layoff/"}],
+          "image_url": null
         },
         {
-          "headline": "Microsoft Unveils AI 'Superfactory' Infrastructure Vision",
-          "summary": "Microsoft outlined a vision for global networks of densely packed, flexible AI systems that route workloads intelligently to maximize efficiency and minimize idle compute. Hybrid setups incorporating quantum and supercomputers enhance modeling accuracy, shifting industry focus from raw size to intelligent, sustainable output.",
-          "tag": "INFRASTRUCTURE · CLOUD",
+          "headline": "Big Tech Plans Combined $650 Billion in Data Center Spending",
+          "summary": "Google, Amazon, Meta, and Microsoft are planning to spend up to a combined $650 billion on data centers this year, representing roughly 60% increase from last year. The unprecedented spending reflects the enormous computing power and infrastructure requirements driven by AI model training and inference workloads. This capex surge raises questions about returns on AI investment and potential overcapacity.",
+          "tag": "INFRASTRUCTURE · DATA CENTERS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Microsoft News",
-              "url": "https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/13/the-biggest-ai-stories-of-the-year-so-far/"}],
+          "image_url": null
         },
         {
-          "headline": "Open-Source Models Close Gap with Frontier Closed Models",
-          "summary": "Open-weight options like DeepSeek and Llama variants are nearing top benchmark performance, emphasizing accessibility and workflows over raw model superiority. Tailored open-source models excel in industry-specific accuracy at lower costs, accelerating enterprise adoption over expensive proprietary alternatives.",
-          "tag": "OPEN SOURCE · MODELS",
+          "headline": "OpenAI Acquires OpenClaw as Agentic AI Market Heats Up",
+          "summary": "OpenAI acquired OpenClaw, a viral AI assistant app, following its February breakthrough that sparked rapid ecosystem growth. The acquisition highlights the strategic importance of agentic AI technology and the competitive acquisition activity around autonomous AI agents. It signals that major AI labs are now buying rather than building in the agent infrastructure space.",
+          "tag": "M&A · AI AGENTS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Newline",
-              "url": "https://www.newline.co/@Dipen/top-10-new-ai-models-to-explore-in-2026--b4ca6fcf"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/13/the-biggest-ai-stories-of-the-year-so-far/"}],
+          "image_url": null
         }
       ]
     },
@@ -188,95 +115,52 @@
       "title": "Venture Capital & Startups",
       "stories": [
         {
-          "headline": "Google Acquires Wiz for $32 Billion in Largest Tech M&A Deal",
-          "summary": "Google closed its $32 billion acquisition of cloud security unicorn Wiz, one of the largest tech acquisitions ever, after Wiz rejected a $23 billion offer in 2024 upon surpassing $1 billion ARR. The deal underscores the premium on AI-driven security platforms amid intensifying cloud threats and consolidates Google's cybersecurity leadership.",
-          "tag": "M&A · CYBERSECURITY",
+          "headline": "Ayar Labs Raises $500M Series E at $3.75B Valuation for AI Infrastructure Optics",
+          "summary": "Ayar Labs, a San Jose-based producer of co-packaged optics for high-bandwidth, low-power AI data transmission, secured $500 million in Series E funding led by Neuberger Berman with investors including Nvidia and Qatar Investment Authority. The massive round underscores surging investor confidence in AI hardware infrastructure amid booming demand for efficient data center technologies. It ties for one of the largest deals in early March.",
+          "tag": "FUNDING · AI INFRASTRUCTURE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "TechCrunch",
-              "url": "https://techcrunch.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Pipeline Road", "url": "https://pipelineroad.com/news/20260306-march-opens-with-500m-rounds-in-space-tech-and-ai-infrastruc"}],
+          "image_url": null
         },
         {
-          "headline": "Quince Raises $500M Series E at $10.1 Billion Valuation",
-          "summary": "E-commerce platform Quince secured a massive $500 million Series E round led by ICONIQ, pushing its valuation to $10.1 billion. The funding reflects investor confidence in Quince's scalable direct-to-consumer model amid a resurgence of mega-rounds for proven startups with strong growth metrics.",
-          "tag": "FUNDING · E-COMMERCE",
+          "headline": "Vast Secures $500M for Next-Generation Space Stations",
+          "summary": "Long Beach-based Vast raised $500 million, including $300 million in Series A equity led by Balerion Space Ventures and $200 million in debt, to develop advanced space stations. The funding reflects heightened VC interest in space tech for defense and commercial applications amid a March surge in large rounds. It ties with Ayar Labs as a top deal of the month.",
+          "tag": "FUNDING · SPACE TECH",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "url": "https://www.bloomberg.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Pipeline Road", "url": "https://pipelineroad.com/news/20260306-march-opens-with-500m-rounds-in-space-tech-and-ai-infrastruc"}],
+          "image_url": null
         },
         {
-          "headline": "Entrepreneurs First Hits Unicorn Status with $200M Series D",
-          "summary": "London-based talent investor Entrepreneurs First raised $200 million at a $1.3 billion valuation from backers including Stripe cofounders, Eric Schmidt, and Greylock. The round highlights VC enthusiasm for talent-focused platforms that address AI-era skill gaps and builder ecosystems.",
-          "tag": "FUNDING · TALENT",
+          "headline": "Wayve Lands Record $1.2B for Self-Driving Technology",
+          "summary": "UK-based autonomous vehicle startup Wayve raised $1.2 billion, marking one of the largest VC rounds in recent memory for self-driving innovation. The funding highlights persistent investor appetite for autonomous tech despite broader market caution, positioning Wayve as a leading challenger to Waymo. It exemplifies March trends toward big bets in transformative sectors.",
+          "tag": "FUNDING · AUTONOMOUS TECH",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Financial Times",
-              "url": "https://www.ft.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "MEAN CEO Blog", "url": "https://blog.mean.ceo/startup-funding-trends-march-2026/"}],
+          "image_url": null
         },
         {
-          "headline": "General Catalyst in Talks for $10 Billion Mega-Fund",
-          "summary": "General Catalyst is reportedly raising a $10 billion fund, following Thrive's $10 billion close and ahead of Spark Capital's $3 billion and Founders Fund's $6 billion efforts. This revival of VC mega-funds signals abundant dry powder for AI investments and high-valuation startups in 2026.",
-          "tag": "FUNDRAISING · VC",
+          "headline": "General Catalyst and Spark Capital Raise Multi-Billion Mega-Funds",
+          "summary": "General Catalyst is raising a $10 billion fund while Spark Capital targets $3 billion, following Founders Fund's $6 billion close and Andreessen Horowitz's $15 billion. This resurgence of VC mega-funds indicates firms are bulking up for competition in AI, space, and deep tech amid 2026's funding rebound. The trend signals strong LP confidence despite macro uncertainty.",
+          "tag": "VC FUNDS · MEGA ROUNDS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "The Information",
-              "url": "https://www.theinformation.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/11/vc-mega-funds-are-back-with-general-catalyst-spark-rumored-to-be-raising-billions/"}],
+          "image_url": null
         },
         {
-          "headline": "Vast Raises $500M to Build Private Space Stations",
-          "summary": "Space startup Vast secured $500 million to develop Haven private space stations, positioning it as a leader in commercial low-Earth orbit infrastructure. The funding supports rapid deployment as NASA shifts toward private stations in the post-ISS era.",
-          "tag": "FUNDING · SPACE",
+          "headline": "Silverflow Raises $40M Series B in Payments Infrastructure",
+          "summary": "Silverflow, a cloud-native payments platform, closed a $40 million Series B round in March 2026 from investors betting on fintech modernization. The raise signals renewed VC momentum in payments tech amid accelerating digital transaction growth. It stands out as a key European deal in an otherwise US-heavy funding month.",
+          "tag": "FUNDING · FINTECH",
           "bullets": [],
-          "sources": [
-            {
-              "name": "SpaceNews",
-              "url": "https://spacenews.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Seedtable", "url": "https://www.seedtable.com/funding-rounds/recent"}],
+          "image_url": null
         },
         {
-          "headline": "Crypto VC Funding Surges 50% Year-Over-Year",
-          "summary": "Crypto fundraising rose nearly 50% year-over-year driven by fewer but significantly larger VC deals, reflecting maturing investor strategies in blockchain and DeFi. The surge coincides with broader fintech focus on specialized areas like trade finance and tokenized assets.",
-          "tag": "FUNDING · CRYPTO",
+          "headline": "Plaid Conducts $8B Valuation Employee Liquidity Round",
+          "summary": "Fintech giant Plaid raised a secondary liquidity round at an $8 billion valuation, down from peaks but still robust, providing employee exits amid tighter market scrutiny. The move highlights shifting VC dynamics toward liquidity events and profitability standards in late-stage fintech. It underscores investors' demand for fundamentals over growth-at-all-costs narratives.",
+          "tag": "FUNDING · FINTECH LIQUIDITY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "The Block",
-              "url": "https://www.theblock.co"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "PLD Space Secures €50M for European Launch Competition",
-          "summary": "Spanish startup PLD Space raised €50 million led by Mitsubishi Electric, bringing total funding over €350 million for its Miura 5 orbital rocket. The investment accelerates Europe's independent launch capacity and targets competition with SpaceX in the smallsat market.",
-          "tag": "FUNDING · SPACE",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "SpaceNews",
-              "url": "https://spacenews.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "MEAN CEO Blog", "url": "https://blog.mean.ceo/startup-funding-trends-march-2026/"}],
+          "image_url": null
         }
       ]
     },
@@ -285,95 +169,52 @@
       "title": "Energy & Climate",
       "stories": [
         {
-          "headline": "U.S. Renewables Hit Record 26% of Electricity Despite Trump Rollbacks",
-          "summary": "Renewable energy generated a record 26% of U.S. electricity in 2025, up 10% from the prior year, even as the Trump administration cut incentives for wind and solar while boosting fossil fuels. Falling costs of solar, wind, and batteries have made them cheaper than alternatives, with nearly 80% of planned new capacity over the next decade coming from renewables.",
-          "tag": "RENEWABLES · RECORDS",
+          "headline": "Energy Futures Prices Double in 60 Days Amid Strait of Hormuz Closure",
+          "summary": "Energy futures prices have more than doubled in just 60 days due to extreme cold weather and the closure of the Strait of Hormuz, through which 20% of global crude oil flows daily. Crude hit $119.48 overnight on March 9, marking the highest weekly percentage gain on record since the 1980s. The rapid price surge threatens global supply chains and consumer energy costs worldwide.",
+          "tag": "OIL · COMMODITIES",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Los Angeles Times",
-              "url": "https://www.latimes.com/environment/story/2026-03-04/renewable-energy-defies-trumps-attacks-reaching-new-record"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Shipley Energy", "url": "https://www.shipleyenergy.com/resources/commercial/energy-market-update-march-2026/"}],
+          "image_url": null
         },
         {
-          "headline": "China's Solar Power Overtakes Wind for First Time",
-          "summary": "Solar generation in China surpassed wind in 2025, reaching 1.17 million GWh (up 40%), helping meet surging demand without increased coal use while energy emissions fell 0.3%. China also revealed new five-year climate goals including a low-carbon transition fund for hydrogen and green fuels.",
-          "tag": "SOLAR · CHINA",
+          "headline": "G7 Considers Massive 400 Million Barrel Oil Release from Strategic Reserves",
+          "summary": "G7 countries are exploring a coordinated release of up to 400 million barrels of oil from reserves to counter skyrocketing prices from the Hormuz closure. Three G7 nations including the US support the move, potentially led by the International Energy Agency, as they hold 1.2 billion barrels collectively. This would be the largest coordinated reserve release in history if executed.",
+          "tag": "OIL · POLICY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Carbon Brief",
-              "url": "https://www.carbonbrief.org/china-briefing-5-march-2026-new-five-year-climate-goals-revealed-at-two-sessions-meeting/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Shipley Energy", "url": "https://www.shipleyenergy.com/resources/commercial/energy-market-update-march-2026/"}],
+          "image_url": null
         },
         {
-          "headline": "Greenpeace Hit with $345M Verdict Over Dakota Access Pipeline",
-          "summary": "A North Dakota court upheld a $345 million award against Greenpeace for its role in decade-old protests against the Dakota Access Pipeline, finding the organization liable for hindering construction. Greenpeace vows to appeal, calling the verdict a threat to free speech and environmental activism.",
-          "tag": "LEGAL · OIL",
+          "headline": "Prolonged Hormuz Closure Risks Shutting In Major Crude and Gas Producers",
+          "summary": "An extended closure of the Strait of Hormuz could force major crude and gas producers to shut in output within weeks due to storage constraints, fundamentally reshaping global energy markets. Brent crude has surged past $80/bbl with potential to hit $200/bbl by year-end amid extreme volatility. Refiners, traders, and energy-intensive industries face unprecedented supply disruption risks.",
+          "tag": "OIL · GRID",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Earth.org",
-              "url": "https://earth.org/this-week-in-climate-news-march-2026-week-1/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Alvarez & Marsal", "url": "https://www.alvarezandmarsal.com/thought-leadership/navigating-the-2026-energy-crisis-beyond-the-headlines"}],
+          "image_url": null
         },
         {
-          "headline": "Iran Conflict Drives Gas Price Fears and EV Push",
-          "summary": "With 'Operation Epic Fury' underway involving U.S., Israel, and Iran, refiners face export halts on diesel and gasoline that could push U.S. prices over $6/gallon. The conflict is accelerating calls for EV adoption to dodge fuel shocks while exacerbating global oil volatility.",
-          "tag": "OIL · GEOPOLITICS",
+          "headline": "EIA Forecasts Brent Above $95/bbl Through May, Solar Rising to 9% of US Electricity",
+          "summary": "The EIA predicts Brent crude will stay above $95/bbl for the next two months due to Middle East oil production declines, before easing below $80/bbl in Q3 2026. US natural gas prices remain stable at $3.80/MMBtu despite global LNG disruptions, supported by healthy post-winter inventories. On the renewables front, solar is set to rise to 9% of US electricity generation while coal declines 7%.",
+          "tag": "ENERGY · FORECASTS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Green Energy Times",
-              "url": "https://greenenergytimes.org/2026/03/march-1-green-energy-news/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "EIA", "url": "https://www.eia.gov/pressroom/releases/press584.php"}],
+          "image_url": null
         },
         {
-          "headline": "Trump-EPA Deliver Largest Deregulatory Action in U.S. History",
-          "summary": "President Trump and EPA Administrator Zeldin announced the biggest environmental deregulatory push ever, slashing clean-air regulations and delaying plant closures to favor fossil fuels. The move contrasts sharply with renewables' economic momentum and is likely to force states like California to lead independently on climate policy.",
-          "tag": "REGULATION · FOSSIL FUELS",
+          "headline": "Global Leaders at 2026 Nuclear Summit Affirm Nuclear's Central Role in Clean Energy",
+          "summary": "Leaders gathered in Paris for the 2026 Nuclear Energy Summit emphasized nuclear power's essential role in delivering clean, reliable baseload energy amid rising climate goals and grid demands. The event highlighted nuclear as a necessary complement to renewables for energy security during global disruptions like the Hormuz crisis. International consensus on expanding nuclear capacity appears to be solidifying.",
+          "tag": "NUCLEAR · CLIMATE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "EPA",
-              "url": "https://www.epa.gov/newsreleases/president-trump-and-administrator-zeldin-deliver-single-largest-deregulatory-action-us"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "IAEA", "url": "https://www.iaea.org/newscenter/news/global-leaders-affirm-central-role-for-nuclear-at-2026-nuclear-energy-summit"}],
+          "image_url": null
         },
         {
-          "headline": "House Passes Critical Minerals Act to Cut China Supply Dependence",
-          "summary": "The U.S. House advanced H.R. 3617, mandating the DOE to assess vulnerabilities in mineral and energy supply chains dominated by China and promote domestic production and recycling. The bill is part of a broader push with allies like Australia and Japan to form a minerals 'club' addressing national security risks in batteries and renewables.",
-          "tag": "MINERALS · SUPPLY CHAIN",
+          "headline": "IMF Highlights Latin America's Critical Minerals Edge in Fragmented Energy Landscape",
+          "summary": "Latin America holds strategic advantages in critical minerals including 37% of global copper from Chile, Peru, and Mexico, plus half of lithium resources, amid supply chain chokepoints exposed by Middle East conflicts. The region's 69% renewable electricity mix positions it as a clean energy hub with potential to capture more value. Recent disruptions underscore risks in concentrated mineral markets and create opportunities for diversification.",
+          "tag": "COMMODITIES · RENEWABLES",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Mintz",
-              "url": "https://www.mintz.com/insights-center/viewpoints/2236/2026-02-27-washington-update-sustainable-energy-infrastructure"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Renewables Overtake Coal Globally for First Time in 2025",
-          "summary": "Renewables surpassed coal in global electricity generation for the first time in 2025, with solar and wind meeting all demand increases through September. In the U.S., 92% of new generation capacity came from solar, wind, and batteries, driven by economics rather than policy as IEA forecasts solar leading growth to 2035.",
-          "tag": "RENEWABLES · GLOBAL",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Green Energy Times",
-              "url": "https://greenenergytimes.org/2026/03/march-1-green-energy-news/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "IMF", "url": "https://www.imf.org/en/news/articles/2026/03/12/critical-minerals-energy-powering-economic-development-dmd-nigel-clark"}],
+          "image_url": null
         }
       ]
     },
@@ -382,82 +223,52 @@
       "title": "Health & Wellness",
       "stories": [
         {
-          "headline": "Global Wellness Summit Identifies Women's Longevity as Top 2026 Trend",
-          "summary": "The Global Wellness Summit's annual report forecasts a shift toward women-specific longevity interventions including ovarian stem cell therapies and hormone replacement as mainstream treatments. The trend is driven by biotech advances and a push for decade-tailored healthspan strategies that treat ovary-span as a new vital sign.",
-          "tag": "WELLNESS · WOMEN'S HEALTH",
+          "headline": "FDA Approves Leucovorin for Cerebral Folate Deficiency, Walks Back Autism Claims",
+          "summary": "The FDA approved leucovorin, a generic form of folate, specifically for treating cerebral folate deficiency, a rare genetic disorder limiting vitamin B delivery to the brain. The decision narrows prior broad promises about autism treatment due to insufficient evidence, impacting families who saw prescription surges and pharmacy shortages. It highlights the agency's commitment to data-driven approvals over off-label hype.",
+          "tag": "PHARMA · FDA APPROVAL",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Global Wellness Institute",
-              "url": "https://globalwellnessinstitute.org/press-room/press-releases/global-wellness-summit-releases-10-wellness-trends-for-2026/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "AMA Morning Rounds", "url": "https://www.ama-assn.org/about/publications-newsletters/top-news-stories-ama-morning-rounds-week-march-9-2026"}],
+          "image_url": null
         },
         {
-          "headline": "Vagus Nerve Stimulation Emerges as Mainstream Wellness Tool",
-          "summary": "Non-invasive vagus nerve stimulation technologies are gaining traction for regulating mood, inflammation, and reproductive health, with devices like OhmBody showing clinical efficacy for depression and menstrual issues. The trend reflects growing evidence linking chronic stress to multi-system dysfunction and consumer preference for system-level solutions over symptom treatment.",
-          "tag": "NEUROWELLNESS · DEVICES",
+          "headline": "MedPAC Recommends $1B Extra for Safety-Net Hospitals in March Report",
+          "summary": "MedPAC recommended 2027 Medicare payment rates matching current law for hospital services, plus $1 billion in additional funding for safety-net hospitals via a new index to address underpayments. The report covers post-acute care trends, Medicare Advantage, and Part D, urging targeted updates amid financial pressures on hospitals serving vulnerable populations. This will influence congressional budgeting for healthcare sustainability.",
+          "tag": "HEALTHCARE · MEDICARE POLICY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Elle",
-              "url": "https://www.elle.com/beauty/health-fitness/a70202213/2026-wellness-trends-products/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "AHA News", "url": "https://www.aha.org/news/headline/2026-03-13-medpac-releases-march-2026-report-congress"}],
+          "image_url": null
         },
         {
-          "headline": "Chronic Inflammation Becomes Central Target of Wellness Industry",
-          "summary": "The wellness industry is shifting from symptom management to proactively targeting chronic inflammation via anti-inflammatory diets, breathwork, and wearables monitoring heart rate variability. This is fueled by growing evidence of inflammation's role in cognitive decline, aging, and metabolic disease, prompting annual testing rituals including bloodwork and full-body scans.",
-          "tag": "INFLAMMATION · PREVENTION",
+          "headline": "FDA Cracks Down on Telehealth Marketing of Compounded GLP-1 Weight-Loss Drugs",
+          "summary": "The FDA targeted telehealth sites misleadingly marketing compounded GLP-1 drugs like semaglutide as FDA-approved, often obscuring risks and blurring lines between brands and prescribers. Over one-third of reviewed sites implied approval without clear side effect disclosures, prompting enforcement action. The crackdown aims to protect consumers from deceptive practices in the booming digital weight-loss treatment market.",
+          "tag": "PHARMA · TELEHEALTH REGULATION",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Prenuvo",
-              "url": "https://www.prenuvo.com/blog/11-exploding-health-trends-you-may-see-in-2026"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "People's Pharmacy", "url": "https://www.peoplespharmacy.com/articles/health-in-a-hurry-important-medical-pharma-news-for-3-13-26"}],
+          "image_url": null
         },
         {
-          "headline": "Muscle Mass Recognized as Critical Metabolic Health Marker",
-          "summary": "New meta-analyses link low muscle mass to insulin resistance, hypertension, and metabolic risks, shifting the focus from aesthetics to resilience. Grip strength and resistance training are now emphasized as foundational for longevity, integrating with sleep optimization and stress management for holistic metabolic health.",
-          "tag": "FITNESS · METABOLIC HEALTH",
+          "headline": "House Republicans Expand Medicaid Fraud Investigation to 10 States",
+          "summary": "House Energy & Commerce leaders sent letters to governors in 10 states probing alleged Medicaid fraud, demanding responses by March 17 to uncover waste and abuse. The investigation builds on prior scrutiny amid MedPAC discussions on payment access and accountability across state programs. It could lead to tighter oversight and reforms in Medicaid programs serving tens of millions of Americans.",
+          "tag": "HEALTHCARE · MEDICAID FRAUD",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Health Advocate",
-              "url": "https://blog.healthadvocate.com/2026/01/healthy-resource-roundup-march-2026/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Holland & Knight", "url": "https://www.hklaw.com/en/insights/publications/2026/03/holland-knight-health-dose-march-10-2026"}],
+          "image_url": null
         },
         {
-          "headline": "Proactive Health Monitoring Models Gain Momentum",
-          "summary": "Consumers are adopting year-round care via telehealth, personalized dashboards, and combined imaging/bloodwork models to track health trends before symptoms arise. This responds to demands for deeper insights from wearables and comprehensive panels, moving beyond annual physicals toward continuous monitoring.",
-          "tag": "HEALTHTECH · MONITORING",
+          "headline": "CMS Issues Guidance Strengthening Organ Donation Protections",
+          "summary": "CMS released guidance clarifying roles of organ procurement organizations and hospitals in transplantation, enhancing patient dignity, trust, and oversight. The guidance aligns with broader priorities around prevention, quality, and data transparency in health systems. It addresses longstanding vulnerabilities in organ procurement to improve safety and equity for donors and recipients.",
+          "tag": "HEALTHCARE · ORGAN TRANSPLANT",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Outside",
-              "url": "https://www.outsideonline.com/health/wellness/health-and-wellness-trends-2026/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "CMS", "url": "https://www.cms.gov/training-education/medicare-learning-network/newsletter/mln-connects-newsletter-march-12-2026"}],
+          "image_url": null
         },
         {
-          "headline": "'Food as Medicine' and Fiber Surge as Top Nutrition Trends",
-          "summary": "Food as medicine is promoting fiber-rich, anti-inflammatory diets for nervous system health and stress management, succeeding protein as the key nutrition focus. Wearables like Oura rings fuel data-driven eating habits, while peptide therapy and supplements evolve, pulling consumer dollars from beauty into wellness retail.",
-          "tag": "NUTRITION · WELLNESS",
+          "headline": "Utah Measles Outbreak Surpasses 400 Cases as Other States Slow",
+          "summary": "Utah's measles outbreak, which started last year, has exceeded 400 cases and spread to urban areas, while Arizona and South Carolina report slowdowns after hundreds of infections. The persistence underscores ongoing vaccination gaps and public health challenges in containment. Health officials warn that rapid response is critical to prevent a broader national escalation.",
+          "tag": "PUBLIC HEALTH · INFECTIOUS DISEASE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Modern Retail",
-              "url": "https://www.modernretail.co/marketing/the-health-and-wellness-trends-modern-retail-and-glossy-staffers-are-watching-in-2026/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "KFF Health News", "url": "https://kffhealthnews.org/morning-briefing/thursday-march-12-2026/"}],
+          "image_url": null
         }
       ]
     },
@@ -466,82 +277,52 @@
       "title": "Longevity & Aging",
       "stories": [
         {
-          "headline": "ARPA-H Launches $144M Program for Human Aging Intervention Trials",
-          "summary": "ARPA-H announced $144 million in funding for the PROSPR program to build infrastructure for the first major human clinical trials of aging-slowing interventions. The program focuses on validating surrogate biomarkers like epigenetic clocks and composite 'intrinsic capacity scores' to enable shorter trials without waiting decades for lifespan data.",
+          "headline": "ARPA-H Awards $144 Million to PROSPR Program for Human Aging Studies",
+          "summary": "The US Advanced Research Projects Agency for Health is funding the PROactive Solutions for Prolonging Resilience program to move aging interventions from animal studies into human trials. The program aims to validate biomarkers that can track aging and predict health outcomes over 20 years. This represents the largest federal investment specifically targeting aging biology and could transform the longevity landscape within five years.",
           "tag": "FUNDING · CLINICAL TRIALS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ARPA-H",
-              "url": "https://arpa-h.gov"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Science Magazine", "url": "https://www.science.org/content/article/u-s-agency-will-devote-144-million-studies-slow-aging-extend-quality-life"}],
+          "image_url": null
         },
         {
-          "headline": "Life Biosciences Wins FDA Approval for First Epigenetic Reprogramming Trial",
-          "summary": "Life Biosciences, co-founded by David Sinclair, received FDA clearance for a Phase 1 trial using three Yamanaka factors to partially reset optic nerve cells in glaucoma and NAION patients. As the first FDA-approved human trial for partial epigenetic reprogramming, it aims to restore vision without full cellular reprogramming risks like tumor formation.",
-          "tag": "BIOTECH · REPROGRAMMING",
+          "headline": "Life Biosciences Secures First FDA Approval for Epigenetic Reprogramming Human Trial",
+          "summary": "Life Biosciences, cofounded by Harvard geneticist David Sinclair, obtained FDA approval for a Phase 1 trial of partial epigenetic reprogramming to restore vision in glaucoma and optic neuropathy patients. The approach uses three of four Yamanaka factors to partially rejuvenate cells while maintaining their function. This marks a transformational milestone as the first FDA-approved trial testing cellular age reversal in humans.",
+          "tag": "BIOTECH · GENE THERAPY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Life Biosciences",
-              "url": "https://www.lifebiosciences.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Fortune", "url": "https://fortune.com/2026/01/30/billionaires-longevity-aging-fda-human-clinical-trial-life-biosciences-jerry-mclaughlin-david-sinclair-harvard-science/"}],
+          "image_url": null
         },
         {
-          "headline": "CD38 Inhibitors Show Lifespan Extension in Mice via NAD+ Boost",
-          "summary": "Eric Verdin presented data showing small-molecule CD38 inhibitors that boost NAD+ levels more effectively than precursors, correcting age-related declines and extending mouse lifespan. Targeting CD38 addresses a key aging bottleneck in mitochondrial function and repair, offering a druggable path to multi-mechanism NAD+ enhancement.",
-          "tag": "RESEARCH · NAD+",
+          "headline": "$22M ARPA-H Contract Tests HIV Drug to Reduce Age-Related Inflammation",
+          "summary": "A $22 million ARPA-H contract funds a multi-institutional clinical trial testing an HIV antiretroviral drug to reduce chronic DNA-triggered inflammation in 200 adults aged 60-65. The trial targets LINE-1 retrotransposons, which become more active with age and drive inflammatory responses. Led by University of Rochester with Brown and UConn, it aims to help older adults maintain health, mobility, and cognitive function.",
+          "tag": "CLINICAL TRIALS · INFLAMMATION",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Buck Institute",
-              "url": "https://www.buckinstitute.org"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "UConn Today", "url": "https://today.uconn.edu/2026/02/aging-research-in-u-s-accelerated-by-major-arpa-h-contract/"}],
+          "image_url": null
         },
         {
-          "headline": "Epigenetic Clock Acceleration Rate Predicts Mortality Better Than Biological Age",
-          "summary": "New analysis from the InCHIANTI cohort shows that the rate of epigenetic clock acceleration over time independently predicts mortality risk more accurately than static epigenetic age at baseline. This refines aging measurements by emphasizing dynamic trajectories over snapshots, enabling earlier detection of accelerated aging.",
+          "headline": "Stanford Reveals Architecture of Aging Through Animal Behavior Studies",
+          "summary": "Stanford researchers studied African killifish to explore connections between behavior and aging, discovering varied aging paths even in genetically similar animals in identical environments. The research provides insights into fundamental mechanisms driving aging and identifies potential intervention points based on behavioral biomarkers. It suggests aging trajectories may be more variable and modifiable than previously thought.",
+          "tag": "RESEARCH · BASIC SCIENCE",
+          "bullets": [],
+          "sources": [{"name": "Stanford News", "url": "https://news.stanford.edu/stories/2026/03/architecture-aging-behavior-animals-research"}],
+          "image_url": null
+        },
+        {
+          "headline": "Brown University Leads Five-Year Study on Retrotransposon Silencing for Healthspan",
+          "summary": "Brown University researchers, as part of ARPA-H's PROSPR program, are investigating whether silencing LINE-1 retrotransposons can reduce age-related inflammation and preserve overall health function. These genomic elements become increasingly active with age, triggering innate immune responses that contribute to chronic disease. The five-year study aims to demonstrate that this molecular mechanism of aging can be safely reversed.",
+          "tag": "RESEARCH · MOLECULAR MECHANISMS",
+          "bullets": [],
+          "sources": [{"name": "Brown University News", "url": "https://www.brown.edu/news/2026-02-24/aging-research-arpa"}],
+          "image_url": null
+        },
+        {
+          "headline": "Dr. Eric Verdin Outlines Three-Year Horizon for First Validated Aging Biomarkers",
+          "summary": "Dr. Eric Verdin discussed breakthroughs in aging research, predicting that within three years researchers will have the first validated intrinsic capacity markers for measuring biological aging. Potential therapies in the pipeline include CD38 inhibitors that have shown lifespan extension in mice and glucosamine compounds affecting metabolism. The convergence of biomarker validation and therapeutic candidates could accelerate clinical translation of longevity interventions.",
           "tag": "RESEARCH · BIOMARKERS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Nature Aging",
-              "url": "https://www.nature.com/nataging/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Mesenchymal Stem Cell Therapies Gain Traction for Inflammaging",
-          "summary": "2026 breakthroughs emphasize mesenchymal stem cells' secretome for repairing radiation-damaged brain cells, promoting new capillaries, and modulating chronic inflammation that drives age-related diseases. 'Bio-liquidity' trends are promoting personal stem cell banking for lifelong regenerative therapies.",
-          "tag": "STEM CELLS · INFLAMMATION",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Cell Reports Medicine",
-              "url": "https://www.cell.com/cell-reports-medicine/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Longevity and Anti-Senescence Market Hits $15.8B, Growing at 6% CAGR",
-          "summary": "The longevity therapeutics market, valued at $15.8 billion in 2025, is surging due to rising public-private funding for senolytics, gene therapies, and biomarker-driven treatments. Commercialization of senescence-targeting treatments is accelerating as regenerative medicine enables scalable therapies against age-related decline.",
-          "tag": "MARKET · SENOLYTICS",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Grand View Research",
-              "url": "https://www.grandviewresearch.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=l0cXG4w-jG0"}],
+          "image_url": null
         }
       ]
     },
@@ -550,95 +331,44 @@
       "title": "Space",
       "stories": [
         {
-          "headline": "NASA Clears Artemis 2 for April Moon Launch After Repairs",
-          "summary": "NASA completed its flight readiness review for Artemis 2, polling all teams 'go' for the crewed lunar flyby no earlier than April 1, 2026. The mission was cleared after repairs to the SLS rocket's helium flow issue in the Vehicle Assembly Building, marking a critical milestone in humanity's return to the Moon.",
-          "tag": "NASA · MOON",
+          "headline": "SpaceX Launches 25 Starlink Satellites from Vandenberg on March 13",
+          "summary": "SpaceX successfully launched 25 Starlink V2 Mini Optimized satellites into low Earth orbit from Vandenberg Space Force Base, marking the company's 25th Starlink mission this year. The Falcon 9 booster completed its 32nd flight and landed on the drone ship 'Of Course I Still Love You,' demonstrating the maturity of reusable rocket technology. The deployment advances SpaceX's goal of global high-speed internet coverage.",
+          "tag": "LAUNCH · STARLINK",
           "bullets": [],
-          "sources": [
-            {
-              "name": "NASA",
-              "url": "https://www.nasa.gov"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/13/live-coverage-spacex-to-launch-25-starlink-satellites-on-falcon-9-rocket-from-vandenberg-space-force-base/"}],
+          "image_url": null
         },
         {
-          "headline": "Firefly Aerospace's Alpha Rocket Achieves Orbit on Return Flight",
-          "summary": "Firefly Aerospace's Alpha rocket successfully reached orbit on March 11 from Vandenberg Space Force Base, its first success since prior explosive failures. This breakthrough validates the small-launch vehicle for commercial and defense payloads, boosting U.S. access to space amid rising demand for dedicated smallsat launches.",
-          "tag": "LAUNCH · COMMERCIAL",
+          "headline": "SpaceX Deploys 29 Starlink Satellites from Cape Canaveral on March 14",
+          "summary": "A Falcon 9 rocket launched 29 Starlink V2 Mini Optimized satellites from Cape Canaveral Space Force Station on March 14, navigating through cloudy conditions. The booster, on its sixth flight, targeted landing on the 'Just Read the Instructions' droneship. This continues SpaceX's intense Florida launch tempo with back-to-back missions from both coasts.",
+          "tag": "LAUNCH · SATELLITES",
           "bullets": [],
-          "sources": [
-            {
-              "name": "SpaceNews",
-              "url": "https://spacenews.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/13/live-coverage-spacex-to-launch-friday-morning-starlink-mission-from-cape-canaveral/"}],
+          "image_url": null
         },
         {
-          "headline": "SpaceX Maintains High-Cadence Starlink Launches",
-          "summary": "SpaceX launched multiple Starlink missions this week, deploying 29 satellites from Cape Canaveral and 25 from Vandenberg, continuing its dominance in satellite deployments. The high-cadence launches underscore SpaceX's megaconstellation strategy for global broadband coverage.",
-          "tag": "STARLINK · SATELLITES",
+          "headline": "SpaceX Launches EchoStar-25 Direct Television Satellite for Dish Network",
+          "summary": "SpaceX deployed the EchoStar-25 satellite into geostationary transfer orbit on March 10 from Cape Canaveral, its first GTO mission this year. Built by Lanteris Space for Dish Network subsidiary of EchoStar, it will provide direct broadcast television services. The launch highlights SpaceX's versatility in supporting commercial geostationary payloads beyond its own Starlink constellation.",
+          "tag": "LAUNCH · COMMERCIAL SATELLITE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "SpaceX",
-              "url": "https://www.spacex.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/09/live-coverage-spacex-to-launch-direct-television-satellite-for-echostar/"}],
+          "image_url": null
         },
         {
-          "headline": "Vast Secures $500M for Private Space Station Development",
-          "summary": "Space startup Vast secured $500 million to develop Haven private space stations, positioning it as a leader in commercial LEO infrastructure. The funding supports rapid deployment as NASA transitions toward private stations in the post-ISS era, with Axiom Space also securing its fifth private astronaut mission.",
-          "tag": "STATIONS · COMMERCIAL",
+          "headline": "SpaceX Hits 600th Starlink Satellite Launched in 2026",
+          "summary": "SpaceX achieved the milestone of 600 Starlink satellites launched in 2026 during an early March predawn liftoff from Cape Canaveral, deploying 29 satellites. The booster completed its 25th flight with the 581st overall booster recovery. The rapid deployment pace strengthens Starlink's network capacity for millions of users worldwide and maintains SpaceX's dominance in launch frequency.",
+          "tag": "LAUNCH · MILESTONE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "SpaceNews",
-              "url": "https://spacenews.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/03/live-coverage-spacex-to-launch-29-starlink-satellites-on-falcon-9-rocket-from-cape-canaveral-10/"}],
+          "image_url": null
         },
         {
-          "headline": "PLD Space Raises €50M to Challenge SpaceX in European Launch Market",
-          "summary": "Spanish startup PLD Space raised €50 million led by Mitsubishi Electric, bringing total funding over €350 million for its Miura 5 orbital rocket. The investment accelerates Europe's push for independent launch capacity, targeting competition with SpaceX in the growing smallsat market.",
-          "tag": "STARTUPS · EUROPE",
+          "headline": "Vast Raises $500M to Develop Next-Generation Commercial Space Stations",
+          "summary": "Long Beach-based Vast secured $500 million in combined equity and debt to develop commercial space stations, with $300 million in Series A equity led by Balerion Space Ventures. The funding reflects growing commercial demand for orbital infrastructure as the ISS approaches retirement. Vast aims to provide research, manufacturing, and tourism capabilities in low Earth orbit.",
+          "tag": "FUNDING · SPACE STATIONS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "SpaceNews",
-              "url": "https://spacenews.com"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Northrop Grumman's Cygnus XL Completes Record ISS Cargo Delivery",
-          "summary": "Northrop Grumman's first Cygnus XL spacecraft undocked from the ISS after delivering over 11,000 pounds of supplies, science equipment, and hardware. The successful 23rd Commercial Resupply Services mission demonstrates reliable U.S. commercial cargo capabilities, with CRS-24 slated for April.",
-          "tag": "ISS · CARGO",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "NASA",
-              "url": "https://www.nasa.gov"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "U.S. Space Command Strengthens Defense Ties with India",
-          "summary": "U.S. Space Command's commander visited the Indo-Pacific to highlight U.S.-India cooperation on space domain awareness and defense capabilities. Amid rising geopolitical tensions, the partnership bolsters allied resilience against orbital threats and reflects growing militarization of space.",
-          "tag": "DEFENSE · GEOPOLITICS",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "SpaceCommand",
-              "url": "https://www.spacecom.mil"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Pipeline Road", "url": "https://pipelineroad.com/news/20260306-march-opens-with-500m-rounds-in-space-tech-and-ai-infrastruc"}],
+          "image_url": null
         }
       ]
     },
@@ -647,82 +377,44 @@
       "title": "Sports & Entertainment",
       "stories": [
         {
-          "headline": "NFL Acquires 10% Stake in ESPN in Landmark Media Deal",
-          "summary": "The NFL traded control of NFL Network, RedZone rights, fantasy offerings, and IP licensing for a 10% equity stake in ESPN. This groundbreaking deal signals a shift where leagues gain ownership in media partners to align with growth, diversify revenue beyond live broadcasts, and access deeper fan data for targeted advertising.",
-          "tag": "MEDIA · NFL",
+          "headline": "Oscars Implement Heightened Security Amid Global Tensions",
+          "summary": "Security at the Oscars has been tightened beyond previous levels due to rising antisemitic attacks linked to the Iran war and global unrest. No specific intelligence targets the event, but precautions follow synagogue attacks and truck rammings worldwide. Organizers aim to ensure safety as major entertainment events become potential flashpoints in an increasingly polarized global climate.",
+          "tag": "ENTERTAINMENT · SECURITY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ESPN",
-              "url": "https://www.espn.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "ABC News", "url": "https://www.youtube.com/watch?v=IehEtxqnEx4"}],
+          "image_url": "https://img.youtube.com/vi/IehEtxqnEx4/maxresdefault.jpg"
         },
         {
-          "headline": "AI Becomes Foundational Layer for Global Sports Business",
-          "summary": "Deloitte's 2026 outlook highlights AI integrating across sports organizations to link siloed operations, enhance internal intelligence, and drive expansion. The convergence of sports with media and entertainment is scaling via capital inflows, with stadiums evolving into year-round districts and women's sports seeing double-digit commercial growth.",
-          "tag": "AI · SPORTS BUSINESS",
+          "headline": "MLB Finalizes Short-Term TV Rights Deals, Adds NBC and Netflix",
+          "summary": "Major League Baseball finalized new national media-rights agreements with NBCUniversal and Netflix for the 2026-28 seasons, expanding its broadcast reach beyond ESPN. Netflix will stream the opening-night game (Yankees at Giants), Home Run Derby, and special events for $50 million per year, while NBC returns to broadcast MLB games for the first time in 26 years. The deals reflect baseball's strategy to reach younger digital audiences.",
+          "tag": "SPORTS MEDIA · MLB TV RIGHTS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Deloitte",
-              "url": "https://www.deloitte.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Front Office Sports", "url": "https://frontofficesports.com/mlb-finalizes-short-term-tv-rights-deals-adds-nbc-and-netflix/"}],
+          "image_url": null
         },
         {
-          "headline": "Creator Access Clauses Set to Normalize in Sports Rights Deals",
-          "summary": "PwC predicts broadcasters will invest in creator studios for branded content, talent scouting, and sponsorships, elevating creator-led storytelling as a core media asset. Athlete-owned IP emerges as key in the sports media economy, with generative AI enabling hyper-personalized fan feeds and customizable highlights.",
-          "tag": "MEDIA · CREATORS",
+          "headline": "ESPN Gets Exclusive MLB.TV Rights and 30-Game National Package",
+          "summary": "ESPN's restructured MLB rights deal includes a new 30-game national television package and exclusive control of MLB.TV streaming, making thousands of games available on the ESPN App. The deal also grants ESPN exclusive local in-market streaming rights for six MLB clubs including the Padres, Guardians, and Mariners. This consolidates ESPN's position as the primary digital home for baseball content.",
+          "tag": "SPORTS MEDIA · MLB STREAMING",
           "bullets": [],
-          "sources": [
-            {
-              "name": "PwC",
-              "url": "https://www.pwc.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Sports Video", "url": "https://www.sportsvideo.org/2025/11/19/mlb-media-rights-shakeup-overview-espn-nbcu-and-netflix-inks-three-year-deals/"}],
+          "image_url": null
         },
         {
-          "headline": "Private Equity Reshapes Sports Ownership with Portfolio Strategies",
-          "summary": "Institutional investors are taking stakes in football clubs, U.S. leagues, and mega-events, applying margin-focused portfolio strategies amid rising operational costs. Global ownership groups are blurring lines between sports, media, and commerce while pushing new business models.",
-          "tag": "OWNERSHIP · PRIVATE EQUITY",
+          "headline": "NWSL Announces Expanded Media Partnerships with CBS, ESPN, and Victory+",
+          "summary": "The National Women's Soccer League announced expanded media partnerships on March 12, extending agreements with CBS Sports and ESPN while establishing a new partnership with Victory+. The deals reflect the growing commercial value of women's professional sports and increasing broadcast demand for NWSL content. Expanded coverage is expected to drive viewership growth ahead of the 2026 season.",
+          "tag": "SPORTS MEDIA · WOMEN'S SOCCER",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Financial Times",
-              "url": "https://www.ft.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "NWSL Official", "url": "https://www.nwslsoccer.com/news/nwsl-announces-new-media-partnerships-expanding-agreements"}],
+          "image_url": null
         },
         {
-          "headline": "Nike and Adidas Launch Marketing Blitzes for Historic 2026 Sports Calendar",
-          "summary": "Nike and Adidas are planning high-profile product launches tied to the FIFA World Cup, Super Bowl, NBA Finals, and All-Star Weekend in a packed 2026 sports calendar. Nike is relaunching its ACG line via World Cup sponsorships while Adidas opens a U.S.-only soccer flagship store with immersive fan experiences.",
-          "tag": "BRANDS · FIFA WORLD CUP",
+          "headline": "Mountain West Announces New Media Deal for 2026-2032 with CBS, FOX, and CW",
+          "summary": "The Mountain West conference announced a new media rights agreement retaining partnerships with CBS and FOX while adding the CW as a tertiary partner, along with Kiswe for streaming distribution. The deal runs through 2032 and includes Amazon Prime distribution, reflecting the conference's strategy to maximize reach across traditional and digital platforms. College sports media rights continue to command premium valuations.",
+          "tag": "SPORTS MEDIA · COLLEGE SPORTS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "SportsBusiness Journal",
-              "url": "https://www.sportsbusinessjournal.com"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Stadiums Evolve into Year-Round Entertainment Districts",
-          "summary": "Sports venues worldwide are transforming into economic drivers and community assets beyond game days, with numerous mixed-use developments underway. Digital fan engagement tools and membership-based ticketing models complement the shift as sports, media, entertainment, and commerce converge.",
-          "tag": "VENUES · DEVELOPMENT",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Deloitte",
-              "url": "https://www.deloitte.com"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "The Big Mountain Podcast", "url": "https://www.youtube.com/watch?v=zEvXGZgNcL8"}],
+          "image_url": null
         }
       ]
     }
