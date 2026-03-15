@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEOデイリーブリーフィング — 2026年3月15日</title>
+  <title>CEOデイリーブリーフィング — 2026年3月14日</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -669,10 +669,10 @@
       <div class="sanbo-logo">
         <img src="sanbo-logo.svg" alt="参謀" width="120" height="120">
       </div>
-      <div class="overline">イブニング・インテリジェンスブリーフ</div>
-      <h1>CEOイブニングブリーフィング</h1>
-      <div class="edition-date">2026年3月15日（日）午後10時 JST</div>
-      <div class="edition-sub">🔴 イランが湾岸3カ国の米軍基地を攻撃 · イスラエルがイランに200超の空爆 · トランプ「イラン完全壊滅」宣言 · 日本に軍艦派遣要請 · 原油$103 · 日経53,820 · ¥159.70 · 健全性スコア8/100</div>
+      <div class="overline">朝のインテリジェンスブリーフ</div>
+      <h1>CEOデイリーブリーフィング</h1>
+      <div class="edition-date">2026年3月14日（土）午前7時 JST</div>
+      <div class="edition-sub">日本 · 世界各地域 · マーケット・経済 · 予測</div>
       <div class="divider-bar"></div>
     </div>
   </header>
@@ -696,97 +696,70 @@
 
       <div class="cards">
 
-        <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🔴 中東危機 · イラン報復</span>
-          <h3 class="card-headline">イランが湾岸3カ国の米軍基地を攻撃 — UAE・バーレーン・クウェートが標的、カーグ島への報復で戦争が地域化</h3>
+        <article class="card featured japan fade-in collapsible" data-image="https://www3.nhk.or.jp/news/html/20260314/K10015075561_2603141852_0314185247_01_02.jpg">
+          <span class="card-tag japan">中東危機 · 軍事</span>
+          <h3 class="card-headline">トランプ大統領がイラン最大の原油積み出し拠点カーグ島への攻撃を発表 — 海峡封鎖への報復としてエネルギーインフラを直接標的に、ブレント$103超</h3>
           <div class="tap-hint">タップして詳細を表示</div>
-          <p class="card-body">イラン革命防衛隊が<span class="stat">UAE（アルダフラ基地）、バーレーン（シェイク・イーサ基地）、クウェート（アルアディリ基地）</span>の米軍施設に対して協調攻撃を実施。パトリオットレーダー、航空機、燃料貯蔵施設が標的。カーグ島攻撃への直接的報復と声明。<span class="stat">戦争は二国間紛争から地域紛争に変質</span> — イランが米国同盟国の主権領土内の米軍を攻撃したことで、サウジアラビア、UAE、クウェートの石油インフラへの波及リスクが急激に上昇。日本のエネルギー安全保障にとって最悪のシナリオが現実味を帯びている。</p>
+          <p class="card-body">トランプ大統領が<span class="stat">イランの原油輸出量の約90%が経由するカーグ島への軍事攻撃</span>を発表。背景はイランによるホルムズ海峡封鎖の継続と、新最高指導者モジタバ師の「他の戦線も開く」宣言に対する米国の報復エスカレーション。これにより<span class="stat">ブレント原油が$103.14（+2.67%）で終値$100超え2日連続</span>。日本はエネルギー輸入の約80%を中東に依存しており、カーグ島攻撃でイランの石油輸出能力が壊滅すれば世界の供給量に深刻な影響。岸田政権時代から続く中東依存軽減策の加速が不可避に。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbctv18.com/world/iran-us-israel-war-live-updates-trump-mojtaba-khamenei-missile-attacks-death-toll-west-asia-conflict-oil-lpg-crisis-liveblog-ws-l-19867435.htm" target="_blank" rel="noopener">CNBC TV18 <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.cnbc.com/" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🔴 安全保障 · イスラエル</span>
-          <h3 class="card-headline">イスラエルが24時間で200超の空爆 — テヘランで将官殺害、イラン軍指揮系統に深刻な打撃</h3>
+          <span class="card-tag japan">政治 · 財政</span>
+          <h3 class="card-headline">史上最大の新年度予算122.31兆円が衆院通過 — 防衛費9兆円超が初めて実現、審議時間は2000年以来最短の59時間</h3>
           <div class="tap-hint">タップして詳細を表示</div>
-          <p class="card-body">イスラエルが過去24時間で<span class="stat">200回以上の空爆</span>をイラン国内で実施。弾道ミサイル発射装置、防空システム、武器貯蔵庫を破壊。テヘランでは<span class="stat">アブドラ・ジャラリ・ナサブ准将</span>および情報機関幹部2名がピンポイント攻撃で殺害。イラン軍の指揮命令系統に深刻な混乱が生じており、今後のイランの対応が予測不能に。日本にとっては、湾岸エネルギーインフラへのリスクがさらに複雑化。</p>
+          <p class="card-body"><span class="stat">2026年度予算案122.31兆円（約7,690億ドル）が衆議院を通過</span> — 史上最大規模。防衛費が初めて9兆円を超えた背景は、①イラン紛争長期化による中東の安全保障リスク増大、②北朝鮮の継続的なミサイル脅威、③中国の軍拡への対応。自民党・連立与党が2月選挙で衆院2/3超を確保しているため強行採決が可能だったが、<span class="stat">審議時間59時間は2000年以来最短</span>で野党4党が猛反発。高市首相は年度内成立を優先し、イラン危機対応の補正予算議論は後回しに。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.jpost.com/middle-east/iran-news/2026-03-14/live-updates-889885" target="_blank" rel="noopener">Jerusalem Post <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🔴 外交 · 軍艦派遣要請</span>
-          <h3 class="card-headline">トランプが日本に軍艦派遣を要請 — 「ホルムズ海峡を必ず開放する」と宣言、停戦交渉は拒否</h3>
+          <span class="card-tag japan">安全保障 · 北朝鮮</span>
+          <h3 class="card-headline">北朝鮮が弾道ミサイル発射 — 高市首相が危機管理チームを招集、イラン紛争に乗じた挑発行為との分析</h3>
           <div class="tap-hint">タップして詳細を表示</div>
-          <p class="card-body">トランプ大統領がイランを「完全に壊滅させた」と宣言し、<span class="stat">日本、英国、フランス、中国、韓国に海軍艦艇の派遣</span>を要請。停戦交渉は拒否。日本が名指しされたことで高市首相は極めて困難な判断を迫られる — 同盟義務と憲法上の制約、エネルギー脆弱性の間での判断。海上自衛隊によるタンカー護衛が最も現実的な妥協策だが、それでも日本の軍事姿勢の大幅な変化を意味する。</p>
+          <p class="card-body"><span class="stat">北朝鮮が弾道ミサイルと見られる飛翔体を発射</span>し、政府が緊急警報を発出。高市首相が危機管理チームを招集して対応を指示。発射の背景は、①米国がイラン紛争に軍事資源を集中している隙を突いた挑発、②国連安保理が中東問題で機能不全に陥り対北制裁の議論が停滞、③金正恩体制の内部引き締め目的。衆院通過した防衛費9兆円超の必要性を裏付ける形となった。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cbsnews.com/video/trump-asks-china-france-help-keep-strait-of-hormuz-open-amid-war-iran/" target="_blank" rel="noopener">CBS News <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🔴 金融 · 日銀</span>
-          <h3 class="card-headline">日銀金融政策決定会合3月18-19日 — 0.75%据え置き確実だが、原油$100超と¥160接近でジレンマ深刻化</h3>
-          <div class="tap-hint">タップして詳細を表示</div>
-          <p class="card-body">日銀の金融政策決定会合が<span class="stat">火曜・水曜（3月18-19日）</span>に開催。0.75%据え置きが市場のコンセンサスだが、植田総裁の発言が最大の焦点。①原油$100超による輸入インフレ加速、②円が¥159.70で¥160介入ゾーン接近、③春闘で5%超の賃上げ見通し、④イラン戦争による経済下方リスク — これらが同時に押し寄せる中での会見は2024年7月の利上げ以来最も重要。IMFは2027年までの中立金利到達に向けてあと2回の利上げを想定。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.boj.or.jp/en/mopo/mpmdeci/index.htm" target="_blank" rel="noopener">日銀 <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <div class="cards-grid">
           <article class="card fade-in collapsible" data-image="">
-            <span class="card-tag japan">マーケット · 週末</span>
-            <h3 class="card-headline">日経225は53,820（-1.16%）で週末入り — 月曜は週末のエスカレーションを織り込むギャップダウンリスク</h3>
+            <span class="card-tag japan">経済 · 交通</span>
+            <h3 class="card-headline">JR東日本がきょうから運賃値上げ — コスト増と乗客数減少の二重苦が背景</h3>
             <div class="tap-hint">タップして詳細を表示</div>
-            <p class="card-body">金曜終値<span class="stat">53,820円（-631円、-1.16%）</span>。海外投資家が週間で46億ドルの日本株売り。ATH（59,332）から9.3%下落。ホンダ-6%が最大の下押し要因。週末のイラン湾岸攻撃・イスラエル200超空爆を市場はまだ織り込んでおらず、月曜の寄付きで大幅ギャップダウンの可能性。</p>
-            <div class="card-sources"><a class="source-link" href="https://www.cnbc.com/" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a></div>
+            <p class="card-body"><span class="stat">JR東日本が3月14日から運賃を値上げ</span>。原因は①エネルギーコストの高騰（原油$100超の影響で電力料金が上昇）、②コロナ後のリモートワーク定着で通勤乗客数がピーク時の約85%にとどまっている、③老朽インフラの更新費用が増大。国民の生活コスト上昇に拍車をかける形に。</p>
+            <div class="card-sources"><a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in collapsible" data-image="">
-            <span class="card-tag japan">為替 · 介入</span>
-            <h3 class="card-headline">ドル円¥159.70 — ¥160介入ゾーン目前、日韓共同で通貨安懸念表明</h3>
+            <span class="card-tag japan">外交 · 資源</span>
+            <h3 class="card-headline">日米閣僚がレアアース供給網の多角化で連携へ — 中国依存脱却を目指す戦略的協力</h3>
             <div class="tap-hint">タップして詳細を表示</div>
-            <p class="card-body"><span class="stat">ドル円は¥159.70で¥160の介入ゾーンに接近</span>。日韓が共同で急激な通貨安に懸念を表明。原因は①有事のドル買い加速、②原油高で輸入コスト増→貿易赤字拡大→円安の悪循環、③FRB利下げ期待消滅。片山財務相が介入準備を示唆。¥160を防衛できなければ¥163-165への急落リスク。</p>
+            <p class="card-body"><span class="stat">日米閣僚がレアアースなど重要鉱物の供給網多角化で合意</span>。背景は①中国がレアアースの世界生産量の約60%を占め、輸出規制を外交カードとして使用してきた、②イラン紛争でサプライチェーンの脆弱性が改めて浮き彫りに、③EV・半導体・防衛産業に不可欠な素材の安定確保が急務。オーストラリア・カナダ等との共同開発も視野に。</p>
             <div class="card-sources"><a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
 
         <div class="cards-grid">
           <article class="card fade-in collapsible" data-image="">
-            <span class="card-tag japan">防衛 · 中国脅威</span>
-            <h3 class="card-headline">中国が「東京に壊滅的打撃」と威嚇 — 12式ミサイル初の実戦配備で抑止力構築</h3>
+            <span class="card-tag japan">社会 · エネルギー</span>
+            <h3 class="card-headline">「核のごみ」最終処分地選定 — 東京・小笠原村で初の住民説明会を開催</h3>
             <div class="tap-hint">タップして詳細を表示</div>
-            <p class="card-body">中国が日本の長距離打撃兵器配備に対し「壊滅的打撃」を警告。一方で日本は<span class="stat">射程1,000kmの12式地対艦ミサイル</span>を熊本の健軍基地に初めて実戦配備。米軍が中東に再配置される中、日本独自の反撃能力の重要性が増大。新たな抑止力の構図が形成されつつある。</p>
-            <div class="card-sources"><a class="source-link" href="https://eadaily.com/" target="_blank" rel="noopener">EADaily <span class="src-arrow">↗</span></a></div>
-          </article>
-
-          <article class="card fade-in collapsible" data-image="">
-            <span class="card-tag japan">自動車 · ホンダ</span>
-            <h3 class="card-headline">ホンダが約70年ぶり初の通期赤字 — EV戦略失敗で¥2.5兆の損失、サプライヤー補償¥1.7兆</h3>
-            <div class="tap-hint">タップして詳細を表示</div>
-            <p class="card-body">ホンダが<span class="stat">サプライヤーに最大¥1.7兆（$106億）の補償</span>を支払う見通し。EV3車種の開発中止でEV戦略全体の損失は¥2.5兆に。①トランプの化石燃料政策で米国EV需要が崩壊、②中国EVがアジア市場で値下げ攻勢、③米関税でハイブリッド車の利益率も圧迫。トヨタのハイブリッド優先戦略の正しさが裏付けられた形。</p>
-            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">日経 <span class="src-arrow">↗</span></a></div>
-          </article>
-        </div>
-
-        <div class="cards-grid">
-          <article class="card fade-in collapsible" data-image="">
-            <span class="card-tag japan">政治 · 財政</span>
-            <h3 class="card-headline">史上最大の予算122.31兆円が衆院通過 — 防衛費9兆円超、審議は2000年以来最短59時間</h3>
-            <div class="tap-hint">タップして詳細を表示</div>
-            <p class="card-body"><span class="stat">FY2026予算案122.31兆円</span>が衆院通過。防衛費が初めて9兆円超。2月選挙で2/3超を確保した与党が強行採決。審議59時間は2000年以来最短で野党4党が猛反発。イラン危機の補正予算は後回し。</p>
+            <p class="card-body"><span class="stat">小笠原村（南鳥島を含む東京都）で核廃棄物最終処分地の住民説明会を初開催</span>。背景は①日本全国で処分地選定が難航し候補地が極めて限られている、②エネルギー安全保障の観点から原発再稼働が加速する中で廃棄物処理の解決が急務、③南鳥島にはレアアース泥の存在も確認されており資源開発との兼ね合いが焦点。</p>
             <div class="card-sources"><a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
 
           <article class="card fade-in collapsible" data-image="">
-            <span class="card-tag japan">通商 · 関税</span>
-            <h3 class="card-headline">日本が米国Section 301の二重調査対象に — 自動車・半導体が標的、最悪のタイミング</h3>
+            <span class="card-tag japan">為替 · 政策</span>
+            <h3 class="card-headline">日韓が急激な円安・ウォン安に懸念表明 — 両通貨ともにドル高と原油高の直撃</h3>
             <div class="tap-hint">タップして詳細を表示</div>
-            <p class="card-body">USTRが<span class="stat">日本を含む60カ国</span>に対しSection 301(b)調査を開始。強制労働問題と過剰生産能力の二方面。最高裁が相互関税を無効化した後のPlan-B。自動車・半導体が標的で、原油$100超と円安¥159の中での調査は日本の輸出企業にとって最悪のタイミング。</p>
-            <div class="card-sources"><a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">日経 <span class="src-arrow">↗</span></a></div>
+            <p class="card-body"><span class="stat">日韓の財務当局が共同で急激な自国通貨安に懸念を表明</span>。ドル円は159.74円と160円の介入ゾーンに接近。原因は①イラン紛争によるドル需要の急増（有事のドル買い）、②原油高で輸入コスト増大→貿易赤字拡大→通貨安の悪循環、③FRBの利下げ期待後退でドル金利優位が持続。日銀の介入準備が進んでいるとの観測も。</p>
+            <div class="card-sources"><a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a></div>
           </article>
         </div>
 
@@ -802,47 +775,18 @@
 
       <div class="cards">
 
-        <!-- 中東 最優先 -->
-        <article class="card featured geo fade-in collapsible" data-image="">
-          <span class="card-tag geo">🔴 中東 · イラン報復</span>
-          <h3 class="card-headline">イランが湾岸3カ国の米軍基地を協調攻撃 — UAE・バーレーン・クウェートの主権領土内で米軍施設を標的に</h3>
-          <div class="tap-hint">タップして詳細を表示</div>
-          <p class="card-body">
-            <span class="list-header">1. 協調攻撃：</span><span class="stat">イラン革命防衛隊がUAEアルダフラ基地、バーレーンのシェイク・イーサ基地、クウェートのアルアディリ基地を同時攻撃</span>。パトリオットレーダー、航空機、燃料貯蔵施設が標的。カーグ島攻撃への直接報復と声明。<br><br>
-            <span class="list-header">2. 戦争の地域化：</span><span class="stat">イランが米国同盟国3カ国の主権領土内の米軍を攻撃</span> — 二国間紛争から地域紛争への質的変化。サウジアラビア、UAE、クウェートの石油インフラへの波及リスクが急上昇。<br><br>
-            <span class="list-header">3. イランの姿勢：</span>イラン外相アラグチが近隣諸国に「米軍の追放」を要求。モジタバ最高指導者とIRGCは海峡封鎖継続を宣言し、さらなるイラン攻撃があれば「米国関連エネルギーインフラ」を標的にすると警告。<br><br>
-            <span class="list-header">4. ホルムズ選択的通航：</span>イランがインド船舶に限定的な安全通航を許可 — 「敵国」以外には海峡を開放する二重基準を適用。外交的くさびを形成。
-          </p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.cnbctv18.com/world/iran-us-israel-war-live-updates-trump-mojtaba-khamenei-missile-attacks-death-toll-west-asia-conflict-oil-lpg-crisis-liveblog-ws-l-19867435.htm" target="_blank" rel="noopener">CNBC TV18 <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured geo fade-in collapsible" data-image="">
-          <span class="card-tag geo">🔴 中東 · イスラエル</span>
-          <h3 class="card-headline">イスラエルが24時間で200超の空爆 · テヘランで将官と情報機関幹部を殺害 · レバノン死者773人に</h3>
-          <div class="tap-hint">タップして詳細を表示</div>
-          <p class="card-body">
-            <span class="list-header">1. 史上最大規模の対イラン作戦：</span><span class="stat">イスラエルが過去24時間で200回以上の空爆をイラン国内で実施</span>。弾道ミサイル発射装置、防空システム、武器庫を破壊。テヘランでジャラリ・ナサブ准将と情報幹部2名を殺害。<br><br>
-            <span class="list-header">2. レバノン戦線：</span>イスラエルがレバノンの橋梁を破壊し「ガザ規模の破壊」を警告。3月以降の死者は<span class="stat">773人</span>に。<br><br>
-            <span class="list-header">3. 累計死者：</span>紛争全体の累計死者は<span class="stat">1,348人超</span>（イラン側中心）。
-          </p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.jpost.com/middle-east/iran-news/2026-03-14/live-updates-889885" target="_blank" rel="noopener">Jerusalem Post <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
         <!-- 北米 -->
         <article class="card featured geo fade-in collapsible" data-image="">
           <span class="card-tag geo">北米</span>
-          <h3 class="card-headline">米GDP 0.7%に下方修正 · FOMC 3/18-19で据え置き確実も利上げ議論浮上 · 裁判所がFRBへの政治圧力を阻止</h3>
+          <h3 class="card-headline">連邦裁判所がFRBパウエル議長への召喚令状を却下 — トランプの政治的圧力と断定 · カナダで4年ぶり最悪の雇用減 · ミシガン州シナゴーグ車両突入事件</h3>
           <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
-            <span class="list-header">1. GDP下方修正：</span><span class="stat">Q4 2025 GDP成長率が0.7%に大幅下方修正</span>（当初1.4%）。43日間の政府閉鎖が連邦支出を−16.7%に押し下げ。戦争前から経済は既に減速していた。<br><br>
-            <span class="list-header">2. FRBパウエル召喚状却下：</span>ボースバーグ判事が司法省の召喚令状を「政治的圧力の口実」として却下。中央銀行の独立性を守る画期的判例。<br><br>
-            <span class="list-header">3. トランプのロシア・イラン矛盾：</span>トランプがプーチンの対イラン支援を認める一方で、ロシア産原油制裁を緩和。ゼレンスキーは「$100億の戦争資金をロシアに提供」と非難。G7の7カ国中6カ国が反対。
+            <span class="list-header">1. パウエル召喚状却下：</span><span class="stat">ボースバーグ判事がFRBパウエル議長への司法省の召喚令状を却下</span> — 「大統領を不快にさせた以外に犯罪の証拠はゼロ」と断じた。背景はトランプ大統領がSNSで繰り返しパウエルに利下げを要求しており、ピロ司法次官が政治的目的で召喚状を発行したと裁判所が認定。中央銀行の独立性を守る画期的判例に。<br><br>
+            <span class="list-header">2. カナダ雇用崩壊：</span><span class="stat">カナダの2月雇用が84,000人減と4年ぶりの最悪の落ち込み</span>。失業率は6.7%に上昇。原因はイラン紛争による世界的な景気不透明感と、エネルギー価格高騰がインフレを再燃させ企業の雇用意欲を冷やしたこと。<br><br>
+            <span class="list-header">3. シナゴーグ突入事件：</span><span class="stat">ミシガン州のテンプル・イスラエルに車両が突入、車内に爆発物</span>。園児100人以上が施設内にいた。容疑者はレバノン出身の帰化米国人で死亡。イラン紛争の緊張が米国内の宗教的暴力を助長する懸念が深刻化。
           </p>
           <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a> &nbsp;
             <a class="source-link" href="https://apnews.com/" target="_blank" rel="noopener">AP <span class="src-arrow">↗</span></a>
           </div>
         </article>
@@ -850,30 +794,46 @@
         <!-- ヨーロッパ -->
         <article class="card featured geo fade-in collapsible" data-image="">
           <span class="card-tag geo">ヨーロッパ</span>
-          <h3 class="card-headline">英国GDP 0%成長 · BOE利下げほぼ不可能 · ウクライナStorm Shadowがロシア半導体工場を攻撃</h3>
+          <h3 class="card-headline">EU首脳がトランプのロシア産原油制裁緩和を非難 — ウクライナ戦争に$100億の資金供与と同義 · フランス兵がイラクで戦死 · ポーランド大統領がEU防衛融資を拒否</h3>
           <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
-            <span class="list-header">1. 英国経済停滞：</span><span class="stat">1月GDP成長率0%</span>（予想0.2%）。戦争前のデータであり、$100原油のエネルギーショックが加われば景気後退リスク。BOEは3/19に利下げ確率1.83%で据え置き確実。<br><br>
-            <span class="list-header">2. ウクライナ：</span>Storm Shadow巡航ミサイルがブリャンスク市のロシア半導体工場を攻撃し軍事生産に打撃。米国仲介の停戦交渉はイラン戦争で事実上棚上げ。<br><br>
-            <span class="list-header">3. フランス兵戦死：</span>イラクでフランス兵が親イラン民兵に殺害。紛争が欧州軍にも波及。
+            <span class="list-header">1. ロシア制裁緩和への反発：</span><span class="stat">EU首脳がトランプのロシア産原油取引許可を強く非難</span>。ゼレンスキー大統領は「この措置だけでロシアに$100億の戦争資金を提供する」と発言。背景はホルムズ海峡封鎖で世界の原油供給が逼迫し、米国がロシア産原油で代替する緊急措置を取ったが、欧州はウクライナ支援との整合性を問題視。<br><br>
+            <span class="list-header">2. フランス兵の戦死：</span><span class="stat">イラクに駐留するフランス軍兵士が攻撃を受け死亡</span>。親イランの民兵組織が外国軍駐留地域を標的にしており、イラン紛争の余波が欧州の軍事プレゼンスにも波及。<br><br>
+            <span class="list-header">3. ポーランドEU防衛融資拒否：</span><span class="stat">ポーランド大統領がEUの約440億ユーロの防衛融資へのアクセスを認める法案を拒否</span>。与党との政治的対立が激化しており、ロシアの脅威が目前にある中で国防強化が遅延する事態に。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
-        <!-- アジア -->
+        <!-- アジア（日本除く） -->
         <article class="card featured geo fade-in collapsible" data-image="">
           <span class="card-tag geo">アジア（日本除く）</span>
-          <h3 class="card-headline">中国NPC閉会でイラン5原則 · インドネシアが緊急財政措置 · ネパールでラッパー政党が圧勝</h3>
+          <h3 class="card-headline">米軍機がイラクで墜落、乗員6名全員死亡 — イラン戦争での米兵死者13人に · イランのW杯参加が事実上不可能に · スリランカがイラン軍艦攻撃の遺体を引き渡し</h3>
           <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
-            <span class="list-header">1. 中国NPC：</span>イラン戦争に関する5原則を発表（「起きるべきでなかった紛争」）。習近平が軍の汚職摘発を宣言。トランプに海峡開放への協力を名指しで要請されており、バランス外交の難度が上昇。<br><br>
-            <span class="list-header">2. インドネシア緊急財政：</span><span class="stat">コロナ時代の緊急規定を発動し財政赤字3%上限の突破を準備</span>。原油$100超えで燃料補助金が爆発的に膨張。アジア輸入国初の緊急措置。<br><br>
-            <span class="list-header">3. ネパール：</span>ラッパー出身政治家バレン・シャー率いるRSPが圧勝。南アジアの若者主導政治変革の象徴。中印間の外交姿勢に影響の可能性。
+            <span class="list-header">1. 米軍機墜落：</span><span class="stat">イラク西部で米軍輸送機が墜落し乗員6名全員が死亡</span>。イラン紛争開始以来の米軍死者は計13人に。原因は調査中だが、中東に展開する米軍の作戦テンポ増大による負荷が指摘されている。<br><br>
+            <span class="list-header">2. イランW杯参加不可：</span><span class="stat">イランのスポーツ・青年大臣が「W杯参加は不可能」と表明</span>。米国によるハメネイ最高指導者殺害後のイラン国内情勢の混乱が原因。スポーツの国際的孤立が深まる。<br><br>
+            <span class="list-header">3. イラン軍艦遺体引き渡し：</span><span class="stat">スリランカの裁判所がイラン軍艦攻撃で死亡した水兵84名の遺体をイラン大使館に引き渡す命令</span>。スリランカ沖でのイラン軍艦への攻撃は紛争の地理的拡大を示す事例。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/" target="_blank" rel="noopener">日経 <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a> &nbsp;
+            <a class="source-link" href="https://apnews.com/" target="_blank" rel="noopener">AP <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- 中東・アフリカ -->
+        <article class="card featured geo fade-in collapsible" data-image="">
+          <span class="card-tag geo">中東・アフリカ</span>
+          <h3 class="card-headline">イラン戦争14日目 — 原油$100超え継続、イランが24時間で船舶6隻・複数の石油施設を攻撃 · サウジがドローン28機を迎撃 · ホルムズ海峡の商業航行が事実上停止</h3>
+          <div class="tap-hint">タップして詳細を表示</div>
+          <p class="card-body">
+            <span class="list-header">1. エスカレーション継続：</span><span class="stat">イランが24時間以内に船舶6隻と複数の石油施設を攻撃</span>。新最高指導者モジタバ師が「ホルムズ海峡封鎖を継続し、他の戦線も開く」と宣言した翌日の行動。サウジアラビアは28機のドローンを迎撃。死者は累計1,348人超（イラン側中心）。<br><br>
+            <span class="list-header">2. 海峡商業航行の停止：</span><span class="stat">ホルムズ海峡の商業航行が事実上停止</span>。世界の石油貿易の約20%が通過する要衝が機能不全に。これが原油$100超えの直接的原因。イランは「侵略者に最も苛烈な打撃を」と威嚇を継続。<br><br>
+            <span class="list-header">3. レバノン南部へのイスラエル空爆：</span><span class="stat">イスラエルがレバノン南部を空爆し少なくとも8人が死亡</span>。イラン紛争がレバノンにも波及し、多戦線化のリスクが現実化しつつある。
+          </p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.aljazeera.com/" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a> &nbsp;
             <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
@@ -881,30 +841,30 @@
         <!-- 中南米 -->
         <article class="card featured geo fade-in collapsible" data-image="">
           <span class="card-tag geo">中南米</span>
-          <h3 class="card-headline">キューバが米国との対話を確認 · 湾岸に100万トンの肥料が滞留 · メキシコ鉱工業-1.1%急落</h3>
+          <h3 class="card-headline">トランプがキューバ指導者を威嚇 — マドゥロと同じ運命を示唆 · メキシコの鉱工業生産が1.1%急落 · コロンビアELN停戦下でも選挙暴力が拡大</h3>
           <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
-            <span class="list-header">1. キューバ対話：</span>ディアスカネル大統領が米国との対話を確認。エネルギー危機が限界に達し、トランプの「マドゥロの二の舞」警告の中での外交的転換。<br><br>
-            <span class="list-header">2. 肥料危機：</span><span class="stat">ホルムズ封鎖で約100万トンの肥料が湾岸に滞留</span>。ブラジルの大豆・トウモロコシ生産に直結。Q3-Q4の食料価格高騰の原因に。<br><br>
-            <span class="list-header">3. メキシコ：</span>1月鉱工業生産が前月比−1.1%の大幅下落。原油高と米国需要減退のダブルパンチ。
+            <span class="list-header">1. キューバへの威嚇：</span><span class="stat">トランプ大統領がキューバ指導者に対し「マドゥロと同じ運命になる」と威嚇</span>。イラン紛争への集中にもかかわらず中南米への圧力を維持する姿勢を示したもの。キューバの経済危機が深刻化する中での発言。<br><br>
+            <span class="list-header">2. メキシコ鉱工業急落：</span><span class="stat">メキシコの1月鉱工業生産が前月比-1.1%と大幅下落</span>。原因はエネルギーコストの上昇と米国からの需要減退。原油高がメキシコの非石油セクターを圧迫する構図。<br><br>
+            <span class="list-header">3. コロンビア選挙暴力：</span><span class="stat">ELN一方的停戦にもかかわらず339の自治体で武装組織の活動が継続</span>。上院議員のボディーガード殺害、先住民議員の誘拐など選挙関連の暴力が激化。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://apnews.com/" target="_blank" rel="noopener">AP <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- オセアニア -->
         <article class="card fade-in collapsible" data-image="">
           <span class="card-tag geo">オセアニア</span>
-          <h3 class="card-headline">豪州ビジネスマンが中国スパイ罪で有罪 · ASX -1.16% · AUKUS安保強化</h3>
+          <h3 class="card-headline">ASX 200が-1.16%下落 — イラン紛争のエネルギー危機がオーストラリア市場を直撃 · 豪州LNG輸出が代替供給源として注目 · RBAの利下げ観測が後退</h3>
           <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
-            <span class="list-header">1. スパイ有罪：</span>オーストラリアのビジネスマンが中国情報機関への協力で有罪判決。AUKUS枠組みの下で対中カウンターインテリジェンスが強化。<br><br>
-            <span class="list-header">2. ASX下落：</span><span class="stat">ASX 200が-1.16%</span>で週末入り。原油高でLNG輸出セクターは恩恵だが、市場全体はリスクオフ。<br><br>
-            <span class="list-header">3. 安全保障：</span>米軍の中東再配置で太平洋の安全保障ギャップが拡大。豪州防衛予算増額への政治的圧力が強まる。
+            <span class="list-header">1. ASX下落：</span><span class="stat">ASX 200が-1.16%で週を終了</span>。原油高と世界的なリスクオフの流れを受けた。ただし豪州のエネルギーセクターは恩恵を受ける可能性 — LNG輸出がホルムズ海峡封鎖の代替供給源として需要急増。<br><br>
+            <span class="list-header">2. RBA利下げ後退：</span>原油高によるインフレ再燃リスクで、<span class="stat">RBA（豪州準備銀行）の利下げ観測が後退</span>。住宅ローン金利の高止まりが消費者心理を圧迫。<br><br>
+            <span class="list-header">3. 太平洋安全保障：</span>北朝鮮のミサイル発射と中東紛争を受け、豪州の防衛予算増額への政治的圧力が増大。AUKUS枠組みの重要性が再認識されている。
           </p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/news" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.google.com/finance/" target="_blank" rel="noopener">Google Finance <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
@@ -921,13 +881,13 @@
       <div class="cards">
 
         <article class="card fade-in" style="background: #fef9c3; border-color: #854d0e;">
-          <p class="card-body" style="font-size: 0.85rem; color: #854d0e; max-height: none; opacity: 1;">🚨 週末エスカレーション：イランが湾岸3カ国の米軍基地を攻撃（カーグ島への報復）。イスラエルが200超の空爆でイラン将官を殺害。トランプが停戦を拒否し日本を含む同盟国に軍艦派遣を要請。金曜終値 — ブレント$103.14、S&P 500は年初来安値6,632、日経53,820。月曜は大幅ギャップダウンの可能性。BOJ・FOMC会合が今週開催。</p>
+          <p class="card-body" style="font-size: 0.85rem; color: #854d0e; max-height: none; opacity: 1;">🚨 危機継続：イラン紛争15日目、トランプがカーグ島攻撃を発表。ブレント$103.14で2日連続$100超え。S&P 500が年初来安値を更新（6,632）、3週連続の下落は約1年ぶり。日経225は53,819（-1.16%）。FRBパウエル議長召喚令状が却下され中銀独立性が守られたが、イラン情勢のさらなるエスカレーションで市場の先行き不透明感が一段と深刻化。</p>
         </article>
 
         <article class="card fade-in">
           <span class="card-tag">主要指数</span>
           <h3 class="card-headline">世界株式指数</h3>
-          <p class="card-body" style="max-height:none;opacity:1;">金曜終値（週末は市場閉鎖）。イランの湾岸3カ国米軍基地攻撃とイスラエルの200超空爆は市場閉鎖後に発生 — 月曜の寄付きで大幅なギャップダウンリスク。S&P 500は年初来安値6,632、日経は53,820で週末入り。</p>
+          <p class="card-body" style="max-height:none;opacity:1;">イラン紛争のエスカレーションと原油$100超えが世界同時株安を加速。S&P 500は年初来安値を更新し3週連続下落（約1年ぶり）。日経225は-1.16%で原油高がエネルギー輸入国を直撃。欧州DAXも軟調で防衛株のみ堅調。</p>
           <table class="index-table">
             <thead><tr><th>指数</th><th>水準</th><th>日次</th><th>週次</th><th>月次</th><th>年初来</th></tr></thead>
             <tbody>
@@ -1010,7 +970,7 @@
         <article class="card fade-in">
           <span class="card-tag">商品動向</span>
           <h3 class="card-headline">主要商品</h3>
-          <p class="card-body" style="max-height:none;opacity:1;">金曜終値。原油はブレント$103/WTI$99で$100超え継続。週末のイラン報復攻撃を受け、月曜の原油先物は大幅上昇の可能性。イランが「米国関連エネルギーインフラ」攻撃を警告しており、ブレント$120超えリスクが現実的に。ゴールドは$5,119で史上最高値圏を維持。</p>
+          <p class="card-body" style="max-height:none;opacity:1;">原油はカーグ島攻撃発表と海峡封鎖継続でブレント$103超え。ゴールドは一時$5,000割れ圏に下落 — ドル高でドル建て資産の割高感が強まり利確売りが進んだ。シルバーも-3.9%と貴金属全体が軟調。</p>
           <table class="index-table">
             <thead><tr><th>商品</th><th>価格</th><th>日次</th><th>週次</th><th>月次</th><th>年初来</th></tr></thead>
             <tbody>
@@ -1032,8 +992,8 @@
               </tr>
               <tr>
                 <td class="idx-name">ゴールド</td>
-                <td class="idx-level">$5,119</td>
-                <td class="chg-neg">−0.13%</td>
+                <td class="idx-level">$5,022</td>
+                <td class="chg-neg">−1.12%</td>
                 <td class="chg-neg">−1.5%</td>
                 <td class="chg-neg">−2.0%</td>
                 <td class="chg-pos">+92%</td>
@@ -1169,7 +1129,7 @@
 
         <article class="card featured market fade-in">
           <span class="card-tag market">ヘルススコア</span>
-          <h3 class="card-headline">経済健全性総合スコア — 深刻な危機（イラン湾岸3カ国攻撃で戦争が地域化、停戦拒否、月曜のギャップダウンリスク）</h3>
+          <h3 class="card-headline">経済健全性総合スコア — 危険（カーグ島攻撃でエスカレーション加速、原油$103超え、S&P年初来安値更新）</h3>
           <div class="health-gauge-wrap">
             <div class="health-gauge">
               <div class="gauge-bg"></div>
@@ -1182,58 +1142,57 @@
               <span>50</span>
               <span>100</span>
             </div>
-            <div class="gauge-score" id="gaugeScore">8</div>
+            <div class="gauge-score" id="gaugeScore">9</div>
             <div class="gauge-score-label">/ 100点</div>
           </div>
           <div class="indicator-grid">
             <div class="indicator-item">
-              <div class="indicator-value">🚨</div>
-              <div class="indicator-name">戦争地域化</div>
-              <div class="indicator-sub chg-neg">イランが湾岸3カ国の米軍基地を攻撃</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">💥</div>
-              <div class="indicator-name">イスラエル攻勢</div>
-              <div class="indicator-sub chg-neg">200超の空爆、テヘランで将官殺害</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value">$103</div>
+              <div class="indicator-value">$103.14</div>
               <div class="indicator-name">ブレント原油</div>
-              <div class="indicator-sub chg-neg">月曜$120超えリスク</div>
+              <div class="indicator-sub chg-pos">▲ +2.67% $100超え2日連続</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">¥159.70</div>
-              <div class="indicator-name">ドル円</div>
-              <div class="indicator-sub chg-neg">¥160突破目前 · 日銀火-水</div>
+              <div class="indicator-value">$5,022</div>
+              <div class="indicator-name">ゴールド</div>
+              <div class="indicator-sub chg-neg">▼ -1.12% ドル高で利確売り</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value">53,820</div>
               <div class="indicator-name">日経225</div>
-              <div class="indicator-sub chg-neg">ATHから-9.3% · 月曜ギャップダウン？</div>
+              <div class="indicator-sub chg-neg">▼ -1.16% 原油高で直撃</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value">❌</div>
-              <div class="indicator-name">停戦拒否</div>
-              <div class="indicator-sub chg-neg">トランプが交渉拒否、日本に軍艦要請</div>
+              <div class="indicator-value">¥159.74</div>
+              <div class="indicator-name">ドル円</div>
+              <div class="indicator-sub chg-neg">▲ 円安160介入ゾーン</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">$70,810</div>
+              <div class="indicator-name">ビットコイン</div>
+              <div class="indicator-sub chg-neg">▼ -1.5% リスクオフ</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value">6,632</div>
+              <div class="indicator-name">S&P 500</div>
+              <div class="indicator-sub chg-neg">▼ 年初来安値更新</div>
             </div>
           </div>
           <div class="methodology-toggle" onclick="this.querySelector('.arrow').classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
             <span class="arrow">▸</span> 算出方法を見る
           </div>
           <div class="methodology-content">
-            <p>GDP成長率、失業率、インフレ率、消費者信頼感、PMI、VIX、資産クラス間フローを加重平均して算出。スコアは前回（11）から8に悪化 — 主因：①イランが湾岸3カ国の米軍基地を攻撃し戦争が地域化、②イスラエルが200超の空爆でイラン将官を殺害、③トランプが停戦を拒否 — 外交的出口なし、④イランが「米国関連エネルギーインフラ」攻撃を警告、⑤月曜市場で大幅ギャップダウンリスク、⑥日銀会合が3日後に迫る中¥160介入ゾーン。わずかなプラス：イランのインド船舶への選択的通航許可は完全な非合理ではないことを示唆。スコア8は「戦争の地域化と外交的出口の消滅」を反映。</p>
+            <p>GDP成長率、失業率、インフレ率、消費者信頼感、PMI、VIX、資産クラス間フローを加重平均して算出。スコアは前回（11）から9に悪化 — 主因：①トランプがカーグ島攻撃を発表しエスカレーションが新段階に、②ブレント原油$103.14で2日連続$100超え、③S&P 500が年初来安値を更新し3週連続下落（約1年ぶり）、④FRBの9月利下げ期待が消滅、⑤カナダで84,000人の雇用喪失。わずかなプラス：FRBパウエル議長への政治的圧力が裁判所により阻止、中銀独立性が維持。スコア9は「紛争エスカレーションが実体経済を急速に侵食」を反映。</p>
           </div>
         </article>
 
         <article class="card fade-in collapsible">
           <span class="card-tag market">注目の動き</span>
-          <h3 class="card-headline">Anthropicが国防総省を提訴 · オイルETFに記録的流入 · Adobe CEO辞任 · AI軍事化で業界分裂</h3>
+          <h3 class="card-headline">小売投資家がオイルETFに殺到 — 記録的な$2.11億の流入 · Adobe CEO辞任で株価-5% · 米リセッション確率がさらに上昇</h3>
           <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
-            <span class="list-header">Anthropicが国防総省を提訴：</span><span class="stat">軍事AIへの提供拒否でブラックリスト入りを阻止する訴訟</span>。AI業界が軍事推進派（OpenAI、Palantir、Anduril）と安全優先派（Anthropic）に分裂。イラン戦争がAI軍事化を加速。<br><br>
-            <span class="list-header">オイルETFに記録的流入：</span><span class="stat">Vanda Research調査で個人投資家のオイルETF買いが$2.11億と過去最高</span>。原油上昇に個人が追随。<br><br>
-            <span class="list-header">Adobe CEO辞任：</span><span class="stat">ナラヤンCEOが退任発表、株価-5%超</span>。AI競争の激化が背景。<br><br>
-            <span class="list-header">セクター動向：</span>公益事業+1.4%が唯一の大幅プラス。エネルギー+2.5%。テクノロジー-1.1%が最悪。
+            <span class="list-header">オイルETFに記録的流入：</span><span class="stat">Vanda Research調査で小売投資家のオイルETF買いが$2.11億と過去最高を記録</span>。USOの買い入れも歴代3位。原油価格上昇に個人が追随しており、「個人投資家が正しかった」とVandaは評価。<br><br>
+            <span class="list-header">Adobe CEO辞任：</span><span class="stat">ナラヤンCEOが後任指名後の退任を発表、株価-5%超</span>。第1四半期は売上・利益ともに市場予想を上回ったが、2007年からのCEO退任のニュースが売り材料に。AI競争の激化が背景。<br><br>
+            <span class="list-header">ユーティリティ株が唯一の勝者：</span><span class="stat">S&P 500のセクター別で公益事業が+1.4%と唯一の大幅プラス</span>。ディフェンシブ資産への逃避が鮮明。エネルギーも+0.8%と堅調だが、テクノロジーと通信が-1.1%と最悪。
           </p>
           <div class="card-sources">
             <a class="source-link" href="https://www.cnbc.com/" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
@@ -1254,26 +1213,25 @@
 
         <article class="card fade-in collapsible">
           <span class="card-tag predict">今週の注目</span>
-          <h3 class="card-headline">🔴 月曜のギャップリスク · 日銀3/18-19 · FOMC 3/18-19 · BOE 3/19 · Nvidia GTC</h3>
+          <h3 class="card-headline">日銀3/18-19決定会合 · カーグ島攻撃の影響 · WBC準々決勝 · Nvidia GTC · 来週の原油動向</h3>
           <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
-            <span class="list-header">1. 月曜ギャップリスク（最重要）：</span><span class="stat">週末のイラン湾岸攻撃・イスラエル200超空爆を市場が織り込んでいない</span>。イランの「エネルギーインフラ攻撃」警告が現実化すればブレント$120超、日経大幅安の可能性。<br><br>
-            <span class="list-header">2. 日銀会合（3/18-19）：</span><span class="stat">0.75%据え置き確実だが植田総裁の発言が焦点</span>。¥160介入シグナル、原油高インフレへの見解、トランプの軍艦派遣要請への影響 — 2024年7月以来最重要の会見。<br><br>
-            <span class="list-header">3. FOMC（3/18-19）：</span>据え置き確実。原油$100超えのインフレへの影響と利上げ議論の有無が焦点。<br><br>
-            <span class="list-header">4. BOE（3/19）：</span>据え置き。UK GDP 0%で利下げ不可能。<br><br>
-            <span class="list-header">5. Nvidia GTC・Micron決算：</span>AI半導体需要のシグナル。地政学リスクの中でのテック需要の強さが焦点。
+            <span class="list-header">1. 日銀会合（3/18-19）：</span><span class="stat">据え置き確率が高いが、ドル円159.74円と160円介入ゾーン接近で声明文の表現変化が最大の焦点</span>。春闘結果が5%超なら6月利上げへの地ならし。原油$100超えでインフレ圧力が強まる中、日銀のバランス感覚が試される。<br><br>
+            <span class="list-header">2. カーグ島攻撃の波紋：</span><span class="stat">イラン原油輸出の90%が経由するカーグ島への攻撃は紛争を新段階に押し上げた</span>。イランの報復がさらなるエスカレーションを招く可能性。週明けの原油先物動向が最重要。<br><br>
+            <span class="list-header">3. WBC準々決勝（3/15）：</span>日本vsベネズエラ。侍ジャパンの準決勝進出がかかる一戦。<br><br>
+            <span class="list-header">4. Nvidia GTC・Micron決算：</span><span class="stat">来週はNvidia GTCとMicron決算が控え、AI半導体セクターの方向性を占う</span>。地政学リスクの中でもテック需要の強さが確認できるか。
           </p>
         </article>
 
         <article class="card fade-in collapsible">
           <span class="card-tag predict">年間見通し</span>
-          <h3 class="card-headline">紛争の地域化 — 「二国間紛争」から「多国間地域戦争」へ質的変化、停戦の道筋なし</h3>
+          <h3 class="card-headline">紛争15日目：カーグ島攻撃で「限定的紛争」シナリオが崩壊 — 全面戦争リスクが急上昇</h3>
           <div class="tap-hint">タップして詳細を表示</div>
           <p class="card-body">
-            <span class="list-header">楽観シナリオ（確率5%、さらに低下）：</span>中国・インドが水面下で仲介し停戦枠組み形成。<span class="stat">原油$80台に戻り、日経55,000超へ</span>。ただしトランプが停戦を明確に拒否しており、この出口は極めて困難。<br><br>
-            <span class="list-header">基本シナリオ（確率45%）：</span>紛争は8-12週継続し、<span class="stat">原油は$100-120のレンジで高止まり</span>。イランは湾岸各国への攻撃を続けるが石油インフラ本体は回避。日経は44,000-54,000レンジ。円安158-168円。中央銀行は利下げ不可能。<br><br>
-            <span class="list-header">悲観シナリオ（確率50%、急上昇）：</span>イランが警告通り湾岸石油インフラを攻撃。<span class="stat">原油$140-160、日経40,000割れ、世界的リセッション入り</span>。淡水化施設・電力インフラへの攻撃で湾岸人道危機。日本のLNG緊急調達が必要に。<br><br>
-            <span class="list-header">日本企業への示唆：</span>①原油$100超えの長期化を前提とした事業計画見直しは不可避、②円安160-165円台での利益計画再策定、③MSDF（海上自衛隊）タンカー護衛への政治決断の準備、④防衛関連銘柄・エネルギー代替供給への投資機会。
+            <span class="list-header">楽観シナリオ（確率10%、さらに低下）：</span>カーグ島攻撃後もイランが報復を抑制し、水面下で停戦交渉開始。<span class="stat">原油$80台に戻り、日経55,000超へ</span>。ただしイランの報復を抑制する動機が見当たらない。<br><br>
+            <span class="list-header">基本シナリオ（確率50%）：</span>紛争は8-12週継続し、<span class="stat">原油は$95-115のレンジで高止まり</span>。カーグ島攻撃への報復としてイランがさらなる海峡封鎖強化・代理戦争拡大。日経は46,000-54,000レンジ。円安155-165円。FRBは年内利下げなし。<br><br>
+            <span class="list-header">悲観シナリオ（確率40%、急上昇）：</span>カーグ島攻撃がイランの全面報復を誘発。<span class="stat">原油$140-160、日経40,000割れ、世界的リセッション</span>。ペルシャ湾の淡水化施設・電力インフラへの攻撃で湾岸諸国の人道危機。<br><br>
+            <span class="list-header">日本企業への示唆：</span>①エネルギーヘッジの最大化は急務（原油$100超えは「新常態」の可能性が高まった）、②円安160円台での利益計画再策定、③中東代替供給源の確保（米ロ石油交渉・豪州LNGの活用）、④防衛関連銘柄への注目。
           </p>
         </article>
 
@@ -1287,20 +1245,20 @@
           <div class="section-icon bottom">💡</div>
           <h2 class="section-title bottom">まとめ</h2>
         </div>
-        <p>この週末、戦争は地域化した。<strong>イランが湾岸3カ国（UAE・バーレーン・クウェート）の米軍基地を攻撃</strong> — カーグ島への報復で二国間紛争から多国間地域戦争に変質。<strong>イスラエルが同時にイラン国内で200超の空爆を実施し将官をテヘランで殺害</strong>。トランプは「イラン完全壊滅」を宣言し停戦を拒否、<strong>日本を名指しで軍艦派遣を要請</strong>。外交的出口はない。<strong>日銀会合（火-水）</strong>は¥159.70、原油$100超、軍艦派遣要請という三重圧力の中で開催 — 2024年7月以来最重要の会合。<strong>月曜の市場は週末のエスカレーションを織り込んでおらず大幅ギャップダウンのリスク</strong>。イランの「米国関連エネルギーインフラ攻撃」警告が現実化すれば原油$120超、日経40,000割れの悲観シナリオが急浮上。<strong>ヘルススコア8/100</strong> — 前回の11からさらに悪化。湾岸石油インフラへの攻撃が起きれば4-5に。停戦枠組みが出現すれば15+に。しかし今夜、誰も平和を語っていない。</p>
+        <p>本日のキーポイント：<strong>トランプ大統領がイラン最大の原油積み出し拠点カーグ島への攻撃を発表</strong> — 紛争のエスカレーションが新段階に突入。<strong>ブレント原油$103.14で2日連続$100超え</strong>、WTI$98.71。<strong>S&P 500が6,632で年初来安値を更新</strong>し3週連続の下落（約1年ぶり）。<strong>日経225は53,820（-1.16%）</strong>で原油高がエネルギー輸入国を直撃。<strong>史上最大の新年度予算122.31兆円が衆院通過</strong> — 防衛費初の9兆円超だが審議59時間は2000年以来最短。<strong>北朝鮮がミサイル発射</strong>、高市首相が危機管理チーム招集。<strong>FRBパウエル議長への政治的圧力を裁判所が阻止</strong> — 中銀独立性の勝利。<strong>経営の焦点：カーグ島攻撃でイラン紛争は「限定的紛争」から「全面戦争」リスクに移行。原油$100超えの長期化を前提にした事業計画の見直しが不可避</strong>。ヘルススコア9/100 — 前日の11からさらに悪化、危機は加速中。</p>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>CEOイブニングブリーフィングは参謀が作成しています · 2026年3月15日版</p>
+    <p>CEOデイリーブリーフィングは参謀が作成しています · 2026年3月14日版</p>
   </footer>
 
   <script>
     // Health gauge animation
     document.addEventListener('DOMContentLoaded', function() {
-      const score = 8;
+      const score = 9;
       const needle = document.getElementById('gaugeNeedle');
       const rotation = -90 + (score / 100) * 180;
       setTimeout(() => {

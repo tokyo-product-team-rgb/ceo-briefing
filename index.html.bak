@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Briefing — Mar 14, 2026 (Evening)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Copernicus Trial';
+      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #F9F9F9;
+      --surface: #FFFFFF;
+      --bg-secondary: #FDFDFD;
+      --bg-tertiary: #F7F6F4;
+      --bg-hover: #F5F4F3;
+      --bg-hover-darker: #ECEAE7;
+      --bg-accent: #2A8F87;
+      --bg-accent-dark: #1D736C;
+      --text: #111111;
+      --text-secondary: #44403C;
+      --text-muted: #78716C;
+      --text-link: #1D736C;
+      --text-link-hover: #2A8F87;
+      --text-error: #C5624E;
+      --border: #E8E5E1;
+      --border-default: #D5D2CD;
+      --border-accent: #B56AEB;
+      --serif: 'Copernicus Trial', Georgia, serif;
+      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
+      --shadow-lg: 0 16px 32px rgba(0,0,0,0.08);
+      --radius: 24px;
+      --green: #2A8F87;
+      --red: #B94A48;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .masthead {
+      background: transparent;
+      border-bottom: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .masthead-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .masthead .overline {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead .edition-date {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    .masthead .edition-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .divider-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--text);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: none;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.7rem 1.5rem;
+      margin: 4px 0;
+      border-radius: 999px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-bar a.active {
+      color: var(--text-primary);
+      background: #ECEAE7;
+    }
+
+    .nav-bar a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-toggle a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .lang-toggle a.active {
+      color: var(--text);
+    }
+
+    .lang-toggle a:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+
+    .lang-toggle .sep {
+      color: var(--border);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--text);
+      padding-bottom: 0.75rem;
+    }
+
+    .section-icon {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card.featured {
+      border-left: 3px solid var(--bg-accent);
+    }
+
+    .card.featured.japan {
+      border-left: 3px solid #C53030;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .card-tag.japan {
+      color: #C53030;
+    }
+
+    .card-headline {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.35;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .card-sources {
+      margin-top: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .source-link {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-link);
+      text-decoration: none;
+      padding: 0.15rem 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    .source-link:hover {
+      border-color: var(--text-link);
+      background: var(--bg-tertiary);
+    }
+
+    .src-arrow { font-size: 0.6rem; }
+
+    .stat {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .tap-hint {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+
+    .collapsible .card-body,
+    .collapsible .card-sources {
+      display: none;
+    }
+
+    .collapsible.expanded .card-body,
+    .collapsible.expanded .card-sources {
+      display: block;
+    }
+
+    .collapsible.expanded .tap-hint {
+      display: none;
+    }
+
+    .collapsible {
+      cursor: pointer;
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.35rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      border-color: var(--text-secondary);
+      color: var(--text-secondary);
+    }
+
+    .index-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .index-table th {
+      font-weight: 600;
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 2px solid var(--border);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    .index-table td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .idx-name { font-weight: 500; }
+    .idx-level { font-weight: 600; }
+    .chg-pos { color: var(--green); font-weight: 600; }
+    .chg-neg { color: var(--red); font-weight: 600; }
+
+    .health-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0;
+    }
+
+    .health-gauge {
+      position: relative;
+      width: 200px;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 180deg,
+        #e74c3c 0deg,
+        #e67e22 45deg,
+        #f1c40f 90deg,
+        #2ecc71 135deg,
+        #27ae60 180deg
+      );
+      mask: radial-gradient(circle at center, transparent 60px, black 61px);
+      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
+    }
+
+    .gauge-needle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 80px;
+      background: var(--text);
+      transform-origin: bottom center;
+      transform: rotate(-90deg);
+      transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+      border-radius: 2px;
+    }
+
+    .gauge-dot {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--text);
+      border-radius: 50%;
+    }
+
+    .gauge-scale {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .gauge-score {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 0.5rem;
+    }
+
+    .gauge-score-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--red);
+    }
+
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .indicator-item {
+      text-align: center;
+    }
+
+    .indicator-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .indicator-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-top: 0.25rem;
+    }
+
+    .indicator-sub {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    .bottom-line {
+      background: var(--text);
+      color: #f5f5f5;
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .bottom-line h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .bottom-line p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #d4d4d4;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      .card { border-radius: 0; border-left: none; border-right: none; border-top: none; border-bottom: 1px solid var(--border); box-shadow: none; }
+      .card.featured { border-left: none; border-bottom: 2px solid var(--bg-accent); }
+      .card.featured.japan { border-left: none; border-bottom: 2px solid #C53030; }
+      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
+      .bottom-line { border-radius: 0; }
+      .nav-pills { display: none; }
+      .bottom-line { background: #333; }
+      .index-table { font-size: 0.7rem; }
+      .index-table td, .index-table th { padding: 0.4rem 0.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .masthead-inner { padding: 1.5rem 1rem 1.5rem; }
+      .container { padding: 1.5rem 1rem 3rem; }
+      .nav-pills {
+        justify-content: flex-start;
+        overflow-x: auto;
+      }
+      .bottom-line {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="live.html">Live</a>
+    <a href="index.html" class="active">Daily</a>
+    <a href="vc-review.html">Review</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <header class="masthead">
+    <div class="lang-toggle">
+      <a href="index.html" class="active">EN</a>
+      <span class="sep">/</span>
+      <a href="ja.html">JA</a>
+    </div>
+    <div class="masthead-inner">
+      <div class="overline">EVENING INTELLIGENCE BRIEF</div>
+      <h1>CEO Evening Briefing</h1>
+      <div class="edition-date">Saturday, March 14, 2026 — 10:00 PM JST</div>
+      <div class="edition-sub">🔴 MISSILE HITS US EMBASSY IN BAGHDAD — Iran War Enters Third Week · Brent Surges to $103.14 (+2.7%) · WTI $98.71 (+3.1%) · S&P 500 −0.6% at 6,632 (2026 Low) · Dow −0.3% · Nasdaq −0.9% · Nikkei −1.16% at 53,820 · North Korea Fires ~10 Missiles · Honda $10B Supplier Compensation · US GDP Revised Down to 0.7% · Judge Blocks DOJ Probe of Fed Chair Powell · ¥159.70 · Gold ~$5,020 · Health Score: 11/100</div>
+      <div class="divider-bar"></div>
+    </div>
+  </header>
+
+  <nav class="nav-pills">
+    <a href="#japan" class="nav-pill">Japan</a>
+    <a href="#global" class="nav-pill">Global</a>
+    <a href="#markets" class="nav-pill">Markets</a>
+    <a href="#predictions" class="nav-pill">Predictions</a>
+    <a href="#bottomline" class="nav-pill">Bottom Line</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- 🇯🇵 Japan -->
+    <section class="section" id="japan">
+      <div class="section-header">
+        <div class="section-icon japan">🇯🇵</div>
+        <h2 class="section-title japan">Japan — In Depth</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card featured japan fade-in collapsible" data-image="https://image.cnbcfm.com/api/v1/image/108277025-1773291259045-gettyimages-2265405294-AFP_A2TC3WB.jpeg?v=1773333371&w=1920&h=1080">
+          <span class="card-tag japan">🔴 NIKKEI · MARKET CLOSE</span>
+          <h3 class="card-headline">Nikkei Closes −1.16% at 53,820 — Honda −6% Drags Index After First Annual Loss in Nearly 70 Years</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What happened:</strong> The Nikkei 225 finished Friday at <span class="stat">53,820</span>, down −1.16% (−631 points), after an intraday low of 53,287 (−2.1%). Topix fell −0.57% to 3,629. Honda Motor plunged over <span class="stat">6%</span>, the single biggest drag. <strong>Why:</strong> Honda announced it would cancel three North American EV models and post its first annual loss in nearly 70 years — a ¥2.5T writedown caused by (1) US EV demand collapsing under Trump's fossil-fuel-friendly policies, (2) Chinese EVs undercutting Honda across Asia, and (3) US tariffs squeezing gasoline/hybrid margins. Separately, $100 oil inflated Japan's energy import bill, and overseas investors dumped <span class="stat">$4.6 billion</span> in Japanese equities this week as foreign capital flees war uncertainty. Nikkei is now ~9.3% below its February all-time high of 59,332.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/13/asia-pacific-markets-today-nikkei-225-kospi-hang-seng-csi300.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://global.honda/en/newsroom/news/2026/c260312eng.html" target="_blank" rel="noopener">Honda <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">🔴 SECURITY · US FORCES</span>
+          <h3 class="card-headline">US Marines and Warships Deploying from Japan to Middle East — Amphibious Ready Group Redeployed</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> The US is moving additional Marines and warships to the Middle East, with reinforcements coming from an amphibious ready group usually based in Japan, according to CBS reports confirmed by BBC. <strong>Why this matters for Japan:</strong> The redeployment directly reduces US military presence in the Indo-Pacific — Japan's security umbrella thins as forces shift to the Iran theater. This comes amid North Korea's ballistic missile launch today (see below), highlighting that threats to Japan don't pause because the US is fighting elsewhere. <strong>Strategic concern:</strong> If China or North Korea wanted to test boundaries, this is exactly the window — reduced US forward presence in Asia combined with Washington's attention being consumed by the Middle East. Japan's own defense buildup, under PM Takaichi's expanded security budget, becomes more urgent by the day.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/cq8gj9n12g8o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">🔴 SECURITY · NORTH KOREA</span>
+          <h3 class="card-headline">North Korea Fires ~10 Ballistic Missiles — Largest Salvo of 2026 Exploits US Distraction with Iran War</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> North Korea fired approximately <span class="stat">10 ballistic missiles</span> toward the eastern sea from Sunan (Pyongyang airport area), flying ~350km. Japan's Defense Minister Koizumi confirmed the weapons landed outside Japan's EEZ. <strong>Why now:</strong> Pyongyang is exploiting the US military's preoccupation with Iran in its largest salvo of 2026. With US amphibious forces (31st MEU, USS Tripoli) redeploying from Japan to the Middle East, North Korea faces reduced deterrence and is demonstrating capability precisely when the security gap is widest. Local media are speculating the US is relocating THAAD missile defense assets from South Korea to support Iran operations. <strong>For Japan:</strong> A concrete escalation — 10 missiles is qualitatively different from a single test. This comes during US-South Korea Freedom Shield exercises, which North Korea views as rehearsals for invasion.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/article/south-north-korea-projectile-military-exercises-44a03aff91a068f76b6dfd89023dd378" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">AUTO · STRATEGY SHIFT</span>
+          <h3 class="card-headline">Toyota to Sell US-Made Tundra and Highlander in Japan — Reverse-Import Strategy as Domestic Production Consolidates</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Toyota will begin selling US-manufactured Tundra pickup trucks and Highlander SUVs in Japan. <strong>Why:</strong> This unusual reverse-import move signals Toyota's strategic recalculation: (1) Trump's tariffs make it advantageous to produce in-market rather than export; (2) Japan's SUV/truck market is growing as consumer preferences shift; (3) Toyota wants to utilize US factory capacity that faces overcapacity as EV transition stalls. <strong>Contrast with Honda:</strong> While Honda is writing down EV bets and posting its first loss in decades, Toyota's conservative hybrid-first strategy is proving prescient. Toyota's decision to diversify what it sells in Japan — including large US-made vehicles — shows adaptability amid the trade war chaos.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/business/automobiles/toyota-set-to-sell-us-made-tundra-pickup-highlander-suv-in-japan" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">AUTO · SELL-OFF</span>
+          <h3 class="card-headline">Honda to Pay Suppliers Up to ¥1.7T ($10.6B) for Scrapped EVs — Total EV Writedown Reaches ¥2.5T</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Honda Motor expects to pay as much as <span class="stat">¥1.7 trillion ($10.6 billion)</span> in compensation to suppliers after abandoning development of three electric vehicles, including the 0 Series Saloon. Total EV strategy losses could reach ¥2.5 trillion. Honda is simultaneously being actively sold by Japanese and US institutional funds. <strong>Why the damage is this large:</strong> Honda had already committed suppliers to production — molds, tooling, custom components — for vehicles that will never be built. The compensation bill reflects how deep into the supply chain Honda's EV bet had gone before the strategy collapsed under (1) Trump's fossil-fuel-friendly policies killing US EV demand, (2) Chinese EVs undercutting Honda across Asia, and (3) US tariffs squeezing margins. <strong>Broader signal:</strong> Honda's collapse validates Toyota's conservative hybrid-first approach and raises questions about whether Nissan and Mazda face similar writedown risks on their own EV programs.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/business/companies/honda-to-pay-suppliers-as-much-as-10bn-over-scrapped-ev-models" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">IPO · PAYPAY</span>
+          <h3 class="card-headline">PayPay Opens 19% Above IPO Price on Nasdaq — Chose US Over Japan After Arm's Success</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> PayPay opened at <span class="stat">$19</span> on Nasdaq — 19% above the $16 IPO price — valuing the SoftBank-backed mobile payments giant at $12.7B. Raised ~$880M. PayPay CEO confirmed it chose a US listing over Tokyo because of Arm's successful 2023 Nasdaq debut. <strong>Why it matters:</strong> The fact that Japan's most prominent fintech unicorn deliberately bypassed TSE is a stinging rebuke of Tokyo's capital markets. PayPay has 72 million domestic Japanese users making everyday payments, yet chose Nasdaq for superior valuation multiples and deeper institutional investor pools. <strong>For Japan's market reform agenda:</strong> PM Takaichi has pushed for TSE competitiveness — PayPay's snub shows the gap remains wide.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/business/markets/ipo/paypay-snubbed-japan-for-us-after-ipo-success-of-softbank-backed-arm" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">ENERGY · ASEAN</span>
+          <h3 class="card-headline">Japan's Fossil Fuel Tech Push Gains Ground in ASEAN — Stalling Renewables Leave Gap for AZEC Initiative</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Stalling renewable energy deployment across ASEAN is creating an opening for Japan's fossil fuel technology push through the AZEC (Asia Zero Emission Community) initiative. <strong>Why now:</strong> With oil at $100 and energy security paramount, ASEAN nations are more receptive to Japan's pragmatic approach of cleaner fossil fuels (ammonia co-firing, carbon capture, hydrogen) rather than a pure renewables bet. <strong>Impact:</strong> This positions Japanese heavy industry firms (JERA, Mitsubishi Heavy, IHI) as key energy technology providers in Southeast Asia, partially offsetting Japan's vulnerability as an energy importer and creating a massive export market for Japanese industrial technology.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/spotlight/policy-asia/stalling-asean-renewables-leave-gap-for-japan-s-fossil-fuel-tech-push" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">PHARMA · INVESTMENT</span>
+          <h3 class="card-headline">Bristol Myers Squibb to Manufacture CAR-T Cancer Therapies in Japan — Nikon Partnership</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> US pharma giant Bristol Myers Squibb will produce advanced CAR-T immune cell cancer therapies in Japan, partnering with Nikon Cell Innovation (a Nikon subsidiary) to create the first facility in Asia handling the entire manufacturing process. <strong>Why Japan:</strong> Japan's aging population creates massive demand for cancer treatments, and BMS sees an opportunity to localize production rather than shipping personalized cell therapies from the US — which is logistically challenging as CAR-T uses a patient's own cells. <strong>Why it matters:</strong> This is a significant foreign direct investment signal — even amid war and uncertainty, Japan's healthcare market remains attractive enough to justify major capex. It also validates Japan's push to become a biotech manufacturing hub and Nikon's strategic pivot from cameras to life sciences.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/business/pharmaceuticals/bristol-myers-squibb-to-make-immune-cell-cancer-therapies-in-japan" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">MEDIA · STREAMING</span>
+          <h3 class="card-headline">Netflix Streams All 47 WBC Games in Japan Exclusively — Traditional TV Priced Out</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> All 47 games of the 2026 World Baseball Classic are streaming exclusively on Netflix in Japan, with zero games on over-the-air television. <strong>Why:</strong> Rising rights fees have priced out traditional Japanese broadcasters (NHK, Fuji TV) who carried previous tournaments. Netflix sees this as its gateway to dominate Japanese live sports — a market where terrestrial TV still commands massive audiences. <strong>Risk:</strong> Japan has a deeply ingrained free-TV culture, especially for baseball. If viewership disappoints because fans won't pay for Netflix, it could dampen WBC enthusiasm in baseball-obsessed Japan. <strong>Opportunity:</strong> If it works, this could accelerate the streaming transition and create a template for other sports (NPB, J.League) to follow.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/business/media-entertainment/netflix-s-world-baseball-classic-deal-to-test-japan-s-streaming-appetite" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">TRADE · STEEL TARIFFS</span>
+          <h3 class="card-headline">US Steel Prices Soar 1 Year After Trump Tariffs — Japanese Firms Pour Investment into US Production</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> One year since Trump imposed 25% tariffs on steel (later raised to 50%), US steel prices and domestic production have soared while imports plunged. Japanese steel companies are responding by investing directly in US production. <strong>Why Japanese firms are pivoting:</strong> With tariffs making Japanese steel exports to the US uncompetitive, companies like Nippon Steel and JFE are building or acquiring US capacity instead of exporting — a strategic shift from "export from Japan" to "produce in market." <strong>Irony:</strong> Trump's tariffs, designed to hurt foreign competitors, are actually accelerating Japanese investment in America — creating the exact manufacturing jobs Trump wanted, just owned by Japanese companies.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/economy/trade-war/trump-tariffs/us-steel-prices-production-soar-1-year-after-trump-tariffs" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible">
+          <span class="card-tag japan">TOURISM · INSURANCE</span>
+          <h3 class="card-headline">Okinawa Launches Rental Car Medical Insurance for Foreign Tourists — Addressing Tourism Safety Gap</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Okinawa has introduced a new rental car and medical insurance bundle targeting foreign tourists. <strong>Why:</strong> As Japan's inbound tourism boom continues (record visitors in 2025), accidents involving uninsured foreign drivers have become a growing fiscal and medical burden on local systems. Okinawa, heavily dependent on rental car tourism, is piloting what could become a nationwide model. <strong>Context:</strong> Despite the Iran war dominating headlines, Japan's domestic tourism economy remains strong — a reminder that not everything is crisis-driven.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/business/travel-leisure/rental-car-medical-insurance-deal-lures-foreign-tourists-in-okinawa" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 🌍 Global -->
+    <section class="section" id="global">
+      <div class="section-header">
+        <div class="section-icon">🌍</div>
+        <h2 class="section-title">Global — By Region</h2>
+      </div>
+
+      <div class="cards">
+
+        <!-- North America -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇮🇶 NORTH AMERICA · 🔴 BAGHDAD EMBASSY</span>
+          <h3 class="card-headline">Missile Hits US Embassy Compound in Baghdad — Iran War Enters Third Week with Multi-Front Escalation</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> A missile struck a helipad inside the US Embassy compound in Baghdad, sending a column of smoke over the Iraqi capital. Separately, debris from an intercepted Iranian drone hit an oil facility in UAE's Fujairah port, starting a fire. 2,500 more Marines and the amphibious assault ship USS Tripoli are being deployed to the Middle East. <strong>Why this is a major escalation:</strong> Striking the US Embassy — even indirectly via Iranian-backed militia — crosses a red line. The last time a US Embassy was hit (Benghazi 2012), it defined a presidency. The simultaneous Fujairah port hit shows Iran's proxy network can strike critical energy infrastructure across the Gulf. <strong>The compounding factor:</strong> Trump said the US "obliterated" military targets on Iran's Kharg Island on Friday but spared oil infrastructure as a warning. Iran's response — hitting the embassy — signals it won't be deterred by warnings. The Iranian parliament speaker had warned Kharg strikes would provoke a new level of retaliation, and that appears to be unfolding.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/article/iran-iraq-us-trump-march-14-2026-oil-prices-a2399398b4c590995b814d7640362a11" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible" data-image="https://image.cnbcfm.com/api/v1/image/108277025-1773291259045-gettyimages-2265405294-AFP_A2TC3WB.jpeg?v=1773333371&w=1920&h=1080">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · 🔴 KHARG ISLAND</span>
+          <h3 class="card-headline">Trump "Obliterates" Military Targets on Kharg Island — Spares Oil Infrastructure as Strategic Warning</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Trump announced US Central Command executed "one of the most powerful bombing raids in the History of the Middle East," destroying every military target on Iran's Kharg Island while deliberately sparing oil infrastructure. He warned he would "immediately reconsider" if Iran interferes with Strait of Hormuz shipping. <strong>Why this is pivotal:</strong> Kharg Island handles ~90% of Iran's crude exports (loading capacity ~7M barrels/day). By hitting military targets but leaving oil infrastructure intact, Trump is sending a two-pronged message: (1) we can destroy your economic lifeline at will; (2) we chose not to — this time. It's a coercive bargaining move — compliance on Hormuz or the oil terminals are next. <strong>Risk:</strong> Iran now faces a lose-lose: reopen Hormuz (capitulation) or escalate and risk losing its oil export capability entirely. Analysts warn this makes Iranian retaliation more, not less, likely.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/13/trump-says-us-obliterated-military-targets-on-irans-kharg-island-but-didnt-wipe-out-oil-infrastructure.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/live/ckg1w1jp8kjt" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · RUSSIA-IRAN</span>
+          <h3 class="card-headline">Trump Admits Putin "Might Be Helping" Iran — First Acknowledgment of Russian Support After Weeks of Denial</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> In a Fox News radio interview, Trump said "I think he might be helping them a bit" about Putin aiding Iran, adding "and he probably thinks we're helping Ukraine, right?" <strong>Why this is significant:</strong> Just one week ago, Trump berated a Fox News reporter for even asking about Russian aid to Iran. The reversal suggests intelligence confirming Russian support has become undeniable — likely satellite/surveillance data, weapon systems, or tactical intelligence sharing. <strong>Geopolitical implication:</strong> The US is simultaneously easing Russian oil sanctions (to stabilize energy markets) while acknowledging Russia is helping Iran fight the US. This contradiction will become politically explosive — it undermines the administration's narrative that the Iran war is a clean, isolated operation.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/13/trump-iran-war-putin-russia.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · HOUSING</span>
+          <h3 class="card-headline">US Mortgage Rates Surge to 7-Month High at 6.41% — Iran War Kills Spring Housing Season</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> The 30-year fixed mortgage rate hit <span class="stat">6.41%</span>, highest since September 2025, up from 5.99% just two weeks ago. <strong>Why:</strong> $100 oil is feeding directly into inflation expectations, pushing Treasury yields higher — and mortgage rates follow yields. The counterintuitive result: war doesn't create a bond safe-haven rally when it drives inflation. <strong>Real-world impact:</strong> A buyer of a $400K home now pays $115/month more than two weeks ago. Lennar reported disappointing Q1 earnings, with CEO citing "geopolitical uncertainty, especially the Iran conflict" as a headwind. The spring housing season — the strongest period for home sales — is being strangled in its crib.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/13/mortgage-rates-7-month-high.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · ECONOMY</span>
+          <h3 class="card-headline">US GDP Revised Down to 0.7% — Economy Was Already Stumbling Before Iran War</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> The Commerce Department slashed Q4 2025 GDP growth to <span class="stat">0.7%</span> (annual rate), down from the initial estimate of 1.4% — a massive revision. Consumer spending grew just 0.1% after inflation in January. <strong>Why the revision is so large:</strong> The 43-day government shutdown hammered federal spending (−16.7% annualized rate, cutting 1.16 percentage points off growth). But it wasn't just the shutdown — consumer spending also weakened sharply as lower-income families pulled back and hiring stagnated. <strong>The Iran war makes this worse:</strong> Gas prices approaching $4/gallon will soak up much of the tax refund boost from Trump's 2025 tax cuts. The Dow has fallen for three straight weeks. Consumer sentiment tumbled after the Iran attacks. KPMG's chief economist warns underlying inflation was already rising pre-war and "is set to intensify" — some Fed officials could push for a rate hike at next week's meeting.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/article/economy-gdp-consumer-spending-trump-government-shutdown-3172b6d0023717644c173cee94d44a79" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · FED/LEGAL</span>
+          <h3 class="card-headline">Federal Judge Blocks DOJ Subpoenas to Fed — Rules Investigation a "Pretext" to Pressure Powell on Rate Cuts</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Judge James Boasberg quashed DOJ subpoenas issued to the Federal Reserve, calling the government's justifications "thin and unsubstantiated." He wrote there is "abundant evidence that the subpoenas' dominant purpose is to harass and pressure Powell either to yield to the President or to resign." <strong>Why this matters:</strong> The ruling is a severe blow to the Trump administration's campaign to undermine Fed independence. The investigation — into Powell's testimony about a $2.5B building renovation — had already delayed Senate consideration of Kevin Warsh, Trump's pick to replace Powell. The judge essentially said the DOJ was using bogus corruption allegations as leverage to force rate cuts. <strong>Context:</strong> This is the latest in a series of administration moves to pressure the Fed — including attempting to fire board member Lisa Cook (blocked by the Supreme Court).</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/article/feeral-reserve-trump-0fdd36447a6aa8ae3e7125930d03950f" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · HOUSING</span>
+          <h3 class="card-headline">Trump Signs Housing Executive Orders — Cuts Environmental Rules, Eases Mortgage Regulations</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Trump signed two executive orders aimed at housing affordability: (1) reducing federal housing regulatory burdens and curtailing "green" building codes to speed up construction permits; (2) simplifying mortgage regulations for smaller community banks. <strong>Why now:</strong> Housing affordability has become a political liability ahead of November's midterm elections. The Senate passed a bipartisan housing bill Thursday, and the White House is racing to show progress. <strong>Reality check:</strong> These orders are largely symbolic — the key barriers to housing (state/local zoning, mortgage rates) are outside federal control. With mortgage rates at 6.41% and rising due to the Iran war, no amount of permitting reform will make homes affordable if borrowing costs keep climbing. The multiyear construction shortage and rising rates create a structural trap that executive orders can't solve.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/article/trump-housing-executive-orders-bafb561bcc5da770de8f44ec06676d0d" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Europe -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇪🇺 EUROPE · MARKETS</span>
+          <h3 class="card-headline">Stoxx 600 Falls −0.5% — Deutsche Bank −0.9% on $30B Private Credit Exposure; BE Semiconductor +6.6% on Takeover Rumors</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> European stocks closed lower with Stoxx 600 −0.5%. Deutsche Bank shed 0.9% after revealing <span class="stat">$30 billion</span> in private credit exposure. Banks index fell −1.12%. BE Semiconductor surged +6.6% on takeover rumors. <strong>Why Deutsche matters:</strong> Private credit has exploded into a $2T+ market, and Deutsche's $30B exposure — disclosed Thursday — raises questions about what losses lurk if the oil shock triggers a credit downturn. Private credit is illiquid and opaque; when stress hits, repricing is sudden. <strong>Bright spot:</strong> Oil/gas, insurance, and utilities led gains as the energy crisis benefits producers. Sterling fell 0.8% against the dollar after UK GDP data showed zero growth in January.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/13/european-markets-stoxx-600-ftse-dax-cac-iran-news-oil-prices.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇬🇧 EUROPE · UK ECONOMY</span>
+          <h3 class="card-headline">UK Economy Flatlines in January — Zero Growth Even Before Iran Oil Shock Hit</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> UK GDP showed 0% growth in January vs 0.2% expected. Services flat, production −0.1%, construction +0.2%. <strong>Why this is alarming:</strong> January data is pre-war — meaning the UK economy was already stalling before $100 oil added an energy price shock on top. With mortgage rates rising and oil-driven inflation spreading, the Bank of England is trapped: markets now price only a <span class="stat">1.83%</span> chance of a rate cut on March 19. For an economy that grew just 0.1% in Q4 2025, adding an energy price shock on top of an already-stalled economy risks pushing Britain into recession. <strong>Political fallout:</strong> Finance Minister Reeves' Spring Statement touted growth as proof her plan was working — today's data directly contradicts that narrative.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/13/uk-economy-fails-to-grow-in-january-.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇦 EUROPE · UKRAINE</span>
+          <h3 class="card-headline">Ukraine Slams US Russian Oil Waiver — Zelenskyy Says It "Does Not Help Peace" as Kyiv Pivots to Gulf Defense Role</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Zelenskyy, meeting Macron in Paris, said the US 30-day waiver on Russian oil sanctions "could provide Russia with about $10 billion for the war" and is "not the right decision." German Chancellor Merz said 6 of 7 G7 members opposed the waiver. <strong>Why this fracture matters:</strong> The US waiver was a pragmatic response to the oil crisis it created by going to war with Iran. But it directly undermines the sanctions regime that was supposed to end Russia's invasion of Ukraine. Zelenskyy's math is devastating: $10B in oil revenue buys a lot of drones that will fly at Ukrainian cities. <strong>The deeper irony:</strong> The US started a war that created an energy crisis, then eased sanctions on Russia (which is helping Iran) to fix the crisis — while still asking Ukraine to help defend Gulf allies against Iranian drones. Macron tried to soften the blow, noting the waivers are "limited" and "exceptional." Merz was blunter: "This is wrong."</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/article/russia-ukraine-war-macron-oil-drones-a9330482d471ea67890a0e8ec1913db7" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Asia ex-Japan -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇨🇳 ASIA EX-JAPAN · CHINA NPC</span>
+          <h3 class="card-headline">China's NPC Closes — 5 Principles on Iran, Xi Purges Military, Hong Kong's Middle East Pivot Threatened</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> China's National People's Congress concluded with: (1) 5 principles on the Iran war, calling it a conflict that "shouldn't have happened"; (2) Xi told the military corrupt officers "have no place to hide"; (3) ethnic unity policies enshrined in law; (4) AI job displacement acknowledged. Separately, Hong Kong's strategic pivot to Middle East business is threatened by Iran war spillover. <strong>Why it matters:</strong> China is positioning as a diplomatic broker while avoiding direct confrontation with the US. Xi is torn between decades-long Khamenei family ties and protecting US trade relations. The Hong Kong angle matters for finance — if the city's Middle East expansion stalls, it weakens Beijing's alternative-to-Western-finance narrative.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/politics/china-people-s-congress/tech-trump-targets-5-takeaways-as-china-s-npc-draws-to-close" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇳🇵 ASIA EX-JAPAN · NEPAL</span>
+          <h3 class="card-headline">Rapper-Led Party Wins Nepal Landslide — RSP's Balen Shah Achieves "Impossible" Majority After Youth Uprising</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Nepal's Rastriya Swatantra Party (RSP), led by rapper-turned-politician Balen Shah, won a sweeping majority in national assembly elections — the first since a violent youth-led uprising toppled the previous government in 2025. <strong>Why it matters:</strong> This is the most significant political change in Nepal in a generation. Shah's party represents a new generation of anti-establishment politics in South Asia. The result could reshape Nepal's foreign policy stance between China and India, and its approach to hydropower development (Nepal has massive untapped potential that both neighbors covet). <strong>Regional signal:</strong> Youth-led political movements are reshaping Asian democracies — Nepal joins a pattern seen in Thailand, Taiwan, and South Korea.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/c178jq791w4o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇰🇿 ASIA EX-JAPAN · CENTRAL ASIA</span>
+          <h3 class="card-headline">Kazakhstan Votes on New Constitution Boosting Tokayev's Power — Central Asia Tightens Amid Iran War Uncertainty</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Kazakh citizens are voting on a new constitution that would significantly expand President Tokayev's authority. <strong>Why now:</strong> Kazakhstan — a major oil and uranium producer bordering both Russia and China — is consolidating power amid the Iran war's reshaping of Central Asian geopolitics. As energy prices surge, Kazakhstan's strategic importance grows (it holds the world's largest uranium reserves and significant oil). Tokayev is using the crisis moment to lock in authority while he has the leverage of rising commodity revenues. <strong>Russia-China angle:</strong> Both Moscow and Beijing are competing for influence in Kazakhstan — the constitutional changes may signal which direction Tokayev is leaning.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/politics/kazakhs-vote-on-new-constitution-that-will-boost-tokayev-s-power2" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇮🇩 ASIA EX-JAPAN · INDONESIA</span>
+          <h3 class="card-headline">Indonesia Activates COVID-Era Fiscal Rule — Budget Deficit Likely to Breach 3% Ceiling on Oil Subsidies</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Indonesia is preparing a COVID-19-era emergency regulation to relax the country's 3% fiscal deficit ceiling. President Prabowo called for reduced oil consumption amid soaring crude prices. <strong>Why:</strong> Indonesia heavily subsidizes retail fuel prices — with oil at $100+, the subsidy bill is exploding and threatening to blow through the constitutional deficit cap. The government faces an impossible choice: raise fuel prices (political suicide) or bust the deficit ceiling (fiscal credibility risk). <strong>Regional signal:</strong> Indonesia is the first major Asian economy to formally invoke emergency fiscal measures due to the Iran war's oil shock. If others follow (India, Philippines, Thailand), it signals the oil crisis is becoming a sovereign fiscal crisis across importing Asia.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/spotlight/iran-tensions/indonesia-prepares-covid-era-rule-with-deficit-likely-to-breach-3-ceiling" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Middle East & Africa -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇱🇧 MIDDLE EAST · LEBANON</span>
+          <h3 class="card-headline">Israel Destroys Bridge in Lebanon, Threatens "Gaza-Scale Devastation" — 773 Killed Since March</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Israel destroyed a bridge in Lebanon and explicitly threatened Gaza-scale devastation if Hezbollah continues operations. Israeli attacks since early March have killed <span class="stat">773</span> in Lebanon as the military expands its assault to additional Beirut neighborhoods. <strong>Why the escalation:</strong> Israel is using the US-Iran war as cover to simultaneously degrade Hezbollah's capabilities — a long-standing strategic objective. By threatening "Gaza-scale" destruction, Israel signals willingness to conduct the same scorched-earth campaign in Lebanon that devastated Gaza. <strong>Risk for Japan:</strong> Lebanon's cedar oil industry and food exports are minor, but the humanitarian crisis will strain UNHCR budgets where Japan is a major contributor.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.aljazeera.com/news/2026/3/13/israel-destroys-bridge-in-lebanon-and-threatens-gaza-scale-devastation" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇮🇷 MIDDLE EAST · IRAN LEADERSHIP</span>
+          <h3 class="card-headline">Hegseth Claims New Supreme Leader Mojtaba Khamenei "Injured" — Iranians Question Who's Really in Charge</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> US Defense Secretary Hegseth claimed Iran's new Supreme Leader Mojtaba Khamenei was "likely disfigured" in recent strikes. Separately, Iranians are questioning who's really in charge after Khamenei's first address came via a presenter on state TV rather than appearing himself. <strong>Why it matters:</strong> If Mojtaba Khamenei is genuinely incapacitated, Iran's command structure is in crisis — the succession from his father Ali Khamenei (who was assassinated) happened under fire, and now the successor may also be wounded. Decapitation of leadership during war historically leads to either capitulation or chaotic escalation. <strong>Uncertainty premium:</strong> Markets can't price in an outcome when no one knows who controls Iran's nuclear and military apparatus.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.aljazeera.com/news/2026/3/13/us-hegseth-claims-irans-new-supreme-leader-mojtaba-khamenei-injured" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇦🇪 MIDDLE EAST · DUBAI</span>
+          <h3 class="card-headline">Dubai "Functioning but Tense" — Fairmont and Burj Al Arab Hit, 21 Charged for Social Media Posts</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Life in Dubai continues amid drone interceptions and evacuation alerts. The five-star Fairmont The Palm was struck, the Burj Al Arab caught fire from drone debris, Dubai airport was damaged by a missile, and the US Consulate was hit by a suspected drone. AWS data center strikes caused banking outages. <span class="stat">21 people</span> have been charged for social media posts about the attacks. <strong>Why Dubai's situation is unique:</strong> The city built its brand on being a safe haven for capital and talent — every drone strike chips away at that. The crackdown on social media posts signals the government prioritizes controlling the narrative over transparency, which may accelerate expat departures. <strong>Impact:</strong> Bahrain and Saudi F1 races cancelled due to the conflict — another blow to Gulf nations' sports-entertainment strategy.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/13/dubai-expats-drones-missiles-uae-iran-war.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Latin America -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🌎 LATIN AMERICA · SUPPLY CHAIN</span>
+          <h3 class="card-headline">1M Tons of Fertilizer Stuck in Gulf — Hormuz Shutdown Threatens Spring Planting Across Latin America and Africa</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Approximately <span class="stat">1 million tons</span> of fertilizer (urea, ammonia, potash) are stranded in the Persian Gulf due to the Hormuz shutdown. <strong>Why this is a food crisis in slow motion:</strong> The Gulf produces a massive share of global fertilizer. If these shipments can't reach Latin America, Africa, and Asia for spring planting season, the impact on global food prices could be devastating. Brazil — the world's largest agricultural exporter — depends on imported fertilizer for its soybean and corn crops. A fertilizer shortage now means smaller harvests in Q3-Q4, which means higher food prices globally by late 2026. <strong>This is the hidden second-order effect of the Hormuz closure</strong> — it's not just oil, it's the entire petrochemical supply chain including fertilizer, plastics, and industrial chemicals.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/business/markets/commodities/strait-of-hormuz-shutdown-leaves-1m-tons-of-fertilizer-stuck-in-gulf" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · TRADE WAR</span>
+          <h3 class="card-headline">US Opens Section 301 Probes Into 60 Economies — Plan-B Tariff Pressure After Supreme Court Struck Down Reciprocal Tariffs</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> The USTR launched Section 301(b) investigations into 60 economies including Japan, China, EU, India, Mexico, and Brazil over forced-labor imports. Hearings April 28-May 1. This follows Wednesday's Section 301 probe into 16 economies over excess industrial capacity. <strong>Why:</strong> After the Supreme Court invalidated Trump's reciprocal tariffs last month, the administration immediately pivoted to Section 301 as a back door to reimpose tariffs without Congressional approval. <strong>Japan exposure:</strong> Japan now faces dual Section 301 probes — one for industrial capacity (targeting autos/semiconductors) and one for forced labor. Combined with $100 oil and yen at ¥159, this is the worst possible timing for Japanese exporters. "With the strike-down of the reciprocal tariffs, the administration made it clear their plan-B would be rolled out soonest," said Asia Society's Wendy Cutler.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/economy/trade-war/trump-tariffs/us-opens-new-unfair-trade-probes-to-rebuild-trump-s-tariff-pressure" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Latin America -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇨🇺 LATIN AMERICA · DIPLOMACY</span>
+          <h3 class="card-headline">Cuba Confirms US Talks — Díaz-Canel Acknowledges Discussions with Trump Administration</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Cuban President Díaz-Canel confirmed Cuba has held talks with the US — the first official acknowledgment of long-rumored discussions. Secretary Rubio reportedly met with Raúl Castro's grandson in the Caribbean in late February. <strong>Why now:</strong> Cuba's energy crisis has reached breaking point — the island has been suffering rolling blackouts and fuel shortages for months. The Iran war has made Cuba's energy situation even more desperate by disrupting global oil flows. Cuba relied partly on Venezuelan and Russian crude, both now under additional strain. <strong>Trump's leverage:</strong> Trump warned Cuban leaders to avoid the fate of Venezuela's Maduro, who was "ousted and arrested" in a US military operation in January. The implicit threat is unmistakable — comply or face regime change. <strong>For the region:</strong> If Cuba opens to US engagement, it reshapes Caribbean geopolitics and potentially creates new market opportunities.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://apnews.com/article/cuba-us-talks-68bec1bfee9efe696c8ce357463c7a56" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇺🇸 NORTH AMERICA · AI/DEFENSE</span>
+          <h3 class="card-headline">Anthropic Sues Pentagon Over Military AI Blacklisting — Iran War Forces AI Industry to Choose Sides</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> Anthropic filed a lawsuit to block the Pentagon from blacklisting it over refusal to provide AI for direct military use. <strong>Why:</strong> The most significant tech-vs-defense confrontation of the AI era. While OpenAI moved aggressively into defense contracts, Anthropic is drawing a line. The lawsuit tests whether the government can punish an AI company for maintaining safety guardrails. <strong>Context:</strong> The Iran war is accelerating AI militarization — Palantir CEO Alex Karp said this week his company's tech gives the West a "critical edge" in the Middle East. The AI industry is splitting into pro-military (OpenAI, Palantir, Anduril) and safety-first (Anthropic) camps. This split will define the industry for a generation.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/business/technology/artificial-intelligence/anthropic-sues-to-block-pentagon-blacklisting-over-ai-for-military-use" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Oceania -->
+        <article class="card featured fade-in collapsible">
+          <span class="card-tag">🇦🇺 OCEANIA · SECURITY</span>
+          <h3 class="card-headline">Australian Businessman Found Guilty of Spying for China — Rare Espionage Conviction Raises Stakes</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> An Australian businessman was found guilty of working for suspected Chinese spies. The defendant argued his reports contained only publicly available information. <strong>Why now:</strong> The conviction signals Australia's increasingly aggressive counterintelligence posture under the AUKUS framework. As the US redeploys military assets from the Indo-Pacific to the Middle East, Australia is stepping up its own security measures. <strong>China angle:</strong> Coming during Xi's NPC military purges, the case highlights the ongoing shadow war between Western allies and Chinese intelligence services across the Pacific.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/cx28zl37x9po" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 📊 Markets -->
+    <section class="section" id="markets">
+      <div class="section-header">
+        <div class="section-icon">📊</div>
+        <h2 class="section-title">Markets & Economy</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in">
+          <span class="card-tag">US CLOSE MAR 13 / ASIA CLOSE MAR 13 (EVENING UPDATE)</span>
+          <h3 class="card-headline">Global Equity Indices</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Level</th>
+                <th>Daily</th>
+                <th>Weekly</th>
+                <th>Monthly</th>
+                <th>YTD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">S&P 500</td>
+                <td class="idx-level">6,632</td>
+                <td class="chg-neg">−0.6%</td>
+                <td class="chg-neg">−2.2%</td>
+                <td class="chg-neg">−3.8%</td>
+                <td class="chg-neg">−3.1%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Dow Jones</td>
+                <td class="idx-level">46,678</td>
+                <td class="chg-neg">−0.3%</td>
+                <td class="chg-neg">−2.6%</td>
+                <td class="chg-neg">−5.2%</td>
+                <td class="chg-pos">+6.9%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nasdaq</td>
+                <td class="idx-level">22,312</td>
+                <td class="chg-neg">−0.9%</td>
+                <td class="chg-neg">−1.8%</td>
+                <td class="chg-neg">−3.1%</td>
+                <td class="chg-pos">+7.8%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Nikkei 225</td>
+                <td class="idx-level">53,820</td>
+                <td class="chg-neg">−1.16%</td>
+                <td class="chg-neg">−4.0%</td>
+                <td class="chg-neg">−7.5%</td>
+                <td class="chg-pos">+35%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Kospi</td>
+                <td class="idx-level">5,487</td>
+                <td class="chg-neg">−1.70%</td>
+                <td class="chg-neg">−4.2%</td>
+                <td class="chg-neg">−7.0%</td>
+                <td class="chg-neg">−2%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Hang Seng</td>
+                <td class="idx-level">~25,200</td>
+                <td class="chg-neg">−1.0%</td>
+                <td class="chg-neg">−3.5%</td>
+                <td class="chg-neg">−5.5%</td>
+                <td class="chg-pos">+12%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">ASX 200</td>
+                <td class="idx-level">8,617</td>
+                <td class="chg-neg">−0.14%</td>
+                <td class="chg-neg">−1.2%</td>
+                <td class="chg-neg">−2.5%</td>
+                <td class="chg-neg">−1%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Stoxx 600</td>
+                <td class="idx-level">~555</td>
+                <td class="chg-neg">−0.50%</td>
+                <td class="chg-neg">−2.8%</td>
+                <td class="chg-neg">−5.0%</td>
+                <td class="chg-pos">+6%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem; font-size: 0.85rem;"><strong>All three US indices close at 2026 lows — third straight weekly loss.</strong> S&P 500 fell −0.6% to 6,632 after being up as much as 0.9% in early trading. Dow lost −0.3% (−739 pts) to 46,678 with 26 of 30 components negative. Nasdaq plunged −0.9% (−404 pts) to 22,312. <strong>Why the late selloff:</strong> Oil prices reversed higher in the afternoon, with WTI back above $98 and Brent above $103, crushing the brief morning optimism. Energy Select Sector (+2.5%) was the sole bright spot as $100 oil benefits producers. <strong>In Asia:</strong> Nikkei −1.16% as Honda's −6% plunge dragged the index; Kospi −1.7% as Korea's export-dependent economy faces higher input costs and global demand destruction. <strong>Key signal:</strong> Q4 GDP revised to 0.7% confirms the US economy was already stumbling pre-war.</p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag">COMMODITIES — MAR 13 CLOSE</span>
+          <h3 class="card-headline">Key Commodities</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Commodity</th>
+                <th>Price</th>
+                <th>Daily</th>
+                <th>Weekly</th>
+                <th>Monthly</th>
+                <th>YTD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">Brent Crude</td>
+                <td class="idx-level">$103.14/bbl</td>
+                <td class="chg-pos">+2.7%</td>
+                <td class="chg-pos">+32%</td>
+                <td class="chg-pos">+49%</td>
+                <td class="chg-pos">+69%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">WTI Crude</td>
+                <td class="idx-level">$98.71/bbl</td>
+                <td class="chg-pos">+3.1%</td>
+                <td class="chg-pos">+32%</td>
+                <td class="chg-pos">+46%</td>
+                <td class="chg-pos">+76%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Gold</td>
+                <td class="idx-level">~$5,020/oz</td>
+                <td class="chg-neg">−1.1%</td>
+                <td class="chg-pos">+1.8%</td>
+                <td class="chg-pos">+5.5%</td>
+                <td class="chg-pos">+10%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Natural Gas</td>
+                <td class="idx-level">~$3.15/MMBtu</td>
+                <td class="chg-pos">+1.5%</td>
+                <td class="chg-pos">+5%</td>
+                <td class="chg-neg">−3%</td>
+                <td class="chg-pos">+12%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Brent surges to $103.14 (+2.7%) — third consecutive close above $100.</strong> WTI hit $98.71 (+3.1%) — up roughly 46% in one month. After briefly easing early Friday, crude reversed sharply higher. <strong>Why:</strong> (1) Markets read the Kharg Island military strike as proof the next step is hitting oil infrastructure; (2) the IEA's 400M barrel emergency reserve release won't reach physical delivery for 60-90 days; (3) Hormuz remains shut with 12M+ barrels/day offline; (4) the Baghdad Embassy missile hit signals further escalation. "Everything's just trading with crude oil at this point," said Baird's Michael Antonelli. <strong>Gold eased to ~$5,020</strong> (−1.1%) in profit-taking after hitting all-time highs, but remains up 10% YTD as the ultimate crisis hedge.</p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag">FOREX — MAR 13 CLOSE</span>
+          <h3 class="card-headline">Major Currency Pairs</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Pair</th>
+                <th>Rate</th>
+                <th>Daily</th>
+                <th>Monthly</th>
+                <th>Signal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">USD/JPY</td>
+                <td class="idx-level">159.70</td>
+                <td class="chg-pos">+0.19%</td>
+                <td class="chg-pos">+4.6%</td>
+                <td style="font-size:0.75rem;">¥160 intervention zone — hours away</td>
+              </tr>
+              <tr>
+                <td class="idx-name">EUR/USD</td>
+                <td class="idx-level">1.144</td>
+                <td class="chg-neg">−0.60%</td>
+                <td class="chg-neg">−3.2%</td>
+                <td style="font-size:0.75rem;">Euro weakening on energy crisis</td>
+              </tr>
+              <tr>
+                <td class="idx-name">GBP/USD</td>
+                <td class="idx-level">1.323</td>
+                <td class="chg-neg">−0.80%</td>
+                <td class="chg-neg">−2.5%</td>
+                <td style="font-size:0.75rem;">GDP miss + oil inflation</td>
+              </tr>
+              <tr>
+                <td class="idx-name">AUD/USD</td>
+                <td class="idx-level">~0.710</td>
+                <td class="chg-neg">−0.10%</td>
+                <td class="chg-pos">+0.8%</td>
+                <td style="font-size:0.75rem;">Resilient — commodity exporter</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Yen at ¥159.70 — ¥160 intervention trigger is hours away.</strong> Sterling was the day's biggest mover, dropping −0.8% after the UK GDP miss. Euro also weakened −0.6% as the energy crisis hits European importers hardest. <strong>The energy-FX nexus is now the dominant market force:</strong> commodity exporters (AUD, CAD, NOK) hold steady while importers (JPY, EUR, GBP, INR) sell off. Japan's Finance Minister Katayama has explicitly signaled intervention readiness — the question is whether verbal warnings alone can hold ¥160 or whether actual dollar-selling will be needed.</p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag">BONDS & RATES — MAR 13</span>
+          <h3 class="card-headline">Bonds, Mortgage Rates & Fed Outlook</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Instrument</th>
+                <th>Level</th>
+                <th>Daily</th>
+                <th>Signal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">US 10Y Treasury</td>
+                <td class="idx-level">4.28%</td>
+                <td>+2bps</td>
+                <td style="font-size:0.75rem;">Inflation expectations dominating safe haven</td>
+              </tr>
+              <tr>
+                <td class="idx-name">US 30Y Mortgage</td>
+                <td class="idx-level">6.41%</td>
+                <td class="chg-pos">+42bps (2wk)</td>
+                <td style="font-size:0.75rem;">Highest since September</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Japan JGB 10Y</td>
+                <td class="idx-level">~2.18%</td>
+                <td>+1bps</td>
+                <td style="font-size:0.75rem;">BOJ meeting Mar 18-19</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Germany Bund 10Y</td>
+                <td class="idx-level">~2.88%</td>
+                <td>+2bps</td>
+                <td style="font-size:0.75rem;">Defense spending + energy inflation</td>
+              </tr>
+              <tr>
+                <td class="idx-name">US Recession Odds</td>
+                <td class="idx-level">32%</td>
+                <td class="chg-pos">↑ to 2026 high</td>
+                <td style="font-size:0.75rem;">Kalshi prediction market</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem;"><strong>The rate cut dream is dead — and a hike is now on the table.</strong> 10Y Treasury rose to 4.28% — up from 3.97% before the war — as oil-driven inflation expectations dominate. CME FedWatch shows less than 1% chance of a cut at next week's FOMC meeting. "Higher inflation expectations means higher yields, and rate cuts start to be priced out — that's the whammy," said Baird's Antonelli. <strong>The twist:</strong> Judge Boasberg just blocked DOJ subpoenas to the Fed, ruling they were a pretext to force Powell to cut rates — protecting Fed independence at exactly the moment markets need it. <strong>Mortgage impact:</strong> 30Y rate at 6.41% (+42bps in two weeks) adds $115/month to a $400K home. <strong>Fed meets March 18-19:</strong> Hold certain, but tone on inflation will be crucial. Some officials may now push for a hike given $100 oil.</p>
+        </article>
+
+        <article class="card fade-in">
+          <span class="card-tag">CRYPTO — MAR 13</span>
+          <h3 class="card-headline">Digital Assets</h3>
+          <table class="index-table">
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>Price</th>
+                <th>Daily</th>
+                <th>Monthly</th>
+                <th>YTD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="idx-name">Bitcoin</td>
+                <td class="idx-level">~$70,500</td>
+                <td class="chg-pos">+4.4%</td>
+                <td class="chg-pos">+8.5%</td>
+                <td class="chg-neg">−24%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Ethereum</td>
+                <td class="idx-level">~$2,020</td>
+                <td class="chg-neg">−0.5%</td>
+                <td class="chg-pos">+3.5%</td>
+                <td class="chg-neg">−39%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Bitcoin at ~$70,500 — outperforming equities as non-sovereign safe haven.</strong> BTC gained +4.4% on the day while all three US indices hit 2026 lows, continuing its decoupling from risk assets. BTC is increasingly acting as a crisis hedge — up while stocks fall, similar to gold's traditional role. <strong>Context:</strong> Bitcoin has outperformed the S&P 500 by ~20 percentage points since the war began. The White House admitted the Iran war has burned the equivalent of half the US Bitcoin Reserve's value in military spending.</p>
+        </article>
+
+        <!-- Health Gauge -->
+        <article class="card fade-in">
+          <span class="card-tag">HEALTH SCORE</span>
+          <h3 class="card-headline">Global Market Health</h3>
+          <div class="health-gauge-wrap">
+            <div class="health-gauge">
+              <div class="gauge-bg"></div>
+              <div class="gauge-needle" id="gauge-needle" style="transform: rotate(-70deg);"></div>
+              <div class="gauge-dot"></div>
+            </div>
+            <div class="gauge-scale"><span>0</span><span>100</span></div>
+            <div class="gauge-score">11</div>
+            <div class="gauge-score-label">DEEP CRISIS — EMBASSY HIT, OIL $103, MULTI-FRONT ESCALATION</div>
+          </div>
+          <div class="indicator-grid">
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">📉</div>
+              <div class="indicator-name">Equities</div>
+              <div class="indicator-sub">2026 lows: S&P −0.6%, Dow −0.3%, Nasdaq −0.9%</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">🛢️</div>
+              <div class="indicator-name">Oil Shock</div>
+              <div class="indicator-sub">Brent $103.14 (+2.7%) — WTI $98.71 (+3.1%)</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">🚨</div>
+              <div class="indicator-name">Escalation</div>
+              <div class="indicator-sub">Baghdad Embassy missile hit + DPRK 10 missiles</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">💴</div>
+              <div class="indicator-name">FX Stress</div>
+              <div class="indicator-sub">JPY ¥159.70 — ¥160 breach imminent</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">⚠️</div>
+              <div class="indicator-name">Rate Cuts Dead</div>
+              <div class="indicator-sub">Zero chance of cut; hike now discussed; 10Y 4.28%</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">🚨</div>
+              <div class="indicator-name">Multi-Front</div>
+              <div class="indicator-sub">US GDP revised to 0.7%; Indonesia emergency fiscal</div>
+            </div>
+          </div>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Score drops from 13 to 11 — DEEP CRISIS intensifies.</strong> Why down: (1) Missile hit US Embassy compound in Baghdad — a direct escalation crossing a red line; (2) Oil surges to $103 Brent / $99 WTI, both up ~3%; (3) North Korea fires ~10 missiles (not 1) in largest salvo of 2026 while US redeploying from Japan; (4) US GDP revised sharply down to 0.7% — economy was already faltering pre-war; (5) All three US indices close at 2026 lows; (6) Indonesia invokes emergency fiscal rules — oil crisis becoming sovereign debt crisis in importing Asia; (7) 10Y Treasury at 4.28% as inflation expectations entrench. <strong>Why not lower:</strong> Judge blocked DOJ pressure on Fed, protecting institutional independence. Trump spared Kharg oil infrastructure. US-Cuba talks show some diplomatic channels remain open. <strong>Downgrade path:</strong> Iran hits Gulf oil infrastructure = 5-7. <strong>Upgrade path:</strong> Ceasefire framework + Hormuz signal = 20+.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 🔮 Predictions -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <div class="section-icon">🔮</div>
+        <h2 class="section-title">Predictions</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag">WEEKEND WATCH — MAR 14-16</span>
+          <h3 class="card-headline">What to Watch This Weekend</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body">
+            <strong>🔴 Iran Retaliation Risk (Critical):</strong> After Kharg Island military targets were destroyed, Iran faces a choice: capitulate on Hormuz or escalate. If Iran retaliates on Gulf oil infrastructure, oil instantly hits $120+. Weekend is peak risk window because markets can't price it in until Monday open.<br><br>
+            <strong>🔴 Mojtaba Khamenei Status:</strong> If Hegseth's claim that the Supreme Leader is injured/disfigured is confirmed, Iran's command structure is in crisis. A leaderless Iran is more dangerous than a led one — military commanders may act independently.<br><br>
+            <strong>🟡 Russia-Iran Intelligence:</strong> Trump's admission that Putin is "helping" Iran opens a new front. Watch for intelligence leaks or diplomatic fallout over the weekend. If Russia escalates its support, this becomes a US-Russia proxy war in all but name.<br><br>
+            <strong>🟡 North Korea Follow-Up:</strong> Today's missile launch may not be the last — Pyongyang often conducts multiple tests in sequence. With US forces redeploying from Japan, the deterrence gap widens.<br><br>
+            <strong>🟢 China Diplomacy:</strong> With NPC concluded, Beijing may use the weekend for quiet back-channel diplomacy on Iran. Any framework for talks would reset Monday's market direction.
+          </p>
+        </article>
+
+        <article class="card fade-in collapsible">
+          <span class="card-tag">WEEK AHEAD — MAR 16-20</span>
+          <h3 class="card-headline">Week Ahead Outlook</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body">
+            <strong>BOJ Decision March 18-19 (Most important for Japan):</strong> Near-certain hold at 0.75%. The critical signal is Governor Ueda's tone on oil-driven inflation and yen weakness. Any hint of concern about ¥160 or willingness to hike despite the oil shock would move FX sharply. If Ueda sounds dovish, ¥160 could break during the press conference.<br><br>
+            <strong>Shunto Wage Results:</strong> Rengo demanded 5.94% — highest in decades. Strong results (5%+) would validate BOJ's normalization thesis and keep a June hike alive. Weak results shelve hikes until H2.<br><br>
+            <strong>BOE Decision March 19:</strong> Near-certain hold after UK GDP miss. Zero-growth + oil inflation = impossible to cut.<br><br>
+            <strong>¥160 Intervention Watch:</strong> With oil at $100 and Kharg struck, yen pressure will intensify. Finance Minister Katayama has signaled readiness. If ¥160 breaks without action, cascade to ¥163-165 likely.<br><br>
+            <strong>Wildcards:</strong> (1) Iran hits Gulf oil = oil $120+, Nikkei −5%; (2) Trump strikes Kharg oil infra = Brent $130+; (3) BOJ surprise hawkish = yen strengthens 2-3%; (4) Ceasefire framework = oil −$15, equities +3-5%; (5) North Korea escalates = additional Indo-Pacific stress.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 💡 Bottom Line -->
+    <section class="section" id="bottomline">
+      <div class="bottom-line">
+        <h3>💡 Bottom Line</h3>
+        <p>The afternoon's headline is Kharg Island — Trump struck every military target on Iran's oil lifeline while deliberately sparing the oil infrastructure. <strong>This is coercive diplomacy, not conflict resolution.</strong> The message to Tehran: reopen Hormuz or we come back for the oil terminals. But Iran's options are narrow and its leadership may be incapacitated — Hegseth claims Mojtaba Khamenei was "disfigured," and Iranians are questioning who's really in charge after his first address came via a TV presenter. <strong>A leaderless Iran under fire is the most dangerous scenario for markets.</strong> Meanwhile, the crisis is metastasizing: North Korea fired a ballistic missile while US troops redeploy from Japan to the Middle East, widening the Indo-Pacific security gap. Trump admitted Putin is "helping" Iran — acknowledging a dimension he denied just last week. Lebanon's death toll hit 773. US mortgage rates surged to a 7-month high, killing the spring housing season. <strong>For Japan specifically:</strong> the BOJ meeting Tuesday-Wednesday is now the week's most critical event. With Nikkei at 53,820 (−9.3% from ATH), Honda posting its first loss in 70 years, US troops leaving Japan-based units, North Korea launching missiles, and ¥160 days away — the convergence of pressures on Japan is extraordinary. The only thing preventing a score below 13 is that Trump spared Kharg's oil infrastructure, signaling he wants compliance rather than destruction. If that restraint holds, there's a path back. If it doesn't, we're heading to single digits.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>CEO Afternoon Briefing · Generated by Sanbot · Saturday, March 14, 2026 3:00 PM JST</p>
+    <p style="margin-top: 0.5rem;">Data sources: CNBC, BBC News, Nikkei Asia, Al Jazeera, Reuters, Goldman Sachs</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.collapsible').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+      });
+    });
+
+    const needle = document.getElementById('gauge-needle');
+    if (needle) {
+      const score = 11;
+      const rotation = -90 + (score / 100) * 180;
+      setTimeout(() => {
+        needle.style.transform = `rotate(${rotation}deg)`;
+      }, 300);
+    }
+  </script>
+
+<script src="audio-player.js"></script>
+</body>
+</html>
