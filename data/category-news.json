@@ -11,48 +11,75 @@
           "summary": "President Trump signed two executive orders on March 13 to reduce federal, state, and local regulatory barriers on housing construction and mortgages, aiming to boost home building and ease loans from community banks. This move responds to voter concerns over skyrocketing home prices ahead of midterm elections, where affordability has become a bipartisan flashpoint. The orders target slow permitting, energy mandates, and restrictions on modular housing to lower costs for middle-class buyers.",
           "tag": "POLICY · HOUSING",
           "bullets": [],
-          "sources": [{"name": "White House", "url": "https://www.whitehouse.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "White House",
+              "url": "https://www.whitehouse.gov/"
+            }
+          ],
+          "image_url": "/images/cache/59c91cf3a090d465.jpg"
         },
         {
           "headline": "Congress Debates Iran War Powers Resolution Amid Ongoing Strikes",
           "summary": "The House and Senate are voting this week on bipartisan resolutions to limit President Trump's authority for military strikes on Iran, initiated late last week. Republicans largely back the strikes, but the measures seek to reassert congressional war powers amid fears of escalation. At least five GOP senators must cross over for passage, highlighting partisan divides on foreign policy intervention.",
           "tag": "FOREIGN POLICY · IRAN",
           "bullets": [],
-          "sources": [{"name": "Congress.gov", "url": "https://www.congress.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Congress.gov",
+              "url": "https://www.congress.gov/"
+            }
+          ]
         },
         {
           "headline": "DHS Shutdown Persists Over ICE Reforms and Funding Impasse",
           "summary": "The Department of Homeland Security remains shut down due to a standoff between the White House and Democrats on Immigration and Customs Enforcement reforms. The House plans another funding vote Thursday, with some pushing to attach the SAVE America Act requiring photo ID and proof of citizenship for voter registration. Senate Judiciary Committee oversight hearing on DHS intensifies pressure amid broader government operations disruptions.",
           "tag": "GOVERNMENT · SHUTDOWN",
           "bullets": [],
-          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Reuters",
+              "url": "https://www.reuters.com/"
+            }
+          ]
         },
         {
           "headline": "Senate Advances Housing for the 21st Century Act",
           "summary": "The Senate voted to advance the bipartisan Housing for the 21st Century Act, aiming to boost construction and curb institutional home purchases. Driven by national concerns over middle-class families' inability to buy first homes, the bill aligns with Trump's executive actions and White House support. Its House path remains uncertain, but it underscores housing as a top midterm issue.",
           "tag": "LEGISLATION · HOUSING",
           "bullets": [],
-          "sources": [{"name": "Senate.gov", "url": "https://www.senate.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Senate.gov",
+              "url": "https://www.senate.gov/"
+            }
+          ]
         },
         {
           "headline": "Treasury Unveils Trump Accounts to Promote Ownership Economy",
           "summary": "The Treasury promoted 'Trump Accounts,' seeding stock investments for newborns funded by employers, philanthropists, and states, accessible at age 18 for retirement, homes, or education. This policy seeks to give every citizen equity ownership—targeting the 38% of adults without stocks—redefining the social contract for America's 250th anniversary. Widespread business buy-in and state experiments signal rapid momentum for broad adoption.",
           "tag": "ECONOMY · POLICY",
           "bullets": [],
-          "sources": [{"name": "Treasury.gov", "url": "https://home.treasury.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Treasury.gov",
+              "url": "https://home.treasury.gov/"
+            }
+          ],
+          "image_url": "/images/cache/b1c254377ad13cab.jpg"
         },
         {
           "headline": "Trump Signs Executive Order Adjusting Defense Production Act Delegations",
           "summary": "President Trump signed Executive Order 14391 on March 18, tweaking delegations under the Defense Production Act while continuing a national emergency notice. The move enhances executive flexibility for industrial mobilization, likely tied to ongoing Iran tensions and national security needs. It reflects administration efforts to streamline crisis response without new congressional input.",
           "tag": "EXECUTIVE ORDER · DEFENSE",
           "bullets": [],
-          "sources": [{"name": "Federal Register", "url": "https://www.federalregister.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Federal Register",
+              "url": "https://www.federalregister.gov/"
+            }
+          ],
+          "image_url": "/images/cache/8ee35050424c7755.png"
         }
       ]
     },
@@ -65,56 +92,88 @@
           "summary": "Advances in fine-tuning and reinforcement learning enable smaller, multimodal models like IBM's Granite to outperform giant models in targeted domains, driven by open-source growth from Meta's Llama and DeepSeek. This causes enterprises to adopt efficient, tunable systems over resource-heavy general models, accelerating innovation in specific use cases like healthcare.",
           "tag": "MODELS · ENTERPRISE",
           "bullets": [],
-          "sources": [{"name": "IBM", "url": "https://www.ibm.com/think/news/ai-tech-trends-predictions-2026"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "IBM",
+              "url": "https://www.ibm.com/think/news/ai-tech-trends-predictions-2026"
+            }
+          ],
+          "image_url": "/images/cache/4537d1835df69288.jpg"
         },
         {
           "headline": "Microsoft Foresees AI as Active Research Partner with Hypothesis Generation",
           "summary": "Improved reasoning allows AI to generate hypotheses, control experiments, and collaborate with humans, building on pair programming successes in development. This evolution stems from AI's integration with tools and apps, creating personalized AI lab assistants that boost scientific productivity across domains.",
           "tag": "RESEARCH · INFRASTRUCTURE",
           "bullets": [],
-          "sources": [{"name": "Microsoft", "url": "https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Microsoft",
+              "url": "https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/"
+            }
+          ],
+          "image_url": "/images/cache/16b197289eafe7ad.png"
         },
         {
           "headline": "AI Infrastructure Evolves to Dense, Dynamic 'Superfactories'",
           "summary": "Microsoft's Azure predicts flexible global networks packing computing power densely and routing workloads dynamically to eliminate idle resources, driven by the need to measure AI by intelligence quality rather than size. This hybrid approach with quantum and supercomputers drives down costs and sustainability for enterprise-scale AI.",
           "tag": "INFRASTRUCTURE · CLOUD",
           "bullets": [],
-          "sources": [{"name": "Microsoft", "url": "https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Microsoft",
+              "url": "https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/"
+            }
+          ],
+          "image_url": "/images/cache/16b197289eafe7ad.png"
         },
         {
           "headline": "2026 Marked by AI Workflows Over Autonomous Agents",
           "summary": "Industry hype skips to agents, but workflows unlock value by chaining models effectively, as no single model dominates per Stanford studies comparing closed and open options like Gemini, ChatGPT, DeepSeek, and Llama. This commoditization, driven by converging performance, shifts focus to practical automation in enterprise settings.",
           "tag": "ENTERPRISE · AGENTS",
           "bullets": [],
-          "sources": [{"name": "Stanford HAI", "url": "https://hai.stanford.edu/news/stanford-ai-experts-predict-what-will-happen-in-2026"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Stanford HAI",
+              "url": "https://hai.stanford.edu/news/stanford-ai-experts-predict-what-will-happen-in-2026"
+            }
+          ]
         },
         {
           "headline": "Democratization of AI Agent Creation Empowers Business Users",
           "summary": "IBM experts anticipate non-developers designing agents as reasoning improves to anticipate needs, transforming AI into active collaborators for problem-solving. Lowered barriers, caused by multimodal advances bridging language, vision, and action, spark innovation from domain experts in areas like complex healthcare tasks.",
           "tag": "AGENTS · ENTERPRISE",
           "bullets": [],
-          "sources": [{"name": "IBM", "url": "https://www.ibm.com/think/news/ai-tech-trends-predictions-2026"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "IBM",
+              "url": "https://www.ibm.com/think/news/ai-tech-trends-predictions-2026"
+            }
+          ],
+          "image_url": "/images/cache/4537d1835df69288.jpg"
         },
         {
           "headline": "Stanford Experts Predict Curated Small Datasets for Superior Models",
           "summary": "Efforts intensify on high-quality, smaller datasets to build efficient models outperforming larger ones, as open-source ecosystems mature. This trend, linked to hybrid computing advances like logical qubits, enhances accuracy in research and enterprise modeling for molecules and materials.",
           "tag": "RESEARCH · MODELS",
           "bullets": [],
-          "sources": [{"name": "Stanford HAI", "url": "https://hai.stanford.edu/news/stanford-ai-experts-predict-what-will-happen-in-2026"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Stanford HAI",
+              "url": "https://hai.stanford.edu/news/stanford-ai-experts-predict-what-will-happen-in-2026"
+            }
+          ]
         },
         {
           "headline": "Senate Commerce Subcommittee Examines Practical AI Applications",
           "summary": "The Senate Commerce Subcommittee hosts a hearing titled 'Less Hype, More Help: AI That Improves Safety, Productivity, and Care,' pushing for AI grounded in real-world benefits rather than speculation. The session aligns with broader administration priorities on innovation without excessive mandates.",
           "tag": "REGULATION · POLICY",
           "bullets": [],
-          "sources": [{"name": "Senate.gov", "url": "https://www.senate.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Senate.gov",
+              "url": "https://www.senate.gov/"
+            }
+          ]
         }
       ]
     },
@@ -127,56 +186,86 @@
           "summary": "UK-based autonomous driving startup Wayve secured a record $1.2 billion in Series D funding led by Mercedes and Stellantis, marking Europe's push into AI-driven mobility. This massive round reflects investor confidence in Wayve's end-to-end AI models for real-world driving, fueled by advances in foundation models and regulatory tailwinds for AV deployment.",
           "tag": "FUNDING · AUTONOMOUS VEHICLES",
           "bullets": [],
-          "sources": [{"name": "TechCrunch", "url": "https://techcrunch.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "url": "https://techcrunch.com/"
+            }
+          ],
+          "image_url": "/images/cache/5302bc93238fb63a.png"
         },
         {
           "headline": "Mind Robotics Secures $500 Million Series A for Industrial AI",
           "summary": "Mind Robotics raised $500 million in its Series A from Accel and Andreessen Horowitz to build AI robotics for manufacturing automation. The outsized early-stage funding stems from rapid progress in foundation models enabling complex physical tasks, drawing capital as industries seek efficiency gains post-supply chain disruptions.",
           "tag": "FUNDING · ROBOTICS",
           "bullets": [],
-          "sources": [{"name": "Crunchbase News", "url": "https://news.crunchbase.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Crunchbase News",
+              "url": "https://news.crunchbase.com/"
+            }
+          ]
         },
         {
           "headline": "Replit Lands $400 Million Series D in AI Developer Tools",
           "summary": "Cloud coding platform Replit announced a $400 million Series D led by Georgian, with Accenture Ventures participating, to expand AI-assisted browser-native development. Investor enthusiasm arises from the surge in collaborative dev tools amid AI coding agent hype, positioning Replit against GitHub Copilot.",
           "tag": "FUNDING · DEVELOPER TOOLS",
           "bullets": [],
-          "sources": [{"name": "TechCrunch", "url": "https://techcrunch.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "url": "https://techcrunch.com/"
+            }
+          ],
+          "image_url": "/images/cache/5302bc93238fb63a.png"
         },
         {
           "headline": "Plaid Conducts $8 Billion Valuation Liquidity Round",
           "summary": "Fintech infrastructure firm Plaid raised a secondary liquidity round at an $8 billion valuation, down from prior peaks, amid tighter VC scrutiny on growth metrics. This reflects broader market resets where investors demand profitability signals before mega-exits, especially after regulatory hurdles delayed its prior deals.",
           "tag": "FINTECH · SECONDARY",
           "bullets": [],
-          "sources": [{"name": "Bloomberg", "url": "https://www.bloomberg.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "url": "https://www.bloomberg.com/"
+            }
+          ]
         },
         {
           "headline": "General Catalyst Eyes $10 Billion Mega-Fund Raise",
           "summary": "General Catalyst is reportedly in talks to raise $10 billion, following Thrive's similar move, as VCs amass dry powder for AI bets. The resurgence in mega-funds is driven by record uninvested capital and explosive AI startup demand, enabling larger checks in seed-to-growth stages.",
           "tag": "FUND LAUNCH · VC",
           "bullets": [],
-          "sources": [{"name": "The Information", "url": "https://www.theinformation.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "The Information",
+              "url": "https://www.theinformation.com/"
+            }
+          ]
         },
         {
           "headline": "Spark Capital Targets $3 Billion Fund Amid VC Boom",
           "summary": "Spark Capital is seeking $3 billion for its next fund, part of a wave including Founders Fund's $6 billion close, to fuel high-conviction portfolios. Surging AI infrastructure needs and 2025's dry powder records are propelling these raises, prioritizing scaled returns over spray-and-pray deployments.",
           "tag": "FUND LAUNCH · VC",
           "bullets": [],
-          "sources": [{"name": "PitchBook", "url": "https://pitchbook.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "PitchBook",
+              "url": "https://pitchbook.com/"
+            }
+          ]
         },
         {
           "headline": "Ezra Bags $8 Million Seed for Asset-Backed Finance Tech",
           "summary": "San Francisco's Ezra raised an $8 million seed from Congruent Ventures to automate credit analysis in structured finance. The funding taps into expanding private credit markets' complexity, accelerated by rising interest rates and demand for efficient deal infrastructure.",
           "tag": "SEED · FINTECH",
           "bullets": [],
-          "sources": [{"name": "Crunchbase", "url": "https://news.crunchbase.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Crunchbase",
+              "url": "https://news.crunchbase.com/"
+            }
+          ]
         }
       ]
     },
@@ -189,48 +278,72 @@
           "summary": "China's solar power generation surpassed wind energy for the first time in 2025, marking a significant shift in the country's renewable energy portfolio. This milestone reflects China's accelerating renewable energy expansion as part of its fifteenth five-year plan, which emphasizes constructing a power system compatible with high proportions of renewable energy.",
           "tag": "RENEWABLES · SOLAR",
           "bullets": [],
-          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Reuters",
+              "url": "https://www.reuters.com/"
+            }
+          ]
         },
         {
           "headline": "U.S. Renewables Hit Record 26% of Electricity Generation Despite Trump Policies",
           "summary": "U.S. renewable energy reached a record 26% of all electricity generated in 2025, up 10% from the prior year, defying Trump administration efforts to slash incentives for wind and solar. The surge was driven by falling costs of photovoltaic cells, wind turbines, and batteries, making renewable installations cheaper to build than fossil fuel alternatives in most scenarios.",
           "tag": "RENEWABLES · GRID",
           "bullets": [],
-          "sources": [{"name": "EIA", "url": "https://www.eia.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "EIA",
+              "url": "https://www.eia.gov/"
+            }
+          ]
         },
         {
           "headline": "Middle East Conflict Drives Oil Prices Above $100 Per Barrel",
           "summary": "Conflict in the Middle East has disrupted global energy supplies and driven oil prices above $100 per barrel, causing countries to reassess energy strategies. The volatility has prompted some nations to accelerate renewable projects while others turn back to domestic fossil fuels, temporarily sidelining climate goals in favor of energy security.",
           "tag": "OIL · GEOPOLITICS",
           "bullets": [],
-          "sources": [{"name": "Bloomberg", "url": "https://www.bloomberg.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "url": "https://www.bloomberg.com/"
+            }
+          ]
         },
         {
           "headline": "UN Climate Chief Highlights Renewables as Strategic Defense Against Volatility",
           "summary": "UN Framework Convention on Climate Change Executive Secretary Simon Stiell argued at the 2026 Green Growth Summit that renewable energy insulates countries from geopolitical disruption, stating that 'sunlight doesn't depend on narrow and vulnerable shipping straits.' He emphasized that fossil fuel dependency threatens national security and sovereignty, while renewables deliver security, jobs, and lower costs.",
           "tag": "CLIMATE · POLICY",
           "bullets": [],
-          "sources": [{"name": "UNFCCC", "url": "https://unfccc.int/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "UNFCCC",
+              "url": "https://unfccc.int/"
+            }
+          ]
         },
         {
           "headline": "China Revises Energy Laws to Expand Non-Fossil Energy Supply",
           "summary": "China's National Energy Administration is revising the Electricity Law and Renewable Energy Law in 2026 to expand the non-fossil energy supply system and promote coal and oil consumption peaking. These legal updates support the government's climate goals outlined in its fifteenth five-year plan.",
           "tag": "REGULATION · CHINA",
           "bullets": [],
-          "sources": [{"name": "China National Energy Administration", "url": "https://www.nea.gov.cn/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "China National Energy Administration",
+              "url": "https://www.nea.gov.cn/"
+            }
+          ]
         },
         {
           "headline": "House Democrats to Unveil Sweeping Clean Energy Bill",
           "summary": "House Democrats are preparing to introduce comprehensive clean energy legislation, reflecting continued legislative momentum for renewable energy expansion despite the current administration's stance. The bill comes as European governments and international bodies increasingly emphasize renewable energy's strategic value in light of recent energy market disruptions.",
           "tag": "LEGISLATION · RENEWABLES",
           "bullets": [],
-          "sources": [{"name": "Politico", "url": "https://www.politico.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Politico",
+              "url": "https://www.politico.com/"
+            }
+          ]
         }
       ]
     },
@@ -243,56 +356,86 @@
           "summary": "The Medicare Payment Advisory Commission released its annual report, recommending 2027 payment rates for hospital inpatient and outpatient services at current law levels plus an additional $1 billion for safety-net hospitals via a new Medicare safety-net index. The report also covers post-acute care trends, Medicare Advantage, Part D, and congressionally mandated reviews.",
           "tag": "HEALTHCARE POLICY · MEDICARE",
           "bullets": [],
-          "sources": [{"name": "MedPAC", "url": "https://www.medpac.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "MedPAC",
+              "url": "https://www.medpac.gov/"
+            }
+          ]
         },
         {
           "headline": "PBM Reform Gains Momentum with New Federal Rules and FTC Settlement",
           "summary": "The first quarter of 2026 saw accelerated pharmacy benefit manager oversight, including DOL's proposed disclosure rules for ERISA plans, CAA 2026 transparency requirements, and an FTC settlement with Express Scripts mandating business practice changes. These bipartisan-supported policies aim to enhance compliance and monitoring of drug pricing intermediaries.",
           "tag": "PHARMA · REGULATION",
           "bullets": [],
-          "sources": [{"name": "FTC", "url": "https://www.ftc.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "FTC",
+              "url": "https://www.ftc.gov/"
+            }
+          ],
+          "image_url": "/images/cache/dd5b50f2fef606bd.jpg"
         },
         {
           "headline": "CMS Strengthens State Oversight of Medicaid Managed Care",
           "summary": "CMS released an Informational Bulletin requiring states to bolster monitoring of Medicaid and CHIP managed care across 14 areas like claims, network adequacy, and quality improvement. States must demonstrate comprehensive oversight while retaining flexibility in system design to improve accountability and program integrity.",
           "tag": "HEALTHCARE POLICY · MEDICAID",
           "bullets": [],
-          "sources": [{"name": "CMS", "url": "https://www.cms.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "CMS",
+              "url": "https://www.cms.gov/"
+            }
+          ]
         },
         {
           "headline": "Minnesota Governor Proposes Eliminating Medicaid MCOs Over Fraud",
           "summary": "Governor Tim Walz proposed major Medicaid reforms, including phasing out managed care organizations in favor of a state-run fee-for-service model to address fraud. This shift responds to ongoing issues in the program, potentially reshaping delivery for millions of enrollees.",
           "tag": "HEALTHCARE POLICY · REFORM",
           "bullets": [],
-          "sources": [{"name": "Minnesota Governor's Office", "url": "https://mn.gov/governor/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Minnesota Governor's Office",
+              "url": "https://mn.gov/governor/"
+            }
+          ]
         },
         {
           "headline": "CMS Launches Aggressive Anti-Fraud Measures Including Payment Deferrals",
           "summary": "CMS launched enforcement actions including a $259 million Medicaid payment deferral to Minnesota, a DMEPOS supplier enrollment moratorium, and the CRUSH initiative targeting waste and fraud. Administrator Dr. Mehmet Oz detailed these as initial steps to protect program sustainability.",
           "tag": "REGULATION · FRAUD",
           "bullets": [],
-          "sources": [{"name": "CMS", "url": "https://www.cms.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "CMS",
+              "url": "https://www.cms.gov/"
+            }
+          ]
         },
         {
           "headline": "Trump Unveils 'Great Healthcare Plan' Targeting Drug Prices and Fraud",
           "summary": "President Trump announced a broad framework to lower prescription drug costs, codify most-favored-nation pricing, shift funding from tax credits to individuals, and combat waste, fraud, and abuse in federal programs. The plan highlights ongoing efforts like provider screening and enrollment restrictions for high-risk suppliers.",
           "tag": "POLICY · DRUG PRICING",
           "bullets": [],
-          "sources": [{"name": "White House", "url": "https://www.whitehouse.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "White House",
+              "url": "https://www.whitehouse.gov/"
+            }
+          ],
+          "image_url": "/images/cache/59c91cf3a090d465.jpg"
         },
         {
           "headline": "AMA Urges CMS to Mitigate Coverage Disruptions from Medicaid Work Requirements",
           "summary": "The AMA submitted comments recommending CMS processes to help patients navigate new Medicaid community engagement requirements without losing eligible coverage. This focuses on preventing unwarranted disruptions amid state implementations of work requirements.",
           "tag": "HEALTHCARE POLICY · ACCESS",
           "bullets": [],
-          "sources": [{"name": "AMA", "url": "https://www.ama-assn.org/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "AMA",
+              "url": "https://www.ama-assn.org/"
+            }
+          ]
         }
       ]
     },
@@ -305,56 +448,88 @@
           "summary": "The FDA has officially eliminated the requirement for two pivotal trials for drug approval, now allowing a single well-designed trial with strong biomarker data to suffice for regulatory authorization. This regulatory shift could reduce development timelines by three to five years and lower costs by tens of millions, significantly accelerating approval pathways for longevity therapies targeting aging biomarkers.",
           "tag": "REGULATION · FDA",
           "bullets": [],
-          "sources": [{"name": "FDA", "url": "https://www.fda.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "FDA",
+              "url": "https://www.fda.gov/"
+            }
+          ]
         },
         {
           "headline": "Klothea Launches Phase 1b Human Trial for Alpha-Klotho mRNA Therapy",
           "summary": "Klothea has begun a phase 1b human trial in Honduras for AKL003, an mRNA therapy designed to boost levels of alpha-Klotho, a longevity-associated protein. The study represents one of the first longevity trials using lifespan as the primary endpoint, measuring epigenetic clocks, inflammatory markers, mitochondrial function, and quality of life.",
           "tag": "CLINICAL TRIAL · BIOTECH",
           "bullets": [],
-          "sources": [{"name": "Klothea", "url": "https://klothea.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Klothea",
+              "url": "https://klothea.com/"
+            }
+          ],
+          "image_url": "/images/cache/93ba7dc02226da3b.jpg"
         },
         {
           "headline": "Life Biosciences Secures FDA Approval for First Epigenetic Reprogramming Trial",
           "summary": "Life Biosciences secured FDA approval to conduct the first-ever human clinical trials of partial epigenetic reprogramming (ER-100) for age-related eye diseases, beginning in early 2026. The approach uses three of four Yamanaka factors to partially rejuvenate cells without causing them to lose their original function, initially targeting optic neuropathies including glaucoma.",
           "tag": "CLINICAL TRIAL · REPROGRAMMING",
           "bullets": [],
-          "sources": [{"name": "Fortune", "url": "https://fortune.com/2026/01/30/billionaires-longevity-aging-fda-human-clinical-trial-life-biosciences-jerry-mclaughlin-david-sinclair-harvard-science/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Fortune",
+              "url": "https://fortune.com/2026/01/30/billionaires-longevity-aging-fda-human-clinical-trial-life-biosciences-jerry-mclaughlin-david-sinclair-harvard-science/"
+            }
+          ],
+          "image_url": "/images/cache/db7f2e6ab5296595.jpg"
         },
         {
           "headline": "Longevity Market Shifts Toward Institutional Healthcare",
           "summary": "The global longevity market is transitioning from consumer wellness toward institutional healthcare solutions, with insurers, employers, health systems, and pharma companies increasingly integrating longevity-focused strategies. AI-enabled platforms, genomics advances, and regenerative medicine are accelerating drug discovery and shortening early-stage timelines.",
           "tag": "MARKET · INDUSTRY",
           "bullets": [],
-          "sources": [{"name": "GlobeNewsWire", "url": "https://www.globenewswire.com/news-release/2026/02/18/3240035/0/en/Longevity-Market-Report-2026-2036-Advances-in-AI-Genomics-and-Regenerative-Medicine-Are-Accelerating-Developments.html"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "GlobeNewsWire",
+              "url": "https://www.globenewswire.com/news-release/2026/02/18/3240035/0/en/Longevity-Market-Report-2026-2036-Advances-in-AI-Genomics-and-Regenerative-Medicine-Are-Accelerating-Developments.html"
+            }
+          ]
         },
         {
           "headline": "Altos Labs Demonstrates Lifespan Extension in Mice Through Partial Reprogramming",
           "summary": "Altos Labs, backed by $3 billion in funding including investment from Jeff Bezos, published research showing that targeted partial epigenetic reprogramming successfully extended lifespan in mice. The company continues advancing its platform as a potential approach to halt or slow aging processes.",
           "tag": "RESEARCH · REPROGRAMMING",
           "bullets": [],
-          "sources": [{"name": "Labiotech", "url": "https://www.labiotech.eu/best-biotech/anti-aging-biotech-companies/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Labiotech",
+              "url": "https://www.labiotech.eu/best-biotech/anti-aging-biotech-companies/"
+            }
+          ],
+          "image_url": "/images/cache/9ecea837788a8ab5.jpg"
         },
         {
           "headline": "Retro Biosciences Partners with OpenAI on Stem Cell Engineering",
           "summary": "Retro Biosciences, funded with $180 million, announced a partnership with OpenAI to use artificial intelligence for engineering stem cell proteins to support cellular reprogramming and autophagy. The company aims to add 10 healthy years to human lifespan through its cellular reprogramming platform.",
           "tag": "AI · BIOTECH",
           "bullets": [],
-          "sources": [{"name": "Labiotech", "url": "https://www.labiotech.eu/best-biotech/anti-aging-biotech-companies/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Labiotech",
+              "url": "https://www.labiotech.eu/best-biotech/anti-aging-biotech-companies/"
+            }
+          ],
+          "image_url": "/images/cache/9ecea837788a8ab5.jpg"
         },
         {
           "headline": "Longevity Market Projected to Reach $15.8 Billion with 6% CAGR",
           "summary": "The longevity and anti-senescence therapy market is expected to grow from $15.8 billion in 2025 at a compound annual growth rate of 6%, driven by breakthrough therapies redefining treatment approaches for aging-related conditions. Investment in senolytics, epigenetic reprogramming, and regenerative medicine continues to accelerate.",
           "tag": "MARKET · GROWTH",
           "bullets": [],
-          "sources": [{"name": "EIN Newsdesk", "url": "https://world.einnews.com/pr_news/897585450/longevity-and-anti-senescence-therapy-market-2026-capitalize-on-breakthrough-therapies-redefining"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "EIN Newsdesk",
+              "url": "https://world.einnews.com/pr_news/897585450/longevity-and-anti-senescence-therapy-market-2026-capitalize-on-breakthrough-therapies-redefining"
+            }
+          ]
         }
       ]
     },
@@ -367,40 +542,62 @@
           "summary": "NASA's Artemis 2 mission received approval to proceed toward launch no earlier than April 1, 2026, following a successful two-day flight readiness review. All teams polled 'go' to launch the crewed mission around the moon, pending completion of final work in the Vehicle Assembly Building before rollout.",
           "tag": "EXPLORATION · NASA",
           "bullets": [],
-          "sources": [{"name": "NASA", "url": "https://www.nasa.gov/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "NASA",
+              "url": "https://www.nasa.gov/"
+            }
+          ],
+          "image_url": "/images/cache/31f70fce1671f58a.jpg"
         },
         {
           "headline": "SpaceX Continues Rapid Starlink Expansion with Multiple March Launches",
           "summary": "SpaceX deployed 25 Starlink satellites from Vandenberg Space Force Base on March 16, with additional launches scheduled for March 19 and 20. The company has deployed thousands of operational Starlink satellites in less than seven years, continuing its dominance of the commercial launch market.",
           "tag": "LAUNCHES · STARLINK",
           "bullets": [],
-          "sources": [{"name": "SpaceX", "url": "https://www.spacex.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "SpaceX",
+              "url": "https://www.spacex.com/"
+            }
+          ],
+          "image_url": "/images/cache/51c305b814253896.jpg"
         },
         {
           "headline": "Blue Origin's New Glenn Rocket Prepares for Debut Launch",
           "summary": "Blue Origin's New Glenn heavy-lift rocket is scheduled for launch in March 2026 from Cape Canaveral, carrying the BlueBird 7 communications satellite for AST SpaceMobile to low Earth orbit. The New Glenn represents a major new capability for commercial heavy-lift launches and a significant milestone for Jeff Bezos's space venture.",
           "tag": "LAUNCHES · COMMERCIAL",
           "bullets": [],
-          "sources": [{"name": "Blue Origin", "url": "https://www.blueorigin.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Blue Origin",
+              "url": "https://www.blueorigin.com/"
+            }
+          ]
         },
         {
           "headline": "India's Gaganyaan-1 Uncrewed Test Flight Scheduled for Late March",
           "summary": "ISRO aims to launch Gaganyaan-1, India's first uncrewed orbital test flight, in late March 2026 to support future human spaceflight missions. This mission is a critical step toward India's goal of developing independent human space exploration capabilities.",
           "tag": "EXPLORATION · INDIA",
           "bullets": [],
-          "sources": [{"name": "ISRO", "url": "https://www.isro.gov.in/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "ISRO",
+              "url": "https://www.isro.gov.in/"
+            }
+          ]
         },
         {
           "headline": "Multiple Commercial Rocket Maiden Flights Planned for 2026",
           "summary": "Several startup rockets are scheduled for inaugural flights throughout 2026, including Rocket Lab's Neutron, Firefly Aerospace's Eclipse, and Phantom Space's Daytona I. These new vehicles represent significant competition and innovation in the commercial launch market, challenging SpaceX's dominance.",
           "tag": "STARTUPS · LAUNCHES",
           "bullets": [],
-          "sources": [{"name": "Space.com", "url": "https://www.space.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Space.com",
+              "url": "https://www.space.com/"
+            }
+          ]
         }
       ]
     },
@@ -413,48 +610,75 @@
           "summary": "Major League Baseball announced new national media-rights agreements covering 2026-28, adding NBCUniversal and Netflix while restructuring its ESPN deal to maintain similar value around $550 million annually. Netflix secures high-profile events like the 2026 Yankees-Giants opener, Home Run Derby, and Field of Dreams game for about $50 million per year.",
           "tag": "MEDIA DEALS · MLB",
           "bullets": [],
-          "sources": [{"name": "ESPN", "url": "https://www.espn.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "ESPN",
+              "url": "https://www.espn.com/"
+            }
+          ],
+          "image_url": "/images/cache/472cf1c937cb6bf4.png"
         },
         {
           "headline": "NFL Accelerates Media Rights Negotiations Before 2026 Season",
           "summary": "The NFL aims to finalize new media-rights pacts with Paramount, Fox, and others before the September 2026 season, earlier than the prior 2029 opt-out timeline. Networks would buy out current contracts for immediate effect, likely paying more for less inventory but securing long-term NFL access amid interest from streamers.",
           "tag": "MEDIA DEALS · NFL",
           "bullets": [],
-          "sources": [{"name": "Sports Business Journal", "url": "https://www.sportsbusinessjournal.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Sports Business Journal",
+              "url": "https://www.sportsbusinessjournal.com/"
+            }
+          ]
         },
         {
           "headline": "Media Executives Vie for NFL's Next $200 Billion Rights Cycle",
           "summary": "Top executives from Google, YouTube, Paramount, Netflix, and Disney gathered at Super Bowl LX to position for the league's upcoming media-rights package. YouTube's growing NFL involvement, including exclusive 2026 international games and Sunday Ticket, positions it as a threat to traditional Sunday packages held by CBS and Fox.",
           "tag": "MEDIA DEALS · STREAMING",
           "bullets": [],
-          "sources": [{"name": "The Athletic", "url": "https://theathletic.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "The Athletic",
+              "url": "https://theathletic.com/"
+            }
+          ],
+          "image_url": "/images/cache/bcafe56f4233f5e4.png"
         },
         {
           "headline": "ESPN Gains MLB.TV Distribution Rights in Restructured Deal",
           "summary": "Under MLB's new media agreements, ESPN now holds rights to sell and distribute the MLB.TV out-of-market streaming service starting 2026. This aligns with ESPN's strategy to centralize sports streaming and strengthen its direct-to-consumer offerings.",
           "tag": "STREAMING · MLB",
           "bullets": [],
-          "sources": [{"name": "ESPN", "url": "https://www.espn.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "ESPN",
+              "url": "https://www.espn.com/"
+            }
+          ],
+          "image_url": "/images/cache/472cf1c937cb6bf4.png"
         },
         {
           "headline": "NFL Auctions Freed-Up Game Windows After ESPN Network Sale",
           "summary": "Following the NFL's sale of NFL Network, RedZone, and extra games to ESPN, the league is auctioning four game windows with YouTube as a frontrunner. This move strengthens ESPN's NFL ties via the league's 10% stake while boosting revenue ahead of full rights talks.",
           "tag": "MEDIA DEALS · NFL",
           "bullets": [],
-          "sources": [{"name": "Bloomberg", "url": "https://www.bloomberg.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Bloomberg",
+              "url": "https://www.bloomberg.com/"
+            }
+          ]
         },
         {
           "headline": "Paramount and CBS Signal Readiness for NFL Rights Renewal",
           "summary": "Paramount-Skydance and CBS Sports are poised as first negotiators for NFL renewals, with CEO David Ellison affirming commitment post-Warner Bros. Discovery acquisition and CBS fresh off a $7.7 billion UFC deal. Fox may follow despite initial pricing concerns from CEO Lachlan Murdoch.",
           "tag": "MEDIA DEALS · BROADCASTING",
           "bullets": [],
-          "sources": [{"name": "Variety", "url": "https://variety.com/"}],
-          "image_url": null
+          "sources": [
+            {
+              "name": "Variety",
+              "url": "https://variety.com/"
+            }
+          ]
         }
       ]
     }
