@@ -1,6 +1,6 @@
 const { JSDOM } = require('jsdom');
 
-const SOURCE_BASE = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ceo-briefing.vercel.app';
+const SOURCE_BASE = 'https://ceo-briefing.vercel.app';
 
 async function fetchAndParse(path) {
   const url = `${SOURCE_BASE}${path}`;
