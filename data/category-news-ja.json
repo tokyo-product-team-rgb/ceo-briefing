@@ -1,85 +1,101 @@
 {
-  "date": "2026-03-18",
-  "generatedAt": "2026-03-18T22:30:00+09:00",
+  "date": "2026-03-19",
+  "generatedAt": "2026-03-19T13:31:00.000000+09:00",
   "categoryNews": [
     {
       "id": "us",
       "title": "米国",
       "stories": [
         {
-          "headline": "Trump大統領、住宅価格高騰危機に対処する大統領令に署名",
-          "summary": "Trump大統領は3月13日、住宅建設や住宅ローンに対する連邦・州・地方の規制障壁を削減する2つの大統領令に署名した。住宅建設の促進とコミュニティバンクからの融資緩和を目指す。中間選挙を前に住宅価格の高騰が超党派の争点となる中、許認可の遅延、エネルギー規制、モジュラー住宅の制限を緩和し、中間層の購入コスト低減を図る。",
-          "tag": "政策 · 住宅",
+          "headline": "FRB、イラン紛争によるエネルギー圧力の中で金利据え置き",
+          "summary": "FRBは、米国・イラン紛争による急騰するエネルギー価格がインフレを押し上げる中、金利を据え置いた。ペルシャ湾の原油供給の混乱により全国平均ガソリン価格が1ガロン3.90ドルに達し、パウエル議長は景気減速リスクとインフレ抑制のバランスを迫られている。",
+          "tag": "経済 · FRB",
           "bullets": [],
           "sources": [
             {
-              "name": "White House",
-              "url": "https://www.whitehouse.gov/"
+              "name": "ABC News",
+              "url": "https://abcnews.go.com/"
             }
           ],
-          "image_url": "/images/cache/59c91cf3a090d465.jpg"
+          "image_url": ""
         },
         {
-          "headline": "議会、継続中のイラン攻撃を巡り戦争権限決議を審議",
-          "summary": "上下両院は今週、先週開始されたイランへの軍事攻撃に関するTrump大統領の権限を制限する超党派決議案の採決を行う。共和党の大半は攻撃を支持するが、決議案はエスカレーションへの懸念から議会の戦争権限の再主張を目指す。可決には少なくとも共和党上院議員5名の造反が必要で、外交政策介入を巡る党派対立が浮き彫りとなっている。",
-          "tag": "外交政策 · イラン",
+          "headline": "トランプ大統領、イラン作戦への支援不足でNATO同盟国を批判",
+          "summary": "トランプ大統領は、テヘランが湾岸のエネルギーインフラを攻撃する中、イラン標的への米軍攻撃を支援しないNATO加盟国を痛烈に批判した。同盟国の後ろ盾なしにホルムズ海峡の確保を一方的に推進するトランプ氏の姿勢から、紛争19日目にして緊張がさらに高まっている。",
+          "tag": "外交 · NATO",
           "bullets": [],
           "sources": [
             {
-              "name": "Congress.gov",
-              "url": "https://www.congress.gov/"
+              "name": "ABC News",
+              "url": "https://abcnews.go.com/"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "ICE改革と予算を巡る対立でDHS閉鎖が継続",
-          "summary": "国土安全保障省はホワイトハウスと民主党のICE改革を巡る対立により閉鎖が続いている。下院は木曜日に再度予算案の採決を予定しており、一部は有権者登録に写真付き身分証明書と市民権証明を義務付けるSAVE America Actの付帯を推進。上院司法委員会のDHS監視公聴会が、政府機能の広範な混乱の中で圧力を強めている。",
+          "headline": "対テロ担当長官、イラン政策をめぐる意見対立で辞任",
+          "summary": "対テロ担当長官が、イラン戦争のエスカレーションをめぐるトランプ政権内部の分裂の中で辞任した。イランの要人を殺害したバンカーバスター攻撃に続くもので、情報当局者が報復脅威に関する事前説明不足や戦争リスクについて議会で追及される中、政権内の亀裂が深まっている。",
+          "tag": "政治 · 国家安全保障",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ABC News",
+              "url": "https://abcnews.go.com/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "政府機関の一部閉鎖でTSA職員が無給に、空港が混乱",
+          "summary": "イラン戦争の資金をめぐる議論に関連した政府閉鎖により、TSA職員の約10%が無給のまま病欠を申請し、空港に大規模な混乱が発生した。MacDill空軍基地でのIED事件を含む安全保障上の懸念が高まる中、連邦業務の停滞が経済的負担をさらに悪化させている。",
           "tag": "政府 · 閉鎖",
           "bullets": [],
           "sources": [
             {
-              "name": "Reuters",
-              "url": "https://www.reuters.com/"
-            }
-          ]
-        },
-        {
-          "headline": "上院、「21世紀の住宅法」を可決へ前進",
-          "summary": "上院は超党派の「21世紀の住宅法」の審議を進める採決を行った。同法案は住宅建設の促進と機関投資家による住宅購入の抑制を目指す。中間層が初めての住宅購入ができないという全国的な懸念を背景に、Trump大統領の大統領令やホワイトハウスの支持と整合する。下院での行方は不透明だが、住宅問題が中間選挙の最重要課題であることを裏付けている。",
-          "tag": "立法 · 住宅",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Senate.gov",
-              "url": "https://www.senate.gov/"
-            }
-          ]
-        },
-        {
-          "headline": "財務省、「所有経済」推進のためTrump Accountsを発表",
-          "summary": "財務省は「Trump Accounts」を推進。雇用主、慈善団体、州が資金を拠出し、新生児の株式投資を開始、18歳で退職・住宅・教育に利用可能とする制度。株式を持たない成人38%を対象に、すべての市民に株式所有を与え、米国建国250周年に向けて社会契約を再定義することを目指す。企業の幅広い賛同と州の実験が急速な普及の勢いを示している。",
-          "tag": "経済 · 政策",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Treasury.gov",
-              "url": "https://home.treasury.gov/"
+              "name": "ABC News",
+              "url": "https://abcnews.go.com/"
             }
           ],
-          "image_url": "/images/cache/b1c254377ad13cab.jpg"
+          "image_url": ""
         },
         {
-          "headline": "Trump大統領、国防生産法の委任調整に関する大統領令に署名",
-          "summary": "Trump大統領は3月18日、国家非常事態通知を継続しつつ国防生産法に基づく委任を調整する大統領令14391に署名した。イランとの緊張や安全保障上の必要性に関連し、産業動員における行政の柔軟性を高める措置。議会の新たな関与なしに危機対応を効率化する政権の取り組みを反映している。",
-          "tag": "大統領令 · 防衛",
+          "headline": "裁判官、マスク氏とDOGEによるUSAID閉鎖に異議",
+          "summary": "連邦裁判官が、トランプ政権下の連邦機関削減の一環としてイーロン・マスク氏の政府効率化省（DOGE）がUSAIDを閉鎖した件を精査している。法的異議は、DOGEの機関閉鎖の執行権限と、国内予算の優先事項に関連する対外援助への影響を問うものだ。",
+          "tag": "規制 · 政府",
           "bullets": [],
           "sources": [
             {
-              "name": "Federal Register",
-              "url": "https://www.federalregister.gov/"
+              "name": "YouTube",
+              "url": "https://www.youtube.com/watch?v=VwrdSjSSgrE"
             }
           ],
-          "image_url": "/images/cache/8ee35050424c7755.png"
+          "image_url": ""
+        },
+        {
+          "headline": "イラン攻撃で湾岸エネルギー供給混乱、ガソリン平均価格3.90ドルに",
+          "summary": "イランの湾岸インフラへの砲撃と、米国・イスラエルによるイランのガス田への報復攻撃が、主要海峡を通じた石油供給を麻痺させた。供給の混乱により米国の燃料コストと市場のボラティリティが上昇し、トランプ氏が供給回復を優先する中でもインフレ見通しが悪化している。",
+          "tag": "経済 · エネルギー",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ABC News",
+              "url": "https://abcnews.go.com/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "英国、エプスタイン事件の捜査拡大で米国に協力要請",
+          "summary": "ジェフリー・エプスタインのネットワークを捜査する英国当局が、継続する新事実の中で国境を越えた関連に焦点を当て、正式に米国に協力を要請した。この捜査は、経済的・地政学的混乱の時期における有力者への規制上の精査と交差する可能性がある。",
+          "tag": "司法 · 捜査",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ABC News",
+              "url": "https://abcnews.go.com/"
+            }
+          ],
+          "image_url": ""
         }
       ]
     },
@@ -88,92 +104,82 @@
       "title": "人工知能",
       "stories": [
         {
-          "headline": "IBM、2026年はドメイン特化型推論AIモデルへの移行を予測",
-          "summary": "ファインチューニングと強化学習の進歩により、IBMのGraniteのような小型マルチモーダルモデルが特定領域で巨大モデルを凌駕。MetaのLlamaやDeepSeekによるオープンソースの成長が原動力。企業はリソース集約型の汎用モデルから効率的で調整可能なシステムの採用へ移行し、ヘルスケアなどの特定ユースケースでのイノベーションを加速させている。",
-          "tag": "モデル · エンタープライズ",
+          "headline": "OpenAI、100万トークンコンテキストの「思考」モデルGPT-5.4をリリース",
+          "summary": "OpenAIは、強化されたステップバイステップ推論、複雑な問題向けの「極限思考」モード、100万トークンのコンテキストウィンドウを搭載したGPT-5.4を発表した。このモデルは、規模の拡大よりも熟考的な推論への業界シフトを反映し、ソフトウェア操作や大規模データ処理などのエンタープライズワークフローを可能にする。",
+          "tag": "モデル · OPENAI",
           "bullets": [],
           "sources": [
             {
-              "name": "IBM",
-              "url": "https://www.ibm.com/think/news/ai-tech-trends-predictions-2026"
+              "name": "OpenAI",
+              "url": "https://openai.com/"
             }
           ],
-          "image_url": "/images/cache/4537d1835df69288.jpg"
+          "image_url": ""
         },
         {
-          "headline": "Microsoft、仮説生成によるAIの能動的研究パートナー化を展望",
-          "summary": "推論能力の向上により、AIが仮説生成、実験制御、人間との協業を実現。開発におけるペアプログラミングの成功を基盤とする。ツールやアプリとの統合を通じてパーソナライズされたAIラボアシスタントが誕生し、各分野の科学的生産性を向上させている。",
-          "tag": "研究 · インフラ",
+          "headline": "DeepSeek、1兆パラメータとマルチモーダル機能を備えたV4を発表",
+          "summary": "DeepSeek V4は、階層型KVキャッシュで40%のメモリ削減を実現するMODEL1アーキテクチャと、1.8倍の推論高速化を実現するSparse FP8デコーディングを導入した。テキスト、画像、音声、動画を単一モデルに統合し、パラメータ数よりも知識密度を優先しながら開発者の統合を簡素化する。",
+          "tag": "モデル · DEEPSEEK",
           "bullets": [],
           "sources": [
             {
-              "name": "Microsoft",
-              "url": "https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/"
+              "name": "DeepSeek",
+              "url": "https://deepseek.com/"
             }
           ],
-          "image_url": "/images/cache/16b197289eafe7ad.png"
+          "image_url": ""
         },
         {
-          "headline": "AIインフラ、高密度でダイナミックな「スーパーファクトリー」へ進化",
-          "summary": "MicrosoftのAzureは、計算能力を高密度に集約しワークロードを動的にルーティングする柔軟なグローバルネットワークを予測。AIの品質をサイズではなく知能の質で測定する必要性が原動力。量子コンピュータやスーパーコンピュータとのハイブリッドアプローチがエンタープライズ規模のAIのコストと持続可能性を改善する。",
-          "tag": "インフラ · クラウド",
+          "headline": "Google DeepMind、数学突破のためのGemini 3.1 Flash-LiteとDeep Thinkを発表",
+          "summary": "Flash-Liteはコスト効率の高い開発者ワークロードを対象とし、Deep Thinkはエルデシュ予想を含む未解決の数学問題を自律的に解き、IMO-ProofBenchで90%のスコアを達成した。Googleのベイズ教授法により、LLMが新しい証拠に基づいて動的に信念を更新し、エージェント型AIの能力を進化させている。",
+          "tag": "モデル · GOOGLE",
           "bullets": [],
           "sources": [
             {
-              "name": "Microsoft",
-              "url": "https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/"
+              "name": "Google DeepMind",
+              "url": "https://deepmind.google/"
             }
           ],
-          "image_url": "/images/cache/16b197289eafe7ad.png"
+          "image_url": ""
         },
         {
-          "headline": "2026年は自律エージェントよりAIワークフローが主役に",
-          "summary": "業界のハイプはエージェントに向かうが、Stanfordの研究でGemini、ChatGPT、DeepSeek、Llamaなどの性能が収束する中、モデルを効果的に連鎖させるワークフローが価値を生む。このコモディティ化により、エンタープライズ環境での実用的な自動化にフォーカスが移行している。",
-          "tag": "エンタープライズ · エージェント",
+          "headline": "Cerebras、AWSと提携しBedrock経由で最速AI推論を実現",
+          "summary": "AWSは、プリフィルにTrainium、デコードにWSEを使用する分離型アーキテクチャのCerebras CS-3システムを導入し、トークンスループットを5倍に向上させた。この提携により、AWS Bedrockを通じたオープンソースLLMとNovaモデルでの高速エンタープライズ推論が可能になり、推論コストが大幅に削減される。",
+          "tag": "インフラ · AWS",
           "bullets": [],
           "sources": [
             {
-              "name": "Stanford HAI",
-              "url": "https://hai.stanford.edu/news/stanford-ai-experts-predict-what-will-happen-in-2026"
-            }
-          ]
-        },
-        {
-          "headline": "AIエージェント作成の民主化がビジネスユーザーを強化",
-          "summary": "IBMの専門家は、推論能力の向上によりニーズを予測するエージェントを非開発者が設計できるようになり、AIが問題解決の能動的な協力者に変わると予測。言語・視覚・行動を橋渡しするマルチモーダルの進歩が障壁を下げ、複雑なヘルスケアタスクなどの領域で専門家によるイノベーションを促進する。",
-          "tag": "エージェント · エンタープライズ",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "IBM",
-              "url": "https://www.ibm.com/think/news/ai-tech-trends-predictions-2026"
+              "name": "Cerebras",
+              "url": "https://cerebras.ai/"
             }
           ],
-          "image_url": "/images/cache/4537d1835df69288.jpg"
+          "image_url": ""
         },
         {
-          "headline": "Stanford専門家、厳選された小規模データセットが優れたモデルを生むと予測",
-          "summary": "オープンソースエコシステムの成熟に伴い、高品質で小規模なデータセットによる効率的なモデル構築が大規模モデルを凌駕する取り組みが強化。論理量子ビットなどのハイブリッドコンピューティングの進歩と関連し、分子・材料の研究やエンタープライズモデリングの精度を向上させている。",
-          "tag": "研究 · モデル",
+          "headline": "Ai2、2倍のデータ効率を達成するOlmo Hybridをリリース",
+          "summary": "Allen Instituteの70億パラメータオープンモデルは、トランスフォーマーアテンションと線形リカレント層を組み合わせ、49%少ない学習トークンでOlmo 3のMMLU精度に匹敵する。このハイブリッドアーキテクチャは、アテンション機構の組み合わせが純粋なトランスフォーマーに匹敵しつつ、企業の学習障壁を大幅に低下させることを証明した。",
+          "tag": "オープンソース · 研究",
           "bullets": [],
           "sources": [
             {
-              "name": "Stanford HAI",
-              "url": "https://hai.stanford.edu/news/stanford-ai-experts-predict-what-will-happen-in-2026"
+              "name": "Allen Institute for AI",
+              "url": "https://allenai.org/"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "上院商務小委員会、AIの実用的応用を検討",
-          "summary": "上院商務小委員会は「誇大宣伝より実用性：安全性、生産性、ケアを向上させるAI」と題する公聴会を開催し、憶測ではなく実世界の便益に基づいたAIを推進。過度な規制を避けたイノベーション促進という政権の優先事項と合致する。",
-          "tag": "規制 · 政策",
+          "headline": "業界トレンド：拡散モデルと効率化がAI環境を変革",
+          "summary": "2026年3月は、事前学習における知識密度、主要モデルのネイティブマルチモーダル対応、並列トークン生成のためのテキスト拡散の台頭が注目されている。これらの進展により推論コストが削減され、より高性能なエージェント型エンタープライズツールが実現しており、年末までに拡散LLMの主流化が予測されている。",
+          "tag": "トレンド · 業界",
           "bullets": [],
           "sources": [
             {
-              "name": "Senate.gov",
-              "url": "https://www.senate.gov/"
+              "name": "Various",
+              "url": "https://arxiv.org/"
             }
-          ]
+          ],
+          "image_url": ""
         }
       ]
     },
@@ -182,9 +188,9 @@
       "title": "ベンチャーキャピタル＆スタートアップ",
       "stories": [
         {
-          "headline": "Wayve、自動運転技術でシリーズD 12億ドルを調達",
-          "summary": "英国の自動運転スタートアップWayveがMercedesとStellantis主導でシリーズDとして過去最大の12億ドルを調達。欧州のAI駆動モビリティへの取り組みを象徴する。ファウンデーションモデルの進歩とAV展開に向けた規制環境の追い風を背景に、WayveのエンドツーエンドAIモデルへの投資家の信頼を反映している。",
-          "tag": "資金調達 · 自動運転",
+          "headline": "AIスタートアップがメガラウンドで2026年Q1のVC資金を独占",
+          "summary": "2026年Q1にAI企業が5億ドル超の複数のメガラウンドでベンチャー資金の最大シェアを獲得し続けている。この集中は、AIインフラとアプリケーションが世代的な投資機会であるという投資家の確信を反映しており、ロボティクスとサイバーセキュリティにも多額の資金が流入している。",
+          "tag": "資金調達 · AI",
           "bullets": [],
           "sources": [
             {
@@ -192,80 +198,72 @@
               "url": "https://techcrunch.com/"
             }
           ],
-          "image_url": "/images/cache/5302bc93238fb63a.png"
+          "image_url": ""
         },
         {
-          "headline": "Mind Robotics、産業用AIでシリーズA 5億ドルを調達",
-          "summary": "Mind RoboticsがAccelとAndreessen Horowitzから製造自動化向けAIロボティクス構築のためシリーズAで5億ドルを調達。ファウンデーションモデルが複雑な物理タスクを可能にする急速な進歩を背景に、サプライチェーン混乱後の効率性向上を求める産業界から資金を引き付けている。",
-          "tag": "資金調達 · ロボティクス",
+          "headline": "SparkLabs、King Saud Universityと2,000万ドルのファンドを設立",
+          "summary": "SparkLabsはKing Saud Universityと提携して2,000万ドルのファンドを発表し、シリコンバレー以外のイノベーションエコシステムへのVC関心の高まりを示した。サウジアラビアのエンジニアや起業家に学術人材とグローバル投資家を結びつけた機会を創出することを目指す。",
+          "tag": "ファンド設立 · 中東",
           "bullets": [],
           "sources": [
             {
-              "name": "Crunchbase News",
-              "url": "https://news.crunchbase.com/"
-            }
-          ]
-        },
-        {
-          "headline": "Replit、AI開発者ツールでシリーズD 4億ドルを調達",
-          "summary": "クラウドコーディングプラットフォームReplitがGeorgian主導、Accenture Ventures参加のシリーズDで4億ドルを発表。AIコーディングエージェントの注目が高まる中、ブラウザネイティブの協業開発ツール拡大を目指す。GitHub Copilotへの対抗ポジションを確立。",
-          "tag": "資金調達 · 開発者ツール",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "TechCrunch",
-              "url": "https://techcrunch.com/"
+              "name": "SparkLabs",
+              "url": "https://www.sparklabsgroup.com/"
             }
           ],
-          "image_url": "/images/cache/5302bc93238fb63a.png"
+          "image_url": ""
         },
         {
-          "headline": "Plaid、80億ドル評価でセカンダリーラウンドを実施",
-          "summary": "フィンテックインフラ企業PlaidがVC の成長指標への厳格化の中、過去のピークを下回る80億ドル評価でセカンダリー流動性ラウンドを実施。規制上のハードルによる取引遅延を経て、メガイグジット前に収益性シグナルを求める投資家の姿勢を反映する市場全体のリセットを象徴している。",
-          "tag": "フィンテック · セカンダリー",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "url": "https://www.bloomberg.com/"
-            }
-          ]
-        },
-        {
-          "headline": "General Catalyst、100億ドルのメガファンド組成を検討",
-          "summary": "General CatalystがThriveに続き100億ドルの調達を検討中と報じられている。記録的な未投資資金とAIスタートアップへの爆発的な需要がメガファンドの復活を牽引し、シードからグロースステージまでの大型チェックを可能にしている。",
-          "tag": "ファンド組成 · VC",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "The Information",
-              "url": "https://www.theinformation.com/"
-            }
-          ]
-        },
-        {
-          "headline": "Spark Capital、VCブームの中30億ドルのファンドを目指す",
-          "summary": "Spark CapitalがFounders Fundの60億ドルクローズに続き、次のファンドで30億ドルを目指す。AIインフラ需要の急増と2025年のドライパウダー記録がこれらの調達を推進し、分散投資よりも高確信度のポートフォリオによるスケーラブルリターンを優先している。",
-          "tag": "ファンド組成 · VC",
+          "headline": "新興テクノロジースタートアップが過去最高331億ドルのアーリーステージ資金を獲得",
+          "summary": "ベンチャーファームが新興テクノロジー分野のプレシード、シード、アーリーステージの874件に331億ドルを投入し、全体のディール件数減少にもかかわらず新記録を樹立した。ETI支援のスタートアップは9.2%のイグジット率と4.0%のユニコーン率を示し、ベンチャー全体の平均を上回った。",
+          "tag": "アーリーステージ · 資金調達",
           "bullets": [],
           "sources": [
             {
               "name": "PitchBook",
               "url": "https://pitchbook.com/"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "Ezra、資産担保金融テックでシードラウンド800万ドルを調達",
-          "summary": "サンフランシスコのEzraがCongruent Venturesからストラクチャードファイナンスの信用分析自動化のためシード800万ドルを調達。金利上昇と効率的なディールインフラへの需要により拡大するプライベートクレジット市場の複雑性を捉えている。",
-          "tag": "シード · フィンテック",
+          "headline": "資金の超集中が二層構造の調達市場を形成",
+          "summary": "AI、フィンテック、ロボティクス、サイバーセキュリティのスタートアップが大型ラウンドを迅速に確保する一方、従来型SaaSやソフトウェア企業はより厳しい資金調達条件とバリュエーション圧力に直面している。この二極化は、広範なスタートアップ資金提供から変革的テクノロジーへの高確信度投資への移行を反映している。",
+          "tag": "市場 · トレンド",
           "bullets": [],
           "sources": [
             {
               "name": "Crunchbase",
-              "url": "https://news.crunchbase.com/"
+              "url": "https://www.crunchbase.com/"
             }
-          ]
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "フィンテックとヘルステックに機関投資家の関心が再燃",
+          "summary": "フィンテックは21億ドル、ヘルステック・ウェルネスも同額の21億ドルを獲得し、クライメートテックは19億ドルを集めた。バイオテクノロジーは15件で6億5,700万ドルと顕著な回復を見せ、多くが臨床段階の資産やAI創薬に関わるものだった。",
+          "tag": "セクター · 資金調達",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "CB Insights",
+              "url": "https://www.cbinsights.com/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "グロースステージの資金調達は制約が続く一方、シードは堅調を維持",
+          "summary": "AIとオートメーション分野でシードステージの投資は活発なディールフローを維持しているが、グロースステージの資金はより強いファンダメンタルズとキャッシュフローの可視性を求める投資家により引き締められたままだ。シリーズBおよびCラウンドは2026年を通じてより慎重なペースで進むと予想される。",
+          "tag": "市場 · グロースステージ",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "PitchBook",
+              "url": "https://pitchbook.com/"
+            }
+          ],
+          "image_url": ""
         }
       ]
     },
@@ -274,76 +272,82 @@
       "title": "エネルギー＆気候",
       "stories": [
         {
-          "headline": "中国の太陽光発電、2025年に初めて風力を上回る",
-          "summary": "中国の太陽光発電量が2025年に初めて風力エネルギーを上回り、再生可能エネルギーポートフォリオの大きな転換点となった。この節目は、高い再生可能エネルギー比率に対応した電力システム構築を重視する第15次五カ年計画の一環として、中国の再エネ拡大の加速を反映している。",
+          "headline": "EIA、2026年の米国電力容量追加が過去最高の86GWと予測",
+          "summary": "米国エネルギー情報局は、2026年に新規ユーティリティ規模の発電容量が過去最高の86GW追加されると予測。太陽光発電が43.4GW（全体の51%）で主導し、2025年から60%増加する。テキサスが新規太陽光の40%を受け入れ、418MWの蓄電池を併設した837MWのTehuacana Creek 1プロジェクトを含む。",
           "tag": "再エネ · 太陽光",
           "bullets": [],
           "sources": [
             {
-              "name": "Reuters",
-              "url": "https://www.reuters.com/"
+              "name": "PV Tech",
+              "url": "https://www.pv-tech.org/eia-us-add-record-43-4gw-new-utility-scale-solar-pv-capacity-2026/"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "米国の再エネ、Trump政権の政策にもかかわらず発電量の26%で過去最高を記録",
-          "summary": "米国の再生可能エネルギーは2025年に全発電量の26%と過去最高を記録し、前年比10%増加。Trump政権の風力・太陽光インセンティブ削減の取り組みに逆らう結果となった。太陽電池、風力タービン、蓄電池のコスト低下により、ほとんどのシナリオで再エネ設備が化石燃料代替より安価になったことが急増の原動力。",
-          "tag": "再エネ · 電力網",
+          "headline": "SEIA、2026年の米国蓄電池導入が70GWhに急増と予測",
+          "summary": "太陽エネルギー産業協会は、2025年の57GWhに続き、2026年の米国蓄電池導入が70GWhに達すると予測した。ユーティリティ規模の蓄電池の半数以上が南西部の州で太陽光と併設され、電力網の信頼性における蓄電の重要性の高まりを裏付けている。",
+          "tag": "蓄電 · バッテリー",
           "bullets": [],
           "sources": [
             {
-              "name": "EIA",
-              "url": "https://www.eia.gov/"
+              "name": "JD Supra",
+              "url": "https://www.jdsupra.com/legalnews/renewable-energy-update-3-3-26-1275556/"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "中東紛争で原油価格が1バレル100ドルを突破",
-          "summary": "中東の紛争が世界のエネルギー供給を混乱させ、原油価格が1バレル100ドルを突破。各国がエネルギー戦略の見直しを迫られている。一部の国は再エネプロジェクトを加速させる一方、他の国は国内化石燃料に回帰し、エネルギー安全保障を優先して気候目標が一時的に後退している。",
-          "tag": "原油 · 地政学",
+          "headline": "カリフォルニア州、2032年までに6GWの非化石電源調達を電力会社に命令",
+          "summary": "カリフォルニア公益事業委員会は、需要増に伴う信頼性不足に対処するため、2029年から2032年にかけて6GWのゼロエミッション電源を追加するよう配電事業者に義務付けた。この命令は、州全体の電化需要の高まりの中で電力網の安定性を目指すものだ。",
+          "tag": "規制 · カリフォルニア",
           "bullets": [],
           "sources": [
             {
-              "name": "Bloomberg",
-              "url": "https://www.bloomberg.com/"
+              "name": "JD Supra",
+              "url": "https://www.jdsupra.com/legalnews/renewable-energy-update-3-3-26-1275556/"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "国連気候責任者、再エネを地政学的変動に対する戦略的防衛と位置づけ",
-          "summary": "UNFCCC事務局長Simon Stiellは2026年グリーン成長サミットで、再生可能エネルギーが地政学的混乱から各国を守ると主張し、「太陽光は狭く脆弱な海上輸送路に依存しない」と述べた。化石燃料依存は国家安全保障と主権を脅かす一方、再エネは安全保障、雇用、低コストをもたらすと強調した。",
-          "tag": "気候 · 政策",
+          "headline": "米国風力発電が11.8GWの追加で回復、大規模洋上プロジェクトも",
+          "summary": "風力発電の追加容量は2026年に11.8GWへと倍増する見込みで、ニューメキシコ、テキサス、イリノイ、ワイオミングが全体の約60%を占める。主要プロジェクトには3,650MWのSunZia陸上風力発電所、延期されていたVineyard Wind 1（800MW）やRevolution Wind（715MW）の洋上プロジェクトが含まれる。",
+          "tag": "風力 · 洋上",
           "bullets": [],
           "sources": [
             {
-              "name": "UNFCCC",
-              "url": "https://unfccc.int/"
+              "name": "Solar Quarter",
+              "url": "https://solarquarter.com/2026/02/24/u-s-power-capacity-additions-to-hit-record-86-gw-in-2026-led-by-solar-and-storage-eia/"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "中国、非化石エネルギー供給拡大に向けエネルギー法を改正",
-          "summary": "中国の国家エネルギー局は2026年に電力法と再生可能エネルギー法を改正し、非化石エネルギー供給体制の拡大と石炭・石油消費のピークアウト促進を図る。これらの法改正は第15次五カ年計画で示された気候目標を支えるものである。",
-          "tag": "規制 · 中国",
+          "headline": "Deloitte、FEOC規制により2026年以降の再エネ成長鈍化を警告",
+          "summary": "Deloitteは、中国関連サプライチェーンへの外国懸念主体（FEOC）調達規制により、2026年から2030年の米国太陽光・風力・蓄電の追加が年間30〜66GWに低下する可能性があると予測した。セーフハーバー案件による2026年の急増の可能性はあるものの、長期的な成長には構造的な逆風が吹く。",
+          "tag": "見通し · サプライチェーン",
           "bullets": [],
           "sources": [
             {
-              "name": "China National Energy Administration",
-              "url": "https://www.nea.gov.cn/"
+              "name": "Deloitte",
+              "url": "https://www.deloitte.com/us/en/insights/industry/renewable-energy/renewable-energy-industry-outlook.html"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "下院民主党、包括的クリーンエネルギー法案を発表へ",
-          "summary": "下院民主党が包括的なクリーンエネルギー法案の提出を準備しており、現政権のスタンスにもかかわらず再エネ拡大に向けた立法の勢いが続いていることを反映。欧州各国政府や国際機関が最近のエネルギー市場の混乱を踏まえ再エネの戦略的価値を強調する中での動き。",
-          "tag": "立法 · 再エネ",
+          "headline": "イラン紛争が湾岸原油輸送を混乱させ、世界のエネルギー価格が急騰",
+          "summary": "イランの湾岸エネルギーインフラへの攻撃と、米国・イスラエルによるイランガス田への報復攻撃が、主要海峡を通じた石油供給を混乱させた。この混乱により米国のガソリン平均価格は1ガロン3.90ドルに押し上げられ、世界のエネルギー商品全体で市場のボラティリティが拡大した。",
+          "tag": "石油 · 地政学",
           "bullets": [],
           "sources": [
             {
-              "name": "Politico",
-              "url": "https://www.politico.com/"
+              "name": "ABC News",
+              "url": "https://abcnews.go.com/"
             }
-          ]
+          ],
+          "image_url": ""
         }
       ]
     },
@@ -352,90 +356,69 @@
       "title": "ヘルス＆ウェルネス",
       "stories": [
         {
-          "headline": "MedPAC、病院支払い勧告を含む2026年3月報告書を発表",
-          "summary": "Medicare支払い諮問委員会が年次報告書を発表。2027年の病院入院・外来サービスの支払い率を現行法水準とし、新たなMedicareセーフティネット指標を通じてセーフティネット病院に追加10億ドルを勧告。報告書はポストアキュートケアの動向、Medicare Advantage、Part D、議会委託のレビューも網羅している。",
-          "tag": "医療政策 · Medicare",
+          "headline": "Astellas PharmaとVir Biotechnologyが前立腺がんT細胞エンゲージャーで提携",
+          "summary": "Astellas PharmaとVir Biotechnologyは、前立腺がん治療を目的としたPSMA標的デュアルマスクCD3 T細胞エンゲージャーVIR-5500の共同開発に関するグローバル提携を発表した。Virはマイルストーンで最大13.7億ドルと段階的ロイヤリティの受領資格を持ち、最新のフェーズ1データは2026年ASCO GUシンポジウムで発表予定。",
+          "tag": "製薬 · 腫瘍学",
           "bullets": [],
           "sources": [
             {
-              "name": "MedPAC",
-              "url": "https://www.medpac.gov/"
-            }
-          ]
-        },
-        {
-          "headline": "PBM改革、新連邦規則とFTC和解で勢い加速",
-          "summary": "2026年第1四半期、ERISA計画に対するDOLの開示規則案、CAA 2026の透明性要件、Express Scriptsとの業務慣行変更を義務付けるFTC和解など、薬剤給付管理者（PBM）への監視が加速した。超党派で支持されるこれらの政策は、薬価仲介業者のコンプライアンスと監視の強化を目指す。",
-          "tag": "製薬 · 規制",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "FTC",
-              "url": "https://www.ftc.gov/"
+              "name": "Astellas",
+              "url": "https://www.astellas.com/"
             }
           ],
-          "image_url": "/images/cache/dd5b50f2fef606bd.jpg"
+          "image_url": ""
         },
         {
-          "headline": "CMS、Medicaidマネージドケアの州監視を強化",
-          "summary": "CMSは情報通知を発行し、各州にMedicaidおよびCHIPマネージドケアの請求、ネットワーク充足性、品質改善など14分野にわたる監視強化を求めた。各州はシステム設計の柔軟性を維持しつつ、包括的な監督を実証し、説明責任とプログラムの整合性を向上させる必要がある。",
-          "tag": "医療政策 · Medicaid",
+          "headline": "Fierce Healthcare、「Fierce 15 of 2026」トップイノベーターを発表",
+          "summary": "Fierce Healthcareは、医療プロバイダー、ペイヤー、テクノロジーイノベーションの主要企業に焦点を当てた年次スポットライトを発表した。レポートは、救急医療における経済的ストレスや、より透明性の高い事前承認制度の再構築への取り組みなど、業界の主要な動向を強調している。",
+          "tag": "イノベーション · ヘルステック",
           "bullets": [],
           "sources": [
             {
-              "name": "CMS",
-              "url": "https://www.cms.gov/"
-            }
-          ]
-        },
-        {
-          "headline": "ミネソタ州知事、不正対策としてMedicaid MCOの廃止を提案",
-          "summary": "Tim Walz知事は不正対策としてマネージドケア組織を段階的に廃止し、州運営の出来高払いモデルへ移行する大規模なMedicaid改革を提案。プログラムの継続的な問題に対応するもので、数百万人の加入者へのサービス提供を根本的に変える可能性がある。",
-          "tag": "医療政策 · 改革",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Minnesota Governor's Office",
-              "url": "https://mn.gov/governor/"
-            }
-          ]
-        },
-        {
-          "headline": "CMS、支払い延期を含む積極的な不正対策を開始",
-          "summary": "CMSはミネソタ州への2億5,900万ドルのMedicaid支払い延期、DMEPOS供給業者の登録モラトリアム、浪費と不正を対象とするCRUSHイニシアチブを含む執行措置を開始。Dr. Mehmet Oz長官はこれらをプログラム持続性保護の第一歩と説明した。",
-          "tag": "規制 · 不正対策",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "CMS",
-              "url": "https://www.cms.gov/"
-            }
-          ]
-        },
-        {
-          "headline": "Trump大統領、薬価と不正対策を柱とする「偉大な医療計画」を発表",
-          "summary": "Trump大統領は処方薬コストの引き下げ、最恵国価格設定の法制化、税額控除から個人への資金移行、連邦プログラムにおける浪費・不正・濫用の撲滅を含む包括的な枠組みを発表。プロバイダー審査や高リスク供給業者の登録制限など進行中の取り組みも強調された。",
-          "tag": "政策 · 薬価",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "White House",
-              "url": "https://www.whitehouse.gov/"
+              "name": "Fierce Healthcare",
+              "url": "https://www.fiercehealthcare.com/"
             }
           ],
-          "image_url": "/images/cache/59c91cf3a090d465.jpg"
+          "image_url": ""
         },
         {
-          "headline": "AMA、Medicaid就労要件による保険適用中断の緩和をCMSに要請",
-          "summary": "AMAはMedicaidの新しい社会参加要件により適格な被保険者が保険を失わないよう、CMSに対し支援プロセスの構築を勧告するコメントを提出。各州での就労要件実施に伴う不当な保険適用中断の防止に焦点を当てている。",
-          "tag": "医療政策 · アクセス",
+          "headline": "Moody's、2026年の医療保険会社にネガティブ見通しを発表",
+          "summary": "Moody'sは、医療経済全般の課題の中でコスト圧力が強まることを理由に、2026年の医療保険会社にネガティブ見通しを予測した。この警告は、救急部門の財務的ストレスやコスト抑制のためのプロバイダー統合規制を検討する議員の議論と一致している。",
+          "tag": "保険 · 見通し",
           "bullets": [],
           "sources": [
             {
-              "name": "AMA",
-              "url": "https://www.ama-assn.org/"
+              "name": "Moody's",
+              "url": "https://www.moodys.com/"
             }
-          ]
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "Stemtech、「Revolution 2026」細胞レベルウェルネスイニシアチブを発表",
+          "summary": "Stemtechは、幹細胞栄養分野で20年の実績を持つ同社が、科学に裏付けられたプロアクティブな細胞レベルのウェルネスの新時代を示す大規模イニシアチブを発表した。天然植物由来成分を重視するマルチチャネル成長モデルで、アンチエイジング需要を狙い、経口、スキンケア、ペットヘルス製品への展開を強化する。",
+          "tag": "ウェルネス · アンチエイジング",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Stemtech",
+              "url": "https://stemtech.com/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "HLTH USAカンファレンスに25,000人が参加、AIとデータ活用がテーマ",
+          "summary": "HLTH USAイベントは、ラスベガスに製薬、テック、AI、医療システムから25,000人の専門家を集め、ROI、データワークフロー、変革的な医療イノベーションについて議論した。このカンファレンスは、AI能力と医療提供の最適化の収束が進んでいることを反映している。",
+          "tag": "カンファレンス · ヘルステック",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "HLTH",
+              "url": "https://www.hlth.com/"
+            }
+          ],
+          "image_url": ""
         }
       ]
     },
@@ -444,93 +427,56 @@
       "title": "長寿＆エイジング",
       "stories": [
         {
-          "headline": "FDA、薬事承認における「2試験の教義」を廃止",
-          "summary": "FDAは薬事承認に2つのピボタル試験を求める要件を正式に廃止し、強力なバイオマーカーデータを伴う単一の適切に設計された試験での承認を可能にした。この規制変更により開発期間が3〜5年短縮、コストが数千万ドル削減される可能性があり、老化バイオマーカーを標的とする長寿治療の承認経路を大幅に加速させる。",
-          "tag": "規制 · FDA",
+          "headline": "科学者が人気のアンチエイジング化合物のがんリスクを明らかに",
+          "summary": "研究者は、長寿に関連する分子が、健康な細胞を支える一方でがんの成長を加速させる可能性があるという二重の効果を持つことを発見した。研究チームは、関連化合物の有益な長寿効果を妨げることなく、がんの進行を選択的に遅らせることができる有望な治療標的としてeIF5A2を特定した。",
+          "tag": "研究 · リスク",
           "bullets": [],
           "sources": [
             {
-              "name": "FDA",
-              "url": "https://www.fda.gov/"
-            }
-          ]
-        },
-        {
-          "headline": "Klothea、α-Klotho mRNA療法のフェーズ1b臨床試験を開始",
-          "summary": "Klotheaがホンジュラスで長寿関連タンパク質α-Klothoのレベルを向上させるmRNA療法AKL003のフェーズ1b臨床試験を開始。寿命を主要評価項目とする初の長寿試験の一つで、エピジェネティッククロック、炎症マーカー、ミトコンドリア機能、生活の質を測定する。",
-          "tag": "臨床試験 · バイオテック",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Klothea",
-              "url": "https://klothea.com/"
+              "name": "Nature",
+              "url": "https://www.nature.com/"
             }
           ],
-          "image_url": "/images/cache/93ba7dc02226da3b.jpg"
+          "image_url": ""
         },
         {
-          "headline": "Life Biosciences、初のエピジェネティックリプログラミング試験でFDA承認を取得",
-          "summary": "Life BiosciencesがFDAから加齢性眼疾患に対する部分的エピジェネティックリプログラミング（ER-100）の史上初のヒト臨床試験の承認を取得、2026年初頭に開始。山中因子4つのうち3つを使用し、細胞が元の機能を失うことなく部分的に若返らせるアプローチで、まず緑内障を含む視神経障害を対象とする。",
-          "tag": "臨床試験 · リプログラミング",
+          "headline": "Eric Verdin氏、2030年までにアンチエイジング薬の登場を予測",
+          "summary": "老化研究の第一人者Eric Verdin氏は、アンチエイジング薬開発の軌道について議論し、2030年までに老化プロセスを明確に標的とする薬が登場すると予測した。マウスの寿命を延ばすCD38阻害剤やミトコンドリアの健康をサポートするクレアチンの役割を含む新興介入法についても言及された。",
+          "tag": "研究 · 創薬",
           "bullets": [],
           "sources": [
             {
-              "name": "Fortune",
-              "url": "https://fortune.com/2026/01/30/billionaires-longevity-aging-fda-human-clinical-trial-life-biosciences-jerry-mclaughlin-david-sinclair-harvard-science/"
+              "name": "Buck Institute",
+              "url": "https://www.buckinstitute.org/"
             }
           ],
-          "image_url": "/images/cache/db7f2e6ab5296595.jpg"
+          "image_url": ""
         },
         {
-          "headline": "長寿市場、消費者ウェルネスから機関向けヘルスケアへ移行",
-          "summary": "グローバル長寿市場は消費者ウェルネスから機関向けヘルスケアソリューションへ移行しており、保険会社、雇用主、医療システム、製薬企業が長寿に焦点を当てた戦略を統合。AI対応プラットフォーム、ゲノミクスの進歩、再生医療が創薬を加速し、初期段階のタイムラインを短縮している。",
-          "tag": "市場 · 産業",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "GlobeNewsWire",
-              "url": "https://www.globenewswire.com/news-release/2026/02/18/3240035/0/en/Longevity-Market-Report-2026-2036-Advances-in-AI-Genomics-and-Regenerative-Medicine-Are-Accelerating-Developments.html"
-            }
-          ],
-          "image_url": "/images/cache/d6c9a0ab4a9bfbdf.jpg"
-        },
-        {
-          "headline": "Altos Labs、部分的リプログラミングによるマウスの寿命延長を実証",
-          "summary": "Jeff Bezosの出資を含む30億ドルの資金を持つAltos Labsが、標的化された部分的エピジェネティックリプログラミングによりマウスの寿命延長に成功したという研究を発表。老化プロセスの停止または減速への潜在的アプローチとしてプラットフォームの開発を継続している。",
-          "tag": "研究 · リプログラミング",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Labiotech",
-              "url": "https://www.labiotech.eu/best-biotech/anti-aging-biotech-companies/"
-            }
-          ],
-          "image_url": "/images/cache/9ecea837788a8ab5.jpg"
-        },
-        {
-          "headline": "Retro Biosciences、幹細胞工学でOpenAIと提携",
-          "summary": "1億8,000万ドルの資金を持つRetro BiosciencesがOpenAIとの提携を発表。細胞リプログラミングとオートファジーを支援する幹細胞タンパク質のエンジニアリングにAIを活用する。細胞リプログラミングプラットフォームを通じて人間の健康寿命を10年延長することを目指している。",
-          "tag": "AI · バイオテック",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Labiotech",
-              "url": "https://www.labiotech.eu/best-biotech/anti-aging-biotech-companies/"
-            }
-          ],
-          "image_url": "/images/cache/9ecea837788a8ab5.jpg"
-        },
-        {
-          "headline": "長寿市場、CAGR 6%で158億ドルに達する見通し",
-          "summary": "長寿・抗老化療法市場は2025年の158億ドルからCAGR 6%で成長する見通し。加齢関連疾患の治療アプローチを再定義する画期的療法が原動力。セノリティクス、エピジェネティックリプログラミング、再生医療への投資が加速し続けている。",
+          "headline": "長寿市場、158億ドルから年率6%で成長見込み",
+          "summary": "長寿および抗老化療法市場は、2025年の158億ドルから年率6%の成長が予測されており、臨床プログラムの拡大と高齢者人口の増加が成長を後押ししている。老化生物学研究への公的・私的資金の増加が、商業化のタイムラインを加速させている。",
           "tag": "市場 · 成長",
           "bullets": [],
           "sources": [
             {
-              "name": "EIN Newsdesk",
-              "url": "https://world.einnews.com/pr_news/897585450/longevity-and-anti-senescence-therapy-market-2026-capitalize-on-breakthrough-therapies-redefining"
+              "name": "Grand View Research",
+              "url": "https://www.grandviewresearch.com/"
             }
-          ]
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "Life Biosciences、エピジェネティック・リプログラミング療法のヒト臨床試験を開始",
+          "summary": "Life Biosciencesは、部分的エピジェネティック・リプログラミング療法のヒト臨床試験を開始し、長寿バイオテクセクターにとって重要なマイルストーンを達成した。その他の注目すべき進展として、Junevityが老化逆転アプローチを用いた糖尿病と肥満治療の前臨床試験で成功を収めている。",
+          "tag": "バイオテク · 臨床試験",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Life Biosciences",
+              "url": "https://www.lifebiosciences.com/"
+            }
+          ],
+          "image_url": ""
         }
       ]
     },
@@ -539,9 +485,22 @@
       "title": "宇宙",
       "stories": [
         {
-          "headline": "NASA Artemis 2月面ミッション、飛行準備審査を通過",
-          "summary": "NASAのArtemis 2ミッションが2日間の飛行準備審査を経て、2026年4月1日以降の打ち上げに向けた承認を取得。全チームが月周回有人ミッションの打ち上げに「ゴー」と回答。車両組立棟でのロールアウト前の最終作業完了を待つ。",
-          "tag": "探査 · NASA",
+          "headline": "SpaceX、2026年25回目のミッションでStarlink衛星25基を打ち上げ",
+          "summary": "SpaceXは、ヴァンデンバーグ宇宙軍基地からStarlink 17-31ミッションでStarlink V2 Mini衛星25基の軌道投入に成功し、2026年で25回目のStarlinkミッションを達成した。Falcon 9ブースターは着陸に成功し、低軌道ブロードバンドコンステレーションの継続的な拡張を支えている。",
+          "tag": "打ち上げ · SPACEX",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "SpaceX",
+              "url": "https://www.spacex.com/launches/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "NASA宇宙飛行士、新型ソーラーアレイ設置準備で船外活動を開始",
+          "summary": "NASA宇宙飛行士は3月18日、2基のロールアウト型ソーラーアレイの設置準備として国際宇宙ステーション外で第94回・第95回船外活動を実施した。この活動は、運用の継続と増大する電力需要に対応してステーションの電力能力を強化することを目的としている。",
+          "tag": "ISS · NASA",
           "bullets": [],
           "sources": [
             {
@@ -549,67 +508,70 @@
               "url": "https://www.nasa.gov/"
             }
           ],
-          "image_url": "/images/cache/31f70fce1671f58a.jpg"
+          "image_url": ""
         },
         {
-          "headline": "SpaceX、3月の複数打ち上げでStarlink展開を加速",
-          "summary": "SpaceXが3月16日にVandenberg宇宙軍基地からStarlink衛星25基を投入、3月19日と20日にも追加打ち上げを予定。7年未満で数千基の運用衛星を展開し、商用打ち上げ市場での支配的地位を維持している。",
-          "tag": "打ち上げ · Starlink",
+          "headline": "NASA、Artemis II飛行準備審査の最新情報を共有",
+          "summary": "NASAは記者会見を開催し、Artemis II有人月面ミッションの進捗についてNASA長官がタイムラインと準備状況の最新情報を提供した。このミッションは、Artemisプログラム全体の一環として人類を月に帰還させるための重要なステップとなる。",
+          "tag": "探査 · ARTEMIS",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "NASA",
+              "url": "https://www.nasa.gov/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "SpaceX、EchoStar 25を静止軌道へ投入",
+          "summary": "SpaceXは、ケープカナベラルからEchoStar 25通信衛星を打ち上げ、2026年初の静止トランスファー軌道への打ち上げを達成した。この展開は商業衛星サービスを支援し、Falcon 9の異なる軌道領域にわたる継続的な汎用性を実証している。",
+          "tag": "打ち上げ · 商業",
           "bullets": [],
           "sources": [
             {
               "name": "SpaceX",
-              "url": "https://www.spacex.com/"
+              "url": "https://www.spacex.com/launches/"
             }
           ],
-          "image_url": "/images/cache/51c305b814253896.jpg"
+          "image_url": ""
         },
         {
-          "headline": "Blue OriginのNew Glennロケット、デビュー打ち上げに向け準備",
-          "summary": "Blue OriginのNew Glenn大型ロケットが2026年3月にケープカナベラルからAST SpaceMobileのBlueBird 7通信衛星を低軌道へ打ち上げ予定。New Glennは商用大型打ち上げの新たな能力を代表し、Jeff Bezosの宇宙事業にとって重要なマイルストーンとなる。",
-          "tag": "打ち上げ · 商用",
+          "headline": "JAXA HTV-X1補給機、12,000ポンドの物資を届けISSから離脱",
+          "summary": "JAXAの無人補給機HTV-X1は、12,000ポンドの物資と実験機器を届けた後、3月6日にISSから離脱した。この物流ミッションは、軌道上の研究施設への補給と科学研究における国際協力の継続を裏付けている。",
+          "tag": "ISS · JAXA",
           "bullets": [],
           "sources": [
             {
-              "name": "Blue Origin",
-              "url": "https://www.blueorigin.com/"
+              "name": "NASA",
+              "url": "https://www.nasa.gov/"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "インドのGaganyaan-1無人試験飛行、3月下旬に予定",
-          "summary": "ISROは将来の有人宇宙飛行ミッションに向けたインド初の無人軌道試験飛行Gaganyaan-1を2026年3月下旬に打ち上げることを目指す。独立した有人宇宙探査能力の開発に向けた重要なステップとなる。",
-          "tag": "探査 · インド",
+          "headline": "SpaceX Crew-12宇宙飛行士、ISSで科学実験を継続",
+          "summary": "2月下旬にNASAのSpaceX Crew-12ミッションで打ち上げられた4名の宇宙飛行士が、国際宇宙ステーションで実験を続けている。クルーは、ステーションの継続的な研究プログラムの一環として幅広い科学的調査を支援している。",
+          "tag": "ISS · クルー",
           "bullets": [],
           "sources": [
             {
-              "name": "ISRO",
-              "url": "https://www.isro.gov.in/"
+              "name": "NASA",
+              "url": "https://www.nasa.gov/"
             }
-          ]
-        },
-        {
-          "headline": "複数の商用ロケットが2026年に初打ち上げを計画",
-          "summary": "Rocket LabのNeutron、Firefly AerospaceのEclipse、Phantom SpaceのDaytona Iなど、複数のスタートアップロケットが2026年を通じて初飛行を予定。これらの新型機はSpaceXの支配的地位に挑戦し、商用打ち上げ市場における大きな競争とイノベーションを代表している。",
-          "tag": "スタートアップ · 打ち上げ",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Space.com",
-              "url": "https://www.space.com/"
-            }
-          ]
+          ],
+          "image_url": ""
         }
       ]
     },
     {
       "id": "sports-entertainment",
-      "title": "スポーツ＆エンターテインメント",
+      "title": "スポーツ＆エンタメ",
       "stories": [
         {
-          "headline": "MLB、NBC・Netflix・ESPNとの短期放映権契約を締結",
-          "summary": "MLBが2026〜28年の全国メディア放映権契約を発表。NBCUniversalとNetflixを追加し、ESPN契約を年間約5億5,000万ドルの同等価値で再構成。Netflixは2026年のYankees対Giants開幕戦、ホームランダービー、Field of Dreamsゲームなど注目イベントを年間約5,000万ドルで獲得。",
-          "tag": "メディア契約 · MLB",
+          "headline": "2026年NFLドラフトランキング：トップ50プロスペクト発表",
+          "summary": "ESPNのField Yatesが、今年のNFLドラフトに向けたトップ50プロスペクトを発表し、プロレベルに進む大学選手の早期評価を提供した。ランキングは、各チームのニーズの変化と新たな才能を反映し、フランチャイズがドラフト当日の選択に備えている。",
+          "tag": "NFL · ドラフト",
           "bullets": [],
           "sources": [
             {
@@ -617,69 +579,72 @@
               "url": "https://www.espn.com/"
             }
           ],
-          "image_url": "/images/cache/472cf1c937cb6bf4.png"
+          "image_url": ""
         },
         {
-          "headline": "NFL、2026年シーズン前のメディア放映権交渉を加速",
-          "summary": "NFLは2029年のオプトアウト期限を前倒し、2026年9月シーズン開始前にParamount、Foxなどとの新メディア放映権契約の最終合意を目指す。各局は現行契約を買い取り即時発効させるが、放映枠は減少しつつも長期的なNFLアクセスを確保。ストリーミングサービスの関心が高まる中での動き。",
-          "tag": "メディア契約 · NFL",
+          "headline": "Miami (OH)がNCAAトーナメントで記録的な3ポイント射撃でSMUを撃破",
+          "summary": "マイアミ・オブ・オハイオがFirst Fourの対戦で16本の3ポイントシュートを沈め、1999年以来初のNCAAトーナメント勝利を収めた。この番狂わせは、プログラムにとって重要なマイルストーンであり、マーチ・マッドネスの波乱の伝統を継続するものとなった。",
+          "tag": "NCAA · バスケットボール",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ESPN",
+              "url": "https://www.espn.com/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "大谷翔平、スプリングトレーニングで5イニングに到達",
+          "summary": "ドジャースのスター、大谷翔平は最新のスプリングトレーニング登板で5イニングに到達し、レギュラーシーズンへの準備を続けている。この進展は、二刀流の天才が開幕日に向けてフル投球態勢に入る軌道にあることを示している。",
+          "tag": "MLB · スプリングトレーニング",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ESPN",
+              "url": "https://www.espn.com/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "McDonald's All-Americanドキュメンタリー『Meal Ticket』がPrime Videoで配信開始",
+          "summary": "McDonald's All-American Gamesの49年の歴史を追った新ドキュメンタリーがAmazon Prime Videoで配信開始された。この作品は、バスケットボール界で最も権威あるアマチュアショーケースの一つと、NBAキャリアを築く上での影響を深く掘り下げている。",
+          "tag": "配信 · ドキュメンタリー",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Amazon Prime Video",
+              "url": "https://www.amazon.com/primevideo"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "Seattle Kraken、TEGNAとAmazonとの配信契約で地域展開を拡大",
+          "summary": "Seattle Krakenは、TEGNAおよびAmazonとの新たな配信契約を通じて太平洋岸北西部市場での存在感を確立している。この戦略的メディアパートナーシップは、NHLフランチャイズの地域視聴者の拡大と市場ポジションの強化を目指すものだ。",
+          "tag": "NHL · メディア契約",
           "bullets": [],
           "sources": [
             {
               "name": "Sports Business Journal",
               "url": "https://www.sportsbusinessjournal.com/"
             }
-          ]
+          ],
+          "image_url": ""
         },
         {
-          "headline": "メディア幹部、NFLの次期2,000億ドル放映権サイクルを争奪",
-          "summary": "Google、YouTube、Paramount、Netflix、Disneyのトップ幹部がスーパーボウルLXに集結し、NFLの次期放映権パッケージのポジション取りを展開。YouTubeの2026年国際試合独占やSunday Ticketを含むNFL関与の拡大が、CBSやFoxが保有する日曜日の放映枠への脅威となっている。",
-          "tag": "メディア契約 · ストリーミング",
+          "headline": "MLS 2026シーズン、新チケッティングパートナーと共に開幕",
+          "summary": "2026年メジャーリーグサッカーシーズンの開幕に伴い、複数の新しいプライマリーチケッティングプラットフォームが運用を開始した。この変更は、リーグ拡大するフランチャイズベース全体でのチケット配布、ファンアクセス、収益最適化への進化したアプローチを反映している。",
+          "tag": "MLS · ビジネス",
           "bullets": [],
           "sources": [
             {
-              "name": "The Athletic",
-              "url": "https://theathletic.com/"
+              "name": "MLS",
+              "url": "https://www.mlssoccer.com/"
             }
           ],
-          "image_url": "/images/cache/bcafe56f4233f5e4.png"
-        },
-        {
-          "headline": "ESPN、再編された契約でMLB.TV配信権を獲得",
-          "summary": "MLBの新メディア契約に基づき、ESPNが2026年からMLB.TVの地域外ストリーミングサービスの販売・配信権を取得。スポーツストリーミングの集約とD2Cオファリングの強化というESPNの戦略に合致する。",
-          "tag": "ストリーミング · MLB",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "ESPN",
-              "url": "https://www.espn.com/"
-            }
-          ],
-          "image_url": "/images/cache/472cf1c937cb6bf4.png"
-        },
-        {
-          "headline": "NFL、ESPN Network売却後に空いた放映枠をオークション",
-          "summary": "NFL Network、RedZone、追加試合のESPNへの売却に伴い、NFLが4つの放映枠をオークションにかけ、YouTubeが有力候補。この動きはリーグの10%出資を通じてESPNとのNFL関係を強化しつつ、本格的な放映権交渉に先立つ収益増加を図る。",
-          "tag": "メディア契約 · NFL",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Bloomberg",
-              "url": "https://www.bloomberg.com/"
-            }
-          ]
-        },
-        {
-          "headline": "ParamountとCBS、NFL放映権更新への準備を表明",
-          "summary": "Paramount-SkydanceとCBS SportsがNFL更新の最初の交渉者として準備を整えている。CEO David EllisonはWarner Bros. Discovery買収後のコミットメントを表明し、CBSは77億ドルのUFC契約を締結したばかり。FoxもCEO Lachlan Murdochが当初価格に懸念を示しつつ、後に続く可能性がある。",
-          "tag": "メディア契約 · 放送",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Variety",
-              "url": "https://variety.com/"
-            }
-          ]
+          "image_url": ""
         }
       ]
     }
