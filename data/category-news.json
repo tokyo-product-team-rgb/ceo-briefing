@@ -1,101 +1,58 @@
 {
-  "date": "2026-03-19",
-  "generatedAt": "2026-03-19T13:22:11.871062+00:00",
+  "date": "2026-03-20",
+  "generatedAt": "2026-03-20T22:15:00+09:00",
   "categoryNews": [
     {
       "id": "us",
       "title": "United States",
       "stories": [
         {
-          "headline": "Federal Reserve Holds Rates Steady Amid Iran Conflict Energy Pressures",
-          "summary": "The Fed kept interest rates unchanged as persistent inflation driven by surging energy prices from the US-Iran conflict complicated monetary policy. Gulf oil flow disruptions have pushed national gas averages to $3.90 per gallon, forcing Chair Powell to balance economic slowdown risks against inflation control.",
-          "tag": "ECONOMY · FED",
+          "headline": "Government Shutdown Enters Second Week Over DHS Funding Impasse",
+          "summary": "The partial government shutdown deepened as the White House and Democrats failed to reach agreement on Department of Homeland Security funding, with immigration enforcement reforms at the center of the dispute. The stalemate intensified after public backlash over citizen deaths during federal raids in Minnesota forced the administration to address Congress without resolution.",
+          "tag": "POLICY · SHUTDOWN",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ABC News",
-              "url": "https://abcnews.go.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/world/us/"}],
+          "image_url": null
         },
         {
-          "headline": "Trump Criticizes NATO Allies Over Lack of Support in Iran Campaign",
-          "summary": "President Trump blasted NATO members for not assisting US strikes on Iranian targets as Tehran retaliated by hitting Gulf energy infrastructure. The criticism stems from Trump's unilateral push to secure the Strait of Hormuz without allied backing, escalating tensions on day 19 of the conflict.",
-          "tag": "FOREIGN POLICY · NATO",
+          "headline": "Trump Signs Executive Orders to Boost Housing Affordability",
+          "summary": "President Trump signed two executive orders targeting regulatory barriers to home construction and mortgage access, directing agencies like EPA, HUD, and Fannie Mae to streamline permitting and purchase $200 billion in mortgage bonds. The moves respond to a 4-million-home shortage since the 2008 crisis and bipartisan pressure ahead of midterm elections where affordability is a top voter concern.",
+          "tag": "POLICY · HOUSING",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ABC News",
-              "url": "https://abcnews.go.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "AP News", "url": "https://apnews.com/article/trump-housing-executive-orders"}],
+          "image_url": "https://dims.apnews.com/dims4/default/295c329/2147483647/strip/true/crop/675x450+12+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F90%2F29%2F4e3c1cc7446089a9101a7bdff4c8%2Fdefaultshareimage-copy.png"
         },
         {
-          "headline": "Counterterrorism Director Resigns Over Iran Policy Disagreements",
-          "summary": "The counterterrorism director resigned amid internal Trump administration splits on Iran war escalation, following US bunker-buster strikes that killed senior Iranian figures. The resignation highlights deepening divisions as intelligence officials face Congressional grilling over war risks and lack of pre-briefing on retaliatory threats.",
-          "tag": "POLITICS · NATIONAL SECURITY",
+          "headline": "White House Restricts Wall Street from Buying Single-Family Homes",
+          "summary": "A presidential action restricts large institutional investors from purchasing single-family homes, prioritizing families over corporate buyers. The order mandates federal agencies to issue guidance within 60 days, driven by widespread complaints that Wall Street firms with vast resources are crowding out middle-class buyers and converting neighborhoods into investment assets.",
+          "tag": "POLICY · HOUSING",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ABC News",
-              "url": "https://abcnews.go.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/world/us/"}],
+          "image_url": null
         },
         {
-          "headline": "Partial Government Shutdown Causes Airport Chaos as TSA Workers Go Unpaid",
-          "summary": "Nearly 10% of TSA agents called out sick without pay during a shutdown linked to Iran war funding debates, causing massive airport disruptions. The situation compounds economic strain as federal operations falter amid heightened security concerns including an IED incident at MacDill Air Force Base.",
-          "tag": "GOVERNMENT · SHUTDOWN",
+          "headline": "Trump Reverses Course on Minnesota Immigration Enforcement",
+          "summary": "The Trump administration halted aggressive immigration operations in Minnesota following public outrage over the death of Alex Pretti, an American citizen, during a federal raid. The concession aims to de-escalate tensions amid the DHS shutdown deadlock, though officials reaffirmed enforcement as a priority.",
+          "tag": "POLICY · IMMIGRATION",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ABC News",
-              "url": "https://abcnews.go.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "AP News", "url": "https://apnews.com/"}],
+          "image_url": null
         },
         {
-          "headline": "Judge Challenges Musk and DOGE Over USAID Closure",
-          "summary": "A federal judge is scrutinizing Elon Musk's Department of Government Efficiency for shutting down USAID as part of broader Trump-era cuts to federal agencies. The legal challenge questions the enforcement authority behind DOGE's agency closures and their impact on foreign aid tied to domestic budget priorities.",
-          "tag": "REGULATION · GOVERNMENT",
+          "headline": "Bipartisan Housing Bills Advance in Senate with 89-10 Vote",
+          "summary": "The Senate passed significant housing reform legislation with overwhelming bipartisan support to increase construction and limit institutional ownership of residential properties. The bills gained White House backing due to voter demands for affordability solutions in a historically tight housing market ahead of midterms.",
+          "tag": "LEGISLATION · HOUSING",
           "bullets": [],
-          "sources": [
-            {
-              "name": "YouTube",
-              "url": "https://www.youtube.com/watch?v=VwrdSjSSgrE"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/world/us/"}],
+          "image_url": null
         },
         {
-          "headline": "Gas Prices Hit $3.90 Average as Iran Strikes Disrupt Gulf Energy Supply",
-          "summary": "Iran's barrages on Gulf infrastructure and US-Israeli responses targeting Iranian gas fields have crippled oil supply through key shipping straits. The supply disruption is driving up US fuel costs and broader market volatility, worsening the inflation outlook even as Trump prioritizes restoring flows.",
-          "tag": "ECONOMY · ENERGY",
+          "headline": "Executive Order Creates Government Fraud Elimination Task Force",
+          "summary": "The Federal Register published Executive Order 14395 establishing a task force to eliminate fraud across government operations. The order reflects administration priorities to curb waste and boost efficiency in domestic spending amid economic pressures and regulatory scrutiny.",
+          "tag": "POLICY · REGULATION",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ABC News",
-              "url": "https://abcnews.go.com/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "UK Seeks US Cooperation in Expanding Epstein Investigation",
-          "summary": "British authorities investigating Jeffrey Epstein's network are formally requesting US assistance, focusing on cross-border ties amid ongoing revelations. The probe potentially intersects with regulatory scrutiny on powerful figures during a period of heightened economic and geopolitical turmoil.",
-          "tag": "JUSTICE · INVESTIGATION",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "ABC News",
-              "url": "https://abcnews.go.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Federal Register", "url": "https://www.federalregister.gov/"}],
+          "image_url": null
         }
       ]
     },
@@ -104,82 +61,52 @@
       "title": "Artificial Intelligence",
       "stories": [
         {
-          "headline": "OpenAI Releases GPT-5.4 'Thinking' Model with Million-Token Context",
-          "summary": "OpenAI launched GPT-5.4 with enhanced step-by-step reasoning, an 'extreme thinking' mode for complex problems, and million-token context windows. The model reflects the industry shift toward deliberative inference over raw scale, enabling enterprise workflows like software interaction and large-scale data processing.",
-          "tag": "MODELS · OPENAI",
+          "headline": "Anthropic Blacklisted by Trump Administration Over Pentagon Refusal",
+          "summary": "Anthropic was labeled a 'national security risk' after refusing to allow Pentagon use of Claude for mass surveillance or autonomous weapons systems. OpenAI subsequently announced its own Pentagon deal, sparking industry-wide debate over AI red lines and the militarization of large language models.",
+          "tag": "REGULATION · DEFENSE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "OpenAI",
-              "url": "https://openai.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "AI Weekly", "url": "https://ai-weekly.ai/newsletter-03-03-2026/"}],
+          "image_url": "https://ai-weekly.ai/wp-content/uploads/2026/03/ai-weekly-206-1920x1080-at-100.jpg"
         },
         {
-          "headline": "DeepSeek Launches V4 with 1 Trillion Parameters and Multimodal Capabilities",
-          "summary": "DeepSeek V4 introduces MODEL1 architecture with tiered KV cache achieving 40% memory reduction and Sparse FP8 decoding for 1.8x inference speedup. The release consolidates text, image, audio, and video into a single model, simplifying developer integrations while prioritizing knowledge density over parameter count.",
-          "tag": "MODELS · DEEPSEEK",
+          "headline": "Morgan Stanley Predicts 2026 'Intelligence Explosion' from Massive Compute Scaling",
+          "summary": "Morgan Stanley forecasts a 2026 intelligence explosion driven by massive compute doubling, citing Elon Musk's 10x compute scaling plans. However, the report warns the U.S. faces a 9-18 GW power shortfall by 2028 that could bottleneck AI infrastructure growth.",
+          "tag": "INFRASTRUCTURE · COMPUTE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "DeepSeek",
-              "url": "https://deepseek.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Fortune", "url": "https://fortune.com/2026/03/13/elon-musk-morgan-stanley-ai-leap-2026/"}],
+          "image_url": null
         },
         {
-          "headline": "Google DeepMind Unveils Gemini 3.1 Flash-Lite and Deep Think for Math Breakthroughs",
-          "summary": "Flash-Lite targets cost-efficient developer workloads while Deep Think autonomously solved open math problems including Erdős Conjectures, scoring 90% on IMO-ProofBench. Google's Bayesian teaching method enables LLMs to dynamically update beliefs on new evidence, advancing agentic AI capabilities.",
-          "tag": "MODELS · GOOGLE",
+          "headline": "Beijing AI and Robotics Expo Showcases Healthcare-Focused Smart Robots",
+          "summary": "The Beijing AI and Robotics Expo (March 18-20) highlighted China's push in embodied AI with healthcare-focused smart robots including TCM diagnostics systems, humanoid performers, and real-time AI learning systems. The event underscored China's strategy to lead in AI applications for healthcare, manufacturing, and services sectors.",
+          "tag": "ROBOTICS · CHINA",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Google DeepMind",
-              "url": "https://deepmind.google/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Euronews", "url": "https://www.euronews.com/video/2026/03/18/china-beijing-ai-and-robotics-expo-highlights-healthcare-focused-smart-robots"}],
+          "image_url": null
         },
         {
-          "headline": "Cerebras Partners with AWS for Fastest AI Inference via Bedrock",
-          "summary": "AWS deployed Cerebras CS-3 systems with disaggregated architecture using Trainium for prefill and WSE for decode, boosting token throughput 5x. The partnership enables high-speed enterprise inference on open-source LLMs and Nova models through AWS Bedrock, significantly reducing inference costs.",
-          "tag": "INFRASTRUCTURE · AWS",
+          "headline": "OpenAI's $110B Raise Tied to AGI Milestones",
+          "summary": "OpenAI's massive $110 billion funding round is structured with most capital conditional on achieving AGI milestones, signaling investor confidence in near-term breakthroughs. The deal reflects a broader industry shift from AI prompting toward building autonomous AI skills and automations for enterprise use.",
+          "tag": "FUNDING · AGI",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Cerebras",
-              "url": "https://cerebras.ai/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "AI Weekly", "url": "https://ai-weekly.ai/newsletter-03-03-2026/"}],
+          "image_url": null
         },
         {
-          "headline": "Ai2 Releases Olmo Hybrid Achieving 2x Data Efficiency",
-          "summary": "The Allen Institute's 7B-parameter open model combines transformer attention and linear recurrent layers, matching Olmo 3 accuracy on MMLU with 49% fewer training tokens. The hybrid architecture proves that combining attention mechanisms can rival pure transformers while dramatically lowering training barriers for enterprises.",
-          "tag": "OPEN SOURCE · RESEARCH",
+          "headline": "Bezos Launches 'Project Prometheus' AI Infrastructure Initiative",
+          "summary": "Jeff Bezos unveiled Project Prometheus, a new AI infrastructure initiative focused on chip development and automation. The project joins a growing wave of mega-investments in AI compute infrastructure as demand for training and inference capacity continues to outstrip supply.",
+          "tag": "INFRASTRUCTURE · INVESTMENT",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Allen Institute for AI",
-              "url": "https://allenai.org/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "AI Weekly", "url": "https://ai-weekly.ai/newsletter-03-03-2026/"}],
+          "image_url": null
         },
         {
-          "headline": "Industry Trend: Diffusion Models and Efficiency Gains Reshape AI Landscape",
-          "summary": "March 2026 sees growing focus on knowledge density in pre-training, native multimodality across leading models, and emerging text diffusion for parallel token generation. These developments are cutting inference costs and enabling more capable agentic enterprise tools, with predictions of mainstream diffusion LLMs by year-end.",
-          "tag": "TRENDS · INDUSTRY",
+          "headline": "Enterprise AI Shifts from Prompting to Autonomous Automations",
+          "summary": "Industry reports urge enterprises to move beyond prompt-based AI interactions toward building AI skills and autonomous automations. Predictions suggest small AI-native companies could soon outcompete incumbents by leveraging agentic AI, falling inference costs, and multimodal capabilities.",
+          "tag": "ENTERPRISE · AGENTIC AI",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Various",
-              "url": "https://arxiv.org/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "AI Apps", "url": "https://www.aiapps.com/blog/ai-news-march-2026-breakthroughs-launches-trends/"}],
+          "image_url": null
         }
       ]
     },
@@ -188,82 +115,52 @@
       "title": "Venture Capital & Startups",
       "stories": [
         {
-          "headline": "AI Startups Dominate Q1 2026 Venture Capital with Mega-Rounds",
-          "summary": "AI companies continue to capture the lion's share of venture funding with multiple mega-rounds exceeding $500M in Q1 2026. The concentration reflects investor conviction that AI infrastructure and applications represent generational opportunities, with robotics and cybersecurity also attracting outsized capital.",
+          "headline": "AMI Labs Launches with Record $1.03B Seed Round Led by Cathay Innovation",
+          "summary": "AMI Labs shattered seed funding records with a $1.03 billion round led by Cathay Innovation, reflecting the extraordinary appetite for AI and deep tech startups. The massive early-stage investment sets new valuation benchmarks and signals that investors are willing to make outsized bets on transformative technology from day one.",
           "tag": "FUNDING · AI",
           "bullets": [],
-          "sources": [
-            {
-              "name": "TechCrunch",
-              "url": "https://techcrunch.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Startups Gallery", "url": "https://startups.gallery/news"}],
+          "image_url": null
         },
         {
-          "headline": "SparkLabs Launches $20M Fund with King Saud University",
-          "summary": "SparkLabs announced a $20 million fund partnered with King Saud University, signaling increased VC attention to innovation ecosystems outside Silicon Valley. The fund aims to foster opportunities for engineers and entrepreneurs in Saudi Arabia by combining academic talent with global investors.",
-          "tag": "FUND LAUNCH · MIDDLE EAST",
+          "headline": "Cape Raises $100M Series C for Privacy-First Mobile Connectivity",
+          "summary": "Cape secured $100 million in Series C funding co-led by Bain Capital Ventures and IVP to build privacy-first mobile connectivity solutions. The investment targets growing enterprise and government demand for protection against cellular security threats amid rising concerns about surveillance and data interception.",
+          "tag": "FUNDING · CYBERSECURITY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "SparkLabs",
-              "url": "https://www.sparklabsgroup.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "BusinessWire", "url": "https://www.businesswire.com/newsroom/subject/funding"}],
+          "image_url": null
         },
         {
-          "headline": "Emerging Tech Startups Attract Record $33.1B in Early-Stage Capital",
-          "summary": "Venture firms deployed $33.1 billion across 874 pre-seed, seed, and early-stage deals in emerging technologies, setting a new record despite lower overall deal volume. ETI-backed startups demonstrated superior performance with a 9.2% exit rate and 4.0% unicorn rate compared to broader venture averages.",
-          "tag": "EARLY STAGE · FUNDING",
+          "headline": "Standard Template Labs Debuts with $49M Seed from ICONIQ and CRV",
+          "summary": "New York-based Standard Template Labs emerged from stealth with $49 million in seed funding co-led by ICONIQ and CRV, signaling strong investor conviction in innovative tech infrastructure. The large seed round reflects the current market trend of bigger checks earlier as top VCs compete for promising founders.",
+          "tag": "FUNDING · INFRASTRUCTURE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "PitchBook",
-              "url": "https://pitchbook.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "VC News Daily", "url": "https://vcnewsdaily.com"}],
+          "image_url": null
         },
         {
-          "headline": "Capital Super-Concentration Creates Two-Tier Funding Market",
-          "summary": "While AI, fintech, robotics, and cybersecurity startups secure large rounds rapidly, traditional SaaS and software companies face stricter financing conditions and valuation pressure. This bifurcation reflects a shift toward high-conviction bets in transformative technologies rather than broad-based startup funding.",
-          "tag": "MARKET · TRENDS",
+          "headline": "Raven.io Closes $20M Seed for Runtime Application Cybersecurity",
+          "summary": "Palo Alto-based Raven.io raised $20 million in seed funding for its runtime application security platform that prevents attacks in real-time. The funding reflects surging demand for AI-driven cybersecurity solutions as enterprise attack surfaces expand with cloud-native and AI-powered applications.",
+          "tag": "FUNDING · CYBERSECURITY",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Crunchbase",
-              "url": "https://www.crunchbase.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "VC News Daily", "url": "https://vcnewsdaily.com"}],
+          "image_url": null
         },
         {
-          "headline": "Fintech and Healthtech See Renewed Institutional Interest",
-          "summary": "Fintech attracted $2.1 billion and healthtech/wellness matched at $2.1 billion in recent venture activity, while climate tech drew $1.9 billion. Biotechnology staged a notable rebound with $657 million across 15 deals, many involving clinical-stage assets and AI-driven drug discovery.",
-          "tag": "SECTOR · FUNDING",
+          "headline": "Allica Bank Hits $1.2B Valuation as UK SME Fintech Unicorn",
+          "summary": "UK-based Allica Bank achieved unicorn status with a $1.2 billion valuation in its latest funding round, focused on SME lending. The milestone highlights continued investor interest in niche fintech segments serving underbanked small business markets.",
+          "tag": "FUNDING · FINTECH",
           "bullets": [],
-          "sources": [
-            {
-              "name": "CB Insights",
-              "url": "https://www.cbinsights.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "MEAN CEO Blog", "url": "https://blog.mean.ceo/funding-round-of-the-month-news-march-2026/"}],
+          "image_url": null
         },
         {
-          "headline": "Growth-Stage Funding Remains Constrained While Seed Stays Resilient",
-          "summary": "Seed-stage investing continues with strong deal flow in AI and automation, but growth-stage capital remains tightened with investors demanding stronger fundamentals and cash flow visibility. Series B and C rounds are expected to proceed more slowly with greater discipline throughout 2026.",
-          "tag": "MARKET · GROWTH STAGE",
+          "headline": "Wynnchurch Capital Acquires Arcosa Marine Products for $450M",
+          "summary": "Private equity firm Wynnchurch Capital acquired Arcosa Marine Products for $450 million, spotlighting opportunities in specialized industrial manufacturing. The deal highlights PE appetite for high-margin, niche industrial assets with stable demand fundamentals.",
+          "tag": "M&A · INDUSTRIAL",
           "bullets": [],
-          "sources": [
-            {
-              "name": "PitchBook",
-              "url": "https://pitchbook.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "MEAN CEO Blog", "url": "https://blog.mean.ceo/funding-round-of-the-month-news-march-2026/"}],
+          "image_url": null
         }
       ]
     },
@@ -272,82 +169,52 @@
       "title": "Energy & Climate",
       "stories": [
         {
-          "headline": "EIA Forecasts Record 86GW US Power Capacity Additions in 2026",
-          "summary": "The US Energy Information Administration predicts developers will add a record 86GW of new utility-scale power capacity in 2026, with solar PV dominating at 43.4GW (51% of total), up 60% from 2025. Texas will host 40% of new solar including the 837MW Tehuacana Creek 1 project co-located with 418MW storage.",
-          "tag": "RENEWABLES · SOLAR",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "PV Tech",
-              "url": "https://www.pv-tech.org/eia-us-add-record-43-4gw-new-utility-scale-solar-pv-capacity-2026/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "SEIA Projects US Battery Storage Deployments to Surge to 70GWh in 2026",
-          "summary": "The Solar Energy Industries Association forecasts US battery storage deployments will reach 70GWh in 2026, following 57GWh added in 2025. Over half of utility-scale storage will be paired with solar in southwestern states, underscoring storage's growing role in grid reliability.",
-          "tag": "STORAGE · BATTERIES",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "JD Supra",
-              "url": "https://www.jdsupra.com/legalnews/renewable-energy-update-3-3-26-1275556/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "California Orders Utilities to Procure 6GW Non-Fossil Capacity by 2032",
-          "summary": "The California Public Utilities Commission mandated load-serving entities to add 6GW of zero-emitting capacity from 2029-2032 to address reliability shortfalls from demand growth. The order targets grid stability amid rising electrification needs across the state.",
-          "tag": "REGULATION · CALIFORNIA",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "JD Supra",
-              "url": "https://www.jdsupra.com/legalnews/renewable-energy-update-3-3-26-1275556/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "US Wind Capacity Rebounds with 11.8GW Additions Including Major Offshore Projects",
-          "summary": "Wind additions are set to double to 11.8GW in 2026, led by New Mexico, Texas, Illinois, and Wyoming comprising nearly 60% of total. Key projects include the 3,650MW SunZia onshore wind farm and delayed offshore projects Vineyard Wind 1 (800MW) and Revolution Wind (715MW).",
-          "tag": "WIND · OFFSHORE",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Solar Quarter",
-              "url": "https://solarquarter.com/2026/02/24/u-s-power-capacity-additions-to-hit-record-86-gw-in-2026-led-by-solar-and-storage-eia/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Deloitte Warns of Slower Renewables Growth Post-2026 Amid FEOC Rules",
-          "summary": "Deloitte projects US solar, wind, and storage additions could drop to 30-66GW annually from 2026-2030 due to new foreign entity of concern sourcing restrictions on China-linked supply chains. Despite a potential 2026 surge from safe-harbor projects, longer-term growth faces structural headwinds.",
-          "tag": "OUTLOOK · SUPPLY CHAIN",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Deloitte",
-              "url": "https://www.deloitte.com/us/en/insights/industry/renewable-energy/renewable-energy-industry-outlook.html"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Iran Conflict Disrupts Gulf Oil Flows, Spiking Global Energy Prices",
-          "summary": "Iranian strikes on Gulf energy infrastructure and US-Israeli responses targeting Iranian gas fields have disrupted oil supply through key shipping straits. The disruption has pushed US gas averages to $3.90/gallon and created broader market volatility across global energy commodities.",
+          "headline": "Oil Surges Past $100 as Gulf Crisis Disrupts Strait of Hormuz",
+          "summary": "Brent crude closed above $100 for the first time in four years as traders priced in prolonged supply disruptions from attacks on ships and mines in the Strait of Hormuz linked to the Iran conflict. The price spike has increased demand for Russian oil and gas, generating €6 billion in sales over two weeks, while China's renewable energy capacity provides a buffer against the volatility.",
           "tag": "OIL · GEOPOLITICS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ABC News",
-              "url": "https://abcnews.go.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/business/energy/"}],
+          "image_url": null
+        },
+        {
+          "headline": "Energy Secretary Backs Indian Point Nuclear Restart in New York",
+          "summary": "The U.S. Energy Secretary endorsed restarting the shuttered Indian Point nuclear plant in New York to bolster domestic energy security amid global fossil fuel disruptions. The push supports a broader nuclear resurgence driven by AI datacenter power demands and geopolitical instability threatening oil supply chains.",
+          "tag": "NUCLEAR · POLICY",
+          "bullets": [],
+          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/business/energy/"}],
+          "image_url": null
+        },
+        {
+          "headline": "China Joins Global Pledge to Triple Nuclear Power, Finalizes 15th Five-Year Plan",
+          "summary": "China signed on to the global nuclear power tripling pledge while finalizing its 15th five-year plan, which includes hydrogen pilot programs. The move was vindicated by the Gulf oil crisis, as China's clean energy strategy continues to insulate it from fossil fuel price volatility.",
+          "tag": "NUCLEAR · CHINA",
+          "bullets": [],
+          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/business/energy/"}],
+          "image_url": null
+        },
+        {
+          "headline": "UN Climate Chief: War-Driven Oil Spikes Prove Renewables Are the Answer",
+          "summary": "The UN climate chief declared that oil price spikes from the Gulf conflict validate the case for renewable energy, arguing that reliance on fossil fuels transported through vulnerable chokepoints is 'delusional.' The comments echo lessons from the Ukraine war energy crisis, where countries with strong renewable capacity fared better.",
+          "tag": "RENEWABLES · POLICY",
+          "bullets": [],
+          "sources": [{"name": "UN News", "url": "https://news.un.org/en/"}],
+          "image_url": null
+        },
+        {
+          "headline": "U.S. Solar Installations Drop 14% Year-Over-Year",
+          "summary": "U.S. solar installations declined 14% from 2024 to 2025 amid a Trump administration push to fast-track fossil fuel permitting. Despite the short-term decline, industry experts project a long-term renewables surge as economics and energy security concerns continue to favor clean energy deployment.",
+          "tag": "SOLAR · MARKETS",
+          "bullets": [],
+          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/business/energy/"}],
+          "image_url": null
+        },
+        {
+          "headline": "Greenpeace Ordered to Pay $345M Over Dakota Pipeline Protest",
+          "summary": "A jury held Greenpeace liable for $345 million in damages for protests that delayed crude oil pipeline construction in the Dakotas. The landmark verdict underscores escalating tensions between fossil fuel interests and climate activism, potentially chilling future protest movements.",
+          "tag": "LEGAL · ACTIVISM",
+          "bullets": [],
+          "sources": [{"name": "Reuters", "url": "https://www.reuters.com/business/energy/"}],
+          "image_url": null
         }
       ]
     },
@@ -356,69 +223,52 @@
       "title": "Health & Wellness",
       "stories": [
         {
-          "headline": "Astellas and Vir Biotechnology Partner on Prostate Cancer T-Cell Engager",
-          "summary": "Astellas Pharma and Vir Biotechnology announced a global collaboration to co-develop VIR-5500, a dual-masked CD3 T-cell engager targeting PSMA for prostate cancer treatment. Vir is eligible for up to $1.37 billion in milestones plus tiered royalties, with updated Phase 1 data to be presented at the 2026 ASCO GU Symposium.",
-          "tag": "PHARMA · ONCOLOGY",
+          "headline": "FDA Approves First TAVR System for Severe Aortic Regurgitation",
+          "summary": "JenaValve Technology announced FDA approval of the Trilogy Transcatheter Heart Valve System for high-risk patients with severe aortic regurgitation, making it the only TAVR system approved for this indication. The approval addresses a significant unmet need in structural heart disease treatment where surgical options were previously the only path.",
+          "tag": "FDA · DEVICES",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Astellas",
-              "url": "https://www.astellas.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "JenaValve", "url": "https://www.jenavalve.com/"}],
+          "image_url": null
         },
         {
-          "headline": "Fierce Healthcare Names 'Fierce 15 of 2026' Top Innovators",
-          "summary": "Fierce Healthcare published its annual spotlight on leading companies in healthcare providers, payers, and technology innovation. The report highlights key industry developments including economic strains in emergency medicine and efforts to reimagine prior authorization for greater transparency.",
-          "tag": "INNOVATION · HEALTHTECH",
+          "headline": "AMA Testifies on Healthcare Affordability and Physician Shortage Crisis",
+          "summary": "AMA Board Chair testified before Congress that financial challenges facing physician practices are driving higher costs, longer waits, and reduced access for patients, particularly in underserved areas. The AMA simultaneously backed new legislation to address the growing physician shortage as healthcare demand outpaces workforce growth.",
+          "tag": "POLICY · WORKFORCE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Fierce Healthcare",
-              "url": "https://www.fiercehealthcare.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "AMA", "url": "https://www.ama-assn.org/"}],
+          "image_url": null
         },
         {
-          "headline": "Moody's Issues Negative 2026 Outlook for Health Insurers",
-          "summary": "Moody's forecasted a negative outlook for health insurers in 2026, citing intensifying cost pressures amid broader healthcare economics challenges. The warning aligns with discussions on emergency department financial strains and lawmakers considering curbs on provider consolidation to control costs.",
-          "tag": "INSURANCE · OUTLOOK",
+          "headline": "CMS Imposes Nationwide Moratorium on New Medical Supply Enrollments",
+          "summary": "CMS imposed a six-month moratorium on new durable medical equipment suppliers amid a major fraud crackdown tied to a Texas Medicare fraud case. The action includes a $259 million Medicaid deferral to Minnesota and the launch of the CRUSH anti-fraud initiative under CMS Administrator Dr. Mehmet Oz.",
+          "tag": "REGULATION · FRAUD",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Moody's",
-              "url": "https://www.moodys.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "CMS", "url": "https://www.cms.gov/"}],
+          "image_url": null
         },
         {
-          "headline": "Stemtech Launches 'Revolution 2026' Cellular Wellness Initiative",
-          "summary": "Stemtech announced a major initiative marking a new era in proactive, science-backed cellular-level wellness after 20 years in stem cell nutrition. The multi-channel growth model emphasizes natural plant-based ingredients and expansion into oral, skin care, and pet health products targeting anti-aging demand.",
-          "tag": "WELLNESS · ANTI-AGING",
+          "headline": "Medicare AI Pilot Raises Concerns as It Delays Care for Seniors",
+          "summary": "A Medicare pilot program requiring AI-driven prior authorization for certain senior care in six states is drawing criticism for delaying treatment access. The program highlights the tension between using AI to reduce costs and ensuring timely care delivery for vulnerable populations.",
+          "tag": "AI · MEDICARE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Stemtech",
-              "url": "https://stemtech.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "WP Intelligence", "url": "https://www.washingtonpost.com/"}],
+          "image_url": null
         },
         {
-          "headline": "HLTH USA Conference Draws 25,000 to Focus on AI and Data in Healthcare",
-          "summary": "The HLTH USA event gathered 25,000 professionals from pharma, tech, AI, and health systems in Las Vegas to discuss ROI, data workflows, and transformative healthcare innovations. The conference reflects growing convergence between AI capabilities and healthcare delivery optimization.",
-          "tag": "CONFERENCE · HEALTHTECH",
+          "headline": "Wisconsin Extends Postpartum Medicaid Coverage to 12 Months",
+          "summary": "Governor Tony Evers signed a bill expanding Wisconsin's postpartum Medicaid coverage from 60 days to a full year, fulfilling a long-standing budget priority. The expansion aims to reduce maternal mortality by ensuring continuous healthcare access during the critical first year after childbirth.",
+          "tag": "POLICY · MATERNAL HEALTH",
           "bullets": [],
-          "sources": [
-            {
-              "name": "HLTH",
-              "url": "https://www.hlth.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Wisconsin State Legislature", "url": "https://legis.wisconsin.gov/"}],
+          "image_url": null
+        },
+        {
+          "headline": "MedPAC Recommends Above-Current-Law Pay Increases for Physicians",
+          "summary": "The Medicare Payment Advisory Commission's March 2026 report recommends above-current-law payment updates for physicians in 2027, while holding hospital payments at current law levels. The report also proposes $1 billion in additional funding for safety-net hospitals via a new index to address health equity disparities.",
+          "tag": "POLICY · MEDICARE",
+          "bullets": [],
+          "sources": [{"name": "MedPAC", "url": "https://www.medpac.gov/"}],
+          "image_url": null
         }
       ]
     },
@@ -427,56 +277,52 @@
       "title": "Longevity & Aging",
       "stories": [
         {
-          "headline": "Scientists Reveal Cancer Risk of Popular Anti-Aging Compound",
-          "summary": "Researchers discovered that a molecule linked to longevity may have dual effects—supporting healthy cells while potentially accelerating cancer growth. The team identified eIF5A2 as a promising therapeutic target that could selectively slow cancer progression without interfering with beneficial longevity effects of related compounds.",
-          "tag": "RESEARCH · RISK",
+          "headline": "Life Biosciences Enrolls Patients in First Epigenetic Reprogramming Human Trials",
+          "summary": "Life Biosciences began enrolling patients in FDA-cleared human trials for partial epigenetic reprogramming to reverse vision loss in glaucoma and NAION via eye injections. The trials represent a landmark moment for longevity science, translating David Sinclair's Harvard research into clinical application with results expected by late 2026.",
+          "tag": "CLINICAL TRIALS · EPIGENETICS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Nature",
-              "url": "https://www.nature.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Fortune", "url": "https://fortune.com/2026/01/30/billionaires-longevity-aging-fda-human-clinical-trial-life-biosciences-jerry-mclaughlin-david-sinclair-harvard-science/"}],
+          "image_url": null
         },
         {
-          "headline": "Eric Verdin Projects Anti-Aging Drugs by 2030",
-          "summary": "Leading aging researcher Eric Verdin discussed the trajectory of anti-aging drug development, projecting that by 2030 the field will have drugs demonstrably targeting the aging process. The discussion covered emerging interventions including CD38 inhibitors that extend lifespan in mice and the role of creatine in supporting mitochondrial health.",
-          "tag": "RESEARCH · DRUG DEVELOPMENT",
+          "headline": "Anti-Aging Compound eIF5A2 Found to Boost Both Healthy Cells and Cancer",
+          "summary": "A March 2026 study revealed that the longevity-linked molecule eIF5A2, regulated by polyamines, promotes cancer growth via ribosome interactions while its cousin eIF5A1 provides anti-aging benefits. The discovery identifies eIF5A2 as a selective therapeutic target, potentially enabling anti-aging treatments without the cancer risk.",
+          "tag": "RESEARCH · MOLECULAR",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Buck Institute",
-              "url": "https://www.buckinstitute.org/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Science Daily", "url": "https://www.sciencedaily.com/releases/2026/03/260302030657.htm"}],
+          "image_url": null
         },
         {
-          "headline": "Longevity Market Expected to Grow at 6% CAGR from $15.8B Base",
-          "summary": "The longevity and anti-senescence therapy market is projected to grow from $15.8 billion in 2025 at a 6% compound annual growth rate, driven by expanding clinical programs and growing older populations. Increased public and private funding for aging biology research is accelerating commercialization timelines.",
-          "tag": "MARKET · GROWTH",
+          "headline": "Harvard Scientist at WGS 2026: Aging Could Soon Be Reversible",
+          "summary": "A Harvard researcher announced at the World Government Summit that historic first tests to reverse aging are imminent, building on prior breakthroughs in epigenetic reprogramming. The claim generated significant attention as the field moves from animal models to human clinical trials.",
+          "tag": "RESEARCH · REPROGRAMMING",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Grand View Research",
-              "url": "https://www.grandviewresearch.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "World Government Summit", "url": "https://www.worldgovernmentssummit.org/media-hub/news/detail/ageing-could-soon-be-reversible-says-harvard-scientist-at-wgs-2026"}],
+          "image_url": null
         },
         {
-          "headline": "Life Biosciences Begins Human Trials for Epigenetic Reprogramming Therapy",
-          "summary": "Life Biosciences has entered human trials for its partial epigenetic reprogramming therapy, marking a significant milestone for the longevity biotech sector. Other notable developments include Junevity showing preclinical success in diabetes and obesity treatment using age-reversal approaches.",
-          "tag": "BIOTECH · CLINICAL TRIALS",
+          "headline": "Targeting Longevity 2026 Congress Shifts Focus to Biological Coordination",
+          "summary": "The 2nd World Congress on Targeting Longevity (April 8-9, Berlin) announced a paradigm shift from 'fixing aging' to preserving biological coordination between mitochondria, microbiota, metabolism, and immunity. Recent studies highlighting mitochondrial-inflammation links and microbiota-brain interactions drove the reconceptualization of aging as systemic coordination failure.",
+          "tag": "CONFERENCE · SCIENCE",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Life Biosciences",
-              "url": "https://www.lifebiosciences.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/1116021"}],
+          "image_url": null
+        },
+        {
+          "headline": "Junevity Reports Preclinical Success with siRNA for Diabetes and Obesity",
+          "summary": "Longevity startup Junevity reported preclinical siRNA successes showing improved glucose and insulin levels without weight gain for diabetes, and 30% weight loss for obesity. The results position the company as a potential competitor in the booming metabolic health space currently dominated by GLP-1 drugs.",
+          "tag": "BIOTECH · METABOLIC",
+          "bullets": [],
+          "sources": [{"name": "WeCureLabs", "url": "https://wewillcure.com/insights/company-profiles/anti-aging-and-longevity-startups-to-watch"}],
+          "image_url": null
+        },
+        {
+          "headline": "CD38 Inhibitors Extend Mouse Lifespan as Aging Drug Pipeline Grows",
+          "summary": "New research on CD38 inhibitors demonstrated lifespan extension in mice, joining rapamycin, urolithin A, and creatine in a growing pipeline of aging-targeting compounds. Eric Verdin, MD predicts aging-targeting drugs with proven efficacy by 2030, driven by convergent advances in mitochondrial biology and metabolic pathways.",
+          "tag": "RESEARCH · DRUGS",
+          "bullets": [],
+          "sources": [{"name": "A4M Blog", "url": "https://blog.a4m.com/healthy-holistic-and-happening-now-a-look-at-longevity-trends-for-2026/"}],
+          "image_url": null
         }
       ]
     },
@@ -485,82 +331,52 @@
       "title": "Space",
       "stories": [
         {
-          "headline": "SpaceX Launches 25 Starlink Satellites from Vandenberg on 25th Mission of 2026",
-          "summary": "SpaceX successfully deployed 25 Starlink V2 Mini satellites on the Starlink 17-31 mission from Vandenberg Space Force Base, marking the company's 25th Starlink mission of 2026. The Falcon 9 booster landed successfully, supporting continued expansion of the low Earth orbit broadband constellation.",
-          "tag": "LAUNCH · SPACEX",
+          "headline": "Artemis 2 SLS Rocket Begins Rollout to Launch Pad for April Lunar Mission",
+          "summary": "NASA's SLS rocket began rollout to the launch pad for the Artemis 2 crewed lunar flyby mission, targeted for no earlier than April 1. The rollout follows a successful flight readiness review on March 12 and repairs to helium flow issues discovered in the Vehicle Assembly Building.",
+          "tag": "NASA · ARTEMIS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "SpaceX",
-              "url": "https://www.spacex.com/launches/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Space.com", "url": "https://www.space.com/artemis-2-rollout"}],
+          "image_url": null
         },
         {
-          "headline": "NASA Astronauts Begin Spacewalks to Prepare ISS for New Solar Arrays",
-          "summary": "NASA astronauts conducted spacewalks 94 and 95 outside the International Space Station on March 18 to prepare for installing two roll-out solar arrays. The extravehicular activities aim to enhance the station's power capabilities amid ongoing operations and growing energy demands.",
-          "tag": "ISS · NASA",
+          "headline": "SpaceX Fires Up Next-Gen 'V3' Starship for First Time",
+          "summary": "SpaceX conducted the first static fire test of its next-generation V3 Starship ahead of an April launch attempt. The upgraded vehicle represents a significant step toward SpaceX's goals of increased payload capacity and rapid reusability for both commercial and NASA missions.",
+          "tag": "SPACEX · STARSHIP",
           "bullets": [],
-          "sources": [
-            {
-              "name": "NASA",
-              "url": "https://www.nasa.gov/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Space.com", "url": "https://www.space.com/"}],
+          "image_url": null
         },
         {
-          "headline": "NASA Shares Artemis II Flight Readiness Review Update",
-          "summary": "NASA hosted a news conference to discuss progress on the Artemis II crewed lunar mission, with the Administrator providing updates on timeline and readiness. The mission represents a critical step toward returning humans to the Moon as part of the broader Artemis program.",
-          "tag": "EXPLORATION · ARTEMIS",
+          "headline": "NASA Overhauls Artemis Program: New Test Mission Added, Moon Landing Pushed to 2028",
+          "summary": "NASA restructured the Artemis program, adding a new Artemis 3 mission in 2027 for low-Earth orbit tests of SpaceX and Blue Origin lunar landers, while pushing the actual moon landing to Artemis 4 in 2028. The NASA OIG noted gaps in lander testing and crew survival analyses that necessitated the schedule change.",
+          "tag": "NASA · ARTEMIS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "NASA",
-              "url": "https://www.nasa.gov/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "NASA", "url": "https://www.nasa.gov/artemis/"}],
+          "image_url": null
         },
         {
-          "headline": "SpaceX Delivers EchoStar 25 to Geosynchronous Orbit",
-          "summary": "SpaceX achieved its first 2026 launch to geosynchronous transfer orbit with the EchoStar 25 communications satellite from Cape Canaveral. The deployment supports commercial satellite services and demonstrates Falcon 9's continued versatility across different orbital regimes.",
-          "tag": "LAUNCH · COMMERCIAL",
+          "headline": "ISS Astronauts Complete Spacewalks to Install New Solar Arrays",
+          "summary": "NASA astronauts Jessica Mir and Chris Williams spent approximately 6.5 hours outside the ISS installing equipment for new roll-out solar arrays to boost the station's power capacity. The spacewalks (EVA 94 and 95) are part of ongoing upgrades to extend ISS operations through the end of the decade.",
+          "tag": "ISS · OPERATIONS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "SpaceX",
-              "url": "https://www.spacex.com/launches/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "NASA", "url": "https://www.nasa.gov/station/"}],
+          "image_url": null
         },
         {
-          "headline": "JAXA HTV-X1 Cargo Spacecraft Departs ISS After Delivering 12,000 Pounds of Supplies",
-          "summary": "JAXA's uncrewed HTV-X1 spacecraft departed the ISS on March 6 after delivering 12,000 pounds of supplies and experiments. The logistics mission underscores ongoing international collaboration for station resupply and scientific research aboard the orbital laboratory.",
-          "tag": "ISS · JAXA",
+          "headline": "SpaceX Continues Starlink Blitz with 35th Mission of 2026",
+          "summary": "SpaceX launched multiple Starlink missions this week deploying batches of 29 V2 Mini satellites each, marking the 35th Starlink mission of 2026. The rapid cadence reflects SpaceX's push to complete the next-generation constellation for enhanced global broadband coverage.",
+          "tag": "SPACEX · STARLINK",
           "bullets": [],
-          "sources": [
-            {
-              "name": "NASA",
-              "url": "https://www.nasa.gov/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/"}],
+          "image_url": null
         },
         {
-          "headline": "SpaceX Crew-12 Astronauts Continue Science Expedition on ISS",
-          "summary": "Four astronauts launched on NASA's SpaceX Crew-12 mission in late February are conducting ongoing experiments aboard the International Space Station. The crew supports a wide range of scientific investigations as part of the station's continuous research program.",
-          "tag": "ISS · CREW",
+          "headline": "Japan's Space One Kairos Rocket Explodes During Third Test Flight",
+          "summary": "Japan's Space One suffered another setback as its Kairos small satellite launch vehicle exploded during its third test flight on March 3. The failure raises questions about the company's path to commercial operations as Japan seeks to develop a competitive private launch sector.",
+          "tag": "JAPAN · LAUNCHES",
           "bullets": [],
-          "sources": [
-            {
-              "name": "NASA",
-              "url": "https://www.nasa.gov/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Space.com", "url": "https://www.space.com/"}],
+          "image_url": null
         }
       ]
     },
@@ -569,82 +385,52 @@
       "title": "Sports & Entertainment",
       "stories": [
         {
-          "headline": "2026 NFL Draft Rankings: Top 50 Prospects Released",
-          "summary": "ESPN's Field Yates published his top 50 prospects for the upcoming NFL draft, providing early evaluation of college players preparing for the professional level. The rankings reflect shifting team needs and emerging talent as franchises prepare for draft day selections.",
-          "tag": "NFL · DRAFT",
+          "headline": "March Madness Upsets Shatter Brackets as VCU Stages Historic Comeback",
+          "summary": "No. 11 VCU stunned No. 6 North Carolina 82-78 in overtime after overcoming a 19-point deficit — the largest first-round comeback in NCAA tournament history. Lazar Djokovic's go-ahead three-pointer with 15 seconds left sealed VCU's first tournament win since 2016.",
+          "tag": "NCAA · MARCH MADNESS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ESPN",
-              "url": "https://www.espn.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "ESPN", "url": "https://www.espn.com/mens-college-basketball/tournament/bracket"}],
+          "image_url": "https://a.espncdn.com/combiner/i?img=/i/espn/misc_logos/500/ncaa_mens_womens_basketball.png"
         },
         {
-          "headline": "Miami (OH) Upsets SMU in NCAA Tournament with Record Three-Point Shooting",
-          "summary": "Miami of Ohio defeated SMU in a First Four matchup by sinking 16 three-pointers, securing their first NCAA tournament win since 1999. The upset marks a significant milestone for the program and continues March Madness tradition of bracket-busting performances.",
-          "tag": "NCAA · BASKETBALL",
+          "headline": "No. 12 High Point Upsets No. 5 Wisconsin in Tournament's First Upset",
+          "summary": "High Point edged Wisconsin 83-82 in what became the tournament's first major upset, eliminating over 700,000 perfect brackets in one game. The result continued a trend of mid-major programs competing at the highest level during March Madness.",
+          "tag": "NCAA · MARCH MADNESS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ESPN",
-              "url": "https://www.espn.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "ESPN", "url": "https://www.espn.com/mens-college-basketball/"}],
+          "image_url": null
         },
         {
-          "headline": "Shohei Ohtani Reaches 5th Inning in Spring Training Progression",
-          "summary": "Dodgers star Shohei Ohtani continued building toward regular season readiness by reaching the fifth inning in his latest spring training appearance. The development indicates the two-way phenom is on track for full pitching duties as Opening Day approaches.",
-          "tag": "MLB · SPRING TRAINING",
+          "headline": "No. 1 Duke Survives Scare from No. 16 Siena",
+          "summary": "Top overall seed Duke held off No. 16 Siena 71-65, narrowly avoiding a potential historic upset that would have echoed the UMBC-Virginia shock. Duke advances to face TCU in the second round as the tournament's top overall seed.",
+          "tag": "NCAA · MARCH MADNESS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "ESPN",
-              "url": "https://www.espn.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "ESPN", "url": "https://www.espn.com/mens-college-basketball/"}],
+          "image_url": null
         },
         {
-          "headline": "'Meal Ticket' McDonald's All-American Documentary Premieres on Prime Video",
-          "summary": "A new documentary chronicling the 49-year history of the McDonald's All-American Games premiered on Amazon Prime Video. The film provides an in-depth look at one of basketball's most prestigious amateur showcases and its impact on launching NBA careers.",
-          "tag": "STREAMING · DOCUMENTARY",
+          "headline": "No. 11 Texas Pulls Off Back-to-Back Upsets, Advances to Face Gonzaga",
+          "summary": "Texas upset both NC State and No. 6 BYU as an 11-seed, advancing to face Gonzaga and slashing the number of perfect brackets to roughly 30,000. The Longhorns' run has become one of the tournament's most compelling Cinderella stories.",
+          "tag": "NCAA · MARCH MADNESS",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Amazon Prime Video",
-              "url": "https://www.amazon.com/primevideo"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "ESPN", "url": "https://www.espn.com/mens-college-basketball/"}],
+          "image_url": null
         },
         {
-          "headline": "Seattle Kraken Expands Regional Reach with TEGNA and Amazon Distribution Deals",
-          "summary": "The Seattle Kraken is establishing itself in the Pacific Northwest market through new distribution agreements with TEGNA and Amazon. The strategic media partnerships are designed to expand the NHL franchise's regional viewership and strengthen its market position.",
-          "tag": "NHL · MEDIA DEALS",
+          "headline": "PGA of America Extends NBC Sports Media Rights Through 2033",
+          "summary": "The PGA of America extended its media rights agreement with NBC Sports and USA Sports through 2033, covering the Ryder Cup, KPMG Women's PGA Championship, and other major events. The deal reflects the escalating value of live sports rights as media companies compete for premium content to drive streaming subscriptions.",
+          "tag": "MEDIA · GOLF",
           "bullets": [],
-          "sources": [
-            {
-              "name": "Sports Business Journal",
-              "url": "https://www.sportsbusinessjournal.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "NBC Sports", "url": "https://www.nbcsports.com/pressbox/press-releases/pga-of-america-nbc-sports-and-usa-sports-extend-media-rights-agreement-through-2033"}],
+          "image_url": "https://nbcsports.brightspotcdn.com/dims4/default/3b23341/2147483647/strip/true/crop/1920x1080+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fe7%2Fbd%2Fab6c0ea94a9b923b8a0827a7c866%2Fnbc-sports-pressbox.png"
         },
         {
-          "headline": "MLS 2026 Season Launches with New Primary Ticketing Partners",
-          "summary": "Multiple new primary ticketing platforms began operations with the start of the 2026 Major League Soccer season. The changes reflect evolving approaches to ticket distribution, fan access, and revenue optimization across the league's expanding franchise base.",
-          "tag": "MLS · BUSINESS",
+          "headline": "Media M&A Rebounds with Sports Rights as Key Driver",
+          "summary": "Media mergers and acquisitions are rebounding in 2026 with sports rights as the primary catalyst, fueled by escalating deals like the NBA's $70 billion package. Institutional investments in franchises and sports tech are accelerating as live sports remain the most valuable content category for traditional and streaming platforms alike.",
+          "tag": "MEDIA · M&A",
           "bullets": [],
-          "sources": [
-            {
-              "name": "MLS",
-              "url": "https://www.mlssoccer.com/"
-            }
-          ],
-          "image_url": ""
+          "sources": [{"name": "Grant Thornton", "url": "https://www.grantthornton.com/insights/articles/media-entertainment/2026/media-ma-reshapes-the-power-map"}],
+          "image_url": null
         }
       ]
     }
