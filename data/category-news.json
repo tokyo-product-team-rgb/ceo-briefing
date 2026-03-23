@@ -1,65 +1,57 @@
 {
-  "date": "2026-03-21",
-  "generatedAt": "2026-03-21T22:15:00+09:00",
+  "date": "2026-03-23",
+  "generatedAt": "2026-03-23T22:18:00+09:00",
   "categoryNews": [
     {
       "id": "us",
       "title": "United States",
       "stories": [
         {
-          "headline": "Trump Administration Launches Strikes on Iran, Sparking War Powers Resolutions",
-          "summary": "The Trump Administration initiated military strikes on Iran late Friday, with President Trump vowing to continue until objectives are met. This escalation prompted bipartisan resolutions in both the House (led by Reps. Massie and Khanna) and Senate (led by Sen. Kaine) to limit executive war powers, reflecting deep tensions over presidential authority in foreign policy.",
-          "tag": "MILITARY · FOREIGN POLICY",
+          "headline": "DHS Funding Stalemate Triggers Airport Chaos as Partial Shutdown Enters Second Week",
+          "summary": "Democrats blocked DHS funding unless immigration agents identify themselves and avoid racial profiling, leading to unpaid TSA workers and widespread travel disruptions. President Trump threatened to deploy ICE agents to airports if no deal is reached, escalating the crisis as the partial government shutdown stretches into its second week.",
+          "tag": "POLICY · IMMIGRATION",
           "bullets": [],
-          "sources": [{"name": "Congress.gov", "url": "https://www.congress.gov"}],
+          "sources": [{"name": "ABC News", "url": "https://abcnews.com/video/131300679/"}],
+          "image_url": "https://i.abcnewsfe.com/a/80905c1d-627f-4d1e-a4f4-630dfd6fecf7/260322_gma_burridge_iran1_hpMain_16x9.jpg?w=992"
+        },
+        {
+          "headline": "Trump Issues 48-Hour Ultimatum to Iran Over Strait of Hormuz Closure",
+          "summary": "Trump demanded Iran reopen the Strait of Hormuz or face bombings of its power plants, following weeks of escalating US-Israel strikes and Iranian missile retaliation. The ultimatum threatens global trade routes as the Strait handles roughly 20% of the world's oil supply, sending shockwaves through energy markets.",
+          "tag": "POLICY · FOREIGN AFFAIRS",
+          "bullets": [],
+          "sources": [{"name": "ABC News", "url": "https://abcnews.com/video/131300679/"}],
+          "image_url": "https://i.abcnewsfe.com/a/80905c1d-627f-4d1e-a4f4-630dfd6fecf7/260322_gma_burridge_iran1_hpMain_16x9.jpg?w=992"
+        },
+        {
+          "headline": "Fuel Price Surge from Iran Conflict Disrupts US Economy",
+          "summary": "Iran's closure of the Strait of Hormuz amid escalating conflict has spiked fuel costs across the US, causing widespread economic fallout as global oil supplies are choked. Treasury officials warn of further retaliation risks if the US strikes Iranian infrastructure, with higher consumer prices and market volatility already rippling through the economy.",
+          "tag": "ECONOMY · ENERGY MARKETS",
+          "bullets": [],
+          "sources": [{"name": "ABC News", "url": "https://abcnews.com/video/131300679/"}],
+          "image_url": "https://i.abcnewsfe.com/a/80905c1d-627f-4d1e-a4f4-630dfd6fecf7/260322_gma_burridge_iran1_hpMain_16x9.jpg?w=992"
+        },
+        {
+          "headline": "Federal Judge Blocks Pentagon Press Restrictions Citing First Amendment Overreach",
+          "summary": "A federal judge halted key portions of new Department of Defense policies that would have allowed punishing reporters for unfavorable coverage, following a lawsuit by the New York Times. The ruling cited overreach by the Trump administration amid war tensions, reinforcing press freedom protections during a period of heightened government secrecy.",
+          "tag": "POLICY · REGULATION",
+          "bullets": [],
+          "sources": [{"name": "ABC News", "url": "https://abcnews.com/video/131300679/"}],
           "image_url": null
         },
         {
-          "headline": "Partial Government Shutdown Continues as DHS Funding Stalemate Persists",
-          "summary": "The Department of Homeland Security remains shut down due to an impasse between the White House and Democrats over ICE reforms, causing airport disruptions. Republicans are pushing the SAVE America Act with voter ID requirements, while negotiations collapsed ahead of senators' recess, underscoring midterm battles over border security and fiscal priorities.",
-          "tag": "GOVERNMENT · SHUTDOWN",
+          "headline": "Senate Holds Emergency Session on DHS Funding and Save America Act",
+          "summary": "Weekend negotiations stalled over immigration policy changes tied to the broader Save America Act, prolonging the government shutdown affecting security operations nationwide. The impasse reflects deepening partisan divides on enforcement policy amid rising border pressures and public frustration with disrupted federal services.",
+          "tag": "POLICY · LEGISLATION",
           "bullets": [],
-          "sources": [{"name": "Reuters", "url": "https://www.reuters.com"}],
+          "sources": [{"name": "ABC News", "url": "https://abcnews.com/video/131303792/"}],
           "image_url": null
         },
         {
-          "headline": "Trump Signs Executive Orders to Boost Housing Construction and Affordability",
-          "summary": "President Trump signed two executive orders to cut regulatory red tape on new home builds and streamline mortgage processes via CFPB changes, targeting a 4 million home shortage that has persisted since the 2008 crisis. The orders respond to bipartisan congressional pushes, including the Senate's 89-10 passage of major housing reform, as voters rank housing costs among their top concerns.",
-          "tag": "POLICY · HOUSING",
+          "headline": "Stocks Slide Toward Correction Territory on Iran Escalation Fears",
+          "summary": "Major indices tumbled as investors priced in prolonged Iran war risks, including potential US strikes on energy infrastructure and continued Hormuz disruptions. Economists highlight oil price shocks driving inflation expectations higher and creating supply chain bottlenecks reminiscent of 2022's commodity crisis.",
+          "tag": "MARKETS · EQUITIES",
           "bullets": [],
-          "sources": [{"name": "White House", "url": "https://www.whitehouse.gov"}],
-          "image_url": null
-        },
-        {
-          "headline": "Trump Imposes Temporary Import Duties to Tackle Balance-of-Payments Deficit",
-          "summary": "President Trump proclaimed temporary import duties under Section 122 and ended de minimis exemptions for low-value shipments to address international payment imbalances threatening U.S. economic security. This follows a Supreme Court decision limiting tariff powers but continues Trump's strategy to rebalance trade and protect domestic workers via USTR Section 301 probes.",
-          "tag": "TRADE · TARIFFS",
-          "bullets": [],
-          "sources": [{"name": "USTR", "url": "https://ustr.gov"}],
-          "image_url": null
-        },
-        {
-          "headline": "Major Corporate Investments Surge Under 'Trump Effect' in Manufacturing",
-          "summary": "Companies including Clarios ($6B expansion), UCB ($5B U.S. factory), and Ford ($5B in plants) announced billions in domestic investments to reshore manufacturing. The White House is tracking these announcements as evidence of its tariff and deregulation push creating jobs and attracting capital, with smaller investments from Hadrian and Pratt & Whitney adding to the momentum.",
-          "tag": "ECONOMY · MANUFACTURING",
-          "bullets": [],
-          "sources": [{"name": "White House", "url": "https://www.whitehouse.gov"}],
-          "image_url": null
-        },
-        {
-          "headline": "Senate Advances Housing Affordability Legislation Amid Bipartisan Push",
-          "summary": "The Senate is set to vote Monday on the Housing for the 21st Century Act after passing related bipartisan bills overwhelmingly, though it faces House delays over policy differences. Driven by voter concerns over housing shortages and costs, the legislation complements Trump's executive orders and represents the most significant housing policy reform in decades.",
-          "tag": "LEGISLATION · HOUSING",
-          "bullets": [],
-          "sources": [{"name": "Senate.gov", "url": "https://www.senate.gov"}],
-          "image_url": null
-        },
-        {
-          "headline": "DOJ Antitrust Chief Resigns Amid Policy Shifts",
-          "summary": "DOJ Antitrust Chief Abigail Slater resigned amid broader internal tensions over enforcement priorities and trust issues exposed in leaked recordings. The departure coincides with the administration's evolving approach to both antitrust and immigration enforcement, highlighting friction within the DOJ under Republican control.",
-          "tag": "REGULATION · DOJ",
-          "bullets": [],
-          "sources": [{"name": "DOJ", "url": "https://www.justice.gov"}],
+          "sources": [{"name": "ABC News", "url": "https://abcnews.com/video/131300679/"}],
           "image_url": null
         }
       ]
@@ -69,68 +61,52 @@
       "title": "Artificial Intelligence",
       "stories": [
         {
-          "headline": "Cerebras Systems Deployed on AWS for Fastest AI Inference",
-          "summary": "AWS is integrating Cerebras CS-3 systems into Bedrock, pairing AWS Trainium for prefill with Cerebras WSE for decode in a disaggregated architecture that achieves 5x higher token throughput. This collaboration leverages specialized hardware to optimize inference phases, addressing enterprise demands for high-speed AI processing using open-source LLMs and Amazon Nova models.",
-          "tag": "INFRASTRUCTURE · CLOUD",
+          "headline": "OpenAI Releases GPT-5.4 with 1M Token Context and Extreme Reasoning Mode",
+          "summary": "OpenAI rushed GPT-5.4 amid competitive pressures and a prior trust crisis from GPT-5.3, prioritizing step-by-step reasoning, coding, and agentic capabilities like web browsing and document manipulation. The efficiency-focused upgrade reduces hallucinations and token usage compared to GPT-5.2, enabling multi-hour autonomous tasks and cheaper inference for enterprise automation.",
+          "tag": "MODELS · GPT",
           "bullets": [],
-          "sources": [{"name": "AWS", "url": "https://aws.amazon.com"}],
+          "sources": [{"name": "Champaign Magazine", "url": "https://champaignmagazine.com/2026/03/08/ai-by-ai-weekly-top-5-march-2-8-2026/"}],
           "image_url": null
         },
         {
-          "headline": "Ai2 Releases Olmo Hybrid: 2x Data Efficiency via Hybrid Architecture",
-          "summary": "Ai2 launched the 7B-parameter Olmo Hybrid, combining transformer attention with linear recurrent layers to match Olmo 3's MMLU accuracy using 49% fewer tokens. The redesign challenges pure transformer dominance and enables more efficient model training amid rising compute costs, achieving roughly 2x data efficiency in pretraining.",
+          "headline": "DeepSeek Launches V4: 1 Trillion Parameters with Multimodal and Efficiency Innovations",
+          "summary": "DeepSeek V4 debuted to capitalize on China's AI surge, introducing MODEL1 architecture with tiered KV cache cutting memory by 40% and Sparse FP8 decoding achieving 1.8x speedup at 1M+ token contexts. The advances reflect the industry trend toward knowledge density over raw scale, simplifying multimodal integrations for developers.",
+          "tag": "MODELS · DEEPSEEK",
+          "bullets": [],
+          "sources": [{"name": "Mean CEO Blog", "url": "https://blog.mean.ceo/new-ai-model-releases-news-march-2026/"}],
+          "image_url": null
+        },
+        {
+          "headline": "Allen Institute Releases Olmo Hybrid: 2x Data Efficiency via Hybrid Architecture",
+          "summary": "AI2 launched Olmo Hybrid to challenge transformer dominance, blending attention with linear recurrent layers for 49% fewer tokens at matching MMLU accuracy and better long-context recall. This open-source breakthrough responds to rising training costs, proving hybrid designs enable precise, cheaper reasoning for startups and researchers.",
           "tag": "MODELS · OPEN SOURCE",
           "bullets": [],
-          "sources": [{"name": "Ai2", "url": "https://allenai.org"}],
+          "sources": [{"name": "Radical Data Science", "url": "https://radicaldatascience.wordpress.com/2026/03/18/ai-news-briefs-bulletin-board-for-march-2026/"}],
+          "image_url": "https://radicaldatascience.wordpress.com/wp-content/uploads/2026/03/claude_project_prompt.png"
+        },
+        {
+          "headline": "AWS Deploys Cerebras CS-3 for 5x Faster AI Inference on Bedrock",
+          "summary": "AWS integrated Cerebras WSE systems with Trainium in a disaggregated setup, pairing prefill with decode phases to dramatically boost token throughput for open LLMs and Nova models. This infrastructure move addresses enterprise demand for high-speed inference, enabling scalable AI workloads without full-scale hardware overhauls.",
+          "tag": "INFRA · AWS",
+          "bullets": [],
+          "sources": [{"name": "Radical Data Science", "url": "https://radicaldatascience.wordpress.com/2026/03/18/ai-news-briefs-bulletin-board-for-march-2026/"}],
+          "image_url": "https://radicaldatascience.wordpress.com/wp-content/uploads/2026/03/claude_project_prompt.png"
+        },
+        {
+          "headline": "Google DeepMind Unveils Gemini 3.1 Flash-Lite and Deep Think for Speed and Math Proofs",
+          "summary": "Gemini 3.1 Flash-Lite targets cost-efficient developer scale, while Deep Think autonomously solved open math problems scoring 90% on IMO-ProofBench. Driven by agentic AI competition, these models optimize for fast inference and deliberative reasoning, advancing enterprise tools beyond raw parameter scale.",
+          "tag": "MODELS · GEMINI",
+          "bullets": [],
+          "sources": [{"name": "Champaign Magazine", "url": "https://champaignmagazine.com/2026/03/08/ai-by-ai-weekly-top-5-march-2-8-2026/"}],
           "image_url": null
         },
         {
-          "headline": "Google's Bayesian Teaching Enables LLMs to Update Beliefs with New Evidence",
-          "summary": "Google researchers developed Bayesian teaching, a method that trains LLMs on examples from a Bayesian assistant to handle uncertainty, weigh evidence, and adapt predictions over interactions. This overcomes LLMs' tendency to treat queries independently, improving agent reliability for dynamic enterprise tasks like real-time decision-making.",
-          "tag": "RESEARCH · GOOGLE",
+          "headline": "Yann LeCun's AMI Labs Raises $1.03B for World Models",
+          "summary": "AMI Labs secured over $1 billion in funding to pioneer world models, fueled by Meta's AI infrastructure bets and LeCun's vision for scalable intelligence beyond LLMs. The startup push accelerates foundational research into predictive world simulation, positioning it against Big Tech in long-term model architectures for enterprise applications.",
+          "tag": "FUNDING · WORLD MODELS",
           "bullets": [],
-          "sources": [{"name": "Google Research", "url": "https://research.google"}],
-          "image_url": null
-        },
-        {
-          "headline": "OpenAI Launches GPT-5.3 Instant for Smoother ChatGPT Interactions",
-          "summary": "OpenAI released GPT-5.3 Instant, enhancing conversational flow, answer relevance, and web search integration while reducing refusals for more direct responses. The update responds to user feedback on overly cautious outputs, boosting adoption in both consumer and enterprise chat applications.",
-          "tag": "MODELS · OPENAI",
-          "bullets": [],
-          "sources": [{"name": "OpenAI", "url": "https://openai.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Morgan Stanley Predicts Massive AI Breakthrough in H1 2026 Amid Power Shortfalls",
-          "summary": "Morgan Stanley forecasts a transformative AI leap driven by 10x compute scaling at U.S. labs, citing OpenAI's GPT-5.4 scoring 83% on GDPVal. However, a 9-18 GW U.S. power deficit through 2028 threatens infrastructure buildout, as energy constraints could delay enterprise deployment despite rapid capability advances.",
-          "tag": "ENTERPRISE · INFRASTRUCTURE",
-          "bullets": [],
-          "sources": [{"name": "Morgan Stanley", "url": "https://www.morganstanley.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Nvidia's GTC Keynote Projects $1 Trillion in AI Chip Sales by 2027",
-          "summary": "At GTC, Nvidia CEO Jensen Huang announced $1T in projected AI chip sales and pushed an expanded strategy for AI across training, vehicles, and robotics. The vision expands Nvidia's infrastructure dominance, fueled by partnerships and growing startup ecosystem demand for specialized compute.",
-          "tag": "CHIPS · NVIDIA",
-          "bullets": [],
-          "sources": [{"name": "Nvidia", "url": "https://www.nvidia.com/gtc"}],
-          "image_url": null
-        },
-        {
-          "headline": "Sen. Blackburn Unveils Updated Federal AI Policy Draft for Trump Era",
-          "summary": "Sen. Marsha Blackburn released a revised AI plan imposing a 'duty of care' on developers to mitigate harms, incorporating Kids Online Safety Act elements and eliminating Section 230 protections. The framework overrides state laws per Trump's directive, aiming for unified federal regulation amid accelerating global AI competition.",
-          "tag": "REGULATION · POLICY",
-          "bullets": [],
-          "sources": [{"name": "Senate Commerce Committee", "url": "https://www.commerce.senate.gov"}],
-          "image_url": null
-        },
-        {
-          "headline": "White House Releases National AI Framework for Congressional Action",
-          "summary": "The White House unveiled a framework urging Congress to address AI safety and ethics through uniform federal rules, aligning with Trump's agenda for a single regulatory rulebook. The push responds to rapid model advancements and public concerns over harms in deployment, signaling upcoming legislative action on AI governance.",
-          "tag": "REGULATION · WHITE HOUSE",
-          "bullets": [],
-          "sources": [{"name": "White House", "url": "https://www.whitehouse.gov"}],
-          "image_url": null
+          "sources": [{"name": "Radical Data Science", "url": "https://radicaldatascience.wordpress.com/2026/03/18/ai-news-briefs-bulletin-board-for-march-2026/"}],
+          "image_url": "https://radicaldatascience.wordpress.com/wp-content/uploads/2026/03/claude_project_prompt.png"
         }
       ]
     },
@@ -139,59 +115,51 @@
       "title": "Venture Capital & Startups",
       "stories": [
         {
-          "headline": "Inferact Raises $150M Seed Round for AI Infrastructure Optimization",
-          "summary": "Inferact secured $150 million at the Seed stage to advance AI infrastructure based on vLLM, targeting developers and enterprises for high-performance model deployment. The substantial raise reflects surging investor interest in AI inference optimization tools, driven by demand for efficient scaling across diverse workloads.",
-          "tag": "FUNDING · AI",
+          "headline": "OpenAI Raises $110 Billion at $840 Billion Valuation",
+          "summary": "OpenAI closed a massive round backed by Amazon and Nvidia, reflecting unprecedented investor conviction in AI as the ultimate computing platform. The valuation makes OpenAI one of the most valuable private companies in history, driven by record global VC flows into the AI sector and its dominance in foundational models.",
+          "tag": "FUNDING · LATE-STAGE",
           "bullets": [],
-          "sources": [{"name": "TechCrunch", "url": "https://techcrunch.com"}],
+          "sources": [{"name": "Mean CEO Blog", "url": "https://blog.mean.ceo/top-funded-startups-news-march-2026/"}, {"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/03/openai-anthropic-waymo-dominated-189-billion-vc-investments-february-crunchbase-report/"}],
+          "image_url": "https://techcrunch.com/wp-content/uploads/2024/03/GettyImages-1502217391.jpg?resize=1200,800"
+        },
+        {
+          "headline": "Wayve Raises $1.5 Billion at $8.6 Billion Valuation for Autonomous Driving AI",
+          "summary": "Backed by Uber, Microsoft, and Mercedes-Benz, the round capitalized on autonomous driving AI's potential to redefine mobility at scale. The investment highlights how institutional partnerships and data-driven technology secure massive capital in self-driving ventures amid growing commercial deployment.",
+          "tag": "FUNDING · LATE-STAGE",
+          "bullets": [],
+          "sources": [{"name": "Mean CEO Blog", "url": "https://blog.mean.ceo/top-funded-startups-news-march-2026/"}],
           "image_url": null
         },
         {
-          "headline": "Wayve Secures Record $1.2B Series D for Self-Driving Technology",
-          "summary": "UK-based Wayve raised $1.2 billion backed by Mercedes and Stellantis, marking a major push in autonomous driving innovation. The funding stems from collaborations between tech startups and automakers seeking to consolidate Europe's role in self-driving tech amid profitability-focused investor shifts.",
-          "tag": "FUNDING · AUTONOMOUS",
+          "headline": "Mind Robotics Raises $500M Series A Led by Accel and a16z",
+          "summary": "The oversized Series A funded AI-driven robotics for industrial automation, driven by advances in foundation models enabling real-world manufacturing applications. The deal signals growing convergence of AI with physical tasks and investor appetite for companies bridging software intelligence with hardware execution.",
+          "tag": "FUNDING · SERIES A",
           "bullets": [],
-          "sources": [{"name": "Financial Times", "url": "https://www.ft.com"}],
+          "sources": [{"name": "Basepoint VC", "url": "https://basepoint.vc/stories/startup-funding-roundup-2-march-2026"}],
+          "image_url": "https://basepoint.vc/og-image.png"
+        },
+        {
+          "headline": "Replit Raises $400M Series D Led by Georgian for AI-Assisted Development",
+          "summary": "Investors poured capital into Replit's cloud-based, AI-assisted development platform as part of a broader surge in AI-enabled developer tools. The round reflects strong conviction in browser-native software development amid active funding in automation and coding infrastructure.",
+          "tag": "FUNDING · SERIES D",
+          "bullets": [],
+          "sources": [{"name": "Basepoint VC", "url": "https://basepoint.vc/stories/startup-funding-roundup-2-march-2026"}],
+          "image_url": "https://basepoint.vc/og-image.png"
+        },
+        {
+          "headline": "Cloaked Raises $375M Series B Led by General Catalyst",
+          "summary": "The funding targeted Cloaked's innovations in AI-powered privacy technology, reflecting concentrated VC interest in AI infrastructure and applied categories with clear monetization paths. The round positions Cloaked as a category leader amid growing enterprise demand for privacy-preserving AI solutions.",
+          "tag": "FUNDING · SERIES B",
+          "bullets": [],
+          "sources": [{"name": "Startups Gallery", "url": "https://startups.gallery/news"}],
           "image_url": null
         },
         {
-          "headline": "Plaid Completes Employee Liquidity Round at $8B Valuation",
-          "summary": "Fintech connectivity platform Plaid raised a liquidity round at an $8 billion valuation, down from prior peaks. The deal illustrates heightened investor scrutiny in fintech, with valuations normalizing as investors prioritize revenue stability post-2025 market recovery.",
-          "tag": "FINTECH · VALUATION",
+          "headline": "WorkOS Raises $100M Series C Led by Meritech Capital",
+          "summary": "The round supports WorkOS's enterprise authentication and user management platform, fueled by surging demand for AI-native infrastructure tooling. Net new VC dollars continue to concentrate in growth-stage AI plays with proven enterprise traction and recurring revenue.",
+          "tag": "FUNDING · SERIES C",
           "bullets": [],
-          "sources": [{"name": "Bloomberg", "url": "https://www.bloomberg.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Global M&A Volumes Surge 40% Year-Over-Year, Tech Deals Up 66%",
-          "summary": "Announced global M&A deal volume rose 40% with tech up 66%, fueled by megadeals, buoyant equity markets, and rate-cut expectations. The acceleration is driven by normalized valuations (20-30% below 2021 peaks), $2.5 trillion in corporate cash reserves, and strategic acquisition preferences over organic growth.",
-          "tag": "M&A · TECH",
-          "bullets": [],
-          "sources": [{"name": "PitchBook", "url": "https://pitchbook.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Crypto Startup Funding Dips 13% YoY to $883M in February",
-          "summary": "Crypto ventures raised $883 million in February 2026, a 13% decline from the prior year amid a prolonged bear market. Investors are shifting toward revenue-generating, resilient projects over speculative ones, signaling cooling enthusiasm as broader VC focuses on fundamentals.",
-          "tag": "CRYPTO · FUNDING",
-          "bullets": [],
-          "sources": [{"name": "The Block", "url": "https://www.theblock.co"}],
-          "image_url": null
-        },
-        {
-          "headline": "VC-Backed IPO Volumes Hit $16.8B in 2025, Over 400 Tech Firms Prep for 2026",
-          "summary": "U.S. VC-backed IPOs reached $16.8 billion in 2025 with tech comprising over 40%, driven by easing inflation and Fed rate cuts. Over 400 private tech firms are now preparing for 2026 listings, propelled by improved market conditions and a large backlog of IPO-ready companies.",
-          "tag": "IPO · PIPELINE",
-          "bullets": [],
-          "sources": [{"name": "Renaissance Capital", "url": "https://www.renaissancecapital.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Early-Stage VC Resurgence with Rising Seed and Series A Rounds",
-          "summary": "Seed and Series A funding is climbing in 2026 with stabilized valuations and larger median round sizes serving as a leading indicator of cycle recovery. The uptick is driven by investor pivots to high-potential AI-driven startups amid broader early-stage demand and renewed LP confidence.",
-          "tag": "EARLY STAGE · TREND",
-          "bullets": [],
-          "sources": [{"name": "Crunchbase", "url": "https://www.crunchbase.com"}],
+          "sources": [{"name": "Startups Gallery", "url": "https://startups.gallery/news"}],
           "image_url": null
         }
       ]
@@ -201,67 +169,51 @@
       "title": "Energy & Climate",
       "stories": [
         {
-          "headline": "IEA Prepares to Release Oil Reserves Amid Largest Supply Disruption in History",
-          "summary": "The International Energy Agency is readying 1.4 billion barrels of member nations' oil reserves to counter the biggest supply disruption in oil market history, triggered by a near-halt of shipping through the Strait of Hormuz due to the Iran conflict. Asian countries are hit hardest, with utility companies boosting coal-fired power generation to cut costs and secure supply amid soaring energy prices.",
-          "tag": "OIL · CRISIS",
+          "headline": "US Solar Capacity Set to Triple to 769 GW by 2036",
+          "summary": "The US solar industry is on track to triple its capacity from 279 GW in 2025 to 769 GW by 2036, according to Wood Mackenzie and the Solar Energy Industries Association. Texas alone added roughly 6.5 GW of new solar capacity in 2025, overtaking California as the largest utility-scale solar market despite federal policy headwinds.",
+          "tag": "ENERGY · RENEWABLES",
           "bullets": [],
-          "sources": [{"name": "Carbon Brief", "url": "https://www.carbonbrief.org/debriefed-20-march-2026-energy-crisis-deepens-brazils-new-climate-plan-new-zealand-climate-case/"}],
+          "sources": [{"name": "LCV", "url": "https://lcv.org"}],
+          "image_url": "https://www.lcv.org/wp-content/uploads/2023/03/LCV-Social-Share.png"
+        },
+        {
+          "headline": "Trump Announces First New US Oil Refinery in 50 Years",
+          "summary": "Trump announced plans to open a new oil refinery in Brownsville, Texas—the first US refinery built since 1977—backed by foreign investors. The move represents a significant push toward fossil fuel expansion, reversing decades of refinery consolidation and raising environmental concerns about toxic chemical releases in border communities.",
+          "tag": "ENERGY · OIL",
+          "bullets": [],
+          "sources": [{"name": "LCV", "url": "https://lcv.org"}],
+          "image_url": "https://www.lcv.org/wp-content/uploads/2023/03/LCV-Social-Share.png"
+        },
+        {
+          "headline": "Air Pollution Surges as Coal Power Expands Under Trump Administration",
+          "summary": "New EPA data shows air pollution from coal-powered plants spiked in 2025 with one of the largest annual emissions increases in decades, with sulfur dioxide emissions rising more than 18%. The surge follows Trump's push to expand coal power and represents a major reversal in air quality improvements that had been consistent for over a decade.",
+          "tag": "ENERGY · COAL",
+          "bullets": [],
+          "sources": [{"name": "LCV", "url": "https://lcv.org"}],
           "image_url": null
         },
         {
-          "headline": "Iran War Drives Global Energy Price Spikes, UN Chief Urges Renewable Shift",
-          "summary": "The Middle East conflict has disrupted global energy supplies, causing sharp rises in oil and gas prices similar to the Ukraine war's impacts. UN climate chief Simon Stiell stated at the Green Growth Summit that this volatility demonstrates the strategic value of renewables, calling continued fossil fuel dependency 'delusional.'",
-          "tag": "GEOPOLITICS · ENERGY",
+          "headline": "China's Solar Power Overtakes Wind for First Time in 2025",
+          "summary": "Government statistics revealed that China's solar power generation overtook wind power for the first time in 2025, while overall energy and industry emissions declined by 0.3%. China is also establishing a national low-carbon transition fund to foster hydrogen power and green fuels, demonstrating a strategic pivot in the world's largest energy consumer.",
+          "tag": "ENERGY · RENEWABLES",
           "bullets": [],
-          "sources": [{"name": "UN News", "url": "https://news.un.org/en/story/2026/03/1167135"}],
+          "sources": [{"name": "Carbon Brief", "url": "https://carbonbrief.org"}],
+          "image_url": "https://www.carbonbrief.org/wp-content/uploads/2025/05/Arctic-hero-2-scaled.jpg"
+        },
+        {
+          "headline": "Australia's Grid Hits Record with Renewables Supplying Over 50% of Peak Demand",
+          "summary": "Australia's biggest grid met record electricity demand while renewables supplied over 50% of power for the first time, driven by millions of rooftop solar panels and growing battery storage. The milestone demonstrates that distributed renewable energy and storage can reliably meet peak demand without fossil fuel backup.",
+          "tag": "ENERGY · GRID",
+          "bullets": [],
+          "sources": [{"name": "We Mean Business", "url": "https://wemeanbusinesscoalition.org"}],
           "image_url": null
         },
         {
-          "headline": "Trump Administration Eyes $1B Settlement to Cancel East Coast Windfarms",
-          "summary": "The Trump administration is considering a nearly $1 billion settlement with TotalEnergies to scrap two planned offshore windfarms, redirecting funds to fossil-gas infrastructure in Texas. Per documents reviewed by the New York Times, this prioritizes gas over renewables amid broader policy shifts favoring traditional energy sources.",
-          "tag": "WIND · POLICY",
+          "headline": "UK's First Deep Geothermal Plant Delivers 24/7 Renewable Power",
+          "summary": "Cornwall's first deep geothermal plant is delivering continuous renewable electricity for up to 10,000 homes from nearly 5km below ground, while other UK regions invest in shallow geothermal using water from flooded coal mines. This represents a breakthrough in firm, dispatchable renewable energy that operates independently of weather conditions.",
+          "tag": "ENERGY · GEOTHERMAL",
           "bullets": [],
-          "sources": [{"name": "Carbon Brief", "url": "https://www.carbonbrief.org/debriefed-20-march-2026-energy-crisis-deepens-brazils-new-climate-plan-new-zealand-climate-case/"}],
-          "image_url": null
-        },
-        {
-          "headline": "China Instructs Refiners to Suspend Fuel Exports Amid Iran War",
-          "summary": "Chinese refiners have been ordered to halt diesel and gasoline exports to bolster domestic energy security following the Iran conflict's outbreak. To enhance production, China is waiving import charges on certain oil and gas exploration equipment while advancing its low-carbon transition fund for hydrogen and green fuels.",
-          "tag": "CHINA · ENERGY SECURITY",
-          "bullets": [],
-          "sources": [{"name": "Carbon Brief", "url": "https://www.carbonbrief.org/china-briefing-5-march-2026-new-five-year-climate-goals-revealed-at-two-sessions-meeting/"}],
-          "image_url": null
-        },
-        {
-          "headline": "US Solar Capacity Projected to Triple by 2036 Despite Policy Headwinds",
-          "summary": "The US solar industry is forecasted to expand from 279 GW in 2025 to 769 GW by 2036, driven by plummeting costs and market forces. Through November 2025, 92% of new US power capacity came from solar, wind, or batteries, with renewables expected to dominate 2026 additions even as coal declines.",
-          "tag": "SOLAR · GROWTH",
-          "bullets": [],
-          "sources": [{"name": "LCV", "url": "https://www.lcv.org/media-center/this-week-in-climate-action-march-13-2026/"}],
-          "image_url": null
-        },
-        {
-          "headline": "Coal Emissions Spike 18% in US as Trump Pushes Expansion",
-          "summary": "New EPA data reveals US coal plant sulfur dioxide emissions rose over 18% in 2025, one of the largest annual increases in decades, contributing to acid rain and respiratory issues. The surge coincides with Trump administration efforts to expand coal power, reversing prior emission declines.",
-          "tag": "COAL · EMISSIONS",
-          "bullets": [],
-          "sources": [{"name": "LCV", "url": "https://www.lcv.org/media-center/this-week-in-climate-action-march-13-2026/"}],
-          "image_url": null
-        },
-        {
-          "headline": "Unprecedented US Southwest Heatwave Shatters Records",
-          "summary": "A severe heatwave in the western and southwestern US is breaking dozens of temperature records and potentially triggering drought conditions in California over coming months. Linked to climate change, the extreme weather underscores escalating patterns amid rising global emissions.",
-          "tag": "CLIMATE · EXTREME WEATHER",
-          "bullets": [],
-          "sources": [{"name": "Carbon Brief", "url": "https://www.carbonbrief.org/debriefed-20-march-2026-energy-crisis-deepens-brazils-new-climate-plan-new-zealand-climate-case/"}],
-          "image_url": null
-        },
-        {
-          "headline": "China's Solar Overtakes Wind as Emissions Dip 0.3% in 2025",
-          "summary": "Official statistics show China's energy and industry emissions fell 0.3% in 2025, with solar power generation surpassing wind for the first time due to rapid manufacturing ramps. Solar firms are accelerating production ahead of April export rebate cancellations, aligning with new five-year climate goals.",
-          "tag": "CHINA · SOLAR",
-          "bullets": [],
-          "sources": [{"name": "Carbon Brief", "url": "https://www.carbonbrief.org/china-briefing-5-march-2026-new-five-year-climate-goals-revealed-at-two-sessions-meeting/"}],
+          "sources": [{"name": "We Mean Business", "url": "https://wemeanbusinesscoalition.org"}],
           "image_url": null
         }
       ]
@@ -271,59 +223,51 @@
       "title": "Health & Wellness",
       "stories": [
         {
-          "headline": "Neurowellness and Mental Fitness Emerge as Top 2026 Wellness Trend",
-          "summary": "Growing awareness of brain health as a foundational pillar of longevity is driving neurowellness, with consumers adopting nootropics, cognitive training apps, and mental fitness protocols. This shift stems from research linking cognitive decline to metabolic disorders and inflammation, prompting personalized brain optimization tools.",
-          "tag": "WELLNESS · BRAIN HEALTH",
+          "headline": "Smart Toilets and Saliva Sensors Emerge as Invisible Health Diagnostics",
+          "summary": "Throne's smart toilet device now monitors hydration, gut health, and flags bladder/prostate issues via excretion analysis, while Lura's teeth-attached microsensor tracks saliva for glucose and biologics. This shift arose as wearable data overload pushed innovation toward seamless, clinical-grade tools that integrate into daily routines without constant monitoring.",
+          "tag": "WELLNESS TECH · DIAGNOSTICS",
           "bullets": [],
-          "sources": [{"name": "Well+Good", "url": "https://www.wellandgood.com"}],
-          "image_url": null
+          "sources": [{"name": "Global Wellness Summit", "url": "https://www.globalwellnesssummit.com/blog/the-trend-in-the-news-march-2026/"}],
+          "image_url": "https://www.globalwellnesssummit.com/wp-content/uploads/2026/03/athetltechnews_featured_blog.jpg"
         },
         {
-          "headline": "Muscle Mass Recognized as Key Metabolic Health Marker Beyond Aging",
-          "summary": "Sarcopenia, or muscle loss, is now recognized beyond aging as a driver of insulin resistance and metabolic syndrome, fueling demand for resistance training, protein optimization, and grip strength tracking. A meta-analysis of older adults confirmed ties to high blood pressure and elevated glucose, making muscle preservation a core wellness priority.",
-          "tag": "FITNESS · METABOLIC",
-          "bullets": [],
-          "sources": [{"name": "Nature Medicine", "url": "https://www.nature.com/nm"}],
-          "image_url": null
-        },
-        {
-          "headline": "Anti-Inflammatory Diets and Therapies Surge Amid Chronic Inflammation Evidence",
-          "summary": "Chronic inflammation's role in fatigue, cognitive decline, metabolic dysfunction, and accelerated aging has led to widespread adoption of anti-inflammatory diets, breathwork, and wearables tracking heart rate variability. Social media trends and expert validation underscore inflammation as a root health disruptor driving the wellness industry.",
-          "tag": "NUTRITION · INFLAMMATION",
-          "bullets": [],
-          "sources": [{"name": "Circulate Health", "url": "https://www.circulatehealth.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Vagus Nerve Stimulation Technologies Gain Traction for Multi-System Regulation",
-          "summary": "Non-invasive vagus nerve tools like OhmBody are rising due to their influence on mood, stress, inflammation, cardiovascular function, and reproductive health. Research demonstrates efficacy in treating depression and heavy menstrual bleeding by enhancing nervous system balance.",
-          "tag": "WELLNESS TECH · DEVICES",
-          "bullets": [],
-          "sources": [{"name": "OhmBody", "url": "https://www.ohmbody.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Over-Optimization Backlash Fuels Joyful, Lo-Fi Wellness Travel",
-          "summary": "Fatigue from high-tech wellness pursuits like intermittent fasting, cryotherapy, and GLP-1 drugs is sparking a revolt toward sensory experiences such as star bathing, sauna socials, and DJ-led dances at resorts. This post-hustle era prioritizes socialization and fun over constant self-monitoring and biohacking.",
+          "headline": "Over-Optimization Backlash Fuels Joyful, Lo-Fi Wellness Travel Trends",
+          "summary": "Wellness resorts are ditching clinical vibes for DJ beats, stargazing, sauna socials, and communal experiences as travelers reject obsessive longevity hacks like intermittent fasting and cryotherapy. The movement reflects broader fatigue with high-tech self-optimization, sparking a post-hustle craving for sensory fun and relaxation in the 2026 wellness travel boom.",
           "tag": "WELLNESS · TRAVEL",
           "bullets": [],
-          "sources": [{"name": "Condé Nast Traveller", "url": "https://www.cntraveller.com"}],
-          "image_url": null
+          "sources": [{"name": "Global Wellness Summit", "url": "https://www.globalwellnesssummit.com/blog/the-trend-in-the-news-march-2026/"}],
+          "image_url": "https://www.globalwellnesssummit.com/wp-content/uploads/2026/03/athetltechnews_featured_blog.jpg"
         },
         {
-          "headline": "Microbiome Personalization Redefines Gut Health for Metabolic Management",
-          "summary": "Imbalances in gut bacteria strongly linked to obesity, insulin resistance, and metabolic syndrome are driving next-generation probiotics, prebiotics, and precision nutrition tailored to individual microbiomes. Advances in research enable personalized interventions that go far beyond generic gut health advice.",
+          "headline": "Muscle Mass Rises as Key Metabolic Health Marker, Combating Sarcopenia",
+          "summary": "Consumers now prioritize lean mass, grip strength, protein timing, and resistance training after research linked sarcopenia not just to aging but to insulin resistance, metabolic inflexibility, and cardiovascular risks. Meta-analyses showing muscle preservation as foundational for long-term health shifted the conversation from aesthetics to metabolic resilience.",
+          "tag": "BIOTECH · METABOLIC HEALTH",
+          "bullets": [],
+          "sources": [{"name": "Prenuvo", "url": "https://prenuvo.com/blog/11-exploding-health-trends-you-may-see-in-2026"}],
+          "image_url": "https://cdn.prod.website-files.com/6552758bed0bca440d439436/692df2547d3b193dcc11c52a_Blog_header-Health%20trends.webp"
+        },
+        {
+          "headline": "Gut Health Evolves to Microbiome Personalization with Next-Gen Probiotics",
+          "summary": "Precision nutrition and advanced probiotics now target individual gut bacteria imbalances tied to obesity, insulin resistance, and metabolic syndrome. Surging research on the microbiome's role in metabolic disorders, combined with consumer health tracking via wearables, drove the shift from general gut health to personalized interventions.",
           "tag": "BIOTECH · GUT HEALTH",
           "bullets": [],
-          "sources": [{"name": "Nature Reviews", "url": "https://www.nature.com"}],
-          "image_url": null
+          "sources": [{"name": "Prenuvo", "url": "https://prenuvo.com/blog/11-exploding-health-trends-you-may-see-in-2026"}],
+          "image_url": "https://cdn.prod.website-files.com/6552758bed0bca440d439436/692df2547d3b193dcc11c52a_Blog_header-Health%20trends.webp"
         },
         {
-          "headline": "Smart Toilets and Saliva Sensors Revolutionize Early Disease Detection",
-          "summary": "Non-invasive diagnostic tools such as Throne's smart toilet for gut and hydration monitoring and Lura's teeth-attached saliva analyzer detect illness early by tracking glucose, biologics, and prostate markers. This trend addresses consumer fatigue from wearable over-monitoring by embedding clinical insights seamlessly into daily life.",
-          "tag": "HEALTHTECH · DIAGNOSTICS",
+          "headline": "AI-Powered Sleep Aids and Wearables Optimize Circadian Rhythms",
+          "summary": "AI sleep coaching, smart rooms, nootropics, light therapy, and temperature-regulating bedding address poor sleep's links to metabolic issues, heart disease, and cognitive decline. Mounting evidence positioned sleep as a measurable health pillar, boosted by wearables tracking recovery metrics and prompting hotels and tech firms to innovate.",
+          "tag": "WELLNESS TECH · SLEEP",
           "bullets": [],
-          "sources": [{"name": "Throne Health", "url": "https://www.thronehealth.com"}],
+          "sources": [{"name": "Prenuvo", "url": "https://prenuvo.com/blog/11-exploding-health-trends-you-may-see-in-2026"}],
+          "image_url": "https://cdn.prod.website-files.com/6552758bed0bca440d439436/692df2547d3b193dcc11c52a_Blog_header-Health%20trends.webp"
+        },
+        {
+          "headline": "Food as Medicine Gains Traction with Fiber, Anti-Inflammatories, and Stress Nutrition",
+          "summary": "Brands are marketing products for stress management and nervous system health, elevating fiber as 'the new protein' while promoting anti-inflammatory diets and functional food swaps. Consumer scrutiny of health claims, combined with biohacking data overload, shifted focus to functional foods backed by clinical science.",
+          "tag": "WELLNESS · NUTRITION",
+          "bullets": [],
+          "sources": [{"name": "Modern Retail", "url": "https://www.modernretail.co/marketing/the-health-and-wellness-trends-modern-retail-and-glossy-staffers-are-watching-in-2026/"}],
           "image_url": null
         }
       ]
@@ -333,59 +277,51 @@
       "title": "Longevity & Aging",
       "stories": [
         {
-          "headline": "FDA Approves Life Biosciences' Gene Therapy Trial to Reverse Cellular Aging",
-          "summary": "The FDA greenlit a pivotal Phase 1 trial by Life Biosciences, co-founded by Harvard's David Sinclair, testing gene therapy that rewinds human cell age by targeting epigenetic markers. This approval stems from preclinical data showing the therapy restores youthful cellular function, potentially extending healthspan by addressing accumulated epigenetic noise.",
-          "tag": "GENE THERAPY · FDA",
+          "headline": "FDA Clears First Human Trial for Gene Therapy to Reverse Cellular Aging in Eyes",
+          "summary": "Life Biosciences, co-founded by Harvard's David Sinclair, received FDA approval for its ER-100 therapy using partial epigenetic reprogramming with three Yamanaka factors to rejuvenate retinal ganglion cells without erasing their identity. Strong preclinical data showing cross-system benefits like reversing optic neuropathies enabled this first-ever trial targeting vision loss from glaucoma and NAION.",
+          "tag": "RESEARCH · GENE THERAPY",
           "bullets": [],
-          "sources": [{"name": "Life Biosciences", "url": "https://www.lifebiosciences.com"}],
+          "sources": [{"name": "Fortune", "url": "https://fortune.com/2026/01/30/billionaires-longevity-aging-fda-human-clinical-trial-life-biosciences-jerry-mclaughlin-david-sinclair-harvard-science/"}],
+          "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/01/GettyImages-961074724-e1769727204929.jpg?resize=1200,600"
+        },
+        {
+          "headline": "Targeting Longevity 2026 Congress Signals Shift to Systems-Level Aging Research",
+          "summary": "The 2nd World Congress on Targeting Longevity reframes aging as a loss of coordination between mitochondria, microbiota, immunity, and metabolism rather than a single defect. Organized by the World Mitochondria Society, it emphasizes resilience over isolated interventions amid accumulating evidence from genomics and systems medicine.",
+          "tag": "RESEARCH · AGING",
+          "bullets": [],
+          "sources": [{"name": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/1116021"}],
           "image_url": null
         },
         {
-          "headline": "Cancer Vaccines and AI Nanoparticle Sensors Eliminate Tumors Rapidly",
-          "summary": "New mRNA cancer vaccines entered Phase 1 trials in the UK for melanoma and lung cancer, clearing tumors in days by training the immune system to target cancer cells precisely. MIT and Microsoft's AI-designed peptide sensors on nanoparticles detect cancer-linked proteases body-wide, enabling early intervention.",
-          "tag": "CANCER · mRNA",
+          "headline": "2026 Marked as Year of Mesenchymal Stem Cell Therapies for Inflammation and Healthspan",
+          "summary": "ForeverLabs highlights 2026 as the year MSC therapies gain traction for combating chronic inflammation driving age-related diseases like heart disease and neurodegeneration. Recent clinical breakthroughs and rising 'bio-liquidity' concepts for preserving young cells enable lifelong regenerative use, bridging lifespan and healthspan.",
+          "tag": "RESEARCH · STEM CELLS",
           "bullets": [],
-          "sources": [{"name": "MIT", "url": "https://www.mit.edu"}],
+          "sources": [{"name": "ForeverLabs", "url": "https://www.foreverlabs.com/articles/blog/2026-the-year-of-longevity-and-owning-your-biology"}],
           "image_url": null
         },
         {
-          "headline": "One-Shot GLP-1 Gene Therapy Promises to End Obesity Epidemic",
-          "summary": "A single-dose gene therapy mimicking GLP-1 drugs like Ozempic reprograms metabolic pathways for lifelong weight control and insulin sensitivity. By editing genes to sustain GLP-1 production, it addresses obesity-driven inflammation and metabolic aging, potentially adding years to healthspan.",
-          "tag": "GENE THERAPY · OBESITY",
-          "bullets": [],
-          "sources": [{"name": "Nature Biotechnology", "url": "https://www.nature.com/nbt"}],
-          "image_url": null
-        },
-        {
-          "headline": "Gut Bacteria Discovery Links Microbiome to Multiple Sclerosis Prevention",
-          "summary": "Researchers identified specific gut microbes that trigger MS by promoting neuroinflammation via the gut-brain axis, paving the way for microbiome-targeted therapies. Modulating these bacteria reduces immune overactivity and halts demyelination, positioning MS as potentially preventable through dietary or probiotic interventions.",
-          "tag": "MICROBIOME · NEUROSCIENCE",
-          "bullets": [],
-          "sources": [{"name": "Nature", "url": "https://www.nature.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Mesenchymal Stem Cell Therapies Bridge Lifespan and Healthspan Gap",
-          "summary": "Advanced MSC therapies combat chronic inflammation — the root of age-related diseases like heart disease and neurodegeneration — by secreting growth factors that modulate metabolism and repair tissues. Clinical breakthroughs show MSCs extend functional life by shielding the brain and vascular system from inflammatory damage.",
-          "tag": "STEM CELLS · INFLAMMATION",
-          "bullets": [],
-          "sources": [{"name": "Forever Labs", "url": "https://www.foreverlabs.com/articles/blog/2026-the-year-of-longevity-and-owning-your-biology"}],
-          "image_url": null
-        },
-        {
-          "headline": "Harvard's Sinclair Announces Human Trials for Aging Reversal at WGS 2026",
-          "summary": "At the World Government Summit 2026, David Sinclair revealed imminent human trials for therapies reversing aging via epigenetic reprogramming, building on lab successes in restoring vision and tissue youth. The approach reactivates silenced youthful genes, countering the loss of cellular identity that drives frailty and disease.",
+          "headline": "Longevity Science Hits Clinical Threshold with Epigenetic Clocks and Senolytics",
+          "summary": "GESDA's 2026 Radar notes longevity shifting to clinical reality via epigenetic clocks integrated with drugs targeting aging hallmarks like senescent cells and mitochondrial function. This acceleration stems from molecular diagnostics and geroscience advances that separate chronological age from biological frailty, prioritizing healthspan over lifespan.",
           "tag": "RESEARCH · EPIGENETICS",
           "bullets": [],
-          "sources": [{"name": "World Government Summit", "url": "https://www.worldgovernmentssummit.org/media-hub/news/detail/ageing-could-soon-be-reversible-says-harvard-scientist-at-wgs-2026"}],
+          "sources": [{"name": "GESDA", "url": "https://www.gesda.global/radar-spotlight-longevity-science-crosses-clinical-threshold/"}],
           "image_url": null
         },
         {
-          "headline": "Human Tooth Regeneration Achieved Through Breakthrough Therapies",
-          "summary": "Advances in regenerative medicine enabled the regrowth of human teeth via stem cell activation and biomaterial scaffolds, countering age-related tissue loss. The approach mimics embryonic signaling pathways to reprogram adult dental cells, restoring function and reducing dependence on prosthetics.",
-          "tag": "REGENERATIVE · DENTAL",
+          "headline": "Cutting-Edge Gene and Epigenetic Therapies Advance with Yamanaka Factors and SIRT6",
+          "summary": "Therapies using partial reprogramming with Yamanaka factors to restore youthful transcription are advancing alongside AAV-delivered SIRT6 genes from centenarians for DNA repair and metabolism. Companies like Altos Labs and Clock.bio lead the charge, with multi-omics and AI enabling personalized healthspan extension.",
+          "tag": "RESEARCH · BIOTECH",
           "bullets": [],
-          "sources": [{"name": "Nature Medicine", "url": "https://www.nature.com/nm"}],
+          "sources": [{"name": "MDIHA", "url": "https://www.mdiha.com/blog/7-cutting-edge-therapies-revolutionizing-healthy-aging-in-2026"}],
+          "image_url": null
+        },
+        {
+          "headline": "Life Biosciences Prepares ER-100 Launch as Top Anti-Aging Startup of 2026",
+          "summary": "Life Biosciences tops lists of promising longevity startups with ER-100 entering human trials for eye diseases, building on preclinical data demonstrating partial epigenetic reprogramming's efficacy against optic neuropathies and MASH. Validated safety in restoring epigenetic youth without tumor risk positions it as a leader in cellular rejuvenation.",
+          "tag": "BIOTECH · STARTUPS",
+          "bullets": [],
+          "sources": [{"name": "WeWillCure", "url": "https://wewillcure.com/insights/company-profiles/anti-aging-and-longevity-startups-to-watch"}],
           "image_url": null
         }
       ]
@@ -395,60 +331,52 @@
       "title": "Space",
       "stories": [
         {
-          "headline": "NASA's Artemis II Targets March 2026 Launch After Wet Dress Rehearsal Leak",
-          "summary": "A hydrogen leak during the February 2 wet dress rehearsal at Kennedy Space Center halted the countdown, prompting engineers to review data and delay from an earlier April target. The test met most objectives, positioning March 2026 as the earliest window for this first crewed SLS-Orion flight with astronauts Wiseman, Glover, Koch, and Hansen.",
-          "tag": "NASA · ARTEMIS",
+          "headline": "NASA's Artemis II Mission Cleared for Launch, Targeting April 1",
+          "summary": "NASA's flight readiness review confirmed a 'go' for Artemis II, the first crewed mission beyond low Earth orbit since Apollo 17 in 1972. The mission is scheduled to launch no earlier than April 1 and represents a critical step toward returning humans to the Moon under the Artemis program.",
+          "tag": "LAUNCH · NASA",
           "bullets": [],
-          "sources": [{"name": "NASA", "url": "https://www.nasa.gov"}],
+          "sources": [{"name": "Orbysa", "url": "https://orbysa.com/news/articles/march-2026-major-advancements"}],
           "image_url": null
         },
         {
-          "headline": "SpaceX Launches Starlink 10-33 with 29 Satellites",
-          "summary": "SpaceX's Falcon 9 lifted off from Cape Canaveral on March 4, deploying 29 Starlink satellites to low Earth orbit as the 35th mission of 2026. The rapid rollout highlights SpaceX's extraordinary launch cadence amid growing global demand for satellite internet services.",
-          "tag": "SPACEX · STARLINK",
+          "headline": "NASA Launches Twin Spacecraft to Investigate Mars' Lost Atmosphere",
+          "summary": "NASA launched twin spacecraft on March 14 to investigate how Mars lost its atmosphere and understand the planet's evolution and past habitability. The high-performance spacecraft represent a major advancement in planetary science and could reveal critical information about Mars' ancient climate.",
+          "tag": "EXPLORATION · MARS",
           "bullets": [],
-          "sources": [{"name": "SpaceX", "url": "https://www.spacex.com"}],
+          "sources": [{"name": "Orbysa", "url": "https://orbysa.com/news/articles/march-2026-major-advancements"}],
           "image_url": null
         },
         {
-          "headline": "China's Long March 2D Deploys Shiyan 30C and 30D Tech Demos",
-          "summary": "On March 12 from Xichang, the Long March 2D rocket placed two Shiyan satellites into low Earth orbit for technology demonstrations. This launch underscores China's ongoing satellite testing program and its building momentum toward broader space capabilities.",
-          "tag": "CHINA · SATELLITES",
+          "headline": "SpaceX Continues Rapid Starlink V2 Mini Deployment with Multiple March Launches",
+          "summary": "SpaceX conducted multiple Falcon 9 launches in early March, deploying dozens of Starlink V2 Mini satellites to expand global broadband coverage. The cadence demonstrates SpaceX's manufacturing and launch dominance, with the constellation now serving millions of subscribers across over 100 countries.",
+          "tag": "LAUNCH · SPACEX",
           "bullets": [],
-          "sources": [{"name": "SpaceNews", "url": "https://spacenews.com"}],
+          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/"}],
           "image_url": null
         },
         {
-          "headline": "Rocket Lab's Electron to Loft ESA Celeste Pathfinders",
-          "summary": "Scheduled for March 24 from Mahia, New Zealand, Rocket Lab's Electron rocket will deploy ESA's Celeste IOD-1 and IOD-2 satellites for in-orbit demonstration. These pathfinders test technology for future missions, driven by Europe's push for responsive smallsat launches via commercial providers.",
-          "tag": "ROCKET LAB · ESA",
+          "headline": "NASA's Tiny Exoplanet Imager Captures First Light",
+          "summary": "NASA's newest imaging technology successfully captured first-light images of exoplanets using high-performance CMOS imaging systems. The breakthrough enhances scientists' ability to study distant worlds and their atmospheres, advancing the search for potentially habitable exoplanets beyond our solar system.",
+          "tag": "EXPLORATION · EXOPLANETS",
           "bullets": [],
-          "sources": [{"name": "Rocket Lab", "url": "https://www.rocketlabusa.com"}],
+          "sources": [{"name": "Orbysa", "url": "https://orbysa.com/news/articles/march-2026-major-advancements"}],
           "image_url": null
         },
         {
-          "headline": "SpaceX Prepares Starship's 12th Flight for Suborbital Test",
-          "summary": "SpaceX assembled the Starship booster stack ahead of a suborbital launch, following prior tests to refine the vehicle's reusability. Success paves the way for flight 13's potential first orbital attempt and later Mars window preparations in October-December 2026.",
-          "tag": "SPACEX · STARSHIP",
+          "headline": "Blue Origin's Blue Moon Lunar Lander Advances Toward First Mission",
+          "summary": "Blue Origin's Blue Moon spacecraft preparations continue ahead of its planned lunar south pole mission atop the New Glenn rocket. The spacecraft's ability to carry up to three tons of cargo and crew makes it a significant player in commercial lunar logistics alongside SpaceX's Starship HLS.",
+          "tag": "LAUNCH · BLUE ORIGIN",
           "bullets": [],
-          "sources": [{"name": "SpaceX", "url": "https://www.spacex.com"}],
-          "image_url": null
+          "sources": [{"name": "Time", "url": "https://time.com/7339316/six-space-stories-in-2026/"}],
+          "image_url": "https://api.time.com/wp-content/uploads/2025/12/KSC-20230808-PH-KLS02_0098orig.jpg?quality=85&w=1200&h=628&crop=1"
         },
         {
-          "headline": "Intuitive Machines IM-3 Targets Lunar Swirls After IM-2 Setback",
-          "summary": "Building on IM-2's 2025 power failure from landing errors, IM-3 will deploy multiple landers, a rover, and probes to investigate Reiner Gamma's magnetic anomalies. This startup-led mission advances commercial lunar exploration for NASA's Artemis goals.",
-          "tag": "LUNAR · COMMERCIAL",
+          "headline": "Nancy Grace Roman Space Telescope Targets Fall 2026 Launch After Construction Complete",
+          "summary": "NASA completed construction of the $4 billion Nancy Grace Roman Space Telescope, with launch anticipated as early as fall 2026. The flagship observatory will discover exoplanets, map billions of galaxies, and investigate dark matter and dark energy from its position one million miles from Earth.",
+          "tag": "EXPLORATION · TELESCOPE",
           "bullets": [],
-          "sources": [{"name": "Intuitive Machines", "url": "https://www.intuitvemachines.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "JAXA's HTV-X1 Cargo Craft Departs ISS After Supply Delivery",
-          "summary": "On March 6, JAXA's uncrewed HTV-X1 undocked from the ISS after delivering 12,000 pounds of supplies, experiments, and hardware. This logistics success supports ongoing station operations amid international partnerships and Japan's expanding role in space resupply.",
-          "tag": "JAXA · ISS",
-          "bullets": [],
-          "sources": [{"name": "JAXA", "url": "https://www.jaxa.jp"}],
-          "image_url": null
+          "sources": [{"name": "RocketSTEM", "url": "https://www.rocketstem.org/2026/02/27/2026-is-poised-to-be-an-exciting-year-for-space-exploration/"}],
+          "image_url": "https://www.rocketstem.org/wp-content/uploads/2026/02/BlueMoon-mk1_full.jpg"
         }
       ]
     },
@@ -457,59 +385,51 @@
       "title": "Sports & Entertainment",
       "stories": [
         {
-          "headline": "NFL Enters Media Rights Talks with Paramount Skydance, Eyeing 50-60% Increase",
-          "summary": "The NFL began negotiations with Paramount Skydance on media rights, with early talks suggesting a 50-60% hike over the current $2.1B annual deal for Sunday afternoon games. The aggressive renewal follows the NBA's recent rights windfall, pressuring broadcasters amid climbing sports media valuations.",
-          "tag": "NFL · MEDIA RIGHTS",
+          "headline": "NBA Governors to Vote on Expansion to Las Vegas and Seattle",
+          "summary": "The NBA is advancing plans for league expansion by voting on formal exploration of new franchises in Las Vegas and Seattle, driven by strong market interest and potential high expansion fees. This follows years of discussions amid record revenues and aims to capitalize on two of the largest untapped US sports markets.",
+          "tag": "LEAGUES · EXPANSION",
+          "bullets": [],
+          "sources": [{"name": "Sports News", "url": "https://www.nba.com"}],
+          "image_url": null
+        },
+        {
+          "headline": "NWSL Shatters Attendance Records with 130,000 Fans in Opening Weekend",
+          "summary": "The NWSL drew unprecedented crowds across eight matches due to heightened league investment, star player signings, and aggressive marketing following recent media rights deals. The surge positions the league for further expansion and revenue growth as women's soccer's popularity continues to boom.",
+          "tag": "LEAGUES · ATTENDANCE",
+          "bullets": [],
+          "sources": [{"name": "NWSL", "url": "https://www.nwslsoccer.com"}],
+          "image_url": null
+        },
+        {
+          "headline": "World Cup of Hockey 2028 Host Cities Announced: Calgary, Prague, and Edmonton",
+          "summary": "The NHL and IIHF selected Calgary, Prague, and Edmonton to host the 2028 World Cup of Hockey, balancing North American hockey strongholds with international appeal. The choice leverages existing arenas and fan bases while promoting cross-border rivalries ahead of the event.",
+          "tag": "LEAGUES · HOSTING",
+          "bullets": [],
+          "sources": [{"name": "NHL", "url": "https://www.nhl.com"}],
+          "image_url": null
+        },
+        {
+          "headline": "ESPN Relaunches Direct-to-Consumer Streaming App",
+          "summary": "ESPN executive Jimmy Petaro drove the app's relaunch after closing an NFL media deal and renegotiating MLB rights to combat cord-cutting. The move positions ESPN as a central standalone destination for live sports amid the accelerating shift from cable to digital streaming platforms.",
+          "tag": "MEDIA · STREAMING",
+          "bullets": [],
+          "sources": [{"name": "ESPN", "url": "https://www.espn.com"}],
+          "image_url": null
+        },
+        {
+          "headline": "Paramount-Skydance Merger Positions TNT Sports with CBS for Major Rights Consolidation",
+          "summary": "The potential Paramount-Skydance merger would combine TNT Sports' basketball and NBA package with CBS Sports' NFL holdings, creating a sports media powerhouse amid expiring rights deals. The consolidation aims to enhance bidding power and streaming bundles in an increasingly fragmented market.",
+          "tag": "MEDIA · M&A",
+          "bullets": [],
+          "sources": [{"name": "Variety", "url": "https://variety.com"}],
+          "image_url": null
+        },
+        {
+          "headline": "Regional Sports Network Bankruptcy Opens Door for League Direct Sales",
+          "summary": "Main Street Sports Group's bankruptcy resolution allows leagues like the NHL, MLB, and NBA to sell national packages of local games directly, addressing revenue shortfalls from declining RSN viability. ESPN's new streaming app is poised to absorb these rights, streamlining distribution in a streaming-first era.",
+          "tag": "MEDIA · RIGHTS",
           "bullets": [],
           "sources": [{"name": "Sports Business Journal", "url": "https://www.sportsbusinessjournal.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Formula 1 Cancels Bahrain and Saudi Arabia Races",
-          "summary": "Formula 1 scrapped its Bahrain and Saudi Arabia races amid regional uncertainties tied to the Middle East conflict, disrupting the early season calendar. The cancellations impact revenue and highlight geopolitical risks in global motorsports scheduling.",
-          "tag": "F1 · GEOPOLITICS",
-          "bullets": [],
-          "sources": [{"name": "Formula 1", "url": "https://www.formula1.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Global Fight League Launches as Publicly Traded MMA Entity",
-          "summary": "The newly formed Global Fight League debuted as a publicly traded MMA organization, opening a $5M equity raise to allow direct athlete and fan investment. This innovative model tests fan-owned leagues, driven by investor interest in participatory sports ownership beyond traditional structures.",
-          "tag": "MMA · BUSINESS",
-          "bullets": [],
-          "sources": [{"name": "MMA Fighting", "url": "https://www.mmafighting.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Bertram Capital Joins Ownership of Liga MX's Querétaro F.C.",
-          "summary": "Bertram Capital partnered with Innovatio Capital as a non-controlling investor in Querétaro F.C., marking the fourth investment for Bertram's Ignite fund and expanding U.S. private equity into Mexican soccer. This move reflects growing global capital flows into soccer clubs amid rising franchise valuations.",
-          "tag": "SOCCER · INVESTMENT",
-          "bullets": [],
-          "sources": [{"name": "Front Office Sports", "url": "https://frontofficesports.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Indian Golf Premier League Secures $100M in Franchise Commitments",
-          "summary": "Ten ownership groups committed $100M to the Indian Golf Premier League, representing the largest private investment in Indian golf history. The funding capitalizes on golf's rising popularity in emerging markets and new entertainment formats beyond traditional tour structures.",
-          "tag": "GOLF · EXPANSION",
-          "bullets": [],
-          "sources": [{"name": "Golf Digest", "url": "https://www.golfdigest.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Doug DeVos Acquires Danish SailGP Team for Over $60M",
-          "summary": "American Magic co-founder Doug DeVos bought the Danish ROCKWOOL Racing SailGP Team in a $60M+ deal, with ROCKWOOL remaining title partner through 2032. The purchase expands U.S. influence in SailGP, fueled by rising investments in high-tech sailing as an entertainment sport.",
-          "tag": "SAILING · ACQUISITION",
-          "bullets": [],
-          "sources": [{"name": "SailGP", "url": "https://sailgp.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "Canadian Soccer Opens to Institutional Investors via CSME",
-          "summary": "CSME, the commercial arm for Canada's national teams and Canadian Premier League, launched for institutional investment backed by an 11-year deal with Canada Soccer. The initiative aims to scale the CPL into a global media platform, monetizing soccer content internationally.",
-          "tag": "SOCCER · MEDIA",
-          "bullets": [],
-          "sources": [{"name": "Canada Soccer", "url": "https://www.canadasoccer.com"}],
           "image_url": null
         }
       ]
