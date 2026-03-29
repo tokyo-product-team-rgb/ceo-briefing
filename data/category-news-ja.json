@@ -1,57 +1,87 @@
 {
-  "date": "2026-03-26",
-  "generatedAt": "2026-03-26T22:31:00+09:00",
+  "date": "2026-03-28",
+  "generatedAt": "2026-03-28T13:30:00.000000+09:00",
   "categoryNews": [
     {
       "id": "us",
       "title": "米国",
       "stories": [
         {
-          "headline": "米・イスラエルによるイラン爆撃で死者787人に増加、Trumpが国民向け演説",
-          "summary": "米軍とイスラエル軍がOperation Epic Furyを強化し、死者は787人に達した。Trumpはメダル・オブ・オナー授与式で発言。Trumpはイラン核施設に対するNetanyahuの作戦への参加を選択し、外交を見送った。国防総省は米軍6名の死亡を報告、議会では非公開ブリーフィングが行われた。",
-          "tag": "政策 · イラン",
+          "headline": "議会、党派対立の中で国土安全保障省の暫定予算を承認",
+          "summary": "米上院は金曜早朝、国土安全保障省の暫定予算案を可決したが、下院共和党は即座に反発。Mike Johnson下院議長は民主党の政治的駆け引きを非難した。DHS閉鎖が6週目に入る中、TSA職員の給与不安が高まり、大統領は補償確保のための大統領令を発令した。",
+          "tag": "政策 · 政府",
+          "sources": [
+            {
+              "name": "GoLocalProv",
+              "url": "https://www.golocalprov.com/news/5-big-news-stories-overnight-saturday-march-28-2026"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Democracy Now", "url": "https://www.democracynow.org/2026/3/3/headlines"}],
-          "image_url": "https://assets.democracynow.org/assets/default_content_image-354f4555cc64afadc730d64243c658dd0af1f330152adcda6c4900cb4a26f082.jpg"
-        },
-        {
-          "headline": "Trump報道官、停戦要求無視ならイランに「地獄」と警告",
-          "summary": "ホワイトハウスのCaroline Levit報道官は、Trump大統領は「はったりではない」とし、米国支援の停戦交渉の中でイランへのエスカレーションの用意があると述べた。イスラエルのイラン攻撃とOperation Epic Furyへの米国の関与を受けたもので、イランの核・ミサイル計画を制限する条件の受諾を迫る狙いがある。",
-          "tag": "政策 · 外交",
-          "bullets": [],
-          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=ZMiBo5t_uJ0"}],
           "image_url": null
         },
         {
-          "headline": "Pete Hegseth、Signalで機密攻撃計画を共有し批判を浴びる",
-          "summary": "Pete Hegseth国防長官がSignalアプリで機密軍事攻撃情報を共有したと報じられ、精査を受けている。イラン紛争計画に関する機密情報の漏洩で国家安全保障上の懸念が高まっている。地政学的圧力の中、政権の透明性をめぐる緊張が浮き彫りになった。",
-          "tag": "政策 · 国家安全保障",
+          "headline": "Bank of America、Epstein関連訴訟で7,250万ドルの和解",
+          "summary": "Bank of Americaは、Jeffrey Epstein関連の口座で疑わしい活動報告を怠り利益を得たとする集団訴訟で7,250万ドルの和解に合意。JPMorganやDeutsche Bankに続く措置で、規制当局は金融機関のマネーロンダリング防止義務の遵守を引き続き精査している。",
+          "tag": "規制 · 銀行",
+          "sources": [
+            {
+              "name": "Wall Street Journal",
+              "url": "https://www.golocalprov.com/news/5-big-news-stories-overnight-saturday-march-28-2026"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=rOBxkCbiY20"}],
           "image_url": null
         },
         {
-          "headline": "司法省、ICE関連牧師への抗議でさらに30人を起訴",
-          "summary": "司法省は、ICE雇用の牧師に関連するセントポールの教会での抗議活動で30人を起訴した。Pam Bondi司法長官の公共秩序への脅威とみなされる混乱への取り締まりに基づくもの。批判者は言論の自由の萎縮を主張し、支持者は法執行の必要性を指摘している。",
-          "tag": "政策 · 規制",
+          "headline": "Trump大統領、DHS閉鎖中のTSA給与確保の大統領令に署名",
+          "summary": "Trump大統領は、限界に達したとするDHS閉鎖期間中にTSA職員への給与支払いを確保する大統領令を発令。6週間の予算失効は全米の空港保安業務と職員の士気を脅かしていた。",
+          "tag": "政策 · 行政",
+          "sources": [
+            {
+              "name": "Fox News",
+              "url": "https://www.golocalprov.com/news/5-big-news-stories-overnight-saturday-march-28-2026"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Democracy Now", "url": "https://www.democracynow.org/2026/3/3/headlines"}],
-          "image_url": "https://assets.democracynow.org/assets/default_content_image-354f4555cc64afadc730d64243c658dd0af1f330152adcda6c4900cb4a26f082.jpg"
+          "image_url": null
         },
         {
-          "headline": "イラン戦争と市場変動の中、米スタートアップ資金調達が3月130億ドルに急減速",
-          "summary": "1月・2月の記録的高水準の後、米スタートアップの3月のシード〜グロースステージ資金調達は130億ドルにとどまり、前月比で大幅減の見通し。2月28日に始まったイラン戦争による株価指数の下落と一致している。アーリーステージの取引は堅調だったが、全体的な減速は米国特有の現象である。",
-          "tag": "経済 · 市場",
+          "headline": "ミシガン大学消費者信頼感指数、3月は57.0に上昇し予想を上回る",
+          "summary": "ミシガン大学の3月消費者信頼感指数確報値は57.0となり、2月の54.0から上昇、コンセンサス予想の53.5を上回った。インフレ緩和と雇用市場の安定を消費者が前向きに受け止めた結果だが、イラン紛争による地政学的不確実性の中、歴史的には低水準にとどまっている。",
+          "tag": "経済 · 消費者",
+          "sources": [
+            {
+              "name": "Trading Economics",
+              "url": "https://tradingeconomics.com/united-states/calendar"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Crunchbase News", "url": "https://news.crunchbase.com/business/us-startup-funding-slows-march-2026-data/"}],
-          "image_url": "https://news.crunchbase.com/wp-content/uploads/Downturn_arrow.jpg"
+          "image_url": null
         },
         {
-          "headline": "ホワイトハウスAIロードマップ、州レベルの規制阻止を推進",
-          "summary": "David Sacks率いるTrump政権は、州ごとのバラバラな規制に先手を打つ統一的な国家AI規制枠組みを提唱し、イノベーションを促進。グローバルなテック動向とセキュリティ懸念の中で監督を一元化する。より厳格な規制を求める進歩派とは対照的な立場をとっている。",
-          "tag": "テック · 規制",
+          "headline": "S&P 500、年初来わずか0.49%上昇にとどまり市場心理悪化",
+          "summary": "S&P 500は2026年の年初来上昇率がわずか0.49%にとどまり、2025年末の強気相場とは対照的。2月下旬に始まったイラン紛争、2025年Q4の年率1.4%のGDP成長鈍化、FRBが期待ほど積極的に利下げできない根強いインフレ圧力が投資家心理を圧迫している。",
+          "tag": "市場 · 株式",
+          "sources": [
+            {
+              "name": "SilverCrest Group",
+              "url": "https://www.silvercrestgroup.com/silvercrest-economic-review-march-2026/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=uFHeRqLpYKg"}],
+          "image_url": null
+        },
+        {
+          "headline": "FRBのBarr副議長とWilliams NY連銀総裁、インフレ持続を背景に利下げに慎重姿勢",
+          "summary": "FRBのBarr副議長とNY連銀のWilliams総裁は、根強いインフレと地政学リスクを挙げ、金融政策への慎重なアプローチを強調する講演を行った。6ヶ月物財務省証券入札は3.63%で決着し、FRBが2026年半ばまで金利を据え置くとの市場予想を反映している。",
+          "tag": "経済 · FRB",
+          "sources": [
+            {
+              "name": "Trading Economics",
+              "url": "https://tradingeconomics.com/united-states/calendar"
+            }
+          ],
+          "bullets": [],
           "image_url": null
         }
       ]
@@ -61,275 +91,417 @@
       "title": "人工知能",
       "stories": [
         {
-          "headline": "Morgan Stanley、2026年前半に大規模AIブレークスルーを警告",
-          "summary": "Morgan Stanleyのレポートは、米国AIラボでの前例のない計算量の蓄積とスケーリング則の堅持により、変革的なAIの飛躍を予測。Elon Muskの「10倍の計算量でLLMの知能が2倍」という主張が裏付けとなる。OpenAIのGPT-5.4 'Thinking'モデルは既にベンチマークで人間の専門家レベルに達している。ただし、2028年まで9〜18GWの米国電力不足が進展を制約する見通し。",
-          "tag": "モデル · インフラ",
+          "headline": "Sanders議員とAOC議員、AIデータセンター建設モラトリアム法案を提出",
+          "summary": "Bernie Sanders上院議員とAlexandria Ocasio-Cortez下院議員は、労働者の利益保護、環境保全、地域の安全が確保されるまで新規AIデータセンター建設を一時停止する法案を提出。2028年までにデータセンターが米国電力の最大12%を消費すると予測される中、地域の送電網や水資源への負荷に対する懸念の高まりが背景にある。",
+          "tag": "規制 · インフラ",
+          "sources": [
+            {
+              "name": "MSNBC",
+              "url": "https://www.youtube.com/watch?v=W5WtaHMYlLs"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Fortune", "url": "https://fortune.com/2026/03/13/elon-musk-morgan-stanley-ai-leap-2026/"}],
-          "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2256969963_dee53d-e1773350347272.jpg?resize=1200,600"
-        },
-        {
-          "headline": "Anthropic、国防総省の提案を拒否しTrump政権から国家安全保障リスクとしてブラックリスト入り",
-          "summary": "Anthropicは大規模監視や完全自律型兵器へのClaude使用を拒否し、Trump大統領が同社をブラックリストに指定。OpenAIのその後の国防総省契約と対比され、AI倫理のレッドラインをめぐる議論が激化。AI倫理と軍事利用をめぐる緊張の高まりを浮き彫りにした。",
-          "tag": "規制 · エンタープライズAI",
-          "bullets": [],
-          "sources": [{"name": "AI Weekly", "url": "https://ai-weekly.ai/newsletter-03-03-2026/"}],
-          "image_url": "https://ai-weekly.ai/wp-content/uploads/2026/03/ai-weekly-206-1920x1080-at-100.jpg"
-        },
-        {
-          "headline": "OpenAI、AGIマイルストーン連動の条件付きコミットメントで1,100億ドル調達を発表",
-          "summary": "OpenAIの大規模調達は、ほとんどが条件付き資金（即時利用可能なのは150億ドルのみ）で、AGI達成に連動している。AnthropicなどのライバルのAI収益予測に次ぐもので、AI開発における高リスクの資金調達競争を示している。OpenAIの国防総省契約とも結びつき、倫理議論を加速させている。",
-          "tag": "資金調達 · エンタープライズAI",
-          "bullets": [],
-          "sources": [{"name": "AI Weekly", "url": "https://ai-weekly.ai/newsletter-03-03-2026/"}],
-          "image_url": "https://ai-weekly.ai/wp-content/uploads/2026/03/ai-weekly-206-1920x1080-at-100.jpg"
-        },
-        {
-          "headline": "Super Micro株、Nvidia AIチップ密輸スキャンダルで33%暴落",
-          "summary": "Super Micro ComputerがNvidia AIチップを無許可のバイヤーに横流ししたとの疑惑で株価が33%暴落、サプライチェーンの脆弱性が浮き彫りに。チップ不足の中、エンタープライズAIインフラに混乱をもたらしている。AIハードウェア競争の過熱におけるリスクを示している。",
-          "tag": "インフラ · チップ",
-          "bullets": [],
-          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=uFHeRqLpYKg"}],
           "image_url": null
         },
         {
-          "headline": "AOCとSanders、データセンター電力問題でAI規制の強化を推進",
-          "summary": "AOCとSanders議員は、データセンターのエネルギー需要が国家インフラを圧迫しているとして、連邦AI規制の強化を求めている。AIの急速な拡大による環境・経済的影響への対処を目的としている。",
-          "tag": "規制 · インフラ",
+          "headline": "OpenAI、Sora動画生成ツールを終了し「Spud」モデルに注力",
+          "summary": "OpenAIは3月25日にSora AI動画生成ツールを終了し、数週間以内にリリース予定の次期基盤モデル「Spud」に計算資源を集中させると発表。AnthropicやGoogle DeepMindとの競争が激化する中、特化型ツールより汎用モデル能力を優先するOpenAIの戦略的転換を反映している。",
+          "tag": "モデル · 戦略",
+          "sources": [
+            {
+              "name": "Hollywood Reporter",
+              "url": "https://www.hollywoodreporter.com/business/digital/openai-shutting-down-sora-ai-video-app-1236546187/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Fox Business", "url": "https://www.foxbusiness.com/video/6391654589112"}],
-          "image_url": "https://a57.foxnews.com/cf-images.us-east-1.prod.boltdns.net/v1/static/854081161001/f1245067-072c-4a52-9160-b159a615bfb1/816764fc-e258-4ee2-a78d-2a1eeabaf3cf/1280x720/match/1024/512/image.jpg"
+          "image_url": null
         },
         {
-          "headline": "2026年はAI実験からエンタープライズ実行・セキュリティ展開への転換の年",
-          "summary": "企業はAIをパイロットから本番規模の実行に移行しており、年末までにセキュリティチームの70%以上が脅威検知にAIツールを導入する見通し。成熟した能力とLLMの脆弱性悪用などの脅威の増大が推進力。経営層の焦点は目新しさから実用的なROIに移っている。",
-          "tag": "エンタープライズAI · セキュリティ",
+          "headline": "Meta、500時間超のfMRIデータで学習した脳予測モデルTRIBE v2を公開",
+          "summary": "Metaは700名以上の被験者から500時間以上のfMRIデータで学習した基盤モデルTRIBE v2を発表。視覚・聴覚刺激に対する人間の脳反応を予測でき、被験者・言語・タスクを横断したゼロショット予測を実現。コードとインタラクティブデモを公開し、神経科学とAIの統合を推進している。",
+          "tag": "研究 · 神経科学",
+          "sources": [
+            {
+              "name": "Radical Data Science",
+              "url": "https://radicaldatascience.wordpress.com/2026/03/26/ai-news-briefs-bulletin-board-for-march-2026/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Innovation News Network", "url": "https://www.innovationnewsnetwork.com/2026-the-year-ai-moves-from-experimentation-to-execution/64945/"}],
-          "image_url": "https://www.innovationnewsnetwork.com/wp-content/uploads/2025/12/shutterstock_2630160357.jpg"
+          "image_url": "https://radicaldatascience.wordpress.com/wp-content/uploads/2026/03/claude_project_prompt.png"
+        },
+        {
+          "headline": "Wikipedia、品質危機を受けAI生成記事を禁止",
+          "summary": "Wikipediaは、低品質でハルシネーションを含むAI生成コンテンツの急増を受け、AI生成記事の正式な禁止措置を実施。AI執筆ツールの普及により、捏造された引用や事実誤認を含む投稿がボランティア編集者の対応能力を超え、知識リソースとしての百科事典の信頼性を脅かしていた。",
+          "tag": "政策 · コンテンツ",
+          "sources": [
+            {
+              "name": "The Verge",
+              "url": "https://www.theverge.com/tech/901461/wikipedia-ai-generated-article-ban"
+            }
+          ],
+          "bullets": [],
+          "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/STK037_WIKIPEDIA_C.jpg?quality=90&strip=all&crop=0%2C10.728364100735%2C100%2C78.54327179853&w=1200"
+        },
+        {
+          "headline": "Figure AIのヒューマノイドロボットがホワイトハウスでデモンストレーション",
+          "summary": "Figure AIがホワイトハウスでヒューマノイドロボットを披露し、身体性AIの能力を注目度の高い場でデモンストレーションした。政権が製造・防衛分野でのロボティクス活用を検討する中での登場で、Figureはこれまでに15億ドル以上を調達。Tesla、Amazon、Microsoftなど大手もヒューマノイドロボティクス市場に前例のない投資を行っている。",
+          "tag": "ロボティクス · 政策",
+          "sources": [
+            {
+              "name": "X/Twitter",
+              "url": "https://x.com/adcock_brett/status/2036832028960923917"
+            }
+          ],
+          "bullets": [],
+          "image_url": null
+        },
+        {
+          "headline": "ChatGPTのアンインストール数がOpenAIの国防総省契約後295%急増",
+          "summary": "OpenAIの国防総省との契約が報じられた後、ChatGPTモバイルアプリの米国でのアンインストール数が前日比295%急増し、AI軍事連携に対する消費者の反発が浮き彫りになった。AI企業の政府契約拡大とユーザーベースの倫理的AI展開への期待との間の緊張を示している。",
+          "tag": "エンタープライズ · 反発",
+          "sources": [
+            {
+              "name": "Champaign Magazine",
+              "url": "https://champaignmagazine.com/2026/03/08/ai-by-ai-weekly-top-5-march-2-8-2026/"
+            }
+          ],
+          "bullets": [],
+          "image_url": null
         }
       ]
     },
     {
       "id": "vc",
-      "title": "ベンチャーキャピタル＆スタートアップ",
+      "title": "ベンチャーキャピタル & スタートアップ",
       "stories": [
         {
-          "headline": "OpenAI、史上最大のベンチャーディールで評価額8,400億ドル・1,100億ドルを調達",
-          "summary": "OpenAIは、基盤AIモデルのリーダーシップと先進AI能力への爆発的需要を背景に、記録破りの1,100億ドルの資金調達を実施。AmazonやNvidiaなどのメガファンダーが支援し、2月のグローバルVC投資の90%をAIが占めるベンチャーキャピタルにおけるAIの支配を反映している。",
-          "tag": "資金調達 · レイトステージ",
+          "headline": "イラン戦争の不確実性で米国スタートアップ資金調達が3月に130億ドルへ急減速",
+          "summary": "米国スタートアップの3月のシード〜グロースステージの調達額はわずか130億ドルにとどまり、1月・2月の過去最高から急減速。2月28日に始まったイラン紛争による株式市場の変動と、部分的な市場回復にもかかわらずリスク資産への投資意欲が冷え込んだことが主因。",
+          "tag": "資金調達 · 減速",
+          "sources": [
+            {
+              "name": "Crunchbase News",
+              "url": "https://news.crunchbase.com/business/us-startup-funding-slows-march-2026-data/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Crunchbase News", "url": "https://news.crunchbase.com/business/us-startup-funding-slows-march-2026-data/"}],
           "image_url": "https://news.crunchbase.com/wp-content/uploads/Downturn_arrow.jpg"
         },
         {
-          "headline": "グローバルVC、2月に過去最高の1,890億ドル到達、90%がAIへ",
-          "summary": "2月のグローバルVCは1,890億ドルに達し、1月の3倍以上。AIスタートアップが1,710億ドル（90%）を獲得。OpenAI（1,100億ドル）、Anthropic、Waymoの3社だけで資本の83%を占め、トップAIプレイヤーへの極端な集中を示している。",
-          "tag": "資金調達 · 市場トレンド",
+          "headline": "世界のVC投資が2月に過去最高の1,890億ドル、AIメガラウンドが主導",
+          "summary": "2月の世界VC投資は過去最高の1,890億ドルに達し、AI企業が1,710億ドルを獲得——OpenAI、Anthropic、Waymoが牽引。わずか3社への資本集中は、AI資金調達における勝者総取りの構造を浮き彫りにしており、機関投資家が巨額のバリュエーションでカテゴリーリーダーへの投資を加速している。",
+          "tag": "資金調達 · AI",
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "url": "https://techcrunch.com/2026/03/03/openai-anthropic-waymo-dominated-189-billion-vc-investments-february-crunchbase-report/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/03/openai-anthropic-waymo-dominated-189-billion-vc-investments-february-crunchbase-report/"}],
           "image_url": "https://techcrunch.com/wp-content/uploads/2024/03/GettyImages-1502217391.jpg?resize=1200,800"
         },
         {
-          "headline": "イラン戦争の中、米スタートアップ資金調達が3月130億ドルに急減速",
-          "summary": "1月・2月の記録的高水準の後、米スタートアップの3月のシード〜グロースステージ資金調達は130億ドルにとどまり、前月比で大幅減の見通し。2月28日に始まったイラン戦争による株価指数の下落と一致。アーリーステージは堅調だったが、レイトステージのラウンドは枯渇した。",
-          "tag": "資金調達 · 市場トレンド",
+          "headline": "General Catalyst、VCがAI資本投入を急ぐ中100億ドルファンドを目指す",
+          "summary": "General Catalystが100億ドルファンドの組成を進めており、Thrive Capitalの100億ドルクローズ、Andreessen Horowitzの1月の150億ドル調達、Founders Fundの60億ドル目前に続く動き。大規模なドライパウダー蓄積と2026年がAI展開の転換点になるというVCの確信を反映しているが、3月の米国資金調達減速は短期的な慎重姿勢を示唆。",
+          "tag": "ファンド組成 · メガファンド",
+          "sources": [
+            {
+              "name": "IndexBox",
+              "url": "https://www.indexbox.io/blog/venture-capital-giants-seek-billions-in-new-funds-for-2026-ai-investment/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Crunchbase News", "url": "https://news.crunchbase.com/business/us-startup-funding-slows-march-2026-data/"}],
-          "image_url": "https://news.crunchbase.com/wp-content/uploads/Downturn_arrow.jpg"
+          "image_url": "https://www.indexbox.io/landing/img/blog/insights/telegram-video-telegram-20260311-185725-d0867d3f4e.webp"
         },
         {
-          "headline": "Wayve、評価額86億ドルで自動運転AI向け15億ドルを調達",
-          "summary": "英国拠点のWayveがUber、Microsoft、Mercedes-Benzの支援で自動運転技術推進のため15億ドルを調達。モビリティ大手との戦略的パートナーシップを伴う自動運転技術への投資家の信頼を示している。データ駆動型インパクトと機関投資家の支援がモビリティセクターを再定義している。",
+          "headline": "Wayve、自動運転で過去最大級の12億ドルのSeries Dを調達",
+          "summary": "英国の自動運転スタートアップWayveがMercedes-BenzとStellantisの支援を受け12億ドルのSeries D資金を調達し、欧州史上最大級のスタートアップラウンドの一つとなった。自動車メーカーが自社開発よりAIネイティブ企業との提携を選択する戦略的シフトを反映し、欧州が自動運転競争での地位確立を図っている。",
           "tag": "資金調達 · 自動運転",
+          "sources": [
+            {
+              "name": "Mean CEO Blog",
+              "url": "https://blog.mean.ceo/startup-funding-trends-march-2026/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Mean CEO Blog", "url": "https://blog.mean.ceo/top-funded-startups-news-march-2026/"}],
           "image_url": null
         },
         {
-          "headline": "Allica Bank、英国中小企業向け銀行業で評価額12億ドルに到達",
-          "summary": "英国の中小企業向けスタートアップ銀行Allica Bankが評価額12億ドルを達成。サービスが行き届いていない中小企業向け銀行業の可能性に投資家が期待。フィンテック全般への関心の中、高インパクトセクターへの戦略的フォーカスを示している。",
-          "tag": "資金調達 · フィンテック",
+          "headline": "Manifold、AIエージェントセキュリティで800万ドル調達——シード案件は堅調を維持",
+          "summary": "3月17〜24日の週にManifoldが800万ドル、Obin AIが700万ドルを調達し、米国全体の資金調達が減速する中でもアーリーステージのAI案件は底堅さを維持。ManifoldのAIエージェントセキュリティへの注力は、金融サービスやヘルスケアで自律型AIシステムが本番環境に広がる中、セーフティツールへの企業需要の高まりを反映している。",
+          "tag": "シード · AIセキュリティ",
+          "sources": [
+            {
+              "name": "Qubit Capital",
+              "url": "https://qubit.capital/blog/us-seed-weekly-funding-roundup-week-4-march-2026"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Mean CEO Blog", "url": "https://blog.mean.ceo/top-funded-startups-news-march-2026/"}],
-          "image_url": null
+          "image_url": "https://qubit.capital/wp-content/uploads/2026/03/featured-us-seed-64643.webp"
         },
         {
-          "headline": "Miraterra Soil、Trace Genomics買収後にオーバーサブスクライブの1,600万ドルラウンドをクローズ",
-          "summary": "Miraterra SoilはTrace Genomics買収に続き、土壌の生物学と化学を解読するAI駆動プラットフォームの拡大のため、オーバーサブスクライブの1,600万ドルの資金調達をクローズ。ディープテックとサステナビリティへの注目が高まる中、アグリテックでの拡大を支援する。",
-          "tag": "資金調達 · アグリテック · M&A",
+          "headline": "Plaid、ピーク時を下回る80億ドル評価で流動性ラウンドを完了",
+          "summary": "フィンテックインフラ企業Plaidが80億ドルの評価額で従業員向け流動性ラウンドを完了し、パンデミック期の高評価からのフィンテック全体のバリュエーション調整を反映。確立されたフィンテックリーダーでさえ投資家の厳しい精査に直面し、市場がコスト度外視の成長より収益性と持続可能なユニットエコノミクスを重視するようになっていることを示している。",
+          "tag": "フィンテック · バリュエーション",
+          "sources": [
+            {
+              "name": "Mean CEO Blog",
+              "url": "https://blog.mean.ceo/startup-funding-trends-march-2026/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/financial-services-latest-news/venture-capital-list/"}],
           "image_url": null
         }
       ]
     },
     {
       "id": "energy",
-      "title": "エネルギー＆気候",
+      "title": "エネルギー & 気候",
       "stories": [
         {
-          "headline": "中東戦争が世界エネルギー危機を深刻化、アジアで石炭使用が増加",
-          "summary": "中東紛争がエネルギー市場を混乱させ、石油・ガス価格が高騰。アジアの電力会社がコスト削減と供給安全保障のため石炭火力を増強。国連気候変動担当のSimon Stiellは化石燃料依存を断つため再生可能エネルギーの加速を訴えた。ウクライナ戦争の影響を彷彿とさせ、再エネの戦略的価値を強調している。",
-          "tag": "エネルギー · 石油 · 石炭",
+          "headline": "2026年3月がEV普及の「ティッピングポイント」——石油危機がシフトを加速",
+          "summary": "業界データによると、ホルムズ海峡の混乱による石油危機で燃料価格が高騰する中、2026年3月がEV普及のティッピングポイントとなっている。2010年以来バッテリー価格は90%下落、航続距離は倍増、効率的なモーターと安価な太陽光発電によりkm当たりの走行コストは約10分の1となり、アナリストは2026〜2027年にかけてICE車の急速な衰退を予測している。",
+          "tag": "EV · ティッピングポイント",
+          "sources": [
+            {
+              "name": "Gulf News",
+              "url": "https://gulfnews.com/business/energy/march-2026-to-change-everything-tipping-point-for-global-ev-adoption-1.500484007"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Carbon Brief", "url": "https://www.carbonbrief.org/debriefed-20-march-2026-energy-crisis-deepens-brazils-new-climate-plan-new-zealand-climate-case/"}],
-          "image_url": "https://www.carbonbrief.org/wp-content/uploads/2023/06/debriefed_HERO_BLANK-1550x1033-1.png"
+          "image_url": "https://media.assettype.com/gulfnews%2F2024-11-18%2F6sbazibr%2F726630_01_02_18b42a51013_original_ratio.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100"
         },
         {
-          "headline": "Trump政権、TotalEnergiesの洋上風力プロジェクト中止に10億ドルの和解を検討",
-          "summary": "Trump政権はニューヨークとノースカロライナ沖の2つの風力発電所を中止するため、TotalEnergiesに約10億ドルを支払うことを検討し、テキサスの化石ガスインフラに投資を振り向ける方針。Trumpの政策推進の中で化石燃料を優先するもの。取引が拒否されても中止する意向を示す文書がある。",
-          "tag": "再エネ · 政策",
+          "headline": "天然ガスが米国電力の40%を占め主力に——石油は地政学的脆弱性のまま",
+          "summary": "2026年も天然ガスが米国発電の40%を占め、再生可能エネルギーが拡大する中でも国内電力網の基盤としての地位を固めている。一方、石油はホルムズ海峡などのチョークポイントを通じた地政学的脆弱性であり続け、国内エネルギー安全保障と世界の石油供給途絶リスクとの間にパラドックスを生んでいる。",
+          "tag": "電力網 · 天然ガス",
+          "sources": [
+            {
+              "name": "Atlas Institute",
+              "url": "https://atlasinstitute.org/america-runs-on-gas-but-the-world-still-breaks-on-oil/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Carbon Brief", "url": "https://www.carbonbrief.org/debriefed-20-march-2026-energy-crisis-deepens-brazils-new-climate-plan-new-zealand-climate-case/"}],
-          "image_url": "https://www.carbonbrief.org/wp-content/uploads/2023/06/debriefed_HERO_BLANK-1550x1033-1.png"
+          "image_url": "https://atlasinstitute.org/wp-content/uploads/2026/03/Дизайн-без-названия-9.png"
         },
         {
-          "headline": "エルニーニョが2026年に再来の見通し、世界的な異常気象と異常高温をもたらす可能性",
-          "summary": "NOAAの科学者が中東部赤道太平洋の海面水温上昇によりエルニーニョの再来を警告。2026年夏に形成される可能性が高く、強力になる確率は3分の1。人為的な気候変動と相まって2027年が記録的な暖かい年になる可能性がある。以前の控えめな予測からの修正で、世界的な異常気象リスクが高まっている。",
-          "tag": "気候 · 天候",
+          "headline": "IEA、イラン紛争によるエネルギー危機を警告",
+          "summary": "国際エネルギー機関（IEA）は、米イラン紛争によるホルムズ海峡のタンカー航路混乱で、エネルギー危機が深刻化するとの予測を発表。供給不安から世界の原油価格が急騰し、欧州やアジア各国は緊急備蓄の放出と中東依存からの脱却を加速させている。",
+          "tag": "地政学 · 石油",
+          "sources": [
+            {
+              "name": "Energy Digital",
+              "url": "https://energydigital.com/news/trump-iran-africa-this-weeks-top-five-energy-stories"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Earth.org", "url": "https://earth.org/this-week-in-climate-news-march-2026-week-3/"}],
-          "image_url": "https://earth.org/wp-content/uploads/2026/03/NEW-Week-in-Review.png"
-        },
-        {
-          "headline": "米国の知事たちがクリーンエネルギー拡大と電気料金引き下げを推進",
-          "summary": "アリゾナ、イリノイ、マサチューセッツなど8州の知事が2026年の電気料金軽減、再エネ成長、送電網改善の計画を発表。マサチューセッツ州Healey知事の大統領令は4GWの太陽光と5GWの蓄電を目標に、需要削減で100億ドルの料金引き下げを見込む。連邦の化石燃料重視に対抗する州レベルの取り組み。",
-          "tag": "再エネ · 政策",
-          "bullets": [],
-          "sources": [{"name": "LCV", "url": "https://www.lcv.org/media-center/this-week-in-climate-action-march-20-2026/"}],
-          "image_url": "https://www.lcv.org/wp-content/uploads/2026/02/LCV-Congress.jpg"
-        },
-        {
-          "headline": "英国、再エネオークションを加速し190のクリーンエネルギープロジェクトを支援",
-          "summary": "英国は中東紛争による価格高騰に対応し、再エネオークションを早め190のプロジェクトを支援してエネルギー安全保障を強化。スペインの太陽光・風力倍増やオーストラリアの再エネ50%超達成などの成功に続くもの。レジリエンスのためのクリーンエネルギーへの政策転換を示している。",
-          "tag": "再エネ · 政策",
-          "bullets": [],
-          "sources": [{"name": "We Mean Business Coalition", "url": "https://www.wemeanbusinesscoalition.org/blog/signals-of-change-march-2026/"}],
-          "image_url": "https://www.wemeanbusinesscoalition.org/wp-content/uploads/2026/03/beautiful-mountain-landscape-of-crete-island-gree-2026-01-09-15-02-05-utc.jpeg"
-        },
-        {
-          "headline": "中国のEV・再エネ投資がオイルショック時に優位性を発揮",
-          "summary": "中国のEVとクリーンエネルギーへの長期的な投資が石油輸入依存を軽減し、中東戦争による原油ショックの影響を緩和。世界的な価格高騰の中、再エネの国家安全保障上の利点を浮き彫りにしている。化石燃料依存の経済がコスト上昇に直面するのとは対照的。",
-          "tag": "再エネ · 石油 · EV",
-          "bullets": [],
-          "sources": [{"name": "Kalamazoo Crisis", "url": "https://www.kalamazoocrisis.org/post/climate-change-news-digest-for-march-18-2026"}],
           "image_url": null
         },
         {
-          "headline": "Trump政権、政治的報復として主要気候研究所を標的に",
-          "summary": "UCARの訴訟によると、Trump政権がコロラド州知事への報復としてボルダーの国立大気研究センターを解体したとされる。重要な気候研究拠点の閉鎖は政治的緊張に起因。同政権下での気候科学への広範な攻撃を示唆している。",
-          "tag": "気候 · 政策",
+          "headline": "ウェストバージニア州、2050年までに50GWを目指す包括的エネルギー計画を可決",
+          "summary": "ウェストバージニア州下院法案5381号により2026年包括的エネルギー政策・開発計画法が成立し、エネルギー局に16GWから50GWへの容量拡大戦略の策定を委任。Morrisey知事の「50 by 50」計画は同州を東海岸のエネルギー「蓄電池」として位置づけ、化石燃料と電力網の安定性のバランスを図る。",
+          "tag": "政策 · 電力網",
+          "sources": [
+            {
+              "name": "The Intelligencer",
+              "url": "https://www.theintelligencer.net/news/top-headlines/2026/03/plugged-in-w-va-works-towards-comprehensive-energy-plan/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Earth.org", "url": "https://earth.org/this-week-in-climate-news-march-2026-week-3/"}],
-          "image_url": "https://earth.org/wp-content/uploads/2026/03/NEW-Week-in-Review.png"
+          "image_url": "https://ogden_images.s3.amazonaws.com/www.theintelligencer.net/images/2026/03/27163433/Preservati-03-27-26-750x500.jpg"
+        },
+        {
+          "headline": "Trump大統領、イラン空爆を見送り——原油市場の懸念一時的に緩和",
+          "summary": "Trump大統領がイラン領土への直接空爆を見送ったことで、本格的紛争を織り込んでいた原油市場に一時的な安堵感が広がった。制裁と海軍プレゼンスによる圧力を維持しつつ原油供給のさらなる混乱を回避する計算された判断だが、アナリストは根本的な地政学的緊張は未解決と警告している。",
+          "tag": "地政学 · 石油",
+          "sources": [
+            {
+              "name": "Energy Digital",
+              "url": "https://energydigital.com/news/trump-iran-africa-this-weeks-top-five-energy-stories"
+            }
+          ],
+          "bullets": [],
+          "image_url": null
+        },
+        {
+          "headline": "Enterprise Products Partners、機関投資家の投資が急増",
+          "summary": "Exchange Traded Conceptsが2025年Q4にミッドストリーム大手Enterprise Products Partnersへの持分を7.7%増加させ、約3,050万ドルに拡大したことが3月28日のSEC提出書類で判明。イラン紛争によるエネルギー安全保障への懸念が国内パイプライン・輸出ターミナル資産への需要を押し上げ、機関投資家の関心が高まっている。",
+          "tag": "投資 · ミッドストリーム",
+          "sources": [
+            {
+              "name": "National Today",
+              "url": "https://nationaltoday.com/us/tx/houston/news/2026/03/28/enterprise-products-partners-sees-increased-institutional-investment/"
+            }
+          ],
+          "bullets": [],
+          "image_url": "https://nationaltoday.com/wp-content/uploads/not-wordpress/categories/finance-stock-markets.jpg"
         }
       ]
     },
     {
       "id": "health-wellness",
-      "title": "ヘルスケア＆ウェルネス",
+      "title": "ヘルスケア & ウェルネス",
       "stories": [
         {
-          "headline": "Trump、一般教書演説で「素晴らしい医療プラン」とTrumpRxを強調",
-          "summary": "Trump大統領は2026年2月の一般教書演説で消費者主導型医療モデルを推進し、保険会社の利益を批判、「最恵国」薬価設定を提案。従来の保険を迂回する直接資金提供とTrumpRxによる割引薬プラットフォームを目指す。JD Vance副大統領がMedicare・Medicaid不正対策タスクフォースを率いることとなった。",
-          "tag": "医療政策 · 一般教書",
+          "headline": "地政学的ショックが米国ヘルスケアサプライチェーンの重大な脆弱性を露呈",
+          "summary": "中東紛争とホルムズ海峡の混乱が、米国の医薬品・医療機器サプライチェーンの構造的脆弱性を露呈。ジェネリック医薬品の約半数が湾岸関連のエネルギー・石油化学に依存しており、医療機関は在庫の積み増し、調達先の多様化、代替物流ルートの確保に奔走している。",
+          "tag": "サプライチェーン · 地政学",
+          "sources": [
+            {
+              "name": "RSM US",
+              "url": "https://realeconomy.rsmus.com/health-care-industry-trend-watch-week-of-march-23-2026/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "ACSM", "url": "https://acsm.org/policy-corner-march-2026/"}],
+          "image_url": "https://realeconomy.rsmus.com/wp-content/uploads/2025/04/HC-trend-watch-template.jpg"
+        },
+        {
+          "headline": "Trump政権、37億ドルのMedicare・Medicaid不正に対し大規模取り締まりを開始",
+          "summary": "政権はミネソタ州Medicaid資金2億5,950万ドルの一時停止、全国的なDMEPOS供給業者モラトリアム、5,586の医療提供者の請求権取り消しなど、37億ドルの不正に対する包括的な対策を発表。データ駆動型戦略で疑わしい請求を事前に特定し、HHS長官KennedyとCMS長官Ozの下で積極的な医療費抑制アプローチを示している。",
+          "tag": "規制 · 不正対策",
+          "sources": [
+            {
+              "name": "CMS",
+              "url": "https://www.cms.gov/newsroom/press-releases/trump-administration-prioritizes-affordability-announcing-major-crackdown-health-care-fraud"
+            }
+          ],
+          "bullets": [],
           "image_url": null
         },
         {
-          "headline": "MedPAC、Medicare Advantageの760億ドルの過払いを指摘",
-          "summary": "Medicare Payment Advisory Commissionが760億ドルのMA過払いを報告し、リスク調整改革とカルテレビューの見直しで2027年に220億ドルの節約を提言。セーフティネット病院向けに新たな指標で10億ドルの追加も提案。MA支払い精度への監視が強まる中、政権の取り組みを後押しする内容。",
-          "tag": "医療政策 · MedPAC",
+          "headline": "議会、COVID時代のMedicare遠隔医療柔軟措置を2027年まで延長",
+          "summary": "2026年包括的歳出法により、自宅訪問、地理的制限の撤廃、音声のみのサービス、精神科の対面要件の猶予など、拡大された遠隔医療保障が2027年まで延長された。恒久的な遠隔医療改革に向けた議論が続く中、医療提供者と患者に重要な安定性を提供している。",
+          "tag": "政策 · 遠隔医療",
+          "sources": [
+            {
+              "name": "RubinBrown",
+              "url": "https://www.rubinbrown.com/insights-events/insight-articles/rubinbrown-s-healthcare-consulting-newsletter-march-2026/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "BHMPC", "url": "https://bhmpc.com/2026/03/healthcare-policy-roundup-march-22-2026/"}],
+          "image_url": "https://www.rubinbrown.com/RubinBrown/media/General/og.png?h=630&w=1200"
+        },
+        {
+          "headline": "Big Beautiful Bill法案がMedicaid拡大インセンティブを廃止——1,000万人の保険適用に影響",
+          "summary": "One Big Beautiful Bill法案のMedicaid拡大に対する財政インセンティブ廃止条項により、2034年までに1,000万人のアメリカ人が保険適用を失う可能性がある。ACA保険料税額控除の延長なしでは、CBO試算で1,400万人が無保険者に加わる見込み。医学生の奨学金オプション縮小とともに、連邦支出削減の一環として2026年から医療アクセスが再編される。",
+          "tag": "政策 · 保険適用",
+          "sources": [
+            {
+              "name": "AMA",
+              "url": "https://www.ama-assn.org/health-care-advocacy/federal-advocacy/4-big-beautiful-bill-changes-will-reshape-care-2026"
+            }
+          ],
+          "bullets": [],
           "image_url": null
         },
         {
-          "headline": "CMS、新規Medicare受給者をMedicare Advantageにデフォルト加入させることを検討",
-          "summary": "CMS Medicare局長が新規受給者をMedicare AdvantageプランまたはACOに自動加入させることを検討中と発表（オプトアウト権あり）。Project 2025由来のこの構造的変革案は議会承認が必要で、数百万人をマネージドケアに誘導する可能性がある。コスト管理と民間オプション拡大の取り組みに沿ったもの。",
-          "tag": "医療政策 · Medicare",
+          "headline": "MedPAC、2027年の病院支払い据え置きと10億ドルのセーフティネット強化を勧告",
+          "summary": "Medicare支払諮問委員会（MedPAC）は2026年3月の議会報告書で、2027年の入院・外来サービスの支払い率を現行水準で維持しつつ、脆弱な病院向けに10億ドルのセーフティネット指標を追加することを提案。無保険者の増加とコストインフレによる病院への財務圧力が高まる中での勧告。",
+          "tag": "政策 · Medicare",
+          "sources": [
+            {
+              "name": "AHA",
+              "url": "https://www.aha.org/news/headline/2026-03-13-medpac-releases-march-2026-report-congress"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "BHMPC", "url": "https://bhmpc.com/2026/03/healthcare-policy-roundup-march-22-2026/"}],
           "image_url": null
         },
         {
-          "headline": "CMS、CRUSHイニシアチブを発表しDMEPOSサプライヤー登録のモラトリアムを実施",
-          "summary": "CMSが不正対策の「Comprehensive Regulations to Uncover Suspicious Healthcare」（CRUSH）に関する情報提供依頼を発出（3月29日まで意見募集）。同時に、不正懸念から85%の支払いが小規模サプライヤーに集中しているデータを受け、DMEPOSサプライヤーのMedicare登録に6ヶ月のモラトリアムを発表。高リスク州への資金繰延措置に続くもの。",
-          "tag": "医療政策 · CMS",
+          "headline": "MACPAC、Medicaid在宅ケア労働者の賃金透明性を推進",
+          "summary": "MedicaidおよびCHIP支払・アクセス委員会（MACPAC）は2026年3月の報告書で、在宅・地域密着型サービス労働者の賃金透明性向上を勧告し、同セクターの慢性的な人材不足に対処。高齢化による在宅ケア需要の増加に対し、低賃金と報酬構造の不透明さが採用・定着をますます困難にしている。",
+          "tag": "労働力 · Medicaid",
+          "sources": [
+            {
+              "name": "Holland & Knight",
+              "url": "https://www.hklaw.com/en/insights/publications/2026/03/holland-and-knight-health-dose-march-17-2026"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Holland & Knight", "url": "https://www.hklaw.com/en/insights/publications/2026/03/holland-knight-health-dose-march-3-2026"}],
-          "image_url": null
-        },
-        {
-          "headline": "下院公聴会、医師不足解消に向けた医学教育の近代化を提言",
-          "summary": "「次世代アメリカ医療人材の育成」公聴会では、2037年までに18万7千人の医師不足が予測されることを指摘し、1996年のMedicareレジデンシー定員上限の撤廃を要請。専門家は栄養や運動など生活習慣介入重視の研修への転換を提唱。農村部でのレジデンシー資金の障壁も議論された。",
-          "tag": "医療政策 · 人材",
-          "bullets": [],
-          "sources": [{"name": "ACSM", "url": "https://acsm.org/policy-corner-march-2026/"}],
-          "image_url": null
-        },
-        {
-          "headline": "AMA、医療の手頃さについて証言し医師不足対策法案を支持",
-          "summary": "AMA理事会議長David H. Aizussが下院エネルギー・商業委員会で、診療の財務的圧力がアクセス問題とコスト上昇につながることを証言。AMAは深刻化する不足の中、人材強化法案を支持。別途、Medicaidの就労要件に関するCMS規則について、保険適用中断防止の意見書を提出した。",
-          "tag": "医療政策 · AMA",
-          "bullets": [],
-          "sources": [{"name": "AMA", "url": "https://www.ama-assn.org/health-care-advocacy/advocacy-update/top-stories-advocacy-update-march-2026"}],
           "image_url": null
         }
       ]
     },
     {
       "id": "longevity",
-      "title": "長寿＆エイジング",
+      "title": "長寿 & エイジング",
       "stories": [
         {
-          "headline": "エピジェネティッククロックと標的薬で長寿科学が臨床段階に到達",
-          "summary": "Omega-3が生物学的老化を遅らせることを示す研究で検証されたエピジェネティッククロックなどの分子診断と次世代医薬品のブレークスルーが、長寿科学を臨床の実現に向け加速させている。EPFLの新設の実験的・トランスレーショナル長寿研究センターがミトコンドリア代謝経路による健康寿命の延伸を推進。暦年齢から検証可能な生物学的年齢への転換が進んでいる。",
-          "tag": "研究 · 健康寿命",
+          "headline": "Life Biosciences、長寿遺伝子治療で史上初のFDA承認を取得",
+          "summary": "Life Biosciencesが、緑内障患者の加齢性視力低下を対象としたエピジェネティックリプログラミング療法ER-100の初のヒト臨床試験でFDA認可を取得。David Sinclairのハーバード研究に基づく3つの山中因子を使用し、機能喪失や腫瘍リスクなしに細胞を若返らせる技術が、実験室での老化逆転からヒト臨床試験へと歴史的な移行を遂げた。",
+          "tag": "臨床 · 遺伝子治療",
+          "sources": [
+            {
+              "name": "Fortune",
+              "url": "https://fortune.com/2026/01/30/billionaires-longevity-aging-fda-human-clinical-trial-life-biosciences-jerry-mclaughlin-david-sinclair-harvard-science/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "GESDA", "url": "https://www.gesda.global/radar-spotlight-longevity-science-crosses-clinical-threshold/"}],
+          "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/01/GettyImages-961074724-e1769727204929.jpg?resize=1200,600"
+        },
+        {
+          "headline": "ハーバードのSinclair氏、世界政府サミットで人間での老化逆転試験開始を宣言",
+          "summary": "David Sinclairは世界政府サミット2026で、人類が史上初めて老化逆転と疾病治療を試験する段階に来たと宣言。動物モデルで若返り細胞状態を回復させた部分的山中因子によるエピジェネティックリプログラミング研究に基づき、Life Biosciencesを通じた初のヒト臨床試験が進行中。",
+          "tag": "研究 · マイルストーン",
+          "sources": [
+            {
+              "name": "World Governments Summit",
+              "url": "https://www.worldgovernmentssummit.org/media-hub/news/detail/ageing-could-soon-be-reversible-says-harvard-scientist-at-wgs-2026"
+            }
+          ],
+          "bullets": [],
+          "image_url": null
+        },
+        {
+          "headline": "長寿科学がセノリティクスとエピジェネティック時計で臨床段階へ",
+          "summary": "GESDAの2026年レーダースポットライトは、老化した「ゾンビ」細胞を標的とする低分子薬とDNAメチル化パターンで生物学的年齢を測定するエピジェネティック時計を通じて、長寿科学が臨床実践へ移行していることを強調。チューリッヒ大学によるOmega-3介入の生物学的時計減速効果の実証や、睡眠増強研究による測定可能な健康寿命改善がこの転換を後押しした。",
+          "tag": "臨床 · セノリティクス",
+          "sources": [
+            {
+              "name": "GESDA",
+              "url": "https://www.gesda.global/radar-spotlight-longevity-science-crosses-clinical-threshold/"
+            }
+          ],
+          "bullets": [],
           "image_url": "https://www.gesda.global/wp-content/uploads/2025/12/Screenshot-2025-12-01-at-6.49.40-PM-1024x431.png"
         },
         {
-          "headline": "Life BiosciencesのER-100部分的エピジェネティックリプログラミング療法、初のヒト臨床試験へ",
-          "summary": "遺伝子のシャットダウンが細胞のドリフトを防ぎ若返り状態を回復することを実証したCell誌の論文に基づき、Life BiosciencesがER-100を加齢性眼疾患向けに進展。前臨床データでは視神経障害やMASHに対するクロスシステムの効果を示した。AIモデルが細胞をより健康なプロファイルに誘導し、バイオテックのマイルストーンとなっている。",
-          "tag": "バイオテック · 臨床試験",
+          "headline": "幹細胞治療が加齢性フレイルのPhase 2b試験で有望な結果",
+          "summary": "2026年2月のRejuvenation Roundupによると、laromestrocel幹細胞治療のランダム化Phase 2b用量漸増試験で、加齢性フレイルの転帰に有意な改善が示された。細胞ベースの治療が根本的な老化プロセスに対処できるとの証拠が増えており、生涯にわたる認知的充実が認知症発症を5〜7年遅らせるとの研究と合わせて注目されている。",
+          "tag": "臨床 · 幹細胞",
+          "sources": [
+            {
+              "name": "Lifespan.io",
+              "url": "https://lifespan.io/news/rejuvenation-roundup-february-2026/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "WeWillCure", "url": "https://wewillcure.com/insights/company-profiles/anti-aging-and-longevity-startups-to-watch"}],
-          "image_url": "https://images.ctfassets.net/ou0qvg08mzx4/19p4m9LbDyqFmPfNt28bN4/bb1d01db3aada57a9597070f6b97b09e/Anti_Agent_copy.jpg"
+          "image_url": "https://lifespan.io/wp-content/uploads/2026/03/Rejuvenation-Roundup-February-2026.png"
         },
         {
-          "headline": "Harvard科学者、WGS 2026で「老化は間もなく逆転可能に」と宣言",
-          "summary": "Harvardの研究者がWorld Government Summit 2026で老化の逆転が間近であると宣言。がんを根絶しても平均寿命はわずか2.5年しか延びないことを指摘し、他の加齢関連疾患の重要性を強調。単一疾患の対処を超えた包括的な抗老化戦略の必要性を訴え、変革的介入への科学的自信の高まりを示した。",
-          "tag": "研究 · 逆転",
+          "headline": "ロサンゼルスがバイオテック・AI診断で長寿産業ハブとして台頭",
+          "summary": "ロサンゼルスが主要な長寿産業拠点としての地位を確立しつつあり、バイオテックスタートアップ、AI診断企業、ウェルネステクノロジー企業のクラスターが老化を投資可能な市場に変えている。エンターテインメント、テクノロジー、ヘルスケア人材の融合が、消費者への普及と抗老化介入の臨床検証の両面で独自の優位性を生んでいる。",
+          "tag": "産業 · 投資",
+          "sources": [
+            {
+              "name": "LA Times",
+              "url": "https://www.latimes.com/b2b/health-life-science/story/2026-03-22/los-angeles-longevity-industry-trends"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "World Government Summit", "url": "https://www.worldgovernmentssummit.org/media-hub/news/detail/ageing-could-soon-be-reversible-says-harvard-scientist-at-wgs-2026"}],
-          "image_url": null
+          "image_url": "https://ca-times.brightspotcdn.com/dims4/default/615764f/2147483647/strip/true/crop/1366x717+0+96/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0d%2F5d%2F050448a849e18674e98e5a9851a6%2Fnad-supplement-bottle.jpg"
         },
         {
-          "headline": "Targeting Longevity 2026会議、老化を「生物学的協調の喪失」と再定義",
-          "summary": "World Mitochondria Societyが4月8〜9日にベルリンで開催する会議では、老化をミトコンドリア、微生物叢、免疫、代謝の間の協調の喪失として再定義。ミトコンドリアと炎症のつながりや修復の代謝的制御に関する最近の研究を紹介。システム間コミュニケーションを通じた現実的な長寿の進歩を目指す。",
-          "tag": "研究 · システム生物学",
+          "headline": "Manulife、2030年までに3.5億ドルのグローバル長寿研究所を設立",
+          "summary": "保険大手Manulifeが2030年までに3億5,000万ドルを投じるグローバル長寿研究所を設立し、生涯にわたる健康と経済的レジリエンスの促進を加速。健康寿命の延伸が社会的価値と保険商品・退職計画・予防医療における商業的機会の両方を生み出すと主流金融サービス企業が認識し始めていることを示している。",
+          "tag": "投資 · 保険",
+          "sources": [
+            {
+              "name": "Milken Institute",
+              "url": "https://milkeninstitute.org/content-hub/newsletters/future-aging-newsletter/future-aging-winter-2026"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "EurekAlert", "url": "https://www.eurekalert.org/news-releases/1116021"}],
-          "image_url": "https://mediasvc.eurekalert.org/Api/v1/Multimedia/98e8594a-f19a-4b39-bdaf-8e035ca11c42/Rendition/thumbnail/Content/Public"
-        },
-        {
-          "headline": "CD38阻害剤とグルコサミンがBuck Instituteの研究で寿命延長効果を示す",
-          "summary": "Buck InstituteがNAD+枯渇を標的とした低分子CD38阻害剤を開発し、マウスの寿命延長を確認。ヒト臨床試験ではグルコサミンの代謝への影響から予想外の寿命延長シグナルが現れている。3年以内に内在的能力マーカーによる老化調整の介入試験が計画されている。",
-          "tag": "研究 · NAD+",
-          "bullets": [],
-          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=l0cXG4w-jG0"}],
-          "image_url": null
-        },
-        {
-          "headline": "GLP-1作動薬と先進的エピジェネティッククロックが2026年の長寿トレンドをリード",
-          "summary": "GLP-1作動薬は体重減少前に炎症を抑制し、インスリン感受性と代謝マーカーを改善。調査対象医師の92%が脳の健康と長寿への適用拡大を報告。GrimAgeなどの新しいエピジェネティッククロックはDNAメチル化で死亡率と臓器別の老化速度を予測。唾液キットにより生物学的年齢検査が身近になり、精密なバイオマーカーへの需要が高まっている。",
-          "tag": "トレンド · 代謝",
-          "bullets": [],
-          "sources": [{"name": "MS Advocate", "url": "https://www.msadvocate.com/premium/stacker/stories/12-longevity-trends-that-doctors-are-watching-in-2026,51634"}],
           "image_url": null
         }
       ]
@@ -339,98 +511,166 @@
       "title": "宇宙",
       "stories": [
         {
-          "headline": "SpaceX Transporter-16ライドシェア、86以上のペイロードで3月29日打ち上げ予定",
-          "summary": "SpaceXのFalcon 9 Transporter-16がVandenberg基地からSSOに少なくとも86基の衛星を投入予定。Momentus社のVigoride 7スペースタグやExolaunchによる11カ国25顧客のペイロードを含む。ライドシェアミッションにより小型衛星事業者やスタートアップの宇宙アクセスの障壁が低下。商業宇宙経済の推進に貢献している。",
-          "tag": "打ち上げ · SpaceX",
-          "bullets": [],
-          "sources": [{"name": "Space Calendar", "url": "https://spacecalendar.com"}],
-          "image_url": null
-        },
-        {
-          "headline": "SpaceX、Starlink 10-62ミッションで29基の衛星を打ち上げ",
-          "summary": "SpaceXがCape CanaveralからFalcon 9で29基のStarlink V2 Mini衛星を投入。2026年で35回目のStarlink打ち上げとなる。高速通信への急増する需要とSpaceXの迅速な再使用によるコスト削減が推進力。北東方向の軌道でコンステレーション拡大のための正確な軌道投入を実現した。",
+          "headline": "SpaceX、3月26日にVandenbergからStarlink 373を打ち上げ、25基の衛星を投入",
+          "summary": "SpaceXは3月26日にVandenberg宇宙軍基地から25基のStarlink衛星を低軌道に投入。ブースターB1081は23回目の飛行を完了し、ドローン船「Of Course I Still Love You」に着陸。世界的な需要拡大に応えるため、SpaceXはStarlinkコンステレーション構築を加速している。",
           "tag": "打ち上げ · Starlink",
+          "sources": [
+            {
+              "name": "SpaceX",
+              "url": "https://www.spacex.com/launches"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/"}],
           "image_url": null
         },
         {
-          "headline": "中国、捷龍3号の海上打ち上げでCentiSpace-1航法衛星を投入",
-          "summary": "中国ロケットが黄海のプラットフォームから捷龍3号Y10を打ち上げ、北京未来導航技術のCentiSpace-1衛星10基を軌道に投入。GPSに依存しない国内航法能力の強化を目指す。地政学的緊張と商業ニーズの増大を背景とした衛星主権への中国の取り組みを反映。全ペイロードが低軌道で運用状態に到達した。",
-          "tag": "打ち上げ · 衛星",
+          "headline": "SpaceX、わずか3ヶ月で2026年のStarlink衛星打ち上げ600基に到達",
+          "summary": "SpaceXは3月20日のケープカナベラルからのミッションで2026年の600基目のStarlink衛星打ち上げというマイルストーンを達成し、年間2,400基以上の衛星投入ペース。Falcon 9の成熟した再利用プラットフォームを活かし、個々のブースターが20回以上のミッションを日常的にこなし、ターンアラウンドタイムは数日に短縮されている。",
+          "tag": "マイルストーン · Starlink",
+          "sources": [
+            {
+              "name": "Spaceflight Now",
+              "url": "https://spaceflightnow.com/2026/03/03/live-coverage-spacex-to-launch-29-starlink-satellites-on-falcon-9-rocket-from-cape-canaveral-10/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/List_of_spaceflight_launches_in_January%E2%80%93March_2026"}],
           "image_url": null
         },
         {
-          "headline": "日本のSpace One KAIROSロケット、TATARA-1R打ち上げで失敗",
-          "summary": "Space OneのKAIROS F3ロケットがスペースポート紀伊からTATARA-1R技術実証衛星の打ち上げ中に失敗。日本の新興民間ロケットセクターにとって後退となった。リフトオフ直後に問題が発生し軌道投入に至らず、小型衛星の信頼性のある打ち上げの課題が浮き彫りに。原因調査が進行中。",
-          "tag": "打ち上げ · 日本",
+          "headline": "SpaceX、3月下旬にVandenbergからTransporter-16ライドシェアミッションを予定",
+          "summary": "SpaceXはVandenbergのSLC-4EからTransporter-16ライドシェアミッションを予定しており、小型衛星事業者や政府ペイロードに太陽同期軌道への手頃なアクセスを提供。Transporterプログラムは小型衛星打ち上げ市場の柱となり、スタートアップや研究機関が専用打ち上げの数分の一のコストで軌道に到達することを可能にしている。",
+          "tag": "打ち上げ · ライドシェア",
+          "sources": [
+            {
+              "name": "SpaceX",
+              "url": "https://www.spacex.com/launches"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/List_of_spaceflight_launches_in_January%E2%80%93March_2026"}],
           "image_url": null
         },
         {
-          "headline": "NASA、Artemis進捗と並行して月面原子力発電システムの計画を発表",
-          "summary": "NASAの上級管理者が月・火星基地の居住施設、研究、運用を持続させるための原子力発電の開発を詳細に説明。太陽光が届かない極端な環境でのArtermisプログラムの目標を支援するもので、有人月面着陸は早くとも4月1日の予定。長期ミッションでの太陽光を超える電力需要に対応する。",
-          "tag": "探査 · NASA",
+          "headline": "NASA SpaceX CRS-34 ISS補給ミッションが予定",
+          "summary": "NASAの商業補給サービスミッションCRS-34がSpaceX Dragonで打ち上げ予定で、国際宇宙ステーションへの科学実験と物資の定期的な補給を継続。2020年代後半の商業宇宙ステーションへの移行に向けてNASAが準備を進める中、ISSの最終運用年に向けた重要な研究ペイロードを搭載している。",
+          "tag": "ISS · 補給",
+          "sources": [
+            {
+              "name": "NASA",
+              "url": "https://www.nasa.gov/events/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/"}],
           "image_url": null
+        },
+        {
+          "headline": "Firefly Aerospace、Blue Ghost Mission 2 CLPS月面着陸機を準備中",
+          "summary": "Firefly AerospaceがNASAの商業月面ペイロードサービス（CLPS）プログラムの下でBlue Ghost Mission 2を準備中で、月面への科学機器輸送を目指す。NASAがArtemis時代の月面探査・科学目標の支援を民間企業にますます依存する中、商業月面輸送サービスの成熟を示すミッション。",
+          "tag": "月面 · CLPS",
+          "sources": [
+            {
+              "name": "NASA",
+              "url": "https://www.nasa.gov/events/"
+            }
+          ],
+          "bullets": [],
+          "image_url": null
+        },
+        {
+          "headline": "世界の打ち上げ頻度が加速——週に複数回のFalcon 9ミッション",
+          "summary": "SpaceXは2026年3月に平均週2〜3回のFalcon 9打ち上げペースを維持し、ケープカナベラルとVandenbergの両方からのミッションで世界の打ち上げマニフェストを席巻。再利用可能ロケット群による産業規模の打ち上げ運用は、わずか5年前には想像もできなかった頻度を実現し、Rocket LabやArianespaceなどの競合に圧力をかけている。",
+          "tag": "産業 · 打ち上げ頻度",
+          "sources": [
+            {
+              "name": "Space Launch Schedule",
+              "url": "https://www.spacelaunchschedule.com/2026-launch-schedule/"
+            }
+          ],
+          "bullets": [],
+          "image_url": "https://www.spacelaunchschedule.com/wp-content/uploads/2026/02/social-1920x1080-1.png"
         }
       ]
     },
     {
       "id": "sports-entertainment",
-      "title": "スポーツ＆エンターテイメント",
+      "title": "スポーツ & エンターテインメント",
       "stories": [
         {
-          "headline": "WNBPA、収益シェア20%と拡大するサラリーキャップを含む画期的なCBAを承認",
-          "summary": "WNBA選手会が90%以上の選手の参加を得て新労働協約を承認。20%の収益シェアとサラリーキャップ（初年度700万ドル、2032年には最大1,100万ドルに増加の可能性）を特徴とする。人気と視聴率の急上昇の中、リーグのプロフェッショナル化を目指す契約で、女子スポーツにおける選手のエンパワーメントのモデルとなる。",
-          "tag": "WNBA · 労使",
+          "headline": "NFL、2026年シーズン前に1,100億ドルのTV契約再交渉を推進",
+          "summary": "NFLは2032年まで有効な国内放送契約（CBS、NBC、Fox、ESPN、Amazon合計1,100億ドル）の2026年シーズン前の再交渉を推進。NBAの760億ドル契約やParamountのWBD買収などメディア業界の再編を受け、コンテンツ価値の急騰を確信し「支配権変更」条項を活用して交渉を開始する構え。",
+          "tag": "放映権 · NFL",
+          "sources": [
+            {
+              "name": "SportsPro",
+              "url": "https://www.sportspro.com/news/broadcast-ott/nfl-us-tv-deals-renegotiate-cbs-nbc-fox-march-2026/"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=gqmiH-zrGpc"}],
+          "image_url": "https://www.sportspro.com/wp-content/uploads/2026/01/Netflix-NFL-1.jpg"
+        },
+        {
+          "headline": "NFL、CBSに放映権料50%増の10億ドル上乗せを要求",
+          "summary": "NFLはParamount傘下のCBS Sportsに対し、AFC日曜午後の試合で年間約10億ドル相当の50%値上げを要求。2025年シーズンの平均視聴者数が11%増の2,125万人と過去最高を記録したことに加え、ParamountのUFC 76億ドル契約によるスポーツ投資の深化を背景に、全パートナーとのより広範な再交渉の基調を設定している。",
+          "tag": "放映権 · CBS",
+          "sources": [
+            {
+              "name": "SportsPro",
+              "url": "https://www.sportspro.com/news/broadcast-ott/nfl-cbs-paramount-media-rights-price-march-2026/"
+            }
+          ],
+          "bullets": [],
+          "image_url": "https://www.sportspro.com/wp-content/uploads/2026/03/NFL-CBS-H.jpg"
+        },
+        {
+          "headline": "MLB、ESPN・NBCUniversal・Netflixとの新3年間メディア契約を締結",
+          "summary": "MLBは2026〜2028年の新メディア契約を締結し、NBCが26年ぶりにサンデーナイトベースボールで野球中継に復帰、Netflixが開幕戦（Yankees対Giants）とホームランダービーの放映権を獲得。ESPN経由のMLB.TVによるストリーミングアクセスを拡大し、大谷翔平やAaron Judgeらのスター選手を活用して全国的な視聴者拡大を図る。",
+          "tag": "放映権 · MLB",
+          "sources": [
+            {
+              "name": "MLB",
+              "url": "https://www.mlb.com/press-release/press-release-mlb-forms-new-three-year-media-rights-agreements-with-espn-nbcuniversal-and-netflix"
+            }
+          ],
+          "bullets": [],
+          "image_url": "https://images.ctfassets.net/iiozhi00a8lc/7rLiL2FzRtYvRA6WljKhNY/359c3d0e14e8deced16d006ecb2f4218/mlb_fallback_2.jpg"
+        },
+        {
+          "headline": "Paramount、ESPNの倍額となる77億ドルのUFCストリーミング契約を獲得",
+          "summary": "Paramountが7年間77億ドル（年間11億ドル）のUFC独占放映権を獲得し、ESPNの年間5.5億ドルの契約から移行。Paramount+サブスクリプションとCBSイベントを通じて配信される。ペイパービューや従来の放送からストリーミングサブスクリプションへの業界全体のシフトを反映している。",
+          "tag": "放映権 · UFC",
+          "sources": [
+            {
+              "name": "MediaPost",
+              "url": "https://www.mediapost.com/publications/article/413615/streamers-brands-reach-far-and-wide-for-sports-co.html"
+            }
+          ],
+          "bullets": [],
+          "image_url": "https://s3.amazonaws.com/media.mediapost.com/dam/cropped/2026/03/19/wnba-action-600_s7FS2lS.jpg"
+        },
+        {
+          "headline": "ストリーミング各社、2026年のスポーツ放映権に142億ドル投資——前年比7%増",
+          "summary": "Amazon Prime Videoを含むストリーミングプラットフォームが2026年にスポーツ放映権に142億ドルを投資する見込みで、前年比7%増。NFL、NHL、MLBの同時再交渉、WNBAやNWSLのスポンサーシップ33%増に代表される女子スポーツの価値上昇、そしてライブスポーツが最も効果的なサブスクライバー獲得手段であるという認識が投資増加を牽引。",
+          "tag": "ストリーミング · スポーツ",
+          "sources": [
+            {
+              "name": "World Screen",
+              "url": "https://worldscreen.com/streamers-to-up-sports-rights-spending-in-2026/"
+            }
+          ],
+          "bullets": [],
           "image_url": null
         },
         {
-          "headline": "男子March Madnessが記録的視聴率、大学バスケの人気急上昇を示す",
-          "summary": "男子March Madnessが競争力のあるブラケット、スター選手、メディア配信の拡大により記録的視聴率を達成。TV契約やスポンサーシップからのトーナメント収入を増加させ、NILやカンファレンス再編の中でNCAAの財務に貢献。米国スポーツエンターテイメントにおけるバスケットボールの優位性を強化した。",
-          "tag": "NCAA · メディア",
+          "headline": "放送各社CEO、NFL放映権競争に不可欠として業界再編を推進",
+          "summary": "メディア業界の経営者らは、年間100億ドルを目指すNFLの再交渉に対応するため、Paramount-Warner Bros. Discovery統合のような合併が不可欠と主張。放映権料の高騰とテック大手の新規参入により、従来の放送局は財務的なレバレッジを確保するための統合を迫られ、スポーツコンテンツの経済性を軸にメディア業界の根本的な再編が進んでいる。",
+          "tag": "メディア · 業界再編",
+          "sources": [
+            {
+              "name": "Fox News",
+              "url": "https://www.foxnews.com/sports/broadcast-industry-ceo-says-consolidation-essential-compete-nfl-soaring-media-rights-prices"
+            }
+          ],
           "bullets": [],
-          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=gqmiH-zrGpc"}],
-          "image_url": null
-        },
-        {
-          "headline": "Indian Golf Premier Leagueがフランチャイズコミットメントで1億ドルを獲得",
-          "summary": "新設のIndian Golf Premier Leagueが10のオーナーシップグループから1億ドルの民間投資を集め、インドゴルフ史上最大の投資となった。インドのスポーツ経済の活況とIPLの成功モデルを活用したリーグ立ち上げを支援。新興市場でのゴルフの成長ポテンシャルへの投資家の信頼を示している。",
-          "tag": "ゴルフ · 投資",
-          "bullets": [],
-          "sources": [{"name": "Dakota", "url": "https://www.dakota.com/reports-blog/march-2026-sports-investing-report"}],
-          "image_url": "https://www.dakota.com/hubfs/Abstract%205%20%E2%80%93%203%20(1).jpg"
-        },
-        {
-          "headline": "David Blitzer、フランチャイズ価値高騰の中IPLチームに入札",
-          "summary": "Harris Blitzer Sports & Entertainment共同創設者のDavid BlitzerがRoyal Challengers BangaloreまたはRajasthan Royalsに入札中。AdventやCarlyleなどのグローバル投資家と競合。メディア権利契約と国際展開に支えられたIPLの成熟する150億ドル超のバリュエーション市場を反映。RCBの最終入札は3月中旬が期限。",
-          "tag": "IPL · 投資",
-          "bullets": [],
-          "sources": [{"name": "Dakota", "url": "https://www.dakota.com/reports-blog/march-2026-sports-investing-report"}],
-          "image_url": "https://www.dakota.com/hubfs/Abstract%205%20%E2%80%93%203%20(1).jpg"
-        },
-        {
-          "headline": "Global Fight League、初の上場MMA団体として発足",
-          "summary": "Global Fight Leagueが初の上場MMA団体として発足し、選手とファンの直接投資を可能にする500万ドルのエクイティ調達を開始。格闘技エンターテイメントへの需要増大の中、所有権を民主化する革新的なモデルで従来のMMA資金調達を変革。ファイター、ファン、投資家のインセンティブの一致を目指す。",
-          "tag": "MMA · 投資",
-          "bullets": [],
-          "sources": [{"name": "Dakota", "url": "https://www.dakota.com/reports-blog/march-2026-sports-investing-report"}],
-          "image_url": "https://www.dakota.com/hubfs/Abstract%205%20%E2%80%93%203%20(1).jpg"
-        },
-        {
-          "headline": "Adidas、2026年ワールドカップに先駆け米国初のサッカー専門フラッグシップストアをオープン",
-          "summary": "AdidasがAmerican Dream Mallに9,000平方フィートのサッカー専門フラッグシップストアをオープン。没入型リテールと限定コレクションを展開。2026年FIFAワールドカップに合わせ、米国でのサッカー人気の急上昇とブランドマーケティングの好機を活用。モールをスポーツエンターテイメントのハブとして位置づけている。",
-          "tag": "サッカー · リテール",
-          "bullets": [],
-          "sources": [{"name": "Sports Business Journal", "url": "https://www.sportsbusinessjournal.com/Articles/2026/02/03/athletic-brands-plan-marketing-blitzes-amid-historic-sports-year-in-2026/"}],
-          "image_url": "https://www.sportsbusinessjournal.com/resizer/v2/VCLO4XBVYFDSXJD6LRCCWQ6YKE.jpg?smart=true&auth=5e1496f7a907c54a812585e2ce6cf2fe30a68ef0d45a690961f96403c3c1569d&width=1200&height=630"
+          "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/03/fox-sports-camera.jpg"
         }
       ]
     }
