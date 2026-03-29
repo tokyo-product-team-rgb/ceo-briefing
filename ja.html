@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEOブリーフィング — 2026年3月28日</title>
+  <title>CEOブリーフィング — 2026年3月30日</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     @font-face {
       font-family: 'Copernicus Trial';
@@ -42,7 +42,7 @@
       --border: #E8E5E1;
       --border-default: #D5D2CD;
       --border-accent: #B56AEB;
-      --serif: 'Copernicus Trial', Georgia, serif;
+      --serif: 'Noto Serif JP', 'Copernicus Trial', Georgia, serif;
       --sans: 'Noto Sans JP', 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
       --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
       --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
@@ -63,447 +63,85 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    .masthead {
-      background: transparent;
-      border-bottom: none;
-      padding: 0;
-      position: relative;
-    }
+    .masthead { background: transparent; border-bottom: none; padding: 0; position: relative; }
+    .masthead-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; text-align: center; }
+    .masthead .overline { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .masthead h1 { font-family: var(--serif); font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.2; color: var(--text); margin-bottom: 0.5rem; }
+    .masthead .edition-date { font-family: var(--sans); font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.25rem; }
+    .masthead .edition-sub { font-size: 0.8rem; color: var(--text-muted); }
+    .divider-bar { width: 60px; height: 3px; background: var(--text); margin: 1rem auto 0; border-radius: 2px; }
 
-    .masthead-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 2rem;
-      text-align: center;
-    }
+    .nav-bar { display: flex; justify-content: center; align-items: center; gap: 0; background: var(--bg-secondary); border-bottom: none; font-family: var(--sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; }
+    .nav-bar a { text-decoration: none; color: var(--text-muted); padding: 0.7rem 1.5rem; margin: 4px 0; border-radius: 999px; transition: color 0.2s ease, background 0.2s ease; }
+    .nav-bar a.active { color: var(--text-primary); background: #ECEAE7; }
+    .nav-bar a:hover:not(.active) { color: var(--text-secondary); }
 
-    .masthead .overline {
-      font-family: var(--sans);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-    }
+    .lang-toggle { position: absolute; top: 0.75rem; right: 1rem; display: inline-flex; align-items: center; gap: 0.25rem; font-family: var(--sans); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.04em; }
+    .lang-toggle a { text-decoration: none; color: var(--text-muted); transition: color 0.2s ease; }
+    .lang-toggle a.active { color: var(--text); }
+    .lang-toggle a:hover:not(.active) { color: var(--text-secondary); }
+    .lang-toggle .sep { color: var(--border); }
 
-    .masthead h1 {
-      font-family: var(--serif);
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-    }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .section { margin-bottom: 3.5rem; }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--text); padding-bottom: 0.75rem; }
+    .section-icon { font-size: 1.5rem; }
+    .section-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; }
 
-    .masthead .edition-date {
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      margin-bottom: 0.25rem;
-    }
+    .cards { display: flex; flex-direction: column; gap: 1rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: box-shadow 0.2s ease; }
+    .card:hover { box-shadow: var(--shadow-sm); }
+    .card.featured { border-left: 3px solid var(--bg-accent); }
+    .card.featured.japan { border-left: 3px solid #C53030; }
 
-    .masthead .edition-sub {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .divider-bar {
-      width: 60px;
-      height: 3px;
-      background: var(--text);
-      margin: 1rem auto 0;
-      border-radius: 2px;
-    }
-
-    .nav-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      background: var(--bg-secondary);
-      border-bottom: none;
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-
-    .nav-bar a {
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 0.7rem 1.5rem;
-      margin: 4px 0;
-      border-radius: 999px;
-      transition: color 0.2s ease, background 0.2s ease;
-    }
-
-    .nav-bar a.active {
-      color: var(--text-primary);
-      background: #ECEAE7;
-    }
-
-    .nav-bar a:hover:not(.active) {
-      color: var(--text-secondary);
-    }
-
-    .lang-toggle {
-      position: absolute;
-      top: 0.75rem;
-      right: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-
-    .lang-toggle a {
-      text-decoration: none;
-      color: var(--text-muted);
-      transition: color 0.2s ease;
-    }
-
-    .lang-toggle a.active {
-      color: var(--text);
-    }
-
-    .lang-toggle a:hover:not(.active) {
-      color: var(--text-secondary);
-    }
-
-    .lang-toggle .sep {
-      color: var(--border);
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-
-    .section {
-      margin-bottom: 3.5rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid var(--text);
-      padding-bottom: 0.75rem;
-    }
-
-    .section-icon {
-      font-size: 1.5rem;
-    }
-
-    .section-title {
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-    }
-
-    .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-sm);
-    }
-
-    .card.featured {
-      border-left: 3px solid var(--bg-accent);
-    }
-
-    .card.featured.japan {
-      border-left: 3px solid #C53030;
-    }
-
-    .card-tag {
-      display: inline-block;
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-
-    .card-tag.japan {
-      color: #C53030;
-    }
-
-    .card-headline {
-      font-family: var(--sans);
-      font-size: 1.1rem;
-      font-weight: 600;
-      line-height: 1.45;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-    }
-
-    .card-body {
-      font-size: 0.9rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-
-    .card-sources {
-      margin-top: 0.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .source-link {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--text-link);
-      text-decoration: none;
-      padding: 0.15rem 0.5rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      transition: all 0.2s;
-    }
-
-    .source-link:hover {
-      border-color: var(--text-link);
-      background: var(--bg-tertiary);
-    }
-
+    .card-tag { display: inline-block; font-family: var(--sans); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; }
+    .card-tag.japan { color: #C53030; }
+    .card-headline { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; line-height: 1.35; color: var(--text); margin-bottom: 0.75rem; }
+    .card-body { font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary); }
+    .card-sources { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .source-link { font-size: 0.7rem; font-weight: 500; color: var(--text-link); text-decoration: none; padding: 0.15rem 0.5rem; border: 1px solid var(--border); border-radius: 999px; transition: all 0.2s; }
+    .source-link:hover { border-color: var(--text-link); background: var(--bg-tertiary); }
     .src-arrow { font-size: 0.6rem; }
+    .stat { font-weight: 600; color: var(--text); }
 
-    .stat {
-      font-weight: 600;
-      color: var(--text);
-    }
+    .tap-hint { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.5rem; font-style: italic; }
+    .collapsible .card-body, .collapsible .card-sources { display: none; }
+    .collapsible.expanded .card-body, .collapsible.expanded .card-sources { display: block; }
+    .collapsible.expanded .tap-hint { display: none; }
+    .collapsible { cursor: pointer; }
 
-    .tap-hint {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      font-style: italic;
-    }
+    .nav-pills { display: flex; justify-content: center; gap: 0.5rem; padding: 1rem 1.5rem; flex-wrap: wrap; }
+    .nav-pill { font-family: var(--sans); font-size: 0.75rem; font-weight: 500; text-decoration: none; color: var(--text-muted); padding: 0.35rem 0.85rem; border: 1px solid var(--border); border-radius: 999px; transition: all 0.2s; }
+    .nav-pill:hover { border-color: var(--text-secondary); color: var(--text-secondary); }
 
-    .collapsible .card-body,
-    .collapsible .card-sources {
-      display: none;
-    }
-
-    .collapsible.expanded .card-body,
-    .collapsible.expanded .card-sources {
-      display: block;
-    }
-
-    .collapsible.expanded .tap-hint {
-      display: none;
-    }
-
-    .collapsible {
-      cursor: pointer;
-    }
-
-    .nav-pills {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-pill {
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 500;
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 0.35rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      transition: all 0.2s;
-    }
-
-    .nav-pill:hover {
-      border-color: var(--text-secondary);
-      color: var(--text-secondary);
-    }
-
-    .index-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-    }
-
-    .index-table th {
-      font-weight: 600;
-      text-align: left;
-      padding: 0.5rem 0.75rem;
-      border-bottom: 2px solid var(--border);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-    }
-
-    .index-table td {
-      padding: 0.5rem 0.75rem;
-      border-bottom: 1px solid var(--border);
-    }
-
+    .index-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 0.5rem; }
+    .index-table th { font-weight: 600; text-align: left; padding: 0.5rem 0.75rem; border-bottom: 2px solid var(--border); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); }
+    .index-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
     .idx-name { font-weight: 500; }
     .idx-level { font-weight: 600; }
     .chg-pos { color: var(--green); font-weight: 600; }
     .chg-neg { color: var(--red); font-weight: 600; }
 
-    .health-gauge-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5rem 0;
-    }
+    .health-gauge-wrap { display: flex; flex-direction: column; align-items: center; padding: 1.5rem 0; }
+    .health-gauge { position: relative; width: 200px; height: 100px; overflow: hidden; }
+    .gauge-bg { position: absolute; width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(from 180deg, #e74c3c 0deg, #e67e22 45deg, #f1c40f 90deg, #2ecc71 135deg, #27ae60 180deg); mask: radial-gradient(circle at center, transparent 60px, black 61px); -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px); }
+    .gauge-needle { position: absolute; bottom: 0; left: 50%; width: 3px; height: 80px; background: var(--text); transform-origin: bottom center; transform: rotate(-90deg); transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1); border-radius: 2px; }
+    .gauge-dot { position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: var(--text); border-radius: 50%; }
+    .gauge-scale { display: flex; justify-content: space-between; width: 200px; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .gauge-score { font-size: 2.5rem; font-weight: 700; color: var(--text); margin-top: 0.5rem; }
+    .gauge-score-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; color: var(--red); }
 
-    .health-gauge {
-      position: relative;
-      width: 200px;
-      height: 100px;
-      overflow: hidden;
-    }
+    .indicator-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .indicator-item { text-align: center; }
+    .indicator-value { font-size: 1.25rem; font-weight: 700; }
+    .indicator-name { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); margin-top: 0.25rem; }
+    .indicator-sub { font-size: 0.65rem; color: var(--text-muted); }
 
-    .gauge-bg {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: conic-gradient(
-        from 180deg,
-        #e74c3c 0deg,
-        #e67e22 45deg,
-        #f1c40f 90deg,
-        #2ecc71 135deg,
-        #27ae60 180deg
-      );
-      mask: radial-gradient(circle at center, transparent 60px, black 61px);
-      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
-    }
+    .bottom-line { background: var(--text); color: #f5f5f5; border-radius: var(--radius); padding: 2rem; }
+    .bottom-line h3 { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 1rem; }
+    .bottom-line p { font-size: 0.9rem; line-height: 1.8; color: #d4d4d4; }
 
-    .gauge-needle {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 3px;
-      height: 80px;
-      background: var(--text);
-      transform-origin: bottom center;
-      transform: rotate(-90deg);
-      transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-      border-radius: 2px;
-    }
-
-    .gauge-dot {
-      position: absolute;
-      bottom: -5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 12px;
-      height: 12px;
-      background: var(--text);
-      border-radius: 50%;
-    }
-
-    .gauge-scale {
-      display: flex;
-      justify-content: space-between;
-      width: 200px;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-top: 0.25rem;
-    }
-
-    .gauge-score {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-top: 0.5rem;
-    }
-
-    .gauge-score-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--red);
-    }
-
-    .indicator-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .indicator-item {
-      text-align: center;
-    }
-
-    .indicator-value {
-      font-size: 1.25rem;
-      font-weight: 700;
-    }
-
-    .indicator-name {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      margin-top: 0.25rem;
-    }
-
-    .indicator-sub {
-      font-size: 0.65rem;
-      color: var(--text-muted);
-    }
-
-    .bottom-line {
-      background: var(--text);
-      color: #f5f5f5;
-      border-radius: var(--radius);
-      padding: 2rem;
-    }
-
-    .bottom-line h3 {
-      font-family: var(--sans);
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-    }
-
-    .bottom-line p {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      color: #d4d4d4;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-    }
+    .footer { text-align: center; padding: 2rem 1.5rem; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border); }
 
     @media (max-width: 640px) {
       .cards-grid { grid-template-columns: 1fr; }
@@ -521,13 +159,8 @@
     @media (max-width: 480px) {
       .masthead-inner { padding: 1.5rem 1rem 1.5rem; }
       .container { padding: 1.5rem 1rem 3rem; }
-      .nav-pills {
-        justify-content: flex-start;
-        overflow-x: auto;
-      }
-      .bottom-line {
-        padding: 1.5rem;
-      }
+      .nav-pills { justify-content: flex-start; overflow-x: auto; }
+      .bottom-line { padding: 1.5rem; }
     }
   </style>
 </head>
@@ -548,9 +181,9 @@
     </div>
     <div class="masthead-inner">
       <div class="overline">朝のインテリジェンスブリーフ</div>
-      <h1>CEO デイリーブリーフィング</h1>
-      <div class="edition-date">2026年3月28日（土）— 朝刊</div>
-      <div class="edition-sub">🔴 イラン戦争2ヶ月目突入 — 民間人1,464名死亡 · ダウ調整局面入り（−793pt / −1.73%） · S&P500 5週連続下落 · ナスダック年内最悪の週（−3.23%） · テック暴落：Meta −11%、Alphabet −9%、Micron −15% · 原油3年ぶり高値（ブレント$110） · 日経−0.43% 53,373円 · アジア通貨急落 · 日本、外国人飲食店労働者受入停止 · Google TurboQuantがメモリ半導体直撃 · ルービニ「1970年代スタグフレーション」警告 · ヘルススコア: 25/100</div>
+      <h1>CEO モーニングブリーフィング</h1>
+      <div class="edition-date">2026年3月30日（月）— 朝刊</div>
+      <div class="edition-sub">🔴 イラン戦争30日目 — フーシ派がイスラエル攻撃で参戦、新戦線開設 · 米海兵隊（日本配備USSトリポリ）湾岸到着 · 米軍死傷者300名超負傷・13名戦死 · ダウ800pt暴落で調整入り(45,166) · S&P5週連続下落 · ブレント$105、WTI$99 · 金$4,495(+46% YTD) · 北朝鮮が改良型ICBM試験 · 日本、停戦後ホルムズ海峡掃海の可能性 · パキスタンがイランとホルムズ通行協定 · 日本、帰化要件を10年に厳格化 · 健全性スコア: 20/100</div>
       <div class="divider-bar"></div>
     </div>
   </header>
@@ -569,68 +202,99 @@
     <section class="section" id="japan">
       <div class="section-header">
         <div class="section-icon japan">🇯🇵</div>
-        <h2 class="section-title">日本 — 詳細</h2>
+        <h2 class="section-title japan">日本 — 詳細</h2>
       </div>
 
       <div class="cards">
 
         <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🟡 マーケット · 金曜終値</span>
-          <h3 class="card-headline">日経225 −0.43%で53,373円 — トランプの停戦延長が下値を支えるも、Topixは小幅高で明暗分かれる</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>日経225は<span class="stat">−0.43%の53,373.07円</span>で引け、Topixは+0.19%の3,649.69。<strong>なぜ乖離が生じたか：</strong>（1）トランプ大統領のイラン攻撃期限10日間延長が下支えとなり、韓国のような−3%級の暴落を回避；（2）Topixはバリュー・ディフェンシブ銘柄（銀行・公益）へのローテーションで堅調；（3）輸出関連株は財務省の円安介入示唆を受けて圧迫が継続；（4）半導体には深刻なダメージ — GoogleのTurboQuantメモリ効率化技術がチップ需要減退懸念を誘発し、キオクシアは約6%下落。<strong>週間では：</strong>イラン戦争1ヶ月目の累積ダメージを反映し、日経は有意な週間下落を記録。</p>
+          <span class="card-tag japan">🔴 予算 · 政治危機</span>
+          <h3 class="card-headline">高市首相、8.6兆円の暫定予算を可決 — FY2026本予算が3月31日期限までに成立せず、数年ぶりの異常事態</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>高市内閣は3月26日、4月1〜11日の政府支出をカバーする<span class="stat">8.6兆円の暫定予算</span>を閣議決定。FY2026本予算の3月31日までの成立を断念した。<strong>なぜこうなったか：</strong>（1）野党（立民・公明・国民民主）が参院での与党過半数割れを突き、ガス・電気補助金の拡大を要求して修正協議を長引かせた；（2）イラン戦争でエネルギー補助金が政治的必須に — ブレント$111でガソリン¥170/L上限は政府支出でのみ維持されており、野党はさらなる増額を要求；（3）高市・トランプ会談の評価が分かれた — 温かい雰囲気は評価されたが「トランプだけが平和をもたらせる」発言と関税問題の未解決が批判対象に；（4）この予算膠着は高市政権の政治的脆弱さを示し、今後の四半期が政権の命運を左右する可能性。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/27/asia-markets-live-updates-hang-seng-index-nikkei-225-kospi.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.japantimes.co.jp/news/2026/03/26/japan/politics/provisional-budget/" target="_blank" rel="noopener">Japan Times <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🔴 移民政策 · 労働力危機</span>
-          <h3 class="card-headline">日本、外国人飲食店労働者の受入停止へ — ビザ枠が上限に迫り、外食産業にパニック広がる</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>政府は特定技能ビザの<span class="stat">外食分野での新規受入を4月から停止</span>すると発表。2025年11月時点で42,396人がこのビザを保有。<strong>なぜ警戒されているか：</strong>（1）少子高齢化が進む日本の外食産業は外国人労働者に依存しており、事業者は「事業継続が不可能」と悲鳴；（2）コロナ後のインバウンド回復で飲食店の雇用が急増し、上限到達が想定より早まった；（3）観光客を増やしたい（オーバーツーリズムが問題化）のに、接客する人材を制限するというパラドックス；（4）桜シーズン（日本最大の観光ピーク）が来週始まるタイミングで、京都・大阪・東京の飲食店は既に人手不足。</p>
+          <span class="card-tag japan">🔴 為替 · 介入警戒</span>
+          <h3 class="card-headline">ドル円¥160突破 — エネルギー輸入コスト増で貿易赤字拡大、財務省介入がほぼ確実な水準に</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>ドル円は金曜日に<span class="stat">¥160.26</span>で引け、心理的に重要な¥160を突破。歴史的に財務省が介入してきた水準に到達。<strong>なぜ¥160を割ったか：</strong>（1）エネルギー輸入額が急増 — ブレント$111で中東から95%のエネルギーを輸入する日本の貿易赤字が日々拡大；（2）日銀は0.75%で身動きが取れない — 円防衛のための利上げはエネルギーコストに苦しむ経済を破壊する古典的な政策ジレンマ；（3）円は4週間で対ドル1.82%下落 — 円安→エネルギー輸入高→赤字拡大→円安という負のフィードバックループが自己強化；（4）財務官は今週口先介入を実施したが、市場は東京が実弾（ドル売り）に踏み切るかを試している。<strong>月曜のアジア取引に注目</strong> — ¥161が試されれば、介入はほぼ避けられない。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/spotlight/japan-immigration/japan-to-stop-accepting-foreign-restaurant-workers-as-visas-approach-cap" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://tradingeconomics.com/usdjpy:cur" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🟡 為替 · アジア通貨危機</span>
-          <h3 class="card-headline">エネルギー危機がアジア通貨を直撃 — フィリピンペソ・韓国ウォン急落、ドル独歩高で輸入コスト爆増</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>イラン戦争開始以降、アジア通貨が<span class="stat">全面的に下落</span>。フィリピンペソ・韓国ウォンが最も深刻、一方で資源国通貨（CAD・AUD）は上昇。<strong>なぜ日本が巻き込まれるか：</strong>（1）日本はエネルギーをほぼ全量輸入しており、原油高が直接的に貿易赤字を拡大させ円安を加速；（2）エネルギー輸入国アジアと資源輸出国との乖離が2022年のエネルギーショック以来の水準に拡大；（3）日銀は利上げで円を防衛できない — エネルギーコスト高で経済が既にストレス下にあるため；（4）通貨安がエネルギー輸入コストをさらに押し上げる悪循環。<strong>¥160を割れば</strong>財務省の介入がほぼ確実に。</p>
+          <span class="card-tag japan">🟡 エネルギー · 戦略備蓄</span>
+          <h3 class="card-headline">日本、石油備蓄を放出し湾岸共同備蓄を活用 — ガソリン補助金8,000億円で¥170/L上限を維持</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>日本は<span class="stat">戦略石油備蓄の放出と湾岸諸国に保有する共同備蓄の活用</span>を開始。同時にガソリン補助金8,000億円を計上し、小売価格を¥170/Lに抑制。愛媛の製油所にホルムズ海峡を経由しない代替ルートで中東産原油が初めて到着。<strong>なぜ今行動しているか：</strong>（1）ホルムズ海峡の部分的封鎖が日本のエネルギーライフラインを直接脅かしている — 原油の95%がこの海路を通過；（2）「備蓄放出＋小売補助金」の二重アプローチは供給不安と消費者パニックの両方を防ぐ設計；（3）UAE・サウジの日本所有タンクに保管された共同備蓄は国家備蓄からの輸送より迅速にアクセス可能；（4）ただし8,000億円の補助金コストはすでに揉めているFY2026予算をさらに圧迫 — 野党が本予算承認前にさらなる支出を要求する理由の一つ。高市首相はSNSで「石油製品の供給がただちに滞ることはない」と表明。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/business/markets/currencies/energy-crisis-hits-currencies-of-asian-economies-reliant-on-middle-east" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www3.nhk.or.jp/news/" target="_blank" rel="noopener">NHK <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.eu-japan.eu/news/japanese-economic-and-business-weekly-newsletter-24-27-march-2026" target="_blank" rel="noopener">EU-Japan Centre <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🟢 小売 · AI展開</span>
-          <h3 class="card-headline">JINS、AI搭載の銀座旗艦店をオープン — 多言語生成AIが観光客にメガネを提案、東南アジアデータ戦略を加速</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>ジンズホールディングスが<span class="stat">多言語対応の生成AIを搭載した銀座旗艦店</span>をオープン。外国人観光客にメガネを推薦するシステムを導入。<strong>なぜ戦略的か：</strong>（1）AIシステムは即時の売上向上と長期的な海外顧客嗜好データの蓄積という二重の目的；（2）蓄積データはタイ・ベトナム・フィリピンでの展開前に顧客理解を深めるためのJINSの東南アジア戦略を推進；（3）オーバーツーリズムを問題からデータ資産に変換する日本の小売業のテンプレート；（4）秋葉原のスマートゴミ箱設置や渋谷のゴミ箱義務化と同時期のオープン — 観光客体験向上の総合的な取り組みの一環。</p>
+          <span class="card-tag japan">🟡 外交 · ブランシャール招聘</span>
+          <h3 class="card-headline">高市首相、元IMFチーフエコノミストのブランシャール氏を経済財政諮問会議に招聘 — 2017年以来初の海外有識者招聘</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>高市首相は<span class="stat">元IMFチーフエコノミストのオリヴィエ・ブランシャール氏とケネス・ロゴフ氏</span>を経済財政諮問会議に招聘。2017年以来初の海外有識者招聘。<strong>なぜ高市首相がこれを行うか：</strong>（1）防衛費・エネルギー支出の膨張の中、「責任ある財政」路線への国際的な正当性が必要；（2）日本の財政信認が注視されていることへの認識の表れ — G7最高の債務対GDP比；（3）ブランシャール氏は過去に日本のアプローチに好意的で、低金利下では高水準の債務も持続可能と主張してきた；（4）しかし日銀金利が0.75%に上昇し、その議論は弱まりつつある — 高市首相は継続的支出への新たな知的後ろ盾を求めている可能性。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/business/companies/japan-eyewear-chain-jins-to-open-ai-equipped-flagship-store-in-central-tokyo" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.japantimes.co.jp/business/2026/03/27/economy/japan-economic-panel-overseas-experts/" target="_blank" rel="noopener">Japan Times <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🟢 観光 · インフラ</span>
-          <h3 class="card-headline">東京、オーバーツーリズム対策でスマートゴミ箱設置 — 秋葉原に自動圧縮式、渋谷はゴミ箱なし店舗に罰金</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>東京都が<span class="stat">センサー搭載の自動スマートゴミ箱を設置</span>し、事業者にゴミ箱設置を義務化。<strong>なぜ今か：</strong>（1）1995年の地下鉄サリン事件以来のセキュリティ上の理由で公共ゴミ箱が撤去された日本だが、訪日客数が過去最高を記録する中で外国人観光客の不満No.1に；（2）秋葉原にはゴミを圧縮し満杯を通知するセンサー式ゴミ箱を設置；（3）渋谷はスクランブル交差点付近の店舗にゴミ箱未設置なら罰金という規制的アプローチ；（4）テクノロジー＋規制の二重アプローチは、観光客を制限するのではなくインフラを改善するという東京の実用的な対応。</p>
+          <span class="card-tag japan">🟡 マーケット · 金曜引値</span>
+          <h3 class="card-headline">日経225は−0.43%の53,373で引け — イラン戦争・TurboQuant・円安の三重苦で月間−8%</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>日経225は金曜日に<span class="stat">−0.43%の53,373.07</span>で引け、月間下落率は−8.07%に。2月の史上最高値59,332から10%下落。<strong>なぜ下落が抑制的だが執拗か：</strong>（1）トランプのイラン攻撃期限10日延長が急落を防いだ — 同日の韓国KOSPIは3%下落；（2）GoogleのTurboQuant AI効率化ブレークスルーがメモリチップ需要予想を揺るがし、テック・半導体が主導 — キオクシア−4.2%、アドバンテスト−3.9%、東京エレクトロン−3.1%；（3）¥160の円安は輸出企業を助けていない — 円安の原因（エネルギー危機）が原材料コストも引き上げているため；（4）月間下落にもかかわらず日経は前年比+43.78% — しかし年間利益と月間損失の乖離はセンチメントの急転を示す。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/business/travel-leisure/tokyo-smartly-addresses-lack-of-trash-cans-amid-overtourism-concerns" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://tradingeconomics.com/japan/stock-market" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured japan fade-in collapsible" data-image="">
-          <span class="card-tag japan">🟢 日仏 · AI協力</span>
-          <h3 class="card-headline">日仏、AIデュアルユース技術で協力 — マクロン来日に合わせ次官級対話を創設、中国依存脱却を目指す</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>日仏両政府は<span class="stat">AIの軍民両用技術について協力</span>する方針を発表。31日のマクロン大統領来日に合わせ「AI協力首脳共同声明」を発表予定。<strong>なぜ重要か：</strong>（1）外務省・経産省・総務省の次官級ハイレベル対話を新設し、企業連携を促進する政策をすり合わせ；（2）中国などに依存しないAI技術・関連製品のサプライチェーン構築が目的 — イラン戦争で供給網の脆弱性が再認識された背景；（3）フランスはAIサミット主催国としてAIガバナンスで主導権を握りたく、日本は安全保障面でのAI活用を加速したい利害が一致；（4）高市首相との4月1日の首脳会談で正式合意の見込み。</p>
+          <span class="card-tag japan">🟢 原子力 · 日仏首脳会談</span>
+          <h3 class="card-headline">日仏首脳会談で次世代原子炉協力 — SMR協力と原子力安全強化、エネルギー安全保障が存亡的課題に</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>日本とフランスは<span class="stat">小型モジュール炉（SMR）と原子力安全協力に焦点を当てた二国間首脳会談</span>を開催。同時に第3回日EU防衛技術・サプライチェーン対話も実施。<strong>なぜ原子力が突然急務になったか：</strong>（1）イラン戦争が日本の中東エネルギー依存の壊滅的脆弱性を露呈 — 原子力がエネルギー安全保障への唯一の現実的な道；（2）フランスは世界一の原子力発電国であり、日本のSMR構想の自然なパートナー；（3）福島後の原発再稼働は遅々として進まず — 運転可能33基中12基のみ稼働 — だがエネルギー危機が世論を変えつつある；（4）SMRは従来型より迅速に展開可能で、工業施設やデータセンターへの設置も想定 — エネルギーとAIインフラのニーズを同時に満たす可能性。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.nikkei.com/article/DGXZQOUA278S70X20C26A3000000/" target="_blank" rel="noopener">日本経済新聞 <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.eu-japan.eu/news/japanese-economic-and-business-weekly-newsletter-24-27-march-2026" target="_blank" rel="noopener">EU-Japan Centre <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible" data-image="">
+          <span class="card-tag japan">🔴 防衛 · ホルムズ海峡掃海</span>
+          <h3 class="card-headline">米国、停戦後のホルムズ海峡掃海を日本に期待 — 米海軍最後の掃海艦が2027年退役で日本の能力が不可欠に</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>日経アジアは、停戦後に米国が<span class="stat">海上自衛隊にホルムズ海峡の機雷除去を依頼する可能性</span>を報道。米海軍の最後の掃海艦は2027年に退役予定。<strong>なぜ日本が求められているか：</strong>（1）海自は世界有数の掃海能力を保有 — 第二次大戦後の掃海作業の遺産；（2）米国は自国の掃海能力を衰退させ、最悪のタイミングで能力ギャップを生じさせた；（3）日本にとって、高市政権下の拡大された安全保障パートナーシップの試金石 — ホルムズ掃海への参加は数十年で最も重要な海自の海外作戦となる；（4）政治的には国会で反対を受ける可能性があるが、日本のエネルギー供給への直接的脅威（95%がホルムズ経由）が強い正当化根拠を提供。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/spotlight/iran-tensions/after-ceasefire-us-may-count-on-japan-to-clear-mines-in-strait-of-hormuz" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible" data-image="">
+          <span class="card-tag japan">🟡 入管 · 厳格化</span>
+          <h3 class="card-headline">日本、帰化要件の在留期間を10年に倍増、外国人飲食店労働者の受入を停止 — 人手不足にもかかわらず入管厳格化</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>日本は4月1日から<span class="stat">帰化に必要な最低在留期間を5年から10年に倍増</span>。また、飲食店での外国人労働者受入をビザ枠上限接近を理由に停止。<strong>なぜ矛盾するか：</strong>（1）日本は深刻な人手不足 — 業界団体は「外国人労働者なしでは事業が成り立たない」と指摘；（2）しかし高市政権は自民党支持基盤のナショナリスト的圧力を反映して入管ルールを厳格化；（3）帰化変更は5年間の納税記録を要求し、多くのブルーカラー労働者を実質的に排除する行政的負担を生む；（4）飲食店ビザ凍結は観光ブームと真っ向から矛盾 — 年間4,000万人の観光客に外国人ホスピタリティ労働者なしでは対応不可能。経済的必要性と政治的イデオロギーの間のこの緊張が日本の人口動態の将来を決定する。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/spotlight/japan-immigration/japan-tightens-naturalization-rules-doubling-residency-minimum-to-10-years" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible" data-image="">
+          <span class="card-tag japan">🟡 ビジネス · 消費テック</span>
+          <h3 class="card-headline">ソニー、メモリチップ高騰でPS5を米国で$100値上げ — テスラは日本のサービス拠点を倍増しEV市場を拡大</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>ソニーは米国で販売する<span class="stat">PlayStation 5の$100値上げ</span>を発表 — 1年未満で2度目の値上げ。別途、テスラは日本のサービスセンターを倍増。<strong>なぜこれらが重要か：</strong>（1）PS5値上げはメモリチップコスト急騰に起因 — テック業界全体に影響するサプライチェーン混乱と同根；（2）12ヶ月未満で2度目の値上げは、部品インフレが構造的であることを示唆；（3）テスラの日本サービス拠点倍増はEV普及拡大を反映 — エネルギー危機がガソリン車からの転換を加速するとの賭け；（4）両ニュースは戦争経済が勝者（EV）と敗者（不安定な部品価格に依存する消費者向け電子機器）をどう生み出すかを示す。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/economy/inflation/sony-to-hike-playstation-5-prices-as-memory-chip-costs-surge" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
@@ -648,166 +312,167 @@
 
         <!-- 北米 -->
         <article class="card featured fade-in collapsible" style="border-left-color: #B94A48;" data-image="">
-          <span class="card-tag" style="color: #B94A48;">🇺🇸 北米 · 市場暴落</span>
-          <h3 class="card-headline">ダウ調整局面入り（−793pt）、S&P 5週連続下落 — 原油3年ぶり高値、投資家のイラン戦争への忍耐が限界に</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>ダウ工業株は<span class="stat">−793ポイント（−1.73%）</span>の45,167で、正式に調整局面入り。S&P500は−1.67%の6,369で5週連続下落（2022年以来最長）。ナスダックは−2.15%。<strong>なぜ金曜日がこれほど酷かったか：</strong>（1）トランプの期限延長にもかかわらず原油がイラン戦争開始以来の高値（ブレント$110）で引け — 「停戦」は原油上昇を止められず；（2）外交で危機が解決されるという信頼が投資家の間で崩壊；（3）ルービニの「1970年代スタグフレーション」警告がムードを代弁 — エネルギー価格上昇＋成長鈍化は悪夢のシナリオ；（4）売りは広範：S&Pの11セクター中9セクターが下落、プラスはエネルギー（+1.8%）と公益（+0.3%）のみ。</p>
+          <span class="card-tag" style="color: #B94A48;">🇺🇸 北米 · 戦争エスカレーション</span>
+          <h3 class="card-headline">米軍死傷者300名超負傷・13名戦死 — 日本配備のUSSトリポリ海兵隊が湾岸到着、イランがプリンスルタン空軍基地に弾道ミサイル6発</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>米軍の死傷者は<span class="stat">300名以上負傷、13名戦死</span>に。イランは金曜日にサウジのプリンスルタン空軍基地に弾道ミサイル6発とドローン29機を発射し、少なくとも15名が負傷。台湾海峡演習から転用されたUSSトリポリ（海兵隊2,500名）が到着。<strong>なぜエスカレーションの転換点か：</strong>（1）トリポリは日本に配備され台湾海峡演習を実施していた — その転用は太平洋の抑止力を弱め、中東過剰展開の直接的帰結；（2）300名超の負傷者は国内政治計算を変える死傷率 — クウェート港でイランドローンにより6名死亡、イラクタンカー事故で6名死亡；（3）ルビオは「地上部隊なしで目的達成可能」と言うが、トランプは「最大の選択肢」を望む — 市場はエスカレーションリスクと解釈する矛盾したメッセージ；（4）サンディエゴからのUSSボクサーと別の海兵隊部隊も向かっており、20年以上で最大の米国中東部隊が構築されつつある。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/26/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener">Wikipedia <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://efe.com/en/latest-news/2026-03-27/us-troop-deployment-iran-conflict-day-29/" target="_blank" rel="noopener">EFE <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇺🇸 北米 · テック暴落</span>
-          <h3 class="card-headline">テック株が年内最悪の週 — Meta −11%（裁判敗訴）、Micron −15%（TurboQuant）、Alphabet −9%</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>ナスダックの<span class="stat">週間−3.23%</span>は2025年4月以来最悪。Meta −11%、Alphabet −9%、Microsoft −7%、Micron −15%。<strong>なぜテックが震源地か：</strong>（1）Metaは同一週に2つの裁判で敗訴 — ニューメキシコとLAの陪審がSNS中毒で子供に与えた被害についてMeta有責と認定、広告ビジネスモデルの根幹を脅かす；（2）GoogleのTurboQuant圧縮技術がAIメモリ需要を6分の1に削減する可能性 — メモリ半導体株（Micron、Samsung、SK Hynix）が軒並み急落；（3）原油高が経済全体への「課税」として機能し、デジタルサービスへの裁量的支出を圧迫；（4）Appleだけがディフェンシブなポジショニングで微増。<strong>CloudflareのCEOはTurboQuantを「GoogleのDeepSeek」と呼んだ。</strong></p>
+          <span class="card-tag">🇺🇸 北米 · マーケット暴落</span>
+          <h3 class="card-headline">ダウ800pt暴落で調整入り45,166 — S&P5週連続下落、ナスダック高値から−10%で戦争経済が定着</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>米国株は金曜日に暴落：<span class="stat">S&P 500 −1.87%で6,356、ダウ−1.73%(約800pt)で45,166、ナスダック−2.15%で20,948</span>。ダウは1月の高値から−10%で調整領域入り。S&Pは5週連続の下落。<strong>なぜ売りが加速したか：</strong>（1）WTI原油が2022年以来初めて$99/bblを突破し、エネルギーコストが消費者と企業を同時に直撃するスタグフレーション懸念を誘発；（2）テックが下落主導 — Nvidia−2.2%、Microsoft−2.5%、Alphabet−2.5%、Meta−4% — 戦争リスクプレミアムがAI成長ナラティブを圧倒；（3）エネルギー株のみ上昇（Exxon +3.5%）、古典的な戦争経済ローテーション：資金がグロース/テックからエネルギー/防衛/コモディティに流出；（4）VIX（恐怖指数）が27.44に急騰、戦前水準の約13の2倍超 — オプション市場が継続的な混乱を予想。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/27/tech-stocks-iran-war-meta-verdict.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.capitalstreetfx.com/global-index-market-analysis-march-27-2026/" target="_blank" rel="noopener">Capital Street FX <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇺🇸 北米 · 法務・社会</span>
-          <h3 class="card-headline">バンク・オブ・アメリカ、エプスタイン被害者に7,250万ドル和解金 — タイガー・ウッズ飲酒運転で逮捕</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>バンク・オブ・アメリカがエプスタイン被害者訴訟で<span class="stat">7,250万ドル</span>の和解に合意。また、タイガー・ウッズがフロリダで横転事故後に飲酒運転で逮捕。<strong>なぜ重要か：</strong>（1）JPモルガンの2023年の2.9億ドル和解に続く事例 — 金融機関がエプスタイン時代のコンプライアンス失敗の代償を払い続けることを示唆；（2）ウッズの逮捕は来月のマスターズ大会から主要な集客力を失うことを意味；（3）両事件が金曜日の米ケーブルニュースを支配し、一時的にイラン戦争から注意をそらした；（4）FBI長官へのサイバー攻撃も報じられ、「イランが関与する」ハッカー集団が犯行声明。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/27/jeffrey-epstein-bank-of-america-lawsuit-settle.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <!-- ヨーロッパ -->
-        <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇪🇺 ヨーロッパ · 株式下落</span>
-          <h3 class="card-headline">欧州株下落 — DAX −1.3%、CAC −0.9%、トランプのイラン停戦延長もG7外相会合で打開策なし</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>Stoxx600が<span class="stat">−0.9%</span>、DAX −1.3%、CAC −0.9%、ほぼ全セクターが下落。<strong>なぜポジティブなシグナルにもかかわらず売られたか：</strong>（1）期限延長にもかかわらずブレント原油が$110に上昇 — エネルギー集約型産業を直撃；（2）フランスでのG7外相会合はイランとウクライナを議論したが、具体的成果なし；（3）南アフリカがG7から招待取消（米国がボイコットを示唆）— 西側同盟内の外交的亀裂が露呈；（4）明るい材料：ペルノ・リカールがBrown-Forman（ジャックダニエル）との合併協議で+8%、アストラゼネカが肺疾患薬の好結果で+3%。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/27/european-stocks-open-higher-trump-delays-strikes.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇪🇺 ヨーロッパ · 酒類大型合併</span>
-          <h3 class="card-headline">ペルノ・リカールとBrown-Forman合併協議 — 世界第2位の蒸留酒メーカー＋ジャックダニエルで業界再編</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>ペルノ・リカールとBrown-Formanが<span class="stat">合併協議を確認</span>。世界第2位の蒸留酒メーカーと米国最大のウイスキーメーカーの統合。<strong>なぜ今か：</strong>（1）健康志向、GLP-1体重減少薬、Z世代の飲酒離れで世界のアルコール業界が長期低迷；（2）統合はディフェンシブな対応 — ポートフォリオ統合（Absolut、Jameson、Martell ＋ Jack Daniel's、Woodford Reserve）で価格決定力と流通効率を確保；（3）ペルノ株は+8%と数ヶ月ぶりの大幅高；（4）仏米の事業を一つの構造下に統合することで関税リスクも軽減。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/27/european-stocks-open-higher-trump-delays-strikes.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇪🇺 ヨーロッパ · イラン戦争と政治</span>
-          <h3 class="card-headline">イラン戦争が米保守層を分断 — CPACで世代間対立、トランプへの「出口戦略」圧力が増大</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>イラン戦争がCPAC（保守政治行動会議）で<span class="stat">最大の議論テーマ</span>に。保守派内で世代間分裂が露呈。<strong>なぜ市場にとって重要か：</strong>（1）年配の保守層はイランへの軍事行動を支持、若年層は撤退を望む — 世論調査でも紛争への支持率低下を反映；（2）ガソリン価格上昇が戦争を政治的に有毒なものに — トランプの支持基盤がガソリンスタンドで痛みを実感；（3）政治的圧力は合意へのインセンティブを生むが、タカ派を満足させるための演出的エスカレーションの可能性も；（4）アナリストはトランプが「政治的に危険な領域」にあると指摘 — 紛争が2ヶ月目に入っても明確な目的や出口戦略がない。</p>
+          <span class="card-tag">🇺🇸 北米 · 国内政治</span>
+          <h3 class="card-headline">「No Kings」抗議デモが全米に拡大 — スプリングスティーンがミネソタで公演、反戦運動が成長、CPACストローポールでバンスが2028首位</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>大規模な<span class="stat">「No Kings」抗議デモが全米の都市に広がり</span>、ブルース・スプリングスティーンがミネソタの主要集会で公演。CPACではJDバンスが2028大統領ストローポールで首位。<strong>なぜ国内政治が変化しているか：</strong>（1）「No Kings」運動は反戦感情とより広い反権威主義メッセージを融合させ、単一争点デモより大規模な群衆を動員；（2）300名超の負傷兵とガソリン価格上昇が戦争に対する国内二正面の圧力を形成；（3）バンスのCPAC勝利は共和党支持基盤がすでにトランプの先を見据えていることを示唆 — 戦争が体制派タカ派（ルビオ）とポピュリスト懐疑派の分割線に；（4）イラン亡命皇太子レザー・パフラヴィーがCPACで「イランを再び偉大に」と宣言、一般国民の世論調査では壊滅的な数字のネオコン路線を体現。</p>
           <div class="card-sources">
             <a class="source-link" href="https://www.bbc.com/news/articles/cjd8e4px12ro" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
+        <!-- ヨーロッパ -->
+        <article class="card featured fade-in collapsible" data-image="">
+          <span class="card-tag">🇪🇺 ヨーロッパ · ECB警告</span>
+          <h3 class="card-headline">ラガルド総裁「市場は楽観的すぎる」 — ECB総裁がイラン戦争を「現実のショック」と警告、DAXが2025年4月以来の安値</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>ECBのラガルド総裁はイラン戦争の経済的影響について市場が<span class="stat">「楽観的すぎる」</span>と警告し、「現実のショック」と表現。DAXは−1.4%の22,315で、2025年4月以来の安値。<strong>なぜラガルドの警告が重要か：</strong>（1）ECBはFRBよりも石油ショック評価で信頼性がある — 欧州はよりエネルギー依存が高く紛争地域に近い；（2）中銀総裁の「楽観的すぎる」は「利下げで市場を救済しない」のコード語 — 重要な支援の柱の除去；（3）DAXの2025年4月水準への下落は、わずか1ヶ月で約1年分の上昇を消失；（4）欧州製造業は特に脆弱 — ドイツの産業基盤はエネルギー輸入に依存し、$111ブレントはマージンを壊滅。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://tradingeconomics.com/germany/stock-market" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible" data-image="">
+          <span class="card-tag">🇪🇺 ヨーロッパ · 平和運動</span>
+          <h3 class="card-headline">パレスチナとイスラエルの女性がローマで共同行進 — 公式外交が膠着する中、草の根平和運動が拡大</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>パレスチナとイスラエルの女性が<span class="stat">ローマで共同行進</span>し、暴力の終結を訴えた。草の根平和運動が欧州各国の首都に拡大中。<strong>なぜタイミングが重要か：</strong>（1）イード/ノウルーズの祝賀期間中に行われ、政府がエスカレートする中で文化的境界線を越えた連帯を示した；（2）欧州の世論はイラン作戦と広義の米国軍事態勢の両方に反対方向に転換、EU指導者への圧力を生成；（3）イタリアは紛争で比較的中立的な立場を保ち、ローマが自然な場所に；（4）平和運動はマクロンやショルツなど、米国の戦争政策への追従に反対する有権者の増加に直面する指導者への国内政治圧力を強化。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.youtube.com/watch?v=viLq5l-kFpU" target="_blank" rel="noopener">Al Jazeera <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible" data-image="">
+          <span class="card-tag">🇪🇺 ヨーロッパ · 酒類M&A</span>
+          <h3 class="card-headline">ペルノ・リカールとブラウン・フォーマンの合併協議継続 — GLP-1による需要減少に対抗し酒類大手が規模を追求</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong><span class="stat">ペルノ・リカールが8%急騰</span>、ブラウン・フォーマン（ジャックダニエル）との合併協議が確認。<strong>なぜ今起きているか：</strong>（1）GLP-1痩身薬（オゼンピック、ウゴービ）がユーザーの飲酒量を減少 — 業界全体への構造的な需要逆風；（2）Z世代は前世代より大幅に飲酒量が少ない — もう一つの長期的マイナス要因；（3）統合は価格決定力と流通効率を生み、数量減少を相殺；（4）フランスとアメリカの事業を統合することで関税リスクもヘッジ — 現在の貿易環境を踏まえた巧みな構造。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.cnbc.com/2026/03/27/european-stocks-open-higher-trump-delays-strikes.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
         <!-- アジア（日本除く） -->
         <article class="card featured fade-in collapsible" style="border-left-color: #B94A48;" data-image="">
-          <span class="card-tag" style="color: #B94A48;">🇰🇷 アジア · メモリ半導体激震</span>
-          <h3 class="card-headline">GoogleのTurboQuantがメモリ株を直撃 — SK Hynix −6%、Samsung −5%、キオクシア −6%、AI効率化がチップ需要予測を覆す</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>Googleの圧縮技術TurboQuantが<span class="stat">AIメモリ需要を6分の1に削減</span>する可能性を示し、世界的なメモリ半導体売りを誘発。SK Hynix −6%、Samsung −5%、キオクシア −6%、Micron 週間−15%。<strong>なぜ「GoogleのDeepSeek」と呼ばれるか：</strong>（1）DeepSeekの効率化がNvidiaを暴落させたように、TurboQuantはメモリチップの需要テーゼを脅かす；（2）Key-Valueキャッシュ要件を削減する技術で、AIデータセンターの大量メモリ購入の主要ドライバーを直撃；（3）ただしSemiAnalysisは「総需要は減らない」と主張 — 効率化は推論コスト低下を通じて利用量の増加をもたらす；（4）売りは過剰反応の可能性：Micronの売上は前四半期3倍増、供給は依然タイト。だがイラン戦争＋TurboQuantのダブルパンチでセンチメントは脆弱。</p>
+          <span class="card-tag" style="color: #B94A48;">🇨🇳 アジア · 貿易報復</span>
+          <h3 class="card-headline">中国が対米貿易調査を開始 — 報復調査で新たなリスクレイヤー、北京は半導体自給率80%を加速</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>中国は<span class="stat">米国に対する正式な貿易調査を開始</span>、米国の関税と輸出規制への報復。同時に半導体自給率80%を推進中。<strong>なぜ今エスカレーションか：</strong>（1）半導体/医薬/AIの米中$5,500億MOU投資合意は貿易での報復を防げなかった — MOUは投資を対象とし関税は対象外；（2）中国の工業利益は1-2月に前年比15.2%増、ハイテク製造業は58.7%増で、北京に反撃の自信を付与；（3）イラン戦争が外国技術・海上輸送路へのサプライチェーン依存が存亡的リスクであるという中国の確信を強化；（4）貿易調査は市場の不確実性の第二戦線を形成 — 中国エクスポージャーを持つ米企業はイラン戦争の混乱AND中国の規制措置の可能性の両方に直面。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/26/google-ai-turboquant-memory-chip-stocks-samsung-micron.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.capitalstreetfx.com/global-index-market-analysis-march-27-2026/" target="_blank" rel="noopener">Capital Street FX <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇨🇳 アジア · 半導体自給</span>
-          <h3 class="card-headline">中国、半導体自給率80%を目標 — 米国の輸出規制が逆に国内開発を加速させる皮肉</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>中国の半導体産業が<span class="stat">自給率80%</span>を目標に国家投資を拡大。<strong>なぜ加速しているか：</strong>（1）米国の先端チップ輸出規制が中国の国内産業を逆に奮起させた — 制限が意図とは逆に自国開発を加速；（2）1-2月の工業利益は前年比+15.2%、ハイテク製造業は+58.7%と投資原資が潤沢；（3）イラン戦争がサプライチェーン断絶リスクを再認識させ、外国技術・海上輸送への依存が存亡に関わるとの認識を強化；（4）中国の半導体自給は今後10年で最も重要な技術競争 — 80%達成の成否にかかわらず世界の半導体サプライチェーンを再編する。</p>
+          <span class="card-tag">🇰🇷 アジア · エネルギー非常事態</span>
+          <h3 class="card-headline">韓国が緊急経済チームを編成 — 大統領がエネルギー脆弱性で車両規制を指示、ウォン急落</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>韓国の大統領は<span class="stat">緊急経済対応チームを編成し車両規制を実施</span>、ホルムズ海峡混乱によるエネルギー危機への対処。<strong>なぜ韓国は日本より脆弱か：</strong>（1）日本同様ほぼ全エネルギーを輸入するが、日本の広範な戦略石油備蓄や湾岸共同備蓄を欠く；（2）韓国ウォンは1ヶ月で5%急落、現地通貨建てのエネルギー輸入コストをさらに高騰；（3）車両規制は政府レベルの本格的な危機感を示す極端な措置；（4）サムスンとSKハイニックス — 韓国経済の屋台骨 — はTurboQuant需要懸念でも同時に打撃を受け、供給側（エネルギー）と需要側（半導体）の両面から異例の厳しい経済的圧迫。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/business/tech/semiconductors/china-chip-sector-targets-80-self-sufficiency-with-us-in-its-sights" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.youtube.com/watch?v=KXlSbq8RBNM" target="_blank" rel="noopener">PBS NewsHour <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇳🇵 アジア · 政変</span>
-          <h3 class="card-headline">ネパール前首相オリ氏逮捕 — Z世代抗議デモの弾圧による死者問題で、元ラッパーの新首相が就任</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>ネパールのKPシャルマ・オリ前首相が<span class="stat">Z世代抗議運動弾圧による死者</span>（70名以上）の責任で逮捕。新首相バレンドラ「バレン」シャー氏（元ラッパー）が就任。<strong>なぜ重要か：</strong>（1）前首相を抗議デモ死者の責任で逮捕するのは南アジアでは極めて稀な説明責任のシグナル；（2）シャー氏はラッパーからカトマンズ市長を経て首相へ — 反腐敗を掲げた「反体制」の世界的トレンドを反映；（3）Z世代の支持基盤とSNS活用は、ヒマラヤ政治における世代交代を象徴；（4）新政権は長年停滞していた水力発電プロジェクトを加速する可能性 — 莫大な未開発クリーンエネルギーが政治的機能不全で塞がれていた。</p>
+          <span class="card-tag">🇰🇵 アジア · 北朝鮮ICBM</span>
+          <h3 class="card-headline">北朝鮮が改良型固体燃料ICBMエンジン試験 — 推力2,500kNで米本土を照準、ロシア支援の疑い</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>北朝鮮の金正恩が<span class="stat">推力2,500キロニュートン（9月の1,970kNから増強）の改良型固体燃料エンジン</span>試験を視察。炭素繊維複合材を使用。<strong>なぜ今この試験が重要か：</strong>（1）固体燃料ICBMは液体燃料より探知が困難で発射が迅速 — 米国の早期警戒タイムラインへの直接的脅威；（2）タイミングは米国の戦略的注意散漫を利用 — 太平洋から中東への兵力再配置（USSトリポリの日本から湾岸への転用）で北朝鮮の挑発的試験の窓が拡大；（3）専門家はロシアの技術支援を疑う — 北朝鮮がウクライナに兵士を送って以来協力が深化、技術と兵士の交換が進行中；（4）日本と韓国はイラン戦争によるエネルギー危機ANDより高度な北朝鮮ミサイル脅威の二正面安全保障課題に直面、太平洋の米軍アセットは減少中。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/news/articles/cn89ry7y835o" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://apnews.com/article/north-korea-kim-missile-engine-test-us-bdc130f08bed4fd569bdd041ce2c67aa" target="_blank" rel="noopener">AP News <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- 中東・アフリカ -->
         <article class="card featured fade-in collapsible" style="border-left-color: #B94A48;" data-image="">
-          <span class="card-tag" style="color: #B94A48;">🇮🇷 中東 · 戦争2ヶ月目</span>
-          <h3 class="card-headline">イラン戦争2ヶ月目突入 — 民間人1,464名死亡、イエメンのフーシ派がイスラエル攻撃、紛争拡大の懸念</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>2月28日に始まった紛争が<span class="stat">1ヶ月を経過し、民間人1,464名（うち子供217名）が死亡</span>。本日、イエメンからイスラエルへミサイルが発射され、UAE・クウェート・バーレーンでもドローン攻撃が迎撃。<strong>なぜ紛争が拡大しているか：</strong>（1）IDF（イスラエル国防軍）がイラン全土で12,000発以上を投下、うちテヘランに3,600発 — 多くが民間地域；（2）イランがワシントンの同盟国である湾岸諸国への反撃を開始 — 近隣国の空港やホテルが被弾；（3）イエメンからのミサイルはフーシ派の能力が健在であることを示す — イラン攻撃開始後初の参戦；（4）テヘラン市民は公共シェルターも避難支援もなく、インターネット遮断が続く人道危機。</p>
+          <span class="card-tag" style="color: #B94A48;">🇮🇷 中東 · 戦争29日目</span>
+          <h3 class="card-headline">イスラエルがテヘランへの「広範な攻撃波」完了 — ヒズボラがイスラエルにミサイル100発以上、UAEが2,213発の飛翔体を迎撃</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>イスラエルはテヘランのイラン政権インフラに対する<span class="stat">「広範な攻撃波を完了」</span>と発表。ヒズボラがイスラエル北部に100発以上のミサイルを発射。UAE は開戦以来、弾道ミサイル372発、巡航ミサイル15発、ドローン1,826機を迎撃。<strong>なぜ戦争が拡大しているか：</strong>（1）紛争は米-イラン二国間から、イスラエル、ヒズボラ、イエメンのフーシ派を巻き込み、湾岸全域でのドローン/ミサイル攻撃に拡大；（2）イランの新最高指導者はエスカレーション緩和提案を拒否、トランプの10日延長で開くはずだった外交の扉を閉鎖；（3）UAEの迎撃数2,213発は規模の大きさを示す — 史上最も激しいミサイル/ドローン紛争；（4）クウェートがドローンを撃墜しサウジが一晩で6発を迎撃するなど、戦争は湾岸全国家の防空能力を同時に試している。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.bbc.com/news/live/cje4x38q8xqt" target="_blank" rel="noopener">BBC Live <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://www.nikkei.com/article/DGXZQOGR27BHT0X20C26A3000000/" target="_blank" rel="noopener">日本経済新聞 <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://efe.com/en/latest-news/2026-03-27/us-troop-deployment-iran-conflict-day-29/" target="_blank" rel="noopener">EFE <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://understandingwar.org/research/middle-east/iran-update-special-report-march-26-2026/" target="_blank" rel="noopener">ISW <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured fade-in collapsible" style="border-left-color: #B94A48;" data-image="">
+          <span class="card-tag" style="color: #B94A48;">🇾🇪 中東 · フーシ派エスカレーション</span>
+          <h3 class="card-headline">イエメンのフーシ派がイラン戦争に参戦 — イスラエルを直接攻撃、紅海航路にホルムズに続く第二の阻害リスク</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong><span class="stat">イエメンのイラン支援フーシ派が正式に参戦</span>、イスラエルを攻撃しさらなる攻撃を宣言。ホルムズ海峡の混乱に加え、紅海航路を脅かす新戦線が開設。<strong>なぜフーシ派の参戦が壊滅的か：</strong>（1）紅海/スエズ運河は世界貿易の12%を輸送 — フーシ派がホルムズ封鎖と同時にここを閉鎖すれば、世界で最も重要な2つの海上チョークポイントが同時に断絶；（2）フーシ派は2023-24年に比較的安価なドローン・ミサイル攻撃で紅海の商業航行を効果的に遮断できることを実証済み；（3）湾岸諸国はウクライナとのドローン防衛パートナーシップを模索中 — 実戦で証明されたウクライナのドローン専門知識への需要が急増；（4）パキスタンがホルムズ通過のためイランと20隻分の協定を確保したことは、封鎖の断片化を示す — 二国間取引はシステミックな混乱を解決しないが、パキスタンに外交的レバレッジを与える。</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://www.bbc.com/news/articles/cwyvd5z1xjno" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🌍 中東 · 湾岸市場分裂</span>
-          <h3 class="card-headline">湾岸市場が急分化 — サウジ+5.8%（原油恩恵）vs ドバイ−16%（不動産・地政学リスク）、オマーン+9.3%（安全資産）</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>湾岸市場が戦争開始以降<span class="stat">劇的に二極化</span>。オマーン指数+9.3%、サウジTadawul +5.8%、一方でドバイ−16%、カタール−4%、バーレーン−7.2%。<strong>なぜ乖離するか：</strong>（1）サウジは原油高の恩恵に加え、地中海パイプライン経由で輸出可能 — ホルムズ海峡のチョークポイントを完全にバイパス；（2）オマーンのVision 2040多角化戦略が安全資産として資金を吸引；（3）ドバイは不動産・観光・金融サービスに依存 — 全て戦争の不確実性で打撃；（4）アナリストは「過度なリスクを取る時ではない」と警告するも、サウジのプレIPO投資は継続 — スマートマネーは王国がこの危機から強化されて出てくると賭けている。</p>
+          <span class="card-tag">🌍 アフリカ · 人道危機</span>
+          <h3 class="card-headline">コンゴ民主共和国の暴力がエスカレート — 湾岸戦争がエチオピア移民の移動ルートを断絶し拷問被害が拡大</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong><span class="stat">コンゴ民主共和国で武装勢力の進撃</span>と難民流出が激化。別途、アフリカの角→イエメン→サウジアラビア移動ルートでエチオピア人男性が誘拐・拷問される事件。エジプトではエネルギー危機の深刻化で店舗やレストランの早期閉店が命じられた。<strong>なぜ両危機が悪化しているか：</strong>（1）コンゴの武装勢力の暴力は部分的に鉱物資源の争奪戦が原因 — バッテリーと電子機器向けのコバルトとコルタンの需要は高いまま；（2）イラン戦争がイエメン経由の湾岸移民コリドーを断絶、数千人のアフリカ東部移民が戦闘地域で立ち往生；（3）人身売買業者が混乱を利用 — 軍事再配置による沿岸警備の減少で密輸ルートがより危険かつ活発に；（4）これらの交差する危機は中東紛争が石油価格以上の世界的な人道的波及効果を持つことを示す。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/27/iran-war-oil-markets-middle-east-gulf-turmoil-strait-hormuz-investors.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-
-        <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🌍 中東 · 米国の戦略</span>
-          <h3 class="card-headline">トランプ、ホルムズ海峡を「トランプ海峡」と呼称 — ルービニ「エスカレーションで1970年代スタグフレーション」を警告</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>トランプがホルムズ海峡を<span class="stat">「トランプ海峡」</span>と公称。経済学者ルービニはさらなるエスカレーションが1970年代型スタグフレーションを引き起こすリスクを警告。<strong>なぜルービニの警告が重要か：</strong>（1）1973年の石油禁輸との類似が強まる — オイルショック＋地政学的危機＋サプライチェーン混乱；（2）ルービニはトランプが「エスカレートする可能性が高い」と分析 — 国内政治的インセンティブが強硬姿勢に有利；（3）「トランプ海峡」というブランディングは、大統領がこれを個人的レガシー事業と見ていることを示唆 — 迅速な解決は期待薄；（4）原油市場がトランプのSNS投稿にリアルタイムで反応する前例のないボラティリティ。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/27/nouriel-roubini-trump-iran-war-markets-oil-end-talks-peace.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.globalissues.org/news/2026" target="_blank" rel="noopener">Global Issues <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- 中南米 -->
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🌎 中南米 · SNS規制</span>
-          <h3 class="card-headline">MetaとGoogle、SNS中毒訴訟で歴史的敗訴 — 子供への「意図的な中毒設計」を認定、ビジネスモデルに世界的波及の可能性</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>米国の2つの裁判で陪審員が<span class="stat">MetaとYouTubeの中毒的デザインに対する責任</span>を認定。<strong>なぜ世界的影響があるか：</strong>（1）LA裁判ではYouTubeのアルゴリズムが「設計上中毒的」と認定 — 過失ではなく意図的；（2）ニューメキシコ裁判でもInstagram・Facebookに同様の認定；（3）この法的枠組みはEU・英国・豪州・日本でも援用可能 — 世界的な規制強化の先例に；（4）Meta株は週間−11%、市場が広告モデルへの規制・訴訟リスクを織り込み始めた。研究によればプラットフォームの中毒性低減は技術的に可能だが、エンゲージメントが収益の源泉であるため実施されていない。</p>
+          <span class="card-tag">🌎 中南米 · 気候変動推進</span>
+          <h3 class="card-headline">カリブ海諸国が化石燃料段階的廃止キャンペーンを開始 — 小島嶼国がイラン戦争のエネルギー危機を再生可能エネルギーの論拠に</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>セントルシアで開催されたカリブ海指導者会議で<span class="stat">化石燃料の世界的段階的廃止を推進する統一行動</span>を準備。<strong>なぜイラン戦争が彼らの主張を強化するか：</strong>（1）小島嶼開発途上国（SIDS）は気候変動AND地政学的紛争による石油価格ショックの二重の脆弱性を抱える；（2）現在の危機は彼らの長年の主張を証明 — 化石燃料依存は環境リスクだけでなく安全保障リスク；（3）ブレント$111で再生可能エネルギー投資の経済的理由はかつてなく強い — 太陽光と風力のコストは固定かつ低下中、石油は変動的かつ上昇中；（4）カリブ海の推進はエネルギーコストがすでに政策変更を促している欧州首都で支持を得る可能性 — ドイツは危機対応で洋上風力目標を加速。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/27/tech-stocks-iran-war-meta-verdict.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.globalissues.org/news/2026" target="_blank" rel="noopener">Global Issues <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇮🇩 中南米・アジア太平洋 · メガインフラ</span>
-          <h3 class="card-headline">インドネシア、沿岸侵食で800億ドルの防波堤計画復活 — ジャワ島500kmの巨大海壁、日韓建設企業に巨大商機</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>プラボウォ大統領がジャワ島北部海岸を侵食と海面上昇から守る<span class="stat">500km、800億ドルの防波堤計画</span>を復活。<strong>なぜ何度も浮上するか：</strong>（1）ジャワ島は文字通り沈下中 — 地下水汲み上げによる地盤沈下と海面上昇が複合して村落や企業を破壊；（2）800億ドルは東南アジア史上最大級のインフラ事業の一つ；（3）過去の計画は汚職懸念と環境反対で棚上げ — プラボウォのレガシー事業としての復活；（4）日本・韓国の沿岸工学に強みを持つ建設企業に巨大な受注機会。</p>
+          <span class="card-tag">🌎 中南米 · 追悼</span>
+          <h3 class="card-headline">アルゼンチンが軍事独裁政権犠牲者を追悼 — 権威主義的越権への地域的共鳴の中で国家記念日</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>アルゼンチンは3月24日、<span class="stat">1976-83年軍事独裁政権の犠牲者を追悼する「真実と正義のための記憶の国家の日」</span>を開催。<strong>なぜ2026年に響くか：</strong>（1）反戦・反権威主義的抗議が世界中に広がる中での記念日で、過去の軍事的越権と現在の紛争の類似性を喚起；（2）中南米諸国はイラン戦争の議論からほぼ不在 — 米国の軍事冒険主義への歴史的抵抗を反映した意図的な中立性；（3）アルゼンチンのミレイ政権は前任者よりワシントンに接近し、記念式典をめぐる国内緊張を生成；（4）このイベントは戦争が中東をはるかに超えて政治的言説を左右していることを示す。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://asia.nikkei.com/spotlight/big-in-asia/indonesia-s-coastal-erosion-crisis-triggers-80bn-seawall-bet" target="_blank" rel="noopener">日経アジア <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.globalissues.org/news/2026" target="_blank" rel="noopener">Global Issues <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🌎 中南米 · インド燃料政策</span>
-          <h3 class="card-headline">インド、イラン戦争中の燃料価格抑制で「巨額の税収減」を甘受 — 国民負担軽減と財政のジレンマ</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>インド政府がイラン戦争による原油高の中、<span class="stat">燃料税を大幅引き下げ</span>て国内価格の急騰を抑制。<strong>なぜ重要か：</strong>（1）インドは世界第3位の原油輸入国で、エネルギー価格変動に極めて敏感；（2）UBSは「インドとヨーロッパは原油価格に対して脆弱すぎる」と指摘し、ディフェンシブ市場への移行を推奨；（3）税収減は財政赤字を拡大させ、インドルピーへの下落圧力を強める悪循環；（4）BSE Sensex指数は金曜日に−2.25%の大幅下落 — アジアで最もパフォーマンスの悪い市場の一つに。</p>
+          <span class="card-tag">🌎 中南米 · 石油影響</span>
+          <h3 class="card-headline">ブラジルとメキシコが石油高騰で恩恵 — ペトロブラスとペメックスの収益増、ただし消費者インフレが利益を相殺</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>中南米の産油国が<span class="stat">ブレント$111による棚ぼた収益</span>を享受。ペトロブラス（ブラジル）とペメックス（メキシコ）の両社が恩恵。<strong>なぜ状況は複雑か：</strong>（1）ブラジルのプレソルト深海油田は過去最高に近い生産レベルで、高価格が政府のロイヤルティ収入を増大；（2）しかしブラジルの消費者は燃料コスト上昇に直面しインフレに波及 — 中央銀行はすでに引き締めサイクル中；（3）メキシコのペメックスは収益面で恩恵だが国内の製油所で十分な精製ができず、高騰した価格でのガソリン輸入を余儀なくされる；（4）純効果：政府予算は改善するが消費者購買力は低下 — 湾岸の分岐（産油国が勝ち、輸入国が負ける）と同じパターン。</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/27/india-fuel-tax-cut-oil-prices-iran-war-impact.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.globalissues.org/news/2026" target="_blank" rel="noopener">Global Issues <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <!-- オセアニア -->
         <article class="card featured fade-in collapsible" data-image="">
           <span class="card-tag">🇦🇺 オセアニア · 燃料危機</span>
-          <h3 class="card-headline">豪州の燃料パニック継続 — 首相の安心発言も効果なし、ブレント$110で小売価格警告が相次ぐ</h3>
-          <div class="tap-hint">タップで展開</div>
-          <p class="card-body"><strong>概要：</strong>豪州の燃料状況が<span class="stat">ブレント原油$110到達</span>でさらに悪化。<strong>なぜ深刻化するか：</strong>（1）アルバニージー首相の安心発言にもかかわらず、SNS主導のパニック買いが継続；（2）航空燃料コストは戦争前比+40%以上 — 英国航空のパイロットボーナスプログラムは各社の燃料コスト削減努力を反映；（3）豪州のレアアース株は中国の輸出規制を受けて急騰中 — Lynasは日米との供給契約で1年間で3倍に；（4）コモディティ価格（石炭・レアアース・LNG）の恩恵を受ける一方、精製燃料への依存（国内製油所はわずか2基）が構造的な脆弱性。</p>
+          <h3 class="card-headline">オーストラリアの燃料パニック買いが週末も継続 — 首相の安心メッセージにもかかわらずパニック買い、レアアース株は中国の輸出規制で急騰</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>何が起きたか：</strong>オーストラリアの燃料パニック買いが<span class="stat">週末を通じて継続</span>。SNS主導の恐怖買いが政府の安心メッセージを圧倒。一方、レアアース株は急騰を継続。<strong>なぜオーストラリアの立場は逆説的か：</strong>（1）オーストラリアは巨大なエネルギー輸出国（石炭、LNG）だが精製燃料の大半を輸入 — 国内製油所はわずか2箇所；（2）構造的脆弱性により、生のエネルギーを記録的利益で輸出しながらガソリンには世界価格を支払う；（3）ライナスなどのレアアース株は中国の輸出規制と日米の代替供給模索で1年で3倍に；（4）同じ危機から同時に勝者（コモディティ輸出）と敗者（精製燃料輸入）となる矛盾 — 政治指導者が説明に苦慮。</p>
           <div class="card-sources">
             <a class="source-link" href="https://www.cnbc.com/2026/03/26/retail-next-hm-stock-price-hikes-iran-war-middle-east-costs.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
@@ -828,7 +493,7 @@
         <article class="card fade-in">
           <span class="card-tag">主要指数</span>
           <h3 class="card-headline">世界株式指数</h3>
-          <p class="card-body" style="margin-bottom: 0.5rem;">米国市場は週末にかけて暴落。ダウが正式に調整局面入り（高値から−10%）し、原油がイラン戦争開始以来の最高値に達した。S&P500は5週連続下落で2022年以来最長。ナスダックの週間−3.23%は年内最悪 — Meta裁判敗訴（−11%）とGoogleのTurboQuantによるメモリ半導体売り（Micron −15%）が主因。アジアは相対的に底堅く、中国CSI300は好調な工業利益データ（前年比+15.2%）を受けて+0.56%。</p>
+          <p class="card-body" style="margin-bottom: 0.5rem;"><strong>世界株式は全面安。</strong>ダウが約800pt暴落し調整入り、ナスダックは20,948で高値から約10%下落。S&Pは戦争開始以来最悪の週で5週連続下落 — イラン戦争＋石油ショック＋フーシ派参戦が連鎖的なリスクオフセンチメントを生成。インドSensexは当日最悪のパフォーマー（−2.25%）— 世界3位の石油輸入国として$105ブレントが経常赤字を直撃。中国SSEが唯一の好材料（+0.63%）— 工業利益の力強さ（前年比+15.2%）が地政学的懸念を相殺。<strong>VIXは27.44</strong>で引け — 戦前の2倍超 — オプション市場が4月6日期限を通じた継続的ボラティリティを予想。</p>
           <table class="index-table">
             <thead>
               <tr>
@@ -843,51 +508,51 @@
             <tbody>
               <tr>
                 <td class="idx-name">S&P 500</td>
-                <td class="idx-level">6,368.85</td>
-                <td class="chg-neg">−1.67%</td>
-                <td class="chg-neg">−3.5%</td>
-                <td class="chg-neg">−7.0%</td>
-                <td class="chg-pos">+8.0%</td>
+                <td class="idx-level">6,356.08</td>
+                <td class="chg-neg">−1.87%</td>
+                <td class="chg-neg">−4.8%</td>
+                <td class="chg-neg">−9.2%</td>
+                <td class="chg-pos">+5.8%</td>
               </tr>
               <tr>
                 <td class="idx-name">ダウ30</td>
                 <td class="idx-level">45,166.64</td>
                 <td class="chg-neg">−1.73%</td>
-                <td class="chg-neg">−2.8%</td>
-                <td class="chg-neg">−6.5%</td>
-                <td class="chg-pos">+5.5%</td>
+                <td class="chg-neg">−3.8%</td>
+                <td class="chg-neg">−8.2%</td>
+                <td class="chg-pos">+3.8%</td>
               </tr>
               <tr>
                 <td class="idx-name">ナスダック</td>
                 <td class="idx-level">20,948.36</td>
                 <td class="chg-neg">−2.15%</td>
-                <td class="chg-neg">−3.23%</td>
-                <td class="chg-neg">−7.5%</td>
-                <td class="chg-pos">+7.5%</td>
+                <td class="chg-neg">−4.5%</td>
+                <td class="chg-neg">−9.8%</td>
+                <td class="chg-pos">+5.2%</td>
               </tr>
               <tr>
                 <td class="idx-name">日経225</td>
                 <td class="idx-level">53,373.07</td>
                 <td class="chg-neg">−0.43%</td>
                 <td class="chg-neg">−1.5%</td>
-                <td class="chg-neg">−5.0%</td>
-                <td class="chg-pos">+10.5%</td>
+                <td class="chg-neg">−8.1%</td>
+                <td class="chg-pos">+43.8%</td>
               </tr>
               <tr>
                 <td class="idx-name">TOPIX</td>
-                <td class="idx-level">3,649.69</td>
-                <td class="chg-pos">+0.19%</td>
-                <td class="chg-neg">−0.8%</td>
-                <td class="chg-neg">−3.5%</td>
-                <td class="chg-pos">+11.0%</td>
+                <td class="idx-level">3,785</td>
+                <td class="chg-neg">−0.38%</td>
+                <td class="chg-neg">−1.3%</td>
+                <td class="chg-neg">−7.5%</td>
+                <td class="chg-pos">+38.0%</td>
               </tr>
               <tr>
                 <td class="idx-name">Kospi</td>
-                <td class="idx-level">5,438.87</td>
-                <td class="chg-neg">−0.40%</td>
-                <td class="chg-neg">−5.0%</td>
-                <td class="chg-neg">−15.0%</td>
-                <td class="chg-neg">−3.0%</td>
+                <td class="idx-level">2,585</td>
+                <td class="chg-neg">−3.00%</td>
+                <td class="chg-neg">−5.2%</td>
+                <td class="chg-neg">−10.0%</td>
+                <td class="chg-pos">+2.0%</td>
               </tr>
               <tr>
                 <td class="idx-name">香港ハンセン</td>
@@ -899,19 +564,19 @@
               </tr>
               <tr>
                 <td class="idx-name">ASX 200</td>
-                <td class="idx-level">8,516.30</td>
-                <td class="chg-neg">−0.11%</td>
-                <td class="chg-neg">−1.2%</td>
-                <td class="chg-neg">−6.0%</td>
-                <td class="chg-pos">+3.0%</td>
+                <td class="idx-level">8,150</td>
+                <td class="chg-neg">−0.85%</td>
+                <td class="chg-neg">−2.0%</td>
+                <td class="chg-neg">−5.5%</td>
+                <td class="chg-pos">+4.0%</td>
               </tr>
               <tr>
                 <td class="idx-name">DAX</td>
-                <td class="idx-level">~22,500</td>
-                <td class="chg-neg">−1.30%</td>
+                <td class="idx-level">22,315</td>
+                <td class="chg-neg">−1.40%</td>
                 <td class="chg-neg">−2.5%</td>
-                <td class="chg-neg">−5.0%</td>
-                <td class="chg-pos">+6.0%</td>
+                <td class="chg-neg">−6.0%</td>
+                <td class="chg-pos">+9.0%</td>
               </tr>
             </tbody>
           </table>
@@ -920,7 +585,7 @@
         <article class="card fade-in">
           <span class="card-tag">商品動向</span>
           <h3 class="card-headline">主要商品</h3>
-          <p class="card-body" style="margin-bottom: 0.5rem;">原油がイラン戦争開始以来の最高値で引け — トランプの期限延長にもかかわらず、ブレント$110、WTI $101超。朝方の停戦期待による下落は米国取引時間中に完全に巻き戻され、ホルムズ海峡での事案が継続。市場はもはや外交のタイムラインを信じていない。ゴールドは~$4,560で安定 — ドル高が上値を抑えリスク資産的な動き。</p>
+          <p class="card-body" style="margin-bottom: 0.5rem;"><strong>石油が3年ぶりの高値に急騰</strong> — ブレント+3.4%で$105.32、WTI+5.5%で$99.64。ホルムズ海峡の持続的混乱（日量2,000万バレルの供給損失、IEAによれば史上最大）とイランのカタールLNGターミナル攻撃（輸出能力の17%を破壊、修復に5年）がエネルギー断絶の構造的性質を証明。<strong>金は+2.63%で$4,495に急騰</strong> — 安全資産需要が石油と連動して急増。1ヶ月で15.6%、年初来45.7%上昇。天然ガスもLNG供給不安で高止まり。</p>
           <table class="index-table">
             <thead>
               <tr>
@@ -934,36 +599,36 @@
             </thead>
             <tbody>
               <tr>
-                <td class="idx-name">原油（WTI）</td>
-                <td class="idx-level">$101.18</td>
-                <td class="chg-pos">+7.09%</td>
-                <td class="chg-pos">+8%</td>
+                <td class="idx-name">原油(WTI)</td>
+                <td class="idx-level">$99.64/bbl</td>
+                <td class="chg-pos">+5.50%</td>
+                <td class="chg-pos">+6%</td>
                 <td class="chg-pos">+44%</td>
-                <td class="chg-pos">+36%</td>
+                <td class="chg-pos">+40%</td>
               </tr>
               <tr>
                 <td class="idx-name">ブレント</td>
-                <td class="idx-level">~$110</td>
-                <td class="chg-pos">+3.9%</td>
-                <td class="chg-pos">+8%</td>
-                <td class="chg-pos">+52%</td>
-                <td class="chg-pos">+68%</td>
+                <td class="idx-level">$105.32/bbl</td>
+                <td class="chg-pos">+3.40%</td>
+                <td class="chg-pos">+7%</td>
+                <td class="chg-pos">+45%</td>
+                <td class="chg-pos">+61%</td>
               </tr>
               <tr>
                 <td class="idx-name">ゴールド</td>
-                <td class="idx-level">~$4,560</td>
-                <td class="chg-pos">+0.3%</td>
-                <td class="chg-neg">−5.5%</td>
-                <td class="chg-neg">−10.0%</td>
-                <td class="chg-pos">+7.5%</td>
+                <td class="idx-level">$4,495/oz</td>
+                <td class="chg-pos">+2.63%</td>
+                <td class="chg-pos">+3.5%</td>
+                <td class="chg-pos">+15.6%</td>
+                <td class="chg-pos">+45.7%</td>
               </tr>
               <tr>
                 <td class="idx-name">天然ガス</td>
-                <td class="idx-level">~$4.20</td>
-                <td class="chg-pos">+1.2%</td>
+                <td class="idx-level">$4.85/MMBtu</td>
+                <td class="chg-pos">+2.10%</td>
                 <td class="chg-pos">+5%</td>
-                <td class="chg-pos">+18%</td>
-                <td class="chg-pos">+25%</td>
+                <td class="chg-pos">+28%</td>
+                <td class="chg-pos">+35%</td>
               </tr>
             </tbody>
           </table>
@@ -972,7 +637,7 @@
         <article class="card fade-in">
           <span class="card-tag">為替動向</span>
           <h3 class="card-headline">主要通貨ペア</h3>
-          <p class="card-body" style="margin-bottom: 0.5rem;">アジアFX危機が深刻化。エネルギー輸入国（日本・韓国・フィリピン）と資源輸出国（カナダ・豪州）の乖離が危険水域に。USD/JPYは¥160.30と介入ライン突破 — 日銀はエネルギー危機で利上げによる円防衛が不可能な一方、貿易赤字は原油輸入急増で日々拡大。</p>
+          <p class="card-body" style="margin-bottom: 0.5rem;"><strong>ドル円が¥160を突破</strong> — 心理的に重要な水準 — 石油輸入フィードバックループ（円安→エネルギー高→赤字拡大→円安）が自己強化的で、日銀は利上げによるループ打破が経済を破壊するため身動きが取れない。<strong>財務省の介入は「いつか」ではなく「いつ」の問題。</strong>EUR/USDの1.1509も欧州が日本のエネルギー輸入脆弱性を共有するため弱含み。広範なパターン：エネルギー輸入国通貨が安全資産需要と石油決済需要でドルに対して崩壊。</p>
           <table class="index-table">
             <thead>
               <tr>
@@ -986,45 +651,45 @@
             <tbody>
               <tr>
                 <td class="idx-name">USD/JPY</td>
-                <td class="idx-level">¥160.30</td>
-                <td class="chg-pos">+0.12%</td>
-                <td class="chg-pos">+2.5%</td>
-                <td style="font-size:0.75rem;">¥160介入ゾーン突破、財務省の動きに注視</td>
+                <td class="idx-level">¥160.26</td>
+                <td class="chg-pos">+0.28%</td>
+                <td class="chg-pos">+1.82%</td>
+                <td style="font-size:0.75rem;">🔴 ¥160介入ゾーン接近</td>
               </tr>
               <tr>
                 <td class="idx-name">EUR/USD</td>
-                <td class="idx-level">$1.1560</td>
-                <td class="chg-neg">−0.13%</td>
-                <td class="chg-neg">−2.0%</td>
-                <td style="font-size:0.75rem;">エネルギーコスト圧力でユーロ軟化</td>
+                <td class="idx-level">$1.1509</td>
+                <td class="chg-neg">−0.16%</td>
+                <td class="chg-neg">−1.53%</td>
+                <td style="font-size:0.75rem;">エネルギーコスト圧力</td>
               </tr>
               <tr>
                 <td class="idx-name">GBP/USD</td>
-                <td class="idx-level">$1.3370</td>
-                <td class="chg-neg">−0.07%</td>
-                <td class="chg-neg">−1.0%</td>
-                <td style="font-size:0.75rem;">小売警告でポンド圧迫</td>
+                <td class="idx-level">$1.2920</td>
+                <td class="chg-neg">−0.12%</td>
+                <td class="chg-neg">−1.20%</td>
+                <td style="font-size:0.75rem;">BoE据え置きでポンド軟調</td>
               </tr>
               <tr>
                 <td class="idx-name">AUD/USD</td>
-                <td class="idx-level">$0.6350</td>
-                <td class="chg-pos">+0.15%</td>
-                <td class="chg-pos">+1.5%</td>
-                <td style="font-size:0.75rem;">資源国通貨として底堅い</td>
+                <td class="idx-level">$0.6280</td>
+                <td class="chg-neg">−0.35%</td>
+                <td class="chg-neg">−2.80%</td>
+                <td style="font-size:0.75rem;">資源高だが燃料輸入が重荷</td>
               </tr>
               <tr>
                 <td class="idx-name">USD/INR</td>
                 <td class="idx-level">₹87.50</td>
                 <td class="chg-pos">+0.30%</td>
-                <td class="chg-pos">+3.0%</td>
-                <td style="font-size:0.75rem;">原油輸入依存でルピー急落</td>
+                <td class="chg-pos">+3.50%</td>
+                <td style="font-size:0.75rem;">石油輸入増で経常赤字拡大</td>
               </tr>
               <tr>
                 <td class="idx-name">DXY</td>
-                <td class="idx-level">99.70</td>
+                <td class="idx-level">~99.80</td>
                 <td class="chg-pos">+0.15%</td>
                 <td class="chg-pos">+2.0%</td>
-                <td style="font-size:0.75rem;">安全資産需要でドル独歩高</td>
+                <td style="font-size:0.75rem;">安全資産需要でドル高</td>
               </tr>
             </tbody>
           </table>
@@ -1033,7 +698,7 @@
         <article class="card fade-in">
           <span class="card-tag">金利動向</span>
           <h3 class="card-headline">国債利回り</h3>
-          <p class="card-body" style="margin-bottom: 0.5rem;">スタグフレーションの罠が現実化。米10年債利回りが株暴落と同時に上昇 — 最悪の組み合わせ。通常、株安は債券買い（利回り低下）を促すが、原油主導のインフレ期待が利回りを押し上げ、同時に成長懸念が株を押し下げる。これは1970年代の再現。日銀は完全に身動きが取れない。</p>
+          <p class="card-body" style="margin-bottom: 0.5rem;"><strong>スタグフレーションの罠が締まる。</strong>米10年債利回りは+8.8bpの4.416%に上昇 — 株式暴落と同時に上昇するのは悪夢のシナリオ。石油主導のインフレが通常の株安時の「質への逃避」買いを阻害。<strong>VIXは27.44</strong>（+8.33%）で戦前水準の2倍超に。中央銀行は麻痺状態：FRBは利下げ不可（インフレ）、日銀は利上げ不可（エネルギー危機）、ECBは「市場は楽観的すぎる」と警告。救済は来ない。</p>
           <table class="index-table">
             <thead>
               <tr>
@@ -1047,31 +712,31 @@
             <tbody>
               <tr>
                 <td class="idx-name">米国債</td>
-                <td class="idx-level">4.32%</td>
-                <td class="chg-pos">+2bp</td>
-                <td class="chg-pos">+15bp</td>
-                <td style="font-size:0.75rem;">インフレ期待で上昇、FRB板挟み</td>
+                <td class="idx-level">4.416%</td>
+                <td class="chg-pos">+8.8bp</td>
+                <td class="chg-pos">+40bp</td>
+                <td style="font-size:0.75rem;">インフレ上昇 — スタグフレーション懸念</td>
               </tr>
               <tr>
                 <td class="idx-name">JGB</td>
-                <td class="idx-level">2.25%</td>
+                <td class="idx-level">~2.25%</td>
                 <td>横ばい</td>
-                <td class="chg-pos">+5bp</td>
-                <td style="font-size:0.75rem;">日銀エネルギー危機モード、利上げ困難</td>
+                <td class="chg-pos">+15bp</td>
+                <td style="font-size:0.75rem;">日銀身動き取れず — 利上げも利下げも不可</td>
               </tr>
               <tr>
                 <td class="idx-name">ドイツ</td>
-                <td class="idx-level">2.90%</td>
+                <td class="idx-level">~2.90%</td>
                 <td class="chg-neg">−2bp</td>
-                <td class="chg-neg">−10bp</td>
-                <td style="font-size:0.75rem;">欧州リスクオフでBund買い</td>
+                <td class="chg-pos">+10bp</td>
+                <td style="font-size:0.75rem;">欧州リスクオフで独国債に買い</td>
               </tr>
               <tr>
                 <td class="idx-name">英国</td>
-                <td class="idx-level">4.65%</td>
-                <td class="chg-pos">+1bp</td>
-                <td class="chg-pos">+8bp</td>
-                <td style="font-size:0.75rem;">インフレと財政懸念の板挟み</td>
+                <td class="idx-level">~4.72%</td>
+                <td class="chg-pos">+3bp</td>
+                <td class="chg-pos">+20bp</td>
+                <td style="font-size:0.75rem;">BoE据え置き、インフレ粘着</td>
               </tr>
             </tbody>
           </table>
@@ -1080,7 +745,7 @@
         <article class="card fade-in">
           <span class="card-tag">暗号資産</span>
           <h3 class="card-headline">デジタル資産</h3>
-          <p class="card-body" style="margin-bottom: 0.5rem;">暗号資産は注目すべき安定を示している。ビットコインは$66,433で、原油・株式のボラティリティから乖離しつつある。Strategyが競合他社が様子見する中で暗号購入を加速。真の代替的価値保存手段としての地位を確立しつつある可能性。</p>
+          <p class="card-body" style="margin-bottom: 0.5rem;"><strong>暗号資産は横ばいで株式・原油のボラティリティからデカップリング。</strong>ビットコインは$66,775で年初来−19%だが月間では安定。ブータンが年間$1.5億超のBTCを取引所に移動しており売り圧力。イーサリアムは$1,999でBNPパリバがフランスのリテール向けにBTC/ETHのETNを追加。伝統的資産とは異なるマーケットダイナミクスが進行中。</p>
           <table class="index-table">
             <thead>
               <tr>
@@ -1094,16 +759,16 @@
             <tbody>
               <tr>
                 <td class="idx-name">ビットコイン</td>
-                <td class="idx-level">$66,433</td>
-                <td class="chg-neg">−0.27%</td>
-                <td class="chg-pos">+7.5%</td>
-                <td class="chg-neg">−23.0%</td>
+                <td class="idx-level">$66,775</td>
+                <td class="chg-pos">+0.60%</td>
+                <td class="chg-pos">+1.5%</td>
+                <td class="chg-neg">−18.9%</td>
               </tr>
               <tr>
                 <td class="idx-name">イーサリアム</td>
                 <td class="idx-level">$1,999</td>
-                <td class="chg-pos">+0.46%</td>
-                <td class="chg-pos">+9.0%</td>
+                <td class="chg-pos">+0.58%</td>
+                <td class="chg-pos">+11.0%</td>
                 <td class="chg-neg">−37.0%</td>
               </tr>
             </tbody>
@@ -1121,42 +786,42 @@
               <div class="gauge-dot"></div>
             </div>
             <div class="gauge-scale"><span>0</span><span>100</span></div>
-            <div class="gauge-score">25</div>
-            <div class="gauge-score-label">危機的 — 戦時経済</div>
+            <div class="gauge-score">20</div>
+            <div class="gauge-score-label">危機的 — 戦争拡大・多正面化</div>
           </div>
           <div class="indicator-grid">
             <div class="indicator-item">
-              <div class="indicator-value" style="color: var(--red);">📉</div>
-              <div class="indicator-name">ダウ調整局面入り</div>
-              <div class="indicator-sub">金曜日−793pt</div>
-            </div>
-            <div class="indicator-item">
               <div class="indicator-value" style="color: var(--red);">🛢️</div>
-              <div class="indicator-name">原油 $110（ブレント）</div>
-              <div class="indicator-sub">停戦延長にもかかわらず3年ぶり高値</div>
-            </div>
-            <div class="indicator-item">
-              <div class="indicator-value" style="color: var(--red);">💻</div>
-              <div class="indicator-name">テック年内最悪の週</div>
-              <div class="indicator-sub">ナスダック週間−3.23%</div>
+              <div class="indicator-name">原油 $105 ブレント</div>
+              <div class="indicator-sub">2022年6月以来の高値</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value" style="color: var(--red);">💴</div>
-              <div class="indicator-name">アジア通貨危機</div>
-              <div class="indicator-sub">ペソ・ウォン急落</div>
+              <div class="indicator-name">円 ¥160突破</div>
+              <div class="indicator-sub">介入がほぼ確実</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--red);">📉</div>
+              <div class="indicator-name">ダウ調整入り</div>
+              <div class="indicator-sub">金曜−800pt、−10%</div>
             </div>
             <div class="indicator-item">
               <div class="indicator-value" style="color: var(--red);">🇮🇷</div>
-              <div class="indicator-name">戦争2ヶ月目</div>
-              <div class="indicator-sub">民間人1,464名死亡</div>
+              <div class="indicator-name">フーシ派参戦</div>
+              <div class="indicator-sub">紅海＋ホルムズ二重脅威</div>
             </div>
             <div class="indicator-item">
-              <div class="indicator-value" style="color: var(--green);">🇨🇳</div>
-              <div class="indicator-name">中国工業利益+15%</div>
-              <div class="indicator-sub">産業成長が継続</div>
+              <div class="indicator-value" style="color: var(--red);">😰</div>
+              <div class="indicator-name">VIX 27.44</div>
+              <div class="indicator-sub">戦前の2倍</div>
+            </div>
+            <div class="indicator-item">
+              <div class="indicator-value" style="color: var(--green);">🥇</div>
+              <div class="indicator-name">金 $4,495</div>
+              <div class="indicator-sub">年初来+46% 安全資産</div>
             </div>
           </div>
-          <p class="card-body" style="margin-top: 1rem;"><strong>スコアが25に低下（前日30から）：</strong>（1）トランプの停戦延長にもかかわらず原油がイラン戦争開始以来の高値 — 市場は外交を信じていない；（2）ダウが調整局面入り、S&Pが5週連続下落；（3）アジア通貨がエネルギーコスト高で危機的水域に；（4）イラン戦争が1ヶ月を経過し、民間人1,464名死亡、ミサイル攻撃がUAE・クウェート・バーレーンに拡大。<strong>唯一の明るい材料：</strong>中国の工業利益（+15.2%）は世界第2の経済大国の底堅さを示す。<strong>35への上方修正条件：</strong>原油が$100を下回り3日以上維持。<strong>15への下方修正条件：</strong>4月6日以前にイランのエネルギー施設を攻撃＋ブレント$120突破。</p>
+          <p class="card-body" style="margin-top: 1rem;"><strong>スコアが20に低下（昨日の23から）した理由：</strong>（1）フーシ派が参戦し、ホルムズに加え紅海の閉鎖を脅かす — 世界の2大チョークポイントが同時に断絶の危機；（2）米軍死傷者が300名超負傷・13名戦死に達し国内政治計算が変化；（3）ダウが800pt暴落で調整入り、S&Pは戦争開始以来最悪の週；（4）太平洋の米軍アセットが中東に再配置される中、北朝鮮が改良型ICBMエンジンを試験；（5）カタールLNGターミナル被弾 — 輸出能力の17%破壊、修復に5年（構造的エネルギーダメージ）。<strong>25に上方修正の条件：</strong>ホルムズ部分再開＋停戦枠組み＋原油$95以下。<strong>12に下方修正の条件：</strong>米地上部隊投入＋紅海閉鎖＋ブレント$120突破＋円¥165。</p>
         </article>
 
       </div>
@@ -1172,26 +837,26 @@
       <div class="cards">
 
         <article class="card fade-in collapsible">
-          <span class="card-tag">🔴 週末ウォッチ — 4月6日期限まであと9日</span>
-          <h3 class="card-headline">来週の注目：原油$110超えとともに外交のカウントダウンが市場を圧迫</h3>
-          <div class="tap-hint">タップで展開</div>
+          <span class="card-tag">🔴 本日 — 3月30日（月）</span>
+          <h3 class="card-headline">本日の注目：週末のエスカレーション後に市場再開 — フーシ派参戦は未織り込み、円介入ウィンドウ、東京CPI</h3>
+          <div class="tap-hint">タップして展開</div>
           <p class="card-body">
-            <strong>🔴 来週の米国市場：</strong>ダウは調整局面、S&Pは5週連続下落、ナスダックは年内最悪の週。月曜日にデッドキャットバウンスの可能性はあるが、原油が$100を下回らない限り持続的な回復は困難。4月6日の期限がすべての取引判断を支配する。<br><br>
-            <strong>🟡 原油の重要水準 — $110-115：</strong>ブレント$110は深刻な需要破壊が始まる水準。航空会社は既に路線を削減、小売業者はマージン悪化を警告、消費者は行動を変え始めている。$115-120に達すれば、緊急OPEC+会合や米日のSPR（戦略備蓄）放出が想定される。<br><br>
-            <strong>🔴 円介入 — 差し迫る：</strong>USD/JPYが¥160を突破。月曜のアジアセッションで円安が加速すれば、財務省の介入が現実味。飲食労働者ビザ凍結と桜シーズンの観光ラッシュも加わり、日本は複合的な国内圧力に直面。<br><br>
-            <strong>🟡 テック決算プレビュー：</strong>今週Meta −11%、Micron −15%、Alphabet −9%。来週から始まる決算シーズンが重要。ガイダンスで「地政学的不確実性」や「エネルギーコスト」を理由にした業績下方修正があれば、グロース株からの資金流出が加速する。
+            <strong>🔴 日本 — 円介入警戒：</strong>ドル円¥160.26で月曜のアジアセッションは数ヶ月で最も介入確率の高いウィンドウ。投機筋が薄い早朝取引で¥161を試せば、財務省はドル売りに踏み切る可能性大。口先介入→実弾介入のシーケンスは通常3-5営業日で、その窓を過ぎた。<br><br>
+            <strong>🔴 東京CPI（3月）— 前年比3.1%予想：</strong>月曜夜発表の3月東京CPIは、石油価格の遅行効果が輸送・光熱費に波及し3.2%超の可能性。ホットな数字は日銀への引き締め圧力を強める — たとえ引き締められなくても — 政策麻痺の認識を拡大。<br><br>
+            <strong>🟡 原油先物のギャップリスク：</strong>週末の展開（プリンスルタン攻撃、新たなテヘラン空爆、ヒズボラのミサイル100発超）は未織り込み。月曜寄り付きでブレントとWTIが上方ギャップする見込み。WTIは2022年以来初めて$100を突破する可能性。<br><br>
+            <strong>🟡 日本FY2026予算の宙ぶらりん：</strong>3月31日の年度末を前に暫定予算のみで、政治的不透明感が市場の不安を増大。暫定予算は11日間のみカバー — 交渉が長引けば第二の暫定予算が必要に。
           </p>
         </article>
 
         <article class="card fade-in collapsible">
-          <span class="card-tag">シナリオ更新 — 戦争2ヶ月目版</span>
-          <h3 class="card-headline">確率調整：戦争2ヶ月目エディション</h3>
-          <div class="tap-hint">タップで展開</div>
+          <span class="card-tag">今週の展望 — 4月6日期限まで7日</span>
+          <h3 class="card-headline">今週の展望：戦争開始以来最も危険な1週間</h3>
+          <div class="tap-hint">タップして展開</div>
           <p class="card-body">
-            <strong>🟢 シナリオA — 4月6日までに枠組み合意（20%、前回25%から低下）：</strong>10隻のタンカー通航という譲歩にもかかわらず、原油が戦争開始以来の高値で引けたことは実質的なデスカレーションがないことを示す。イランの対抗要求（ホルムズ海峡の主権）は受け入れ不可能。トランプの「トランプ海峡」ブランディングは個人的レガシー事業と見ていることを示唆。確率低下の理由：市場が外交を明確に信じていない。<br><br>
-            <strong>🟡 シナリオB — 「対話と戦闘」が4月6日を超えて延長（45%、横ばい）：</strong>最も可能性が高い：期限が再延長、軍事作戦は現在の強度で継続、原油は$100-115で推移。これが「ニューノーマル」— マーケットを急落させるのではなくじわじわと消耗させる恒常的な戦時経済。スタグフレーションリスクは週を追うごとに増大。<br><br>
-            <strong>🔴 シナリオC — 4月6日後の全面エスカレーション（35%、前回30%から上昇）：</strong>トランプの国内政治的圧力（CPACの分裂、ガソリン価格）が逆説的なインセンティブを生む。ルービニの分析はデスカレーションよりエスカレーションの可能性が高いと示唆。イランが何らかの理由で報復すれば — 偶発的か意図的かを問わず — スパイラルは制御不能に。原油$120超。アジア通貨崩壊。世界的なSPR放出。<br><br>
-            <strong>🆕 新リスク要因 — メモリチップ需要の不確実性：</strong>GoogleのTurboQuantが地政学的リスクの上にテック固有のリスクを追加。AI効率化がハードウェア需要を減少させれば、半導体スーパーサイクルの前提が弱まる — 日本のキオクシア、韓国のSamsung/SK Hynix、米国のMicronに同時に打撃。決算ガイダンスの下方修正に注目。
+            <strong>🔴 シナリオA — 4月6日までの枠組み合意（15%、20%から低下）：</strong>イランの最高指導者がエスカレーション緩和を拒否。米国の15項目提案にイランがホルムズ主権要求を含む対案を提示 — 受け入れ不可能。プリンスルタンでの15名の死傷者で両国とも妥協が政治的に困難に。エスカレーションの度に外交空間が狭まるため確率低下。<br><br>
+            <strong>🟡 シナリオB — 「戦いながら対話」が4月6日以降も継続（45%、横ばい）：</strong>最も可能性が高い：再度の期限延長、現行ペースの空爆継続、ホルムズの部分的混乱、原油$100-115。これは「恒久的戦争経済」シナリオ — 決定的な転換なしに世界市場をゆっくりと蝕む。危険は慣れ：紛争が続く毎週が異常なリスク水準を常態化。<br><br>
+            <strong>🔴 シナリオC — 大幅エスカレーション（40%、35%から上昇）：</strong>1万人規模の部隊展開の検討、プリンスルタンの死傷者、テヘラン空爆のすべてがエスカレーションのモメンタムを示唆。ペンタゴンが地上部隊を展開すれば、戦争はまったく新たなフェーズに突入 — 石油市場はこれを織り込んでいない。ブレント$120超。アジア通貨危機が深化。世界的景気後退の確率が急上昇。<br><br>
+            <strong>🆕 今週の重要指標：</strong>東京CPI（月）、米ISM製造業（火）、米JOLTS求人（火）、ADP雇用（水）、ISMサービス（木）、米雇用統計（金）。経済データがスタグフレーション仮説を確認するか否定するか — 弱い雇用＋高インフレ＝1970年代の悪夢シナリオ。
           </p>
         </article>
 
@@ -1202,15 +867,15 @@
     <section class="section" id="bottomline">
       <div class="bottom-line">
         <h3>💡 まとめ</h3>
-        <p>イラン戦争が2ヶ月目に突入し、ダメージが複合化している。<strong>原油はトランプの停戦延長にもかかわらず3年ぶり高値（ブレント$110）</strong>で引け、市場は外交による解決をもはや信じていないことが明白に。<strong>ダウは調整局面入り（−793pt / −1.73%）</strong>、S&Pは5週連続下落、ナスダックは年内最悪の週（−3.23%）を記録。テック暴落：Meta −11%（子供のSNS中毒裁判で敗訴）、Micron −15%（GoogleのTurboQuant AIメモリ効率化）、Alphabet −9%、Microsoft −7%。<strong>日本：</strong>日経は比較的堅調（−0.43%、53,373円）だが、円は¥160の介入ラインに到達。アジア通貨危機が深刻化 — フィリピンペソ・韓国ウォンがエネルギー輸入コスト高で急落。飲食業の外国人労働者ビザ枠が上限に達し受入停止、桜シーズンの観光ピーク直前に労働力不足が深刻化。明るい材料としては、日仏がAIデュアルユース技術協力で合意、JINSが銀座にAI旗艦店をオープン、東京がスマートゴミ箱を設置。<strong>世界：</strong>イラン民間人1,464名死亡、イエメンのフーシ派がイスラエルにミサイル、湾岸市場が急分化（サウジ+5.8% vs ドバイ−16%）、ルービニが1970年代スタグフレーションを警告、CPACで保守派内に戦争をめぐる分裂が露呈。<strong>ヘルススコア：25/100</strong> — 原油が戦争開始以来の高値、ダウが調整局面入り、アジア通貨が危機的水域にあることから、経済的ダメージは安定化ではなく加速していることを示唆。4月6日の期限まであと9日。</p>
+        <p>イラン戦争はあらゆる軸で転移している。<strong>フーシ派が参戦</strong>し、イスラエルを直接攻撃するとともに紅海航路を脅かす — ホルムズとスエズの世界2大チョークポイントの同時閉鎖の可能性。米軍死傷者は<strong>300名超負傷・13名戦死</strong>に。USSトリポリ（海兵隊2,500名）が日本/台湾海峡演習から湾岸に転用され、太平洋の抑止力が弱体化。<strong>市場は急落中：</strong>ダウは800pt暴落で調整入り、S&Pは戦争開始以来最悪の週（5週連続下落）、ナスダックは20,948に。イランのカタールLNGターミナル攻撃で輸出能力の17%が破壊 — 修復に5年 — 戦争が一時的混乱ではなく構造的エネルギーインフラ損傷を引き起こしていることを証明。<strong>日本は複合的危機に直面：</strong>米国が日本にホルムズ掃海を要請する可能性（数十年で最も重要な海自海外作戦）、国内では人手不足にもかかわらず帰化要件を10年に厳格化し飲食店の外国人労働者ビザを凍結。円は¥160（介入ほぼ確実）、日経は月間−8%、太平洋防衛アセットが中東に再配置される中で北朝鮮が改良型ICBMエンジンを試験。金$4,495（年初来+46%）が唯一の確実な安全資産。<strong>健全性スコア：20/100</strong> — 戦争開始以来の最低値 — 紛争がもはやイランだけの問題ではないため。紅海航路、太平洋の抑止力ギャップ、構造的エネルギー損害、そして中央銀行が修復不能なスタグフレーションに向かう世界経済。4月6日の期限まで7日。</p>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>CEO デイリーブリーフィング · Sanbot生成 · 2026年3月28日（土）</p>
-    <p style="margin-top: 0.5rem;">データソース: CNBC, 日経アジア, BBC News, 日本経済新聞, NHK, Google Finance, CoinGecko</p>
+    <p>CEOモーニングブリーフィング · Sanbot生成 · 2026年3月30日（月）</p>
+    <p style="margin-top: 0.5rem;">データソース: AP News, CNBC, Nikkei Asia, BBC, Al Jazeera, Japan Times, Google Finance, NHK, Trading Economics</p>
   </footer>
 
   <script>
@@ -1222,7 +887,7 @@
 
     const needle = document.getElementById('gauge-needle');
     if (needle) {
-      const score = 25;
+      const score = 20;
       const rotation = -90 + (score / 100) * 180;
       setTimeout(() => {
         needle.style.transform = `rotate(${rotation}deg)`;
