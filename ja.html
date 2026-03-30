@@ -69,6 +69,10 @@
     .masthead h1 { font-family: var(--serif); font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.2; color: var(--text); margin-bottom: 0.5rem; }
     .masthead .edition-date { font-family: var(--sans); font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.25rem; }
     .masthead .edition-sub { font-size: 0.8rem; color: var(--text-muted); }
+    .war-day-counter { display: inline-block; background: #B94A48; color: #fff; font-family: var(--sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; padding: 0.35rem 1rem; border-radius: 100px; margin-bottom: 0.5rem; text-transform: uppercase; }
+    .war-day-counter .day-num { font-size: 1rem; margin: 0 0.15em; }
+    .econ-countdown { display: inline-block; background: #1a1a1a; color: #fff; font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.03em; padding: 0.3rem 0.9rem; border-radius: 100px; margin-bottom: 0.75rem; }
+    .econ-countdown .countdown-num { font-size: 0.85rem; font-weight: 700; color: #F59E0B; margin: 0 0.1em; }
     .divider-bar { width: 60px; height: 3px; background: var(--text); margin: 1rem auto 0; border-radius: 2px; }
 
     .nav-bar { display: flex; justify-content: center; align-items: center; gap: 0; background: var(--bg-secondary); border-bottom: none; font-family: var(--sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; }
@@ -181,6 +185,9 @@
     </div>
     <div class="masthead-inner">
       <div class="overline">朝のインテリジェンスブリーフ</div>
+      <div class="war-day-counter" id="war-day-badge">🔴 イラン戦争 — <span class="day-num" id="war-day-num">30</span>日目</div>
+      <br>
+      <div class="econ-countdown" id="econ-countdown">⏱ 経済ダメージ到達まで <span class="countdown-num" id="econ-countdown-num">—</span> 日</div>
       <h1>CEO モーニングブリーフィング</h1>
       <div class="edition-date">2026年3月30日（月）— 朝刊</div>
       <div class="edition-sub">🔴 イラン戦争30日目 — フーシ派がイスラエル攻撃で参戦、新戦線開設 · 米海兵隊（日本配備USSトリポリ）湾岸到着 · 米軍死傷者300名超負傷・13名戦死 · ダウ800pt暴落で調整入り(45,166) · S&P5週連続下落 · ブレント$105、WTI$99 · 金$4,495(+46% YTD) · 北朝鮮が改良型ICBM試験 · 日本、停戦後ホルムズ海峡掃海の可能性 · パキスタンがイランとホルムズ通行協定 · 日本、帰化要件を10年に厳格化 · 健全性スコア: 20/100</div>
@@ -895,6 +902,35 @@
     }
   </script>
 
+  <script>
+    (function() {
+      var warStart = new Date(2026, 2, 1);
+      var now = new Date();
+      var dayNum = Math.floor((now - warStart) / 86400000) + 1;
+      var el = document.getElementById('war-day-num');
+      if (el) el.textContent = dayNum;
+
+      var oilSpike = new Date(2026, 2, 21);
+      var sixWeek = new Date(2026, 4, 2);
+      var eightWeek = new Date(2026, 4, 16);
+      var cdEl = document.getElementById('econ-countdown-num');
+      var cdBox = document.getElementById('econ-countdown');
+      if (cdEl && cdBox) {
+        if (now < sixWeek) {
+          var daysLeft = Math.ceil((sixWeek - now) / 86400000);
+          cdEl.textContent = daysLeft;
+          cdBox.innerHTML = '⏱ 経済ダメージ到達まで <span class="countdown-num">' + daysLeft + '</span> 日';
+        } else if (now <= eightWeek) {
+          cdBox.style.background = '#B94A48';
+          cdBox.innerHTML = '🔴 経済ダメージ期間 — <span class="countdown-num" style="color:#fff;">突入</span>';
+        } else {
+          var weeksPast = Math.floor((now - oilSpike) / (7 * 86400000));
+          cdBox.style.background = '#7f1d1d';
+          cdBox.innerHTML = '⚫ 原油高騰 ' + weeksPast + ' 週間 — ダメージ閾値超過';
+        }
+      }
+    })();
+  </script>
 <script src="audio-player.js"></script>
 </body>
 </html>

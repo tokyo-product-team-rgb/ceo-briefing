@@ -108,6 +108,43 @@
       color: var(--text-muted);
     }
 
+    .war-day-counter {
+      display: inline-block;
+      background: #B94A48;
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.35rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .war-day-counter .day-num {
+      font-size: 1rem;
+      margin: 0 0.15em;
+    }
+
+    .econ-countdown {
+      display: inline-block;
+      background: #1a1a1a;
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      padding: 0.3rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: 0.75rem;
+    }
+    .econ-countdown .countdown-num {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #F59E0B;
+      margin: 0 0.1em;
+    }
+
     .divider-bar {
       width: 60px;
       height: 3px;
@@ -547,10 +584,13 @@
       <a href="ja.html">JA</a>
     </div>
     <div class="masthead-inner">
-      <div class="overline">AFTERNOON INTELLIGENCE BRIEF</div>
-      <h1>CEO Afternoon Briefing</h1>
-      <div class="edition-date">Monday, March 30, 2026 — Afternoon Edition</div>
-      <div class="edition-sub">🔴 Iran war Day 30 — Nikkei crashes −3.97% as BOJ hawks signal faster tightening · KOSPI plunges −5% · Trump: "take the oil in Iran" · Brent surges to $116, heading for record monthly gain · Pentagon preps ground troops · Houthis fire missiles at Israel · Australia halves fuel excise · G7 holds 4th emergency meeting · Pakistan to host US-Iran talks "in coming days" · Health Score: 15/100</div>
+      <div class="overline">EVENING INTELLIGENCE BRIEF</div>
+      <div class="war-day-counter" id="war-day-badge">🔴 IRAN WAR — DAY <span class="day-num" id="war-day-num">30</span></div>
+      <br>
+      <div class="econ-countdown" id="econ-countdown">⏱ ECONOMIC DAMAGE WINDOW: <span class="countdown-num" id="econ-countdown-num">—</span> days</div>
+      <h1>CEO Evening Briefing</h1>
+      <div class="edition-date">Monday, March 30, 2026 — Evening Edition</div>
+      <div class="edition-sub">🔴 Iran war Day 30 — Nikkei crashes −3.97% as BOJ hawks signal faster tightening · KOSPI plunges −5% · US futures reverse to +0.8% after Trump signals "serious discussions" with Iran · But Trump also threatens to "obliterate" Kharg Island if deal not reached "shortly" · Brent $115, record monthly surge · Yen tests ¥160, FX intervention fears · Houthis fire missiles at Israel · Spain closes airspace to US military · Australia halves fuel excise · Kuwait infrastructure attacked · Aluminum surges +4.5% · G7 holds 4th emergency meeting · Health Score: 17/100</div>
       <div class="divider-bar"></div>
     </div>
   </header>
@@ -598,7 +638,7 @@
           <span class="card-tag japan">🔴 FX · YEN UNDER PRESSURE</span>
           <h3 class="card-headline">USD/JPY Holds Above ¥160 — BOJ Hawkish Signals Fail to Rescue Yen as Oil Import Costs Overwhelm Rate Expectations</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>What:</strong> Despite hawkish BOJ comments, the yen <span class="stat">remains above ¥160</span> against the dollar on Monday, unable to benefit from rate hike expectations. <strong>Why hawks can't save the yen:</strong> (1) The oil-import feedback loop is too strong — even if BOJ hikes 25bp, Japan's energy import bill at $116 Brent overwhelms any interest rate differential benefit; (2) Traders are testing MOF's resolve: verbal warnings have been issued, but no actual dollar-selling intervention yet; (3) The contradiction is stark: BOJ hawks want to hike to fight inflation, but hikes alone can't fix supply-side energy inflation — they'd just crush domestic demand alongside; (4) Monday intervention probability remains high if ¥161 is breached, but markets sense MOF may be holding fire until a clearer diplomatic signal emerges from the Pakistan-brokered talks.</p>
+          <p class="card-body"><strong>What:</strong> The yen <span class="stat">briefly touched ¥160 against the dollar for the first time in 20 months</span> on Monday, triggering jittery intraday trading as markets assess whether Japan will intervene. <strong>Why ¥160 is the line in the sand:</strong> (1) The yen's slide is being driven by Japan's massive oil import bill at $115+ Brent, which creates relentless dollar demand — even BOJ rate hike expectations can't offset the energy payment drain; (2) MOF has issued verbal warnings but no actual dollar-selling intervention yet — traders are probing whether ¥161 triggers action; (3) The key question is whether the move is "speculative" (which justifies intervention) or "fundamental" (oil-driven, which intervention can't fix); (4) Japan intervened at ¥160 in April 2024, spending ¥5.5T — markets remember the level. If breached decisively, expect MOF to sell dollars within hours, but the effect may be temporary given the structural oil deficit.</p>
           <div class="card-sources">
             <a class="source-link" href="https://tradingeconomics.com/usdjpy:cur" target="_blank" rel="noopener">Trading Economics <span class="src-arrow">↗</span></a>
           </div>
@@ -631,6 +671,26 @@
           <p class="card-body"><strong>What:</strong> The USS Tripoli amphibious assault ship with <span class="stat">2,500 Marines — redeployed from Japan-based Pacific exercises — has now arrived in the Gulf</span>, leaving a measurable gap in Western Pacific coverage. <strong>Why this concerns Tokyo:</strong> (1) North Korea's upgraded ICBM engine test (2,500kN thrust, solid-fuel) happened while US Pacific assets were being thinned — Pyongyang is clearly timing provocations to exploit the distraction; (2) Japan's defense planning assumes US carrier/amphibious presence in the western Pacific — the Tripoli's redeployment breaks that assumption; (3) China has increased naval activity near Taiwan and the Senkaku Islands in recent weeks, sensing the same opportunity window; (4) For Japan, the Iran war's most dangerous consequence may not be energy prices — it's the erosion of the security architecture that has protected Japan since 1945.</p>
           <div class="card-sources">
             <a class="source-link" href="https://www.cnbc.com/2026/03/30/asia-pacific-markets-nikkei-225-kospi-hang-seng-index-oil.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible" data-image="">
+          <span class="card-tag japan">🟡 SECURITY · HORMUZ MINESWEEPING</span>
+          <h3 class="card-headline">Japan Considers Sending JMSDF Minesweepers to Strait of Hormuz After Ceasefire — US Retiring Last Minesweeper by 2027</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> The Japanese government is <span class="stat">considering plans to deploy JMSDF minesweepers to the Strait of Hormuz</span> once a ceasefire is reached, at a time when the US Navy is planning to retire its last minesweeping ships by 2027. <strong>Why Japan is stepping up:</strong> (1) Japan depends on Hormuz for ~80% of its oil imports — clearing mines is literally existential for Japan's energy security; (2) The US Navy's minesweeping capability gap (last ship retiring 2027) means allied navies must fill the void; (3) This would be Japan's most significant Middle East military deployment since the 2003-09 Iraq reconstruction mission — a political milestone for Tokyo's defense posture; (4) The subtext: the US expects allies to contribute militarily to post-conflict security, and Japan's minesweeping expertise gives it a unique contribution that sidesteps constitutional combat restrictions.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/spotlight/iran-tensions/after-ceasefire-us-may-count-on-japan-to-clear-mines-in-strait-of-hormuz" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card featured japan fade-in collapsible" data-image="">
+          <span class="card-tag japan">🟡 CORPORATE · WAR IMPACT</span>
+          <h3 class="card-headline">ASICS President Warns of Price Hikes if Middle East War Drags On — Japanese Manufacturers Brace for Margin Compression</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>What:</strong> ASICS president <span class="stat">warned that consumer prices will have to rise</span> if the Middle East war continues, as shipping costs and raw material prices surge. <strong>Why Japanese corporates are breaking silence:</strong> (1) ASICS joins a growing list of Japan Inc. leaders acknowledging the war's impact — previously, most were hedging with "monitoring the situation" language; (2) Japan's exporters face a double whammy: the weak yen should boost exports but energy input costs are rising faster than the currency benefit; (3) Japanese manufacturers investing in dual-use defense tech (Oki Electric expanding submarine sonar/acoustic sensors for both military and civilian offshore construction) signals a structural shift in industrial policy; (4) The corporate earnings season ahead (April-May) will be the first to quantify the war's impact on Japan Inc.'s bottom line.</p>
+          <div class="card-sources">
+            <a class="source-link" href="https://asia.nikkei.com/spotlight/iran-tensions/asics-president-warns-of-price-hikes-if-middle-east-war-drags-on" target="_blank" rel="noopener">Nikkei Asia <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
@@ -671,9 +731,9 @@
 
         <article class="card featured fade-in collapsible" data-image="">
           <span class="card-tag">🇺🇸 NORTH AMERICA · KEY DATA WEEK</span>
-          <h3 class="card-headline">Stagflation Test Week: Jobs Report Friday, ISM Tuesday/Thursday, JOLTS — Data Will Confirm or Deny 1970s Nightmare Scenario</h3>
+          <h3 class="card-headline">US Futures Reverse to +0.8% After Trump Signals "Serious Discussions" — But Contradictory Threats Cloud the Rally</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>What:</strong> This week brings <span class="stat">critical economic data</span>: US Jobs Report (Fri, Good Friday — market closed), ISM Manufacturing (Tue), JOLTS (Tue), ADP Employment (Wed), ISM Services (Thu). Nike, McCormick, Conagra report earnings. <strong>Why it matters now:</strong> (1) The stagflation thesis — weak growth + hot inflation — needs data confirmation. If jobs are weakening while prices are rising, the Fed is trapped; (2) ISM Manufacturing is the first indicator that will show whether the oil spike is already hitting factory activity; (3) The S&P is at a 7-month low (6,368) after five straight losing weeks — bad data this week could accelerate the selloff toward the 6,000 level; (4) The market is closed Friday for Good Friday, but the jobs report still releases — any shock will have the entire weekend to stew before Monday's reaction.</p>
+          <p class="card-body"><strong>What:</strong> US equity futures <span class="stat">swung from negative to +0.8%</span> across all three major indices on Monday after Trump posted on Truth Social about "serious discussions with A NEW, AND MORE REASONABLE, REGIME" in Iran. Dow futures added 357 points. <strong>Why the reversal is fragile:</strong> (1) Trump simultaneously threatened to "blow up and completely obliterate" Iran's oil wells, power plants, and Kharg Island if a deal isn't reached "shortly" — markets are selectively pricing the positive headline; (2) Mohamed El-Erian warned on CNBC that investors are treating the war as "transitory" and aren't pricing "very limited policy flexibility" — if it persists, the Fed can't cut and the US is already running a 6% deficit; (3) This week brings critical data: ISM Manufacturing (Tue), JOLTS (Tue), ADP Employment (Wed), ISM Services (Thu), Jobs Report (Fri, market closed for Good Friday); (4) The S&P has posted five straight losing weeks — one positive futures session doesn't reverse a structural selloff driven by $115 oil.</p>
           <div class="card-sources">
             <a class="source-link" href="https://www.cnbc.com/2026/03/29/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
@@ -691,20 +751,20 @@
         </article>
 
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇬🇧 EUROPE · UK ENERGY SUMMIT</span>
-          <h3 class="card-headline">Starmer Convenes BP, Shell, Maersk Roundtable — UK PM Holds Emergency Energy Meeting as European Markets Open Down 0.2-0.6%</h3>
+          <span class="card-tag" style="color: #B94A48;">🇪🇸 EUROPE · NATO FRACTURE</span>
+          <h3 class="card-headline">Spain Closes Airspace to US Military Aircraft Involved in Iran War — First NATO Ally to Formally Restrict US Operations</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>What:</strong> UK PM Keir Starmer is holding an <span class="stat">emergency roundtable Monday with BP, Shell, and Maersk</span> executives to discuss fuel supply security. European markets opened sharply lower: FTSE −0.2%, DAX −0.6%, CAC −0.4%. <strong>Why the UK is acting now:</strong> (1) The Strait of Hormuz partial closure directly threatens UK energy supply — North Sea production alone cannot meet domestic demand; (2) Shipping giant Maersk's presence signals concern about freight route disruptions beyond oil — consumer goods supply chains are also at risk; (3) Retailers like Next have already warned of price hikes if the war extends beyond 3 months (it's now at 30 days); (4) The DAX's −0.6% drop reflects Germany's acute exposure as Europe's largest industrial economy — manufacturers running on expensive energy imports face margin compression.</p>
+          <p class="card-body"><strong>What:</strong> Spain has <span class="stat">closed its airspace to US aircraft participating in the Iran war</span>, becoming the first NATO ally to formally restrict American military operations related to the conflict. <strong>Why this is a transatlantic rupture:</strong> (1) Spain's decision signals that European opposition to the war is hardening from rhetoric to action — other NATO allies may follow; (2) It complicates US logistics: Mediterranean refueling stops and overflight routes through southern Europe are now restricted; (3) European leaders have consistently called the Iran war "a war of choice" — Spain is the first to back that position with sovereign action; (4) The move reflects domestic political pressure as European consumers face soaring energy costs from a war they didn't choose — governments that appear complicit risk electoral backlash.</p>
           <div class="card-sources">
-            <a class="source-link" href="https://www.cnbc.com/2026/03/30/european-markets-stoxx-600-ftse-dax-cac-iran-news-oil-prices.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
+            <a class="source-link" href="https://www.bbc.com/news/articles/cwy368j1e3lo" target="_blank" rel="noopener">BBC <span class="src-arrow">↗</span></a>
           </div>
         </article>
 
         <article class="card featured fade-in collapsible" data-image="">
-          <span class="card-tag">🇪🇺 EUROPE · RETAIL IMPACT</span>
-          <h3 class="card-headline">Next, H&M Warn of Price Hikes — European Retailers Signal Consumer Pain as War-Driven Fuel, Freight, and Input Costs Surge</h3>
+          <span class="card-tag">🇪🇺 EUROPE · ECONOMIC SENTIMENT</span>
+          <h3 class="card-headline">EU Economic Sentiment Plummets — Consumer Confidence Hits Lowest Since Oct 2023 as War Torpedoes Growth and Inflation Expectations</h3>
           <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>What:</strong> British retailer Next budgeted <span class="stat">£15M ($20M) in additional war-related costs</span> and warned prices will rise if the conflict lasts beyond 3 months. H&M flagged "geopolitical instability" hitting margins. <strong>Why retail is the canary in the coal mine:</strong> (1) Retailers sit at the end of every supply chain — fuel costs, freight costs, and raw material costs all flow through to their P&L before reaching consumers; (2) Next's 3-month threshold is April/May — we're approaching it rapidly; (3) The ECB is watching corporate price-hike expectations as a key inflation indicator — widespread retailer warnings will make rate cuts impossible; (4) Consumer spending is already under pressure from energy costs; price hikes on goods create a double squeeze that could tip European economies into recession.</p>
+          <p class="card-body"><strong>What:</strong> European Commission data released Monday showed economic sentiment fell in both the <span class="stat">EU (down 1.5 pts to 96.7) and euro area (down 1.6 pts to 96.6)</span>, driven below the long-term average of 100. Consumer confidence plummeted to its lowest since October 2023. <strong>Why this data is alarming:</strong> (1) The decline is "marked" per the Commission — driven by "a dramatic decline in consumers' expectations for the overall economic situation"; (2) Employment expectations are weakening across retail, services, and industry — employers are adjusting hiring plans; (3) Consumers are "markedly more pessimistic about their household's future financial situation and less prone to make major purchases" — a spending slowdown is coming; (4) Euro zone private sector output already fell to a 10-month low in March, approaching contraction — the ECB warned it may need to hike if oil-driven inflation persists, but hiking into a slowdown creates the textbook stagflation trap.</p>
           <div class="card-sources">
             <a class="source-link" href="https://www.cnbc.com/2026/03/26/retail-next-hm-stock-price-hikes-iran-war-middle-east-costs.html" target="_blank" rel="noopener">CNBC <span class="src-arrow">↗</span></a>
           </div>
@@ -827,7 +887,7 @@
       <div class="cards">
 
         <article class="card fade-in">
-          <span class="card-tag">MONDAY — MAR 30, 2026 (ASIA CLOSE / EUROPE OPEN / US PRE-MARKET)</span>
+          <span class="card-tag">MONDAY — MAR 30, 2026 (ASIA CLOSE / EUROPE MID-SESSION / US PRE-MARKET)</span>
           <h3 class="card-headline">Global Equity Indices</h3>
           <table class="index-table">
             <thead>
@@ -891,39 +951,47 @@
               </tr>
               <tr>
                 <td class="idx-name">S&P 500 Futures</td>
-                <td class="idx-level">~6,336</td>
-                <td class="chg-neg">−0.50%</td>
-                <td class="chg-neg">−5.3%</td>
-                <td class="chg-neg">−9.7%</td>
-                <td class="chg-pos">+5.3%</td>
+                <td class="idx-level">~6,419</td>
+                <td class="chg-pos">+0.80%</td>
+                <td class="chg-neg">−4.1%</td>
+                <td class="chg-neg">−8.5%</td>
+                <td class="chg-pos">+6.5%</td>
               </tr>
               <tr>
                 <td class="idx-name">Dow Futures</td>
-                <td class="idx-level">~44,913</td>
-                <td class="chg-neg">−0.56%</td>
-                <td class="chg-neg">−4.3%</td>
-                <td class="chg-neg">−8.7%</td>
-                <td class="chg-pos">+3.2%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">FTSE 100 (indicated)</td>
-                <td class="idx-level">~9,903</td>
-                <td class="chg-neg">−0.20%</td>
-                <td class="chg-neg">−1.4%</td>
-                <td class="chg-neg">−5.2%</td>
-                <td class="chg-pos">+5.8%</td>
-              </tr>
-              <tr>
-                <td class="idx-name">DAX (indicated)</td>
-                <td class="idx-level">~22,181</td>
-                <td class="chg-neg">−0.60%</td>
+                <td class="idx-level">~45,500</td>
+                <td class="chg-pos">+0.80%</td>
                 <td class="chg-neg">−3.1%</td>
-                <td class="chg-neg">−6.6%</td>
-                <td class="chg-pos">+8.4%</td>
+                <td class="chg-neg">−7.5%</td>
+                <td class="chg-pos">+4.5%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">Stoxx 600</td>
+                <td class="idx-level">~548</td>
+                <td class="chg-pos">+0.60%</td>
+                <td class="chg-neg">−1.8%</td>
+                <td class="chg-neg">−5.6%</td>
+                <td class="chg-pos">+5.2%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">FTSE 100</td>
+                <td class="idx-level">~8,710</td>
+                <td class="chg-pos">+0.60%</td>
+                <td class="chg-neg">−0.8%</td>
+                <td class="chg-neg">−4.5%</td>
+                <td class="chg-pos">+6.4%</td>
+              </tr>
+              <tr>
+                <td class="idx-name">DAX</td>
+                <td class="idx-level">~22,530</td>
+                <td class="chg-pos">+0.10%</td>
+                <td class="chg-neg">−2.6%</td>
+                <td class="chg-neg">−5.9%</td>
+                <td class="chg-pos">+9.1%</td>
               </tr>
             </tbody>
           </table>
-          <p class="card-body" style="margin-top: 1rem; font-size: 0.85rem;"><strong>Blood bath across Asia.</strong> KOSPI's −5% was the worst single-session drop in the war, driven by Korea's triple vulnerability (energy imports + won collapse + TurboQuant memory chip fears). Japan's Nikkei fell −3.97% because BOJ hawks signaled faster rate hikes while oil surged to $116 — the market was hit from both sides simultaneously. China outperformed (CSI 300 −0.77%) because Russian pipeline oil reduces Hormuz dependence. US and European futures are pointing lower but not crashing, suggesting Western markets are still pricing a diplomatic resolution — a bet that may prove optimistic.</p>
+          <p class="card-body" style="margin-top: 1rem; font-size: 0.85rem;"><strong>Tale of two sessions.</strong> Asia was a bloodbath — KOSPI's −5% was the worst single-session drop of the war (energy imports + won collapse + TurboQuant fears), Nikkei fell −3.97% on BOJ hawks + oil surge. But US and European markets reversed sharply after Trump posted about "serious discussions" with Iran on Truth Social. S&P futures swung to +0.8%, Stoxx 600 recovered to +0.6%, FTSE +0.6%. <strong>The disconnect is telling:</strong> Western markets are pricing a diplomatic resolution while Asian markets are pricing war escalation. China outperformed regionally (CSI 300 −0.77%) because Russian pipeline oil reduces Hormuz dependence. Aluminum surged +4.5% to $3,420/ton after Iranian strikes disrupted Middle East production — Alcoa jumped 10% premarket.</p>
         </article>
 
         <article class="card fade-in">
@@ -943,16 +1011,16 @@
             <tbody>
               <tr>
                 <td class="idx-name">Brent Crude</td>
-                <td class="idx-level">$116.12/bbl</td>
-                <td class="chg-pos">+3.20%</td>
-                <td class="chg-pos">+10.2%</td>
-                <td class="chg-pos">+60%</td>
-                <td class="chg-pos">+78%</td>
+                <td class="idx-level">$114.90/bbl</td>
+                <td class="chg-pos">+2.07%</td>
+                <td class="chg-pos">+9.1%</td>
+                <td class="chg-pos">+55%</td>
+                <td class="chg-pos">+76%</td>
               </tr>
               <tr>
                 <td class="idx-name">WTI Crude</td>
-                <td class="idx-level">$102.96/bbl</td>
-                <td class="chg-pos">+3.40%</td>
+                <td class="idx-level">$101.01/bbl</td>
+                <td class="chg-pos">+1.37%</td>
                 <td class="chg-pos">+9.5%</td>
                 <td class="chg-pos">+58%</td>
                 <td class="chg-pos">+45%</td>
@@ -983,7 +1051,7 @@
               </tr>
             </tbody>
           </table>
-          <p class="card-body" style="margin-top: 1rem;"><strong>Brent at $116 is heading for a record monthly surge</strong> per LSEG data, driven by Trump's Kharg Island seizure threat + Houthi entry + Pentagon ground troop deployment. WTI broke $103, the highest since June 2022. <strong>Gold breached ~$4,550</strong> as the safe-haven trade intensifies — now up nearly 50% YTD, outperforming every other asset class. Natural gas is the stealth story: +105% YTD because Qatar's LNG terminal strike (17% capacity destroyed) and Red Sea route disruption have created a structural supply gap for Europe and Asia. <strong>Bitcoin dropped −1.5%</strong>, showing crypto is no longer treated as a safe haven — it's correlating with risk assets during genuine geopolitical stress.</p>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Brent heading for a record monthly surge of ~55%</strong> — from ~$74 at the start of March to $115 now. Société Générale warns $150 is possible in April if Red Sea routes are also disrupted. WTI above $101, the highest since June 2022. <strong>Gold near ~$4,550</strong> as the safe-haven trade intensifies — up nearly 50% YTD, outperforming every other asset class. Natural gas is the stealth story: +105% YTD because Qatar's LNG terminal strike and Red Sea disruption created a structural supply gap. <strong>Aluminum surged +4.5% to $3,420/ton</strong> (near 4-year high) after Iranian strikes hit critical Middle East production facilities — Alcoa +10%, Century Aluminum +11% premarket. <strong>Bitcoin dropped −1.5%</strong>, correlating with risk assets despite some optimism about crypto adoption in ASEAN during the crisis.</p>
         </article>
 
         <article class="card fade-in">
@@ -1037,7 +1105,7 @@
               </tr>
             </tbody>
           </table>
-          <p class="card-body" style="margin-top: 1rem;"><strong>USD/JPY stuck above ¥160</strong> despite BOJ hawks because the oil import cost loop overwhelms any rate differential benefit. The Korean won crashed to ₩1,510 (−1.7% today, −6.7% monthly), making it the worst-performing Asian currency — energy import vulnerability + KOSPI crash + TurboQuant memory fears are a triple whammy. <strong>The dollar index (DXY) is strengthening</strong> because in a global energy crisis, the US is relatively insulated (domestic shale production) while energy-importing nations see their currencies weakened by the oil payment drain.</p>
+          <p class="card-body" style="margin-top: 1rem;"><strong>USD/JPY touched ¥160 for the first time in 20 months</strong> before retreating slightly — the market's central concern is now whether MOF will intervene. Despite BOJ hawks, the oil import cost loop overwhelms any rate differential benefit. <strong>The Korean won crashed to ₩1,510</strong> (−1.7% today, −6.7% monthly), making it the worst-performing Asian currency — energy imports + KOSPI crash + TurboQuant fears are a triple whammy. <strong>The dollar index (DXY) is strengthening</strong> because the US is relatively insulated (domestic shale production) while energy-importing nations see currencies weakened by the oil payment drain.</p>
         </article>
 
         <article class="card fade-in">
@@ -1105,8 +1173,8 @@
               <div class="gauge-dot"></div>
             </div>
             <div class="gauge-scale"><span>0</span><span>100</span></div>
-            <div class="gauge-score">15</div>
-            <div class="gauge-score-label">CRITICAL — MULTI-FRONT ESCALATION, GROUND TROOPS IMMINENT</div>
+            <div class="gauge-score">17</div>
+            <div class="gauge-score-label">CRITICAL — MULTI-FRONT ESCALATION, DIPLOMATIC SIGNALS MIXED</div>
           </div>
           <div class="indicator-grid">
             <div class="indicator-item">
@@ -1140,7 +1208,7 @@
               <div class="indicator-sub">Face-to-face "in days"</div>
             </div>
           </div>
-          <p class="card-body" style="margin-top: 1rem;"><strong>Score drops to 15 (from 20 this morning) because:</strong> (1) Nikkei crashed −4% and KOSPI −5% — the worst Asian session of the entire war; (2) Brent surged $11 overnight to $116 on Trump's "take the oil" escalation + Houthi entry; (3) BOJ hawks signal faster rate hikes, creating a new policy risk axis for Japan; (4) Pentagon is preparing "weeks of ground conflict" — if green-lit, this becomes the largest US ground operation since Iraq 2003; (5) VIX approaching 30, the algorithmic selling threshold that could accelerate US equity declines. <strong>One bright spot: Pakistan talks "in coming days"</strong> — if confirmed, this is the first credible path to de-escalation. <strong>Upgrade to 25:</strong> Confirmed face-to-face US-Iran talks + Brent below $105 + ceasefire framework. <strong>Downgrade to 8:</strong> US ground troops enter Iran + Brent $130+ + Red Sea closed + VIX 35+.</p>
+          <p class="card-body" style="margin-top: 1rem;"><strong>Score at 17 (up from 15 this morning) because:</strong> Trump's "serious discussions" post and US futures +0.8% reversal inject a thin ray of hope into an otherwise brutal day. But the negatives dominate: (1) Nikkei crashed −4% and KOSPI −5% — worst Asian session of the entire war; (2) Brent at $115, record monthly surge; (3) BOJ hawks signal faster rate hikes; (4) Pentagon prepping "weeks of ground conflict"; (5) Houthis opened Yemen front; (6) Spain became first NATO ally to close airspace to US military; (7) EU economic sentiment plummeted; (8) Kuwait infrastructure attacked (worker killed). <strong>Why +2 despite all that:</strong> Trump explicitly claimed Iran accepted "most of the 15 points" and Pakistan talks are "in coming days." <strong>Upgrade to 25:</strong> Confirmed face-to-face talks + Brent below $105 + ceasefire framework. <strong>Downgrade to 8:</strong> Ground troops enter Iran + Brent $130+ + Red Sea closed + VIX 35+.</p>
         </article>
 
       </div>
@@ -1156,11 +1224,11 @@
       <div class="cards">
 
         <article class="card fade-in collapsible">
-          <span class="card-tag">🔴 TONIGHT / TOMORROW — MARCH 30-31</span>
-          <h3 class="card-headline">Watch Tonight: US Open Reaction, G7 Emergency Outcome, Japan Fiscal Year End</h3>
+          <span class="card-tag">🟡 TONIGHT / TOMORROW — MARCH 30-31</span>
+          <h3 class="card-headline">Watch Tonight: US Open Reaction to Trump's Mixed Signals, G7 Outcome, Japan Fiscal Year End</h3>
           <div class="tap-hint">Tap to expand</div>
           <p class="card-body">
-            <strong>🔴 US market open (10:30 PM JST):</strong> Futures pointing −0.5% across major indices. If the S&P breaks below 6,300 (currently ~6,336 futures), it opens the path to 6,000 — a level that would trigger pension fund and 401(k) rebalancing flows. Watch energy stocks (likely +3-5%) and defense (likely +2-4%) for continued war-economy rotation.<br><br>
+            <strong>🟡 US market open (10:30 PM JST):</strong> Futures now pointing +0.8% after Trump's "serious discussions" post. But the contradictory "obliterate" threat creates a fragile rally. Watch whether the S&P can hold above 6,400 — failure to hold the gap-up would signal traders fading the diplomatic hopes. Energy stocks (likely +2-3%) and defense (likely +1-2%) should continue the war-economy rotation. Alcoa may surge +10% on the aluminum supply disruption story.<br><br>
             <strong>🟡 G7 emergency meeting outcome:</strong> The fourth ministerial meeting is expected to discuss a second coordinated oil reserve release and fuel subsidy frameworks. Markets will react to: (a) the size of any reserve release (larger = short-term bearish for oil), (b) any language about "sanctions relief" for Russian oil to replace Iranian barrels, (c) any new central bank coordination language.<br><br>
             <strong>🔴 Japan fiscal year end (March 31):</strong> Tomorrow is the last day of FY2025. Companies will report final earnings, fund managers will window-dress portfolios, and the full budget remains stalled. Expect yen-selling pressure as Japanese companies repatriate less overseas income than usual (keeping dollars to pay for expensive oil imports).<br><br>
             <strong>🟡 Pakistan talks confirmation:</strong> If Pakistan formally announces a date/location for US-Iran talks, oil could drop $5-10 on the headline alone. Watch Pakistani and Turkish diplomatic channels tonight.
@@ -1186,15 +1254,15 @@
     <section class="section" id="bottomline">
       <div class="bottom-line">
         <h3>💡 Bottom Line</h3>
-        <p>Monday delivered the worst Asian trading session since the Iran war began. <strong>The Nikkei crashed −3.97%</strong> after BOJ hawks revealed internal debate about accelerating rate hikes, even as $116 Brent makes the policy trap inescapable. <strong>KOSPI plunged −5%</strong> — Korea's worst session of the war — because the convergence of energy imports, won collapse, and TurboQuant memory chip fears created a perfect storm for Asia's most exposed market. <strong>The catalyst was a weekend of escalation:</strong> Trump told the FT he wants to "take the oil in Iran" and may seize Kharg Island, the Pentagon is preparing "weeks of ground conflict" with 3,500+ troops now in theater, and Yemen's Houthis fired ballistic missiles at Israel — opening a new front that threatens to close the Red Sea alongside the already-disrupted Strait of Hormuz. <strong>Brent's $11 overnight surge to $116</strong> represents the largest single-session move since the war began, heading for a record monthly gain. Australia has halved its fuel excise in a A$2.55B emergency measure. The G7 is holding its fourth emergency meeting — and each one has been less effective than the last. <strong>The one silver lining:</strong> Pakistan announced that both the US and Iran have expressed confidence in Islamabad hosting direct talks "in coming days," with Saudi, Turkish, and Egyptian foreign ministers coordinating the framework. If confirmed, this is the most credible diplomatic path since the war began. But diplomacy is racing against military momentum: the Pentagon doesn't prepare ground operations as a bluff. <strong>Health score: 15/100.</strong> Markets need a confirmed ceasefire framework to stabilize. Without one, the path leads to $130 oil, VIX 40, and the deepest global economic disruption since 2008.</p>
+        <p>Monday was a day of violent contradictions. <strong>Asia suffered its worst session since the war began</strong> — Nikkei −3.97%, KOSPI −5% — driven by BOJ hawks, $115 Brent, and a weekend of escalation (Trump's "take the oil" FT interview, Pentagon ground troop preparations, Houthi missiles at Israel). <strong>Then Trump posted about "serious discussions" with Iran</strong> and US futures reversed to +0.8%, European markets recovered (Stoxx +0.6%), and briefly the world exhaled. But he simultaneously threatened to "obliterate" Iran's oil wells and Kharg Island if a deal isn't reached "shortly" — the carrot and the stick in the same breath. <strong>Meanwhile the war is widening:</strong> Spain became the first NATO ally to close airspace to US military aircraft, EU economic sentiment plummeted to near-contraction levels, Iran attacked Kuwait's water and power infrastructure (killing a worker), and aluminum surged +4.5% on supply disruption fears. Japan faces its own crisis nexus: the yen tested ¥160 (intervention territory), the full budget is stalled with fiscal year ending tomorrow, ASICS and other corporates are warning of price hikes, and Tokyo is already planning post-ceasefire Hormuz minesweeping operations. <strong>The core tension:</strong> Western markets are pricing diplomacy while Asian markets are pricing escalation. One of them is wrong. Pakistan-hosted talks "in coming days" offer the first credible path to de-escalation — but the Pentagon doesn't prepare "weeks of ground conflict" as a bluff. <strong>Health score: 17/100.</strong> The +2 from this morning reflects Trump's diplomatic signals, but the military momentum is accelerating faster than diplomacy.</p>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>CEO Afternoon Briefing · Generated by Sanbot · Monday, March 30, 2026</p>
-    <p style="margin-top: 0.5rem;">Data sources: CNBC, Financial Times, Washington Post, ABC Australia, Reuters, Nikkei Asia, Japan Times</p>
+    <p>CEO Evening Briefing · Generated by Sanbot · Monday, March 30, 2026</p>
+    <p style="margin-top: 0.5rem;">Data sources: CNBC, Financial Times, Washington Post, BBC, Al Jazeera, ABC Australia, Reuters, Nikkei Asia, Japan Times, European Commission</p>
   </footer>
 
   <script>
@@ -1206,7 +1274,7 @@
 
     const needle = document.getElementById('gauge-needle');
     if (needle) {
-      const score = 15;
+      const score = 17;
       const rotation = -90 + (score / 100) * 180;
       setTimeout(() => {
         needle.style.transform = `rotate(${rotation}deg)`;
@@ -1214,6 +1282,38 @@
     }
   </script>
 
+  <script>
+    // War day counter — March 1, 2026 = Day 1
+    (function() {
+      var warStart = new Date(2026, 2, 1);
+      var now = new Date();
+      var dayNum = Math.floor((now - warStart) / 86400000) + 1;
+      var el = document.getElementById('war-day-num');
+      if (el) el.textContent = dayNum;
+
+      // Economic damage countdown — oil crossed $100 on March 21, 2026
+      // 6-week mark = May 2, 8-week mark = May 16
+      var oilSpike = new Date(2026, 2, 21);
+      var sixWeek = new Date(2026, 4, 2);
+      var eightWeek = new Date(2026, 4, 16);
+      var cdEl = document.getElementById('econ-countdown-num');
+      var cdBox = document.getElementById('econ-countdown');
+      if (cdEl && cdBox) {
+        if (now < sixWeek) {
+          var daysLeft = Math.ceil((sixWeek - now) / 86400000);
+          cdEl.textContent = daysLeft;
+          cdBox.innerHTML = '⏱ ECONOMIC DAMAGE WINDOW IN <span class="countdown-num">' + daysLeft + '</span> DAYS';
+        } else if (now <= eightWeek) {
+          cdBox.style.background = '#B94A48';
+          cdBox.innerHTML = '🔴 ECONOMIC DAMAGE WINDOW — <span class="countdown-num" style="color:#fff;">NOW</span>';
+        } else {
+          var weeksPast = Math.floor((now - oilSpike) / (7 * 86400000));
+          cdBox.style.background = '#7f1d1d';
+          cdBox.innerHTML = '⚫ OIL ELEVATED ' + weeksPast + ' WEEKS — PAST DAMAGE THRESHOLD';
+        }
+      }
+    })();
+  </script>
 <script src="audio-player.js"></script>
 </body>
 </html>
