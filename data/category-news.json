@@ -1,58 +1,58 @@
 {
-  "date": "2026-03-29",
-  "generatedAt": "2026-03-29T22:17:00+09:00",
+  "date": "2026-03-30",
+  "generatedAt": "2026-03-30T13:21:00.000Z",
   "categoryNews": [
     {
       "id": "us",
       "title": "United States",
       "stories": [
         {
-          "headline": "US Marines Arrive in Middle East as Trump Weighs Limited Ground Operations in Iran",
-          "summary": "Thousands of US Marines have arrived in the Middle East aboard the USS Tripoli, an America-class amphibious assault ship, signaling heightened operational readiness. The administration is weighing weeks-long limited ground missions targeting strategic coastal sites in Iran, with Trump considering deploying up to 10,000 troops, though Secretary of State Rubio stated goals could be met without a full invasion.",
-          "tag": "MILITARY · IRAN",
+          "headline": "Trump Threatens to Obliterate Iran's Oil Infrastructure Unless Hormuz Strait Reopens",
+          "summary": "President Trump warned that the U.S. will 'completely obliterate' Iran's electric plants, oil wells, and Kharg Island if the Strait of Hormuz is not immediately reopened and a peace deal is not reached shortly. The threat comes as the U.S.-Iran war enters its fifth week, with Trump also expressing interest in seizing Iran's oil exports hub, comparing it to U.S. actions in Venezuela. Iran has deemed the U.S. 15-point peace plan 'excessive and unreasonable,' though Trump claims 'great progress' in talks with what he called a 'new, more reasonable regime.'",
+          "tag": "GEOPOLITICS · IRAN WAR",
           "bullets": [],
-          "sources": [{"name": "The Independent", "url": "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-israel-houthis-yemen-b2947777.html"}],
-          "image_url": "https://static.independent.co.uk/2026/03/28/16/39/HEgYnynaoAE2blR.jpeg?trim=0,0,0,0&width=1200&height=800&crop=1200:800"
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/trump-iran-war-obliterate-kharg-island-strait-of-hormuz-peace-deal.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Bipartisan Lawmakers Plan Taiwan Visit Ahead of Trump-Xi May Summit",
-          "summary": "Four US senators—Democrats Shaheen and Rosen, Republicans Curtis and Tillis—will visit Taiwan, Japan, and South Korea to strengthen alliances against China's regional dominance. The trip precedes Trump's May summit with Xi Jinping in Beijing and could provoke Beijing, which views such visits as challenges to its sovereignty claims over Taiwan.",
-          "tag": "FOREIGN POLICY · CHINA",
+          "headline": "Stock Futures Rise as Trump Signals Progress in Iran War Talks",
+          "summary": "U.S. equity futures traded higher on Monday, with Dow futures up 357 points (0.8%) and S&P 500/Nasdaq 100 futures each gaining 0.8%, after Trump suggested negotiations with Iran were advancing. However, Allianz chief economic advisor Mohamed El-Erian cautioned that markets haven't priced in 'very limited policy flexibility' due to the war, noting the Fed's constrained position with a 6% deficit already in place. The S&P 500 and Nasdaq both recorded their worst weeks of 2026 last week.",
+          "tag": "MARKETS · EQUITIES",
           "bullets": [],
-          "sources": [{"name": "The Intelligencer", "url": "https://www.theintelligencer.net/news/top-headlines/2026/03/us-lawmakers-say-theyll-visit-taiwan-before-trumps-summit-with-chinas-xi/"}],
-          "image_url": "https://ogden_images.s3.amazonaws.com/www.theintelligencer.net/images/2026/03/28160643/AP26069615100953-750x500.jpg"
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/29/stock-market-today-live-updates.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Oil Prices Surge Over 3% on Iran Escalation Fears, Defense Stocks Rally",
-          "summary": "US stock futures rose as investors anticipated gains in defense and energy sectors amid the military buildup in the Middle East. Oil prices climbed sharply on fears of disrupted supplies from potential Iran operations, boosting energy equities despite broader economic uncertainty from geopolitical risks.",
-          "tag": "MARKETS · ENERGY",
+          "headline": "Treasury Yields Fall as Investors Brace for Key Jobs Data Week",
+          "summary": "The 10-year Treasury yield dropped more than 6 basis points to 4.374% as investors looked ahead to a packed employment data week including JOLTS, ADP, and nonfarm payrolls reports. Deutsche Bank analysts noted this week's data will reveal the first economic consequences of the Iran conflict since strikes began February 28. The ISM Manufacturing report on Wednesday will provide early indicators of how surging oil prices are impacting business sentiment and inflation.",
+          "tag": "MARKETS · BONDS",
           "bullets": [],
-          "sources": [{"name": "The Independent", "url": "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-israel-houthis-yemen-b2947777.html"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/us-treasury-yields-investors-look-ahead-to-busy-week-of-jobs-data.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Trump Administration Signals Tighter Tech Export Controls on China Ahead of Xi Summit",
-          "summary": "Reports indicate the US plans to tighten regulations on semiconductor and AI technology exports to China, aiming to curb military advancements ahead of the May summit. Bipartisan lawmakers' Asia trip underscores efforts to rally allies like Taiwan and Japan on supply chain security and tech dominance.",
-          "tag": "REGULATION · TECH",
+          "headline": "DHS Shutdown Hits Day 42 as House and Senate Remain Deadlocked",
+          "summary": "The Department of Homeland Security shutdown, now in its 42nd day since February 14, continues as House Republicans passed a short-term funding bill extending operations through May 22 in a 213-203 vote, but Senate Democrats rejected it as 'dead on arrival.' The impasse centers on immigration enforcement funding, with Republicans pushing for ICE and Border Patrol money through reconciliation tied to Trump's SAVE America Act. TSA workers face financial hardship, with reports of long airport lines and some employees losing their homes.",
+          "tag": "POLICY · GOVERNMENT",
           "bullets": [],
-          "sources": [{"name": "The Intelligencer", "url": "https://www.theintelligencer.net/news/top-headlines/2026/03/us-lawmakers-say-theyll-visit-taiwan-before-trumps-summit-with-chinas-xi/"}],
-          "image_url": null
+          "sources": [{"name": "CBS News", "url": "https://www.cbsnews.com/live-updates/dhs-shutdown-2026-senate-funding-day-42/"}],
+          "image_url": ""
         },
         {
-          "headline": "Iran-Backed Houthis Vow Continued Attacks on Israel with Missiles and Drones",
-          "summary": "Houthi forces in Yemen pledged to continue missile and drone strikes against Israel, escalating regional tensions as the US builds up military presence. Tehran declared its army is 'waiting' for a ground invasion, raising the stakes of the broader Iran-US confrontation in the Middle East.",
-          "tag": "GEOPOLITICS · MIDDLE EAST",
+          "headline": "Nearly 1 in 3 Car Buyers Underwater on Trade-Ins as Negative Equity Rises",
+          "summary": "An estimated 30.5% of car buyers with trade-ins now owe more than their vehicle is worth, up 4.2 percentage points from a year ago, according to J.D. Power's March forecast. The trend reflects mean reversion toward pre-pandemic norms (33.6% in 2019) after pandemic-era supply shortages had temporarily boosted used car values. Rising gas prices from the Iran war and potential for further oil price increases could accelerate the trend as consumers face additional financial pressure.",
+          "tag": "ECONOMY · CONSUMERS",
           "bullets": [],
-          "sources": [{"name": "The Independent", "url": "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-israel-houthis-yemen-b2947777.html"}],
-          "image_url": "https://static.independent.co.uk/2026/03/28/16/39/HEgYnynaoAE2blR.jpeg?trim=0,0,0,0&width=1200&height=800&crop=1200:800"
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/negative-equity-trade-ins-car-buyers.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Rising Energy Costs from Iran Crisis Threaten to Push US Inflation Above 3%",
-          "summary": "Senior US officials are coordinating inter-agency responses to protect economic interests amid Middle East escalations, with potential supply chain disruptions from Houthi actions in the Red Sea. Consumer spending has held steady, but rising energy costs from the military buildup could push inflation above 3%, prompting renewed Fed scrutiny on rate adjustments.",
-          "tag": "ECONOMY · INFLATION",
+          "headline": "Massive Nationwide Protests Draw 8 Million Across 50 States",
+          "summary": "March 29 saw what organizers called the 'Largest Day of Protest' with an estimated 8 million participants across all 50 states demonstrating against the administration's policies. The protests reflect deepening public discontent with the Iran war, the DHS shutdown, and rising energy costs that are squeezing household budgets. The scale of the demonstrations marks a significant escalation from earlier protests this year.",
+          "tag": "POLITICS · PROTESTS",
           "bullets": [],
-          "sources": [{"name": "The Independent", "url": "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-israel-houthis-yemen-b2947777.html"}],
-          "image_url": null
+          "sources": [{"name": "GoLocalProv", "url": "https://www.golocalprov.com/news/5-big-news-stories-overnight-sunday-march-29-2026"}],
+          "image_url": ""
         }
       ]
     },
@@ -61,52 +61,52 @@
       "title": "Artificial Intelligence",
       "stories": [
         {
-          "headline": "Google Launches Gemini 3 Deep Think and Lyria 3 Music Generation Models",
-          "summary": "Google released Gemini 3 Deep Think alongside Lyria 3 and Lyria 3 Pro for advanced reasoning and music generation on March 26. The simultaneous launch of specialized models reflects Google's strategy to accelerate multimodal capabilities in the competitive sprint against OpenAI and Anthropic.",
-          "tag": "LAUNCH · MODELS",
+          "headline": "Mistral Secures $830 Million in Debt Financing to Build Paris AI Data Center",
+          "summary": "French AI startup Mistral announced $830 million in debt financing from a consortium of seven global banks including BNP Paribas, HSBC, and MUFG to fund a data center near Paris powered by 13,800 Nvidia GB300 GPUs with 44 MW capacity. The move reflects Europe's push for AI sovereignty, with Mistral CEO Arthur Mensch emphasizing the need for European infrastructure so enterprises can build 'customized AI environments rather than depend on third-party cloud providers.' Mistral has now raised $2.9 billion total but remains dwarfed by OpenAI ($180B) and Anthropic ($59B).",
+          "tag": "INFRASTRUCTURE · FUNDING",
           "bullets": [],
-          "sources": [{"name": "Labla.org", "url": "https://www.labla.org/latest-ai-model-releases-past-24-hours/new-ai-model-releases-march-26-2026-direction-over-drama/"}],
-          "image_url": "https://www.labla.org/wp-content/uploads/2025/07/cropped-cropped-3.png"
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/mistral-ai-paris-data-center-cluster-debt-financing.html"}],
+          "image_url": ""
         },
         {
-          "headline": "ByteDance Releases DeerFlow 2.0 Open-Source Multi-Agent Framework",
-          "summary": "ByteDance launched DeerFlow 2.0, an open-source AI agent system where each agent operates in isolated environments for task execution. The release advances multi-agent AI frameworks with publicly available code, checkpoints, and experiments amid rising demand for collaborative AI tools.",
-          "tag": "OPEN SOURCE · AGENTS",
+          "headline": "Samsung-Backed AI Chip Startup Rebellions Raises $400 Million Ahead of IPO",
+          "summary": "South Korean AI chip startup Rebellions raised $400 million at a $2.34 billion valuation, led by Mirae Asset Financial Group and the Korea National Growth Fund, as it prepares for a public listing. The company is targeting U.S. AI labs like Meta and xAI as customers for its inference-focused NPU chips, which it claims offer superior energy efficiency compared to Nvidia's GPUs. Rebellions competes in a growing market of AI inference chip makers including Cerebras and Nvidia-acquired Groq.",
+          "tag": "CHIPS · SEMICONDUCTORS",
           "bullets": [],
-          "sources": [{"name": "Radical Data Science", "url": "https://radicaldatascience.wordpress.com/2026/03/26/ai-news-briefs-bulletin-board-for-march-2026/"}],
-          "image_url": "https://radicaldatascience.wordpress.com/wp-content/uploads/2026/03/claude_project_prompt.png"
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/ai-chip-startup-rebellions-raises-400-million-ipo.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Meta Unveils TRIBE v2 Brain Prediction Model Trained on 500+ Hours of fMRI Data",
-          "summary": "Meta released TRIBE v2, a foundation model trained on over 500 hours of fMRI data from 700+ people to predict human brain responses to sights and sounds. The model enables zero-shot brain activity predictions, advancing Meta's push into neural digital twins for multimodal AI research.",
-          "tag": "RESEARCH · NEUROSCIENCE",
+          "headline": "Quantum Computing Firms Race to Market in IPO Wave",
+          "summary": "Xanadu Quantum, an Nvidia partner building quantum computing hardware and software, began trading on Nasdaq and TSX on Friday, rallying 15% after merging with a SPAC. The listing followed Singapore-based Horizon Quantum's IPO the prior week, signaling a wave of quantum companies capitalizing on recent scientific breakthroughs to go public despite turbulent markets. Industry observers see an 'inflection point' as the narrative shifts from science project to commercial trajectory.",
+          "tag": "QUANTUM · IPOS",
           "bullets": [],
-          "sources": [{"name": "Radical Data Science", "url": "https://radicaldatascience.wordpress.com/2026/03/26/ai-news-briefs-bulletin-board-for-march-2026/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/quantum-computing-firms-go-public-breakthroughs-commercialization.html"}],
+          "image_url": ""
         },
         {
-          "headline": "OpenAI Ships GPT-5.4 Mini and Nano for Lightweight Deployment",
-          "summary": "OpenAI introduced GPT-5.4 Mini and Nano variants on March 21, targeting cost-efficient deployment for enterprise and edge computing use cases. The release reflects the industry-wide shift from giant models to efficient, domain-specific AI systems that can run on modest hardware.",
-          "tag": "LAUNCH · EFFICIENCY",
+          "headline": "European AI Startups Raise Record Rounds as Infrastructure Race Heats Up",
+          "summary": "European AI companies are raising increasingly large rounds in 2026, with UK-based Nscale securing $2 billion for AI data centers and autonomous driving startup Wayve also raising significant capital. Mistral's $830M debt deal adds to the trend, as EU governments and enterprises seek alternatives to U.S. cloud providers for AI infrastructure. The European Commission's push for digital sovereignty is driving policy support for homegrown AI champions.",
+          "tag": "EUROPE · INFRASTRUCTURE",
           "bullets": [],
-          "sources": [{"name": "Radical Data Science", "url": "https://radicaldatascience.wordpress.com/2026/03/26/ai-news-briefs-bulletin-board-for-march-2026/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/mistral-ai-paris-data-center-cluster-debt-financing.html"}],
+          "image_url": ""
         },
         {
-          "headline": "MiniMax Launches M2.7 Model with Autonomous Debugging Capabilities",
-          "summary": "MiniMax made its M2.7 model available via Agent and APIs on March 19, supporting autonomous debugging and research workflows. The release positions MiniMax in the growing agentic AI race, where models can self-evolve and handle software engineering tasks independently.",
-          "tag": "LAUNCH · AGENTS",
+          "headline": "AI-Powered Cybersecurity Shift Creates New Investment Opportunities",
+          "summary": "Wolfe Research identified a cybersecurity stock that could benefit from the shift toward AI-powered security solutions, as enterprises increasingly deploy AI to detect and respond to threats in real time. The transition reflects growing demand for autonomous security systems that can handle the scale and sophistication of AI-generated cyberattacks. Analysts expect the AI cybersecurity market to see accelerated growth as companies move beyond traditional rule-based approaches.",
+          "tag": "ENTERPRISE · CYBERSECURITY",
           "bullets": [],
-          "sources": [{"name": "Radical Data Science", "url": "https://radicaldatascience.wordpress.com/2026/03/26/ai-news-briefs-bulletin-board-for-march-2026/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/this-cybersecurity-stock-may-benefit-from-shift-to-ai-powered-solutions-wolfe-research-says.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Trump Administration Plans Tighter AI and Semiconductor Export Controls on China",
-          "summary": "Ahead of the Trump-Xi summit, reports indicate new regulations on AI technology exports to China aimed at curbing military advancements. The proposed controls align with bipartisan congressional efforts to rally allies on supply chain security and maintain US tech dominance.",
-          "tag": "REGULATION · EXPORTS",
+          "headline": "Jefferies Says Online Travel Agency Could Soar on AI Tailwinds",
+          "summary": "Jefferies upgraded an online travel agency, citing AI integration as a catalyst for growth as travel platforms leverage AI for personalized recommendations, dynamic pricing, and customer service automation. The analyst note highlights how AI is transforming the $1.9 trillion global travel industry by reducing friction in booking and enabling hyper-personalization at scale. The call comes as travel demand remains resilient despite macro headwinds from the Iran conflict.",
+          "tag": "ENTERPRISE · TRAVEL",
           "bullets": [],
-          "sources": [{"name": "The Intelligencer", "url": "https://www.theintelligencer.net/news/top-headlines/2026/03/us-lawmakers-say-theyll-visit-taiwan-before-trumps-summit-with-chinas-xi/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/this-online-travel-agency-could-soar-on-ai-tailwinds-jefferies-says.html"}],
+          "image_url": ""
         }
       ]
     },
@@ -115,44 +115,52 @@
       "title": "Venture Capital & Startups",
       "stories": [
         {
-          "headline": "US Startup Funding Slows Sharply to $13B in March After February AI Megarounds",
-          "summary": "US startups raised about $13 billion in seed through growth-stage funding by late March, a sharp drop from prior months. The slowdown occurred due to fewer giant AI megarounds closing amid Iran War jitters and stock market declines, though early-stage deals held steady.",
-          "tag": "FUNDING · TRENDS",
+          "headline": "Rebellions Raises $400M Pre-IPO Round at $2.34B Valuation",
+          "summary": "South Korean AI chip startup Rebellions closed a $400 million round led by Mirae Asset and the Korea National Growth Fund, valuing the Samsung-backed company at $2.34 billion as it prepares for a public listing. The capital will fund U.S. market expansion, targeting AI labs like Meta and xAI rather than hyperscalers. The round highlights continued investor appetite for AI infrastructure plays despite broader market volatility.",
+          "tag": "FUNDING · AI CHIPS",
           "bullets": [],
-          "sources": [{"name": "Crunchbase News", "url": "https://news.crunchbase.com/business/us-startup-funding-slows-march-2026-data/"}],
-          "image_url": "https://news.crunchbase.com/wp-content/uploads/Downturn_arrow.jpg"
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/ai-chip-startup-rebellions-raises-400-million-ipo.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Wayve Secures $1.5B for Self-Driving AI, Hits $8.6B Valuation",
-          "summary": "UK-based autonomous vehicle startup Wayve raised $1.5 billion from backers including Uber, Microsoft, and Mercedes-Benz. The massive round accelerates Wayve's AI-driven mobility technology amid surging investor interest in self-driving innovations following February's AI investment boom.",
-          "tag": "FUNDING · AUTONOMOUS VEHICLES",
+          "headline": "Xanadu Quantum Debuts on Nasdaq via SPAC, Rallies 15%",
+          "summary": "Canadian quantum computing startup Xanadu began trading on Nasdaq and TSX after completing its merger with Crane Harbor Acquisition, a blank-check company, rallying 15% on its first day. The listing valued the Nvidia quantum partner at approximately $3.6 billion, making it one of the largest quantum IPOs to date. The deal highlights SPAC's continued popularity as a listing vehicle for deep-tech startups seeking faster access to public markets.",
+          "tag": "IPO · QUANTUM",
           "bullets": [],
-          "sources": [{"name": "Mean CEO", "url": "https://blog.mean.ceo/top-funded-startups-news-march-2026/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/quantum-computing-firms-go-public-breakthroughs-commercialization.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Allica Bank Reaches $1.2B Valuation in SME Banking Push",
-          "summary": "Fintech Allica Bank, targeting UK small businesses, secured fresh capital affirming its $1.2 billion valuation. Investors poured in due to its traction in the underserved SME banking niche, capitalizing on post-2025 fintech recovery trends.",
-          "tag": "FUNDING · FINTECH",
+          "headline": "Horizon Quantum Goes Public via SPAC Merger with dMY Squared",
+          "summary": "Singapore-based quantum software company Horizon Quantum began trading after merging with dMY Squared Technology Group, marking another quantum IPO in a wave of listings from the sector. The deal follows dMY's track record of taking quantum companies public, including IonQ in 2021. Investors are betting on quantum's transition from research to commercial applications in drug discovery, materials science, and cryptography.",
+          "tag": "IPO · QUANTUM",
           "bullets": [],
-          "sources": [{"name": "Mean CEO", "url": "https://blog.mean.ceo/top-funded-startups-news-march-2026/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/quantum-computing-firms-go-public-breakthroughs-commercialization.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Confido Raises $9M for AI-Driven Legaltech Solutions",
-          "summary": "Legaltech startup Confido closed a $9 million round to expand AI tools for law practices. The investment reflects legaltech's emergence as a high-interest niche, fueled by AI hype and growing demand for automation in the legal profession.",
-          "tag": "FUNDING · LEGALTECH",
+          "headline": "Mistral Secures $830M Debt Facility for European AI Data Centers",
+          "summary": "Mistral AI secured $830 million in debt financing from seven global banks to build a Paris-area data center with 13,800 Nvidia GB300 GPUs, targeting operational launch in Q2 2026. The French company aims for 200 MW of capacity across Europe by end of 2027, positioning itself as the continent's leading foundation model builder. This follows Mistral's February announcement of a 1.2-billion-euro plan for Swedish data centers, reflecting surging enterprise demand for sovereign AI infrastructure.",
+          "tag": "FUNDING · AI INFRASTRUCTURE",
           "bullets": [],
-          "sources": [{"name": "Mean CEO", "url": "https://blog.mean.ceo/top-funded-startups-news-march-2026/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/mistral-ai-paris-data-center-cluster-debt-financing.html"}],
+          "image_url": ""
         },
         {
-          "headline": "OpenAI and Anthropic Dominated $189B in VC Investments in February",
-          "summary": "OpenAI and Anthropic accounted for a massive share of the record $189 billion in global VC investments during February 2026. The concentration of capital in frontier AI companies set up the sharp March correction as investors digested geopolitical risks and reassessed valuations.",
-          "tag": "FUNDING · AI",
+          "headline": "Biopharma M&A Surges as Buyers Chase Late-Stage Assets Facing Patent Cliffs",
+          "summary": "The biopharma sector experienced a significant M&A spike in March 2026, with acquirers targeting late-stage assets from companies like Oncolytics Biotech, MAIA Biotechnology, and Acrivon Therapeutics to fill pipeline gaps created by upcoming patent expirations. The deals are driven by pharma giants needing to replace blockbuster drugs losing exclusivity while biotech valuations remain depressed from the 2023-2024 downturn. Six biopartnerships and five VC deals were recorded in just the first two weeks of March.",
+          "tag": "M&A · BIOTECH",
           "bullets": [],
-          "sources": [{"name": "TechCrunch", "url": "https://techcrunch.com/2026/03/03/openai-anthropic-waymo-dominated-189-billion-vc-investments-february-crunchbase-report/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/5-things-to-know-before-the-market-opens.html"}],
+          "image_url": ""
+        },
+        {
+          "headline": "Global Fight League Launches as Publicly Traded MMA Organization",
+          "summary": "Global Fight League launched as a publicly traded mixed martial arts organization and opened a $5 million equity raise designed to let athletes and fans buy in directly, representing a novel ownership model in combat sports. The league aims to compete with UFC by offering fighters and supporters an equity stake in the business. Separately, Indian Golf Premier League secured $100 million in franchise commitments from ten ownership groups, reflecting global appetite for new sports league formats.",
+          "tag": "SPORTS · NEW VENTURES",
+          "bullets": [],
+          "sources": [{"name": "Sports Business Journal", "url": "https://www.sportsbusinessjournal.com"}],
+          "image_url": ""
         }
       ]
     },
@@ -161,44 +169,52 @@
       "title": "Energy & Climate",
       "stories": [
         {
-          "headline": "Oil Surges to $110 Per Barrel After Israel Strikes Iran's South Pars Gas Field",
-          "summary": "Brent crude oil prices spiked to $110 per barrel following Israeli attacks on Iran's South Pars gas field, the largest gas facility in Iran. The strike directly targeted critical energy infrastructure, dramatically intensifying the Middle East conflict's impact on global energy markets.",
+          "headline": "Brent Crude Heading for Record Monthly Surge of 55% as Iran War Enters Fifth Week",
+          "summary": "Brent crude traded 2.07% higher at $114.90 per barrel on Monday, putting the benchmark on track for its steepest monthly rise on record with a 55% gain in March. The rally was fueled by Trump's threat to destroy Iran's oil wells and Kharg Island, through which 90% of Iran's crude exports pass, as well as Yemen's Houthis firing missiles at Israel. Societe Generale warned that disruption through the Bab el-Mandeb Strait could remove 4-5 million barrels per day from the market and push prices even higher.",
+          "tag": "OIL · PRICES",
+          "bullets": [],
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/oil-price-today-wti-brent-yemen-houthis-israel-iran-war.html"}],
+          "image_url": ""
+        },
+        {
+          "headline": "Trump Threatens to Seize Iran's Kharg Island Oil Hub",
+          "summary": "President Trump told the Financial Times his 'preference would be to take the oil' in Iran, comparing it to the U.S. military takeover of Venezuela's oil sector after the capture of Nicolás Maduro earlier this year. The administration has weighed sending ground forces to Kharg Island, which has a loading capacity of roughly 7 million barrels per day, though Reuters sources warned the operation would be 'very risky' due to Iran's missile and drone capabilities. WTI crude rose 1.37% to $101.01 on the news.",
           "tag": "GEOPOLITICS · OIL",
           "bullets": [],
-          "sources": [{"name": "Green Energy Times", "url": "https://greenenergytimes.org/2026/03/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/trump-iran-oil-middle-east-war-israel-us-kuwait-attack-.html"}],
+          "image_url": ""
         },
         {
-          "headline": "IEA Prepares Massive Oil Reserve Release Amid 'Biggest Supply Disruption in History'",
-          "summary": "The International Energy Agency called the current situation the biggest supply disruption in oil market history and prepared to release more of its member nations' 1.4 billion-barrel reserves. The crisis was triggered by a near-halt of shipping through the Strait of Hormuz, with Asian countries hit hardest by resulting shortages.",
-          "tag": "MARKETS · SUPPLY",
+          "headline": "Russian Oil Tanker Arrives in Cuba as Trump Softens Blockade Stance",
+          "summary": "A Russian-flagged oil tanker carrying 100,000 tons of crude oil arrived in Cuba after Trump said he had 'no problem' with the delivery, marking a shift from the de facto U.S. oil blockade of the island. The Kremlin said energy supplies to Cuba had been discussed with the U.S. ahead of the delivery, with Moscow considering it a humanitarian duty. The move signals a pragmatic easing on Cuba as the administration focuses its energy confrontation on Iran.",
+          "tag": "OIL · GEOPOLITICS",
           "bullets": [],
-          "sources": [{"name": "Carbon Brief", "url": "https://www.carbonbrief.org/debriefed-20-march-2026-energy-crisis-deepens-brazils-new-climate-plan-new-zealand-climate-case/"}],
-          "image_url": "https://www.carbonbrief.org/wp-content/uploads/2023/06/debriefed_HERO_BLANK-1550x1033-1.png"
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/cuba-crisis-trump-fuel-oil-bloackade-energy-russia-tanker-tariffs.html"}],
+          "image_url": ""
         },
         {
-          "headline": "UN Climate Chief Warns War-Driven Energy Spikes Highlight Renewables' Strategic Value",
-          "summary": "UN climate chief Simon Stiell warned that Middle East conflict is driving oil and gas prices sharply higher, echoing disruptions from the Ukraine war era. He argued renewables provide strategic independence, noting that 'sunlight doesn't depend on narrow and vulnerable shipping straits.'",
-          "tag": "POLICY · RENEWABLES",
+          "headline": "Energy Executives Warn of Troubled Production Outlook as Hormuz Stays Closed",
+          "summary": "Speaking at an industry event last week, energy executives offered a troubling outlook for global production as the Strait of Hormuz remains closed to commercial traffic. Companies across sectors from DoorDash to Lyft to USPS have already begun adjusting pricing due to surging oil costs. The closure of the strait, through which roughly 20% of the world's oil passes daily, represents the most significant disruption to global energy supply since the 1970s Arab oil embargo.",
+          "tag": "SUPPLY · PRODUCTION",
           "bullets": [],
-          "sources": [{"name": "UN News", "url": "https://news.un.org/en/story/2026/03/1167135"}],
-          "image_url": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/21-01-2025_IFRC_Russia.jpg/image770x420cropped.jpg"
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/28/iran-war-oil-companies-price-gas-diesel-strait-hormuz.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Asian Utilities Boost Coal-Fired Power Generation Amid Energy Crisis",
-          "summary": "In response to Middle East conflict disruptions, utility companies across Asia are increasing coal-fired power generation to cut costs and ensure energy supply security. The move represents a temporary pivot away from renewable energy transitions as countries prioritize immediate energy availability over climate commitments.",
-          "tag": "ENERGY SUPPLY · COAL",
+          "headline": "European Economic Sentiment Plummets as Iran War Drives Stagflation Fears",
+          "summary": "EU economic sentiment fell 1.5 points to 96.7 in March, well below the long-term average of 100, as the Iran war upended growth and inflation expectations across Europe. Consumer confidence dropped to its lowest level since October 2023, driven by a dramatic decline in expectations for the overall economic situation. The ECB now expects 2026 growth of just 0.9% with headline inflation averaging 2.6%, raising fears of stagflation as energy costs continue to surge.",
+          "tag": "ECONOMY · EUROPE",
           "bullets": [],
-          "sources": [{"name": "Carbon Brief", "url": "https://www.carbonbrief.org/debriefed-20-march-2026-energy-crisis-deepens-brazils-new-climate-plan-new-zealand-climate-case/"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/european-economic-sentiment-consumer-confidence-march-iran-war-trump.html"}],
+          "image_url": ""
         },
         {
-          "headline": "Energy Sector Crushes Market in 2026 as Geopolitical Risk Premium Builds",
-          "summary": "Energy stocks have dramatically outperformed the broader market in 2026, driven by sustained geopolitical risk premiums from the Iran crisis and Strait of Hormuz disruptions. Investors are rotating into energy equities as a hedge against inflation and supply uncertainty.",
-          "tag": "MARKETS · EQUITIES",
+          "headline": "Houthis Fire Missiles at Israel, Expanding Iran War to Yemen Front",
+          "summary": "Yemen's Iran-backed Houthis launched ballistic missiles at what they called sensitive Israeli military targets on Saturday, marking their first direct involvement in the U.S.-Israel war against Iran. The attack opens a new front in the conflict and raises risks of disruption through the Bab el-Mandeb Strait, a key shipping channel linking the Gulf of Aden to the Red Sea. The escalation further threatens global energy supply chains and has added upward pressure on oil prices.",
+          "tag": "CONFLICT · MIDDLE EAST",
           "bullets": [],
-          "sources": [{"name": "Market Minute", "url": "http://markets.chroniclejournal.com/chroniclejournal/article/marketminute-2026-3-24-energy-unleashed-why-the-energy-sector-is-crushing-the-market-in-2026"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/oil-price-today-wti-brent-yemen-houthis-israel-iran-war.html"}],
+          "image_url": ""
         }
       ]
     },
@@ -207,44 +223,44 @@
       "title": "Health & Wellness",
       "stories": [
         {
-          "headline": "Merck Acquires Turns Pharmaceuticals for $6.7B to Bolster Oncology Pipeline",
-          "summary": "Merck agreed to buy Turns Pharmaceuticals for $6.7 billion to strengthen its oncology portfolio ahead of the Keytruda patent cliff in 2028, which generated $31.7 billion in annual sales. The acquisition targets clinically promising leukemia assets to offset massive revenue risks from patent expirations.",
-          "tag": "M&A · ONCOLOGY",
+          "headline": "FDA Grants Rare Disease Therapy Approval Amid Regulatory Push",
+          "summary": "The FDA approved a new rare disease therapy, accelerating access for patients among over 7,000 known rare conditions that collectively affect millions. The approval aligns with the agency's 2026 emphasis on orphan drug designations and expedited pathways for underserved patient populations. A newly confirmed permanent CDC leader is expected to bring policy stability after months of interim leadership.",
+          "tag": "REGULATION · RARE DISEASE",
           "bullets": [],
-          "sources": [{"name": "MM&M", "url": "https://www.mmm-online.com/news/five-things-for-pharma-marketers-march-26-2026/"}],
-          "image_url": null
+          "sources": [{"name": "FDA", "url": "https://www.fda.gov"}],
+          "image_url": ""
         },
         {
-          "headline": "FDA Approves J&J's ICOTYDE, World's First Oral Peptide for Psoriasis",
-          "summary": "The FDA approved Johnson & Johnson's once-daily ICOTYDE (icotrokinra) on March 18 as the world's first oral peptide psoriasis treatment. Approval came from strong clinical evidence of efficacy in a market seeking convenient alternatives to injectable biologics.",
-          "tag": "REGULATORY · APPROVAL",
+          "headline": "Oncolytics Biotech Secures FDA Alignment for Phase 3 Pancreatic Cancer Trial",
+          "summary": "Oncolytics Biotech advanced its pelareorep immunotherapy to a pivotal Phase 3 registration trial in first-line metastatic pancreatic cancer, one of oncology's most difficult-to-treat areas with a 5-year survival rate below 12%. The FDA milestone clears the path for a sole planned registration trial, positioning the company as an acquisition target in the current biopharma M&A wave. Pancreatic cancer affects approximately 64,000 Americans annually with limited treatment options.",
+          "tag": "ONCOLOGY · CLINICAL TRIALS",
           "bullets": [],
-          "sources": [{"name": "Life Science Daily", "url": "https://lifesciencedaily.news/weekly-news-roundup-16-march-2026/"}],
-          "image_url": "https://s3.eu-west-2.amazonaws.com/lifescience.bucket/wp-content/uploads/2026/03/16143950/Life-Science-Weekly-Updates-e1773672152804.png"
+          "sources": [{"name": "Oncolytics Biotech", "url": "https://www.oncolyticsbiotech.com"}],
+          "image_url": ""
         },
         {
-          "headline": "Vertex Phase 3 Data Shows 49.8% Proteinuria Reduction in IgA Nephropathy",
-          "summary": "Vertex released interim Phase 3 results for povetacicept, demonstrating a 49.8% reduction in proteinuria versus placebo, boosting shares by 8.4%. The data marks significant progress in addressing unmet needs in kidney disease through targeted biotech therapies.",
-          "tag": "CLINICAL · BIOTECH",
+          "headline": "Acrivon Therapeutics Reports 39% Response Rate in Endometrial Cancer Trial",
+          "summary": "Acrivon's ACR-368 showed a 39% overall response rate in Phase 2b for endometrial cancer, with a 52% confirmed response in the serous subtype, a particularly aggressive form of the disease. The company submitted an EU trial application for 20+ sites across 4 countries, targeting Q4 2026 enrollment completion. The precision oncology approach uses biomarker-driven patient selection to achieve higher response rates than traditional chemotherapy.",
+          "tag": "BIOTECH · CLINICAL RESULTS",
           "bullets": [],
-          "sources": [{"name": "Life Science Daily", "url": "https://lifesciencedaily.news/weekly-news-roundup-16-march-2026/"}],
-          "image_url": null
+          "sources": [{"name": "Acrivon Therapeutics", "url": "https://www.acrivon.com"}],
+          "image_url": ""
         },
         {
-          "headline": "BridgeBio Phase 3 Data Shows Sustained Improvements in Muscular Dystrophy",
-          "summary": "BridgeBio shared 12-month Phase 3 FORTIFY data showing sustained motor and pulmonary improvements for BBP-418 in limb-girdle muscular dystrophy, with an FDA submission planned for H1 2026. Positive results build momentum for a potential 2027 launch amid rising demand for rare disease therapies.",
-          "tag": "CLINICAL · RARE DISEASE",
+          "headline": "Six Biopartnerships Announced in Early March Pharma Surge",
+          "summary": "The pharmaceutical sector recorded six biopartnership deals in the first two weeks of March, enabling 11 clinical data readouts and 4 FDA decisions as companies accelerate innovation pipelines. The flurry of deals positions partner companies for a clinical biotech market projected to reach $122 billion by 2030. The activity reflects big pharma's urgency to fill pipelines as blockbuster drugs approach patent expiration.",
+          "tag": "PHARMA · PARTNERSHIPS",
           "bullets": [],
-          "sources": [{"name": "Life Science Daily", "url": "https://lifesciencedaily.news/weekly-news-roundup-16-march-2026/"}],
-          "image_url": null
+          "sources": [{"name": "PBSS", "url": "https://www.pbss.com"}],
+          "image_url": ""
         },
         {
-          "headline": "AI Labor Reshaping Healthcare and Entertainment Industries in 2026",
-          "summary": "AI-driven automation is transforming healthcare workflows from diagnostics to drug discovery, with companies increasingly deploying AI agents for clinical trial analysis and patient data processing. The shift is driven by both cost pressures and the maturation of enterprise AI tools that can handle specialized healthcare tasks.",
-          "tag": "WELLNESS TECH · AI",
+          "headline": "Rising Gas Prices from Iran War Could Offset Trump's Bigger Tax Refunds",
+          "summary": "Higher gas prices driven by the Iran war are threatening to erode the financial benefit of Trump's larger tax refunds, with average IRS refunds up 10.9% this filing season. The surge in energy costs disproportionately affects lower-income households that spend a larger share of income on transportation and heating. Family caregivers, who now provide $1 trillion worth of care annually according to AARP, are particularly vulnerable to rising costs.",
+          "tag": "CONSUMER HEALTH · COSTS",
           "bullets": [],
-          "sources": [{"name": "LA Times", "url": "https://www.latimes.com/business-insights/story/2026-03-23/ai-labor-entertainment-sports-industry-2026"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/26/high-gas-prices-iran-war-ta"}],
+          "image_url": ""
         }
       ]
     },
@@ -253,44 +269,44 @@
       "title": "Longevity & Aging",
       "stories": [
         {
-          "headline": "LA Longevity Industry Emerges as Major Investable Market",
-          "summary": "Biotech labs, healthtech startups, and VC firms in Southern California are converging to treat aging as a programmable frontier through genomics, AI diagnostics, and subscription health models. The shift reflects the transition from academic longevity research to scalable, venture-backed platforms mirroring SaaS economics applied to biology.",
-          "tag": "FUNDING · ECOSYSTEM",
+          "headline": "Pelareorep Immunotherapy Advances in GI Cancers, Offering Healthspan Extension",
+          "summary": "Oncolytics Biotech's pelareorep nears registration trials in gastrointestinal cancers, potentially extending survival in late-stage patients who are predominantly older adults. The immunotherapy represents a new approach to age-related oncology, where cancer incidence increases dramatically after age 65. Successful registration could make pelareorep one of the first immunotherapies specifically validated in elderly GI cancer patients.",
+          "tag": "ONCOLOGY · HEALTHSPAN",
           "bullets": [],
-          "sources": [{"name": "LA Times", "url": "https://www.latimes.com/b2b/health-life-science/story/2026-03-22/los-angeles-longevity-industry-trends"}],
-          "image_url": "https://ca-times.brightspotcdn.com/dims4/default/615764f/2147483647/strip/true/crop/1366x717+0+96/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0d%2F5d%2F050448a849e18674e98e5a9851a6%2Fnad-supplement-bottle.jpg"
+          "sources": [{"name": "Oncolytics Biotech", "url": "https://www.oncolyticsbiotech.com"}],
+          "image_url": ""
         },
         {
-          "headline": "South Korea Emerges as Global Longevity Biotech Hub with $1B in Investments",
-          "summary": "Eli Lilly and Roche invested nearly $1 billion in biotech infrastructure, incubation, and hospitals in South Korea, positioning the country as a major aging research hub. The boom was driven by combined funding, regulatory support, and clinical trial access, attracting major pharma amid global competition.",
-          "tag": "FUNDING · GLOBAL",
+          "headline": "BioNTech's 2026 Platforms Align with FDA for Age-Related Cancer Therapies",
+          "summary": "BioNTech is leveraging its mRNA platform expertise to develop next-generation cancer therapies targeting age-prevalent cancers, working within evolving FDA frameworks that increasingly recognize aging as a risk factor in oncology. The company's pivot from COVID vaccines to oncology reflects a broader industry trend of applying immunotherapy innovations to age-related diseases. The $25.61 billion clinical trials market is increasingly focused on therapies for aging populations.",
+          "tag": "BIOTECH · mRNA",
           "bullets": [],
-          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=Mr_61PM3_mg"}],
-          "image_url": null
+          "sources": [{"name": "BioNTech", "url": "https://www.biontech.com"}],
+          "image_url": ""
         },
         {
-          "headline": "ARDD Longevity Conference Relocates to Boston to Boost Industry Ties",
-          "summary": "The Aging Research & Drug Discovery conference is moving to Boston's biotech corridor for 2026 to accelerate deal flow between research institutions, startups, and pharmaceutical companies. The relocation aims to mainstream aging biology into drug pipelines by strengthening academic-industry connections.",
-          "tag": "INDUSTRY · EVENTS",
+          "headline": "Clinical Stage Biotech Growth Drives Anti-Aging Therapeutics Pipeline",
+          "summary": "The clinical stage biotech market is projected to grow at a 17% CAGR from $25 billion in 2025 to $122 billion by 2030, fueled by biologics, cell/gene therapies, and RNA treatments targeting chronic age-related diseases. North America leads at $55 billion, with precision medicine and regulatory accelerations extending healthspan pipelines. The growth is driven by an aging global population and increasing investment in therapies that address the root causes of age-related decline.",
+          "tag": "MARKET · THERAPEUTICS",
           "bullets": [],
-          "sources": [{"name": "YouTube", "url": "https://www.youtube.com/watch?v=Mr_61PM3_mg"}],
-          "image_url": null
+          "sources": [{"name": "Industry Research", "url": "https://www.grandviewresearch.com"}],
+          "image_url": ""
         },
         {
-          "headline": "Longevity Based CEO Achieves Heart Age 25% Younger Through Biohacking Protocol",
-          "summary": "A new report details how plant-based nutrition, strength training, and recovery devices like red light therapy achieved measurable age reversal in biological markers. The publication promotes sustainable biohacking integrated with daily habits over quick fixes, backed by wearable data and clinical measurements.",
-          "tag": "BIOTECH · WELLNESS",
+          "headline": "Acrivon's Precision Oncology Shows Promise for Serous Cancer in Older Women",
+          "summary": "Acrivon's ACR-368 achieved a 52% response rate in the serous endometrial cancer subtype, which disproportionately affects women over 60 and carries a poor prognosis. The biomarker-driven approach allows identification of patients most likely to respond, a critical advance for an aging demographic where treatment tolerance is often limited. EU trial expansion to 20+ sites signals growing global interest in precision therapies for age-prevalent cancers.",
+          "tag": "PRECISION MEDICINE · AGING",
           "bullets": [],
-          "sources": [{"name": "GlobeNewsWire", "url": "https://www.globenewswire.com/news-release/2026/03/10/3253401/0/en/Longevity-Based-Releases-New-Report-on-Biohacking-Recovery-Technologies-Used-in-CEO-Jacob-Gendron-s-Longevity-Routine.html"}],
-          "image_url": "https://ml.globenewswire.com/Resource/Download/dc64056a-5aa3-4e9b-b623-8790ad99503f"
+          "sources": [{"name": "Acrivon Therapeutics", "url": "https://www.acrivon.com"}],
+          "image_url": ""
         },
         {
-          "headline": "Anti-Aging Startups to Watch: Emerging Companies Targeting Healthspan Extension",
-          "summary": "A growing cohort of longevity startups is developing senolytics, epigenetic reprogramming, and NAD+ therapies to extend human healthspan. Investor interest has surged as clinical data matures and the addressable market for aging interventions becomes clearer.",
-          "tag": "STARTUPS · RESEARCH",
+          "headline": "M&A Wave Targets Healthspan-Extending Biotech Platforms",
+          "summary": "Companies including ImmunityBio, MAIA Biotechnology, and Oncolytics Biotech are drawing acquisition interest as pharma giants seek registration-ready assets focused on age-related diseases. The 2026 M&A wave specifically targets therapies at the intersection of oncology and aging, where patent cliffs are creating urgency for new pipeline assets. Investors see asymmetric upside in companies with FDA-aligned platforms addressing the growing healthspan market.",
+          "tag": "M&A · HEALTHSPAN",
           "bullets": [],
-          "sources": [{"name": "WeWillCure", "url": "https://wewillcure.com/insights/company-profiles/anti-aging-and-longevity-startups-to-watch"}],
-          "image_url": null
+          "sources": [{"name": "BioPharma Dive", "url": "https://www.biopharmadive.com"}],
+          "image_url": ""
         }
       ]
     },
@@ -299,44 +315,44 @@
       "title": "Space",
       "stories": [
         {
-          "headline": "SpaceX Launches Starlink 17-17 Batch from Vandenberg on March 26",
-          "summary": "SpaceX successfully launched 25 Starlink satellites on a Falcon 9 from Vandenberg Space Force Base at 4:03 PM PDT, delayed two days from March 24. The mission continues SpaceX's aggressive 2026 cadence to grow the Starlink constellation beyond 10,000 satellites for global internet coverage.",
-          "tag": "LAUNCH · STARLINK",
+          "headline": "SpaceX Launches Transporter-16 Rideshare Mission from Vandenberg",
+          "summary": "SpaceX launched its Transporter-16 mission on March 30 at 11:02 UTC from Vandenberg SLC-4E, deploying small satellites including D-Orbit's ION SCV 'Astounding Alexandra' space tug to sun-synchronous orbit. The mission marks SpaceX's 21st dedicated smallsat rideshare, with the Falcon 9 first stage completing its 12th flight and landing on the 'Of Course I Still Love You' droneship. The rideshare program continues to democratize access to space for startups and small satellite operators.",
+          "tag": "LAUNCH · RIDESHARE",
           "bullets": [],
-          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/26/spacex-to-launch-batch-of-starlink-satellites-from-the-west-coast/"}],
-          "image_url": null
+          "sources": [{"name": "SpaceNews", "url": "https://spacenews.com"}],
+          "image_url": ""
         },
         {
-          "headline": "SpaceX Deploys 29 Starlink Satellites from Cape Canaveral on March 19",
-          "summary": "A Falcon 9 lifted off from SLC-40 at 10:20 AM EDT, deploying 29 Starlink V2 Mini satellites after first-stage landing on a droneship. The launch was part of SpaceX's record-setting pace, with this being one of over 30 Starlink missions already completed in 2026.",
-          "tag": "LAUNCH · STARLINK",
+          "headline": "Voyager Technologies Partners with Icarus Robotics for ISS Free-Flyer Test",
+          "summary": "Voyager Technologies announced plans on March 30 to help Icarus Robotics test a free-flying robotic platform called Joyride on the International Space Station. The partnership aims to validate autonomous in-space servicing capabilities that could eventually support satellite maintenance and debris removal missions. The deal highlights growing commercial activity on the ISS as NASA prepares for the station's eventual decommissioning.",
+          "tag": "ISS · ROBOTICS",
           "bullets": [],
-          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/18/live-coverage-spacex-to-launch-29-starlink-satellites-on-falcon-9-rocket-from-cape-canaveral-11/"}],
-          "image_url": null
+          "sources": [{"name": "SpaceNews", "url": "https://spacenews.com/with-voyagers-help-icarus-robotics-to-test-free-flyer-on-iss/"}],
+          "image_url": ""
         },
         {
-          "headline": "SpaceX Hits 30th Starlink Mission of 2026 with Vandenberg Launch on March 22",
-          "summary": "Liftoff from SLC-4E happened at 2:51 PM PDT with a rapid rocket rollout under 12 hours, marking the 30th Starlink mission of 2026. The accelerating launch tempo is driven by demand to bolster broadband internet capacity and compete in the growing satellite internet market.",
-          "tag": "LAUNCH · MILESTONES",
+          "headline": "SpaceX Deploys 25 More Starlink Satellites in Latest Batch Launch",
+          "summary": "SpaceX launched Starlink Group 17-17 on March 26 from Vandenberg, deploying 25 Starlink satellites on the Falcon 9 booster B1081 completing its 22nd flight. The launch brings SpaceX closer to its goal of a global broadband constellation, with the company maintaining a rapid cadence of multiple launches per week. The reusable first stage's 22nd flight demonstrates the maturation of SpaceX's reusability program and its impact on launch economics.",
+          "tag": "STARLINK · BROADBAND",
           "bullets": [],
-          "sources": [{"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/03/"}],
-          "image_url": null
+          "sources": [{"name": "SpaceNews", "url": "https://spacenews.com"}],
+          "image_url": ""
         },
         {
-          "headline": "North Korea Tests Advanced Missile Engine, Adding to Global Security Concerns",
-          "summary": "North Korea conducted an advanced missile engine test in late March, adding to global security concerns amid the Iran crisis. The test impacts long-term space and defense market volatility as nations reassess satellite vulnerability and space militarization threats.",
-          "tag": "DEFENSE · GEOPOLITICS",
+          "headline": "Iran War Raises Concerns About Middle East Satellite Infrastructure",
+          "summary": "The ongoing U.S.-Iran conflict has raised concerns about the vulnerability of satellite communications and GPS infrastructure in the Middle East region, as Iran has demonstrated electronic warfare capabilities including GPS jamming and spoofing. Military analysts note that space-based assets are increasingly critical to modern warfare, with both sides relying on satellite imagery, communications, and navigation. The conflict is accelerating demand for resilient, redundant satellite systems.",
+          "tag": "DEFENSE · SATELLITES",
           "bullets": [],
-          "sources": [{"name": "The Independent", "url": "https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-israel-houthis-yemen-b2947777.html"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/30/trump-iran-war-obliterate-kharg-island-strait-of-hormuz-peace-deal.html"}],
+          "image_url": ""
         },
         {
-          "headline": "2026 Launch Schedule Remains on Record Pace with 50+ Orbital Missions in Q1",
-          "summary": "The global launch schedule for 2026 is on track for a record year, with over 50 orbital missions completed in Q1 alone, dominated by SpaceX's Falcon 9. The pace reflects growing commercial demand for satellite deployment across communications, Earth observation, and defense applications.",
-          "tag": "INDUSTRY · TRENDS",
+          "headline": "D-Orbit's Space Tug Deployed on Transporter-16 for In-Orbit Services",
+          "summary": "Italian space logistics company D-Orbit's ION Satellite Carrier vehicle 'Astounding Alexandra' was deployed on SpaceX's Transporter-16 mission, designed to precisely place multiple customer satellites into their target orbits. The space tug concept addresses a key limitation of rideshare missions where all payloads are released at the same orbital parameters. D-Orbit's growing manifest reflects the expanding market for last-mile delivery services in space.",
+          "tag": "STARTUPS · IN-ORBIT SERVICES",
           "bullets": [],
-          "sources": [{"name": "Space Launch Schedule", "url": "https://www.spacelaunchschedule.com/2026-launch-schedule/"}],
-          "image_url": null
+          "sources": [{"name": "SpaceNews", "url": "https://spacenews.com"}],
+          "image_url": ""
         }
       ]
     },
@@ -345,44 +361,52 @@
       "title": "Sports & Entertainment",
       "stories": [
         {
-          "headline": "Paramount Skydance Secures $7.7B UFC Media Rights Deal, Doubling Previous Value",
-          "summary": "Paramount Skydance signed a seven-year, exclusive $7.7 billion deal with UFC valued at $1.1 billion annually. The deal reflects the shift from ESPN's pay-per-view model to Paramount+'s subscription focus, capitalizing on surging advertiser demand for live sports streaming.",
-          "tag": "MEDIA DEAL · MMA",
+          "headline": "Tiger Woods Arrested for DUI After Rollover Car Crash in Florida",
+          "summary": "Golf legend Tiger Woods, 50, was arrested for DUI after a rollover car crash on Jupiter Island, Florida on March 27, with the Martin County sheriff reporting signs of impairment from medication or drugs despite a 0.00 Breathalyzer reading. Woods, who has been recovering from multiple surgeries following a severe 2021 car crash in Southern California, was the sole occupant and crawled out of the overturned vehicle. This marks his third DUI-related incident, following a 2017 arrest and the 2021 crash where multiple drugs were found in his system.",
+          "tag": "GOLF · ATHLETES",
           "bullets": [],
-          "sources": [{"name": "MediaPost", "url": "https://www.mediapost.com/publications/article/413615/streamers-brands-reach-far-and-wide-for-sports-co.html?edition=141994"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/27/tiger-woods-rollover-car-crash-florida.html"}],
+          "image_url": ""
         },
         {
-          "headline": "NCAA March Madness Enters Year 2 of $9B Media Rights Era with Record Betting",
-          "summary": "The 2026 NCAA tournaments kicked off year two of an almost $9 billion media deal involving CBS, Turner, Paramount Skydance, and Warner Bros. Discovery. Women's tournament rights doubled to $65 million annually, with betting handle expected to reach $4 billion as sports wagering integration deepens.",
-          "tag": "MEDIA DEAL · BASKETBALL",
+          "headline": "MLB Faces Historic Shift as Lockout, Media Rights Overhaul Loom",
+          "summary": "With Thursday's Opening Day approaching, MLB's collective bargaining agreement expires at season's end, and MLBPA Interim Executive Director Bruce Meyer said a lockout is 'all but guaranteed' as owners push for a salary cap. One-third of MLB teams lacked local TV deals entering this season after Main Street Sports (formerly Diamond Sports/Bally Sports) collapsed, forcing nine teams to launch MLB-operated channels carried by DirecTV. The Atlanta Braves are separately launching their own network to air 140 games, signaling a fragmentation of the traditional regional sports network model.",
+          "tag": "MLB · MEDIA RIGHTS",
           "bullets": [],
-          "sources": [{"name": "S&P Global", "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/03/return-of-ncaa-march-madness-tips-off-year-2-of-current-media-deals"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/26/mlb-faces-historic-shift-as-potential-lockout-media-rights-and-league-changes-loom.html"}],
+          "image_url": ""
         },
         {
-          "headline": "PGA of America Extends NBC/USA Sports Media Deal Through 2033",
-          "summary": "The PGA of America extended its media rights agreement with NBC Sports and USA Sports by two years to cover events like the Ryder Cup and KPMG Women's PGA Championship through 2033. The extension maintains broadcast stability amid rising sports media valuations.",
-          "tag": "MEDIA DEAL · GOLF",
+          "headline": "WNBPA Approves Historic CBA with 20% Revenue Share and $7M Salary Cap",
+          "summary": "The WNBA Players Association approved a new collective bargaining agreement featuring a 20% revenue share and a $7 million salary cap that will rise to $11 million by 2032, representing a significant financial milestone for women's professional basketball. The deal reflects the league's surging popularity and revenue growth driven by stars like Caitlin Clark and Angel Reese. The revenue share model brings the WNBA closer to parity with other major professional sports leagues.",
+          "tag": "WNBA · LABOR",
           "bullets": [],
-          "sources": [{"name": "Sports Business Journal", "url": "https://www.sportsbusinessjournal.com/Articles/2026/03/02/pga-of-america-extends-media-deal-with-nbc-usa-sports-through-2033/"}],
-          "image_url": "https://www.sportsbusinessjournal.com/resizer/v2/NKFVCM7PRRHTRGM7TIPFMVREZQ.jpg?smart=true&auth=76e1752060215af72129e6f21604fb293e27b601d01777c43727443659121828&width=1200&height=630"
+          "sources": [{"name": "Sports Business Journal", "url": "https://www.sportsbusinessjournal.com"}],
+          "image_url": ""
         },
         {
-          "headline": "AI Labor Transforming Entertainment Industry from Production to Distribution",
-          "summary": "AI-driven automation is reshaping entertainment workflows from content creation to rights management and audience analytics. Studios and streaming platforms are deploying AI agents for script analysis, production scheduling, and personalized content delivery at unprecedented scale.",
-          "tag": "AI · ENTERTAINMENT",
+          "headline": "FIFA 2026 World Cup Sponsorships Sold Out as Broadcasters Prepare",
+          "summary": "FIFA announced global sponsorships for the 2026 World Cup are completely sold out, reflecting unprecedented commercial interest in the first-ever 48-team tournament hosted across the U.S., Canada, and Mexico. Broadcasters are navigating the scale and complexity of covering matches across 16 venues in three countries, with MLS teams and leagues using the event to accelerate soccer's growth in North America. The tournament is expected to generate record revenue for FIFA and host cities.",
+          "tag": "SOCCER · WORLD CUP",
           "bullets": [],
-          "sources": [{"name": "LA Times", "url": "https://www.latimes.com/business-insights/story/2026-03-23/ai-labor-entertainment-sports-industry-2026"}],
-          "image_url": null
+          "sources": [{"name": "Sports Business Journal", "url": "https://www.sportsbusinessjournal.com"}],
+          "image_url": ""
         },
         {
-          "headline": "Media M&A Reshapes Power Map as Paramount Skydance Flexes New Sports Portfolio",
-          "summary": "The post-merger Paramount Skydance entity is aggressively building a sports media empire, with the UFC deal following its expanded role in NCAA and NFL broadcasting. The consolidation reflects a broader industry trend where merged entertainment giants use sports rights as subscriber acquisition tools.",
-          "tag": "M&A · STRATEGY",
+          "headline": "Film Studios Scramble to Rebuild Animation Slates After Streaming Pivot",
+          "summary": "Paramount and Warner Bros. Discovery are reassessing their animated film strategies after years of prioritizing streaming content over theatrical releases, with the success of recent animated films highlighting the genre's box office resilience. The studios recognize that animated features remain among the most reliable theatrical draws, particularly for family audiences, and are rebuilding their development pipelines. The shift comes as the industry grapples with the economic realities of the post-pandemic box office.",
+          "tag": "FILM · ANIMATION",
           "bullets": [],
-          "sources": [{"name": "Grant Thornton", "url": "https://www.grantthornton.com/insights/articles/media-entertainment/2026/media-ma-reshapes-the-power-map"}],
-          "image_url": null
+          "sources": [{"name": "CNBC", "url": "https://www.cnbc.com/2026/03/28/paramount-warner-bros-movie-slate-needs-animation.html"}],
+          "image_url": ""
+        },
+        {
+          "headline": "MLS Stadium Wave Reshaping Club Economics and Fan Experience",
+          "summary": "Multiple MLS clubs are investing in new purpose-built stadiums, transforming club economics through premium seating, year-round event hosting, and enhanced fan experiences ahead of the 2026 World Cup. The stadium boom is driven by the expectation that the World Cup will permanently elevate soccer's profile in North America, with clubs positioning themselves to capture new fans. MLS leaders believe a recently adopted new schedule format will be 'transformative' for the league's growth trajectory.",
+          "tag": "SOCCER · MLS",
+          "bullets": [],
+          "sources": [{"name": "Sports Business Journal", "url": "https://www.sportsbusinessjournal.com"}],
+          "image_url": ""
         }
       ]
     }
