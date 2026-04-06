@@ -1,101 +1,101 @@
 {
-  "date": "2026-04-04",
-  "generatedAt": "2026-04-04T13:24:44.207287+00:00",
+  "date": "2026-04-06",
+  "generatedAt": "2026-04-06T13:25:45.310979+00:00",
   "categoryNews": [
     {
       "id": "us",
       "title": "United States",
       "stories": [
         {
-          "headline": "Global Markets Plunge as Trump Imposes Sweeping New Tariffs; China Retaliates",
-          "summary": "President Trump announced broad new tariffs on imports, triggering immediate Chinese counter-tariffs on U.S. goods. The escalation stems from Trump's push to protect domestic manufacturing, but investor fears of a full-blown trade war sent the Dow and major indices into sharp decline.",
-          "tag": "MARKETS · TARIFFS",
+          "headline": "Trump Administration Launches Section 301 Probes Into 60 Trading Partners",
+          "summary": "The U.S. Trade Representative opened investigations under Section 301 into practices like subsidies and forced labor across 60 nations including China, Japan, India, and the EU. The probes could lead to sweeping new tariffs beyond current item-specific levies, as the existing 10% across-the-board tariff under Section 122 expires July 24. Markets remain volatile as J.P. Morgan warns pharmaceutical tariffs could reach 200% by late 2026.",
+          "tag": "TRADE · TARIFFS",
           "bullets": [],
           "sources": [
             {
-              "name": "Reuters",
-              "url": "https://www.reuters.com/markets/"
+              "name": "ICR DC Insider",
+              "url": "https://icrinc.com/news-resources/dc-insider-april-26-policy-shifts/"
+            }
+          ],
+          "image_url": "https://icrinc.com/wp-content/uploads/2026/04/ICR-DC-Insider.png"
+        },
+        {
+          "headline": "Tech Giants Sign Ratepayer Protection Pledge for Data Center Power",
+          "summary": "President Trump secured commitments from leading AI companies to build, bring, or buy their own power for data centers and prevent electricity price hikes for consumers. The pledge addresses grid strain from surging AI and cloud computing demand, with the NEDC intervening in the PJM power market to spur the largest power plant development in U.S. history. The move ensures tech firms fund infrastructure without burdening ratepayers.",
+          "tag": "ENERGY · TECH",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "White House",
+              "url": "https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-donald-j-trump-advances-energy-affordability-with-the-ratepayer-protection-pledge/"
+            }
+          ],
+          "image_url": "https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Social-Share-Card.jpg"
+        },
+        {
+          "headline": "States Face Budget Crunches from One Big Beautiful Bill Tax Cuts",
+          "summary": "The GOP's One Big Beautiful Bill triggered rapid revenue drops for states matching federal tax codes, with Colorado facing a $750 million emergency budget hole and Illinois and Pennsylvania decoupling. Federal moves also shift SNAP and Medicaid costs to states while rescinding unobligated IRA funds and cutting $7 billion in Solar for All grants. Twenty state attorneys general have filed legal challenges.",
+          "tag": "FISCAL · STATES",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Governing",
+              "url": "https://www.governing.com/politics/the-biggest-issues-to-watch-in-2026"
+            }
+          ],
+          "image_url": "https://erepublic.brightspotcdn.com/dims4/default/a774198/2147483647/strip/true/crop/2000x972+0+181/resize/1440x700!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2F47%2F08%2Fbb676db84b01b73edc05b9691e1f%2Fadobestock-214716083-1.jpg"
+        },
+        {
+          "headline": "FTC Targets False 'Made in America' Claims via Executive Order",
+          "summary": "A Trump administration Executive Order directs the FTC to prioritize enforcement against dubious 'Made in America' advertising by brands and e-commerce platforms, requiring verification of third-party sellers' product origin claims. The move signals heightened scrutiny without new authority, amid broader protectionist trade policies. It responds to deceptive practices undermining domestic manufacturing promotion efforts.",
+          "tag": "REGULATION · TRADE",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "ICR DC Insider",
+              "url": "https://icrinc.com/news-resources/dc-insider-april-26-policy-shifts/"
+            }
+          ],
+          "image_url": "https://icrinc.com/wp-content/uploads/2026/04/ICR-DC-Insider.png"
+        },
+        {
+          "headline": "Executive Order Challenges State Laws Burdening Energy Production",
+          "summary": "An April executive order instructs the U.S. Attorney General to identify state laws 'burdening' domestic energy production as potentially unconstitutional or preempted by federal law. This federal push directly counters state-level renewable energy incentives, aligning with the OBBBA's rescission of IRA funds. The EPA's cancellation of the $7 billion Solar for All program faces legal challenges from 20 states.",
+          "tag": "ENERGY · REGULATION",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Governing",
+              "url": "https://www.governing.com/politics/the-biggest-issues-to-watch-in-2026"
+            }
+          ],
+          "image_url": "https://erepublic.brightspotcdn.com/dims4/default/a774198/2147483647/strip/true/crop/2000x972+0+181/resize/1440x700!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2F47%2F08%2Fbb676db84b01b73edc05b9691e1f%2Fadobestock-214716083-1.jpg"
+        },
+        {
+          "headline": "Treasury Convenes First Regulator Talks on Financial Oversight",
+          "summary": "The U.S. Treasury convened its first series of conversations with domestic and international regulators, with Secretary Bessent emphasizing financial literacy's role in economic stability. The talks address compliance priorities and cross-border strategies amid tariff-induced market volatility and regulatory shifts in digital assets. This signals a recalibration of financial oversight in a rapidly shifting policy environment.",
+          "tag": "FINANCE · REGULATION",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "U.S. Treasury",
+              "url": "https://home.treasury.gov/news/press-releases"
             }
           ],
           "image_url": ""
         },
         {
-          "headline": "Trump Fires National Security Aides After Meeting with Laura Loomer",
-          "summary": "President Trump dismissed key national security staff following a controversial meeting with far-right activist Laura Loomer, signaling internal White House purges over foreign policy disagreements. The firings reflect Trump's effort to consolidate loyalty in his administration ahead of midterm elections.",
-          "tag": "POLITICS · WHITE HOUSE",
+          "headline": "Supreme Court Weighs Challenge to Trump Tariffs Amid Market Volatility",
+          "summary": "States and cities are monitoring potential Supreme Court rulings on President Trump's tariffs, which J.P. Morgan analysis shows have increased volatility and created significant growth headwinds. Pharmaceutical tariffs could reach 200% by late 2026, while Section 301 probes into 60 partners may yield broad new trade barriers. The legal challenge tests the limits of executive trade authority.",
+          "tag": "LEGAL · TRADE",
           "bullets": [],
           "sources": [
             {
-              "name": "AP News",
-              "url": "https://apnews.com/"
+              "name": "J.P. Morgan",
+              "url": "https://www.jpmorgan.com/insights/global-research/current-events/us-tariffs"
             }
           ],
-          "image_url": ""
-        },
-        {
-          "headline": "Democrats Sue Over Trump Executive Order Restricting Mail-In Voting",
-          "summary": "Democrats and voting rights groups filed lawsuits against Trump's executive order limiting mail-in and absentee ballots, which directs DHS to create a 'state citizenship list' for voter verification. Arizona Secretary of State Adrian Fontes called it an attempt to 'pick his own voters,' as the order targets swing states ahead of midterms.",
-          "tag": "POLITICS · VOTING RIGHTS",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "CNN",
-              "url": "https://www.cnn.com/politics"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Trump Dismisses Attorney General Pam Bondi; Deputy Takes Acting Role",
-          "summary": "President Trump fired Attorney General Pam Bondi and appointed Deputy Todd Blanche as acting AG in a rapid cabinet shakeup. The dismissal fits Trump's pattern of replacing officials not fully aligned with his agenda, amid ongoing legal battles over voting restrictions and tariff authority.",
-          "tag": "POLITICS · CABINET",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "NBC News",
-              "url": "https://www.nbcnews.com/politics"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "US Warplanes Shot Down in Middle East as Iran Tensions Escalate",
-          "summary": "Two U.S. warplanes were downed in rare incidents as the U.S. and Iran race to locate a missing crew member, marking a potential turning point in the regional conflict. This follows exchange of airstrikes between both nations, with Trump vowing in a primetime address to 'finish the job' if no deal is reached.",
-          "tag": "MILITARY · MIDDLE EAST",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "BBC News",
-              "url": "https://www.bbc.com/news"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Army Chief of Staff General Randy George Steps Down at Hegseth's Request",
-          "summary": "General Randy George resigned as U.S. Army Chief of Staff at Defense Secretary Pete Hegseth's directive, part of Trump's broader military leadership overhaul. The change reflects efforts to align Pentagon leadership with administration priorities on conflicts in Ukraine and the Middle East.",
-          "tag": "MILITARY · DEFENSE",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Washington Post",
-              "url": "https://www.washingtonpost.com/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Deadly Storms Sweep South and Midwest, Causing Widespread Damage",
-          "summary": "Severe storms battered the South and Midwest, causing fatalities and widespread power outages as an early spring weather pattern intensified. The timing during Holy Week has complicated recovery efforts, with forecasters warning of continued severe weather across the region.",
-          "tag": "WEATHER · DISASTER",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Weather Channel",
-              "url": "https://weather.com/"
-            }
-          ],
-          "image_url": ""
+          "image_url": "/content/dam/jpm/cib/complex/content/research/tariffs/Tariffs_header_1440x810.jpg"
         }
       ]
     },
@@ -104,95 +104,82 @@
       "title": "Artificial Intelligence",
       "stories": [
         {
-          "headline": "Anthropic Releases Claude Mythos 5, a 10-Trillion Parameter Model",
-          "summary": "Anthropic launched Claude Mythos 5 to push frontier AI capabilities amid intense competition from OpenAI's GPT-5.4 series. The release leverages massive parameter scaling to achieve breakthroughs in reasoning and agentic tasks, signaling a shift toward raw compute growth despite efficiency debates.",
-          "tag": "MODELS · FRONTIER AI",
+          "headline": "Anthropic Unveils Claude Mythos 5 with 10 Trillion Parameters",
+          "summary": "Anthropic released Claude Mythos 5, a massive 10-trillion parameter model, marking the most aggressive scaling push in AI history. The release comes amid intense competition from OpenAI's GPT-5.4 series and aims to reclaim frontier model leadership. Enterprise customers are expected to benefit from enhanced reasoning and multi-step task handling capabilities.",
+          "tag": "MODELS · FRONTIER",
           "bullets": [],
           "sources": [
             {
-              "name": "TechCrunch",
-              "url": "https://techcrunch.com/"
+              "name": "DevFlokers",
+              "url": "https://www.devflokers.com/blog/ai-news-last-24-hours-april-2026-model-releases-breakthroughs"
             }
           ],
-          "image_url": ""
+          "image_url": "https://devflokers.onrender.com/api/assets/69cf686c77bf2b9d215112e1"
         },
         {
-          "headline": "OpenAI Deploys GPT-5.4 with 'Thinking' Variant Surpassing Human Benchmarks",
-          "summary": "GPT-5.4's 'Thinking' mode integrates test-time compute for complex problem-solving, hitting 75% on OSWorld-Verified and exceeding human desktop task performance. The release is backed by OpenAI's record $122 billion funding round and aims to counter Anthropic's advances in the frontier model race.",
-          "tag": "MODELS · BENCHMARKS",
+          "headline": "OpenAI Deploys GPT-5.4 'Thinking' Variant Surpassing Human Benchmarks",
+          "summary": "OpenAI fully deployed the GPT-5.4 family including a 'Thinking' variant that integrates test-time compute for complex problem-solving, achieving 75% on OSWorld-Verified benchmarks — 27.7 points above prior versions. The model optimizes for transparent reasoning and high-throughput enterprise use. Rapid iteration continues as OpenAI counters rivals Anthropic and Google.",
+          "tag": "MODELS · ENTERPRISE",
           "bullets": [],
           "sources": [
             {
-              "name": "The Verge",
-              "url": "https://www.theverge.com/"
+              "name": "SearchCans",
+              "url": "https://www.searchcans.com/blog/ai-model-releases-april-2026-v2/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://www.searchcans.com/logo/Logo-512x512.png"
         },
         {
-          "headline": "Google Unveils Gemma 4 Open Models and TurboQuant Compression",
-          "summary": "Google released Gemma 4 (31B dense), ranking #3 on Arena AI for agentic workflows, alongside TurboQuant which slashes memory use by 6x via KV cache compression. These address inference bottlenecks and GPU limitations, enabling efficient scaling as big tech commits $562 billion to AI capex this year.",
-          "tag": "MODELS · OPEN SOURCE",
+          "headline": "Google Introduces TurboQuant for 6x KV Cache Compression",
+          "summary": "Google's TurboQuant algorithm, presented at ICLR 2026, compresses Key-Value caches by a factor of six while preserving model performance, tackling the memory bottleneck in long-context inference. The breakthrough addresses escalating data center costs as parameter sizes and context windows grow exponentially. This infrastructure innovation could significantly reduce the cost of running large models at scale.",
+          "tag": "INFRASTRUCTURE · RESEARCH",
           "bullets": [],
           "sources": [
             {
-              "name": "Google AI Blog",
-              "url": "https://blog.google/technology/ai/"
+              "name": "DevFlokers",
+              "url": "https://www.devflokers.com/blog/ai-news-last-24-hours-april-2026-model-releases-breakthroughs"
             }
           ],
-          "image_url": ""
+          "image_url": "https://devflokers.onrender.com/api/assets/69cf686c77bf2b9d215112e1"
         },
         {
-          "headline": "SpaceX Acquires xAI for $250 Billion",
-          "summary": "SpaceX's acquisition of Elon Musk's xAI integrates AI expertise into Starship and Mars ambitions, accelerating autonomous systems for space exploration. The deal consolidates compute resources amid surging AI investments that totaled $242 billion in Q1 2026 alone.",
-          "tag": "M&A · INFRASTRUCTURE",
+          "headline": "OpenAI Raises $122 Billion at $852 Billion Valuation",
+          "summary": "OpenAI secured a record-shattering $122 billion funding round led by Amazon, Nvidia, and SoftBank, including $3 billion from retail investors. The raise values the company at $852 billion, making it by far the most valuable private company in history. The capital supports massive infrastructure buildout and model development to maintain its lead in enterprise AI.",
+          "tag": "FUNDING · ENTERPRISE",
           "bullets": [],
           "sources": [
             {
-              "name": "Bloomberg",
-              "url": "https://www.bloomberg.com/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         },
         {
-          "headline": "Record $242 Billion in AI Investments in Q1 2026",
-          "summary": "Investors funneled $242 billion into AI firms in Q1, with OpenAI ($122B) and Anthropic ($30B) securing four of history's largest funding rounds. The capital surge reflects a shift from experimentation to infrastructure buildout, with big tech committing $562 billion in AI capex for the year.",
-          "tag": "INVESTMENT · CAPITAL",
+          "headline": "Salesforce Overhauls Slack with 30 New AI Features",
+          "summary": "Salesforce integrated 30 AI-driven features into Slack including automated responses, smarter search, and workflow automation to boost enterprise productivity. The update responds to growing demand for AI-enhanced collaboration tools as businesses adopt model portfolios for cost-effective task handling. The move positions Slack as an AI-first enterprise platform rather than just a messaging tool.",
+          "tag": "ENTERPRISE · PRODUCTS",
           "bullets": [],
           "sources": [
             {
-              "name": "Financial Times",
-              "url": "https://www.ft.com/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         },
         {
-          "headline": "Federal Judge Strikes Down Trump-Era AI Ban in Government",
-          "summary": "A federal judge ruled that the ban on Anthropic's AI models in government systems violates free speech protections, setting precedent for public-private AI collaboration. The ruling removes regulatory hurdles as AI increasingly integrates into government operations.",
-          "tag": "REGULATION · LEGAL",
+          "headline": "March 2026 Sees Over 30 Major AI Model Releases",
+          "summary": "Over 30 significant AI models launched in March 2026 alone, including OpenAI's GPT-5.4 variants, Anthropic's Claude Opus 4.6 and Sonnet 4.6, Google's Gemini 3.1, and NVIDIA's Nemotron 3 Super. The surge reflects accelerated competition cycles and is causing developer decision fatigue. Organizations are adopting model portfolio strategies to optimize cost and performance across different tasks.",
+          "tag": "MODELS · INDUSTRY",
           "bullets": [],
           "sources": [
             {
-              "name": "Ars Technica",
-              "url": "https://arstechnica.com/"
+              "name": "SearchCans",
+              "url": "https://www.searchcans.com/blog/ai-model-releases-april-2026-v2/"
             }
           ],
-          "image_url": ""
-        },
-        {
-          "headline": "Noah Labs' Vox AI Earns FDA Designation for Heart Failure Detection from Voice",
-          "summary": "Noah Labs' Vox AI received FDA breakthrough designation for detecting heart failure from 5-second voice clips, while Penguin AI and Ambience launched hospital automation tools. The approvals reflect AI's transition from experimentation to validated clinical deployment amid massive healthcare AI funding.",
-          "tag": "HEALTHCARE · FDA",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "STAT News",
-              "url": "https://www.statnews.com/"
-            }
-          ],
-          "image_url": ""
+          "image_url": "https://www.searchcans.com/logo/Logo-512x512.png"
         }
       ]
     },
@@ -201,95 +188,82 @@
       "title": "Venture Capital & Startups",
       "stories": [
         {
-          "headline": "OpenAI Secures Record $122 Billion Funding at $852 Billion Valuation",
-          "summary": "OpenAI closed a massive $122 billion round, one of the largest ever, pushing its valuation to $852 billion and dominating Q1 2026 VC activity. The capital funds AI compute infrastructure amid explosive demand for frontier models, with mechanisms like ARK Invest ETFs democratizing access for retail investors.",
-          "tag": "MEGA ROUND · AI",
+          "headline": "OpenAI Raises Record $122B, Capturing Nearly Half of U.S. VC Total",
+          "summary": "OpenAI's $122 billion raise at an $852 billion valuation accounted for nearly half of the $267.2 billion U.S. VC total in Q1 2026, shattering all previous records. The round was led by Amazon, Nvidia, and SoftBank with $3 billion from retail investors. AI companies dominated 73% of top U.S. deals, highlighting extreme capital concentration in the sector.",
+          "tag": "MEGA-ROUND · AI",
           "bullets": [],
           "sources": [
             {
-              "name": "TechCrunch",
-              "url": "https://techcrunch.com/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         },
         {
-          "headline": "Shield AI Raises $2 Billion Series G at $12.7 Billion Valuation",
-          "summary": "Defense tech unicorn Shield AI secured $2 billion led by Advent International and JPMorgan, with an additional $500 million from Blackstone. The funding supports its acquisition of Aechelon Technology and reflects surging investor interest in AI-driven defense amid escalating geopolitical tensions.",
-          "tag": "DEFENSE TECH · SERIES G",
+          "headline": "Anthropic Secures $30B at $380B Valuation in Third-Largest VC Round Ever",
+          "summary": "Anthropic's $30 billion funding contributed to Q1's unprecedented $297-300 billion global startup investment spike, which was 2.5x the prior quarter. The concentrated bet on generative AI leaves smaller deals at $72 billion despite 4,595 U.S. transactions. The AI funding concentration is squeezing capital availability for non-AI startups across the ecosystem.",
+          "tag": "MEGA-ROUND · AI",
           "bullets": [],
           "sources": [
             {
-              "name": "Bloomberg",
-              "url": "https://www.bloomberg.com/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         },
         {
-          "headline": "Harvey Closes $200 Million Round at $11 Billion Valuation",
-          "summary": "Legal tech startup Harvey raised $200 million led by GIC and Sequoia Capital, bringing total funding to $1.2 billion for the 4-year-old firm. Investors are betting on rapid law firm adoption and scalability of its AI-powered legal workflow tools.",
-          "tag": "LEGAL TECH · SERIES D",
+          "headline": "xAI Raises $20B as AI Dominates 65% of U.S. VC Value",
+          "summary": "Elon Musk's xAI secured $20 billion as part of four behemoth Q1 deals capturing 63-73% of total VC volume. AI now accounts for 65% of all U.S. VC value year-to-date, boosting sectors like defense and healthcare but pressuring non-AI startups to find niches. The concentration raises concerns about ecosystem health and diversification.",
+          "tag": "MEGA-ROUND · AI",
           "bullets": [],
           "sources": [
             {
-              "name": "Forbes",
-              "url": "https://www.forbes.com/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         },
         {
-          "headline": "Anthropic Raises $30 Billion at $380 Billion Valuation",
-          "summary": "AI rival Anthropic secured $30 billion, ranking among Q1's top VC rounds and fueling competition with OpenAI for frontier model dominance. The mega-deal exemplifies the AI boom's capital concentration, with a few U.S.-based labs absorbing 65% of Q1's $300 billion global VC total.",
-          "tag": "MEGA ROUND · AI",
+          "headline": "Google Acquires Wiz for $32B in Largest VC-Backed M&A Ever",
+          "summary": "Google's $32 billion acquisition of cybersecurity firm Wiz set a new record for VC-backed corporate M&A, outpacing Marvell's $6 billion Celestial AI buy and Palo Alto's $3.4 billion Chronosphere deal. The acquisition reflects Big Tech's aggressive talent and technology grabs amid an accelerating M&A environment with over 2,300 deals last year. More mega-exits are expected through 2026.",
+          "tag": "M&A · CYBERSECURITY",
           "bullets": [],
           "sources": [
             {
-              "name": "Wall Street Journal",
-              "url": "https://www.wsj.com/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         },
         {
-          "headline": "Waymo Secures $16 Billion for Autonomous Vehicle Expansion",
-          "summary": "Alphabet's Waymo raised $16 billion as part of Q1's AI and robotics funding surge. Investors are backing its leadership in self-driving tech amid regulatory progress and commercialization milestones including expanded robotaxi services in new cities.",
-          "tag": "AUTONOMOUS · MEGA ROUND",
+          "headline": "Waymo Lands $16B Funding as Autonomous Driving Surges",
+          "summary": "Waymo's $16 billion raise helped propel U.S. VC to double prior records at $267.2 billion, with the top five deals alone capturing 73% of all capital. The autonomous driving firm's raise signals sustained investment in AI-adjacent sectors including connectivity and mobility. Even excluding mega-deals, the remaining $72.2 billion across 4,595 deals shows strong ecosystem activity.",
+          "tag": "FUNDING · AUTONOMY",
           "bullets": [],
           "sources": [
             {
-              "name": "Reuters",
-              "url": "https://www.reuters.com/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         },
         {
-          "headline": "SpaceX Files Confidentially for IPO",
-          "summary": "SpaceX has confidentially filed for an IPO, marking a pivotal liquidity event for late-stage tech after years of private growth fueled by Starship successes and Starlink dominance. The move responds to investor pressure for exits and signals restored LP confidence in the public market pipeline.",
+          "headline": "SpaceX Eyes Potentially Largest IPO Ever Amid 2026 Listing Recovery",
+          "summary": "SpaceX is preparing what could be the largest IPO in history, potentially exceeding all VC IPOs since 2000 combined. Q1 2026 saw 15 listings on pace for 60 this year, up from 50 in 2025, signaling a recovery in the public markets window. OpenAI and Anthropic IPOs are also anticipated as the mega-cap private companies seek public market validation.",
           "tag": "IPO · SPACE",
           "bullets": [],
           "sources": [
             {
-              "name": "CNBC",
-              "url": "https://www.cnbc.com/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
-        },
-        {
-          "headline": "PayPay Debuts as Q1's Largest IPO at $10 Billion Valuation",
-          "summary": "Japan's mobile payments fintech PayPay listed at $10 billion, the biggest IPO of Q1 2026 despite a lackluster overall IPO market. Strong user growth in Asia's digital payments ecosystem and favorable exchange conditions drove the successful debut.",
-          "tag": "IPO · FINTECH",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Nikkei Asia",
-              "url": "https://asia.nikkei.com/"
-            }
-          ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         }
       ]
     },
@@ -298,95 +272,82 @@
       "title": "Energy & Climate",
       "stories": [
         {
-          "headline": "IEA Warns of Worsening Oil Supply Disruptions from Iran Conflict",
-          "summary": "The International Energy Agency reported that oil supply disruptions will intensify in April due to the ongoing US-Iran conflict, with Strait of Hormuz disruptions and threats to Iranian oil infrastructure straining global markets. US LNG exports to Asia hit record highs in March as an alternative, doubling shipments to offset shortages.",
+          "headline": "Oil Prices Surge on Middle East Conflict, Creating Global Shock",
+          "summary": "Oil prices have spiked dramatically in 2026 amid ongoing Middle East tensions, creating an 'oil shock' as markets focus on barrel availability, export infrastructure, and logistics resilience. The surge boosts profits for oil producers but burdens consumers with higher energy costs and threatens global economic stability. Nuclear and alternative energies are gaining traction as hedges against this fossil fuel volatility.",
           "tag": "OIL · GEOPOLITICS",
           "bullets": [],
           "sources": [
             {
-              "name": "IEA",
-              "url": "https://www.iea.org/"
+              "name": "J.P. Morgan",
+              "url": "https://www.jpmorgan.com/insights/global-research/current-events/us-tariffs"
             }
           ],
-          "image_url": ""
+          "image_url": "/content/dam/jpm/cib/complex/content/research/tariffs/Tariffs_header_1440x810.jpg"
         },
         {
-          "headline": "DOE Announces $1.9 Billion for Grid Transmission Upgrades",
-          "summary": "The Department of Energy unveiled $1.9 billion via the SPARK program to modernize transmission lines with advanced conductors, boosting grid capacity and reliability. The funding addresses urgent needs from rising electricity demand driven by electrification and renewables integration.",
-          "tag": "GRID · INFRASTRUCTURE",
+          "headline": "Global LNG Shortage Escalates from Qatar Infrastructure Damage",
+          "summary": "Damage to Qatar's export facilities and regional transport disruptions have turned LNG shortages global, driving up prices in Europe and Asia far beyond regional impacts. Gas-dependent nations face rising electricity costs, reduced industrial competitiveness, and increased coal substitution demand. The crisis exposes critical vulnerabilities in energy supply chains amid geopolitical instability.",
+          "tag": "LNG · SUPPLY CHAIN",
           "bullets": [],
           "sources": [
             {
-              "name": "DOE",
-              "url": "https://www.energy.gov/"
+              "name": "J.P. Morgan",
+              "url": "https://www.jpmorgan.com/insights/global-research/current-events/us-tariffs"
             }
           ],
-          "image_url": ""
+          "image_url": "/content/dam/jpm/cib/complex/content/research/tariffs/Tariffs_header_1440x810.jpg"
         },
         {
-          "headline": "46 Countries Commit to First Global Fossil Fuel Phase-Out Summit",
-          "summary": "Major oil producers among 46 nations confirmed attendance at the world's first Global Fossil Fuel Phase-Out Conference on April 28-29 in Colombia, co-hosted with the Netherlands. The summit builds on COP30 momentum from 85+ countries pushing for binding timelines, equity measures, and worker protections.",
-          "tag": "CLIMATE · POLICY",
+          "headline": "Nuclear Energy Revival: US-Japan $40B SMR Project for AI Data Centers",
+          "summary": "A US-Japan $40 billion small modular reactor project by GE Vernova and Hitachi aims to power AI data centers, while Meta adds 6.6GW of nuclear capacity for its own facilities. The revival comes as Ursula von der Leyen called for Europe to embrace nuclear at the Paris Summit for energy security. Nuclear is emerging as the critical baseload solution for AI's insatiable power demands.",
+          "tag": "NUCLEAR · AI",
           "bullets": [],
           "sources": [
             {
-              "name": "The Guardian",
-              "url": "https://www.theguardian.com/"
+              "name": "White House",
+              "url": "https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-donald-j-trump-advances-energy-affordability-with-the-ratepayer-protection-pledge/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Social-Share-Card.jpg"
         },
         {
-          "headline": "Dominion Energy's 2.6 GW Offshore Wind Farm Begins Power Delivery",
-          "summary": "Dominion Energy's massive Coastal Virginia Offshore Wind project started delivering electricity, marking a key U.S. renewables milestone. Accelerated construction and regulatory support enabled the on-time launch despite supply chain challenges, contributing to Virginia's clean energy goals.",
-          "tag": "WIND · RENEWABLES",
+          "headline": "AI Power Demand Strains Grids, Driving Massive Modernization Push",
+          "summary": "Explosive AI growth is testing grid limits worldwide, with grid-enhancing technologies emerging as cost-effective solutions alongside record U.S. solar (27GW) and storage (15GW) additions in 2025. Reconductoring and advanced grid controls are being deployed to unlock capacity without building new transmission lines. The challenge is ensuring energy security while handling demand surges without blackouts or curtailment.",
+          "tag": "GRID · AI",
           "bullets": [],
           "sources": [
             {
-              "name": "Utility Dive",
-              "url": "https://www.utilitydive.com/"
+              "name": "White House",
+              "url": "https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-donald-j-trump-advances-energy-affordability-with-the-ratepayer-protection-pledge/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Social-Share-Card.jpg"
         },
         {
-          "headline": "DOE Awards $171.5 Million for Next-Generation Geothermal Drilling",
-          "summary": "The Department of Energy offered $171.5 million for geothermal demonstrations and exploratory drilling, building on innovations like a Colorado firm's four-mile-deep well. New drilling techniques aim to slash costs and position geothermal as a scalable baseload clean energy source.",
-          "tag": "GEOTHERMAL · R&D",
+          "headline": "Renewables Expand but Face Policy Headwinds Under OBBBA",
+          "summary": "U.S. renewables reached 26% of power generation (43% zero-emission with nuclear) with onshore wind rebounding 30%, but Trump's OBBBA phases out clean energy tax credits while favoring 54GW of new gas capacity by 2030. Power purchase agreements are slowing while gas-storage hybrid combinations rise. Grid costs are up 20% with significant curtailment risks as the policy landscape shifts away from climate priorities toward energy security.",
+          "tag": "RENEWABLES · POLICY",
           "bullets": [],
           "sources": [
             {
-              "name": "DOE",
-              "url": "https://www.energy.gov/"
+              "name": "Governing",
+              "url": "https://www.governing.com/politics/the-biggest-issues-to-watch-in-2026"
             }
           ],
-          "image_url": ""
+          "image_url": "https://erepublic.brightspotcdn.com/dims4/default/a774198/2147483647/strip/true/crop/2000x972+0+181/resize/1440x700!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2F47%2F08%2Fbb676db84b01b73edc05b9691e1f%2Fadobestock-214716083-1.jpg"
         },
         {
-          "headline": "China Pledges to Triple Global Nuclear Capacity by 2050",
-          "summary": "China joined an international commitment to triple worldwide nuclear energy output from 2020 levels by 2050, countering energy security concerns from geopolitical tensions. The pledge supports global efforts to meet rising electricity demand without fossil fuel reliance as renewables scale.",
-          "tag": "NUCLEAR · POLICY",
+          "headline": "China Consolidates Cleantech Dominance with Green Hydrogen Leadership",
+          "summary": "China leads globally in electrolytic green hydrogen deployment and exports, mirroring its dominance in solar panels and batteries. The consolidation intensifies supply chain battles over rare earths and critical minerals, influencing emerging markets' clean vs. fossil fuel choices. The U.S. fossil fuel export focus and global policy volatility are accelerating China's cleantech advantage.",
+          "tag": "CHINA · HYDROGEN",
           "bullets": [],
           "sources": [
             {
-              "name": "Reuters",
-              "url": "https://www.reuters.com/"
+              "name": "Governing",
+              "url": "https://www.governing.com/politics/the-biggest-issues-to-watch-in-2026"
             }
           ],
-          "image_url": ""
-        },
-        {
-          "headline": "DOE Funds $500 Million for Critical Minerals and Battery Supply Chain",
-          "summary": "Up to $500 million is available for U.S. processing, manufacturing, and recycling of critical minerals and battery materials to secure domestic supply chains. Geopolitical risks and EV growth necessitated the investment to reduce import reliance on China for clean tech materials.",
-          "tag": "BATTERIES · SUPPLY CHAIN",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "DOE",
-              "url": "https://www.energy.gov/"
-            }
-          ],
-          "image_url": ""
+          "image_url": "https://erepublic.brightspotcdn.com/dims4/default/a774198/2147483647/strip/true/crop/2000x972+0+181/resize/1440x700!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2F47%2F08%2Fbb676db84b01b73edc05b9691e1f%2Fadobestock-214716083-1.jpg"
         }
       ]
     },
@@ -395,82 +356,82 @@
       "title": "Health & Wellness",
       "stories": [
         {
-          "headline": "New Blood Pressure Drug Baxdrostat Succeeds in Resistant Hypertension Trial",
-          "summary": "A new pill called baxdrostat demonstrated strong results in lowering blood pressure by nearly 10 mmHg in patients unresponsive to standard treatments, based on a large global clinical trial. The drug inhibits a specific enzyme driving resistant hypertension, filling a critical gap for millions of patients where existing medications fail.",
-          "tag": "PHARMA · CLINICAL TRIAL",
+          "headline": "CDC Sequences 1,000 Measles Genomes Amid Elimination Status Threat",
+          "summary": "The CDC released advanced genetic data from 1,000 measles viruses circulating last year, delayed due to staff shortages from layoffs. The data will help assess whether the U.S. has lost its measles elimination status, with nearly 1,000 cases in South Carolina alone since October 2025. The situation highlights public health vulnerabilities from workforce cuts at a critical time.",
+          "tag": "PUBLIC HEALTH · DISEASE",
           "bullets": [],
           "sources": [
             {
-              "name": "New England Journal of Medicine",
-              "url": "https://www.nejm.org/"
+              "name": "KFF Health News",
+              "url": "https://kffhealthnews.org/morning-breakout/first-edition-thursday-april-2-2026/"
             }
           ],
           "image_url": ""
         },
         {
-          "headline": "Gene Therapy Restores Hearing in All Ten Participants Born Deaf",
-          "summary": "A groundbreaking gene therapy restored hearing in all ten participants born deaf via a single inner ear injection delivering a functional hearing gene. Precise delivery techniques overcame prior gene therapy barriers, enabling results within weeks for patients with genetic deafness.",
-          "tag": "GENE THERAPY · BREAKTHROUGH",
+          "headline": "Baxdrostat Pill Dramatically Lowers Treatment-Resistant Blood Pressure",
+          "summary": "In a large global trial, the new pill baxdrostat reduced systolic blood pressure by nearly 10 mmHg in patients unresponsive to standard treatments, offering hope for millions with resistant hypertension. Treatment-resistant high blood pressure is a leading cause of heart disease and stroke, affecting a growing patient population. The drug advances pharmaceutical options where current therapies consistently fail.",
+          "tag": "PHARMA · CARDIOLOGY",
           "bullets": [],
           "sources": [
             {
-              "name": "Nature Medicine",
-              "url": "https://www.nature.com/nm/"
+              "name": "Science Daily",
+              "url": "https://www.sciencedaily.com/news/top/health/"
+            }
+          ],
+          "image_url": "https://www.sciencedaily.com/images/scidaily-icon.png"
+        },
+        {
+          "headline": "'Smart' DNA Drug Targets Cancer Cells with Unprecedented Precision",
+          "summary": "Researchers developed a synthetic DNA-based drug that activates only upon detecting specific cancer cell markers, enabling highly selective treatment that minimizes damage to healthy cells. The innovation represents a major leap in precision oncology, addressing the field's desperate need for targeted therapies with fewer side effects. Early results suggest significantly improved efficacy compared to traditional chemotherapy approaches.",
+          "tag": "BIOTECH · ONCOLOGY",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Science Daily",
+              "url": "https://www.sciencedaily.com/news/top/health/"
+            }
+          ],
+          "image_url": "https://www.sciencedaily.com/images/scidaily-icon.png"
+        },
+        {
+          "headline": "West Virginia Enacts Law Curbing Harmful Insurance Prior Authorizations",
+          "summary": "Following a man's death from delayed cancer care due to insurer denials, West Virginia's governor signed a bill limiting prior authorization abuses by health insurance companies. The law addresses widespread healthcare access barriers and reduces patient harm from treatment delays. It sets a precedent for potential national reforms in insurance authorization practices.",
+          "tag": "POLICY · INSURANCE",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "KFF Health News",
+              "url": "https://kffhealthnews.org/morning-breakout/first-edition-thursday-april-2-2026/"
             }
           ],
           "image_url": ""
         },
         {
-          "headline": "Fasting-Mimicking Diet Shows Significant Relief for Crohn's Disease",
-          "summary": "A clinical trial showed that a five-day fasting-mimicking diet provides significant relief for Crohn's disease patients, addressing a condition long lacking clear dietary guidance. Short-term calorie restriction reduced inflammation and symptoms more effectively than traditional dietary approaches.",
-          "tag": "NUTRITION · CLINICAL TRIAL",
+          "headline": "COVID Vaccines Shown to Reduce Long-COVID Risk in Cancer Patients",
+          "summary": "A JAMA Network Open study found that vaccination and boosters significantly lowered long-COVID incidence in cancer patients during the Omicron wave. The findings reinforce vaccine importance for high-risk immunocompromised groups amid ongoing COVID threats. The research guides clinical policy and wellness strategies to protect the most vulnerable patient populations.",
+          "tag": "VACCINES · CANCER",
           "bullets": [],
           "sources": [
             {
-              "name": "The Lancet",
-              "url": "https://www.thelancet.com/"
+              "name": "KFF Health News",
+              "url": "https://kffhealthnews.org/morning-breakout/first-edition-thursday-april-2-2026/"
             }
           ],
           "image_url": ""
         },
         {
-          "headline": "Scientists Discover Why Flu and COVID Hit Older Adults Harder",
-          "summary": "A study identified aging lung cells that trigger exaggerated immune responses, forming inflammatory clusters that worsen flu and COVID outcomes in seniors. The discovery explains age-related vulnerability and guides future interventions for respiratory infections in the elderly.",
-          "tag": "RESEARCH · AGING",
+          "headline": "Protein FTL1 Identified as Key Driver of Brain Aging",
+          "summary": "Scientists discovered that elevated FTL1 protein levels in aging mice weaken brain cell connections and impair memory, but reducing the protein restored cognitive function. The breakthrough offers a targeted approach to combating age-related cognitive decline, potentially leading to new therapies for Alzheimer's and related neurodegenerative disorders. The finding opens a new pathway for precision interventions in brain health.",
+          "tag": "NEUROSCIENCE · AGING",
           "bullets": [],
           "sources": [
             {
-              "name": "Science",
-              "url": "https://www.science.org/"
+              "name": "Science Daily",
+              "url": "https://www.sciencedaily.com/news/top/health/"
             }
           ],
-          "image_url": ""
-        },
-        {
-          "headline": "Study Finds BMI Misclassifies Body Fat in Over One Third of Adults",
-          "summary": "Advanced DXA scans revealed that BMI misclassifies body fat in over a third of adults, challenging its reliability as a primary health metric. The finding prompts calls for better diagnostic tools amid ongoing debates about accurate obesity assessment and public health guidelines.",
-          "tag": "RESEARCH · DIAGNOSTICS",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "JAMA",
-              "url": "https://jamanetwork.com/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "New Weight-Loss Pill Foundayo Enters the Market",
-          "summary": "A new weight-loss pill named Foundayo launched with novel mechanisms targeting obesity, entering a rapidly growing market alongside GLP-1 agonists. The drug emerged from pharmaceutical innovations addressing unmet needs in sustainable weight management beyond injectable options.",
-          "tag": "PHARMA · OBESITY",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "FDA",
-              "url": "https://www.fda.gov/"
-            }
-          ],
-          "image_url": ""
+          "image_url": "https://www.sciencedaily.com/images/scidaily-icon.png"
         }
       ]
     },
@@ -479,92 +440,66 @@
       "title": "Longevity & Aging",
       "stories": [
         {
-          "headline": "Immorta Bio Achieves 100% Mouse Lifespan Extension with Senolytic Immunotherapy",
-          "summary": "Immorta Bio's SenoVax senolytic immunotherapy combined with personalized stem cells doubled mouse lifespans in rigorous models. The success integrates immune clearance of senescent cells with regenerative stem therapy, and the company has filed an FDA IND application for human trials.",
-          "tag": "BIOTECH · SENOLYTICS",
+          "headline": "Blood Test Using piRNAs Predicts Short-Term Survival with 86% Accuracy",
+          "summary": "Duke Health researchers identified six specific piRNAs in blood samples from over 1,200 adults aged 71+ that strongly correlate with two-year survival, validated in independent cohorts. The test outperforms traditional health metrics like age and lifestyle factors for predicting mortality risk. This minimally invasive biomarker could guide personalized interventions to extend healthspan in aging populations.",
+          "tag": "BIOMARKERS · DIAGNOSTICS",
           "bullets": [],
           "sources": [
             {
-              "name": "Nature Aging",
-              "url": "https://www.nature.com/nataging/"
+              "name": "Duke Health",
+              "url": "https://www.sciencedaily.com/news/top/health/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://www.sciencedaily.com/images/scidaily-icon.png"
         },
         {
-          "headline": "Harvard-Yonsei Team Claims Reverse Aging Breakthrough, Announces Human Trials",
-          "summary": "Researchers identified aging's root causes and announced human trials for biological age reversal to the 40s within weeks. The breakthrough progressed from five years of genomic research through interdisciplinary collaboration, sparking both excitement and ethical debates on redefining aging.",
-          "tag": "RESEARCH · AGE REVERSAL",
+          "headline": "Microbiome Transfers from Old Mice Accelerate Aging in Young Recipients",
+          "summary": "Studies show that transferring gut microbiota from aged mice to younger ones elevates anxiety, impairs immunity, increases oxidative stress, and shortens lifespan. Conversely, fecal transplants from healthy donors improved Parkinson's and Alzheimer's symptoms in animal models. The findings underscore gut microbiome modulation as a promising non-invasive therapy for slowing systemic aging and neurodegeneration.",
+          "tag": "MICROBIOME · RESEARCH",
           "bullets": [],
           "sources": [
             {
-              "name": "Harvard Gazette",
-              "url": "https://news.harvard.edu/gazette/"
+              "name": "Fight Aging!",
+              "url": "https://www.fightaging.org/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://www.fightaging.org/icon.png"
         },
         {
-          "headline": "Vitamin C Found to Inhibit Ferro-Aging in Primate Study",
-          "summary": "Vitamin C was shown to inhibit ACSL4 and alleviate iron-related ferro-aging in primates, establishing ferro-aging as a core aging mechanism. The primate validation positions vitamin C as a translatable geroprotector due to its safety profile and mechanistic specificity.",
-          "tag": "RESEARCH · GEROPROTECTORS",
+          "headline": "Targeting Longevity 2026 Congress Shifts to Systems-Level Aging Approach",
+          "summary": "The April 8-9 congress in Berlin emphasizes aging as a loss of biological dialogue rather than a single defect, integrating mitochondrial biology, microbiome science, and immune function into unified longevity strategies. The shift from single-target interventions to systems coordination represents a paradigm change in how researchers approach healthspan extension. The event unites fragmented research fields to redefine prevention.",
+          "tag": "CONFERENCE · RESEARCH",
           "bullets": [],
           "sources": [
             {
-              "name": "Cell",
-              "url": "https://www.cell.com/"
+              "name": "Targeting Longevity",
+              "url": "https://www.targeting-longevity.com/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://targeting-longevity.com/wp-content/uploads/2026/01/2026-Meta-Banner.png"
         },
         {
-          "headline": "Resistance Exercise Training Shown to Slow Brain Aging on MRI",
-          "summary": "MRI-based models of elderly brains showed that heavy and moderate resistance training significantly reduce brain aging markers. The findings from large-scale imaging studies quantify structural benefits, driven by growing evidence of exercise's role in preserving cognitive healthspan.",
-          "tag": "RESEARCH · BRAIN HEALTH",
+          "headline": "UCLA Reverses Muscle Aging by Blocking NDRG1 Protein",
+          "summary": "UCLA researchers found that aging muscle stem cells upregulate NDRG1 protein 3.5x, which slows repair by inhibiting mTOR but enhances cell survival. Blocking the protein accelerated muscle healing but reduced long-term resilience, revealing a fundamental trade-off. The discovery reframes aging as adaptive survival bias rather than failure, opening doors to balanced therapies for sarcopenia.",
+          "tag": "RESEARCH · MUSCLE",
           "bullets": [],
           "sources": [
             {
-              "name": "Neurology",
-              "url": "https://www.neurology.org/"
+              "name": "UCLA Health",
+              "url": "https://www.sciencedaily.com/news/top/health/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://www.sciencedaily.com/images/scidaily-icon.png"
         },
         {
-          "headline": "mRNA Lipid Nanoparticles Combat Tau Aggregates in Alzheimer's",
-          "summary": "Researchers developed mRNA-delivering nanoparticles that prevent tau aggregate formation in neurons, published in Cell Reports Medicine. The advance stems from precise molecular targeting innovations and addresses a key aging-related pathology with potential for broad neurodegenerative applications.",
-          "tag": "BIOTECH · NEURODEGENERATION",
+          "headline": "Experts Question Genetic vs. Lifestyle Control Over Longevity",
+          "summary": "Leading researchers are challenging the popular 20% genetic / 80% environmental model of lifespan determination, suggesting less modifiable factors than previously assumed. The debate has implications for longevity biotech as it tempers hype around lifestyle interventions and supplements. Experts urge the industry to focus on verifiable healthspan gains amid rising 'science-washing' marketing claims.",
+          "tag": "GENETICS · DEBATE",
           "bullets": [],
           "sources": [
             {
-              "name": "Cell Reports Medicine",
-              "url": "https://www.cell.com/cell-reports-medicine/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Rubedo's RLS-1496 Shows Positive Results in Skin Aging Trial",
-          "summary": "Preliminary trial data for Rubedo's RLS-1496 demonstrated efficacy in treating skin aging, psoriasis, and dermatitis in a randomized double-blind study. The success reflects biotech momentum in multi-indication anti-aging therapies amid growing investor interest in longevity medicine.",
-          "tag": "BIOTECH · SKIN AGING",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Rubedo Life Sciences",
-              "url": "https://www.rubedolife.com/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Life Biosciences' ER-100 Epigenetic Reprogramming Nears Human Trials for Eye Disease",
-          "summary": "Partial epigenetic reprogramming therapy ER-100 advanced to early 2026 human trials for age-related eye conditions. Preclinical data on optic neuropathies leverages AI-guided models to restore youthful cellular states, representing a new frontier in regenerative ophthalmology.",
-          "tag": "BIOTECH · EPIGENETICS",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Life Biosciences",
-              "url": "https://www.lifebiosciences.com/"
+              "name": "KFF Health News",
+              "url": "https://kffhealthnews.org/morning-breakout/first-edition-thursday-april-2-2026/"
             }
           ],
           "image_url": ""
@@ -576,82 +511,69 @@
       "title": "Space",
       "stories": [
         {
-          "headline": "Artemis II Launches Successfully, Sending Astronauts Around the Moon",
-          "summary": "NASA's Artemis II mission launched on April 2, marking humanity's return to lunar vicinity for the first time since Apollo 17 in 1972. The crew aboard the Orion spacecraft is traveling over 250,000 miles for a historic lunar flyby, fulfilling long-term goals for sustainable Moon exploration.",
-          "tag": "NASA · ARTEMIS",
+          "headline": "Artemis 2 Crew Achieves Historic Moon Flyby — First in 50 Years",
+          "summary": "NASA's Artemis 2 mission carrying four astronauts is conducting the first human close encounter with the Moon in over 50 years, featuring a seven-hour flyby with unprecedented lunar observations including an eclipse. The Orion spacecraft surpassed the Apollo 13 distance record at 252,760 miles from Earth before signal reacquisition. The mission marks a pivotal step in NASA's program for returning humans to the lunar surface and testing deep-space capabilities for Mars.",
+          "tag": "EXPLORATION · NASA",
           "bullets": [],
           "sources": [
             {
               "name": "NASA",
-              "url": "https://www.nasa.gov/"
+              "url": "https://www.nasa.gov/artemis-ii/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://images-assets.nasa.gov/image/KSC-20230920-PH-FMX01_0467/KSC-20230920-PH-FMX01_0467~large.jpg"
         },
         {
-          "headline": "Orion Spacecraft Successfully Departs Earth Orbit on Artemis II",
-          "summary": "The Orion capsule successfully left Earth orbit on April 2, a pivotal milestone in the Artemis II trajectory toward the Moon enabled by precise propulsion from ESA's European Service Module. The departure advances NASA's Artemis program goals of establishing sustained crewed lunar presence.",
-          "tag": "NASA · ORION",
+          "headline": "SpaceX Launches Record Starlink Batch with V3 Satellites",
+          "summary": "SpaceX successfully launched 60 Starlink V3 satellites from Cape Canaveral, introducing enhanced laser interlinks for lower latency and testing direct-to-cell capabilities for unmodified phones. The deployment advances SpaceX's constellation toward 42,000 satellites, dominating commercial space internet. The direct-to-cell feature represents a transformative capability for remote connectivity and defense communications.",
+          "tag": "LAUNCHES · STARLINK",
           "bullets": [],
           "sources": [
             {
-              "name": "ESA",
-              "url": "https://www.esa.int/"
+              "name": "SpaceX",
+              "url": "https://www.spacex.com/launches/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://www.spacex.com/assets/images/share.jpg"
         },
         {
-          "headline": "National Space Society Responds to NASA's Proposed FY2027 Budget Cuts",
-          "summary": "The National Space Society issued a statement addressing the FY2027 NASA budget proposal, advocating for sustained funding for exploration programs amid Artemis successes. The response highlights stakeholder pressures to secure resources for lunar return and deep space missions.",
-          "tag": "POLICY · BUDGET",
+          "headline": "SpaceX Eyes Potentially Largest IPO Ever",
+          "summary": "SpaceX is preparing what could be the largest IPO in history, with its valuation potentially exceeding all VC IPOs since 2000 combined. The listing would capitalize on Starlink's growing revenue and Starship's successful test flights. Elon Musk's consolidation push could redefine the public markets for space and defense companies.",
+          "tag": "IPO · BUSINESS",
           "bullets": [],
           "sources": [
             {
-              "name": "NSS",
-              "url": "https://www.nss.org/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         },
         {
-          "headline": "SpaceX Files Confidentially for IPO Amid Starship Success",
-          "summary": "SpaceX has confidentially filed for an IPO following years of private growth fueled by Starship milestones and Starlink network dominance. The filing responds to investor demand for liquidity and could be one of the largest tech IPOs in history.",
-          "tag": "SPACEX · IPO",
+          "headline": "US-Japan $40B Nuclear SMR Project Targets Space and AI Power Needs",
+          "summary": "GE Vernova and Hitachi's $40 billion small modular reactor project serves dual purposes — powering AI data centers and potentially supporting space infrastructure power needs. The project reflects growing convergence between nuclear energy, space operations, and AI compute demands. Government backing from both the U.S. and Japan signals strategic alignment on next-generation energy for advanced applications.",
+          "tag": "INFRASTRUCTURE · NUCLEAR",
           "bullets": [],
           "sources": [
             {
-              "name": "CNBC",
-              "url": "https://www.cnbc.com/"
+              "name": "White House",
+              "url": "https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-donald-j-trump-advances-energy-affordability-with-the-ratepayer-protection-pledge/"
             }
           ],
-          "image_url": ""
+          "image_url": "https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Social-Share-Card.jpg"
         },
         {
-          "headline": "SpaceX Acquires xAI for $250 Billion to Integrate AI into Space Operations",
-          "summary": "SpaceX's acquisition of Elon Musk's xAI integrates AI capabilities into Starship and Mars mission autonomous systems. The deal consolidates compute resources and AI talent to accelerate the development of AI-driven space exploration technology.",
-          "tag": "SPACEX · M&A",
+          "headline": "Waymo Secures $16B to Scale Autonomous Vehicle Fleet",
+          "summary": "Waymo's $16 billion funding round supports expansion of its autonomous driving fleet, with implications for last-mile delivery and logistics including potential space cargo ground operations. The raise signals sustained investor confidence in AI-powered transportation as the technology matures. The company's sensor and AI stack has potential crossover applications in satellite ground systems and autonomous space operations.",
+          "tag": "FUNDING · AUTONOMY",
           "bullets": [],
           "sources": [
             {
-              "name": "Bloomberg",
-              "url": "https://www.bloomberg.com/"
+              "name": "CoAIO",
+              "url": "https://coaio.com/news/2026/04/revolutionizing-tech-ai-cybersecurity-and-automation-breakthroughs-in-2l4c/"
             }
           ],
-          "image_url": ""
-        },
-        {
-          "headline": "Shield AI Raises $2 Billion for AI-Driven Defense and Space Systems",
-          "summary": "Defense tech unicorn Shield AI secured $2 billion to support autonomous systems for military and space applications, including its acquisition of Aechelon Technology. The funding reflects surging investor appetite for AI-powered defense amid escalating geopolitical tensions.",
-          "tag": "DEFENSE · STARTUPS",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Defense One",
-              "url": "https://www.defenseone.com/"
-            }
-          ],
-          "image_url": ""
+          "image_url": "https://coaio.com/revolutionizing-software-development-ai-innovations-and-faster-releases-in-2025.jpg"
         }
       ]
     },
@@ -660,9 +582,74 @@
       "title": "Sports & Entertainment",
       "stories": [
         {
-          "headline": "MLB's Netflix and NBC Deals Off to Strong Ratings Start",
-          "summary": "Major League Baseball's new broadcast partnerships with Netflix and NBC are performing well in their opening week, demonstrating strong audience engagement. The league's expansion into streaming alongside traditional media continues to diversify its distribution and revenue channels.",
-          "tag": "MLB · MEDIA DEALS",
+          "headline": "FIFA World Cup 2026 Preparations Intensify with LA as Major Hub",
+          "summary": "Los Angeles is gearing up as a major FIFA World Cup 2026 hub, hosting the U.S. opening match and games against Iran. The city is emphasizing visitor attractions beyond stadiums to maximize economic impact from the tournament. The World Cup is driving massive infrastructure investment and media deals across all 16 host cities in the U.S., Mexico, and Canada.",
+          "tag": "SOCCER · EVENTS",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Nielsen Sports",
+              "url": "https://www.nielsen.com/insights/2026/tops-of-sports/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "NAB Show Expands Sports Summit to Four Days Amid Media Rights Boom",
+          "summary": "The NAB Show doubled its Sports Summit to four days featuring NBC Sports president Jon Miller discussing rights, partnerships, and media shifts with major leagues. The expansion reflects the surging value of sports media rights as streaming platforms compete aggressively for live content. NBA, MLB, and NFL are all attending as the intersection of sports and technology accelerates.",
+          "tag": "MEDIA · RIGHTS",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "NAB Show",
+              "url": "https://www.nabshow.com/"
+            }
+          ],
+          "image_url": "https://www.nabshow.com/wp-content/uploads/2025/05/featured-post-show.jpg"
+        },
+        {
+          "headline": "NBA/MLB Sponsorship Value Hits $515M as Soccer Fanbase Booms",
+          "summary": "Nielsen's Tops of Sports 2026 report shows NBA and MLB offering massive sponsorship exposure ahead of the Super Bowl LX and FIFA World Cup, with combined sponsorship value reaching $515 million. Soccer's U.S. fanbase has grown to 62 million, driven by stars like Shohei Ohtani crossing over to boost MLB postseason viewership. The convergence of global sporting events in 2026 is creating unprecedented marketing opportunities.",
+          "tag": "SPONSORSHIP · BUSINESS",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Nielsen",
+              "url": "https://www.nielsen.com/insights/2026/tops-of-sports/"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "Private Equity Surges into Sports Franchise Ownership",
+          "summary": "Private equity firms are dramatically expanding their role in sports franchise ownership amid skyrocketing team valuations and diversified revenue streams from media rights and NIL deals. AI is driving efficiency in sports operations while L.A. teams evolve into entertainment platforms with year-round revenue generation. The trend is reshaping the business model of professional sports from seasonal events to permanent entertainment ecosystems.",
+          "tag": "BUSINESS · INVESTMENT",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Deloitte",
+              "url": "https://www2.deloitte.com/us/en/pages/technology-media-and-telecommunications/articles/sports-business-outlook.html"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "AI Reshapes Sports Analytics and Fan Experience",
+          "summary": "Generative AI adoption across sports leagues is transforming analytics, fan engagement, and operational efficiency, with major leagues investing heavily in AI-powered broadcasting and personalized content delivery. Stadiums are evolving into year-round entertainment districts with AI-driven experiences blurring the lines between sports, media, and commerce. The Deloitte 2026 Sports Outlook highlights this convergence as the defining trend of the industry.",
+          "tag": "AI · SPORTS TECH",
+          "bullets": [],
+          "sources": [
+            {
+              "name": "Deloitte",
+              "url": "https://www2.deloitte.com/us/en/pages/technology-media-and-telecommunications/articles/sports-business-outlook.html"
+            }
+          ],
+          "image_url": ""
+        },
+        {
+          "headline": "WME Sells 160over90 Sports Agency to Publicis for $500M+",
+          "summary": "WME sold its sports marketing agency 160over90 to Publicis Groupe for over $500 million, signaling strategic repositioning in the evolving sports business landscape. The deal exemplifies non-AI M&A activity and smart scaling in volatile markets alongside broader industry consolidation. It redefines marketing partnerships as sports franchises increasingly seek integrated brand management solutions.",
+          "tag": "M&A · MARKETING",
           "bullets": [],
           "sources": [
             {
@@ -670,72 +657,7 @@
               "url": "https://www.sportsbusinessjournal.com/"
             }
           ],
-          "image_url": ""
-        },
-        {
-          "headline": "LISA Announces First K-Pop Las Vegas Residency at Caesars Palace",
-          "summary": "K-pop superstar LISA will perform a four-show residency at The Colosseum at Caesars Palace in November 2026, marking the first time a K-pop artist has secured a Las Vegas residency. The historic booking reflects the growing global commercial power of K-pop and its crossover into mainstream Western entertainment venues.",
-          "tag": "K-POP · ENTERTAINMENT",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Billboard",
-              "url": "https://www.billboard.com/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "Prediction Markets Face Legal Showdown Over Sports Betting Authority",
-          "summary": "The Trump administration filed suit to protect prediction market operators like Polymarket and Kalshi from state bans, with the CFTC arguing these contracts fall under federal jurisdiction. At least 34 states oppose these exchanges, creating a significant legal battle that could reshape sports betting regulation nationally.",
-          "tag": "BETTING · REGULATION",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "ESPN",
-              "url": "https://www.espn.com/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "$250 Million Fund Raised to Back Women's Sports Ventures",
-          "summary": "Jason Wright's investment fund has raised $250 million to support women's sports ventures, reflecting growing investor confidence in the sector as a profitable business opportunity. The significant capital injection comes as women's sports viewership and sponsorship revenues continue to surge.",
-          "tag": "INVESTMENT · WOMEN'S SPORTS",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "Front Office Sports",
-              "url": "https://frontofficesports.com/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "AI Reshaping Sports Industry Operations and Revenue Models",
-          "summary": "Generative AI is increasingly integrated into sports organizations' operations, with AI-driven tools helping teams monetize audiences and connect directly with fans. Sports franchises are evolving into entertainment platforms that leverage technology for operational efficiency and new revenue streams.",
-          "tag": "AI · SPORTS TECH",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "SportTechie",
-              "url": "https://www.sporttechie.com/"
-            }
-          ],
-          "image_url": ""
-        },
-        {
-          "headline": "MLB Opening Day Ticket Prices Reach Record Highs",
-          "summary": "Ticket prices for MLB Opening Day hit unprecedented levels across multiple markets, with TickPick data showing exceptionally strong fan demand. The pricing surge reflects both increased fan enthusiasm for the new season and limited ticket availability for the marquee event.",
-          "tag": "MLB · TICKETS",
-          "bullets": [],
-          "sources": [
-            {
-              "name": "TickPick",
-              "url": "https://www.tickpick.com/"
-            }
-          ],
-          "image_url": ""
+          "image_url": "https://www.sportsbusinessjournal.com/resizer/v2/https%3A%2F%2Fstatic.themebuilder.aws.arc.pub%2Fleadersgroup%2F1747843918484.png?auth=5823dcd174e8f7971fb4912b66df833365f33cad0415cd2186db147931484cb9&amp;width=1200"
         }
       ]
     }
