@@ -1,178 +1,327 @@
 # -*- coding: utf-8 -*-
-import re, requests, urllib.parse, xml.etree.ElementTree as ET, html
+import html
+import re
+import urllib.parse
+import xml.etree.ElementTree as ET
+from datetime import datetime
 from pathlib import Path
+
+import requests
 from bs4 import BeautifulSoup
 
 BASE = Path('/Users/xand/.openclaw/workspace/ceo-briefing')
-HEADERS={'User-Agent':'Mozilla/5.0'}
+HEADERS = {'User-Agent': 'Mozilla/5.0'}
+TODAY_EN = 'Thursday, April 23, 2026'
+TODAY_JA = '2026年4月23日（木）'
+TITLE_DATE = 'Apr 23, 2026'
 
-def gnews(title_query):
-    url='https://news.google.com/rss/search?q='+urllib.parse.quote(title_query)+'&hl=en-US&gl=US&ceid=US:en'
-    root=ET.fromstring(requests.get(url,headers=HEADERS,timeout=20).text)
-    item=root.find('./channel/item')
-    if item is None:
-        return {'url':'','source':'Source'}
-    return {'url':item.findtext('link') or '', 'source': item.find('source').text if item.find('source') is not None else 'Source'}
 
-def og_image(url):
-    if not url: return ''
+def gnews(query: str):
+    url = 'https://news.google.com/rss/search?q=' + urllib.parse.quote(query) + '&hl=en-US&gl=US&ceid=US:en'
     try:
-        r=requests.get(url,headers=HEADERS,timeout=3)
-        m=re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', r.text, re.I)
+        xml_text = requests.get(url, headers=HEADERS, timeout=20).text
+        root = ET.fromstring(xml_text)
+        item = root.find('./channel/item')
+        if item is None:
+            return {'url': '', 'source': 'Source', 'title': query, 'image': ''}
+        link = item.findtext('link') or ''
+        source = item.find('source').text if item.find('source') is not None else 'Source'
+        title = item.findtext('title') or query
+        return {'url': link, 'source': source, 'title': title, 'image': og_image(link)}
+    except Exception:
+        return {'url': '', 'source': 'Source', 'title': query, 'image': ''}
+
+
+def og_image(url: str):
+    if not url:
+        return ''
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=3)
+        m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', r.text, re.I)
         return html.escape(m.group(1), quote=True) if m else ''
     except Exception:
         return ''
 
-def mk_sources(queries):
-    out=[]
-    for q in queries:
-        s=gnews(q)
-        s['image']=og_image(s['url'])
-        out.append(s)
-    return out
 
-def source_links(sources):
-    return '\n'.join([f'            <a class="source-link" href="{s["url"]}" target="_blank" rel="noopener">{html.escape(s["source"])} <span class="src-arrow">↗</span></a>' for s in sources if s['url']])
+def source_links(items):
+    links = []
+    for item in items:
+        if item.get('url'):
+            links.append(f'            <a class="source-link" href="{item["url"]}" target="_blank" rel="noopener">{html.escape(item["source"])} <span class="src-arrow">↗</span></a>')
+    return '\n'.join(links)
+
+
+def fmt_pct(v):
+    return ('+' if v >= 0 else '') + f'{v:.2f}%'
+
+
+def yahoo_series(symbol: str):
+    url = f'https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?range=1y&interval=1d&includePrePost=false'
+    j = requests.get(url, headers=HEADERS, timeout=20).json()['chart']['result'][0]
+    closes = [c for c in j['indicators']['quote'][0]['close'] if c is not None]
+    return closes
+
+
+def market_row(name: str, symbol: str, digits=2, suffix=''):
+    vals = yahoo_series(symbol)
+    last = vals[-1]
+    prev = vals[-2]
+    week = vals[-6] if len(vals) >= 6 else vals[0]
+    month = vals[-22] if len(vals) >= 22 else vals[0]
+    ytd = vals[0]
+    return (
+        name,
+        f'{last:,.{digits}f}{suffix}',
+        fmt_pct((last / prev - 1) * 100),
+        fmt_pct((last / week - 1) * 100),
+        fmt_pct((last / month - 1) * 100),
+        fmt_pct((last / ytd - 1) * 100),
+    )
+
+
+def table_card(tag, headline, headers, rows, body, sources):
+    th = ''.join(f'<th>{h}</th>' for h in headers)
+    trs = []
+    for row in rows:
+        tds = [f'<td class="idx-name">{row[0]}</td>', f'<td class="idx-level">{row[1]}</td>']
+        for v in row[2:]:
+            klass = 'chg-pos' if str(v).startswith('+') else 'chg-neg' if str(v).startswith('-') else ''
+            tds.append(f'<td class="{klass}">{v}</td>')
+        trs.append('<tr>' + ''.join(tds) + '</tr>')
+    return f'''        <article class="card fade-in" data-image="{sources[0].get('image','') if sources else ''}">
+          <span class="card-tag">{tag}</span>
+          <h3 class="card-headline">{headline}</h3>
+          <table class="index-table"><thead><tr>{th}</tr></thead><tbody>{''.join(trs)}</tbody></table>
+          <p class="card-body" style="margin-top: 1rem;">{body}</p>
+          <div class="card-sources">\n{source_links(sources)}\n          </div>
+        </article>'''
+
+
+def story_card(tag, headline, body, sources, ja=False):
+    tap = 'タップして展開' if ja else 'Tap to expand'
+    return f'''        <article class="card featured fade-in collapsible" data-image="{sources[0].get('image','') if sources else ''}">
+          <span class="card-tag{' japan' if '🇯🇵' in tag or '日本' in tag else ''}">{tag}</span>
+          <h3 class="card-headline">{headline}</h3>
+          <div class="tap-hint">{tap}</div>
+          <p class="card-body">{body}</p>
+          <div class="card-sources">\n{source_links(sources)}\n          </div>
+        </article>'''
+
 
 japan = [
     {
-        'tag':'🇯🇵 JAPAN · MARKETS',
-        'headline':'Nikkei closes above 59,000 as ceasefire hopes survive the weekend, but the yen stays weak near ¥159 because traders still assume Japan will keep importing expensive energy.',
-        'body':'<strong>What changed since morning:</strong> Tokyo equities added another leg higher into the close, with exporters and defense names leading. <strong>Why it happened:</strong> the market is trading a narrow but important causal chain: oil volatility eased after Friday\'s temporary Hormuz reopening, which cut worst-case import-cost fears for Japan; at the same time the yen stayed soft because the BOJ is still signaling caution on near-term tightening, so foreign buyers could keep leaning into Japanese equities without worrying about an immediate policy shock. The combination of lower energy panic plus still-cheap funding is what kept the rally alive into the afternoon.',
-        'sources': mk_sources(['Nikkei rises early Asian trade on hopes of Iran-US peace talks','Oil jumps stocks wobble as Mideast ceasefire hangs in the balance Reuters'])
+        'tag': '🇯🇵 JAPAN · MARKET CLOSE',
+        'headline': 'Nikkei finished near 59,100 after failing to hold 60,000, because afternoon profit-taking offset the morning AI and relief bid.',
+        'body': '<strong>Why it happened:</strong> Reuters said the Nikkei briefly cleared 60,000 but then reversed as traders locked in gains after a huge run. That pullback matters because the cause was not a fresh macro shock, it was positioning: investors who had chased the AI rally and ceasefire optimism took money off the table once the index hit a psychological milestone. Even so, the close stayed elevated because foreign money is still rotating into Japan on the view that earnings can tolerate a weak yen better than Europe or China can tolerate higher energy costs.',
+        'sources': [gnews('Japan Nikkei reverses below 60000 level as profit-taking steps in Reuters'), gnews('Foreign investors buy Japan stocks on US-Iran peace hopes AI rally Reuters')],
     },
     {
-        'tag':'🇯🇵 JAPAN · FX / BOJ',
-        'headline':'The yen failed to mount a real afternoon rebound because Governor Ueda has avoided validating April hike bets, leaving the market focused on speculative positioning instead of policy support.',
-        'body':'<strong>What changed:</strong> USD/JPY stayed near the highs even as oil headlines turned less one-sided. <strong>Why it happened:</strong> Reuters reported Friday that the BOJ chief avoided hinting at an April move, which broke the hawkish narrative that had briefly supported the yen. That matters because Japan\'s currency is no longer getting much help from interest-rate expectations, so every renewed Middle East wobble still pushes importers and macro funds back into dollars. The result is an uncomfortable mix for Japan: stocks can rally on relief, but the currency still reflects structural energy vulnerability.',
-        'sources': mk_sources(['BOJ chief avoids hints of April rate hike shattering hawkish market bets Reuters','Japan says recent yen moves driven by speculative trade Reuters'])
+        'tag': '🇯🇵 JAPAN · BOJ / FX',
+        'headline': 'The yen stayed weak around ¥159 per dollar because the BOJ is expected to keep rates steady and soften its hawkish tone despite imported inflation risks.',
+        'body': '<strong>Why it happened:</strong> Reuters reported the Bank of Japan is widely expected to keep policy unchanged while dialing back hawkish guidance. That causal chain is straightforward: if the BOJ does not validate near-term tightening bets, rate differentials stay wide, macro funds keep buying dollars, and the yen remains too weak to cushion Japan from higher imported fuel costs. The afternoon market read was that equities can live with that trade-off for now, but households and importers cannot.',
+        'sources': [gnews('Bank of Japan seen dropping hawkish signs even as it keeps rates steady Reuters'), gnews('Nikkei yen Reuters when:1d')],
     },
     {
-        'tag':'🇯🇵 JAPAN · ENERGY SECURITY',
-        'headline':'Japan\'s overseas energy scramble is broadening into Central Asia and Latin America because Chinese buyers moved earlier and locked up many of the easiest barrels and molecules.',
-        'body':'<strong>What changed:</strong> Nikkei Asia reported that Tokyo\'s hunt for replacement energy and resource supply is running into China\'s existing footprint. <strong>Why it happened:</strong> the Hormuz shock forced Japan to accelerate diversification, but Beijing had already spent years building lending, infrastructure and commodity ties in Kazakhstan, Turkmenistan, Brazil and elsewhere. That means Japan is not just fighting a war premium in oil, it is fighting a timing disadvantage in diplomacy and financing. The afternoon implication is strategic: energy security is now colliding with industrial policy, not just commodity pricing.',
-        'sources': mk_sources(["Japan's energy hunt runs into China's lead in Central Asia Latin America Nikkei Asia",'Japan plans to release extra 20 days oil reserves Reuters'])
+        'tag': '🇯🇵 JAPAN · REAL ECONOMY',
+        'headline': 'Japan’s factory activity expanded at the strongest pace in four years because chip demand and domestic output recovered faster than the energy shock hit order books.',
+        'body': '<strong>Why it happened:</strong> the PMI rebound reflects real demand in electronics and machinery, not just financial-market optimism. That matters this afternoon because it explains why investors were still willing to buy cyclical names even after the Nikkei slipped from its intraday high. In other words, profit-taking hit the index level, but the underlying cause for optimism remains a stronger manufacturing pipeline than the market feared this morning.',
+        'sources': [gnews('Japan factory activity expands at strongest pace in 4 years PMI shows Reuters')],
     },
     {
-        'tag':'🇯🇵 JAPAN · DEFENSE',
-        'headline':'Japan\'s new A$6.5 billion warship deal with Australia is being read in Tokyo as more than procurement, because Trump-era alliance volatility is pushing US partners to bind themselves directly to Japan.',
-        'body':'<strong>What changed:</strong> the Australia-Japan frigate deal became one of the clearest afternoon strategic stories for Japan Inc. <strong>Why it happened:</strong> Reuters and regional coverage have been converging on the same logic, US allies are hedging against Washington\'s unpredictability by deepening bilateral defense ties with Tokyo. For Japan, that creates export upside for shipbuilders and reinforces the idea that security demand will stay sticky even if the Middle East front cools. In other words, the deal rose today because geopolitical trust in the US fell, not because regional demand suddenly appeared out of nowhere.',
-        'sources': mk_sources(['Australia and Japan seal 6.5 billion warship deal with 3 Mogami frigates ordered first','Rattled by Trump US allies eye Japans biggest arms opening since WW2 Reuters'])
+        'tag': '🇯🇵 JAPAN · CORPORATE FINANCE',
+        'headline': 'SoftBank’s reported push for a $10 billion margin loan backed by OpenAI shares shows Japanese capital is still leaning into AI risk because financing markets think the theme can outrun war-driven volatility.',
+        'body': '<strong>Why it happened:</strong> Reuters said SoftBank is seeking financing against one of the market’s highest-conviction assets. The cause is twofold: AI remains one of the few sectors where lenders still believe earnings optionality is widening, and Japanese financial conditions are loose enough that large borrowers can still structure aggressive trades. The afternoon takeaway is that Japan’s corporate story was not only about macro and the yen, it was also about balance sheets still being willing to fund long-duration tech exposure.',
+        'sources': [gnews('SoftBank seeks 10 billion margin loan backed by OpenAI shares Reuters')],
     },
     {
-        'tag':'🇯🇵 JAPAN · INDUSTRY',
-        'headline':'Japanese manufacturers are still sounding cautious because Middle East shocks hit margins first through fuel, shipping and imported inputs before they show up in headline production numbers.',
-        'body':'<strong>What changed:</strong> investors kept revisiting last week\'s weak confidence survey as they priced the afternoon rally. <strong>Why it matters now:</strong> Reuters said manufacturers\' sentiment suffered its biggest drop in three years on Middle East concerns, which explains why today\'s equity bounce remained selective. Autos, machinery and chemicals can benefit from a weaker yen, but not when that same weakness raises energy and transport bills. The afternoon market action therefore looked more like a relief trade than a clean all-clear on the real economy.',
-        'sources': mk_sources(['Japan manufacturers confidence dips most in three years on Middle East concerns Reuters','Oil jumps stocks wobble as Mideast ceasefire hangs in the balance Reuters'])
+        'tag': '🇯🇵 JAPAN · TRADE POLICY',
+        'headline': 'Tokyo moved to press the EU over local-content EV rules because Japan fears a bloc-made preference would lock its automakers out just as Europe’s EV demand is recovering.',
+        'body': '<strong>Why it happened:</strong> Kyodo reported Japan plans to urge the EU to revise a proposal favoring Europe-made EVs. The cause is strategic, not symbolic: Japanese automakers are already absorbing higher logistics and battery costs, so a discriminatory rule in Europe would hit them at the exact moment the region is becoming a more important source of demand. Tokyo’s push today was about defending export access before the rulebook hardens.',
+        'sources': [gnews('Japan plans to urge EU to revise proposed policy favoring bloc-made EVs Kyodo')],
     },
     {
-        'tag':'🇯🇵 JAPAN · HEALTH / INNOVATION',
-        'headline':'A regenerative knee-treatment trial gave Japan a rare positive domestic science story today, and it landed well because investors want evidence that Japan can still create non-cyclical growth beyond energy anxiety.',
-        'body':'<strong>What changed:</strong> Nikkei Asia highlighted the start of what it called the world\'s first trial of a regenerative knee treatment. <strong>Why it resonated:</strong> on a day dominated by macro and war headlines, healthtech stories attract disproportionate interest because they are one of the few growth areas whose demand is not set by oil or FX. For Japan, that matters strategically: the more the country can point to defensible IP and aging-society healthcare innovation, the less trapped it is by commodity pass-through and cyclical export swings.',
-        'sources': mk_sources(['worlds first trial of regenerative knee treatment set to begin in Japan Nikkei Asia'])
-    }
+        'tag': '🇯🇵 JAPAN · ENERGY SECURITY',
+        'headline': 'Japan and Saudi Arabia agreed to work on alternative oil transport routes because Tokyo is trying to reduce single-point dependence on Hormuz after the latest disruption scare.',
+        'body': '<strong>Why it happened:</strong> Kyodo said the two countries agreed to cooperate on alternative routing. The cause is obvious but important: policymakers now understand that even a nominally reopened strait can stay commercially impaired if insurance, minesweeping, convoying, and tanker scheduling remain disrupted. Japan is therefore shifting from reactive reserve management toward structural redundancy, because the country cannot let every Middle East headline become a yen and equity event.',
+        'sources': [gnews('Japan Saudi Arabia agree to cooperate on alternative oil transport route Kyodo')],
+    },
 ]
 
 global_regions = {
-'North America':[
-('Oil, stocks, and the dollar all reversed together because the market realized a ceasefire headline is not the same thing as a restored oil system.', 'Reuters\' latest market wrap showed investors selling risk at the margin while oil bounced. <strong>Why:</strong> traders learned over the weekend that even if diplomacy holds, logistics, insurance and military clearance around Hormuz stay broken for longer than the headline cycle. That is why equities hesitated while crude recovered and the dollar firmed.', ['Oil jumps stocks wobble as Mideast ceasefire hangs in the balance Reuters','Opening Hormuz is the easy part Restoring oil flows isnt Reuters']),
-('Gold slipped even with tensions back in focus because the stronger dollar outweighed safe-haven demand.', 'Gold fell after the dollar hit a one-week high. <strong>Why:</strong> when geopolitical fear channels through USD buying first, bullion can struggle even if the news flow is ugly. Today\'s move said investors preferred cash and dollar liquidity to inflation insurance in the short run.', ['Gold falls on stronger dollar amid renewed US-Iran tensions Reuters','Dollar hits one-week high as Middle East tensions reignite Reuters']),
-('Wall Street enters earnings week with little macro cushion because record highs were built on a peace narrative that is now wobbling.', 'Reuters\' week-ahead note framed the issue clearly. <strong>Why:</strong> stocks had been willing to ignore higher oil and yields as long as the conflict looked like it was fading. Once that assumption weakened, the burden shifted back to earnings quality and guidance, especially for transport, industrial and consumer names exposed to fuel costs.', ['Wall St Week Ahead Surging record-high US stocks to wade deeper into earnings season Reuters'])],
-'Europe':[
-('European EV demand is surging because $100-plus petrol finally changed consumer behavior faster than subsidies ever did.', 'Reuters reported strong EV sales across key European markets. <strong>Why:</strong> the Middle East shock pushed fuel affordability to the front of household budgets, so drivers who had delayed EV purchases suddenly had a clear economic reason to switch. Expensive petrol, not climate idealism, became the immediate catalyst.', ['EV sales soar in main European markets as drivers shun expensive petrol Reuters']),
-('European stocks held up better than Asia because the region is an indirect oil casualty, not the first-order importer that Japan and Korea are.', 'The Stoxx response remained constructive. <strong>Why:</strong> Europe is hurt by growth drag and confidence effects, but its immediate physical dependence on Hormuz is lower than Northeast Asia\'s. That relative insulation is why European risk appetite bent instead of breaking during the afternoon.', ['Oil jumps stocks wobble as Mideast ceasefire hangs in the balance Reuters']),
-('Europe keeps leaning toward Japan on security because Trump has made alliance certainty scarcer.', 'Nikkei Asia argued that Japan is becoming the pivot for embedding Europe into Asian security. <strong>Why:</strong> Washington\'s volatility is creating demand for denser cross-linkages among allies. That is a geopolitical consequence of US unpredictability, not a sudden ideological shift in Brussels or Tokyo.', ['Japan is the pivot for embedding Europe into Asian security Nikkei Asia'])],
-'Asia ex-Japan':[
-('China left lending benchmarks unchanged for an 11th month because Beijing still sees weak confidence, but does not want to turbocharge leverage while commodity shocks are distorting prices.', 'The unchanged loan prime rates were a policy choice to conserve firepower. <strong>Why:</strong> Chinese authorities judge that another symbolic trim would do little for private-sector demand while imported commodity volatility is still washing through the system.', ['China leaves lending benchmarks unchanged for 11th month in April Reuters']),
-('China\'s rare-earth magnet exports fell because Beijing is rationing strategic materials more tightly as global supply chains militarize.', 'Customs data showed exports down year on year. <strong>Why:</strong> with defense, EV and electronics buyers all scrambling at once, China has stronger incentives to prioritize domestic champions and geopolitical leverage over pure export volume.', ["China's March rare earth magnet exports fall customs data shows Reuters"]),
-('Orient Securities agreed to buy Shanghai Securities because Chinese regulators want stronger brokers before capital-market volatility gets worse.', 'The deal fits Beijing\'s consolidation pattern. <strong>Why:</strong> policy makers prefer larger, better-capitalized intermediaries when markets are choppy and cross-asset funding stress can spread quickly.', ["China's Orient Securities to acquire Shanghai Securities Reuters"])],
-'Middle East & Africa':[
-('The dollar hit a one-week high because every renewed doubt over Hormuz pushes global investors back toward the deepest pool of liquidity first.', 'That move was less about US growth optimism than emergency portfolio behavior. <strong>Why:</strong> oil shipping risk transmits through funding markets immediately, and the dollar still dominates that plumbing.', ['Dollar hits one-week high as Middle East tensions reignite Reuters']),
-('Oil\'s rebound matters because the strait may be nominally open while the system remains economically half-closed.', 'Reuters made the distinction explicit. <strong>Why:</strong> reopening a waterway does not instantly restore tanker confidence, insurance cover, naval routing or loading schedules. Physical oil markets price that lag, which is why the afternoon bounce in crude was rational.', ['Opening Hormuz is the easy part Restoring oil flows isnt Reuters']),
-('Africa remains vulnerable through imported fuel and fertilizer channels because the war transmits through basic necessities before it hits headline GDP.', 'The G20 fertilizer push reported by Reuters underscores the causal chain. <strong>Why:</strong> higher energy costs raise fertilizer prices, which then feed into food inflation and political stress across import-dependent economies.', ['Exclusive US is leading G20 initiative to ensure fertilizer access Reuters'])],
-'Latin America':[
-('IMF and World Bank re-engagement with Venezuela matters more now because higher oil prices are reshuffling who counts as strategically useful.', 'The policy thaw is not happening in a vacuum. <strong>Why:</strong> energy insecurity makes sanctioned producers more relevant, so institutions and governments suddenly have stronger incentives to reopen channels they had left frozen.', ['IMF World Bank say they are resuming dealings with Venezuela Reuters']),
-('Brazilian fintech Ebanx is pushing into Southeast Asia because emerging-market payment winners want growth corridors outside the US and Europe before financing conditions tighten again.', 'The expansion is a timing play. <strong>Why:</strong> if geopolitics hardens and capital gets choosier, firms with proven rails want to lock in new markets early.', ['Brazilian payments firm Ebanx makes Southeast Asia push Reuters']),
-('Colombia\'s Petro warned of a regional rebellion because Washington\'s foreign-policy posture is feeding anti-US politics across the hemisphere.', 'That rhetoric is rising now for a reason. <strong>Why:</strong> when the US looks consumed by war and sanctions, left-wing leaders in Latin America gain political room to cast themselves as defenders of sovereignty.', ["Colombia's Petro warns of Latin American rebellion if US doesn't rethink policy Reuters"])],
-'Oceania':[
-('National Australia Bank took a A$503 million impairment hit because volatile energy, shipping and rates are finally flowing through credit books.', 'Reuters reported the charge this morning. <strong>Why:</strong> banks do not mark war risk in headlines, they mark it through weaker borrowers in transport, SMEs and exposed corporates. NAB\'s update is the financial-system version of the same macro shock.', ['National Australia Bank flags 503 million impairment hit on Mideast volatility Reuters']),
-('Viva Energy shares fell after a Geelong fire because Australia lost short-term refining output just when regional product markets are least forgiving.', 'The market reaction was causal and immediate. <strong>Why:</strong> when supply chains are already stretched by Middle East disruptions, any refinery outage carries more pricing power and more panic than it would in a normal quarter.', ['Viva Energy sees lower Geelong output after fire shares slide Reuters']),
-('Australia and Japan\'s frigate deal doubled as an industrial-policy signal because defense demand is now one of the few spending lines governments are willing to expand quickly.', 'That is why shipyards and suppliers care. <strong>Why:</strong> geopolitical uncertainty converts security promises into actual capex faster than almost any civilian category.', ['Australia and Japan seal 6.5 billion warship deal with 3 Mogami frigates ordered first'])]
+    'North America': [
+        ('NORTH AMERICA', 'The S&P 500 and Nasdaq closed at records because investors extended the Iran ceasefire narrative just long enough for earnings to dominate the tape.', '<strong>Why it happened:</strong> Reuters said US equities hit records on the back of earnings and an extension of the ceasefire story. The cause was not that geopolitical risk disappeared, it was that investors temporarily believed the worst oil scenario had been deferred, which let strong corporate results carry the index higher before today’s fresh Hormuz doubts resurfaced.', [gnews('S&P Nasdaq close at records on Iran ceasefire extension earnings Reuters')]),
+        ('NORTH AMERICA', 'Oil kept rising in US trading because talks with Iran made no real progress and Hormuz shipping stayed disrupted.', '<strong>Why it happened:</strong> Reuters framed the move around a simple causal chain: no diplomatic breakthrough means no quick normalization in freight, insurance, or tanker traffic, so crude keeps rebuilding a risk premium. That matters for North America because higher oil supports energy names but reintroduces inflation pressure into the broader US rate outlook.', [gnews('Oil gains on lack of progress on US-Iran talks Hormuz shipping still disrupted Reuters')]),
+        ('NORTH AMERICA', 'The US Senate moved toward advancing more ICE and border funding because election-year politics are pulling security spending back to the center of the agenda.', '<strong>Why it happened:</strong> Reuters reported the bill advanced as lawmakers responded to border politics and pressure to show operational control. The cause is domestic political competition: both parties see migration and enforcement as high-salience voter issues, so funding momentum rises when leadership thinks the issue can shape the next campaign cycle.', [gnews('US Senate edges toward advancing ICE border funding plan Reuters')]),
+    ],
+    'Europe': [
+        ('EUROPE', 'European rooftop solar demand jumped because the Iran-linked energy shock pushed households to cut their exposure to grid and fuel bills.', '<strong>Why it happened:</strong> Reuters said the war revived solar demand. The cause is direct household economics: when oil and gas uncertainty lifts expected energy bills, payback periods on rooftop systems compress, so adoption accelerates without needing a new subsidy round.', [gnews('Iran war revives European rooftop solar demand to cut energy bills Reuters')]),
+        ('EUROPE', 'European car sales grew in March because EV demand more than offset combustion-engine weakness.', '<strong>Why it happened:</strong> Reuters reported EV growth carried the market higher. The cause is that higher fuel costs and tighter emissions policy are finally pulling in the same direction, making electric models more attractive just as legacy combustion sales lose pricing power.', [gnews('European car sales grow in March as EV rise offsets combustion engine decline Reuters')]),
+        ('EUROPE', 'The EU kept preparing its €90 billion Ukraine loan package because restored Druzhba flows reduced one of the immediate financing obstacles.', '<strong>Why it happened:</strong> Reuters explained that Russian oil flows through Druzhba restarted, unblocking the mechanics around the loan plan. The causal chain is that restored pipeline operation eased near-term energy-management pressure, which gave Brussels more room to finalize financing and sanctions sequencing.', [gnews('Explainer How will the EU 90 billion euro loan to Ukraine work Reuters'), gnews('Druzhba pipeline restarts Russian oil flows to Europe unblocking EU loan for Kyiv Reuters')]),
+    ],
+    'Asia ex-Japan': [
+        ('ASIA EX-JAPAN', 'South Korea’s Q1 growth beat forecasts because AI-driven chip demand remained strong enough to overpower external uncertainty.', '<strong>Why it happened:</strong> Reuters-linked coverage said the economy outperformed thanks to semiconductors. The cause is concentrated but real: memory and AI infrastructure demand are still expanding so fast that they are lifting exports, capex, and inventory rebuilding even while the broader region remains exposed to oil risk.', [gnews('South Korea economic growth roared past estimates in Q1 thanks to chips Reuters')]),
+        ('ASIA EX-JAPAN', 'Samsung union workers planned another rally because labor believes chip profits and record stock performance justify a tougher wage push.', '<strong>Why it happened:</strong> Reuters reported labor unrest is growing. The cause is classic bargaining leverage: when workers see a company benefiting from a strong cycle, they press harder for pay and working-condition concessions before management can argue the boom has faded.', [gnews('Unionised Samsung workers to hold rally in South Korea as labour unrest grows Reuters')]),
+        ('ASIA EX-JAPAN', 'China faced fresh criticism over pressure on African states to block Taiwan’s president because Beijing is trying to narrow Taipei’s diplomatic room before any high-visibility trip can happen.', '<strong>Why it happened:</strong> Reuters said the US criticized China’s pressure campaign. The cause is preemption: Beijing treats transit diplomacy as legitimacy signaling, so it tries to stop symbolic visits before they turn into broader recognition or security cooperation.', [gnews('US criticizes China pressure on African countries to block Taiwan president trip Reuters')]),
+    ],
+    'Middle East & Africa': [
+        ('MIDDLE EAST & AFRICA', 'Iran tightened control of Hormuz after the US called off renewed attacks, because Tehran wants leverage from the ceasefire without surrendering its maritime pressure point.', '<strong>Why it happened:</strong> Reuters reported Iran kept tightening its grip even after the immediate strike risk fell. The cause is bargaining power: by controlling shipping friction short of a total closure, Tehran can keep economic pressure alive while still leaving room for diplomacy.', [gnews('Iran tightens control of Hormuz after US calls off renewed attacks Reuters')]),
+        ('MIDDLE EAST & AFRICA', 'Saudi Arabia and the Philippines will join JPMorgan’s emerging-market bond index in 2027 because benchmark providers are rewarding larger, more liquid local-currency markets.', '<strong>Why it happened:</strong> Reuters said both will enter the index next year. The cause is structural index inclusion logic: once liquidity, accessibility, and market size cross a threshold, passive inflows become more likely, which is why the announcement matters well before actual inclusion day.', [gnews('Saudi Arabia Philippines to join JPMorgan emerging market bond index in 2027 Reuters')]),
+        ('MIDDLE EAST & AFRICA', 'Companies from paint makers to airlines darkened their outlooks because war-driven fuel and shipping costs are now feeding directly into margins.', '<strong>Why it happened:</strong> Reuters highlighted rising costs across sectors. The cause is second-round transmission: once oil and freight volatility persist long enough, they move from market headlines into corporate guidance, where they hit pricing, inventory planning, and consumer demand at the same time.', [gnews('From paint to flights Iran war lifts costs darkens outlooks Reuters')]),
+    ],
+    'Latin America': [
+        ('LATIN AMERICA', 'Mexico said it should not be nostalgic for zero tariffs because officials expect the next USMCA review to be more transactional and defensive.', '<strong>Why it happened:</strong> Reuters quoted Mexico’s economy minister signaling a tougher reality. The cause is political: Washington’s trade posture is shifting toward strategic leverage, so Mexico is preparing businesses for a review shaped less by free-trade ideology and more by supply-chain bargaining.', [gnews('Mexico shouldnt be nostalgic about zero tariff era economy minister says Reuters')]),
+        ('LATIN AMERICA', 'Mexico reopened the Teotihuacan pyramids under heavy police presence because authorities wanted to restore tourism revenue without appearing soft after the deadly shooting.', '<strong>Why it happened:</strong> Reuters reported the site reopened with visible security. The cause is a trade-off between economic continuity and public confidence: the government needs visitors back, but only if it can show the response is strong enough to contain reputational damage.', [gnews('Mexico reopens famed pyramids under heavy police presence after deadly shooting Reuters')]),
+        ('LATIN AMERICA', 'Banorte is pushing cashless payments at Azteca ahead of the World Cup because event-driven infrastructure deadlines are accelerating Mexico’s payments modernization.', '<strong>Why it happened:</strong> Reuters said the bank is expanding digital payments at the stadium. The cause is timing pressure: mega-events force operators to upgrade throughput, security, and data capture faster than they otherwise would, which makes sport a trigger for fintech rollout.', [gnews('Banorte pushes cashless payments at Azteca as World Cup deadline nears Reuters')]),
+    ],
+    'Oceania': [
+        ('OCEANIA', 'New Zealand said the oil shock delays recovery but does not derail it because domestic demand is stabilizing even as imported energy costs bite.', '<strong>Why it happened:</strong> Reuters quoted the finance minister saying recovery is delayed rather than broken. The cause is that the economy entered the shock with some cyclical healing already underway, so higher fuel costs are slowing momentum, not fully reversing it, unless the external energy hit lasts much longer.', [gnews('New Zealand economic recovery delayed but not derailed finance minister says Reuters')]),
+    ],
 }
 
-# market data hardcoded from yahoo run
-markets_rows = {
-'equities':[
-('Nikkei 225','59,053.17','+0.99%','+4.51%','+10.64%','+17.31%'),('KOSPI','6,264.00','+1.16%','+7.84%','+8.35%','+48.64%'),('Hang Seng','26,285.27','+0.48%','+2.43%','+3.99%','+2.55%'),('CSI 300','4,728.67','−0.17%','+1.99%','+1.51%','+2.13%'),('ASX 200','8,938.30','−0.10%','+0.14%','+6.05%','+2.41%'),('S&P 500','7,126.06','+1.20%','+4.54%','+7.57%','+4.10%'),('Dow','49,447.43','+1.79%','+3.19%','+6.97%','+2.88%'),('Nasdaq','24,468.48','+1.52%','+6.84%','+10.46%','+5.28%'),('Stoxx 600','626.58','+1.56%','+1.91%','+4.79%','+5.70%'),('DAX','24,702.24','+2.27%','+3.77%','+5.11%','+0.87%'),('Bovespa','195,734','−0.55%','−0.81%','+8.96%','+21.48%')],
-'fx':[
-('USD/JPY','158.85','−0.22%','−0.23%','+0.58%','+1.55%'),('EUR/USD','1.1763','−0.16%','−0.05%','+1.60%','+0.14%'),('DXY','98.30','+0.21%','−0.07%','−1.35%','+0.02%')],
-'commodities':[
-('Brent','90.38','−9.07%','−5.06%','−15.83%','+48.53%'),('WTI','82.59','−12.78%','−14.48%','−14.25%','+43.83%'),('Gold','4,819.40','−0.79%','+1.62%','+5.45%','+11.42%'),('Copper','6.0815','−0.36%','+1.77%','+13.83%','+8.02%'),('Bitcoin','74,477','−1.65%','−0.01%','+8.39%','−16.06%'),('Ethereum','2,278.98','−3.07%','−3.87%','+9.74%','−24.04%')],
-'bonds':[
-('US 10Y Treasury','4.246%','−1.46%','−1.64%','−0.31%','+1.99%')]
-}
+EQ_ROWS = [
+    market_row('Nikkei 225', '^N225'),
+    market_row('S&P 500', '^GSPC'),
+    market_row('Dow Jones', '^DJI'),
+    market_row('Nasdaq', '^IXIC'),
+    market_row('Euro Stoxx 50', '^STOXX50E'),
+    market_row('Shanghai Comp', '000001.SS'),
+    market_row('Sensex', '^BSESN'),
+    market_row('Bovespa', '^BVSP', 0),
+    market_row('ASX 200', '^AXJO'),
+]
+FX_ROWS = [
+    market_row('USD/JPY', 'JPY=X', 3),
+    market_row('EUR/USD', 'EURUSD=X', 4),
+    market_row('DXY', 'DX-Y.NYB', 3),
+    market_row('US 10Y Treasury', '^TNX', 3, '%'),
+]
+CMD_ROWS = [
+    market_row('Gold', 'GC=F'),
+    market_row('Silver', 'SI=F', 3),
+    market_row('WTI Crude', 'CL=F'),
+    market_row('Bitcoin', 'BTC-USD'),
+    market_row('Ethereum', 'ETH-USD'),
+]
+
+market_sources = [
+    gnews('Oil gains on lack of progress on US-Iran talks Hormuz shipping still disrupted Reuters'),
+    gnews('S&P Nasdaq close at records on Iran ceasefire extension earnings Reuters'),
+    {'url': 'https://finance.yahoo.com/', 'source': 'Yahoo Finance', 'title': 'Yahoo Finance', 'image': ''},
+]
 
 
-def table(title, tag, headers, rows, note):
-    th=''.join(f'<th>{h}</th>' for h in headers)
-    trs='\n'.join(['<tr>' + ''.join([f'<td class="idx-name">{r[0]}</td>',f'<td class="idx-level">{r[1]}</td>'] + [f'<td class="{("chg-pos" if str(v).startswith("+") else "chg-neg") if isinstance(v,str) and (v.startswith("+") or v.startswith("−") or v.startswith("-") ) else ""}">{v}</td>' for v in r[2:]]) + '</tr>' for r in rows])
-    return f'''<article class="card fade-in">\n          <span class="card-tag">{tag}</span>\n          <h3 class="card-headline">{title}</h3>\n          <table class="index-table"><thead><tr>{th}</tr></thead><tbody>{trs}</tbody></table>\n          <p class="card-body" style="margin-top: 1rem;">{note}</p>\n        </article>'''
-
-japan_cards='\n'.join([f'''        <article class="card featured japan fade-in collapsible" data-image="{c['sources'][0]['image'] if c['sources'] else ''}">\n          <span class="card-tag japan">{c['tag']}</span>\n          <h3 class="card-headline">{c['headline']}</h3>\n          <div class="tap-hint">Tap to expand</div>\n          <p class="card-body">{c['body']}</p>\n          <div class="card-sources">\n{source_links(c['sources'])}\n          </div>\n        </article>''' for c in japan])
-
-region_cards=[]
-for region, items in global_regions.items():
-    for idx,(headline,body,queries) in enumerate(items):
-        sources=mk_sources(queries)
-        region_cards.append(f'''        <article class="card featured fade-in collapsible" data-image="{sources[0]['image'] if sources else ''}">\n          <span class="card-tag">{region}</span>\n          <h3 class="card-headline">{headline}</h3>\n          <div class="tap-hint">Tap to expand</div>\n          <p class="card-body">{body}</p>\n          <div class="card-sources">\n{source_links(sources)}\n          </div>\n        </article>''')
-region_cards='\n'.join(region_cards)
-
-markets_html='\n'.join([
-    table('Global Equity Indices','MONDAY, APR. 20, 2026', ['Index','Level','Daily','Weekly','Monthly','YTD'], markets_rows['equities'], '<strong>Big mover logic:</strong> KOSPI\'s weekly surge reflects how hard Korea rebounds when oil stress eases; Bovespa lagged because Latin America\'s commodity upside is now competing with tighter global financial conditions. Nikkei kept rising because the same weak yen that hurts households still flatters exporters.'),
-    table('Commodities & Crypto','COMMODITIES / DIGITAL ASSETS', ['Asset','Price','Daily','Weekly','Monthly','YTD'], markets_rows['commodities'], '<strong>Why the biggest moves happened:</strong> Brent and WTI are still showing double-digit daily drops because Friday\'s formal reopening headline triggered forced unwinds of extreme war hedges, but today\'s intraday rebound tells you the physical system is not healed. Ethereum underperformed bitcoin because higher macro uncertainty usually hurts the higher-beta token first.'),
-    table('FX & Rates','FX / RATES', ['Instrument','Level','Daily','Weekly','Monthly','YTD'], markets_rows['fx']+markets_rows['bonds'], '<strong>FX takeaway:</strong> USD/JPY stayed elevated because Japan still needs imported energy and the BOJ is not rescuing the yen with hawkish guidance. The stronger dollar also explains why gold slipped on the day despite renewed tension.')
-]) + '''\n        <article class="card fade-in">\n          <span class="card-tag">HEALTH SCORE</span>\n          <h3 class="card-headline">Global Market Health</h3>\n          <div class="health-gauge-wrap"><div class="health-gauge"><div class="gauge-bg"></div><div class="gauge-needle" id="gauge-needle" style="transform: rotate(-90deg);"></div><div class="gauge-dot"></div></div><div class="gauge-scale"><span>0</span><span>100</span></div><div class="gauge-score">52</div><div class="gauge-score-label">CAUTIOUSLY IMPROVING, BUT STILL HEADLINE-DRIVEN</div></div>\n          <div class="indicator-grid">\n            <div class="indicator-item"><div class="indicator-value" style="color: var(--green);">🟢</div><div class="indicator-name">Oil off the highs</div><div class="indicator-sub">Forced hedge unwind</div></div>\n            <div class="indicator-item"><div class="indicator-value" style="color: var(--green);">🟢</div><div class="indicator-name">Nikkei still bid</div><div class="indicator-sub">Exporters + weak yen</div></div>\n            <div class="indicator-item"><div class="indicator-value" style="color: var(--green);">🟢</div><div class="indicator-name">Europe EV demand</div><div class="indicator-sub">Petrol shock shifts behavior</div></div>\n            <div class="indicator-item"><div class="indicator-value" style="color: var(--red);">🔴</div><div class="indicator-name">Hormuz plumbing broken</div><div class="indicator-sub">Open is not normal</div></div>\n            <div class="indicator-item"><div class="indicator-value" style="color: var(--red);">🔴</div><div class="indicator-name">Dollar bid back</div><div class="indicator-sub">Funding stress still alive</div></div>\n            <div class="indicator-item"><div class="indicator-value" style="color: var(--red);">🔴</div><div class="indicator-name">Banks taking charges</div><div class="indicator-sub">Volatility now hitting credit</div></div>\n          </div>\n          <p class="card-body" style="margin-top: 1rem;"><strong>Why 52/100:</strong> the market is healthier than last week because oil is no longer pricing a full worst-case blockade, equities are still holding gains, and Japan has not lost its afternoon bid. But it is not a clean recovery because the dollar is firming again, physical oil logistics remain impaired, and Australia\'s bank/refining headlines show the shock is migrating from futures screens into real balance sheets.</p>\n        </article>'''
-
-pred_en = '''
-        <article class="card fade-in collapsible">
-          <span class="card-tag">TOMORROW</span>
-          <h3 class="card-headline">Watch whether Japan can keep the equity rally without a stronger currency backdrop.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Base case:</strong> Nikkei stays supported if oil remains below the panic highs and US futures hold, but upside narrows if USD/JPY keeps climbing because households and importers start wearing the pain again. <strong>Key watchpoints:</strong> BOJ rhetoric, any update on reserve releases, and whether shipping/insurance headlines around Hormuz improve in substance rather than wording.</p>
-        </article>
-        <article class="card fade-in collapsible">
-          <span class="card-tag">WEEK AHEAD</span>
-          <h3 class="card-headline">The real test is whether the market narrative shifts from ceasefire headlines to repaired supply chains.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>What to watch:</strong> US earnings guidance, China\'s next policy tone, Japanese energy-security measures, and follow-through in Europe\'s auto demand. <strong>Why it matters:</strong> if companies keep saying transport, fuel and insurance remain impaired, then last week\'s oil collapse will look like positioning rather than normalization. If those frictions ease, Japan and Korea should stay the biggest relative winners.</p>
-        </article>'''
-
-bottom_en = "Today\'s afternoon briefing was about a market discovering that <strong>headline peace and functional peace are different things</strong>. Japan stayed in the sweet spot for one more session because lower oil panic helped stocks, while a still-weak yen kept exporters attractive. But the same afternoon tape also showed why the recovery is fragile: the dollar firmed, gold fell for the wrong reason, and Reuters\' reporting on Hormuz made clear that reopening the strait is easier than restoring actual oil flows. <strong>The causal chain to remember:</strong> Middle East uncertainty lifts shipping and insurance stress, that keeps the dollar bid, that leaves the yen weak, that flatters Japanese equities but squeezes Japan\'s real-economy import bill. Health score: <strong>52/100</strong>. Better, but not safe."
-
-# Japanese simplified translations
-japan_ja = [
-('🇯🇵 日本・株式','日経平均は59,000円台で引け。週末の停戦期待が残り、原油パニックがやや後退した一方、円安が輸出株を押し上げた。','<strong>なぜ上がったか：</strong>ホルムズ海峡の一時再開で最悪の輸入コスト懸念が後退し、同時に日銀の慎重姿勢で円安が残ったため。つまり「原油不安の緩和」と「円安メリット」が同時に株を支えた。', japan[0]['sources']),
-('🇯🇵 日本・為替','円は午後も大きく戻せず、ドル円は159円近辺。','<strong>なぜ戻せないか：</strong>植田総裁が4月利上げ期待を強めず、円を支える政策期待が弱いから。中東不安が再燃すると、日本のエネルギー輸入構造の弱さから再びドル買いが入りやすい。', japan[1]['sources']),
-('🇯🇵 日本・資源外交','日本の資源確保は中央アジアや中南米で中国先行の壁に直面。','<strong>なぜ苦しいか：</strong>ホルムズ危機で日本は調達多様化を急ぐが、中国はすでに資源国で金融・インフラ関係を築いていた。今日の論点は価格よりも「外交と資本の出遅れ」。', japan[2]['sources']),
-('🇯🇵 日本・防衛','豪州との6.5十億豪ドル級の護衛艦案件は、防衛輸出というより同盟再編のシグナル。','<strong>なぜ今か：</strong>トランプ下の同盟不確実性で、米同盟国が日本との直接連携を強めているため。米国への信頼低下が日本の防衛産業に需要を持ち込んでいる。', japan[3]['sources']),
-('🇯🇵 日本・企業景況感','製造業の慎重姿勢は続く。午後の株高でも実体経済への不安は残った。','<strong>なぜか：</strong>燃料、輸送、輸入原材料のコスト上昇がまず利益率を削るから。円安は輸出に効くが、同時にエネルギー負担も増やすため、全面的な安心感にはつながらない。', japan[4]['sources']),
-('🇯🇵 日本・医療技術','再生医療の膝治療治験は、マクロ不安の中で数少ない前向きな国内成長ストーリー。','<strong>なぜ注目か：</strong>ヘルステック需要は原油や為替に左右されにくく、高齢化社会の日本が持つ独自成長テーマだから。資源ショック以外の成長源を示せる意味が大きい。', japan[5]['sources'])]
-
-japan_cards_ja='\n'.join([f'''        <article class="card featured japan fade-in collapsible" data-image="{s[3][0]['image'] if s[3] else ''}">\n          <span class="card-tag japan">{s[0]}</span>\n          <h3 class="card-headline">{s[1]}</h3>\n          <div class="tap-hint">タップして展開</div>\n          <p class="card-body">{s[2]}</p>\n          <div class="card-sources">\n{source_links(s[3])}\n          </div>\n        </article>''' for s in japan_ja])
-
-region_cards_ja='\n'.join([card.replace('Tap to expand','タップして展開').replace('North America','北米').replace('Europe','欧州').replace('Asia ex-Japan','アジア（日本除く）').replace('Middle East & Africa','中東・アフリカ').replace('Latin America','中南米').replace('Oceania','オセアニア') for card in region_cards.split('\n')])
-
-
-
-def build_page(lang='en'):
-    src = (BASE/'index.html').read_text() if lang=='en' else (BASE/'ja.html').read_text()
+def build_index(lang='en'):
+    src = (BASE / ('index.html' if lang == 'en' else 'ja.html')).read_text()
     head = src.split('<body>')[0] + '<body>\n'
-    if lang=='en':
-        body = f'''  <header class="masthead"><div class="lang-toggle"><a href="index.html" class="active">EN</a><span class="sep">/</span><a href="ja.html">JA</a></div><div class="masthead-inner"><div class="overline">AFTERNOON INTELLIGENCE BRIEF</div><div class="war-day-counter" id="war-day-badge">🔴 IRAN WAR — DAY <span class="day-num" id="war-day-num">51</span></div><br><div class="econ-countdown" id="econ-countdown">⏱ ECONOMIC DAMAGE WINDOW: <span class="countdown-num" id="econ-countdown-num">—</span> days</div><h1>CEO Afternoon Briefing</h1><div class="edition-date">Monday, April 20, 2026 — Afternoon Edition</div><div class="edition-sub">🇯🇵 Nikkei holds 59,000 as relief buying survives into the close, but ¥159 keeps Japan exposed · Europe EV demand jumps because expensive petrol finally changed behavior · China keeps rates unchanged and tightens strategic-material posture · NAB takes a A$503M volatility hit, showing the war shock is reaching bank balance sheets · Brent and WTI remain far below panic highs, but Reuters warns reopening Hormuz is easier than restoring flows · Health Score: 52/100</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">Japan</a><a href="#global" class="nav-pill">Global</a><a href="#markets" class="nav-pill">Markets</a><a href="#predictions" class="nav-pill">Predictions</a><a href="#bottomline" class="nav-pill">Bottom Line</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">Japan Update — In Depth</h2></div><div class="cards">{japan_cards}</div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">Global — By Continent</h2></div><div class="cards">{region_cards}</div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">Markets & Economy</h2></div><div class="cards">{markets_html}</div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">Predictions</h2></div><div class="cards">{pred_en}</div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 Bottom Line</h3><p>{bottom_en}</p></div></section></main><footer class="footer"><p>CEO Afternoon Briefing · Generated by Sanbot · Monday, April 20, 2026</p><p style="margin-top: 0.5rem;">Data sources: Reuters, Nikkei Asia, Yahoo Finance</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));const needle=document.getElementById('gauge-needle');if(needle){{const score=52;const rotation=-90+(score/100)*180;setTimeout(()=>{{needle.style.transform=`rotate(${{rotation}}deg)`;}},300);}}</script><script>(function(){{var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){{if(now<sixWeek){{var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ ECONOMIC DAMAGE WINDOW IN <span class="countdown-num">'+daysLeft+'</span> DAYS';}} else if(now<=eightWeek){{cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 ECONOMIC DAMAGE WINDOW — <span class="countdown-num" style="color:#fff;">NOW</span>';}} else {{var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ OIL ELEVATED '+weeksPast+' WEEKS — PAST DAMAGE THRESHOLD';}}}})();</script><script src="audio-player.js"></script></body></html>'''
-    else:
-        body = f'''  <header class="masthead"><div class="lang-toggle"><a href="index.html">EN</a><span class="sep">/</span><a href="ja.html" class="active">JA</a></div><div class="masthead-inner"><div class="overline">午後のインテリジェンスブリーフィング</div><div class="war-day-counter" id="war-day-badge">🔴 イラン戦争 — <span class="day-num" id="war-day-num">51</span>日目</div><br><div class="econ-countdown" id="econ-countdown">⏱ 経済ダメージ期間: <span class="countdown-num" id="econ-countdown-num">—</span> 日</div><h1>CEO午後ブリーフィング</h1><div class="edition-date">2026年4月20日（月）— 午後版</div><div class="edition-sub">🇯🇵 日経平均は59,000円台を維持したが、円は159円近辺で日本の輸入不安は残存 · 欧州ではガソリン高を理由にEV需要が加速 · 中国はLPR据え置き、戦略物資の管理を強化 · 豪NABは中東変動で5.03億豪ドルの減損を計上 · 原油はパニック高値から下げたが、ホルムズ再開だけでは物流正常化にならない · 健全性スコア: 52/100</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">日本</a><a href="#global" class="nav-pill">世界</a><a href="#markets" class="nav-pill">マーケット</a><a href="#predictions" class="nav-pill">予測</a><a href="#bottomline" class="nav-pill">まとめ</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">日本アップデート — 詳細</h2></div><div class="cards">{japan_cards_ja}</div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">世界 — 地域別</h2></div><div class="cards">{region_cards_ja}</div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">マーケット・経済</h2></div><div class="cards">{markets_html.replace('HEALTH SCORE','健全性スコア').replace('Global Market Health','グローバル市場健全性').replace('CAUTIOUSLY IMPROVING, BUT STILL HEADLINE-DRIVEN','改善中だが見出し依存').replace('Why 52/100:','<strong>なぜ52/100か：</strong>').replace('Big mover logic:','<strong>大きな値動きの理由：</strong>').replace('Why the biggest moves happened:','<strong>大幅変動の理由：</strong>').replace('FX takeaway:','<strong>為替の要点：</strong>')}</div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">予測</h2></div><div class="cards"><article class="card fade-in collapsible"><span class="card-tag">明日</span><h3 class="card-headline">日本株が円の支えなしで上昇を維持できるかが焦点。</h3><div class="tap-hint">タップして展開</div><p class="card-body"><strong>ベースケース：</strong>原油が再び急騰しなければ日経は底堅いが、ドル円の上昇が続くと家計・輸入企業への逆風が意識され、上値は重くなる。注目点は日銀発言、石油備蓄放出、ホルムズの実務的な改善有無。</p></article><article class="card fade-in collapsible"><span class="card-tag">今週</span><h3 class="card-headline">市場の本当の試金石は、停戦見出しではなく供給網修復に話が移るかどうか。</h3><div class="tap-hint">タップして展開</div><p class="card-body"><strong>注目：</strong>米企業決算、中国の政策トーン、日本のエネルギー安全保障策、欧州のEV需要継続。<strong>なぜ重要か：</strong>企業が輸送・燃料・保険の混乱継続を語るなら、先週の原油急落はポジション調整にすぎない。摩擦が実際に減るなら、日本と韓国が相対的勝ち組に残りやすい。</p></article></div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 まとめ</h3><p>午後の本質は、<strong>「停戦見出し」と「機能する平和」は別物</strong>だと市場が理解し始めたこと。日本株は原油パニック後退と円安の組み合わせでもう一段支えられたが、同時にドル高・円安は日本の実体経済の輸入負担を残す。ロイターが示した通り、ホルムズ海峡は再開できても、保険、配船、積み出し、信用はすぐ戻らない。<strong>覚えるべき因果：</strong>中東不安→輸送・保険ストレス→ドル高→円安持続→日本株には追い風、家計と輸入企業には逆風。健全性スコアは<strong>52/100</strong>。改善はしたが、安全圏ではない。</p></div></section></main><footer class="footer"><p>CEO午後ブリーフィング · Generated by Sanbot · 2026年4月20日（月）</p><p style="margin-top: 0.5rem;">データソース: Reuters, Nikkei Asia, Yahoo Finance</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));const needle=document.getElementById('gauge-needle');if(needle){{const score=52;const rotation=-90+(score/100)*180;setTimeout(()=>{{needle.style.transform=`rotate(${{rotation}}deg)`;}},300);}}</script><script>(function(){{var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){{if(now<sixWeek){{var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ 経済ダメージ期間まで <span class="countdown-num">'+daysLeft+'</span> 日';}} else if(now<=eightWeek){{cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 経済ダメージ期間 — <span class="countdown-num" style="color:#fff;">進行中</span>';}} else {{var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ 原油高騰 '+weeksPast+' 週間 — ダメージ閾値超過';}}}})();</script><script src="audio-player.js"></script></body></html>'''
-    return head+body
 
-(BASE/'index.html').write_text(build_page('en'))
-(BASE/'ja.html').write_text(build_page('ja'))
+    if lang == 'en':
+        japan_cards = '\n'.join(story_card(x['tag'], x['headline'], x['body'], x['sources']) for x in japan)
+        global_cards = []
+        for region, items in global_regions.items():
+            for tag, headline, body, sources in items:
+                global_cards.append(story_card(region, headline, body, sources))
+        global_cards = '\n'.join(global_cards)
+        markets = '\n'.join([
+            table_card('EQUITIES', 'End-of-day equity snapshot', ['Index', 'Level', 'Daily', 'Weekly', 'Monthly', 'YTD'], EQ_ROWS, '<strong>Why the notable moves happened:</strong> the Nikkei stayed elevated because foreign inflows and a weak yen still support exporters, but it gave back intraday gains after hitting 60,000 because traders took profits. The S&P and Nasdaq held record territory because earnings temporarily outweighed geopolitics. Brazil lagged because higher global energy costs and tighter financial conditions are a harder mix for Latin risk assets.', market_sources),
+            table_card('FX & RATES', 'Currency and rate pressure points', ['Instrument', 'Level', 'Daily', 'Weekly', 'Monthly', 'YTD'], FX_ROWS, '<strong>Why it matters:</strong> USD/JPY near 159 is the cleanest signal that Japan still has not solved the imported-inflation problem. A firm dollar and steady US yields tell you investors still prefer liquidity over declaring the crisis over.', market_sources),
+            table_card('COMMODITIES & CRYPTO', 'Commodity and digital-asset close', ['Asset', 'Price', 'Daily', 'Weekly', 'Monthly', 'YTD'], CMD_ROWS, '<strong>Big mover logic:</strong> silver fell more than 2% because the stronger dollar and cooling inflation hedges outweighed safe-haven buying. WTI rose because the market still sees disrupted Hormuz logistics, not a true normalization. Bitcoin rose because risk appetite did not fully unwind after Wall Street records, but crypto stayed secondary to oil and FX headlines.', market_sources),
+            '''        <article class="card fade-in" data-image="">
+          <span class="card-tag">HEALTH SCORE</span>
+          <h3 class="card-headline">58/100, resilient but still headline-fragile.</h3>
+          <p class="card-body"><strong>Why 58:</strong> markets are healthier than this morning because US stocks kept their record close, Japan still held most of its gains, and South Korea’s chip-led growth print reassured Asia. But the score stops below 60 because Hormuz friction is still lifting oil, the dollar remains firm, and the BOJ is not giving Japan a currency shock absorber. That means every geopolitical flare-up can still travel quickly into fuel, freight, FX, and equity sentiment.</p>
+          <div class="card-sources">\n''' + source_links(market_sources) + '''\n          </div>
+        </article>'''
+        ])
+        predictions = '''        <article class="card fade-in collapsible" data-image="">
+          <span class="card-tag">TOMORROW</span>
+          <h3 class="card-headline">Watch whether Japan can hold the bid if the yen weakens further.</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why it matters:</strong> a softer yen helps exporters until the market decides imported energy pain is overtaking earnings support. If USD/JPY pushes further higher without a BOJ pushback, tomorrow’s question is whether the Nikkei can keep rising on foreign inflows alone.</p>
+        </article>
+        <article class="card fade-in collapsible" data-image="">
+          <span class="card-tag">WEEK AHEAD</span>
+          <h3 class="card-headline">The bigger test is whether shipping conditions improve, not whether ceasefire headlines survive.</h3>
+          <div class="tap-hint">Tap to expand</div>
+          <p class="card-body"><strong>Why it matters:</strong> if tanker traffic, insurance pricing, and route security do not normalize, higher oil will keep feeding inflation, consumer caution, and policy hesitation. That would cap Japan’s upside even if AI and chip demand stay strong.</p>
+        </article>'''
+        bottom_line = 'Today\'s afternoon move was a classic reminder that <strong>price action is about causation, not headlines</strong>. Japan held up because foreign investors still like a weak-yen, AI-friendly market and the factory data gave them a real-economy reason to stay. But the country is still vulnerable because the same BOJ caution that flatters stocks leaves the yen too weak to absorb energy shocks. Globally, Wall Street stayed strong because earnings bought time, while oil kept rising because shipping reality never fully matched the ceasefire story. <strong>Bottom line:</strong> the afternoon was better than the morning, but it was not safer.'
+        sub = '🇯🇵 Nikkei held near 59,100 after profit-taking knocked it back below 60,000, while the yen stayed weak near ¥159 because the BOJ is expected to hold steady and sound less hawkish · SoftBank chased AI financing, Tokyo pushed back on EU EV rules, and Japan-Saudi energy-route talks underscored how seriously supply security is now being treated · Wall Street closed at records on earnings, South Korea beat on chips, Europe saw EV and rooftop-solar demand rise on fuel-cost pressure, and oil kept rebuilding risk premium because Hormuz shipping remains impaired · Health Score: 58/100'
+        footer = 'CEO Afternoon Briefing · Generated by Sanbot · Thursday, April 23, 2026'
+        body = f'''  <header class="masthead"><div class="lang-toggle"><a href="index.html" class="active">EN</a><span class="sep">/</span><a href="ja.html">JA</a></div><div class="masthead-inner"><div class="overline">AFTERNOON INTELLIGENCE BRIEF</div><div class="war-day-counter" id="war-day-badge">🔴 IRAN WAR — DAY <span class="day-num" id="war-day-num">54</span></div><br><div class="econ-countdown" id="econ-countdown">⏱ ECONOMIC DAMAGE WINDOW: <span class="countdown-num" id="econ-countdown-num">—</span></div><h1>CEO Afternoon Briefing</h1><div class="edition-date">{TODAY_EN} — Afternoon Edition</div><div class="edition-sub">{sub}</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">Japan</a><a href="#global" class="nav-pill">Global</a><a href="#markets" class="nav-pill">Markets</a><a href="#predictions" class="nav-pill">Predictions</a><a href="#bottomline" class="nav-pill">Bottom Line</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">Japan Update — In Depth</h2></div><div class="cards">{japan_cards}</div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">Global — By Continent</h2></div><div class="cards">{global_cards}</div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">Markets & Economy</h2></div><div class="cards">{markets}</div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">Predictions</h2></div><div class="cards">{predictions}</div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 Bottom Line</h3><p>{bottom_line}</p></div></section></main><footer class='footer'><p>{footer}</p><p style='margin-top: 0.5rem;'>Data sources: Reuters, Kyodo, Yahoo Finance, Google News RSS</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));const needle=document.getElementById('gauge-needle');if(needle){{const score=58;const rotation=-90+(score/100)*180;setTimeout(()=>{{needle.style.transform=`rotate(${{rotation}}deg)`;}},300);}}</script><script>(function(){{var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){{if(now<sixWeek){{var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ ECONOMIC DAMAGE WINDOW IN <span class="countdown-num">'+daysLeft+'</span> DAYS';}} else if(now<=eightWeek){{cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 ECONOMIC DAMAGE WINDOW — <span class="countdown-num" style="color:#fff;">NOW</span>';}} else {{var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ OIL ELEVATED '+weeksPast+' WEEKS — PAST DAMAGE THRESHOLD';}}}})();</script><script src='audio-player.js'></script></body></html>'''
+    else:
+        japan_ja = [
+            ('🇯🇵 日本・大引け', '日経平均は60,000円を維持できず59,100円近辺で終了。午後に利益確定売りが出たが、高値圏は保った。', '<strong>なぜそうなったか：</strong>ロイターによると、60,000円突破は達成感を呼び、AI相場と停戦期待で積み上がったポジションに利益確定が出た。ただし下げ切らなかったのは、海外勢が「円安でも業績が持つ日本株」をまだ選好しているから。つまり下落の原因は新たな悪材料ではなく、過熱後の利食いだった。', japan[0]['sources']),
+            ('🇯🇵 日本・日銀/為替', '円は1ドル159円前後で弱いまま。日銀が据え置きかつややハト派寄りと見られている。', '<strong>なぜ円安か：</strong>日銀が早期追加利上げを示唆しない限り、金利差を材料にしたドル買いが続くから。円が弱いと輸出株には追い風だが、輸入燃料コストには逆風で、日本経済には両面の影響が残る。', japan[1]['sources']),
+            ('🇯🇵 日本・景況感', '製造業PMIは4年ぶりの強い伸び。半導体と機械需要が午後の日本株の安心材料になった。', '<strong>なぜ強いか：</strong>実需のある電子部品、機械、在庫積み増しが効いているため。指数全体は利食いで押されたが、午後に景気敏感株まで崩れなかった理由は、実体経済の数字が朝より強く見えたから。', japan[2]['sources']),
+            ('🇯🇵 日本・企業金融', 'ソフトバンクのOpenAI株担保ローン報道は、日本の大企業がまだAIへ積極的に資金を張っていることを示した。', '<strong>なぜ今か：</strong>AIは地政学や原油高の中でも成長ストーリーが崩れていない数少ない分野だから。金融市場も、そのテーマならレバレッジを許容しやすい。日本の午後材料はマクロだけでなく、リスクを取る企業金融の強さもあった。', japan[3]['sources']),
+            ('🇯🇵 日本・通商政策', '日本はEUの域内優遇EVルール修正を促す方針。欧州需要回復局面で日本車勢の締め出しを避けたい。', '<strong>なぜ動いたか：</strong>欧州でEV需要が戻る中、現地生産優遇が固まると日本メーカーの販売機会が削られるから。物流費や電池コストが高い今、ルール面で不利になるのは避けたいという防衛的な動き。', japan[4]['sources']),
+            ('🇯🇵 日本・エネルギー安全保障', '日本とサウジは代替輸送ルートで協力。ホルムズ依存を減らす動きが一段と具体化した。', '<strong>なぜ重要か：</strong>海峡が名目上開いても、保険、護衛、配船が戻らなければ実務上は正常化しないから。日本は備蓄対応だけでは足りず、迂回路そのものを増やす必要がある。', japan[5]['sources']),
+        ]
+        japan_cards = '\n'.join(story_card(t, h, b, s, ja=True) for t, h, b, s in japan_ja)
+        global_cards = []
+        region_map = {'North America': '北米', 'Europe': '欧州', 'Asia ex-Japan': 'アジア（日本除く）', 'Middle East & Africa': '中東・アフリカ', 'Latin America': '中南米', 'Oceania': 'オセアニア'}
+        for region, items in global_regions.items():
+            for _, headline, body, sources in items:
+                global_cards.append(story_card(region_map[region], headline, body, sources, ja=True))
+        global_cards = '\n'.join(global_cards)
+        markets = '\n'.join([
+            table_card('株式', '終値ベースの主要指数', ['指数', '水準', '日次', '週次', '月次', '年初来'], EQ_ROWS, '<strong>主な値動きの理由：</strong>日経平均は海外資金と円安で高値圏を維持したが、60,000円到達後の利益確定で伸び切れなかった。米株は決算が地政学を一時的に上回った。ブラジルは原油高と金融引き締め懸念の組み合わせが重荷。', market_sources),
+            table_card('為替・金利', '通貨と金利の圧力点', ['指標', '水準', '日次', '週次', '月次', '年初来'], FX_ROWS, '<strong>重要ポイント：</strong>ドル円159円台は、日本が輸入インフレ問題をまだ解決できていないことを示す。ドル高と米金利の底堅さは、投資家がまだ完全な平和を織り込んでいない証拠。', market_sources),
+            table_card('商品・暗号資産', 'コモディティとデジタル資産', ['資産', '価格', '日次', '週次', '月次', '年初来'], CMD_ROWS, '<strong>大きな動きの理由：</strong>銀はドル高とインフレヘッジ後退で2%以上下落。WTIはホルムズ物流の正常化が見えないため上昇。ビットコインは米株高を受けて買われたが、主役は依然として原油と為替。', market_sources),
+            '''        <article class="card fade-in" data-image="">
+          <span class="card-tag">健全性スコア</span>
+          <h3 class="card-headline">58/100, 戻りはあるが見出しに弱い。</h3>
+          <p class="card-body"><strong>なぜ58か：</strong>米株の高値維持、日本株の底堅さ、韓国の半導体主導の成長加速はプラス材料。ただし、ホルムズの摩擦で原油に再びリスクプレミアムがつき、ドルも強く、日銀も円の防波堤になっていない。つまり朝より良いが、まだ簡単に崩れうる地合い。</p>
+          <div class="card-sources">\n''' + source_links(market_sources) + '''\n          </div>
+        </article>'''
+        ])
+        predictions = '''        <article class="card fade-in collapsible" data-image="">
+          <span class="card-tag">明日</span>
+          <h3 class="card-headline">円がさらに弱くなっても日本株が持ちこたえるかが最大の焦点。</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>なぜ重要か：</strong>円安は輸出株に追い風だが、行き過ぎると輸入燃料の痛みが勝ち始める。日銀がけん制しないままドル円が上振れると、明日は株高より円安不安が前面に出やすい。</p>
+        </article>
+        <article class="card fade-in collapsible" data-image="">
+          <span class="card-tag">今週</span>
+          <h3 class="card-headline">停戦見出しより、実際の海運正常化が進むかどうかが本当の試金石。</h3>
+          <div class="tap-hint">タップして展開</div>
+          <p class="card-body"><strong>なぜ重要か：</strong>タンカー航行、保険料、ルート安全が戻らなければ、原油高はインフレと消費不安を通じて残り続ける。そうなるとAIや半導体の強さがあっても、日本の上値は抑えられる。</p>
+        </article>'''
+        bottom_line = '午後の相場は、<strong>「停戦の見出し」と「物流まで含めた正常化」は別</strong>だと再確認した一日だった。日本株は海外資金と円安で支えられたが、その円安自体がエネルギー輸入コストを重くする。米株は決算で時間を稼ぎ、原油はホルムズの実務的な詰まりを理由に再び上昇した。<strong>要するに</strong>、午後は朝より改善したが、根本リスクはまだ片付いていない。'
+        sub = '🇯🇵 日経平均は60,000円を試した後に利食いで押されたが高値圏を維持、円は日銀据え置き観測で159円近辺のまま · ソフトバンクのAI資金調達報道、日本のEU EV規則へのけん制、サウジとの代替輸送協力が午後の日本材料 · 米株は決算で高値維持、韓国は半導体で上振れ、欧州は燃料高でEVと屋根上太陽光需要が増加、原油はホルムズ物流不安で再上昇 · 健全性スコア: 58/100'
+        footer = 'CEO午後ブリーフィング · Generated by Sanbot · 2026年4月23日（木）'
+        body = f'''  <header class="masthead"><div class="lang-toggle"><a href="index.html">EN</a><span class="sep">/</span><a href="ja.html" class="active">JA</a></div><div class="masthead-inner"><div class="overline">午後のインテリジェンスブリーフ</div><div class="war-day-counter" id="war-day-badge">🔴 イラン戦争 — <span class="day-num" id="war-day-num">54</span>日目</div><br><div class="econ-countdown" id="econ-countdown">⏱ 経済ダメージ期間: <span class="countdown-num" id="econ-countdown-num">—</span></div><h1>CEO午後ブリーフィング</h1><div class="edition-date">{TODAY_JA} — 午後版</div><div class="edition-sub">{sub}</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">日本</a><a href="#global" class="nav-pill">世界</a><a href="#markets" class="nav-pill">マーケット</a><a href="#predictions" class="nav-pill">予測</a><a href="#bottomline" class="nav-pill">まとめ</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">日本アップデート — 詳細</h2></div><div class="cards">{japan_cards}</div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">世界 — 地域別</h2></div><div class="cards">{global_cards}</div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">マーケット・経済</h2></div><div class="cards">{markets}</div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">予測</h2></div><div class="cards">{predictions}</div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 まとめ</h3><p>{bottom_line}</p></div></section></main><footer class='footer'><p>{footer}</p><p style='margin-top: 0.5rem;'>データソース: Reuters, Kyodo, Yahoo Finance, Google News RSS</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));const needle=document.getElementById('gauge-needle');if(needle){{const score=58;const rotation=-90+(score/100)*180;setTimeout(()=>{{needle.style.transform=`rotate(${{rotation}}deg)`;}},300);}}</script><script>(function(){{var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){{if(now<sixWeek){{var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ 経済ダメージ期間まで <span class="countdown-num">'+daysLeft+'</span> 日';}} else if(now<=eightWeek){{cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 経済ダメージ期間 — <span class="countdown-num" style="color:#fff;">進行中</span>';}} else {{var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ 原油高騰 '+weeksPast+' 週間 — ダメージ閾値超過';}}}})();</script><script src='audio-player.js'></script></body></html>'''
+    return head + body
+
+
+def patch_images_in_reviews():
+    review_files = [
+        'ai-review.html', 'ai-review-ja.html', 'energy-review.html', 'energy-review-ja.html',
+        'health-wellness-review.html', 'health-wellness-review-ja.html', 'longevity-review.html',
+        'longevity-review-ja.html', 'space-review.html', 'space-review-ja.html', 'sports-entertainment-review.html',
+        'sports-entertainment-review-ja.html', 'vc-review.html', 'vc-review-ja.html'
+    ]
+    for name in review_files:
+        path = BASE / name
+        if not path.exists():
+            continue
+        soup = BeautifulSoup(path.read_text(), 'html.parser')
+        changed = False
+        for card in soup.select('article.card'):
+            if card.get('data-image'):
+                continue
+            link = card.select_one('a[href]')
+            if not link:
+                continue
+            img = og_image(link.get('href', ''))
+            if img:
+                card['data-image'] = img
+                changed = True
+        if changed:
+            path.write_text(str(soup))
+
+
+(BASE / 'index.html').write_text(build_index('en'))
+(BASE / 'ja.html').write_text(build_index('ja'))
+patch_images_in_reviews()
 print('updated')
