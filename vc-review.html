@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VC Review — February 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VC Review — February 2026</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
     @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Book.ttf') format('truetype'); font-weight: 400; }
     @font-face { font-family: 'Copernicus Trial'; src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype'); font-weight: 500; }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -92,278 +93,253 @@
   </style>
 </head>
 <body>
-
-  <nav class="nav-bar">
-    <a href="live.html">Live</a>
-    <a href="index.html">Daily</a>
-    <a href="vc-review.html" class="active">Review</a>
-    <a href="archive.html">Archive</a>
-  </nav>
-
-  <div class="sector-tabs">
-    <a href="vc-review.html" class="sector-tab active">VC</a>
-    <a href="ai-review.html" class="sector-tab">AI</a>
-    <a href="longevity-review.html" class="sector-tab">Longevity</a>
-    <a href="health-wellness-review.html" class="sector-tab">Health</a>
-    <a href="space-review.html" class="sector-tab">Space</a>
-    <a href="energy-review.html" class="sector-tab">Energy</a>
-    <a href="sports-entertainment-review.html" class="sector-tab">Sports</a>
-  </div>
-
-  <header class="masthead">
-    <div class="lang-toggle">
-      <a href="vc-review.html" class="active">EN</a>
-      <span class="sep">/</span>
-      <a href="vc-review-ja.html">JA</a>
-    </div>
-    <div class="masthead-inner">
-      <div class="overline">Daily sector intelligence</div>
-      <h1>VC review</h1>
-      <div class="edition-date">February 17, 2026</div>
-      <div class="edition-sub">Fundraising · Mega-rounds · Industry insights · What to watch</div>
-      <div class="divider-bar"></div>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <section class="section" id="overview">
-      <div class="section-header">
-        <h2 class="section-title">Market overview</h2>
-      </div>
-
-      <div class="stat-grid">
-        <div class="stat-card">
-          <div class="stat-value">$469B</div>
-          <div class="stat-label">2025 global VC (highest since '22)</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">$500B</div>
-          <div class="stat-label">OpenAI valuation</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">65%</div>
-          <div class="stat-label">Mega-rounds share ($307B)</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">$226B</div>
-          <div class="stat-label">AI sector funding (48%)</div>
-        </div>
-      </div>
-
-      <div class="highlight-box">
-        <div class="highlight-title">The big story</div>
-        <p><strong>AI dominates as mega-rounds surge 77%.</strong> 2025 delivered $469B in global VC — the highest since 2022 — with 65% concentrated in just 738 mega-rounds. AI captured nearly half of all funding ($226B), and the six largest rounds totaled over $111B combined. The bifurcation is now structural: record capital for AI infrastructure, drought for everything else. Project Stargate's $500B US infrastructure commitment signals government-scale AI ambitions.</p>
-      </div>
-    </section>
-
-    <section class="section" id="megarounds">
-      <div class="section-header">
-        <h2 class="section-title">2025-26 mega-rounds</h2>
-      </div>
-
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Company</th>
-            <th>Amount</th>
-            <th>Stage</th>
-            <th>Valuation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="company">OpenAI</td>
-            <td class="amount">$41B</td>
-            <td>Series E</td>
-            <td class="valuation">$500B</td>
-          </tr>
-          <tr>
-            <td class="company">Anthropic</td>
-            <td class="amount">$32.5B</td>
-            <td>Series D</td>
-            <td class="valuation">$350B</td>
-          </tr>
-          <tr>
-            <td class="company">Scale AI</td>
-            <td class="amount">$14.8B</td>
-            <td>Series F</td>
-            <td class="valuation">$75B</td>
-          </tr>
-          <tr>
-            <td class="company">xAI</td>
-            <td class="amount">$12.8B</td>
-            <td>Series D</td>
-            <td class="valuation">$100B</td>
-          </tr>
-          <tr>
-            <td class="company">IBM (HashiCorp acq.)</td>
-            <td class="amount">$6.4B</td>
-            <td>Acquisition</td>
-            <td class="valuation">—</td>
-          </tr>
-          <tr>
-            <td class="company">Databricks</td>
-            <td class="amount">$5B</td>
-            <td>Series J</td>
-            <td class="valuation">$134B</td>
-          </tr>
-          <tr>
-            <td class="company">Ramp</td>
-            <td class="amount">$800M</td>
-            <td>Series E-2</td>
-            <td class="valuation">$32B</td>
-          </tr>
-          <tr>
-            <td class="company">Kraken</td>
-            <td class="amount">$800M</td>
-            <td>Private</td>
-            <td class="valuation">$20B</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="cards" style="margin-top: 1.5rem;">
-        <article class="card" data-image="/images/cache/56027af87eefef7f.jpg">
-          <span class="card-tag">Infrastructure</span>
-          <h3 class="card-headline">Project Stargate: $500B US AI infrastructure initiative</h3>
-          <p class="card-body">OpenAI, Oracle, and SoftBank backing a four-year, $500B infrastructure project in partnership with the US government, Nvidia, Arm, and Microsoft. <strong>The largest public-private AI investment in history</strong> — signals nation-state competition for AI supremacy is now official policy.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="insights">
-      <div class="section-header">
-        <h2 class="section-title">Top industry insights</h2>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <span class="card-tag">Market shift</span>
-          <h3 class="card-headline">"65% of VC is now mega-rounds — the barbell is real"</h3>
-          <p class="card-meta">Sequoia Capital research</p>
-          <p class="card-body">738 mega-rounds captured $307B in 2025, up 77% from prior year. Meanwhile, deal volume dropped 17% to 29,501 deals. <strong>"Capital is concentrating at the top at an unprecedented rate."</strong></p>
-        </article>
-
-        <article class="card" data-image="/images/cache/ef8a94e237adc1d5.jpg">
-          <span class="card-tag">AI dominance</span>
-          <h3 class="card-headline">"AI is now half of all venture capital"</h3>
-          <p class="card-meta">PitchBook Q4 2025 analysis</p>
-          <p class="card-body">AI startups captured $226B — 48% of total VC. The six largest rounds (all AI) totaled $111B+. <strong>"There are two venture markets now: AI and everything else."</strong></p>
-        </article>
-
-        <article class="card" data-image="/images/cache/7d5cfe41e3c2209a.jpg">
-          <span class="card-tag">Fintech</span>
-          <h3 class="card-headline">"Fintech's comeback driven by later-stage concentration"</h3>
-          <p class="card-meta">CB Insights fintech report</p>
-          <p class="card-body">Fintech hit $51.8B (up 27% YoY) but across 23% fewer deals. Ramp ($32B), Rippling, and prediction markets like Kalshi ($11B) dominated. <strong>"Early-stage fintech remains challenging; growth-stage is thriving."</strong></p>
-        </article>
-
-        <article class="card" data-image="/images/cache/de06e36100b49201.png">
-          <span class="card-tag">Crypto</span>
-          <h3 class="card-headline">"Prediction markets and exchanges lead crypto revival"</h3>
-          <p class="card-meta">Paradigm</p>
-          <p class="card-body">Polymarket ($2B from NYSE parent ICE), Kalshi ($1B Series E at $11B), Kraken ($800M at $20B). <strong>Regulatory clarity and real-world use cases driving institutional capital back.</strong></p>
-        </article>
-
-        <article class="card">
-          <span class="card-tag">Japan</span>
-          <h3 class="card-headline">"Japan VC up 40% as Takaichi policies boost startup ecosystem"</h3>
-          <p class="card-meta">JVCA quarterly report</p>
-          <p class="card-body">Government incentives and deregulation driving record inbound LP interest. PayPay IPO pipeline, Sakana AI unicorn status, and SoftBank's OpenAI gains validating the Japan thesis.</p>
-        </article>
-
-        <article class="card" data-image="/images/cache/25ced551d5e15790.webp">
-          <span class="card-tag">Warning</span>
-          <h3 class="card-headline">"Seed-to-A conversion at historic lows outside AI"</h3>
-          <p class="card-meta">Index Ventures</p>
-          <p class="card-body">Non-AI startups need 3x the metrics for half the valuation. <strong>"The Series A crunch is structural, not cyclical."</strong></p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="funds">
-      <div class="section-header">
-        <h2 class="section-title">New funds launched</h2>
-      </div>
-
-      <div class="fund-grid">
-        <div class="fund-card">
-          <div class="fund-name">Sequoia Capital</div>
-          <div class="fund-size">$8.5B</div>
-          <div class="fund-focus">Global Growth Fund · AI & Enterprise</div>
-        </div>
-        <div class="fund-card">
-          <div class="fund-name">Founders Fund</div>
-          <div class="fund-size">$3.2B</div>
-          <div class="fund-focus">Fund VIII · Frontier Tech</div>
-        </div>
-        <div class="fund-card">
-          <div class="fund-name">Lightspeed Venture Partners</div>
-          <div class="fund-size">$2.8B</div>
-          <div class="fund-focus">Fund XV · Multi-stage</div>
-        </div>
-        <div class="fund-card">
-          <div class="fund-name">Coatue Management</div>
-          <div class="fund-size">$2.5B</div>
-          <div class="fund-focus">Early Stage Fund IV</div>
-        </div>
-        <div class="fund-card">
-          <div class="fund-name">General Catalyst</div>
-          <div class="fund-size">$2.2B</div>
-          <div class="fund-focus">Endurance Fund · AI Healthcare</div>
-        </div>
-        <div class="fund-card">
-          <div class="fund-name">JAFCO (Japan)</div>
-          <div class="fund-size">$800M</div>
-          <div class="fund-focus">SV8 Fund · Japan/US Cross-border</div>
-        </div>
-        <div class="fund-card">
-          <div class="fund-name">Globis Capital (Japan)</div>
-          <div class="fund-size">$450M</div>
-          <div class="fund-focus">Fund VIII · Japan Growth</div>
-        </div>
-        <div class="fund-card">
-          <div class="fund-name">DCM Ventures</div>
-          <div class="fund-size">$400M</div>
-          <div class="fund-focus">A-Fund VI · Asia Early Stage</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="watch">
-      <div class="section-header">
-        <h2 class="section-title">What to watch this week</h2>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <p class="card-body">
-            <strong>NVIDIA earnings (Thursday)</strong> — Bellwether for AI infrastructure spend; B200 supply constraints key topic<br><br>
-            <strong>Project Stargate buildout</strong> — First datacenter site announcements expected<br><br>
-            <strong>PayPay IPO pricing</strong> — March listing approaching, bankers finalizing $19.6B target<br><br>
-            <strong>OpenAI GPT-5 timeline</strong> — Q2 launch speculation intensifying; safety evaluations ongoing<br><br>
-            <strong>DeepSeek impact</strong> — Chinese AI challenger shaking up competitive dynamics and capex forecasts
+<nav class="nav-bar">
+<a href="live.html">Live</a>
+<a href="index.html">Daily</a>
+<a class="active" href="vc-review.html">Review</a>
+<a href="archive.html">Archive</a>
+</nav>
+<div class="sector-tabs">
+<a class="sector-tab active" href="vc-review.html">VC</a>
+<a class="sector-tab" href="ai-review.html">AI</a>
+<a class="sector-tab" href="longevity-review.html">Longevity</a>
+<a class="sector-tab" href="health-wellness-review.html">Health</a>
+<a class="sector-tab" href="space-review.html">Space</a>
+<a class="sector-tab" href="energy-review.html">Energy</a>
+<a class="sector-tab" href="sports-entertainment-review.html">Sports</a>
+</div>
+<header class="masthead">
+<div class="lang-toggle">
+<a class="active" href="vc-review.html">EN</a>
+<span class="sep">/</span>
+<a href="vc-review-ja.html">JA</a>
+</div>
+<div class="masthead-inner">
+<div class="overline">Daily sector intelligence</div>
+<h1>VC review</h1>
+<div class="edition-date">February 17, 2026</div>
+<div class="edition-sub">Fundraising · Mega-rounds · Industry insights · What to watch</div>
+<div class="divider-bar"></div>
+</div>
+</header>
+<main class="container">
+<section class="section" id="overview">
+<div class="section-header">
+<h2 class="section-title">Market overview</h2>
+</div>
+<div class="stat-grid">
+<div class="stat-card">
+<div class="stat-value">$469B</div>
+<div class="stat-label">2025 global VC (highest since '22)</div>
+</div>
+<div class="stat-card">
+<div class="stat-value">$500B</div>
+<div class="stat-label">OpenAI valuation</div>
+</div>
+<div class="stat-card">
+<div class="stat-value">65%</div>
+<div class="stat-label">Mega-rounds share ($307B)</div>
+</div>
+<div class="stat-card">
+<div class="stat-value">$226B</div>
+<div class="stat-label">AI sector funding (48%)</div>
+</div>
+</div>
+<div class="highlight-box">
+<div class="highlight-title">The big story</div>
+<p><strong>AI dominates as mega-rounds surge 77%.</strong> 2025 delivered $469B in global VC — the highest since 2022 — with 65% concentrated in just 738 mega-rounds. AI captured nearly half of all funding ($226B), and the six largest rounds totaled over $111B combined. The bifurcation is now structural: record capital for AI infrastructure, drought for everything else. Project Stargate's $500B US infrastructure commitment signals government-scale AI ambitions.</p>
+</div>
+</section>
+<section class="section" id="megarounds">
+<div class="section-header">
+<h2 class="section-title">2025-26 mega-rounds</h2>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Company</th>
+<th>Amount</th>
+<th>Stage</th>
+<th>Valuation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="company">OpenAI</td>
+<td class="amount">$41B</td>
+<td>Series E</td>
+<td class="valuation">$500B</td>
+</tr>
+<tr>
+<td class="company">Anthropic</td>
+<td class="amount">$32.5B</td>
+<td>Series D</td>
+<td class="valuation">$350B</td>
+</tr>
+<tr>
+<td class="company">Scale AI</td>
+<td class="amount">$14.8B</td>
+<td>Series F</td>
+<td class="valuation">$75B</td>
+</tr>
+<tr>
+<td class="company">xAI</td>
+<td class="amount">$12.8B</td>
+<td>Series D</td>
+<td class="valuation">$100B</td>
+</tr>
+<tr>
+<td class="company">IBM (HashiCorp acq.)</td>
+<td class="amount">$6.4B</td>
+<td>Acquisition</td>
+<td class="valuation">—</td>
+</tr>
+<tr>
+<td class="company">Databricks</td>
+<td class="amount">$5B</td>
+<td>Series J</td>
+<td class="valuation">$134B</td>
+</tr>
+<tr>
+<td class="company">Ramp</td>
+<td class="amount">$800M</td>
+<td>Series E-2</td>
+<td class="valuation">$32B</td>
+</tr>
+<tr>
+<td class="company">Kraken</td>
+<td class="amount">$800M</td>
+<td>Private</td>
+<td class="valuation">$20B</td>
+</tr>
+</tbody>
+</table>
+<div class="cards" style="margin-top: 1.5rem;">
+<article class="card" data-image="/images/cache/56027af87eefef7f.jpg">
+<span class="card-tag">Infrastructure</span>
+<h3 class="card-headline">Project Stargate: $500B US AI infrastructure initiative</h3>
+<p class="card-body">OpenAI, Oracle, and SoftBank backing a four-year, $500B infrastructure project in partnership with the US government, Nvidia, Arm, and Microsoft. <strong>The largest public-private AI investment in history</strong> — signals nation-state competition for AI supremacy is now official policy.</p>
+</article>
+</div>
+</section>
+<section class="section" id="insights">
+<div class="section-header">
+<h2 class="section-title">Top industry insights</h2>
+</div>
+<div class="cards">
+<article class="card" data-image="">
+<span class="card-tag">Market shift</span>
+<h3 class="card-headline">"65% of VC is now mega-rounds — the barbell is real"</h3>
+<p class="card-meta">Sequoia Capital research</p>
+<p class="card-body">738 mega-rounds captured $307B in 2025, up 77% from prior year. Meanwhile, deal volume dropped 17% to 29,501 deals. <strong>"Capital is concentrating at the top at an unprecedented rate."</strong></p>
+</article>
+<article class="card" data-image="/images/cache/ef8a94e237adc1d5.jpg">
+<span class="card-tag">AI dominance</span>
+<h3 class="card-headline">"AI is now half of all venture capital"</h3>
+<p class="card-meta">PitchBook Q4 2025 analysis</p>
+<p class="card-body">AI startups captured $226B — 48% of total VC. The six largest rounds (all AI) totaled $111B+. <strong>"There are two venture markets now: AI and everything else."</strong></p>
+</article>
+<article class="card" data-image="/images/cache/7d5cfe41e3c2209a.jpg">
+<span class="card-tag">Fintech</span>
+<h3 class="card-headline">"Fintech's comeback driven by later-stage concentration"</h3>
+<p class="card-meta">CB Insights fintech report</p>
+<p class="card-body">Fintech hit $51.8B (up 27% YoY) but across 23% fewer deals. Ramp ($32B), Rippling, and prediction markets like Kalshi ($11B) dominated. <strong>"Early-stage fintech remains challenging; growth-stage is thriving."</strong></p>
+</article>
+<article class="card" data-image="/images/cache/de06e36100b49201.png">
+<span class="card-tag">Crypto</span>
+<h3 class="card-headline">"Prediction markets and exchanges lead crypto revival"</h3>
+<p class="card-meta">Paradigm</p>
+<p class="card-body">Polymarket ($2B from NYSE parent ICE), Kalshi ($1B Series E at $11B), Kraken ($800M at $20B). <strong>Regulatory clarity and real-world use cases driving institutional capital back.</strong></p>
+</article>
+<article class="card" data-image="">
+<span class="card-tag">Japan</span>
+<h3 class="card-headline">"Japan VC up 40% as Takaichi policies boost startup ecosystem"</h3>
+<p class="card-meta">JVCA quarterly report</p>
+<p class="card-body">Government incentives and deregulation driving record inbound LP interest. PayPay IPO pipeline, Sakana AI unicorn status, and SoftBank's OpenAI gains validating the Japan thesis.</p>
+</article>
+<article class="card" data-image="/images/cache/25ced551d5e15790.webp">
+<span class="card-tag">Warning</span>
+<h3 class="card-headline">"Seed-to-A conversion at historic lows outside AI"</h3>
+<p class="card-meta">Index Ventures</p>
+<p class="card-body">Non-AI startups need 3x the metrics for half the valuation. <strong>"The Series A crunch is structural, not cyclical."</strong></p>
+</article>
+</div>
+</section>
+<section class="section" id="funds">
+<div class="section-header">
+<h2 class="section-title">New funds launched</h2>
+</div>
+<div class="fund-grid">
+<div class="fund-card">
+<div class="fund-name">Sequoia Capital</div>
+<div class="fund-size">$8.5B</div>
+<div class="fund-focus">Global Growth Fund · AI &amp; Enterprise</div>
+</div>
+<div class="fund-card">
+<div class="fund-name">Founders Fund</div>
+<div class="fund-size">$3.2B</div>
+<div class="fund-focus">Fund VIII · Frontier Tech</div>
+</div>
+<div class="fund-card">
+<div class="fund-name">Lightspeed Venture Partners</div>
+<div class="fund-size">$2.8B</div>
+<div class="fund-focus">Fund XV · Multi-stage</div>
+</div>
+<div class="fund-card">
+<div class="fund-name">Coatue Management</div>
+<div class="fund-size">$2.5B</div>
+<div class="fund-focus">Early Stage Fund IV</div>
+</div>
+<div class="fund-card">
+<div class="fund-name">General Catalyst</div>
+<div class="fund-size">$2.2B</div>
+<div class="fund-focus">Endurance Fund · AI Healthcare</div>
+</div>
+<div class="fund-card">
+<div class="fund-name">JAFCO (Japan)</div>
+<div class="fund-size">$800M</div>
+<div class="fund-focus">SV8 Fund · Japan/US Cross-border</div>
+</div>
+<div class="fund-card">
+<div class="fund-name">Globis Capital (Japan)</div>
+<div class="fund-size">$450M</div>
+<div class="fund-focus">Fund VIII · Japan Growth</div>
+</div>
+<div class="fund-card">
+<div class="fund-name">DCM Ventures</div>
+<div class="fund-size">$400M</div>
+<div class="fund-focus">A-Fund VI · Asia Early Stage</div>
+</div>
+</div>
+</section>
+<section class="section" id="watch">
+<div class="section-header">
+<h2 class="section-title">What to watch this week</h2>
+</div>
+<div class="cards">
+<article class="card" data-image="">
+<p class="card-body">
+<strong>NVIDIA earnings (Thursday)</strong> — Bellwether for AI infrastructure spend; B200 supply constraints key topic<br/><br/>
+<strong>Project Stargate buildout</strong> — First datacenter site announcements expected<br/><br/>
+<strong>PayPay IPO pricing</strong> — March listing approaching, bankers finalizing $19.6B target<br/><br/>
+<strong>OpenAI GPT-5 timeline</strong> — Q2 launch speculation intensifying; safety evaluations ongoing<br/><br/>
+<strong>DeepSeek impact</strong> — Chinese AI challenger shaking up competitive dynamics and capex forecasts
           </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="bottomline">
-      <div class="bottom-line">
-        <div class="section-header">
-          <h2 class="section-title">Bottom line</h2>
-        </div>
-        <p>The venture capital market has officially split in two. AI captured 48% of all funding in 2025 ($226B), while mega-rounds (65% of capital) went to just 738 companies. The $500B Project Stargate signals AI is now a matter of national infrastructure. Fintech and crypto are staging comebacks via later-stage concentration, while early-stage non-AI startups face brutal conditions. Japan is ascending with Takaichi-era incentives driving record LP interest.</p>
-        <p style="margin-top: 1rem; font-weight: 600;">AI dominance structural. Mega-rounds concentrating. Japan ascending. Non-AI early-stage: survival mode.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <p>VC Review · Compiled by Sanbot · February 17, 2026</p>
-  </footer>
-
+</article>
+</div>
+</section>
+<section class="section" id="bottomline">
+<div class="bottom-line">
+<div class="section-header">
+<h2 class="section-title">Bottom line</h2>
+</div>
+<p>The venture capital market has officially split in two. AI captured 48% of all funding in 2025 ($226B), while mega-rounds (65% of capital) went to just 738 companies. The $500B Project Stargate signals AI is now a matter of national infrastructure. Fintech and crypto are staging comebacks via later-stage concentration, while early-stage non-AI startups face brutal conditions. Japan is ascending with Takaichi-era incentives driving record LP interest.</p>
+<p style="margin-top: 1rem; font-weight: 600;">AI dominance structural. Mega-rounds concentrating. Japan ascending. Non-AI early-stage: survival mode.</p>
+</div>
+</section>
+</main>
+<footer class="footer">
+<p>VC Review · Compiled by Sanbot · February 17, 2026</p>
+</footer>
 </body>
 </html>
