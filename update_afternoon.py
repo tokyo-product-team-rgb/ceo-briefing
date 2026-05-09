@@ -9,9 +9,11 @@ import requests
 
 BASE = Path('/Users/xand/.openclaw/workspace/ceo-briefing')
 HEADERS = {'User-Agent': 'Mozilla/5.0'}
-TODAY_EN = 'Thursday, April 30, 2026'
-TODAY_JA = '2026年4月30日（木）'
-TITLE_DATE = 'Apr 30, 2026'
+TODAY_EN = 'Saturday, May 9, 2026'
+TODAY_JA = '2026年5月9日（土）'
+TITLE_DATE = 'May 9, 2026'
+WAR_DAY = '68'
+HEALTH = 64
 
 
 def gnews(query: str):
@@ -109,31 +111,30 @@ def table_card(tag, headline, headers, rows, body, sources):
 
 
 src = {
-    'yen_shorts': gnews('Investors reload yen shorts in intervention test Reuters'),
-    'boj_split': gnews('Bank of Japan keeps rates steady but hawkish split points to June hike Reuters'),
-    'core_infl': gnews("Japan's core inflation stays below BOJ target, energy risks grow Reuters"),
-    'takaichi_budget': gnews('Japan PM Takaichi rules out extra budget for now Reuters'),
-    'japan_exports': gnews('Japan exports rise for seventh month as AI demand blunts Mideast risks for now Reuters'),
-    'japan_bullrun': gnews("Japan's record bull run under threat as Mideast war clouds earnings season Reuters"),
-    'real_wages': gnews('Japan real wages grow for first time in 13 months boosting BOJ hike case Reuters'),
-    'nojima': gnews("Japan's Nojima to buy Hitachi's consumer appliances unit for more than $630 million Reuters"),
-    'us_stocks': gnews('Oil soars US stocks end muted on Iran worries with earnings Fed in focus Reuters'),
-    'trading_day': gnews('Trading Day Fed dissent oil ascent Reuters'),
-    'pg_hit': gnews('P&G warns of $1 billion profit hit in fiscal 2027 from higher oil prices Reuters'),
-    'automakers': gnews('Foreign automakers threaten to pull cheapest models from US without trade deal Reuters'),
-    'europe_shares': gnews('European shares hit three-week low as earnings data and Iran conflict weigh Reuters'),
-    'ecb_energy': gnews("Energy crisis raises concerns for financial stability ECB's Panetta warns Reuters"),
-    'china_fuel': gnews('China curtailing not banning fuel exports shipping data shows Reuters'),
-    'sk_hynix': gnews('SK Hynix to invest about $13 bln in a new South Korea plant to meet AI memory demand Reuters'),
-    'india_rupee': gnews("Rupee's slide to record low puts Indian central bank back on the defensive Reuters"),
-    'worldbank_energy': gnews('World Bank forecasts 24% surge in energy prices in 2026 due to Middle East war Reuters'),
-    'trump_choices': gnews('One month into Iran war only hard choices for Trump Reuters'),
-    'airlines': gnews('Airlines cancel flights amid Middle East conflict Reuters'),
-    'lula': gnews("Brazil's Lula assails Trump threats says leaders should seek respect Reuters"),
-    'mercosur_canada': gnews('Canadian trade team headed to Brasilia next week for Mercosur talks Reuters'),
-    'chile_us': gnews('Chile US to sign mining and security agreements Reuters'),
+    'hormuz': gnews('NATO Rutte Trump wants Hormuz pledges within days Reuters'),
+    'japan_yen_us': gnews('Japan keeps US close as it signals unlimited yen defence Reuters'),
+    'japan_intervention': gnews('Japan may have spent $32 billion in additional yen-buying intervention Reuters'),
+    'japan_election_market': gnews("Instant View Japan's markets react to Takaichi's historic election victory Reuters"),
+    'japan_takaichi_tax': gnews('Landslide election win clears path for Japan Takaichi to deliver tax cuts Reuters'),
+    'japan_china': gnews("Japan PM's big election win could mean more beef with Beijing Reuters"),
+    'japan_trade_template': gnews('Breakingviews Japan trade deal breaks US tariff template Reuters'),
+    'softbank_line': gnews('SoftBank in talks with Naver over control of Line operator LY Reuters'),
+    'us_jobs': gnews('Stocks rally dollar higher in wake of US jobs numbers Reuters'),
+    'us_earnings': gnews("Wall Street's earnings fantasies may soon get harsh reality check Reuters"),
+    'us_energy_tariffs': gnews('Trump tariff reversal could cut costs for US energy firms but will likely leave broader flows unchanged Reuters'),
+    'eu_tariffs': gnews('US to move forward with plans to hike EU car tariffs Reuters'),
+    'eu_shares': gnews('European shares pull back as fragile US-Iran truce weighs on sentiment Reuters'),
+    'eu_middleeast': gnews('European shares drop as Middle East continues to hit sentiment Reuters'),
+    'china_rebound': gnews('China is coming back and the timing couldnt be better Reuters'),
+    'china_q1': gnews("China's Q1 economic rebound faces rough seas as Iran war jolts global outlook Reuters"),
+    'jimmy_lai': gnews('China critic Jimmy Lai sentenced to 20 years in jail after landmark Hong Kong trial Reuters'),
+    'india_credit': gnews('India approves $1.9 billion credit guarantee to support businesses hit by Middle East crisis Reuters'),
+    'india_rupee': gnews('Rupee gains on week US-Iran jitters spark choppy trading Reuters'),
+    'airlines': gnews('Airlines cancel flights in response to Middle East conflict Reuters'),
+    'jetfuel': gnews("Iran war jet fuel concerns cloud airlines' summer holiday plans Reuters"),
+    'brazil_trump': gnews("Brazil's Lula reports progress in relations with US after talks with Trump Reuters"),
+    'brazil_satisfied': gnews("Brazil's Lula says he's very satisfied after meeting with Trump Reuters"),
     'vanuatu': gnews('Australia Vanuatu security agreement delayed Reuters'),
-    'iranian_players': gnews("Five Iranian women's soccer players granted humanitarian visas in Australia Reuters"),
     'yahoo': {'url': 'https://finance.yahoo.com/', 'source': 'Yahoo Finance', 'title': 'Yahoo Finance', 'image': ''},
 }
 
@@ -153,133 +154,137 @@ FX_ROWS = [
     market_row('EUR/USD', 'EURUSD=X', 4),
     market_row('DXY', 'DX-Y.NYB', 3),
     market_row('US 10Y Treasury', '^TNX', 3, '%'),
+    market_row('US 2Y Treasury', '^IRX', 3, '%'),
 ]
 CMD_ROWS = [
+    market_row('WTI Crude', 'CL=F'),
+    market_row('Brent Crude', 'BZ=F'),
     market_row('Gold', 'GC=F'),
     market_row('Silver', 'SI=F', 3),
-    market_row('WTI Crude', 'CL=F'),
     market_row('Bitcoin', 'BTC-USD'),
     market_row('Ethereum', 'ETH-USD'),
 ]
-market_sources = [src['us_stocks'], src['worldbank_energy'], src['china_fuel'], src['yahoo']]
 
 nikkei_level, nikkei_day = EQ_ROWS[0][1], EQ_ROWS[0][2]
+spx_level, spx_day = EQ_ROWS[1][1], EQ_ROWS[1][2]
 usdjpy_level, usdjpy_day = FX_ROWS[0][1], FX_ROWS[0][2]
-wti_level, wti_day = CMD_ROWS[2][1], CMD_ROWS[2][2]
+wti_level, wti_day = CMD_ROWS[0][1], CMD_ROWS[0][2]
 
 japan = [
     {
+        'tag': '🇯🇵 JAPAN · FX DEFENCE',
+        'headline': f'Japan spent the afternoon tightening coordination with Washington because defending the yen near USD/JPY {usdjpy_level} ({usdjpy_day}) works better if speculators think Tokyo has US political cover, not just verbal resolve.',
+        'body': '<strong>Why it happened:</strong> Tokyo knows unilateral jawboning fades quickly when the interest-rate gap still favors the dollar. Keeping the US close raises the perceived cost of leaning against Japan, so the policy chain is diplomatic alignment first, then stronger currency signalling second.',
+        'sources': [src['japan_yen_us'], src['hormuz']],
+    },
+    {
+        'tag': '🇯🇵 JAPAN · INTERVENTION',
+        'headline': 'Suspected multi-day yen-buying intervention became the afternoon’s clearest new signal because officials appear to have concluded that imported inflation risk was rising faster than market discipline alone could contain it.',
+        'body': '<strong>Why it happened:</strong> once a weak yen starts feeding directly into food, fuel, and political credibility, waiting gets more expensive. That is why the likely $32 billion deployment matters, it suggests the Ministry of Finance judged passivity as the riskier option.',
+        'sources': [src['japan_intervention'], src['japan_yen_us']],
+    },
+    {
         'tag': '🇯🇵 JAPAN · MARKET CLOSE',
-        'headline': f'Tokyo finished the afternoon with Nikkei at {nikkei_level} ({nikkei_day}) because AI-linked exporters still had earnings support, even as oil risk and yen stress capped the upside.',
-        'body': '<strong>Why it happened:</strong> the close reflected two forces pulling in opposite directions. Exporters and semiconductor-linked names kept attracting buyers because AI demand and overseas revenue translation still look supportive. But the rally stayed constrained because a weaker yen and higher crude simultaneously raise Japan’s import bill. The causal chain was exporter earnings support offset by imported-cost anxiety.',
-        'sources': [src['japan_bullrun'], src['japan_exports']],
+        'headline': f'Nikkei finished at {nikkei_level} ({nikkei_day}) because Takaichi’s victory gave investors a fresh domestic-growth story even while currency stress kept exporters and policy-sensitive names under a microscope.',
+        'body': '<strong>Why it happened:</strong> markets liked the prospect of tax cuts and more predictable stimulus discipline, which supports domestic demand. But the same session stayed selective because a stronger intervention stance and geopolitical risk complicate the earnings outlook for globally exposed companies.',
+        'sources': [src['japan_election_market'], src['japan_takaichi_tax']],
     },
     {
-        'tag': '🇯🇵 JAPAN · FX / INTERVENTION',
-        'headline': f'The yen stayed at the center of the afternoon because USD/JPY hovered near {usdjpy_level} ({usdjpy_day}), drawing fresh tests of whether Tokyo will move beyond verbal intervention.',
-        'body': '<strong>Why it happened:</strong> traders rebuilt short-yen positions because global capital still prefers the dollar when oil, war risk, and rate uncertainty all rise together. That creates a self-reinforcing loop: dollar demand weakens the yen, a weaker yen worsens Japan’s imported inflation problem, and that in turn raises pressure on officials to sound tougher.',
-        'sources': [src['yen_shorts']],
+        'tag': '🇯🇵 JAPAN · POLITICS / CHINA',
+        'headline': 'Takaichi’s landslide immediately raised the geopolitical temperature because a stronger mandate makes it easier for her to take a firmer line on China without fearing an instant domestic backlash.',
+        'body': '<strong>Why it happened:</strong> electoral strength widens room for security and trade positioning. Beijing now has more reason to test rhetoric, while Tokyo has more incentive to prove resolve, so the causal chain runs from domestic mandate to external friction.',
+        'sources': [src['japan_china'], src['japan_takaichi_tax']],
     },
     {
-        'tag': '🇯🇵 JAPAN · BOJ / POLICY',
-        'headline': 'The BOJ looked more conflicted than calm because its hawkish internal split says inflation risk is real, but the external shock is making the timing of the next hike much harder.',
-        'body': '<strong>Why it happened:</strong> the bank cannot ignore yen weakness and imported energy inflation forever, so a hawkish split matters. But it also cannot tighten carelessly into a shock that is being driven by oil and geopolitics rather than broad-based domestic overheating. The cause of the mixed signal is that Japan now has inflation pressure without a clean growth backdrop.',
-        'sources': [src['boj_split'], src['core_infl']],
-    },
-    {
-        'tag': '🇯🇵 JAPAN · INFLATION / HOUSEHOLDS',
-        'headline': 'Soft core inflation and better real wages told the same story in the afternoon: Japan has some domestic resilience, but not enough yet to make imported inflation feel safe.',
-        'body': '<strong>Why it happened:</strong> real wages matter because they are the bridge from higher prices to sustainable spending power. But core inflation staying below target means the BOJ still lacks proof that demand-led inflation has fully taken over. The reason this matters is causal: if inflation is still mostly imported, policy makers have less room to welcome it.',
-        'sources': [src['real_wages'], src['core_infl']],
-    },
-    {
-        'tag': '🇯🇵 JAPAN · FISCAL POLICY',
-        'headline': 'Prime Minister Takaichi kept extra-budget firepower in reserve because Tokyo still sees this as a shock to monitor before spending aggressively into it.',
-        'body': '<strong>Why it happened:</strong> holding back now preserves fiscal ammunition for a scenario where oil stays high long enough to damage demand and sentiment more deeply. If the government spent immediately, it could waste room on the first wave and have less flexibility later. The cause is sequencing: wait for evidence that a price shock is becoming a broader economic shock.',
-        'sources': [src['takaichi_budget']],
+        'tag': '🇯🇵 JAPAN · TRADE / US',
+        'headline': 'Japan’s trade template mattered more in the afternoon because Tokyo is trying to show Washington that cooperation on security and supply chains should buy tariff flexibility.',
+        'body': '<strong>Why it happened:</strong> Japan cannot fully offset US tariff risk with rhetoric, so it is packaging itself as the strategic ally that solves problems America cares about, from semiconductors to regional security. The goal is to change the cost-benefit math in Washington.',
+        'sources': [src['japan_trade_template'], src['japan_yen_us']],
     },
     {
         'tag': '🇯🇵 JAPAN · CORPORATE',
-        'headline': 'Nojima’s move on Hitachi’s appliance unit stood out because Japanese corporates are trying to lock in controllable advantages while geopolitics makes the macro backdrop less controllable.',
-        'body': '<strong>Why it happened:</strong> when boards cannot control oil, war risk, or currencies, they focus on scale, procurement, and distribution. The acquisition fits that logic. It is a defensive growth move, driven by the idea that operational leverage is worth more when the external environment is unstable.',
-        'sources': [src['nojima']],
+        'headline': 'SoftBank’s talks over tighter control of Line operator LY stood out because Japanese corporate strategy is shifting toward assets that secure distribution, data, and domestic digital leverage while the external backdrop gets noisier.',
+        'body': '<strong>Why it happened:</strong> when geopolitics makes macro demand less predictable, boards put more value on platforms they can control directly. The deal logic is therefore defensive and strategic at the same time, own the customer pipe before cross-border volatility gets worse.',
+        'sources': [src['softbank_line'], src['japan_trade_template']],
     },
 ]
 
 global_regions = {
     'North America': [
-        ('North America', 'Wall Street lost momentum because higher oil stopped looking like a headline spike and started looking like an earnings and Fed problem.', '<strong>Why it happened:</strong> once traders believe crude will stay elevated, they have to reprice three things at once: inflation, margins, and policy flexibility. That is why oil strength weighed on stocks even before every company had updated guidance.', [src['us_stocks'], src['trading_day']]),
-        ('North America', 'P&G’s profit warning mattered because it showed the energy shock is already moving from macro talk into corporate math.', '<strong>Why it happened:</strong> oil raises transport, packaging, and petrochemical-input costs at the same time. The warning was not about one bad quarter, it was about a cost chain that becomes hard to offset if crude stays high.', [src['pg_hit']]),
-        ('North America', 'Foreign automakers threatened to pull cheaper models from the US because tariff uncertainty is starting to distort product decisions, not just trade rhetoric.', '<strong>Why it happened:</strong> if tariffs remain sticky, low-margin models become less viable in the US market. That forces automakers to defend profitability by cutting offerings, which is why trade policy is now affecting consumer choice directly.', [src['automakers']]),
+        ('North America', f'US stocks rallied into the close, with the S&P 500 at {spx_level} ({spx_day}), because payroll resilience reassured investors that growth has not cracked yet even as oil and tariff risks stayed in the background.', '<strong>Why it happened:</strong> stronger jobs data lowers immediate recession fear, so traders were willing to buy cyclical risk. The move was not cleanly bullish, though, because the same strength also delays hopes for fast Fed easing.', [src['us_jobs'], src['us_earnings']]),
+        ('North America', 'Wall Street’s earnings optimism started looking vulnerable because analysts have been slow to fully price how higher energy, tariffs, and freight costs can squeeze margins all at once.', '<strong>Why it happened:</strong> when multiple cost pressures hit together, companies lose the easy option of blaming one temporary factor. Investors are now questioning whether consensus estimates still assume a world that no longer exists.', [src['us_earnings'], src['us_energy_tariffs']]),
+        ('North America', 'Trump’s tariff adjustment for energy inputs mattered because Washington is trying to protect domestic producers from cost spikes without abandoning the broader protectionist message.', '<strong>Why it happened:</strong> the administration needs to avoid hurting politically useful industries with its own trade policy. That creates selective carve-outs, which are effectively an admission that blanket tariffs were starting to feed back into US operating costs.', [src['us_energy_tariffs']]),
     ],
     'Europe': [
-        ('Europe', 'European shares slid to a three-week low because weak earnings, softer data, and the Iran-linked oil shock all hit at the same time.', '<strong>Why it happened:</strong> Europe had no clean offset. Earnings disappointed, data did not reassure, and higher oil threatened both inflation and demand. The selloff came from that stacked causal chain rather than any single data point.', [src['europe_shares']]),
-        ('Europe', 'The ECB kept warning about financial-stability risk because an energy shock can tighten credit even before policy rates move.', '<strong>Why it happened:</strong> higher energy costs squeeze households and companies first, then show up as weaker borrowers and more fragile markets. That is why the ECB is worried about transmission into the financial system, not only CPI prints.', [src['ecb_energy']]),
-        ('Europe', 'The region’s tariff nerves stayed elevated because Europe now has to manage weaker growth and external trade pressure at the same time.', '<strong>Why it happened:</strong> when domestic momentum is already fading, trade conflict becomes more damaging because companies have less pricing power and governments have less fiscal room. Europe’s anxiety is caused by that double bind.', [src['europe_shares'], src['ecb_energy']]),
+        ('Europe', 'Europe had a harder afternoon because the US move toward higher EU car tariffs hit one of the region’s most exposed industrial nerves.', '<strong>Why it happened:</strong> autos sit at the intersection of exports, manufacturing employment, and political symbolism. When tariff risk rises there, investors read it as a direct threat to both earnings and already-fragile European growth.', [src['eu_tariffs']]),
+        ('Europe', 'European shares pulled back because the market stopped treating the US-Iran truce language as stabilizing and started treating it as too fragile to change positioning.', '<strong>Why it happened:</strong> a ceasefire only helps risk assets if traders believe it lowers the probability of renewed supply disruption. Europe sold off because that credibility was not there.', [src['eu_shares'], src['eu_middleeast']]),
+        ('Europe', 'The region stayed heavy because Middle East headlines raise energy costs for an economy that still has weak domestic momentum and little room for another imported inflation shock.', '<strong>Why it happened:</strong> Europe is more vulnerable when oil jumps into soft growth. Higher energy becomes a tax on households, a margin hit for industry, and a policy headache for the ECB at the same time.', [src['eu_middleeast'], src['eu_shares']]),
     ],
     'Asia ex-Japan': [
-        ('Asia ex-Japan', 'China’s curbs on fuel exports kept regional energy markets tight because even a partial reduction from such a large supplier forces neighbors to bid harder for supply.', '<strong>Why it happened:</strong> Beijing is prioritizing domestic stability, and that means fewer barrels available to ease the regional squeeze. The effect is causal and mechanical: less export availability means higher competition and firmer prices elsewhere in Asia.', [src['china_fuel']]),
-        ('Asia ex-Japan', 'SK Hynix remained one of the few clean risk-on stories because AI memory demand still looks strong enough to overcome the broader geopolitical gloom.', '<strong>Why it happened:</strong> investors are treating high-bandwidth memory as a real spending cycle, not a hope trade. That is why the stock can outperform even when the wider region is coping with oil and rates stress.', [src['sk_hynix']]),
-        ('Asia ex-Japan', 'India’s rupee stayed under pressure because oil is worsening both the import bill and the central bank’s room to ease.', '<strong>Why it happened:</strong> higher crude hurts India twice, first through the current account and second through inflation. That dual hit is why the RBI is being pushed back onto the defensive.', [src['india_rupee']]),
+        ('Asia ex-Japan', 'China’s rebound story gained traction because investors now see Beijing as one of the few large economies that could stabilize global demand if the West gets dragged down by energy and trade shocks.', '<strong>Why it happened:</strong> when the US and Europe look more policy-constrained, any sign of Chinese recovery becomes more valuable to global markets. Timing matters because China is being judged relative to weakening peers, not against perfection.', [src['china_rebound'], src['china_q1']]),
+        ('Asia ex-Japan', 'But China’s Q1 rebound also looked more fragile because the Iran war threatens shipping, commodity costs, and external demand before the recovery has fully broadened.', '<strong>Why it happened:</strong> export-sensitive recoveries depend on stable trade lanes and predictable input costs. The Middle East shock attacks both, which is why the market is upgrading downside scenarios again.', [src['china_q1'], src['hormuz']]),
+        ('Asia ex-Japan', 'India’s emergency credit guarantee mattered because New Delhi judged the Middle East shock as serious enough to warrant cushioning businesses before stress spread from fuel costs into jobs and financing.', '<strong>Why it happened:</strong> India imports energy, so oil pain can quickly hit working capital, transport, and inflation expectations. The package is meant to interrupt that transmission chain before it becomes a broader slowdown.', [src['india_credit'], src['india_rupee']]),
     ],
     'Middle East & Africa': [
-        ('Middle East & Africa', f'WTI crude at {wti_level} ({wti_day}) remained the region’s most global export because the war is still being priced as a supply and transport risk, not just a military event.', '<strong>Why it happened:</strong> markets are baking in the possibility of prolonged shipping disruption, higher insurance costs, and spillover into refined fuels. Oil stays elevated because traders are pricing duration, not just danger.', [src['worldbank_energy'], src['airlines']]),
-        ('Middle East & Africa', 'The World Bank’s energy-price warning hit harder in the afternoon because it quantified what a prolonged conflict could do to inflation and growth.', '<strong>Why it happened:</strong> once institutions start attaching numbers to the shock, markets move from vague fear to measurable downgrade risk. That makes the scenario feel more durable and therefore more damaging.', [src['worldbank_energy']]),
-        ('Middle East & Africa', 'Airlines kept cancelling flights because airspace, fuel costs, and insurance assumptions have all become unstable at once.', '<strong>Why it happened:</strong> carriers are responding to a cluster of risks, not one isolated threat. When routing certainty disappears, normal scheduling economics stop working, which is why cancellations persist.', [src['airlines'], src['trump_choices']]),
+        ('Middle East & Africa', f'WTI crude held near {wti_level} ({wti_day}) because markets are still pricing Hormuz and regional shipping risk as a persistent supply threat rather than a one-day scare.', '<strong>Why it happened:</strong> oil stays elevated when traders believe the risk window is measured in weeks, not hours. Insurance, rerouting, and inventory hedging all support prices even without an outright physical outage.', [src['hormuz'], src['airlines']]),
+        ('Middle East & Africa', 'Airlines kept cancelling flights because the conflict is disrupting the economics of aviation through route uncertainty, fuel costs, and insurance assumptions at the same time.', '<strong>Why it happened:</strong> carriers can absorb one stressor, but not three synchronized ones. Once safe routing, jet fuel pricing, and schedule reliability all weaken together, cancellations become the rational response.', [src['airlines'], src['jetfuel']]),
+        ('Middle East & Africa', 'The broader region remained the market’s top macro variable because every new headline now feeds straight into inflation expectations, central-bank timing, and consumer confidence far outside the region itself.', '<strong>Why it happened:</strong> Middle East risk matters globally when it changes the price of transport and energy, not only because of battlefield developments. That is why even faraway equity markets are trading the story so directly.', [src['hormuz'], src['jetfuel']]),
     ],
     'Latin America': [
-        ('Latin America', 'Lula’s latest criticism of Trump mattered because Brazil wants to protect both domestic political legitimacy and bargaining leverage in a harsher global trade climate.', '<strong>Why it happened:</strong> public pushback helps Lula avoid looking subordinate abroad or weak at home. The cause is not just ideology, it is also coalition management and strategic signaling.', [src['lula']]),
-        ('Latin America', 'Mercosur and Canada talks gained significance because both sides want alternative trade channels before tariff politics gets even less predictable.', '<strong>Why it happened:</strong> diversification is more valuable when access to major markets becomes politically unstable. The talks are accelerating because both parties are hedging future trade risk.', [src['mercosur_canada']]),
-        ('Latin America', 'Chile’s mining and security agreements with the US reflected how critical minerals have become part of geopolitics, not just commodity trade.', '<strong>Why it happened:</strong> Washington wants supply security while Chile wants capital and strategic relevance. Those incentives line up because minerals now sit inside national-security planning.', [src['chile_us']]),
+        ('Latin America', 'Lula’s progress report after meeting Trump mattered because Brazil is trying to keep US trade relations functional before tariffs or geopolitical alignment demands get tougher.', '<strong>Why it happened:</strong> Brazil benefits from strategic ambiguity, but that becomes harder when Washington is using trade and diplomacy more coercively. Lula is signaling pragmatism to preserve room to maneuver.', [src['brazil_trump'], src['brazil_satisfied']]),
+        ('Latin America', 'The upbeat tone from Lula also mattered domestically because he needs to show Brazilian business that diplomacy can still reduce external shocks before they hit exports and investment plans.', '<strong>Why it happened:</strong> positive optics lower uncertainty for exporters and agribusiness. The political logic is simple, foreign stability is a domestic economic message.', [src['brazil_satisfied'], src['brazil_trump']]),
+        ('Latin America', 'Latin America stayed leveraged to the same global theme, whichever countries can keep access to both Washington and commodity demand will outperform if the tariff-and-oil regime lasts.', '<strong>Why it happened:</strong> the region wins or loses on trade channels and price cycles. Today’s diplomacy matters because it shapes those channels before the next shock arrives.', [src['brazil_trump']]),
     ],
     'Oceania': [
-        ('Oceania', 'The Australia-Vanuatu security delay mattered because Pacific alignment is proving slower and more negotiated than Canberra would prefer.', '<strong>Why it happened:</strong> island governments want support without appearing fully locked into one camp too quickly. The delay comes from that balancing act between strategic urgency and local political consent.', [src['vanuatu']]),
-        ('Oceania', 'Australia’s humanitarian visas for Iranian women footballers stood out because war displacement and women’s rights have become politically inseparable in this conflict.', '<strong>Why it happened:</strong> Canberra could frame the decision as both humanitarian action and values signaling. It moved because the case carried symbolic weight far beyond routine migration processing.', [src['iranian_players']]),
-        ('Oceania', 'Regional politics stayed tied to Middle East spillovers because energy costs and alliance choices are now shaping even seemingly local Pacific decisions.', '<strong>Why it happened:</strong> when global shocks lift fuel costs and sharpen security competition, smaller regional negotiations take on larger strategic meaning. The cause is interconnection, not coincidence.', [src['vanuatu'], src['worldbank_energy']]),
+        ('Oceania', 'The delayed Australia-Vanuatu security agreement mattered because Pacific states are still resisting the idea that strategic urgency should override their bargaining leverage.', '<strong>Why it happened:</strong> smaller countries know great-power competition increases their value. Delay is therefore not drift, it is negotiation power being exercised.', [src['vanuatu']]),
+        ('Oceania', 'Oceania also stayed tied to the wider risk picture because any prolonged energy and shipping disruption raises import costs for island economies with limited buffers.', '<strong>Why it happened:</strong> distance makes freight shocks bite harder. That is why Pacific political bargaining now sits inside a much larger logistics and security story.', [src['vanuatu'], src['hormuz']]),
+        ('Oceania', 'Australia’s regional security timing became more sensitive because allies want faster alignment while local partners want proof that alignment will bring concrete benefits, not just pressure.', '<strong>Why it happened:</strong> security deals move when incentives are clear. The delay shows the benefits case has not yet fully outrun sovereignty concerns.', [src['vanuatu']]),
     ],
 }
 
 japan_ja = [
-    ('🇯🇵 日本・大引け', f'日経平均は{nikkei_level}（{nikkei_day}）で午後を終えた。AI関連の輸出株に業績期待が残る一方、油高と円安が上値を抑えたからだ。', '<strong>なぜそうなったか：</strong>買い手はAI需要と外貨建て収益の追い風を評価したが、同じ円安が輸入コストとエネルギー負担も押し上げるため、全面高にはなりにくかった。つまり午後の東京は、輸出企業の強さと輸入インフレ不安の綱引きで決まった。', [src['japan_bullrun'], src['japan_exports']]),
-    ('🇯🇵 日本・為替/介入', f'USD/JPYが{usdjpy_level}（{usdjpy_day}）近辺で推移し、東京が口先介入で足りるのかを改めて試す午後になった。', '<strong>なぜ円が重いか：</strong>油高、戦争リスク、金利不透明感が重なる局面では、資金はなおドルへ向かいやすい。そのドル需要が円安を進め、円安が輸入インフレを悪化させ、当局の警戒発言を強めるという連鎖になっている。', [src['yen_shorts']]),
-    ('🇯🇵 日本・日銀', '日銀は落ち着いているというより、かなり難しい位置にいる。タカ派の分裂はインフレ圧力を示すが、外部ショックの中で利上げ時期はむしろ難しくなっているからだ。', '<strong>なぜ難しいか：</strong>円安とエネルギー高を放置もしづらい一方で、原油主導のショックに対し内需が十分強いとも言えない。つまり日本はいま、インフレ圧力はあるのに成長の確信が弱いという、最も政策判断が難しい組み合わせにいる。', [src['boj_split'], src['core_infl']]),
-    ('🇯🇵 日本・物価/家計', 'コア物価の弱さと実質賃金の改善は、午後の日本経済を同時に説明した。内需の耐久力は少しあるが、輸入インフレを安心して受け止められるほどではない。', '<strong>なぜ重要か：</strong>実質賃金は、物価上昇が家計の購買力に耐えられるかを測る橋になる。しかしコア物価がなお弱いということは、需要主導の持続インフレにはまだ距離がある。だから政策当局は「歓迎できる物価上昇」と言い切れない。', [src['real_wages'], src['core_infl']]),
-    ('🇯🇵 日本・財政政策', '高市首相が補正予算を温存したのは、今のショックをまず見極め、長引く場合に備えて弾を残したいからだ。', '<strong>なぜ今は温存か：</strong>ここで早く使い切ると、油高が需要悪化まで波及した局面で対応余地が狭まる。今回の判断は消極姿勢というより、「価格ショックが景気ショックに変わるか」を待つ順番の問題。', [src['takaichi_budget']]),
-    ('🇯🇵 日本・企業', 'ノジマによる日立家電事業の買収が目立ったのは、地政学でマクロが読みにくいほど、企業が自分で握れる強みを先に押さえようとしているからだ。', '<strong>なぜこの案件か：</strong>原油も為替も戦争も企業には制御できない。だからこそ、規模、調達、流通といった運営面の優位は相対的に価値が上がる。今回の買収はその防御的成長の発想に沿っている。', [src['nojima']]),
+    ('🇯🇵 日本・円防衛', f'日本が午後にワシントンとの連携を強めたのは、USD/JPY {usdjpy_level}（{usdjpy_day}）近辺で円を守るには、口先だけでなく「米国が背後にいる」と投機筋に思わせる必要があるからだ。', '<strong>なぜそう動いたか：</strong>金利差がなおドル優位である以上、日本単独のけん制は効力が続きにくい。だから先に外交の後ろ盾を固め、次に為替シグナルを強めるという順番になっている。', [src['japan_yen_us'], src['hormuz']]),
+    ('🇯🇵 日本・介入', '追加の円買い介入観測が午後の最大の新材料になった。政府は、輸入インフレの政治コストが市場任せで放置できる水準を超えたと判断した可能性が高い。', '<strong>なぜ介入観測が重いか：</strong>円安が燃料や食品価格に直結し始めると、何もしないこと自体が高コストになる。約320億ドル規模とみられる対応は、「待つほうが危険」という判断を示す。', [src['japan_intervention'], src['japan_yen_us']]),
+    ('🇯🇵 日本・大引け', f'日経平均は{nikkei_level}（{nikkei_day}）で引けた。高市勝利で内需と減税期待が強まった一方、為替防衛と地政学が銘柄選別を厳しくしたからだ。', '<strong>なぜこの引け味か：</strong>市場は税制や財政運営の見通し改善を好感したが、介入強化や外部リスクはグローバル企業の業績見通しを複雑にする。つまり好材料はあるが、全面的に強気にはなりにくい。', [src['japan_election_market'], src['japan_takaichi_tax']]),
+    ('🇯🇵 日本・政治/中国', '高市氏の大勝は対中温度を上げやすい。強い民意を得た首相は、国内反発を恐れずにより強い安全保障姿勢を取りやすくなるからだ。', '<strong>なぜ外に波及するか：</strong>国内の勝利は外交の裁量を広げる。北京は試しに来やすくなり、東京は強さを示したくなるので、選挙結果が対外摩擦に直結する。', [src['japan_china'], src['japan_takaichi_tax']]),
+    ('🇯🇵 日本・通商/米国', '日本の通商テンプレートが午後に重みを増したのは、安全保障や供給網で米国に協力することが、関税柔軟化の交渉材料になると東京が見ているからだ。', '<strong>なぜこの組み立てか：</strong>言葉だけでは関税は動かない。だから日本は半導体や地域安全保障で「米国の課題を解く同盟国」という位置づけを強め、ワシントンの損得勘定を変えようとしている。', [src['japan_trade_template'], src['japan_yen_us']]),
+    ('🇯🇵 日本・企業', 'SoftBankによるLINE運営会社LYの支配強化交渉が目立ったのは、外部環境が騒がしいほど、顧客接点とデータ基盤を自前で握る価値が上がるからだ。', '<strong>なぜ今この手か：</strong>地政学で需要が読みにくくなるほど、企業は自分で制御できる配信面とプラットフォームに価値を置く。守りと攻めを兼ねた再編だ。', [src['softbank_line'], src['japan_trade_template']]),
 ]
 
 global_regions_ja = {
     '北米': [
-        ('北米', '米株は勢いを失った。原油高が一時的な見出しではなく、企業収益とFRBの両方に効く問題として再評価されたからだ。', '<strong>なぜ株に重いか：</strong>原油高が長引くと、インフレ、利益率、政策自由度を同時に悪化させる。市場はその「期間」を織り込み直し始めた。', [src['us_stocks'], src['trading_day']]),
-        ('北米', 'P&Gの警告が重いのは、エネルギーショックがマクロの話から企業の算式に移ったことを示すからだ。', '<strong>なぜ象徴的か：</strong>物流、包装、石化原料が同時に上がると、価格転嫁だけでは吸収しにくい。つまり油高はもう抽象論ではなく、利益計画を直接傷つけ始めている。', [src['pg_hit']]),
-        ('北米', '自動車各社が安価モデル縮小を示唆したのは、関税不透明感が通商論争ではなく商品構成そのものを変え始めたからだ。', '<strong>なぜ消費者に効くか：</strong>低採算車ほど関税コストを吸収しにくいため、メーカーは利益防衛のためにラインアップを見直す。通商政策が購買選択を直接変える段階に入っている。', [src['automakers']]),
+        ('北米', f'米株は、S&P 500が{spx_level}（{spx_day}）まで戻した。雇用の底堅さが景気失速懸念を和らげた一方、油高と関税はなお後景に残ったからだ。', '<strong>なぜ上がれたか：</strong>雇用が強ければ景気後退の即時リスクは下がるため、投資家は景気敏感株を買いやすい。ただし同じ強さは利下げ期待を後ろ倒しにもするので、上昇の質はまだ脆い。', [src['us_jobs'], src['us_earnings']]),
+        ('北米', '米企業の利益見通しが危うく見え始めたのは、エネルギー、関税、物流のコスト圧力を市場がまだ十分に織り込んでいないからだ。', '<strong>なぜ今疑われるか：</strong>複数コストが同時に上がると、一時要因として処理しにくい。コンセンサス予想が、もう存在しない前提に立っているのではないかという疑いが強まっている。', [src['us_earnings'], src['us_energy_tariffs']]),
+        ('北米', 'エネルギー関連の関税調整が重要なのは、米政権が保護主義を維持しながらも、自国産業への副作用は和らげたいと考えているからだ。', '<strong>なぜ選別的になるか：</strong>一律関税は、守りたい産業にもコスト上昇として跳ね返る。部分的な見直しは、その自己矛盾が表面化した結果だ。', [src['us_energy_tariffs']]),
     ],
     '欧州': [
-        ('欧州', '欧州株が3週間ぶり安値をつけたのは、決算の弱さ、景気データの鈍化、イラン発の油高が同時に効いたからだ。', '<strong>なぜ下げが重いか：</strong>欧州には明確な相殺材料が少なかった。収益、景気、エネルギーの三方向から圧力がかかり、単発の悪材料ではなく複合要因の下げになった。', [src['europe_shares']]),
-        ('欧州', 'ECBが金融安定リスクを強調するのは、エネルギー高が政策金利より先に信用環境を締める可能性があるからだ。', '<strong>なぜCPIだけではないか：</strong>光熱費上昇は家計と企業の余力を削り、その後で借り手の弱体化や市場の脆さとして表れる。ECBはその伝播経路を警戒している。', [src['ecb_energy']]),
-        ('欧州', '欧州の通商不安が残るのは、内需が弱い局面ほど外部の摩擦がより深い打撃になるからだ。', '<strong>なぜ今こそ痛いか：</strong>成長が弱い時は、企業の価格転嫁力も政府の財政余力も乏しい。だから通商圧力は普段以上に重くなる。', [src['europe_shares'], src['ecb_energy']]),
+        ('欧州', '欧州は午後に苦しかった。米国のEU車関税引き上げ方針が、地域の最も弱い産業神経のひとつを直撃したからだ。', '<strong>なぜ自動車が痛いか：</strong>自動車は輸出、雇用、政治の交点にある。そこへの関税圧力は、企業利益だけでなく欧州成長全体への不安に直結する。', [src['eu_tariffs']]),
+        ('欧州', '欧州株が戻りきれないのは、米イラン停戦ムードが相場を落ち着かせるほど信頼されていないからだ。', '<strong>なぜ効かないか：</strong>停戦が本当に供給不安を減らすと信じられなければ、投資家はリスクを戻さない。今回売られたのは、その信認不足の表れ。', [src['eu_shares'], src['eu_middleeast']]),
+        ('欧州', '中東発のエネルギー不安が特に重いのは、内需が弱い欧州にとって油高が家計、企業、ECBを同時に苦しめるからだ。', '<strong>なぜ三重苦か：</strong>エネルギー高は家計には実質増税、企業には利益圧迫、政策当局にはインフレ再燃リスクとなる。だから欧州は反応が重い。', [src['eu_middleeast'], src['eu_shares']]),
     ],
     'アジア（日本除く）': [
-        ('アジア（日本除く）', '中国の燃料輸出抑制は、全面禁止でなくても地域の需給を十分締める。中国ほどの供給国が少し絞るだけで周辺国の調達競争が強まるからだ。', '<strong>なぜ効くか：</strong>中国は国内安定を優先しており、その分だけ外向け供給が減る。結果としてアジア全体で代替調達コストが上がり、価格が固くなる。', [src['china_fuel']]),
-        ('アジア（日本除く）', 'SKハイニックスが強いのは、AI向けメモリ需要が地政学不安を打ち消せる数少ない実需として見られているからだ。', '<strong>なぜ逆行高か：</strong>高帯域メモリは期待ではなく支出計画で支えられている。だからリスクオフ地合いでも選ばれやすい。', [src['sk_hynix']]),
-        ('アジア（日本除く）', 'インドのルピーが弱いのは、原油高が輸入代金と利下げ余地の両方を悪化させるからだ。', '<strong>なぜRBIが苦しいか：</strong>油高は経常赤字を悪化させるだけでなく、インフレ警戒も強める。その二重苦で中銀は守りに回らざるを得ない。', [src['india_rupee']]),
+        ('アジア（日本除く）', '中国回復論が強まったのは、西側主要国がエネルギーと通商ショックで制約を抱える中、需要の下支え役として中国の相対価値が上がったからだ。', '<strong>なぜタイミングが重要か：</strong>米欧が動きにくい局面では、中国の改善サインは平時以上に大きく見える。完璧だからではなく、他が弱くなっているから価値が増す。', [src['china_rebound'], src['china_q1']]),
+        ('アジア（日本除く）', 'ただし中国のQ1反発は、中東戦争が物流と原材料コストを揺らすほど脆さも意識された。', '<strong>なぜ足元が危ういか：</strong>輸出主導の回復は、安定した航路と予見可能な投入コストが前提だ。今回のショックはその両方を傷つける。', [src['china_q1'], src['hormuz']]),
+        ('アジア（日本除く）', 'インドの緊急信用保証は、油高ショックが資金繰り、雇用、インフレへ波及する前に企業を支える必要があると政府が見たからだ。', '<strong>なぜ先回りか：</strong>インドはエネルギー輸入国なので、燃料高は運転資金を通じて景気全体へ広がりやすい。政策はその伝播を途中で切る狙い。', [src['india_credit'], src['india_rupee']]),
     ],
     '中東・アフリカ': [
-        ('中東・アフリカ', f'WTIは{wti_level}（{wti_day}）で、戦争が単なる軍事イベントではなく供給・物流リスクとして値付けされ続けていることを示した。', '<strong>なぜ高止まりか：</strong>市場は供給断絶だけでなく、海運迂回、保険料上昇、精製品への波及まで織り込んでいる。恐怖ではなく期間の価格付けだ。', [src['worldbank_energy'], src['airlines']]),
-        ('中東・アフリカ', '世界銀行の警告が重いのは、衝撃の大きさを数字で示し、成長と物価の下振れリスクを定量化したからだ。', '<strong>なぜ午後に効いたか：</strong>機関が数値を出すと、市場は漠然とした不安ではなく具体的な下方修正を考え始める。そこでショックは一段現実味を増す。', [src['worldbank_energy']]),
-        ('中東・アフリカ', '航空会社の欠航が続くのは、空域、燃料費、保険、運航確実性が同時に不安定化しているからだ。', '<strong>なぜ長引くか：</strong>単発の安全懸念ではなく、複数コストと複数リスクの重なりだから。通常の運航経済が成立しにくい。', [src['airlines'], src['trump_choices']]),
+        ('中東・アフリカ', f'WTIが{wti_level}（{wti_day}）近辺で高止まりしたのは、ホルムズ海峡と周辺物流のリスクが一過性ではなく、数週間単位の供給不安として値付けされているからだ。', '<strong>なぜ高止まりか：</strong>市場は現物不足だけでなく、保険料、迂回輸送、在庫積み増しも織り込む。だから物理的な停止がなくても価格は支えられる。', [src['hormuz'], src['airlines']]),
+        ('中東・アフリカ', '航空会社の欠航が続くのは、航路不確実性、燃料費、保険前提の3つが同時に悪化しているからだ。', '<strong>なぜ長引くか：</strong>1つなら吸収できても、3つ重なると通常の運航採算が崩れる。欠航は過剰反応ではなく合理的対応だ。', [src['airlines'], src['jetfuel']]),
+        ('中東・アフリカ', 'この地域が世界相場の主変数であり続けるのは、どの見出しもすぐにインフレ期待、中銀の時間軸、消費者心理に波及するからだ。', '<strong>なぜ遠くても効くか：</strong>戦況そのものより、輸送とエネルギー価格を通じた波及が世界経済を動かしている。だから遠い市場も直接反応する。', [src['hormuz'], src['jetfuel']]),
     ],
     'ラテンアメリカ': [
-        ('ラテンアメリカ', 'ルラ大統領の対トランプ批判は、国内政治の正統性と対外交渉力を同時に守る必要があるからだ。', '<strong>なぜ公然とか：</strong>強く言わなければ国内では弱く見え、対外的にも交渉余地を失う。理念だけでなく政権運営の計算がある。', [src['lula']]),
-        ('ラテンアメリカ', 'メルコスールとカナダの接近は、主要市場の予見性が落ちる前に代替販路を増やしたいからだ。', '<strong>なぜ今急ぐか：</strong>関税政治が強まるほど、分散先を持つ価値は上がる。交渉加速の原因はリスク分散。', [src['mercosur_canada']]),
-        ('ラテンアメリカ', 'チリと米国の鉱業・安全保障協定は、重要鉱物が地政学の中核資産になったことを示した。', '<strong>なぜ一体化するか：</strong>米国は供給安定を、チリは資本と戦略的重要性を求める。両者の利害が一致している。', [src['chile_us']]),
+        ('ラテンアメリカ', 'ルラ大統領がトランプ会談後の進展を強調したのは、関税や同盟圧力が強まる前に米国との実務関係を保っておきたいからだ。', '<strong>なぜ実利重視か：</strong>ブラジルは曖昧さを価値に変えてきたが、米国が通商と外交をより強く結びつけるほど、その余地は狭まる。だから今は実務的安定が優先。', [src['brazil_trump'], src['brazil_satisfied']]),
+        ('ラテンアメリカ', 'ルラの前向きなトーンは国内向けにも重要だ。輸出企業や投資家に、外部ショックを外交で和らげられると示したいからだ。', '<strong>なぜ国内経済メッセージになるか：</strong>対外安定は、そのまま投資判断と輸出計画の安心材料になる。外交の演出が景気対策でもある。', [src['brazil_satisfied'], src['brazil_trump']]),
+        ('ラテンアメリカ', 'ラテンアメリカ全体では、ワシントンとの接点と資源需要の両方を維持できる国ほど、この油高・関税局面で優位に立ちやすい。', '<strong>なぜそこが分岐点か：</strong>この地域の勝敗は、通商チャネルと価格サイクルで決まりやすい。今日の外交は次のショック前のポジション取りだ。', [src['brazil_trump']]),
     ],
     'オセアニア': [
-        ('オセアニア', '豪州とバヌアツの安保協定の遅れは、太平洋での陣取りが豪州の望むほど一直線では進まないことを示した。', '<strong>なぜ遅れるか：</strong>島しょ国は支援を求めつつも、急いで一方の陣営に固定されるようには見られたくない。その政治調整が原因。', [src['vanuatu']]),
-        ('オセアニア', '豪州がイラン人女子サッカー選手に人道ビザを出したのは、戦争避難と女性の権利が切り離せない争点になっているからだ。', '<strong>なぜ象徴的か：</strong>通常の移民判断ではなく、人道と価値観のシグナルとして処理された案件だから目立つ。', [src['iranian_players']]),
-        ('オセアニア', 'オセアニアの地域政治も中東ショックと無関係ではない。燃料コストと同盟選択が、ローカルな交渉の意味まで変えているからだ。', '<strong>なぜつながるか：</strong>世界的なコスト上昇と安全保障競争が強まるほど、小さな地域協議も大きな戦略文脈に組み込まれる。', [src['vanuatu'], src['worldbank_energy']]),
+        ('オセアニア', '豪州とバヌアツの安保協定遅延が示したのは、太平洋の島しょ国が戦略的緊急性より交渉力を優先できるほど、自らの価値を理解していることだ。', '<strong>なぜ遅延が力になるか：</strong>大国間競争が激しいほど、小国の価値は上がる。遅らせること自体が交渉カードになる。', [src['vanuatu']]),
+        ('オセアニア', 'オセアニアも広域リスクと無縁ではない。エネルギーと海運の混乱が長引くほど、輸入依存の島しょ経済ほどコスト圧迫を受けやすいからだ。', '<strong>なぜ波及が大きいか：</strong>距離が長い地域ほど運賃ショックが効く。地域政治も物流と安全保障の大きな文脈に包まれている。', [src['vanuatu'], src['hormuz']]),
+        ('オセアニア', '豪州の地域安全保障の進め方が難しいのは、同盟国は急ぎたくても、相手国は主権に見合う見返りを求めるからだ。', '<strong>なぜ足踏みするか：</strong>安全保障協定は、圧力だけでは進まない。利益の見え方が主権不安を上回る必要がある。', [src['vanuatu']]),
     ],
 }
+
+market_sources = [src['hormuz'], src['us_jobs'], src['eu_tariffs'], src['china_rebound'], src['yahoo']]
 
 
 def build_body(lang='en'):
@@ -291,17 +296,17 @@ def build_body(lang='en'):
                 global_cards.append(story_card(tag, headline, body, sources))
         global_cards = '\n'.join(global_cards)
         markets = '\n'.join([
-            table_card('EQUITIES', 'End-of-day equity snapshot', ['Index', 'Level', 'Daily', 'Weekly', 'Monthly', 'YTD'], EQ_ROWS, '<strong>Why the bigger moves happened:</strong> markets were split by who still had a visible earnings buffer and who mainly inherited the oil shock. Japan and AI-linked tech held up better where demand visibility remained. Regions facing direct energy-import pressure, weaker data, or policy constraints struggled because higher crude looked more durable by the afternoon.', market_sources),
-            table_card('FX & RATES', 'Currency and rate pressure points', ['Instrument', 'Level', 'Daily', 'Weekly', 'Monthly', 'YTD'], FX_ROWS, '<strong>Why it matters:</strong> USD/JPY is still the fastest way to read Japan’s policy stress because yen weakness helps exporters while worsening imported inflation. DXY and Treasuries matter because prolonged oil strength makes central banks sound less comfortable. Any move above 2% should be read through the duration of the energy shock, not as isolated noise.', market_sources),
-            table_card('COMMODITIES & CRYPTO', 'Commodity and digital-asset close', ['Asset', 'Price', 'Daily', 'Weekly', 'Monthly', 'YTD'], CMD_ROWS, '<strong>Big mover logic:</strong> if crude moves more than 2%, the most likely cause is still conflict duration plus tighter regional fuel supply after China curtailed exports. If silver or crypto swing more than 2%, the better explanation is usually dollar repricing and changing inflation-hedge demand.', market_sources),
-            '''        <article class="card fade-in" data-image="'''+(market_sources[0].get('image',''))+'''"><span class="card-tag">HEALTH SCORE</span><h3 class="card-headline">56/100, still fragile, but Tokyo looked somewhat more resilient than the rest of the tape by the close.</h3><p class="card-body"><strong>Why 56:</strong> the afternoon did not become safer, but it did become more differentiated. Japan still had supports from exporters, AI demand, and slightly better household income data, while much of the rest of the world kept absorbing oil, tariff, and growth stress more directly. The score stays below neutral because yen pressure and imported inflation remain unresolved.</p><div class="card-sources">\n'''+source_links(market_sources)+'''\n          </div></article>'''
+            table_card('EQUITIES', 'End-of-day equity snapshot', ['Index', 'Level', 'Daily', 'Weekly', 'Monthly', 'YTD'], EQ_ROWS, '<strong>Why the larger moves happened:</strong> Japan’s close was helped by election clarity and tax-cut hopes, US equities by strong jobs, and Europe less so because tariff and energy risk hit a weaker growth base. Any move above 2% should be read through either policy repricing or conflict-driven input-cost stress, not in isolation.', market_sources),
+            table_card('FX & RATES', 'Currency and rate pressure points', ['Instrument', 'Level', 'Daily', 'Weekly', 'Monthly', 'YTD'], FX_ROWS, '<strong>Why it matters:</strong> USD/JPY is still the fastest read on how much pain Tokyo is willing to absorb before escalating defence. Treasury yields and the dollar stayed sensitive to jobs data because resilient growth reduces recession fear while also delaying the timing of easier policy.', market_sources),
+            table_card('COMMODITIES & CRYPTO', 'Commodity and digital-asset close', ['Asset', 'Price', 'Daily', 'Weekly', 'Monthly', 'YTD'], CMD_ROWS, '<strong>Big mover logic:</strong> if crude is up more than 2%, the best explanation is still shipping-duration risk around Hormuz and the knock-on effect on aviation and inventories. If crypto or silver move more than 2%, the cleaner read is dollar repricing and changing inflation-hedge demand.', market_sources),
+            f'''        <article class="card fade-in" data-image="{market_sources[0].get('image','')}"><span class="card-tag">HEALTH SCORE</span><h3 class="card-headline">{HEALTH}/100, firmer than the morning because Japan gained political clarity and the US got a jobs cushion, but still vulnerable to any renewed oil-shipping shock.</h3><p class="card-body"><strong>Why {HEALTH}:</strong> the afternoon improved because Takaichi’s mandate gave Tokyo a clearer policy story and US payrolls reduced immediate recession fear. The score stays below comfort because the same tape still depends heavily on whether Hormuz, tariffs, and airline disruption worsen from here.</p><div class="card-sources">\n{source_links(market_sources)}\n          </div></article>'''
         ])
-        predictions = '''        <article class="card fade-in collapsible" data-image=""><span class="card-tag">TOMORROW</span><h3 class="card-headline">Watch whether Tokyo escalates from verbal yen defense to a clearer intervention or coordination signal if dollar pressure persists.</h3><div class="tap-hint">Tap to expand</div><p class="card-body"><strong>Why it matters:</strong> if the yen weakens further while the BOJ still hesitates, the burden shifts toward the government and the Ministry of Finance. That would turn FX policy into tomorrow’s most important Japan risk, not just a background market story.</p></article>
-        <article class="card fade-in collapsible" data-image=""><span class="card-tag">WEEK AHEAD</span><h3 class="card-headline">The next macro test is whether higher energy prices keep spreading from headlines into earnings downgrades, flight disruption, and broader policy tightening.</h3><div class="tap-hint">Tap to expand</div><p class="card-body"><strong>Why it matters:</strong> once consumer companies, airlines, importers, and central banks are all adjusting to the same shock, markets stop pricing fear and start pricing duration. That is when volatility tends to rise more structurally.</p></article>'''
-        bottom_line = 'The new afternoon takeaway was not that risk faded, but that <strong>Japan still has more visible buffers than many peers even as the yen-oil squeeze intensifies.</strong> Exporters, AI demand, and modest wage relief kept Tokyo steadier than much of the world. Elsewhere, higher energy prices kept spreading into Wall Street caution, European weakness, India stress, and harder growth math. <strong>Bottom line:</strong> the shock is broadening, but Japan still looks relatively better positioned than most markets to absorb the first round.'
-        sub = f'🇯🇵 Tokyo’s late-session tone held because exporters and AI-linked demand cushioned the yen-and-oil squeeze, even as USD/JPY stayed near {usdjpy_level} and the BOJ remained conflicted · Takaichi kept fiscal firepower in reserve while Nojima-style corporate moves showed boards chasing controllable advantages · Globally, higher oil kept spilling into US equities, Europe, India, airlines, and World Bank growth worries · Health Score: 56/100'
-        footer = 'CEO Afternoon Briefing · Generated by Sanbot · Thursday, April 30, 2026'
-        return f'''  <header class="masthead"><div class="lang-toggle"><a href="index.html" class="active">EN</a><span class="sep">/</span><a href="ja.html">JA</a></div><div class="masthead-inner"><div class="overline">AFTERNOON INTELLIGENCE BRIEF</div><div class="war-day-counter" id="war-day-badge">🔴 IRAN WAR — DAY <span class="day-num" id="war-day-num">59</span></div><br><div class="econ-countdown" id="econ-countdown">⏱ ECONOMIC DAMAGE WINDOW: <span class="countdown-num" id="econ-countdown-num">—</span></div><h1>CEO Afternoon Briefing</h1><div class="edition-date">{TODAY_EN} — Afternoon Edition</div><div class="edition-sub">{sub}</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">Japan</a><a href="#global" class="nav-pill">Global</a><a href="#markets" class="nav-pill">Markets</a><a href="#predictions" class="nav-pill">Predictions</a><a href="#bottomline" class="nav-pill">Bottom Line</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">Japan Update — In Depth</h2></div><div class="cards">{japan_cards}</div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">Global — By Continent</h2></div><div class="cards">{global_cards}</div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">Markets & Economy</h2></div><div class="cards">{markets}</div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">Predictions</h2></div><div class="cards">{predictions}</div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 Bottom Line</h3><p>{bottom_line}</p></div></section></main><footer class='footer'><p>{footer}</p><p style='margin-top: 0.5rem;'>Data sources: Reuters, Yahoo Finance, Google News RSS</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));</script><script>(function(){{var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){{if(now<sixWeek){{var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ ECONOMIC DAMAGE WINDOW IN <span class="countdown-num">'+daysLeft+'</span> DAYS';}} else if(now<=eightWeek){{cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 ECONOMIC DAMAGE WINDOW — <span class="countdown-num" style="color:#fff;">NOW</span>';}} else {{var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ OIL ELEVATED '+weeksPast+' WEEKS — PAST DAMAGE THRESHOLD';}}}})();</script><script src='audio-player.js'></script></body></html>'''
+        predictions = '''        <article class="card fade-in collapsible" data-image=""><span class="card-tag">TOMORROW</span><h3 class="card-headline">Watch whether Japan follows diplomatic yen signalling with a cleaner intervention or policy message, because markets now know officials are willing to spend real money.</h3><div class="tap-hint">Tap to expand</div><p class="card-body"><strong>Why it matters:</strong> once intervention is believable, the next question is endurance. If the yen slips again quickly, traders will test how much political capital Tokyo is ready to burn.</p><div class="card-sources">\n''' + source_links([src['japan_intervention'], src['japan_yen_us']]) + '''\n          </div></article>
+        <article class="card fade-in collapsible" data-image=""><span class="card-tag">WEEK AHEAD</span><h3 class="card-headline">The bigger test is whether Middle East shipping risk stays a markets story or starts becoming an earnings, inflation, and travel-capacity story everywhere else.</h3><div class="tap-hint">Tap to expand</div><p class="card-body"><strong>Why it matters:</strong> once oil, freight, insurance, and route disruption hit company guidance together, volatility usually stops being headline-driven and becomes structural.</p><div class="card-sources">\n''' + source_links([src['hormuz'], src['airlines'], src['jetfuel']]) + '''\n          </div></article>'''
+        bottom_line = 'The real afternoon change was that <strong>Japan gained a clearer political and policy edge just as the rest of the world kept getting dragged back into oil-and-tariff math.</strong> Takaichi’s mandate, probable intervention, and a tighter US alignment gave Tokyo more visible tools than it had in the morning. <strong>Bottom line:</strong> Japan improved on relative terms, but the world is still being priced by Hormuz risk, transport disruption, and margin compression.'
+        sub = f'🇯🇵 Afternoon Tokyo turned on three new things: a stronger Takaichi mandate, more credible yen defence, and fresh trade leverage with Washington, which helped offset the old oil-and-import-cost squeeze · SoftBank’s LY talks showed corporates still hunting controllable domestic advantages · Globally, jobs held up in the US, Europe stayed trapped between tariffs and energy, and Hormuz kept dictating the macro tape · Health Score: {HEALTH}/100'
+        footer = 'CEO Afternoon Briefing · Generated by Sanbot · Saturday, May 9, 2026'
+        return f'''  <header class="masthead"><div class="lang-toggle"><a href="index.html" class="active">EN</a><span class="sep">/</span><a href="ja.html">JA</a></div><div class="masthead-inner"><div class="overline">AFTERNOON INTELLIGENCE BRIEF</div><div class="war-day-counter" id="war-day-badge">🔴 IRAN WAR — DAY <span class="day-num" id="war-day-num">{WAR_DAY}</span></div><br><div class="econ-countdown" id="econ-countdown">⏱ ECONOMIC DAMAGE WINDOW: <span class="countdown-num" id="econ-countdown-num">—</span></div><h1>CEO Afternoon Briefing</h1><div class="edition-date">{TODAY_EN} — Afternoon Edition</div><div class="edition-sub">{sub}</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">Japan</a><a href="#global" class="nav-pill">Global</a><a href="#markets" class="nav-pill">Markets</a><a href="#predictions" class="nav-pill">Predictions</a><a href="#bottomline" class="nav-pill">Bottom Line</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">Japan Update — In Depth</h2></div><div class="cards">{japan_cards}</div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">Global — By Continent</h2></div><div class="cards">{global_cards}</div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">Markets & Economy</h2></div><div class="cards">{markets}</div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">Predictions</h2></div><div class="cards">{predictions}</div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 Bottom Line</h3><p>{bottom_line}</p></div></section></main><footer class='footer'><p>{footer}</p><p style='margin-top: 0.5rem;'>Data sources: Reuters, Yahoo Finance, Google News RSS</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));</script><script>(function(){{var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){{if(now<sixWeek){{var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ ECONOMIC DAMAGE WINDOW IN <span class="countdown-num">'+daysLeft+'</span> DAYS';}} else if(now<=eightWeek){{cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 ECONOMIC DAMAGE WINDOW — <span class="countdown-num" style="color:#fff;">NOW</span>';}} else {{var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ OIL ELEVATED '+weeksPast+' WEEKS — PAST DAMAGE THRESHOLD';}}}})();</script><script src='audio-player.js'></script></body></html>'''
 
     japan_cards = '\n'.join(story_card(t, h, b, s, ja=True) for t, h, b, s in japan_ja)
     global_cards = []
@@ -310,25 +315,24 @@ def build_body(lang='en'):
             global_cards.append(story_card(tag, headline, body, sources, ja=True))
     global_cards = '\n'.join(global_cards)
     markets = '\n'.join([
-        table_card('株式', '引け後マーケット一覧', ['指数', '水準', '日次', '週次', '月次', '年初来'], EQ_ROWS, '<strong>大きな値動きの因果：</strong>今日は「業績の支えが見える市場」と「油高ショックを直接受ける市場」で差がついた。日本やAI関連は相対的に踏ん張った一方、エネルギー輸入圧力や景気減速に近い市場は弱かった。2%超の動きはまずショックの持続期間で読むべき。', market_sources),
-        table_card('為替・金利', '通貨と金利の要点', ['指標', '水準', '日次', '週次', '月次', '年初来'], FX_ROWS, '<strong>なぜ重要か：</strong>USD/JPYは日本の政策ストレスを最も早く映す。円安は輸出株の追い風だが、輸入インフレの悪化でもある。DXYと米金利は、油高が長引くほど中銀が楽観を語りにくくなることを示す。2%超の動きは単発ではなくショックの長期化で読む。', market_sources),
-        table_card('商品・暗号資産', '商品とデジタル資産の引け', ['資産', '価格', '日次', '週次', '月次', '年初来'], CMD_ROWS, '<strong>大きく動く理由：</strong>原油の2%超変動は、依然として戦争の長期化懸念と中国の輸出抑制による域内燃料逼迫が主因。銀や暗号資産の大きな動きは、今日はドル再評価とインフレヘッジ需要の変化で読むのが自然。', market_sources),
-        '''        <article class="card fade-in" data-image="'''+(market_sources[0].get('image',''))+'''"><span class="card-tag">ヘルススコア</span><h3 class="card-headline">56/100、まだ脆いが、引け時点では東京のほうが世界全体よりやや底堅かった。</h3><p class="card-body"><strong>なぜ56か：</strong>安全になったわけではないが、午後は日本に輸出、AI需要、家計所得の改善という支えが残った。一方で世界は油高、通商不安、成長下方圧力をより直接に吸収していた。円安と輸入インフレが未解決なので中立以下だが、相対比較では東京が少し強い。</p><div class="card-sources">\n'''+source_links(market_sources)+'''\n          </div></article>'''
+        table_card('株式', '引け後マーケット一覧', ['指数', '水準', '日次', '週次', '月次', '年初来'], EQ_ROWS, '大きな値動きの主因は、日本では選挙結果と減税期待、米国では雇用の底堅さ、欧州では関税とエネルギー不安だった。2%超の変動は、政策見通しの変化か、紛争起点のコストショックで読むのが自然。', market_sources),
+        table_card('為替・金利', '通貨と金利の要点', ['指標', '水準', '日次', '週次', '月次', '年初来'], FX_ROWS, 'USD/JPYは、日本がどこまで痛みに耐え、いつ防衛を強めるかを映す最速指標。米金利とドルは、強い雇用が景気不安を和らげる一方で、利下げ時期を遅らせるという二面性で動いた。', market_sources),
+        table_card('商品・暗号資産', '商品とデジタル資産の引け', ['資産', '価格', '日次', '週次', '月次', '年初来'], CMD_ROWS, '原油が2%超動くなら、今はホルムズ海峡周辺の輸送期間リスクと、航空・在庫への波及で説明するのが最も自然。暗号資産や銀の大きな動きは、ドル再評価とインフレヘッジ需要の変化で読むべき。', market_sources),
+        f'''        <article class="card fade-in" data-image="{market_sources[0].get('image','')}"><span class="card-tag">ヘルススコア</span><h3 class="card-headline">{HEALTH}/100、朝よりは改善。ただし改善の理由は安心ではなく、日本の政策視界と米雇用の下支えが見えたからだ。</h3><p class="card-body"><strong>なぜ{HEALTH}か：</strong>高市政権の明確な mandate と米雇用の強さで、朝より政策と景気の手掛かりが増えた。一方でホルムズ、関税、航空混乱が悪化すればすぐに崩れるため、快適圏には届かない。</p><div class="card-sources">\n{source_links(market_sources)}\n          </div></article>'''
     ])
-    predictions = '''        <article class="card fade-in collapsible" data-image=""><span class="card-tag">明日</span><h3 class="card-headline">ドル高が続けば、日本が口先介入から一段強いシグナルへ進むかを注視。</h3><div class="tap-hint">タップして展開</div><p class="card-body"><strong>なぜ重要か：</strong>日銀が簡単に動けないほど、政府・財務省側の為替対応が焦点になる。為替政策が明日の日本市場の主戦場になり得る。</p></article>
-    <article class="card fade-in collapsible" data-image=""><span class="card-tag">今週</span><h3 class="card-headline">エネルギー高が見出しで終わるのか、業績下方修正、欠航、政策引き締めへ広がるのかが最大の分岐点。</h3><div class="tap-hint">タップして展開</div><p class="card-body"><strong>なぜそこか：</strong>消費企業、航空、輸入国、中銀が同じショックに反応し始めると、市場は恐怖ではなく期間を値付けする。その段階ではボラティリティが構造的に上がりやすい。</p></article>'''
-    bottom_line = '午後に見えた新しい事実は、<strong>リスクが弱まったのではなく、日本にはまだ相対的な緩衝材が残っている</strong>ということだ。輸出、AI需要、賃金改善が東京を支えた一方、世界では油高が米株、欧州、インド、航空、成長見通しへ広く波及した。<strong>結論：</strong>ショックの拡大は続いているが、日本は現時点で第一波への耐久力が比較的高い。'
-    sub = f'🇯🇵 東京は、輸出株とAI需要が円安・油高の重しを一部相殺し、USD/JPYは{usdjpy_level}近辺で政策緊張を維持 · 高市首相は財政余力を温存し、企業は買収で握れる優位を取りにいった · 世界では原油高が米株、欧州、インド、航空、世銀の成長警戒へ広がった · Health Score: 56/100'
-    footer = 'CEO Afternoon Briefing · Generated by Sanbot · 2026年4月30日（木）'
-    return f'''  <header class="masthead"><div class="lang-toggle"><a href="index.html">EN</a><span class="sep">/</span><a href="ja.html" class="active">JA</a></div><div class="masthead-inner"><div class="overline">AFTERNOON INTELLIGENCE BRIEF</div><div class="war-day-counter" id="war-day-badge">🔴 IRAN WAR — DAY <span class="day-num" id="war-day-num">59</span></div><br><div class="econ-countdown" id="econ-countdown">⏱ ECONOMIC DAMAGE WINDOW: <span class="countdown-num" id="econ-countdown-num">—</span></div><h1>CEO Afternoon Briefing</h1><div class="edition-date">{TODAY_JA} 午後版</div><div class="edition-sub">{sub}</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">日本</a><a href="#global" class="nav-pill">世界</a><a href="#markets" class="nav-pill">市場</a><a href="#predictions" class="nav-pill">予測</a><a href="#bottomline" class="nav-pill">結論</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">日本アップデート</h2></div><div class="cards">{japan_cards}</div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">世界の動き</h2></div><div class="cards">{global_cards}</div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">市場と経済</h2></div><div class="cards">{markets}</div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">予測</h2></div><div class="cards">{predictions}</div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 Bottom Line</h3><p>{bottom_line}</p></div></section></main><footer class='footer'><p>{footer}</p><p style='margin-top: 0.5rem;'>Data sources: Reuters, Yahoo Finance, Google News RSS</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));</script><script>(function(){{var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){{if(now<sixWeek){{var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ ECONOMIC DAMAGE WINDOW IN <span class="countdown-num">'+daysLeft+'</span> DAYS';}} else if(now<=eightWeek){{cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 ECONOMIC DAMAGE WINDOW — <span class="countdown-num" style="color:#fff;">NOW</span>';}} else {{var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ OIL ELEVATED '+weeksPast+' WEEKS — PAST DAMAGE THRESHOLD';}}}})();</script><script src='audio-player.js'></script></body></html>'''
+    predictions = '''        <article class="card fade-in collapsible" data-image=""><span class="card-tag">明日</span><h3 class="card-headline">日本が外交的な円防衛シグナルを、より明確な介入や政策メッセージに強めるかを注視。</h3><div class="tap-hint">タップして展開</div><p class="card-body"><strong>なぜ重要か：</strong>介入の存在が信じられた今、市場の次の関心は持久力に移る。円がすぐに崩れれば、当局の覚悟が再び試される。</p><div class="card-sources">\n''' + source_links([src['japan_intervention'], src['japan_yen_us']]) + '''\n          </div></article>
+    <article class="card fade-in collapsible" data-image=""><span class="card-tag">今週</span><h3 class="card-headline">中東の海運リスクが相場の話で終わるのか、利益、物価、旅行供給へ本格的に波及するのかが次の分岐点。</h3><div class="tap-hint">タップして展開</div><p class="card-body"><strong>なぜそこか：</strong>原油、運賃、保険、運航混乱が同時に企業ガイダンスへ入ると、ボラティリティは見出し主導から構造要因へ変わる。</p><div class="card-sources">\n''' + source_links([src['hormuz'], src['airlines'], src['jetfuel']]) + '''\n          </div></article>'''
+    bottom_line = '午後に変わった本質は、<strong>世界がなお油高と関税の算数で動く中、日本だけは政治と政策の手数が朝より増えた</strong>ことだ。高市氏の mandate、介入観測、対米レバレッジが東京の相対優位を押し上げた。<strong>結論：</strong>日本は相対改善したが、世界全体は依然としてホルムズ、輸送混乱、利益圧迫で値付けされている。'
+    sub = f'🇯🇵 午後の東京は、高市勝利、円防衛の信頼回復、対米交渉カードの3点が新材料となり、油高と輸入コスト懸念を一部相殺 · SoftBankのLY交渉は、企業が自前で握れる国内優位を求めていることを示した · 世界では米雇用が下支えとなる一方、欧州は関税とエネルギーに苦しみ、ホルムズが依然マクロ全体を動かしている · Health Score: {HEALTH}/100'
+    footer = 'CEO Afternoon Briefing · Generated by Sanbot · 2026年5月9日（土）'
+    return f'''  <header class="masthead"><div class="lang-toggle"><a href="index.html">EN</a><span class="sep">/</span><a href="ja.html" class="active">JA</a></div><div class="masthead-inner"><div class="overline">AFTERNOON INTELLIGENCE BRIEF</div><div class="war-day-counter" id="war-day-badge">🔴 IRAN WAR — DAY <span class="day-num" id="war-day-num">{WAR_DAY}</span></div><br><div class="econ-countdown" id="econ-countdown">⏱ ECONOMIC DAMAGE WINDOW: <span class="countdown-num" id="econ-countdown-num">—</span></div><h1>CEO Afternoon Briefing</h1><div class="edition-date">{TODAY_JA} 午後版</div><div class="edition-sub">{sub}</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">日本</a><a href="#global" class="nav-pill">世界</a><a href="#markets" class="nav-pill">市場</a><a href="#predictions" class="nav-pill">予測</a><a href="#bottomline" class="nav-pill">結論</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">日本アップデート</h2></div><div class="cards">{japan_cards}</div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">世界の動き</h2></div><div class="cards">{global_cards}</div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">市場と経済</h2></div><div class="cards">{markets}</div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">予測</h2></div><div class="cards">{predictions}</div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 Bottom Line</h3><p>{bottom_line}</p></div></section></main><footer class='footer'><p>{footer}</p><p style='margin-top: 0.5rem;'>Data sources: Reuters, Yahoo Finance, Google News RSS</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));</script><script>(function(){{var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){{if(now<sixWeek){{var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ ECONOMIC DAMAGE WINDOW IN <span class="countdown-num">'+daysLeft+'</span> DAYS';}} else if(now<=eightWeek){{cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 ECONOMIC DAMAGE WINDOW — <span class="countdown-num" style="color:#fff;">NOW</span>';}} else {{var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ OIL ELEVATED '+weeksPast+' WEEKS — PAST DAMAGE THRESHOLD';}}}})();</script><script src='audio-player.js'></script></body></html>'''
 
 
 def build_page(path: Path, lang='en'):
     src_html = path.read_text()
     head = src_html.split('<body>')[0] + '<body>\n'
-    body = build_body(lang)
-    page = re.sub(r'<title>CEO Briefing — [^<]+</title>', f'<title>CEO Briefing — {TITLE_DATE}</title>', head) + body
-    path.write_text(page)
+    head = re.sub(r'<title>CEO Briefing — [^<]+</title>', f'<title>CEO Briefing — {TITLE_DATE}</title>', head)
+    path.write_text(head + build_body(lang))
 
 
 build_page(BASE / 'index.html', 'en')
