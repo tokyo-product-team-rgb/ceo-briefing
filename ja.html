@@ -3,853 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEO Briefing — May 10, 2026</title>
+  <title>CEO Briefing — 2026年5月11日</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: 'Copernicus Trial';
-      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Copernicus Trial';
-      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --bg: #F9F9F9;
-      --surface: #FFFFFF;
-      --bg-secondary: #FDFDFD;
-      --bg-tertiary: #F7F6F4;
-      --bg-hover: #F5F4F3;
-      --bg-hover-darker: #ECEAE7;
-      --bg-accent: #2A8F87;
-      --bg-accent-dark: #1D736C;
-      --text: #111111;
-      --text-secondary: #44403C;
-      --text-muted: #78716C;
-      --text-link: #1D736C;
-      --text-link-hover: #2A8F87;
-      --text-error: #C5624E;
-      --border: #E8E5E1;
-      --border-default: #D5D2CD;
-      --border-accent: #B56AEB;
-      --serif: 'Copernicus Trial', Georgia, serif;
-      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
-      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
-      --shadow-lg: 0 16px 32px rgba(0,0,0,0.08);
-      --radius: 24px;
-      --green: #2A8F87;
-      --red: #B94A48;
-    }
-
-    html { font-size: 16px; scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--sans);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .masthead {
-      background: transparent;
-      border-bottom: none;
-      padding: 0;
-      position: relative;
-    }
-
-    .masthead-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 2rem;
-      text-align: center;
-    }
-
-    .masthead .overline {
-      font-family: var(--sans);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .masthead h1 {
-      font-family: var(--serif);
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-    }
-
-    .masthead .edition-date {
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      margin-bottom: 0.25rem;
-    }
-
-    .masthead .edition-sub {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .war-day-counter {
-      display: inline-block;
-      background: #B94A48;
-      color: #fff;
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      padding: 0.35rem 1rem;
-      border-radius: 100px;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-    .war-day-counter .day-num {
-      font-size: 1rem;
-      margin: 0 0.15em;
-    }
-
-    .econ-countdown {
-      display: inline-block;
-      background: #1a1a1a;
-      color: #fff;
-      font-family: var(--sans);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      padding: 0.3rem 0.9rem;
-      border-radius: 100px;
-      margin-bottom: 0.75rem;
-    }
-    .econ-countdown .countdown-num {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #F59E0B;
-      margin: 0 0.1em;
-    }
-
-    .divider-bar {
-      width: 60px;
-      height: 3px;
-      background: var(--text);
-      margin: 1rem auto 0;
-      border-radius: 2px;
-    }
-
-    .nav-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      background: var(--bg-secondary);
-      border-bottom: none;
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-
-    .nav-bar a {
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 0.7rem 1.5rem;
-      margin: 4px 0;
-      border-radius: 999px;
-      transition: color 0.2s ease, background 0.2s ease;
-    }
-
-    .nav-bar a.active {
-      color: var(--text-primary);
-      background: #ECEAE7;
-    }
-
-    .nav-bar a:hover:not(.active) {
-      color: var(--text-secondary);
-    }
-
-    .lang-toggle {
-      position: absolute;
-      top: 0.75rem;
-      right: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-
-    .lang-toggle a {
-      text-decoration: none;
-      color: var(--text-muted);
-      transition: color 0.2s ease;
-    }
-
-    .lang-toggle a.active {
-      color: var(--text);
-    }
-
-    .lang-toggle a:hover:not(.active) {
-      color: var(--text-secondary);
-    }
-
-    .lang-toggle .sep {
-      color: var(--border);
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-
-    .section {
-      margin-bottom: 3.5rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid var(--text);
-      padding-bottom: 0.75rem;
-    }
-
-    .section-icon {
-      font-size: 1.5rem;
-    }
-
-    .section-title {
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-    }
-
-    .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-sm);
-    }
-
-    .card.featured {
-      border-left: 3px solid var(--bg-accent);
-    }
-
-    .card.featured.japan {
-      border-left: 3px solid #C53030;
-    }
-
-    .card-tag {
-      display: inline-block;
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-
-    .card-tag.japan {
-      color: #C53030;
-    }
-
-    .card-headline {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      font-weight: 500;
-      line-height: 1.35;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-    }
-
-    .card-body {
-      font-size: 0.9rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-
-    .card-sources {
-      margin-top: 0.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .source-link {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--text-link);
-      text-decoration: none;
-      padding: 0.15rem 0.5rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      transition: all 0.2s;
-    }
-
-    .source-link:hover {
-      border-color: var(--text-link);
-      background: var(--bg-tertiary);
-    }
-
-    .src-arrow { font-size: 0.6rem; }
-
-    .stat {
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .tap-hint {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      font-style: italic;
-    }
-
-    .collapsible .card-body,
-    .collapsible .card-sources {
-      display: none;
-    }
-
-    .collapsible.expanded .card-body,
-    .collapsible.expanded .card-sources {
-      display: block;
-    }
-
-    .collapsible.expanded .tap-hint {
-      display: none;
-    }
-
-    .collapsible {
-      cursor: pointer;
-    }
-
-    .nav-pills {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-pill {
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 500;
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 0.35rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      transition: all 0.2s;
-    }
-
-    .nav-pill:hover {
-      border-color: var(--text-secondary);
-      color: var(--text-secondary);
-    }
-
-    .index-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-    }
-
-    .index-table th {
-      font-weight: 600;
-      text-align: left;
-      padding: 0.5rem 0.75rem;
-      border-bottom: 2px solid var(--border);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-    }
-
-    .index-table td {
-      padding: 0.5rem 0.75rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .idx-name { font-weight: 500; }
-    .idx-level { font-weight: 600; }
-    .chg-pos { color: var(--green); font-weight: 600; }
-    .chg-neg { color: var(--red); font-weight: 600; }
-
-    .health-gauge-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5rem 0;
-    }
-
-    .health-gauge {
-      position: relative;
-      width: 200px;
-      height: 100px;
-      overflow: hidden;
-    }
-
-    .gauge-bg {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: conic-gradient(
-        from 180deg,
-        #e74c3c 0deg,
-        #e67e22 45deg,
-        #f1c40f 90deg,
-        #2ecc71 135deg,
-        #27ae60 180deg
-      );
-      mask: radial-gradient(circle at center, transparent 60px, black 61px);
-      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
-    }
-
-    .gauge-needle {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 3px;
-      height: 80px;
-      background: var(--text);
-      transform-origin: bottom center;
-      transform: rotate(-90deg);
-      transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-      border-radius: 2px;
-    }
-
-    .gauge-dot {
-      position: absolute;
-      bottom: -5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 12px;
-      height: 12px;
-      background: var(--text);
-      border-radius: 50%;
-    }
-
-    .gauge-scale {
-      display: flex;
-      justify-content: space-between;
-      width: 200px;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-top: 0.25rem;
-    }
-
-    .gauge-score {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-top: 0.5rem;
-    }
-
-    .gauge-score-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--red);
-    }
-
-    .indicator-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .indicator-item {
-      text-align: center;
-    }
-
-    .indicator-value {
-      font-size: 1.25rem;
-      font-weight: 700;
-    }
-
-    .indicator-name {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      margin-top: 0.25rem;
-    }
-
-    .indicator-sub {
-      font-size: 0.65rem;
-      color: var(--text-muted);
-    }
-
-    .bottom-line {
-      background: var(--text);
-      color: #f5f5f5;
-      border-radius: var(--radius);
-      padding: 2rem;
-    }
-
-    .bottom-line h3 {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-    }
-
-    .bottom-line p {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      color: #d4d4d4;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 640px) {
-      .cards-grid { grid-template-columns: 1fr; }
-      .card { border-radius: 0; border-left: none; border-right: none; border-top: none; border-bottom: 1px solid var(--border); box-shadow: none; }
-      .card.featured { border-left: none; border-bottom: 2px solid var(--bg-accent); }
-      .card.featured.japan { border-left: none; border-bottom: 2px solid #C53030; }
-      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
-      .bottom-line { border-radius: 0; }
-      .nav-pills { display: none; }
-      .bottom-line { background: #333; }
-      .index-table { font-size: 0.7rem; }
-      .index-table td, .index-table th { padding: 0.4rem 0.5rem; }
-    }
-
-    @media (max-width: 480px) {
-      .masthead-inner { padding: 1.5rem 1rem 1.5rem; }
-      .container { padding: 1.5rem 1rem 3rem; }
-      .nav-pills {
-        justify-content: flex-start;
-        overflow-x: auto;
-      }
-      .bottom-line {
-        padding: 1.5rem;
-      }
-    }
+    :root{--bg:#f9f9f9;--surface:#fff;--text:#111;--muted:#666;--border:#e8e5e1;--accent:#1d736c;--pill:#eceae7;--serif:Georgia,serif;--sans:'Hanken Grotesk',sans-serif}
+    *{box-sizing:border-box} body{margin:0;font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7}
+    .masthead{padding:2.5rem 1.25rem 1.25rem;text-align:center;position:relative}.lang-toggle{position:absolute;top:.75rem;right:1rem;font-size:.75rem}.lang-toggle a{text-decoration:none;color:var(--muted)}.lang-toggle a.active{color:var(--text)}
+    h1,h2,h3{font-family:var(--serif);font-weight:500}.edition-sub{max-width:900px;margin:.75rem auto 0;color:#444}.divider{width:60px;height:3px;background:#111;margin:1rem auto 0}
+    .war{display:inline-block;background:#b94a48;color:#fff;padding:.35rem .9rem;border-radius:999px;font-size:.78rem;font-weight:700}.count{display:inline-block;background:#111;color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.74rem;font-weight:700;margin-top:.5rem}
+    .nav{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;padding:0 1rem 1rem}.nav a{background:var(--pill);padding:.45rem .9rem;border-radius:999px;text-decoration:none;color:#333;font-size:.85rem;font-weight:600}
+    .container{max-width:920px;margin:0 auto;padding:0 1.25rem 3rem}.section{margin:2.2rem 0}.section-head{display:flex;align-items:center;gap:.6rem;border-bottom:2px solid #111;padding-bottom:.65rem;margin-bottom:1.1rem}
+    .cards{display:flex;flex-direction:column;gap:1rem}.card,.market-card,.bottom{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:1.05rem 1.1rem}.tag{font-size:.74rem;font-weight:700;color:var(--accent)}
+    .headline{font-size:1.14rem;line-height:1.35;margin:.35rem 0 .55rem}.hint{font-size:.73rem;color:var(--muted);margin-bottom:.45rem}.body,.market-note{display:none;color:#444}.collapsible{cursor:pointer}.collapsible.expanded .body,.collapsible.expanded .market-note{display:block}
+    .sources{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.7rem}.sources a{color:var(--accent);text-decoration:none;font-size:.82rem;font-weight:600}.market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}.stats{font-size:.9rem;color:#444}
+    footer{max-width:920px;margin:0 auto 2rem;padding:0 1.25rem;text-align:center;color:var(--muted);font-size:.82rem}
   </style>
 </head>
 <body>
-  <header class="masthead"><div class="lang-toggle"><a href="index.html">EN</a><span class="sep">/</span><a href="ja.html" class="active">JA</a></div><div class="masthead-inner"><div class="overline">AFTERNOON INTELLIGENCE BRIEF</div><div class="war-day-counter" id="war-day-badge">🔴 IRAN WAR — DAY <span class="day-num" id="war-day-num">69</span></div><br><div class="econ-countdown" id="econ-countdown">⏱ ECONOMIC DAMAGE WINDOW: <span class="countdown-num" id="econ-countdown-num">—</span></div><h1>CEO Afternoon Briefing</h1><div class="edition-date">2026年5月10日（日） 午後版</div><div class="edition-sub">🇯🇵 午後の変化は本物だった。東京は政策視界が開き、円に急に「歯」が生まれ、LINEの所有問題も戦略案件になった · 中国輸出は需要不安を和らげたが、香港は政治リスクが消えていないことを再確認させた · 世界では油高とフライト混乱が欧州を圧迫し、米株の上値も抑えた · Health Score: 66/100</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">日本</a><a href="#global" class="nav-pill">世界</a><a href="#markets" class="nav-pill">市場</a><a href="#predictions" class="nav-pill">予測</a><a href="#bottomline" class="nav-pill">結論</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">日本アップデート</h2></div><div class="cards">        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 日本・政治/国債</span>
-          <h3 class="card-headline">午後の日本で最も新しかった変化は、高市氏の圧勝が「成長期待」だけでなく「国債にもむしろ悪くない」と受け止められ始めたことだ。景気刺激があっても、財政運営は無秩序ではないと見る向きが増えたからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜそう読まれたか：</strong>市場は当初、減税がそのまま財政不安につながると警戒していた。だが大勝で政権運営が安定すると、政策実行がむしろ整理されるという見方が出てきた。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOU3ZDODJKbzcxT2ZRaWo3Qk51ZXEyeFk4dW9nX25DeWFicHQ3dEU2SDBoaFVmMVN1R2FmZEdsUl9MVXk2dXhXRllHZUx5MGRHWTUzaUhDOF8yNTVSblRYbTdid2l4QWNodWpjU2hIOVg2YzY0SllndHFfaEt1VjlVckNEU0NfQWFUOFhhVl9SY1lkWnZFeVFvTV9vRUQzVkQtZnZmcmo3RHk0SlJYSjdDamxsWGlqNTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 日本・大引け</span>
-          <h3 class="card-headline">日経平均は62,713.65（-0.19%）で引けた。高市 mandate で内需株は買われた一方、円防衛が本格化すれば逆風になる輸出株は慎重に見られたからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ割れたか：</strong>選挙の明確さは銀行、小売、国内景気株には追い風だった。しかし同じ明確さが円高方向の政策リスクも高め、輸出企業には一枚岩の追い風にならなかった。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 日本・円防衛</span>
-          <h3 class="card-headline">USD/JPYが156.621（-0.13%）近辺で最大の注目点だったのは、円が単なる金利差の犠牲ではなく、東京が実際に管理しにいく市場だと見え始めたからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ急に重くなったか：</strong>介入観測が効くのは、当局が本当に資金を使うと市場が信じる時だけだ。今回の急な円上昇は、投機筋がその可能性を一瞬でも本気で織り込んだ証拠だった。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWM3dGY5YnA3OTZ0YXc5TGxwUHEtTzdwOXNsUWgteVVRY2lsNm1oWUtyMTVWaHdIelBrLW5fa3diV2xlRC1yX2xyNmtmTzNCVXZWRmtmdkZvd1dTSVU1RnZvR2tXUXZxYUw5NW1tYmpvQUJtcE5hV2hKYWY4YWZLM0xRMy1oU3ZjczA2Y2NRNDlKT2JOU2Q2aUZ4LTUzSTBRbzFYNkVoUlNRbzlKQzNqaDNMd1VGeW5kUXJFYXJaNHAtZlY3YWJoaFNYcw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 日本・政策リスク</span>
-          <h3 class="card-headline">高市氏の減税論は家計には魅力的でも、市場にとっては「本当に財源は大丈夫か」という午後の新しい論点を生んだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ論点化したか：</strong>圧勝後は公約実行への期待が上がる。だが債券投資家は人気より資金手当てを見るため、成長支援と財政自由の違いが急に重要になった。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaEdiSC1GUm9VSTVrMkVXaTRDV1RKN2lPNXNQMFhSajdacWdRVlZnY2tCUjJlNzhIa3pxTGg4TXRpa3V6dk5sdWZCemVzOU0tNUFsLXA2a2c1UFdfTWdmOEwwZEpETGZzaWlBOEtlZjdvSU12dk42elVyZjlMNWd4MmE3RkhpQ1VHMkRUZUJWVk83dTcteWhTVXk3MFhSa09Ea0paaE9xSDRGeUdsYm04R3pyd1ZwclV5cGNmOUp1V1dlZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOU3ZDODJKbzcxT2ZRaWo3Qk51ZXEyeFk4dW9nX25DeWFicHQ3dEU2SDBoaFVmMVN1R2FmZEdsUl9MVXk2dXhXRllHZUx5MGRHWTUzaUhDOF8yNTVSblRYbTdid2l4QWNodWpjU2hIOVg2YzY0SllndHFfaEt1VjlVckNEU0NfQWFUOFhhVl9SY1lkWnZFeVFvTV9vRUQzVkQtZnZmcmo3RHk0SlJYSjdDamxsWGlqNTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 日本・対米連携</span>
-          <h3 class="card-headline">日本が米国との足並みを強調したことの重みが増したのは、円防衛が単独行動ではなく、対米戦略の一部に見えたほうが市場への効き目が増すからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ外交が効くか：</strong>日本は金利差そのものをすぐ変えられない。だから外交で「この水準は試すと面倒だ」と思わせることが、為替政策の増幅装置になる。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWM3dGY5YnA3OTZ0YXc5TGxwUHEtTzdwOXNsUWgteVVRY2lsNm1oWUtyMTVWaHdIelBrLW5fa3diV2xlRC1yX2xyNmtmTzNCVXZWRmtmdkZvd1dTSVU1RnZvR2tXUXZxYUw5NW1tYmpvQUJtcE5hV2hKYWY4YWZLM0xRMy1oU3ZjczA2Y2NRNDlKT2JOU2Q2aUZ4LTUzSTBRbzFYNkVoUlNRbzlKQzNqaDNMd1VGeW5kUXJFYXJaNHAtZlY3YWJoaFNYcw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 日本・企業</span>
-          <h3 class="card-headline">LINE運営会社LYを巡るNaverの持分見直し観測が目立ったのは、データ、プラットフォーム、利用者接点をより国内に近い形で押さえたい空気が強まっているからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ今この話か：</strong>地政学と規制が強まるほど、国境をまたぐ所有構造は中立ではなくなる。今回の議論は、日本が影響を及ぼしやすい所有体制を好み始めている流れの一部だ。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOVXUwcmpmUnQ1N3d3cXVfbjdJLTQwR1NuRFJMeWgzbTlvWGtTTUdILVB4OUI1NGFzQk9NQU1tU1pEbW0zc2xON0RqenllWTdlRmtfQWFaNFUxdFNYcnQxQzVBWlJUcDQ1WE5uazJtRHBVeUlSTGN1dVB4cTVacDlGQWZKa2ZyV25UeHotODFtZ1dpR1dJYk9fRjJQaTd3blR2WFFyMHRYeWhfVkxWZTcxdnItTXNWbVcxQjZRbWNCTG1BMGVV?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWM3dGY5YnA3OTZ0YXc5TGxwUHEtTzdwOXNsUWgteVVRY2lsNm1oWUtyMTVWaHdIelBrLW5fa3diV2xlRC1yX2xyNmtmTzNCVXZWRmtmdkZvd1dTSVU1RnZvR2tXUXZxYUw5NW1tYmpvQUJtcE5hV2hKYWY4YWZLM0xRMy1oU3ZjczA2Y2NRNDlKT2JOU2Q2aUZ4LTUzSTBRbzFYNkVoUlNRbzlKQzNqaDNMd1VGeW5kUXJFYXJaNHAtZlY3YWJoaFNYcw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article></div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">世界の動き</h2></div><div class="cards">        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">北米</span>
-          <h3 class="card-headline">米株はS&P 500が7,398.93（+0.84%）となったが、雇用の強さだけでは押し切れなかった。油高とイラン停戦の脆さが、景気の強さをそのまま安心材料にしなかったからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ伸び切らないか：</strong>雇用が強いと景気後退懸念は下がるが、同時に利下げ期待も後退する。そこへ原油高が重なると、「良い成長」が「悪いインフレ」に変わりやすい。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">北米</span>
-          <h3 class="card-headline">ドルの勢いが少し鈍ったのは、強い米指標だけでは相場を説明しきれず、油と地政学が金融環境を締める方向にも効き始めたからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ単純なドル高でないか：</strong>成長の強さが外部ショックで相殺されると、市場は米国一強のストーリーを弱める。今日はその切り替えが起きた。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">北米</span>
-          <h3 class="card-headline">半導体主導の強さが目立ったのは、市場がマクロ全体には自信を持てない一方、AIなど一部の利益テーマだけはまだ信じているからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ幅が狭いか：</strong>相場の主導役が限られる時は、投資家が広く景気に賭けるより、確度の高いテーマに逃げていることが多い。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">欧州</span>
-          <h3 class="card-headline">欧州が最も関税の被害者に見えたのは、米国のEU車関税強化が輸出、雇用、政治の中心に近い産業を直撃するからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ自動車が重いか：</strong>自動車関税は個別企業の問題で終わらず、工業景況感と成長期待に直結する。欧州では連鎖が速い。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPeENvRXU5WHZfYzJTSmNEOEJwZzFVNmtFeHgzRWVaZ09pOEdJLU4wRUZJNVFEVXEzREVMU216TDUzWXlvejQ5by1fcDBZZ3V3YkI3MkY2Z1VuNklNeFh6Nkd5NVJHWDR3T0NEQmFXRUdsX29jS1dQcUxpaEFzWW5FT1ZjTUtNY2x6Z3FOU0ZTU3FLT2ZvVVVrU2F2bw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">欧州</span>
-          <h3 class="card-headline">イラン停戦の信認が揺らぎ原油が再び上がったことも、内需の弱い欧州には特に痛かった。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ米国より痛いか：</strong>成長が弱いところに輸入インフレが来ると、家計と企業の両方に同時に効く。だから停戦のほころびだけで欧州株は重くなる。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPeENvRXU5WHZfYzJTSmNEOEJwZzFVNmtFeHgzRWVaZ09pOEdJLU4wRUZJNVFEVXEzREVMU216TDUzWXlvejQ5by1fcDBZZ3V3YkI3MkY2Z1VuNklNeFh6Nkd5NVJHWDR3T0NEQmFXRUdsX29jS1dQcUxpaEFzWW5FT1ZjTUtNY2x6Z3FOU0ZTU3FLT2ZvVVVrU2F2bw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">欧州</span>
-          <h3 class="card-headline">午後の欧州は、単独の大事故がなくても「関税＋高エネルギー＋弱い工業」の三重苦で評価を下げられた。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ累積が重いか：</strong>中くらいのショックが複数重なる時に市場は最も冷たくなる。欧州はまさにその形だった。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPeENvRXU5WHZfYzJTSmNEOEJwZzFVNmtFeHgzRWVaZ09pOEdJLU4wRUZJNVFEVXEzREVMU216TDUzWXlvejQ5by1fcDBZZ3V3YkI3MkY2Z1VuNklNeFh6Nkd5NVJHWDR3T0NEQmFXRUdsX29jS1dQcUxpaEFzWW5FT1ZjTUtNY2x6Z3FOU0ZTU3FLT2ZvVVVrU2F2bw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">アジア（日本除く）</span>
-          <h3 class="card-headline">中国の4月輸出反発は、中国がまだ世界需要の下支え役でいられる可能性を示した。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ強かったか：</strong>トランプ関連の通商リスク前に出荷を前倒ししたことや、主要市場向けの供給力がまだ生きていることが寄与したとみられる。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYWxXSGRldlFoLVZ3bDNFU0xzQkhIU0FsdkFPYk0xNlZxOFQ3OXNaRTNkc1RVSF9GcHBaLWQzRUVDM0RaVl9qVmlQZlY5bDVrbllSMUJrbWMzUko5Zk5uRGRPaEhDU1AzaUhsLVZKM1dhQng5S2k2Q0l2YlphWk53RDZtUkdjeWtyNXgxTV8tMlhYdkpzSlhoTkI4bUVJWXlnWEY2Zk5ISGhNNnNfZV8xNDJzX1BudU9rQmd1SmtobTY?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">アジア（日本除く）</span>
-          <h3 class="card-headline">一方でジミー・ライ氏への20年刑は、中国の政治リスクプレミアムが消えていないことを改めて示した。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ同時に重要か：</strong>輸出が良くても、法治と地政学の懸念が残れば評価倍率は伸びにくい。成長と政治リスクが同居している。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPUmlURnhJT21pSlRzY1NwTEoyQVlxVE5ybGUyXzVfOWxyclpsWjZoYUtwd3g1WWlzdVJudTFpNUxSZnBZa01NTGxNMnh6ZjBDN3owUmlOSk1BVFpyVUxOUmhiNlFfSTdzd0pTc2FHbTRPcFgwWFBjUWhZeXZxeW9hVzBraXZpWkMzQmJjWVpYbEItbkVvMzROME9jTldSN0JQbXpQRXFvU2lOcl8xemdjUkJOSmNTTURNOUNfVjlwLUZQOENOLXJFSW4xSl85UQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYWxXSGRldlFoLVZ3bDNFU0xzQkhIU0FsdkFPYk0xNlZxOFQ3OXNaRTNkc1RVSF9GcHBaLWQzRUVDM0RaVl9qVmlQZlY5bDVrbllSMUJrbWMzUko5Zk5uRGRPaEhDU1AzaUhsLVZKM1dhQng5S2k2Q0l2YlphWk53RDZtUkdjeWtyNXgxTV8tMlhYdkpzSlhoTkI4bUVJWXlnWEY2Zk5ISGhNNnNfZV8xNDJzX1BudU9rQmd1SmtobTY?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">アジア（日本除く）</span>
-          <h3 class="card-headline">インドの19億ドル信用保証は、油高が中小企業の資金繰りと雇用へ波及する前に止めたいという先回りだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ急ぐか：</strong>インドはエネルギー輸入国なので、原油高は輸送費と運転資金を通じて一気に広がる。政府はその連鎖を途中で断ちたい。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQS0p5U3dkdDM5MFF1QWlDblkwSThtZWVqZTVic01GelF1VGFhMGh1aWRzcVROU3p5OFYzVUMwa3JXM09LQnlaZVpRXzFsQ2c1djE0T1c3MjJDTExKQ2YydmFOOXF5azBIS2lLWDV6VmxtR1lUaEZ1SjFvWkhLVE85R3laU2FtZmU0V2stcUdvcDhYNjNZV21qeXFlR0E4WU5Sa292Q1NYNjNSUm8?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">中東・アフリカ</span>
-          <h3 class="card-headline">WTIが95.42（+0.64%）近辺で高止まりしたのは、中東が単発ニュースではなく、持続的な供給リスクとして見られているからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ下がりきらないか：</strong>市場は供給停止だけでなく、保険、迂回、在庫積み増しまで織り込む。停戦が脆ければそのコストは残る。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">中東・アフリカ</span>
-          <h3 class="card-headline">航空会社の欠航が続くのは、航路安全、燃料費、運航確実性が同時に悪化したからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ合理的対応か：</strong>どれか一つなら吸収できても、三つ同時は難しい。欠航は過剰反応ではなく採算防衛だ。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPS25ycmRYWlI4dU5pZ3Z5YXdMNUdBMV9KcXBfQUVXU0Y3bWZudlFwelRLdFFIRDBxRWo5WEtGcjlxNFBsQURvMFhnblpsSDJGY0VGSFlkemxBUndnLV80dldpLVd1SUV5VDh4NzhfZmt2VTdZeVI5OXpYcHZ2TTFHb2hQWElnWnJITENaT0ZyUFhNV25aSmZ0WEh1dW1USHVmSzUtMUcwZVBsSXBjZ0lsTlJCOFhCWlJvSW9jMw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">中東・アフリカ</span>
-          <h3 class="card-headline">ジェット燃料コスト上昇がマクロの話になるのは、旅行と物流を通じて物価や企業見通しへすぐ波及するからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ世界が気にするか：</strong>航空コストはチケット、観光、貨物、出張に一気に効く。紛争が企業業績の問題に変わる最短経路の一つだ。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPS25ycmRYWlI4dU5pZ3Z5YXdMNUdBMV9KcXBfQUVXU0Y3bWZudlFwelRLdFFIRDBxRWo5WEtGcjlxNFBsQURvMFhnblpsSDJGY0VGSFlkemxBUndnLV80dldpLVd1SUV5VDh4NzhfZmt2VTdZeVI5OXpYcHZ2TTFHb2hQWElnWnJITENaT0ZyUFhNV25aSmZ0WEh1dW1USHVmSzUtMUcwZVBsSXBjZ0lsTlJCOFhCWlJvSW9jMw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">ラテンアメリカ</span>
-          <h3 class="card-headline">ルラ大統領がトランプとの関係改善を強調したのは、関税環境がさらに荒くなる前に米国との接点を確保したいからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ今それが重要か：</strong>ブラジルは資源需要と外交柔軟性の両方を守りたい。米国との空気を悪くしないこと自体が政策資産になる。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXBvVEJFaDhqbmJiQzZ3R1BiN1RVTXVNTVFhSUdKRTBxOGp1blk1U3R0SHphTzdrNzZpYnliOHNXa2RHSmMyQkZoMnE3bzR2eTdRaGc4dENRR0w2ZW5yS2xwR0ZIOFdKUFZTWGpRdjg5Vm5PNzBfZHdBdGx3MWtvQ29DRjZlaFVDWnUzRU9XbUVnc2NoMlhpenVFT0o1cmtENnF0WF9YR1IxX0RDMFktaFh4TjJuaGdNQnlHXzZpbw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">ラテンアメリカ</span>
-          <h3 class="card-headline">そのメッセージは国内経済向けでもある。輸出企業に、対米チャネルはまだ壊れていないと示す意味がある。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ安心材料か：</strong>外交安定は投資判断の前提になる。対外関係が読めないだけで企業は計画を遅らせやすい。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXBvVEJFaDhqbmJiQzZ3R1BiN1RVTXVNTVFhSUdKRTBxOGp1blk1U3R0SHphTzdrNzZpYnliOHNXa2RHSmMyQkZoMnE3bzR2eTdRaGc4dENRR0w2ZW5yS2xwR0ZIOFdKUFZTWGpRdjg5Vm5PNzBfZHdBdGx3MWtvQ29DRjZlaFVDWnUzRU9XbUVnc2NoMlhpenVFT0o1cmtENnF0WF9YR1IxX0RDMFktaFh4TjJuaGdNQnlHXzZpbw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">ラテンアメリカ</span>
-          <h3 class="card-headline">地域全体では、資源の追い風を取りつつ大国対立には巻き込まれにくい国ほど相対評価が上がりやすい。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜそこが差になるか：</strong>分断が進むほど、柔軟な貿易相手の価値は高まる。今日のブラジルの動きはその文脈にある。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXBvVEJFaDhqbmJiQzZ3R1BiN1RVTXVNTVFhSUdKRTBxOGp1blk1U3R0SHphTzdrNzZpYnliOHNXa2RHSmMyQkZoMnE3bzR2eTdRaGc4dENRR0w2ZW5yS2xwR0ZIOFdKUFZTWGpRdjg5Vm5PNzBfZHdBdGx3MWtvQ29DRjZlaFVDWnUzRU9XbUVnc2NoMlhpenVFT0o1cmtENnF0WF9YR1IxX0RDMFktaFh4TjJuaGdNQnlHXzZpbw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">オセアニア</span>
-          <h3 class="card-headline">豪州とバヌアツの安保協定遅延は、太平洋の小国が戦略的な急ぎを自国の交渉力に変えていることを示した。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ遅延が意味を持つか：</strong>大国が急ぐほど、小国の価値は上がる。急がないこと自体が価格交渉になる。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOcTFlQTdlYWE5SHZjVnJHOTNUWU8yMkkwOGJOOXhwVG05aEpMdjFIcHljbUJ5RmNGVk1nR011MDlxUnBIRkYyai14SC1iYTlEY09VZTRnRmhMcXdOcGlNWGRTRTBGdEdpem5ZeUxGR1VudTNiZVYyQmJNdWVIQVRNdHZsV2I5aXVjcG96d1NvWEl6NC1xSUJ6OGwzYw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">オセアニア</span>
-          <h3 class="card-headline">同時に海運と燃料の不安が続くほど、島しょ国経済では安全保障と物流が切り離せなくなる。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜ経済にも直結するか：</strong>距離の長い地域では運賃ショックがそのまま生活コストに跳ねる。外交は経済の話でもある。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOcTFlQTdlYWE5SHZjVnJHOTNUWU8yMkkwOGJOOXhwVG05aEpMdjFIcHljbUJ5RmNGVk1nR011MDlxUnBIRkYyai14SC1iYTlEY09VZTRnRmhMcXdOcGlNWGRTRTBGdEdpem5ZeUxGR1VudTNiZVYyQmJNdWVIQVRNdHZsV2I5aXVjcG96d1NvWEl6NC1xSUJ6OGwzYw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">オセアニア</span>
-          <h3 class="card-headline">豪州の立場が難しいのは、同盟国は迅速さを求めるが、相手国は主権に見合う利益の可視化を求めるからだ。</h3>
-          <div class="tap-hint">タップして展開</div>
-          <p class="card-body"><strong>なぜまだ決まらないか：</strong>圧力だけでは協定は進まない。利益が不安を上回る必要がある。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOcTFlQTdlYWE5SHZjVnJHOTNUWU8yMkkwOGJOOXhwVG05aEpMdjFIcHljbUJ5RmNGVk1nR011MDlxUnBIRkYyai14SC1iYTlEY09VZTRnRmhMcXdOcGlNWGRTRTBGdEdpem5ZeUxGR1VudTNiZVYyQmJNdWVIQVRNdHZsV2I5aXVjcG96d1NvWEl6NC1xSUJ6OGwzYw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article></div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">市場と経済</h2></div><div class="cards">        <article class="card fade-in" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">株式</span>
-          <h3 class="card-headline">引け後マーケット一覧</h3>
-          <table class="index-table"><thead><tr><th>指数</th><th>水準</th><th>日次</th><th>週次</th><th>月次</th><th>年初来</th></tr></thead><tbody><tr><td class="idx-name">Nikkei 225</td><td class="idx-level">62,713.65</td><td class="chg-neg">-0.19%</td><td class="chg-pos">+3.59%</td><td class="chg-pos">+18.05%</td><td class="chg-pos">+69.82%</td></tr><tr><td class="idx-name">S&P 500</td><td class="idx-level">7,398.93</td><td class="chg-pos">+0.84%</td><td class="chg-pos">+2.33%</td><td class="chg-pos">+8.41%</td><td class="chg-pos">+30.73%</td></tr><tr><td class="idx-name">Dow Jones</td><td class="idx-level">49,609.16</td><td class="chg-pos">+0.02%</td><td class="chg-pos">+0.22%</td><td class="chg-pos">+2.95%</td><td class="chg-pos">+20.27%</td></tr><tr><td class="idx-name">Nasdaq</td><td class="idx-level">26,247.08</td><td class="chg-pos">+1.71%</td><td class="chg-pos">+4.51%</td><td class="chg-pos">+15.01%</td><td class="chg-pos">+46.40%</td></tr><tr><td class="idx-name">Euro Stoxx 50</td><td class="idx-level">5,911.53</td><td class="chg-neg">-1.02%</td><td class="chg-pos">+0.51%</td><td class="chg-neg">-0.03%</td><td class="chg-pos">+11.77%</td></tr><tr><td class="idx-name">Shanghai Comp</td><td class="idx-level">4,179.95</td><td class="chg-neg">-0.00%</td><td class="chg-pos">+2.48%</td><td class="chg-pos">+7.73%</td><td class="chg-pos">+24.70%</td></tr><tr><td class="idx-name">Sensex</td><td class="idx-level">77,328.19</td><td class="chg-neg">-0.66%</td><td class="chg-pos">+0.54%</td><td class="chg-pos">+3.63%</td><td class="chg-neg">-3.74%</td></tr><tr><td class="idx-name">Bovespa</td><td class="idx-level">184,108</td><td class="chg-pos">+0.49%</td><td class="chg-neg">-1.71%</td><td class="chg-neg">-2.20%</td><td class="chg-pos">+35.14%</td></tr><tr><td class="idx-name">ASX 200</td><td class="idx-level">8,744.40</td><td class="chg-neg">-1.51%</td><td class="chg-pos">+0.17%</td><td class="chg-neg">-2.55%</td><td class="chg-pos">+6.75%</td></tr></tbody></table>
-          <p class="card-body" style="margin-top: 1rem;">大きな値動きは、日本の政策明確化、米国の雇用と半導体の強さ、欧州の関税とエネルギー不安で説明できる。2%超の動きは、政策再評価か油ショック波及か、その両方で読むのが自然。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card fade-in" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">為替・金利</span>
-          <h3 class="card-headline">通貨と金利の要点</h3>
-          <table class="index-table"><thead><tr><th>指標</th><th>水準</th><th>日次</th><th>週次</th><th>月次</th><th>年初来</th></tr></thead><tbody><tr><td class="idx-name">USD/JPY</td><td class="idx-level">156.621</td><td class="chg-neg">-0.13%</td><td class="chg-neg">-0.14%</td><td class="chg-neg">-1.57%</td><td class="chg-pos">+8.88%</td></tr><tr><td class="idx-name">EUR/USD</td><td class="idx-level">1.1790</td><td class="chg-pos">+0.50%</td><td class="chg-pos">+0.54%</td><td class="chg-pos">+0.84%</td><td class="chg-pos">+4.28%</td></tr><tr><td class="idx-name">DXY</td><td class="idx-level">97.840</td><td class="chg-neg">-0.42%</td><td class="chg-neg">-0.38%</td><td class="chg-neg">-0.99%</td><td class="chg-neg">-3.88%</td></tr><tr><td class="idx-name">US 10Y Treasury</td><td class="idx-level">4.364%</td><td class="chg-neg">-0.64%</td><td class="chg-neg">-0.32%</td><td class="chg-pos">+1.65%</td><td class="chg-neg">-0.21%</td></tr><tr><td class="idx-name">US 2Y Treasury</td><td class="idx-level">3.595%</td><td class="chg-neg">-0.08%</td><td class="chg-pos">+0.56%</td><td class="chg-pos">+0.20%</td><td class="chg-neg">-14.71%</td></tr></tbody></table>
-          <p class="card-body" style="margin-top: 1rem;">USD/JPYは、東京の午後の自信が本物かどうかを映す最速指標。米金利とドルは、雇用だけでなく、油高が実質的な金融引き締めになるかどうかでも動いている。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card fade-in" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">商品・暗号資産</span>
-          <h3 class="card-headline">商品とデジタル資産の引け</h3>
-          <table class="index-table"><thead><tr><th>資産</th><th>価格</th><th>日次</th><th>週次</th><th>月次</th><th>年初来</th></tr></thead><tbody><tr><td class="idx-name">WTI Crude</td><td class="idx-level">95.42</td><td class="chg-pos">+0.64%</td><td class="chg-neg">-6.40%</td><td class="chg-neg">-2.50%</td><td class="chg-pos">+54.03%</td></tr><tr><td class="idx-name">Brent Crude</td><td class="idx-level">101.29</td><td class="chg-pos">+1.23%</td><td class="chg-neg">-6.36%</td><td class="chg-pos">+5.60%</td><td class="chg-pos">+55.93%</td></tr><tr><td class="idx-name">Gold</td><td class="idx-level">4,730.70</td><td class="chg-pos">+0.66%</td><td class="chg-pos">+2.18%</td><td class="chg-neg">-1.28%</td><td class="chg-pos">+46.92%</td></tr><tr><td class="idx-name">Silver</td><td class="idx-level">80.865</td><td class="chg-pos">+1.46%</td><td class="chg-pos">+6.47%</td><td class="chg-pos">+6.01%</td><td class="chg-pos">+149.68%</td></tr><tr><td class="idx-name">Bitcoin</td><td class="idx-level">80,724.15</td><td class="chg-pos">+0.67%</td><td class="chg-pos">+1.12%</td><td class="chg-pos">+6.60%</td><td class="chg-neg">-22.90%</td></tr><tr><td class="idx-name">Ethereum</td><td class="idx-level">2,328.40</td><td class="chg-pos">+0.93%</td><td class="chg-neg">-0.77%</td><td class="chg-neg">-0.97%</td><td class="chg-neg">-9.84%</td></tr></tbody></table>
-          <p class="card-body" style="margin-top: 1rem;">原油の大きな動きは、停戦の脆さ、海運、保険コストで説明するのが最も自然。銀や暗号資産の大きな動きは、ドル観測とインフレヘッジ需要の変化で見るべきだ。</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card fade-in" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"><span class="card-tag">ヘルススコア</span><h3 class="card-headline">66/100、朝より改善。理由は安心感ではなく、日本の政策視界が開け、中国輸出が需要不安を少し和らげたからだ。</h3><p class="card-body"><strong>なぜ66か：</strong>午後は東京の統治可能性が高まり、円防衛の信認も上がった。中国輸出も世界需要のクッションになった。一方で停戦の脆さ、燃料高、欧州関税リスクが残るので、快適圏には遠い。</p><div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
-          </div></article></div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">予測</h2></div><div class="cards">        <article class="card fade-in collapsible" data-image=""><span class="card-tag">明日</span><h3 class="card-headline">円の急騰が一発の脅しで終わるのか、東京が実際に継続的な防衛姿勢を見せるのかを注視。</h3><div class="tap-hint">タップして展開</div><p class="card-body"><strong>なぜ重要か：</strong>介入リスクが本物だと市場が学び始めた。次はその学びが一日以上持つかどうかだ。</p><div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWM3dGY5YnA3OTZ0YXc5TGxwUHEtTzdwOXNsUWgteVVRY2lsNm1oWUtyMTVWaHdIelBrLW5fa3diV2xlRC1yX2xyNmtmTzNCVXZWRmtmdkZvd1dTSVU1RnZvR2tXUXZxYUw5NW1tYmpvQUJtcE5hV2hKYWY4YWZLM0xRMy1oU3ZjczA2Y2NRNDlKT2JOU2Q2aUZ4LTUzSTBRbzFYNkVoUlNRbzlKQzNqaDNMd1VGeW5kUXJFYXJaNHAtZlY3YWJoaFNYcw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div></article>
-        <article class="card fade-in collapsible" data-image=""><span class="card-tag">今週</span><h3 class="card-headline">油とフライト混乱が相場の話で止まるのか、企業見通し、旅行需要、インフレ期待まで削り始めるのかが次の分岐点。</h3><div class="tap-hint">タップして展開</div><p class="card-body"><strong>なぜそこか：</strong>燃料、保険、迂回コストが企業ガイダンスに入り始めると、相場は見出し相場から構造相場へ変わる。</p><div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPS25ycmRYWlI4dU5pZ3Z5YXdMNUdBMV9KcXBfQUVXU0Y3bWZudlFwelRLdFFIRDBxRWo5WEtGcjlxNFBsQURvMFhnblpsSDJGY0VGSFlkemxBUndnLV80dldpLVd1SUV5VDh4NzhfZmt2VTdZeVI5OXpYcHZ2TTFHb2hQWElnWnJITENaT0ZyUFhNV25aSmZ0WEh1dW1USHVmSzUtMUcwZVBsSXBjZ0lsTlJCOFhCWlJvSW9jMw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div></article></div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 Bottom Line</h3><p>朝から変わった本質は、<strong>日本だけが相対的に政策の手数を増やし、世界はなお油と輸送と関税の計算に縛られている</strong>ことだ。高市氏の勝利、より信じられる円防衛、そしてLINEを巡る戦略的な所有問題が、東京に新しい午後の材料を与えた。<strong>結論：</strong>日本は相対改善したが、世界全体の値付けはまだ原油、輸送混乱、通商分断が支配している。</p></div></section></main><footer class='footer'><p>CEO Afternoon Briefing · Generated by Sanbot · 2026年5月10日（日）</p><p style='margin-top: 0.5rem;'>Data sources: Reuters, Yahoo Finance, Google News RSS</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));</script><script>(function(){var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){if(now<sixWeek){var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ ECONOMIC DAMAGE WINDOW IN <span class="countdown-num">'+daysLeft+'</span> DAYS';} else if(now<=eightWeek){cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 ECONOMIC DAMAGE WINDOW — <span class="countdown-num" style="color:#fff;">NOW</span>';} else {var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ OIL ELEVATED '+weeksPast+' WEEKS — PAST DAMAGE THRESHOLD';}})();</script><script src='audio-player.js'></script></body></html>
+  <header class="masthead">
+    <div class="lang-toggle"><a href="index.html">EN</a> / <a href="ja.html" class="active">JA</a></div>
+    <div class="war">🔴 IRAN WAR — DAY 71</div><br>
+    <div class="count">🔴 ECONOMIC DAMAGE WINDOW — NOW</div>
+    <h1>CEO午後ブリーフィング</h1>
+    <div>2026年5月11日 月曜日 午後版</div>
+    <div class="edition-sub">🇯🇵 午後の本当の変化は、日本が受け身の市場から政策テーマの中心に移ったことです。円防衛観測、サービスPMI鈍化、企業材料の明暗が重なり、日本株は世界リスクの単なる反応先ではなくなりました。世界ではイラン情勢が依然として軸で、停戦確率の揺れがそのまま原油、ドル、航空、利下げ観測へ波及しました。ヘルススコアは64/100です。</div>
+    <div class="divider"></div>
+  </header>
+  <nav class="nav">
+    <a href="#japan">日本</a><a href="#global">世界</a><a href="#markets">市場</a><a href="#predictions">予測</a><a href="#bottom">結論</a>
+  </nav>
+  <main class="container">
+    <section id="japan" class="section">
+      <div class="section-head"><div>🇯🇵</div><h2>日本アップデート 深掘り</h2></div>
+      <div class="cards">
+        <article class="card collapsible" data-image=""><div class="tag">🇯🇵 日本 · 大引け / 為替</div><div class="headline">日経平均は62,464.23で引け、午後は円防衛観測と弱いサービス業指標が重なり、世界の地合いが落ち着いても輸出株が売られました。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> Reutersは、日本が円安対応で日銀シグナルとワシントンの後押しを組み合わせようとしていると報じました。そのため、円高につながる政策の現実味が増しました。同時にサービスPMIは11カ月ぶり低水準まで鈍化し、内需だけでは円高や輸入エネルギー高を吸収しにくいとの見方が強まりました。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOdkFYaWQ5a2xxdWp3VV94TUdUQzVXWFQxRUNocFlUMmM0b3J3cW84NlNHSkpVcTVUaG1MNDJGV3NLVWViZ25KWk1NbXM2U1VKZDlRVmNnYUhtLTN4YnNTMzVVWVlEWkx4cGNKZzI1bl9NZ2VMUTVVcmdrZWFQbURlR05KVkEwWTNGdkpHT2VYNlBPT2lTaDktT2publhfdmNfOVc0MmxB?oc=5" target="_blank" rel="noopener">Reuters 円戦略 ↗</a><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSFlKYTd3SGlqck5ublNKY09uUHEwa0dBR2d0Nms1Vm5PMVl3VjVsNUJMNndEV0JuZGtndXViNERkdWhoVXBnSHRSTDFzSUdyb2VNcUtxdFNNazR5eVZrbFl0NnUtOHVxYWRxQWp3YktaU0c3bVpHN21PVTJkM1F5Qy1KbTN4bWdrWUJWZVhueHl3SGlRWXMwMzIzdmU2NHhmMEM4cjFVOFV0ZUQtN280dHZBM0VTb2RK?oc=5" target="_blank" rel="noopener">Reuters PMI ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">🇯🇵 日本 · 消費 / ゲーム</div><div class="headline">任天堂株は下落し、ハード値上げがソフト販売の勢いで吸収できる段階より先に来ると市場が判断しました。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> Reutersによると、投資家は本体価格引き上げとソフト不足の両方を警戒しました。値上げで需要減速懸念が強まり、ソフト不足で利益の下支えも薄れ、成長株ではなく守りの採算改善銘柄として見直されたことが売りの原因です。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPX2NDY1JCcUNqTDJqcFpXcWgxZllnWHRVV0Z2eGROVHdBRWFhM1M2SWdDd0VxY2ttbFhhZ1BPOFBwY0hqYXNNZTVuU2ppSUYzNlZGRE9aajlJNnpKMWo3WFFJbUlVZGRSWlUzN1d4eE5RN3k4akpjZ0hXSHV0MWUzd2c3Y0lqR1UxQWsyNHhHWm8zUU8tTk5NeVNpQkkxTE9Jci1MZmxaRDhrc3RmM181dUlPdjRtVmR1?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image="https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630"><div class="tag">🇯🇵 日本 · AI / インフラ</div><div class="headline">SoftBankはNvidia、Foxconnと組んだ国産AIサーバー構想が報じられ、戦略テーマとしての存在感を高めました。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 地政学でサプライチェーンの脆さが意識される中、国内AIサーバー構想は産業政策であると同時にリスク管理でもあります。世界で最も粘着性の高い支出分野であるAIインフラに結び付くこと、そして高付加価値の計算資源を国内に寄せたい東京の方向性と一致することが評価されました。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxNWkQzaFBycUhVbEl2aUFVMFNaUmRMZ2VNcDE4OXhueUJ4amhwekNDMTRLekN4cWFOZDdTb3JrMWJSZTZiVkV1d0FZLXF5NWstODFqTFRNWnV0R1kzSk5RTzFIaTExaFV3cno1c2Zkb096Qm1rTVZ0QXJHM010cTF2NmlETHRYZ3VvLXk0WlQ4RlRHcU5FQXZfcFBEQnh1VkFfOGtNQ0FzSkF2V0Jvb3NwcHFRdTNtM283X3VIc2NHZnFBMGNEUEE?oc=5" target="_blank" rel="noopener">Reuters / Nikkei ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">🇯🇵 日本 · 政策 / 為替</div><div class="headline">午後は円のテーマが一段と重くなりました。東京が言葉だけでなく、日銀シグナルとワシントンの外交レバーを組み合わせようとしているためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 介入示唆だけでは足りない時、当局は政策経路を広げます。Reuters報道は、日本当局が問題を単なる投機筋の売りではなく、円支援を定着させるための政策協調不足として見ていることを示唆しました。これにより朝よりも円高シナリオの現実味が増しました。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOdkFYaWQ5a2xxdWp3VV94TUdUQzVXWFQxRUNocFlUMmM0b3J3cW84NlNHSkpVcTVUaG1MNDJGV3NLVWViZ25KWk1NbXM2U1VKZDlRVmNnYUhtLTN4YnNTMzVVWVlEWkx4cGNKZzI1bl9NZ2VMUTVVcmdrZWFQbURlR05KVkEwWTNGdkpHT2VYNlBPT2lTaDktT2publhfdmNfOVc0MmxB?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">🇯🇵 日本 · サービス / 内需</div><div class="headline">サービス業の勢いは引けにかけて鈍化感が強まり、輸入インフレや外部不安を吸収する国内の受け皿が弱くなりました。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 4月PMIが11カ月ぶり低水準へ鈍化したことで、家計やサービス企業が価格上昇を十分に吸収できていないことが示されました。午後版で重要なのは、サービス減速と円高観測が同時に来た点で、旅行や小売りなど内需循環株の収益見通しを圧迫しました。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSFlKYTd3SGlqck5ublNKY09uUHEwa0dBR2d0Nms1Vm5PMVl3VjVsNUJMNndEV0JuZGtndXViNERkdWhoVXBnSHRSTDFzSUdyb2VNcUtxdFNNazR5eVZrbFl0NnUtOHVxYWRxQWp3YktaU0c3bVpHN21PVTJkM1F5Qy1KbTN4bWdrWUJWZVhueHl3SGlRWXMwMzIzdmU2NHhmMEM4cjFVOFV0ZUQtN280dHZBM0VTb2RK?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">🇯🇵 日本 · 戦略 / クロスアセット</div><div class="headline">日本市場は朝より独自色を持って引けました。世界の地政学だけでなく、国内マクロ論点が見えるようになったためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 朝は「日本は原油高とイラン情勢に反応する市場」という構図が中心でした。しかし引け時点では、円防衛、PMI鈍化、任天堂の採算不安、SoftBankのAIオプションという日本固有の材料が積み上がり、海外資金が日本の中で選別しやすくなりました。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMV9DYUJldGFpaFVEczJiSGRvY05xRUwyWm9xZm9BV0VXVXdxZFUzM3c0YmpETzJ6V2lsaWFyRmFWdHhsZHp6dmNTaGRUM2J6dGRiZDc3Yk1KSmRadU9GbG5BNjhlZTVXUWlUZ3RSYmd1a3Q2REkybUdXMElXcFptZnpsZlZ0X0Y0?oc=5" target="_blank" rel="noopener">Reuters 世界市場 ↗</a></div></article>
+      </div>
+    </section>
+
+    <section id="global" class="section">
+      <div class="section-head"><div>🌍</div><h2>グローバル 大陸別</h2></div>
+      <div class="cards">
+        <article class="card collapsible" data-image=""><div class="tag">北米</div><div class="headline">米国株はまちまちでドルは上昇しました。ワシントンがイランの回答を「受け入れ不能」としたため、中東の緊張緩和期待が後退したからです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 停戦確率が下がると原油経由のインフレ懸念がすぐ戻ります。その結果、ドル買いが残り、株の引けにかけた一段高も抑えられました。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMV9DYUJldGFpaFVEczJiSGRvY05xRUwyWm9xZm9BV0VXVXdxZFUzM3c0YmpETzJ6V2lsaWFyRmFWdHhsZHp6dmNTaGRUM2J6dGRiZDc3Yk1KSmRadU9GbG5BNjhlZTVXUWlUZ3RSYmd1a3Q2REkybUdXMElXcFptZnpsZlZ0X0Y0?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">北米</div><div class="headline">Goldman SachsはFed利下げ予想を2026年12月へ後ずれさせました。イラン戦争がエネルギー費と輸送費を通じて米インフレを長引かせると見ているためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 戦争起因の原油高と物流コスト上昇が想定されていたディスインフレを一部打ち消し、Fedが急いで緩和しにくくなるという理屈です。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNUmowSnVOelhFSkZuUkVCMEN2TDl4NWRidHB2ak5jQkVHcUxRd2RoNW9mMkJlNTNLU0FkeWpvdGtSd0hKV2doZXdZN2NyeVdyOTJXSWVaYmkyeF9rb005d1lPYWZGLXQtRTdObUJFMWw3b1lBUDhVYUZJcEQxclIteTdzNW5PeHhGZUhZNGVjNkVZQ2NGMzZkNWNsb09hS1ZNV2RwamRncDg3STBiMGRVNmxpNkt2S1o3QTQyTW9Qc25oUQ?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">北米</div><div class="headline">トランプ氏がイランの最新回答を退けたことで原油は約4ドル上昇しました。供給障害が朝の想定より長引く確率を市場が織り直したためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 停戦シナリオが後退すると、エネルギー市場は地政学プレミアムを再び積み増します。その影響がインフレ敏感資産へ直結しました。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZnd6N0Zakang0NXYwR1c5V1M5ZDNWcjRaM1k5RDVidlU0UlpqRUVZcXdLSVMtd3VqYVY3RkVGa0piQVc4eERTRV94TjVIQXlUTE85Z1pwQ055cDZQNy13bmZiOC12ODJhclBzUkJiZXN0TlRXMHpOcTdlUGVrc1BUNkZfTUpSMHN0OWlrZ2ZPQjBKREtSeXZjUE1lRDdlX1JOMDU4SDZwdy0?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image=""><div class="tag">欧州</div><div class="headline">欧州株は下落しました。中東緊張の再燃で原油が上がり、欧州が輸入エネルギーショックに特に弱いことが再確認されたためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 原油高は家計の実質購買力を削り、輸送コストの重い業種を圧迫し、同時にECBのインフレ見通しも難しくします。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNTks2bzExSEt4eGVPQUdnRUtncUREdVB0QVlQVWJaWGlkQnVDOU1KcW00ek1VS3pjbFh4WDh6b2dERVBXN0cxZDZYRmpXSEJzOXNWUFVUY0E3ZHpuVkFZMVZtNVdFZGc3UVI0bGNyYVNNMjlIM3lSLURFeC12WDFmeTMwMVdqT291N3lNckFKRUxSTDhUaDlLMEZvZEJJem5pLVdz?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">欧州</div><div class="headline">ECBのKocher氏は、インフレ見通しが改善しなければ追加の政策対応があり得ると示唆しました。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 原油変動が期待インフレや賃金設定に波及する中では、政策当局はインフレ終息宣言を出しにくいからです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcGREY0RXWVJENm1RVThMRHZPSEgwVjEzUEREQnAxSGQtd3Z4SGVKTWF5NGNvVDVVeTBNNG9qOVczMlFzTXhvSFJxR0FyZjlvWXQ0RHIyLTNPVlZ6dmVhaDNKdWtFVnIyY0FlWFZEMF9PMElpeGc3OWp5bHpPNGpQekE2cnh6SVhnSG5sb3d2bTdSMlJxMV84dXpzdDJzRjlpZV9YNm5peDRsUVhVcV95VUNGS0Jqd1B6?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">欧州</div><div class="headline">欧州の蓄電池併設型再エネ案件は2030年までに450%以上拡大する見通しです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 再エネ単体より蓄電池併設の方が価値を取りやすく、エネルギーショックが続いたことで「柔軟性」そのものが収益化しやすい資産になったからです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxOS2dqMHN1bExPZHNTeWRNWGVEbmMtQ3M3dnkweENlU0NiWV9YMER5VGFkMURmLXF0eHNLRzRER19tdURhSFJCTzF2SGFidEhrbmNkRng5WjhYenFOTDBuMWJpUU40LUdYbHFYLWJkY1pTeE1NOXdzNWZWaEpHbnByMk1mblNpdjBnd0tCU1RicUhWem5GTGtVR1QyY3VVVjhpc0NnYzV2a1JxWmI3c2ZqRHhoOEE3UDBxVG1TRXE2dVlZbHRsNnF5UXpEeEVWbVRES2xnT3Fn?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image=""><div class="tag">アジア日本除く</div><div class="headline">中国の工場出荷段階のインフレは45カ月ぶり高水準となりました。イラン情勢によるエネルギー高が上流価格を押し上げたためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 燃料や原材料価格の上昇はまず生産者に当たるため、輸入コモディティ圧力が中国の産業基盤に入り始めたことを示しました。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNNHBjRHlkdlRLWGN2eHNKT0pQRC1HSVBCQkpwWFZJMG9ITk1KWWZaMUVCYUpVcTVfcXpYOGFqWlFYSU1PZ0J5czRlMjdaajJoS19nWEEtVS1lN2c2LXF1SHBYYmRtRXR3LXBXUjlWdHN3bW9TWldSVjlqQWFocVV4d3Mtc2xHNDRFTzczd3V1WHM1RnlGb05oZUU2Wm56czNkMVNHZ3MtT0lSTU9qVnc?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">アジア日本除く</div><div class="headline">台湾は米国との関係に自信を示しつつ、トランプ氏の訪中前に「サプライズは望まない」と表明しました。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 首脳外交が相場の焦点になる局面では、前線に立つ経済圏は曖昧な見出しで価格を付け替えられないよう、先に明確さを確保しようとします。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPMjlxWGg5NjllengzeWZpbzJ3aVNrb0Z3cW5XQVh3aEh1WFFFQkRzSzlwQ1huLXJxLUlObl9LVnktMTFGeFFwbFk3MC1mRG9rYUhseG5JRUd6dXVKZUljRU5lajlHQ01KZWwwOERybWNFWEhXNW81ZElJek5lX1VRMmlJQ1pyaG44QmVEenpua2M2NkRSYjdFWm5kVjI?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">アジア日本除く</div><div class="headline">ASEAN首脳会議は石油融通協定の前倒し推進で終わりました。より広い戦略対応よりも、緊急時の協調の方が合意しやすかったためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 原油不安が強い局面では、大きな政治合意が難しくても、実務的なエネルギー安全保障策にはすぐ圧力がかかるからです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxORUN2eVpZOFVtaGhyRHZCdHNTWVJrMmVzOHVJbzZ0dnUyMVh5UTJlVjM3c0x1b1pPMnp2bWpwdXdhc01LdU5taGxQY0FMVU1hMjV6VjhoM2tvd2Z6bVR3NDAxZDJQLXlJdkNZUFRYdnZPTU9VQXVQak1rblFfZlM5Y2F3T09vazFzOEFDc3J1OVdSUkhEWHVuWlA2emtjNm9PNXRKeWoxQ1MwZDg?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image=""><div class="tag">中東・アフリカ</div><div class="headline">トランプ氏はイランの和平提案への回答を拒否しました。ホワイトハウスが停戦への道筋として受け入れられる条件から遠すぎると判断したためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 「受け入れ不能」と明言されたことで、市場は単なる交渉の継続ではなく、戦闘長期化の時間軸を織り込む必要が出ました。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTTFIeHh6enp1TW1pNmRpVy1pZ1ZtaVFvNTF2emxOOUg3VXV1RWE3SkFqb3pwY28yS0pBTDF3MjRFSVNRclFhTWtCZlN0SmQ1MDV2YUZJSXJhdXRUdldyM3VZbEkzYnIxUXlvSk1JREJwVURVVGJhcV9vcEU2WnlLcVZKaXZQX0Fac1VEWW1VZjlwdDNNWHp5ZENCNTROaEhsVFRuQ2ZUd0gwTmc?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">中東・アフリカ</div><div class="headline">航空各社は地域内の欠航をさらに増やしました。停戦見出しが断続的に出ても、紛争空域の運用継続を信用できなくなっているためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 和平交渉が再び不安定化すると、航路安全、保険料、機材再配置リスクが一斉に悪化するためです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">中東・アフリカ</div><div class="headline">Airtel Africaはモバイルマネー部門のIPOを延期しました。戦争起因の燃料高、資金調達環境悪化、執行リスクで上場環境が守りにくくなったためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> マクロ変動が大きい時は、経営陣はフロンティア成長銘柄が厳しく評価される市場で無理に出るより、バリュエーション維持を優先するからです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPM0hhZlJhaGFoX0loUkI4eWk3bUdRN0RmV1VwVFZkdF82TFRZako1NkdfaTBYYS1BX3htaU9xcjNKSl9tTEdaRGJSMU1JYmM3S243bHhjbHNoTjBTRXd0eGdlel84bVp6NjRjREtuSjJ3Z1FyNHVERG0za0NCaThlb25FODBTZWZXUFlxOFUtOGFfbHp1U3BGSnMxM0o4VE5OX1c3eWpzdGtYTFNscEl2UkhR?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image=""><div class="tag">中南米</div><div class="headline">中南米通貨は上昇しました。イラン情勢の悪化と断続的な停戦期待を天秤にかける中、商品市況の下支えは欲しいが全面パニックは避けたい地域特性が働いたためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 中南米資産は商品価格上昇を好みますが、世界ショックが大きすぎてリスク選好を壊すほどでは困るからです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQV3owemx0OTh6ZHh6NkhOV25FWWtTNDlGSlQ0MHJabm5iY1dDLUVBOTlvbzlPcFpiTE9oLXk4YzZmZnk5UjlfMDZ6cFJpOUpiNFZ6dk82UmRnSTFwRlI3cnFFSEg1ZGxZX2F2QVhtVjg1aGw5TnIzSmt1bGNyVHBIa0twMzFWc3JEeTEyV0NkejJZeGtWbS1WQTJ6V05vLTlkRjJqR3NlZWJ3NEJNX09KQ2hvbU5QeVZFSU5MNEVGRQ?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">中南米</div><div class="headline">MercadoLibreは今年ブラジルに110億ドルを投資すると表明しました。物流とフィンテック浸透がなお高成長を続けると見ているためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 消費需要とデジタル決済が拡大するうちに競争優位を広げようとしており、設備投資が単なるコストではなく武器になっているためです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPSGpnVU5vbkRDN0gxckVLaWktWWNqSXVXOVZ0S3VMOHdycXhqa0lHNklRaU9jMXNNS19zSTRRSHZZRmRBelJZN1pSRFZrem1Za25sZnpfd241RHZWdUhTdEwydzFiUmQtbXdaTlNoUWl2U3FEcTJMdW4wZl9fWUhhQzBPbV9nZWNWU2hoZXRETFRBSVN1ajE1OXpuTi1SdE1uRGc?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">中南米</div><div class="headline">EU・メルコスール協定はトランプ流の強硬外交の限界を示す材料として読まれました。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 関税や制裁政治が強まるほど、資源輸出国にとって多極的な通商構造の魅力が高まるからです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ0dPTHVTM0NFRXA3c1doc051T2I4aE5QVEt0T19WWkRDbkdmWld1QVh0OWJkdXJITzBmQW5lLUxOdlhvaXV1bUN4VzRmSUlEeHVHY3U0RDlPTUpVNDh6QmtoNURJQTFQOTBTN2RMTXh6S2VibjdjSkczUVZwVkRZSjdWdVVlaXRlMFE1UnBtZjNPb1pXUnUyUTRNc09ScWxkQWRSLWc2ZVF6SzBSYk0tTXFERktFYklhdFpraDFSdw?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image="https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630"><div class="tag">オセアニア</div><div class="headline">豪州ASX200は下落しました。国内が比較的落ち着いていても、世界的な原油ショックが輸送、消費、金利敏感セクターを圧迫するためです。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 豪州は資源国として恩恵も受けますが、株式市場では燃料高と利下げ後ずれの打撃を受ける業種がまず売られるからです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMV9DYUJldGFpaFVEczJiSGRvY05xRUwyWm9xZm9BV0VXVXdxZFUzM3c0YmpETzJ6V2lsaWFyRmFWdHhsZHp6dmNTaGRUM2J6dGRiZDc3Yk1KSmRadU9GbG5BNjhlZTVXUWlUZ3RSYmd1a3Q2REkybUdXMElXcFptZnpsZlZ0X0Y0?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">オセアニア</div><div class="headline">ニュージーランドの国有農地によるネイチャークレジット参入は、土地の生物多様性価値を収益化する地域トレンドを示しました。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> 政策と投資家の双方が自然資本の会計化を後押しし、保全が単なる規制対応から財務機会へ変わっているためです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRXdaTmIwRXlKZldpWGRlS3FsTTFXaWstVnhCOHRTUlYzR2o5cWV6dF9oelZSdktreEd0UHFDako3aUdETkRPUkllSngyMUJVQlhjc3l3dE40TGo4ZnJwSFYzanpyaWpWaDNJQllZRW5CamFGRmd1d1ZmT2ZvSG9lTUY1UDNWLXUwWTVtcHc3QThLTERoOXBqc3NiSUhQeTQyM1FNaVloQzdkcUN3QkoyVlM5N2Nlbl9nNGc0MUl0aVVpUQ?oc=5" target="_blank" rel="noopener">U.S. News ↗</a></div></article>
+        <article class="card collapsible" data-image="https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630"><div class="tag">オセアニア</div><div class="headline">Nikkei Asiaは米中のレアアース合意が維持されていると報じました。オセアニアにとっては、供給網の即時断絶懸念が後退し、鉱業センチメントの下支え材料です。</div><div class="hint">タップで展開</div><div class="body"><strong>なぜか:</strong> レアアース供給の安定はアジア太平洋の産業ストレスを一段和らげますが、原油ショックで全体のマクロ環境はなお脆弱だからです。</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxQa1c5bGg4R3VNcGtGWWdDSmdKenlrZjB5bEw1TEZ4SVRJcnpTelRoZXg4Qmx0czhJalE0ZUhWVG83VEZGMjlYbEJxZzVIcEJMdmQzbTFPLWVqZEk0VlFVQlY2WjJBTFBYVEdZdDZJeWFnMVBTRHdDVzdTQS1WeHdBQm5KZnNGYjdPdThkcmNNel9OX2FFZ1JQOXJudmtnWFJ2TE5oTHl4YUoxRzNPdTI5MkRaZGhtejhrRVh0d2FzbGxMMGFKUThUX05nQmpwWjNaZ19hZ2lYdU0tOWRj?oc=5" target="_blank" rel="noopener">Nikkei Asia ↗</a></div></article>
+      </div>
+    </section>
+
+    <section id="markets" class="section">
+      <div class="section-head"><div>📊</div><h2>市場と経済</h2></div>
+      <div class="bottom"><strong>ヘルススコア: 64/100。</strong> 全面パニックではない一方、安定にも遠い状態です。日本は国内材料が見えやすくなりましたが、世界相場は依然として原油と停戦見出しに振られています。</div>
+      <div class="market-grid" style="margin-top:1rem">
+        <article class="market-card collapsible" data-image=""><h3>S&P 500</h3><div class="stats">現在値 7,398.93<br>日次 +0.84%<br>週次 +2.33%<br>月次 +8.41%<br>年初来 +7.88%</div><div class="hint">タップで展開</div><div class="market-note">成長期待とAI物色が、原油起点のインフレ不安を一部相殺しました。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Nasdaq 100</h3><div class="stats">現在値 29,234.99<br>日次 +2.35%<br>週次 +5.50%<br>月次 +16.56%<br>年初来 +15.98%</div><div class="hint">タップで展開</div><div class="market-note">2%超の上昇となったのは、引けにかけてもAI物色が金利不安を上回ったためです。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Dow</h3><div class="stats">現在値 49,609.16<br>日次 +0.02%<br>週次 +0.22%<br>月次 +2.95%<br>年初来 +2.54%</div><div class="hint">タップで展開</div><div class="market-note">エネルギー株には追い風でも、輸送や消費には逆風となるため出遅れました。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Nikkei 225</h3><div class="stats">現在値 62,464.23<br>日次 -0.40%<br>週次 +4.25%<br>月次 +16.94%<br>年初来 +20.51%</div><div class="hint">タップで展開</div><div class="market-note">円防衛観測とPMI鈍化が輸出株を圧迫しました。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Stoxx 600</h3><div class="stats">現在値 612.14<br>日次 -0.69%<br>週次 +0.14%<br>月次 -0.22%<br>年初来 +1.72%</div><div class="hint">タップで展開</div><div class="market-note">原油高で輸入エネルギーへの弱さが意識されました。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>CSI 300</h3><div class="stats">現在値 4,938.23<br>日次 +1.36%<br>週次 +2.66%<br>月次 +11.21%<br>年初来 +4.67%</div><div class="hint">タップで展開</div><div class="market-note">国内政策支援がエネルギーショックをなお上回りました。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>WTI原油</h3><div class="stats">現在値 99.84<br>日次 +4.63%<br>週次 -6.18%<br>月次 +3.39%<br>年初来 +74.18%</div><div class="hint">タップで展開</div><div class="market-note">2%超の大幅上昇。トランプ氏がイラン回答を拒否し、供給障害懸念が再燃したためです。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Brent原油</h3><div class="stats">現在値 105.42<br>日次 +4.08%<br>週次 -7.88%<br>月次 +10.74%<br>年初来 +73.53%</div><div class="hint">タップで展開</div><div class="market-note">停戦確率の悪化で地政学プレミアムが戻りました。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Gold</h3><div class="stats">現在値 4,660.40<br>日次 -1.27%<br>週次 +3.12%<br>月次 -2.13%<br>年初来 +8.02%</div><div class="hint">タップで展開</div><div class="market-note">地政学不安は強いままでも、ドル高が重しになりました。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Bitcoin</h3><div class="stats">現在値 80,806<br>日次 +0.18%<br>週次 -0.15%<br>月次 +9.41%<br>年初来 -8.93%</div><div class="hint">タップで展開</div><div class="market-note">紛争ヘッジとしては、原油、為替、金利の方が優先されました。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Dollar Index</h3><div class="stats">現在値 98.149<br>日次 +0.32%<br>週次 -0.33%<br>月次 -0.51%<br>年初来 -0.28%</div><div class="hint">タップで展開</div><div class="market-note">原油主導のリスク回避と利下げ後ずれ観測がドルを支えました。</div></article>
+        <article class="market-card collapsible" data-image=""><h3>USD/JPY</h3><div class="stats">現在値 157.142<br>日次 +0.20%<br>週次 +0.19%<br>月次 -1.24%<br>年初来 +0.26%</div><div class="hint">タップで展開</div><div class="market-note">高止まりは続くものの、月次での反落は日本の防衛姿勢が効き始めていることを示します。</div></article>
+      </div>
+    </section>
+
+    <section id="predictions" class="section">
+      <div class="section-head"><div>🔮</div><h2>予測</h2></div>
+      <div class="cards">
+        <article class="card" data-image=""><div class="tag">明日</div><div class="headline">注目点</div><div class="body" style="display:block">USD/JPYが直近のパニック高値を抑えられるか、日経売りが引き続き輸出株に集中するか、そしてSoftBankのようなAI関連が消費敏感株から独立して買われ続けるかが焦点です。海外では、ホワイトハウスやテヘランからの新しい文言が原油プレミアムを再度動かすかを見ます。</div></article>
+        <article class="card" data-image=""><div class="tag">今週</div><div class="headline">見通し</div><div class="body" style="display:block">今週は、イラン情勢が持続的なインフレショックになるのか、それとも見出し主導の一時的な税金で終わるのかが軸です。WTIが100ドル近辺を維持すれば、FedとECBの利下げ期待はさらに後退しやすくなります。和平文言が改善すれば、原油、航空、防御的ドルポジションで急速な巻き戻しが起こりやすいです。</div></article>
+      </div>
+    </section>
+
+    <section id="bottom" class="section">
+      <div class="bottom"><h3>💡 総括</h3><p>朝からの最大の変化は、<strong>日本市場がより明確なマクロの顔を持って引けたこと</strong>です。円防衛観測の強まり、サービス指標の鈍化、そしてAIインフラ関連の上振れと消費関連の慎重さがはっきりしました。<strong>結論:</strong> 日本も原油とイラン情勢の衝撃から自由ではありませんが、引け時点では他市場よりも国内要因が見えやすくなっています。</p></div>
+    </section>
+  </main>
+  <footer>
+    <p>CEO午後ブリーフィング · Generated by Sanbot · 2026年5月11日</p>
+    <p>Data sources: Reuters, Nikkei Asia, U.S. News, Yahoo Finance, Google News RSS</p>
+  </footer>
+  <script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));</script>
+</body>
+</html>

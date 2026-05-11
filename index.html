@@ -3,853 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEO Briefing — May 10, 2026</title>
+  <title>CEO Briefing — May 11, 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: 'Copernicus Trial';
-      src: url('fonts/CopernicusTrial-Book.ttf') format('truetype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Copernicus Trial';
-      src: url('fonts/CopernicusTrial-Medium.ttf') format('truetype');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --bg: #F9F9F9;
-      --surface: #FFFFFF;
-      --bg-secondary: #FDFDFD;
-      --bg-tertiary: #F7F6F4;
-      --bg-hover: #F5F4F3;
-      --bg-hover-darker: #ECEAE7;
-      --bg-accent: #2A8F87;
-      --bg-accent-dark: #1D736C;
-      --text: #111111;
-      --text-secondary: #44403C;
-      --text-muted: #78716C;
-      --text-link: #1D736C;
-      --text-link-hover: #2A8F87;
-      --text-error: #C5624E;
-      --border: #E8E5E1;
-      --border-default: #D5D2CD;
-      --border-accent: #B56AEB;
-      --serif: 'Copernicus Trial', Georgia, serif;
-      --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-      --shadow-sm: 0 4px 8px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.06);
-      --shadow-md: 0 8px 16px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.04);
-      --shadow-lg: 0 16px 32px rgba(0,0,0,0.08);
-      --radius: 24px;
-      --green: #2A8F87;
-      --red: #B94A48;
-    }
-
-    html { font-size: 16px; scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--sans);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .masthead {
-      background: transparent;
-      border-bottom: none;
-      padding: 0;
-      position: relative;
-    }
-
-    .masthead-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 2rem;
-      text-align: center;
-    }
-
-    .masthead .overline {
-      font-family: var(--sans);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .masthead h1 {
-      font-family: var(--serif);
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-    }
-
-    .masthead .edition-date {
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      margin-bottom: 0.25rem;
-    }
-
-    .masthead .edition-sub {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .war-day-counter {
-      display: inline-block;
-      background: #B94A48;
-      color: #fff;
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      padding: 0.35rem 1rem;
-      border-radius: 100px;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-    .war-day-counter .day-num {
-      font-size: 1rem;
-      margin: 0 0.15em;
-    }
-
-    .econ-countdown {
-      display: inline-block;
-      background: #1a1a1a;
-      color: #fff;
-      font-family: var(--sans);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      padding: 0.3rem 0.9rem;
-      border-radius: 100px;
-      margin-bottom: 0.75rem;
-    }
-    .econ-countdown .countdown-num {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #F59E0B;
-      margin: 0 0.1em;
-    }
-
-    .divider-bar {
-      width: 60px;
-      height: 3px;
-      background: var(--text);
-      margin: 1rem auto 0;
-      border-radius: 2px;
-    }
-
-    .nav-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      background: var(--bg-secondary);
-      border-bottom: none;
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-
-    .nav-bar a {
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 0.7rem 1.5rem;
-      margin: 4px 0;
-      border-radius: 999px;
-      transition: color 0.2s ease, background 0.2s ease;
-    }
-
-    .nav-bar a.active {
-      color: var(--text-primary);
-      background: #ECEAE7;
-    }
-
-    .nav-bar a:hover:not(.active) {
-      color: var(--text-secondary);
-    }
-
-    .lang-toggle {
-      position: absolute;
-      top: 0.75rem;
-      right: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-
-    .lang-toggle a {
-      text-decoration: none;
-      color: var(--text-muted);
-      transition: color 0.2s ease;
-    }
-
-    .lang-toggle a.active {
-      color: var(--text);
-    }
-
-    .lang-toggle a:hover:not(.active) {
-      color: var(--text-secondary);
-    }
-
-    .lang-toggle .sep {
-      color: var(--border);
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-
-    .section {
-      margin-bottom: 3.5rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid var(--text);
-      padding-bottom: 0.75rem;
-    }
-
-    .section-icon {
-      font-size: 1.5rem;
-    }
-
-    .section-title {
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-    }
-
-    .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-sm);
-    }
-
-    .card.featured {
-      border-left: 3px solid var(--bg-accent);
-    }
-
-    .card.featured.japan {
-      border-left: 3px solid #C53030;
-    }
-
-    .card-tag {
-      display: inline-block;
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-
-    .card-tag.japan {
-      color: #C53030;
-    }
-
-    .card-headline {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      font-weight: 500;
-      line-height: 1.35;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-    }
-
-    .card-body {
-      font-size: 0.9rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-
-    .card-sources {
-      margin-top: 0.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .source-link {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--text-link);
-      text-decoration: none;
-      padding: 0.15rem 0.5rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      transition: all 0.2s;
-    }
-
-    .source-link:hover {
-      border-color: var(--text-link);
-      background: var(--bg-tertiary);
-    }
-
-    .src-arrow { font-size: 0.6rem; }
-
-    .stat {
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .tap-hint {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      font-style: italic;
-    }
-
-    .collapsible .card-body,
-    .collapsible .card-sources {
-      display: none;
-    }
-
-    .collapsible.expanded .card-body,
-    .collapsible.expanded .card-sources {
-      display: block;
-    }
-
-    .collapsible.expanded .tap-hint {
-      display: none;
-    }
-
-    .collapsible {
-      cursor: pointer;
-    }
-
-    .nav-pills {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-pill {
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 500;
-      text-decoration: none;
-      color: var(--text-muted);
-      padding: 0.35rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      transition: all 0.2s;
-    }
-
-    .nav-pill:hover {
-      border-color: var(--text-secondary);
-      color: var(--text-secondary);
-    }
-
-    .index-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-    }
-
-    .index-table th {
-      font-weight: 600;
-      text-align: left;
-      padding: 0.5rem 0.75rem;
-      border-bottom: 2px solid var(--border);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-    }
-
-    .index-table td {
-      padding: 0.5rem 0.75rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .idx-name { font-weight: 500; }
-    .idx-level { font-weight: 600; }
-    .chg-pos { color: var(--green); font-weight: 600; }
-    .chg-neg { color: var(--red); font-weight: 600; }
-
-    .health-gauge-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5rem 0;
-    }
-
-    .health-gauge {
-      position: relative;
-      width: 200px;
-      height: 100px;
-      overflow: hidden;
-    }
-
-    .gauge-bg {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: conic-gradient(
-        from 180deg,
-        #e74c3c 0deg,
-        #e67e22 45deg,
-        #f1c40f 90deg,
-        #2ecc71 135deg,
-        #27ae60 180deg
-      );
-      mask: radial-gradient(circle at center, transparent 60px, black 61px);
-      -webkit-mask: radial-gradient(circle at center, transparent 60px, black 61px);
-    }
-
-    .gauge-needle {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 3px;
-      height: 80px;
-      background: var(--text);
-      transform-origin: bottom center;
-      transform: rotate(-90deg);
-      transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-      border-radius: 2px;
-    }
-
-    .gauge-dot {
-      position: absolute;
-      bottom: -5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 12px;
-      height: 12px;
-      background: var(--text);
-      border-radius: 50%;
-    }
-
-    .gauge-scale {
-      display: flex;
-      justify-content: space-between;
-      width: 200px;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-top: 0.25rem;
-    }
-
-    .gauge-score {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-top: 0.5rem;
-    }
-
-    .gauge-score-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--red);
-    }
-
-    .indicator-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .indicator-item {
-      text-align: center;
-    }
-
-    .indicator-value {
-      font-size: 1.25rem;
-      font-weight: 700;
-    }
-
-    .indicator-name {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      margin-top: 0.25rem;
-    }
-
-    .indicator-sub {
-      font-size: 0.65rem;
-      color: var(--text-muted);
-    }
-
-    .bottom-line {
-      background: var(--text);
-      color: #f5f5f5;
-      border-radius: var(--radius);
-      padding: 2rem;
-    }
-
-    .bottom-line h3 {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-    }
-
-    .bottom-line p {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      color: #d4d4d4;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 640px) {
-      .cards-grid { grid-template-columns: 1fr; }
-      .card { border-radius: 0; border-left: none; border-right: none; border-top: none; border-bottom: 1px solid var(--border); box-shadow: none; }
-      .card.featured { border-left: none; border-bottom: 2px solid var(--bg-accent); }
-      .card.featured.japan { border-left: none; border-bottom: 2px solid #C53030; }
-      .indicator-grid { grid-template-columns: repeat(2, 1fr); }
-      .bottom-line { border-radius: 0; }
-      .nav-pills { display: none; }
-      .bottom-line { background: #333; }
-      .index-table { font-size: 0.7rem; }
-      .index-table td, .index-table th { padding: 0.4rem 0.5rem; }
-    }
-
-    @media (max-width: 480px) {
-      .masthead-inner { padding: 1.5rem 1rem 1.5rem; }
-      .container { padding: 1.5rem 1rem 3rem; }
-      .nav-pills {
-        justify-content: flex-start;
-        overflow-x: auto;
-      }
-      .bottom-line {
-        padding: 1.5rem;
-      }
-    }
+    :root{--bg:#f9f9f9;--surface:#fff;--text:#111;--muted:#666;--border:#e8e5e1;--accent:#1d736c;--pill:#eceae7;--serif:Georgia,serif;--sans:'Hanken Grotesk',sans-serif}
+    *{box-sizing:border-box} body{margin:0;font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7}
+    .masthead{padding:2.5rem 1.25rem 1.25rem;text-align:center;position:relative}.lang-toggle{position:absolute;top:.75rem;right:1rem;font-size:.75rem}.lang-toggle a{text-decoration:none;color:var(--muted)}.lang-toggle a.active{color:var(--text)}
+    h1,h2,h3{font-family:var(--serif);font-weight:500}.edition-sub{max-width:900px;margin:.75rem auto 0;color:#444}.divider{width:60px;height:3px;background:#111;margin:1rem auto 0}
+    .war{display:inline-block;background:#b94a48;color:#fff;padding:.35rem .9rem;border-radius:999px;font-size:.78rem;font-weight:700}.count{display:inline-block;background:#111;color:#fff;padding:.3rem .8rem;border-radius:999px;font-size:.74rem;font-weight:700;margin-top:.5rem}
+    .nav{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;padding:0 1rem 1rem}.nav a{background:var(--pill);padding:.45rem .9rem;border-radius:999px;text-decoration:none;color:#333;font-size:.85rem;font-weight:600}
+    .container{max-width:920px;margin:0 auto;padding:0 1.25rem 3rem}.section{margin:2.2rem 0}.section-head{display:flex;align-items:center;gap:.6rem;border-bottom:2px solid #111;padding-bottom:.65rem;margin-bottom:1.1rem}
+    .cards{display:flex;flex-direction:column;gap:1rem}.card,.market-card,.bottom{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:1.05rem 1.1rem}.tag{font-size:.74rem;font-weight:700;color:var(--accent)}
+    .headline{font-size:1.14rem;line-height:1.35;margin:.35rem 0 .55rem}.hint{font-size:.73rem;color:var(--muted);margin-bottom:.45rem}.body,.market-note{display:none;color:#444}.collapsible{cursor:pointer}.collapsible.expanded .body,.collapsible.expanded .market-note{display:block}
+    .sources{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.7rem}.sources a{color:var(--accent);text-decoration:none;font-size:.82rem;font-weight:600}.market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}.stats{font-size:.9rem;color:#444}
+    footer{max-width:920px;margin:0 auto 2rem;padding:0 1.25rem;text-align:center;color:var(--muted);font-size:.82rem}
   </style>
 </head>
 <body>
-  <header class="masthead"><div class="lang-toggle"><a href="index.html" class="active">EN</a><span class="sep">/</span><a href="ja.html">JA</a></div><div class="masthead-inner"><div class="overline">AFTERNOON INTELLIGENCE BRIEF</div><div class="war-day-counter" id="war-day-badge">🔴 IRAN WAR — DAY <span class="day-num" id="war-day-num">69</span></div><br><div class="econ-countdown" id="econ-countdown">⏱ ECONOMIC DAMAGE WINDOW: <span class="countdown-num" id="econ-countdown-num">—</span></div><h1>CEO Afternoon Briefing</h1><div class="edition-date">Sunday, May 10, 2026 — Afternoon Edition</div><div class="edition-sub">🇯🇵 The afternoon shift was real: Tokyo gained policy clarity, the yen suddenly had teeth, and Line ownership politics turned strategic, not just corporate · China added a demand cushion with stronger exports, but Hong Kong reminded markets that political risk still sits inside the Asia story · Globally, oil and flight disruption kept pressure on Europe and capped US upside · Health Score: 66/100</div><div class="divider-bar"></div></div></header><nav class="nav-pills"><a href="#japan" class="nav-pill">Japan</a><a href="#global" class="nav-pill">Global</a><a href="#markets" class="nav-pill">Markets</a><a href="#predictions" class="nav-pill">Predictions</a><a href="#bottomline" class="nav-pill">Bottom Line</a></nav><main class="container"><section class="section" id="japan"><div class="section-header"><div class="section-icon japan">🇯🇵</div><h2 class="section-title japan">Japan Update — In Depth</h2></div><div class="cards">        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 JAPAN · POLITICS / BONDS</span>
-          <h3 class="card-headline">Tokyo’s biggest fresh afternoon shift was that Takaichi’s decisive win started being read as bond-friendly, not just growth-friendly, because investors now think any stimulus push will come with enough fiscal discipline to avoid a sudden super-long JGB tantrum.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> markets had feared a pure tax-cut shock, but the vote margin reduced coalition noise and made it easier to imagine a more controlled policy package. That changed the causal chain from “political win equals fiscal panic” to “political win could mean cleaner policy execution.”</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOU3ZDODJKbzcxT2ZRaWo3Qk51ZXEyeFk4dW9nX25DeWFicHQ3dEU2SDBoaFVmMVN1R2FmZEdsUl9MVXk2dXhXRllHZUx5MGRHWTUzaUhDOF8yNTVSblRYbTdid2l4QWNodWpjU2hIOVg2YzY0SllndHFfaEt1VjlVckNEU0NfQWFUOFhhVl9SY1lkWnZFeVFvTV9vRUQzVkQtZnZmcmo3RHk0SlJYSjdDamxsWGlqNTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
+  <header class="masthead">
+    <div class="lang-toggle"><a href="index.html" class="active">EN</a> / <a href="ja.html">JA</a></div>
+    <div class="war">🔴 IRAN WAR — DAY 71</div><br>
+    <div class="count">🔴 ECONOMIC DAMAGE WINDOW — NOW</div>
+    <h1>CEO Afternoon Briefing</h1>
+    <div>Monday, May 11, 2026 — Afternoon Edition</div>
+    <div class="edition-sub">🇯🇵 The afternoon shift was real: Japan closed with a stronger domestic policy story, because yen-defense expectations, a softer services PMI, and divergent corporate news forced investors to price Japan on its own terms instead of as a simple passenger of global risk. Globally, the Iran tape still dominated, because every change in ceasefire odds fed directly into oil, the dollar, airlines, and rate expectations. Health Score: 64/100.</div>
+    <div class="divider"></div>
+  </header>
+  <nav class="nav">
+    <a href="#japan">Japan</a><a href="#global">Global</a><a href="#markets">Markets</a><a href="#predictions">Predictions</a><a href="#bottom">Bottom Line</a>
+  </nav>
+  <main class="container">
+    <section id="japan" class="section">
+      <div class="section-head"><div>🇯🇵</div><h2>Japan Update — In Depth</h2></div>
+      <div class="cards">
+        <article class="card collapsible" data-image="">
+          <div class="tag">🇯🇵 JAPAN · MARKET CLOSE / FX</div>
+          <div class="headline">The Nikkei 225 finished lower at 62,464.23, because afternoon yen-defense chatter and weaker service-sector data pushed investors to cut exporters even as the broader global tone steadied.</div>
+          <div class="hint">Tap to expand</div>
+          <div class="body"><strong>Why it happened:</strong> Reuters reported Japan is looking to pair BOJ signaling with Washington support in the yen battle, so traders became more sensitive to any move that could strengthen JPY. At the same time, Japan’s services PMI slowed to an 11-month low, which weakened the idea that domestic demand could offset a firmer yen and higher imported energy costs.</div>
+          <div class="sources"><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOdkFYaWQ5a2xxdWp3VV94TUdUQzVXWFQxRUNocFlUMmM0b3J3cW84NlNHSkpVcTVUaG1MNDJGV3NLVWViZ25KWk1NbXM2U1VKZDlRVmNnYUhtLTN4YnNTMzVVWVlEWkx4cGNKZzI1bl9NZ2VMUTVVcmdrZWFQbURlR05KVkEwWTNGdkpHT2VYNlBPT2lTaDktT2publhfdmNfOVc0MmxB?oc=5" target="_blank" rel="noopener">Reuters on yen strategy ↗</a><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSFlKYTd3SGlqck5ublNKY09uUHEwa0dBR2d0Nms1Vm5PMVl3VjVsNUJMNndEV0JuZGtndXViNERkdWhoVXBnSHRSTDFzSUdyb2VNcUtxdFNNazR5eVZrbFl0NnUtOHVxYWRxQWp3YktaU0c3bVpHN21PVTJkM1F5Qy1KbTN4bWdrWUJWZVhueHl3SGlRWXMwMzIzdmU2NHhmMEM4cjFVOFV0ZUQtN280dHZBM0VTb2RK?oc=5" target="_blank" rel="noopener">Reuters on services PMI ↗</a></div>
         </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 JAPAN · MARKET CLOSE</span>
-          <h3 class="card-headline">Nikkei finished at 62,713.65 (-0.19%) because domestic cyclicals benefited from the Takaichi mandate while exporters still had to price the risk that a stronger yen would follow any credible intervention campaign.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> election clarity helped banks, retailers, and rate-sensitive domestic names, but the same clarity also raised the odds of a firmer currency line from Tokyo. That split the market between companies that gain from steadier policy and those that lose if FX tailwinds fade.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card collapsible" data-image="">
+          <div class="tag">🇯🇵 JAPAN · CONSUMER / GAMING</div>
+          <div class="headline">Nintendo shares slumped because the market concluded hardware price hikes are arriving before software momentum is strong enough to cushion them.</div>
+          <div class="hint">Tap to expand</div>
+          <div class="body"><strong>Why it happened:</strong> Reuters said investors were spooked by higher console prices and a games shortfall. The causal chain was simple: higher sticker prices raised demand-risk fears, weaker software expectations reduced the earnings buffer, and the stock was repriced as a margin-defense story rather than a growth story.</div>
+          <div class="sources"><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPX2NDY1JCcUNqTDJqcFpXcWgxZllnWHRVV0Z2eGROVHdBRWFhM1M2SWdDd0VxY2ttbFhhZ1BPOFBwY0hqYXNNZTVuU2ppSUYzNlZGRE9aajlJNnpKMWo3WFFJbUlVZGRSWlUzN1d4eE5RN3k4akpjZ0hXSHV0MWUzd2c3Y0lqR1UxQWsyNHhHWm8zUU8tTk5NeVNpQkkxTE9Jci1MZmxaRDhrc3RmM181dUlPdjRtVmR1?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div>
         </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 JAPAN · FX DEFENCE</span>
-          <h3 class="card-headline">USD/JPY trading around 156.621 (-0.13%) stayed the afternoon’s most important stress gauge because the yen suddenly looked less like a passive casualty of rate differentials and more like a market Tokyo is prepared to actively police.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> intervention chatter only works when traders think the state is willing to keep paying for it. Today’s abrupt yen jump mattered because it suggested speculators briefly believed officials were ready to escalate from signalling to action.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWM3dGY5YnA3OTZ0YXc5TGxwUHEtTzdwOXNsUWgteVVRY2lsNm1oWUtyMTVWaHdIelBrLW5fa3diV2xlRC1yX2xyNmtmTzNCVXZWRmtmdkZvd1dTSVU1RnZvR2tXUXZxYUw5NW1tYmpvQUJtcE5hV2hKYWY4YWZLM0xRMy1oU3ZjczA2Y2NRNDlKT2JOU2Q2aUZ4LTUzSTBRbzFYNkVoUlNRbzlKQzNqaDNMd1VGeW5kUXJFYXJaNHAtZlY3YWJoaFNYcw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card collapsible" data-image="https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630">
+          <div class="tag">🇯🇵 JAPAN · AI / INFRA</div>
+          <div class="headline">SoftBank drew fresh strategic attention after Nikkei said it is exploring homegrown AI servers with Nvidia and Foxconn, because Japan wants sovereign compute capacity instead of permanent dependence on imported cloud stacks.</div>
+          <div class="hint">Tap to expand</div>
+          <div class="body"><strong>Why it happened:</strong> With geopolitics exposing supply-chain fragility, a domestic AI server push is being read as both industrial policy and risk management. Investors like it because it links SoftBank to the stickiest spending pocket in global tech, namely AI infrastructure, while also fitting Tokyo’s desire to keep high-value compute closer to home.</div>
+          <div class="sources"><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxNWkQzaFBycUhVbEl2aUFVMFNaUmRMZ2VNcDE4OXhueUJ4amhwekNDMTRLekN4cWFOZDdTb3JrMWJSZTZiVkV1d0FZLXF5NWstODFqTFRNWnV0R1kzSk5RTzFIaTExaFV3cno1c2Zkb096Qm1rTVZ0QXJHM010cTF2NmlETHRYZ3VvLXk0WlQ4RlRHcU5FQXZfcFBEQnh1VkFfOGtNQ0FzSkF2V0Jvb3NwcHFRdTNtM283X3VIc2NHZnFBMGNEUEE?oc=5" target="_blank" rel="noopener">Reuters / Nikkei ↗</a></div>
         </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 JAPAN · POLICY RISK</span>
-          <h3 class="card-headline">The market’s other Japan debate shifted toward whether Takaichi can deliver tax cuts without destabilising confidence, because her taboo-tax-cut rhetoric is attractive to households but dangerous if investors start questioning the funding math.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> tax cuts are politically easy to promise after a landslide, but bond investors care about who pays. The afternoon repricing happened because traders started separating “growth support” from “fiscally free,” and that distinction will matter quickly.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaEdiSC1GUm9VSTVrMkVXaTRDV1RKN2lPNXNQMFhSajdacWdRVlZnY2tCUjJlNzhIa3pxTGg4TXRpa3V6dk5sdWZCemVzOU0tNUFsLXA2a2c1UFdfTWdmOEwwZEpETGZzaWlBOEtlZjdvSU12dk42elVyZjlMNWd4MmE3RkhpQ1VHMkRUZUJWVk83dTcteWhTVXk3MFhSa09Ea0paaE9xSDRGeUdsYm04R3pyd1ZwclV5cGNmOUp1V1dlZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOU3ZDODJKbzcxT2ZRaWo3Qk51ZXEyeFk4dW9nX25DeWFicHQ3dEU2SDBoaFVmMVN1R2FmZEdsUl9MVXk2dXhXRllHZUx5MGRHWTUzaUhDOF8yNTVSblRYbTdid2l4QWNodWpjU2hIOVg2YzY0SllndHFfaEt1VjlVckNEU0NfQWFUOFhhVl9SY1lkWnZFeVFvTV9vRUQzVkQtZnZmcmo3RHk0SlJYSjdDamxsWGlqNTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card collapsible" data-image="">
+          <div class="tag">🇯🇵 JAPAN · POLICY / FX</div>
+          <div class="headline">The yen story got more serious in the afternoon because Tokyo is no longer relying on rhetoric alone, it is trying to pair BOJ signaling with diplomatic leverage from Washington.</div>
+          <div class="hint">Tap to expand</div>
+          <div class="body"><strong>Why it happened:</strong> When intervention threats are credible but not sufficient, policymakers widen the channel. Reuters’ report matters because it suggests officials think the problem is not just speculative selling, but the need for policy coordination to make yen support stick. That made a stronger yen look less hypothetical than it did in the morning.</div>
+          <div class="sources"><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOdkFYaWQ5a2xxdWp3VV94TUdUQzVXWFQxRUNocFlUMmM0b3J3cW84NlNHSkpVcTVUaG1MNDJGV3NLVWViZ25KWk1NbXM2U1VKZDlRVmNnYUhtLTN4YnNTMzVVWVlEWkx4cGNKZzI1bl9NZ2VMUTVVcmdrZWFQbURlR05KVkEwWTNGdkpHT2VYNlBPT2lTaDktT2publhfdmNfOVc0MmxB?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div>
         </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 JAPAN · US COORDINATION</span>
-          <h3 class="card-headline">Japan’s tighter public alignment with Washington mattered more after lunch because defending the yen is more believable when it looks like a strategic conversation with the US, not a lonely fight against global dollar strength.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> Tokyo cannot change rate differentials by itself, so it is trying to raise the political cost of testing its red lines. In practice, that means diplomacy is being used as a force multiplier for currency policy.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWM3dGY5YnA3OTZ0YXc5TGxwUHEtTzdwOXNsUWgteVVRY2lsNm1oWUtyMTVWaHdIelBrLW5fa3diV2xlRC1yX2xyNmtmTzNCVXZWRmtmdkZvd1dTSVU1RnZvR2tXUXZxYUw5NW1tYmpvQUJtcE5hV2hKYWY4YWZLM0xRMy1oU3ZjczA2Y2NRNDlKT2JOU2Q2aUZ4LTUzSTBRbzFYNkVoUlNRbzlKQzNqaDNMd1VGeW5kUXJFYXJaNHAtZlY3YWJoaFNYcw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card collapsible" data-image="">
+          <div class="tag">🇯🇵 JAPAN · SERVICES / DOMESTIC DEMAND</div>
+          <div class="headline">Japan’s services pulse cooled into the close, which matters because it removes the cleanest domestic offset to imported inflation and external uncertainty.</div>
+          <div class="hint">Tap to expand</div>
+          <div class="body"><strong>Why it happened:</strong> The April PMI slowdown to an 11-month low told investors that households and service firms are not fully absorbing price pressure. By the close, weaker services and a stronger-yen narrative were arriving together, which compressed near-term earnings confidence for travel, retail, and other domestic cyclicals.</div>
+          <div class="sources"><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSFlKYTd3SGlqck5ublNKY09uUHEwa0dBR2d0Nms1Vm5PMVl3VjVsNUJMNndEV0JuZGtndXViNERkdWhoVXBnSHRSTDFzSUdyb2VNcUtxdFNNazR5eVZrbFl0NnUtOHVxYWRxQWp3YktaU0c3bVpHN21PVTJkM1F5Qy1KbTN4bWdrWUJWZVhueHl3SGlRWXMwMzIzdmU2NHhmMEM4cjFVOFV0ZUQtN280dHZBM0VTb2RK?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div>
         </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag japan">🇯🇵 JAPAN · CORPORATE</span>
-          <h3 class="card-headline">Naver exploring a stake sale in Line operator LY stood out because it could hand Japan’s digital ecosystem a more domestically anchored ownership structure at the same moment the state is becoming more sensitive about data, platforms, and strategic control.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> once geopolitics and regulation get tighter, multinational platform structures stop looking neutral. The deal discussion matters because it reflects a broader move toward keeping key consumer pipes under ownership that is easier for Tokyo to influence.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOVXUwcmpmUnQ1N3d3cXVfbjdJLTQwR1NuRFJMeWgzbTlvWGtTTUdILVB4OUI1NGFzQk9NQU1tU1pEbW0zc2xON0RqenllWTdlRmtfQWFaNFUxdFNYcnQxQzVBWlJUcDQ1WE5uazJtRHBVeUlSTGN1dVB4cTVacDlGQWZKa2ZyV25UeHotODFtZ1dpR1dJYk9fRjJQaTd3blR2WFFyMHRYeWhfVkxWZTcxdnItTXNWbVcxQjZRbWNCTG1BMGVV?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWM3dGY5YnA3OTZ0YXc5TGxwUHEtTzdwOXNsUWgteVVRY2lsNm1oWUtyMTVWaHdIelBrLW5fa3diV2xlRC1yX2xyNmtmTzNCVXZWRmtmdkZvd1dTSVU1RnZvR2tXUXZxYUw5NW1tYmpvQUJtcE5hV2hKYWY4YWZLM0xRMy1oU3ZjczA2Y2NRNDlKT2JOU2Q2aUZ4LTUzSTBRbzFYNkVoUlNRbzlKQzNqaDNMd1VGeW5kUXJFYXJaNHAtZlY3YWJoaFNYcw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article></div></section><section class="section" id="global"><div class="section-header"><div class="section-icon">🌍</div><h2 class="section-title">Global — By Continent</h2></div><div class="cards">        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">North America</span>
-          <h3 class="card-headline">US equities looked less euphoric by the close, with the S&P 500 at 7,398.93 (+0.84%), because strong job growth and chip optimism had to compete with higher oil and the realisation that a fragile Iran truce still leaves an inflation tail risk.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> payroll resilience keeps recession fears down, but that same resilience makes it harder to price fast Fed cuts. Once oil climbed again, the market had to digest a “good growth, bad inflation” mix instead of a clean risk-on story.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
+        <article class="card collapsible" data-image="">
+          <div class="tag">🇯🇵 JAPAN · STRATEGY / CROSS-ASSET</div>
+          <div class="headline">Japan ended the afternoon looking more differentiated than it did at breakfast, because the market now has a visible local macro debate, not just imported geopolitics.</div>
+          <div class="hint">Tap to expand</div>
+          <div class="body"><strong>Why it happened:</strong> The morning narrative was mostly “Japan reacts to oil and Iran risk.” By the close, investors also had a Japan-specific stack: yen defense, a softer PMI, Nintendo margin anxiety, and SoftBank AI optionality. That gave foreign capital more reasons to rotate within Japan instead of treating it as a passive proxy for global risk.</div>
+          <div class="sources"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMV9DYUJldGFpaFVEczJiSGRvY05xRUwyWm9xZm9BV0VXVXdxZFUzM3c0YmpETzJ6V2lsaWFyRmFWdHhsZHp6dmNTaGRUM2J6dGRiZDc3Yk1KSmRadU9GbG5BNjhlZTVXUWlUZ3RSYmd1a3Q2REkybUdXMElXcFptZnpsZlZ0X0Y0?oc=5" target="_blank" rel="noopener">Reuters global markets ↗</a></div>
         </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">North America</span>
-          <h3 class="card-headline">The dollar lost some of its earlier momentum because traders started fading the idea that strong data alone can dominate the tape when oil and geopolitics are simultaneously tightening financial conditions.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> macro markets reprice differently when growth strength is offset by external shocks. Today the dollar story became less about pure US exceptionalism and more about whether energy risk will slow everyone at once.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">North America</span>
-          <h3 class="card-headline">The US story stayed globally important because chipmaker strength kept equity leadership narrow, which is usually what happens when investors still trust earnings in a few mega themes but not the entire economy.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> concentrated leadership appears when money wants exposure without broad conviction. That is a warning that the market still likes AI cash flows more than it likes the macro backdrop.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Europe</span>
-          <h3 class="card-headline">Europe remained the clearest tariff victim because Washington’s move toward higher EU car duties hits a sector that carries exports, employment, and political symbolism all at once.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> autos are one of the few places where policy pain quickly becomes macro pain in Europe. Tariffs hurt company margins first, then confidence, then already-soft industrial activity.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPeENvRXU5WHZfYzJTSmNEOEJwZzFVNmtFeHgzRWVaZ09pOEdJLU4wRUZJNVFEVXEzREVMU216TDUzWXlvejQ5by1fcDBZZ3V3YkI3MkY2Z1VuNklNeFh6Nkd5NVJHWDR3T0NEQmFXRUdsX29jS1dQcUxpaEFzWW5FT1ZjTUtNY2x6Z3FOU0ZTU3FLT2ZvVVVrU2F2bw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Europe</span>
-          <h3 class="card-headline">The region also struggled because oil climbed again as the US-Iran truce looked shakier, which is a worse combination for Europe than for the US given Europe’s weaker domestic demand base.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> when growth is already soft, imported energy inflation acts like a direct tax. That is why every crack in the truce translated so quickly into regional equity stress.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPeENvRXU5WHZfYzJTSmNEOEJwZzFVNmtFeHgzRWVaZ09pOEdJLU4wRUZJNVFEVXEzREVMU216TDUzWXlvejQ5by1fcDBZZ3V3YkI3MkY2Z1VuNklNeFh6Nkd5NVJHWDR3T0NEQmFXRUdsX29jS1dQcUxpaEFzWW5FT1ZjTUtNY2x6Z3FOU0ZTU3FLT2ZvVVVrU2F2bw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Europe</span>
-          <h3 class="card-headline">By the afternoon, Europe was effectively being priced as the place most exposed to both trade fragmentation and expensive energy, which is why it kept lagging despite no single catastrophic headline.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> markets punish economies that face multiple medium-sized shocks at once. Europe is carrying tariff risk, external energy dependence, and weak industrial momentum simultaneously.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPeENvRXU5WHZfYzJTSmNEOEJwZzFVNmtFeHgzRWVaZ09pOEdJLU4wRUZJNVFEVXEzREVMU216TDUzWXlvejQ5by1fcDBZZ3V3YkI3MkY2Z1VuNklNeFh6Nkd5NVJHWDR3T0NEQmFXRUdsX29jS1dQcUxpaEFzWW5FT1ZjTUtNY2x6Z3FOU0ZTU3FLT2ZvVVVrU2F2bw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Asia ex-Japan</span>
-          <h3 class="card-headline">China’s stronger April export rebound mattered because it suggested Beijing still has enough manufacturing momentum to cushion global demand, at least until oil and shipping disruption start biting harder.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> exporters likely front-loaded shipments ahead of Trump-related trade risk and benefitted from still-open channels into major markets. That made China look relatively resilient versus slower Western peers.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYWxXSGRldlFoLVZ3bDNFU0xzQkhIU0FsdkFPYk0xNlZxOFQ3OXNaRTNkc1RVSF9GcHBaLWQzRUVDM0RaVl9qVmlQZlY5bDVrbllSMUJrbWMzUko5Zk5uRGRPaEhDU1AzaUhsLVZKM1dhQng5S2k2Q0l2YlphWk53RDZtUkdjeWtyNXgxTV8tMlhYdkpzSlhoTkI4bUVJWXlnWEY2Zk5ISGhNNnNfZV8xNDJzX1BudU9rQmd1SmtobTY?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Asia ex-Japan</span>
-          <h3 class="card-headline">Hong Kong’s Jimmy Lai sentence mattered regionally because it reminded investors that China’s political risk premium is not fading, even on a day when trade data looked supportive.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> strong exports help growth narratives, but security-case headlines reinforce the view that legal and geopolitical friction remain embedded in the China story. Those two forces now coexist rather than cancel out.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPUmlURnhJT21pSlRzY1NwTEoyQVlxVE5ybGUyXzVfOWxyclpsWjZoYUtwd3g1WWlzdVJudTFpNUxSZnBZa01NTGxNMnh6ZjBDN3owUmlOSk1BVFpyVUxOUmhiNlFfSTdzd0pTc2FHbTRPcFgwWFBjUWhZeXZxeW9hVzBraXZpWkMzQmJjWVpYbEItbkVvMzROME9jTldSN0JQbXpQRXFvU2lOcl8xemdjUkJOSmNTTURNOUNfVjlwLUZQOENOLXJFSW4xSl85UQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYWxXSGRldlFoLVZ3bDNFU0xzQkhIU0FsdkFPYk0xNlZxOFQ3OXNaRTNkc1RVSF9GcHBaLWQzRUVDM0RaVl9qVmlQZlY5bDVrbllSMUJrbWMzUko5Zk5uRGRPaEhDU1AzaUhsLVZKM1dhQng5S2k2Q0l2YlphWk53RDZtUkdjeWtyNXgxTV8tMlhYdkpzSlhoTkI4bUVJWXlnWEY2Zk5ISGhNNnNfZV8xNDJzX1BudU9rQmd1SmtobTY?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Asia ex-Japan</span>
-          <h3 class="card-headline">India’s $1.9 billion credit guarantee stood out because New Delhi judged that oil-shock pain could spread from fuel bills into working capital and employment faster than small businesses could absorb.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> India imports energy, so a sustained rise in crude immediately pressures transport, input costs, and loan servicing. The package is an attempt to break that causal chain early.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQS0p5U3dkdDM5MFF1QWlDblkwSThtZWVqZTVic01GelF1VGFhMGh1aWRzcVROU3p5OFYzVUMwa3JXM09LQnlaZVpRXzFsQ2c1djE0T1c3MjJDTExKQ2YydmFOOXF5azBIS2lLWDV6VmxtR1lUaEZ1SjFvWkhLVE85R3laU2FtZmU0V2stcUdvcDhYNjNZV21qeXFlR0E4WU5Sa292Q1NYNjNSUm8?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Middle East & Africa</span>
-          <h3 class="card-headline">WTI crude holding near 95.42 (+0.64%) showed that traders are still pricing the Middle East as a rolling supply-risk story, not a one-headline event.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> once a truce looks fragile, markets price not only outright disruption but also insurance, rerouting, and precautionary inventory demand. Those costs keep crude elevated even without a formal closure.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Middle East & Africa</span>
-          <h3 class="card-headline">Airlines kept cancelling flights because route safety, fuel costs, and scheduling reliability all deteriorated together, turning a geopolitical event into an operational one.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> aviation can handle expensive fuel or messy rerouting, but not both plus insurance uncertainty. That is why the sector is reacting with cuts rather than waiting for clarity.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPS25ycmRYWlI4dU5pZ3Z5YXdMNUdBMV9KcXBfQUVXU0Y3bWZudlFwelRLdFFIRDBxRWo5WEtGcjlxNFBsQURvMFhnblpsSDJGY0VGSFlkemxBUndnLV80dldpLVd1SUV5VDh4NzhfZmt2VTdZeVI5OXpYcHZ2TTFHb2hQWElnWnJITENaT0ZyUFhNV25aSmZ0WEh1dW1USHVmSzUtMUcwZVBsSXBjZ0lsTlJCOFhCWlJvSW9jMw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Middle East & Africa</span>
-          <h3 class="card-headline">Jet-fuel price pressure also became a wider macro signal because travel disruption is one of the fastest ways for an oil shock to leak into consumer inflation and corporate guidance beyond the region.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> higher aviation costs feed tickets, freight, tourism, and business travel all at once. The market cares because this is how a conflict story turns into a broader earnings story.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPS25ycmRYWlI4dU5pZ3Z5YXdMNUdBMV9KcXBfQUVXU0Y3bWZudlFwelRLdFFIRDBxRWo5WEtGcjlxNFBsQURvMFhnblpsSDJGY0VGSFlkemxBUndnLV80dldpLVd1SUV5VDh4NzhfZmt2VTdZeVI5OXpYcHZ2TTFHb2hQWElnWnJITENaT0ZyUFhNV25aSmZ0WEh1dW1USHVmSzUtMUcwZVBsSXBjZ0lsTlJCOFhCWlJvSW9jMw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Latin America</span>
-          <h3 class="card-headline">Lula’s message that relations with Trump improved mattered because Brazil is trying to preserve access to both US diplomacy and commodity demand before the tariff backdrop hardens further.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> Brasília knows that strategic ambiguity works best when Washington still sees it as useful. Positive talks are a way to buy room before geopolitical alignment demands intensify.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXBvVEJFaDhqbmJiQzZ3R1BiN1RVTXVNTVFhSUdKRTBxOGp1blk1U3R0SHphTzdrNzZpYnliOHNXa2RHSmMyQkZoMnE3bzR2eTdRaGc4dENRR0w2ZW5yS2xwR0ZIOFdKUFZTWGpRdjg5Vm5PNzBfZHdBdGx3MWtvQ29DRjZlaFVDWnUzRU9XbUVnc2NoMlhpenVFT0o1cmtENnF0WF9YR1IxX0RDMFktaFh4TjJuaGdNQnlHXzZpbw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Latin America</span>
-          <h3 class="card-headline">The optics also mattered domestically because Brazilian exporters need confidence that the government can keep the US channel functional even if global trade blocs get rougher.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> diplomacy is being used as an economic stabiliser. If agribusiness and miners fear policy retaliation, investment plans stall quickly.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXBvVEJFaDhqbmJiQzZ3R1BiN1RVTXVNTVFhSUdKRTBxOGp1blk1U3R0SHphTzdrNzZpYnliOHNXa2RHSmMyQkZoMnE3bzR2eTdRaGc4dENRR0w2ZW5yS2xwR0ZIOFdKUFZTWGpRdjg5Vm5PNzBfZHdBdGx3MWtvQ29DRjZlaFVDWnUzRU9XbUVnc2NoMlhpenVFT0o1cmtENnF0WF9YR1IxX0RDMFktaFh4TjJuaGdNQnlHXzZpbw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Latin America</span>
-          <h3 class="card-headline">More broadly, the region is being sorted by who can keep commodity upside without getting trapped in great-power crossfire, and today’s Brazil-US signalling was part of that sorting process.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> trade fragmentation raises the premium on flexible partners. Countries that can stay commercially open while avoiding direct confrontation gain relative value.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOUXBvVEJFaDhqbmJiQzZ3R1BiN1RVTXVNTVFhSUdKRTBxOGp1blk1U3R0SHphTzdrNzZpYnliOHNXa2RHSmMyQkZoMnE3bzR2eTdRaGc4dENRR0w2ZW5yS2xwR0ZIOFdKUFZTWGpRdjg5Vm5PNzBfZHdBdGx3MWtvQ29DRjZlaFVDWnUzRU9XbUVnc2NoMlhpenVFT0o1cmtENnF0WF9YR1IxX0RDMFktaFh4TjJuaGdNQnlHXzZpbw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Oceania</span>
-          <h3 class="card-headline">The delay to the Australia-Vanuatu security agreement mattered because Pacific states are showing they will monetise strategic urgency instead of simply yielding to it.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> smaller states gain leverage when larger powers feel they are running out of time. Delay is a bargaining tool, not necessarily a diplomatic failure.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOcTFlQTdlYWE5SHZjVnJHOTNUWU8yMkkwOGJOOXhwVG05aEpMdjFIcHljbUJ5RmNGVk1nR011MDlxUnBIRkYyai14SC1iYTlEY09VZTRnRmhMcXdOcGlNWGRTRTBGdEdpem5ZeUxGR1VudTNiZVYyQmJNdWVIQVRNdHZsV2I5aXVjcG96d1NvWEl6NC1xSUJ6OGwzYw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Oceania</span>
-          <h3 class="card-headline">The same story mattered economically because any longer period of shipping and fuel stress hits island import costs quickly, making security negotiations inseparable from logistics risk.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> geography amplifies freight shocks. In the Pacific, diplomacy and supply-chain resilience are now tightly linked.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOcTFlQTdlYWE5SHZjVnJHOTNUWU8yMkkwOGJOOXhwVG05aEpMdjFIcHljbUJ5RmNGVk1nR011MDlxUnBIRkYyai14SC1iYTlEY09VZTRnRmhMcXdOcGlNWGRTRTBGdEdpem5ZeUxGR1VudTNiZVYyQmJNdWVIQVRNdHZsV2I5aXVjcG96d1NvWEl6NC1xSUJ6OGwzYw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card featured fade-in collapsible" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">Oceania</span>
-          <h3 class="card-headline">Australia’s regional posture is therefore getting more complicated, because allies want speed while partners want proof that security alignment will produce tangible benefits.</h3>
-          <div class="tap-hint">Tap to expand</div>
-          <p class="card-body"><strong>Why it happened:</strong> pressure alone does not close deals. The benefits case has to outrun sovereignty anxiety, and today’s delay showed that threshold has not yet been met.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOcTFlQTdlYWE5SHZjVnJHOTNUWU8yMkkwOGJOOXhwVG05aEpMdjFIcHljbUJ5RmNGVk1nR011MDlxUnBIRkYyai14SC1iYTlEY09VZTRnRmhMcXdOcGlNWGRTRTBGdEdpem5ZeUxGR1VudTNiZVYyQmJNdWVIQVRNdHZsV2I5aXVjcG96d1NvWEl6NC1xSUJ6OGwzYw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div>
-        </article></div></section><section class="section" id="markets"><div class="section-header"><div class="section-icon">📊</div><h2 class="section-title">Markets & Economy</h2></div><div class="cards">        <article class="card fade-in" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">EQUITIES</span>
-          <h3 class="card-headline">End-of-day equity snapshot</h3>
-          <table class="index-table"><thead><tr><th>Index</th><th>Level</th><th>Daily</th><th>Weekly</th><th>Monthly</th><th>YTD</th></tr></thead><tbody><tr><td class="idx-name">Nikkei 225</td><td class="idx-level">62,713.65</td><td class="chg-neg">-0.19%</td><td class="chg-pos">+3.59%</td><td class="chg-pos">+18.05%</td><td class="chg-pos">+69.82%</td></tr><tr><td class="idx-name">S&P 500</td><td class="idx-level">7,398.93</td><td class="chg-pos">+0.84%</td><td class="chg-pos">+2.33%</td><td class="chg-pos">+8.41%</td><td class="chg-pos">+30.73%</td></tr><tr><td class="idx-name">Dow Jones</td><td class="idx-level">49,609.16</td><td class="chg-pos">+0.02%</td><td class="chg-pos">+0.22%</td><td class="chg-pos">+2.95%</td><td class="chg-pos">+20.27%</td></tr><tr><td class="idx-name">Nasdaq</td><td class="idx-level">26,247.08</td><td class="chg-pos">+1.71%</td><td class="chg-pos">+4.51%</td><td class="chg-pos">+15.01%</td><td class="chg-pos">+46.40%</td></tr><tr><td class="idx-name">Euro Stoxx 50</td><td class="idx-level">5,911.53</td><td class="chg-neg">-1.02%</td><td class="chg-pos">+0.51%</td><td class="chg-neg">-0.03%</td><td class="chg-pos">+11.77%</td></tr><tr><td class="idx-name">Shanghai Comp</td><td class="idx-level">4,179.95</td><td class="chg-neg">-0.00%</td><td class="chg-pos">+2.48%</td><td class="chg-pos">+7.73%</td><td class="chg-pos">+24.70%</td></tr><tr><td class="idx-name">Sensex</td><td class="idx-level">77,328.19</td><td class="chg-neg">-0.66%</td><td class="chg-pos">+0.54%</td><td class="chg-pos">+3.63%</td><td class="chg-neg">-3.74%</td></tr><tr><td class="idx-name">Bovespa</td><td class="idx-level">184,108</td><td class="chg-pos">+0.49%</td><td class="chg-neg">-1.71%</td><td class="chg-neg">-2.20%</td><td class="chg-pos">+35.14%</td></tr><tr><td class="idx-name">ASX 200</td><td class="idx-level">8,744.40</td><td class="chg-neg">-1.51%</td><td class="chg-pos">+0.17%</td><td class="chg-neg">-2.55%</td><td class="chg-pos">+6.75%</td></tr></tbody></table>
-          <p class="card-body" style="margin-top: 1rem;"><strong>Why the larger moves happened:</strong> Japan outperformed on political clarity, the US tape was steadied by jobs and chips but capped by oil, and Europe stayed weaker because tariffs and imported energy hit a softer growth base. Any move above 2% should be read through policy repricing, oil-shock spillover, or both.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card fade-in" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">FX & RATES</span>
-          <h3 class="card-headline">Currency and rate pressure points</h3>
-          <table class="index-table"><thead><tr><th>Instrument</th><th>Level</th><th>Daily</th><th>Weekly</th><th>Monthly</th><th>YTD</th></tr></thead><tbody><tr><td class="idx-name">USD/JPY</td><td class="idx-level">156.621</td><td class="chg-neg">-0.13%</td><td class="chg-neg">-0.14%</td><td class="chg-neg">-1.57%</td><td class="chg-pos">+8.88%</td></tr><tr><td class="idx-name">EUR/USD</td><td class="idx-level">1.1790</td><td class="chg-pos">+0.50%</td><td class="chg-pos">+0.54%</td><td class="chg-pos">+0.84%</td><td class="chg-pos">+4.28%</td></tr><tr><td class="idx-name">DXY</td><td class="idx-level">97.840</td><td class="chg-neg">-0.42%</td><td class="chg-neg">-0.38%</td><td class="chg-neg">-0.99%</td><td class="chg-neg">-3.88%</td></tr><tr><td class="idx-name">US 10Y Treasury</td><td class="idx-level">4.364%</td><td class="chg-neg">-0.64%</td><td class="chg-neg">-0.32%</td><td class="chg-pos">+1.65%</td><td class="chg-neg">-0.21%</td></tr><tr><td class="idx-name">US 2Y Treasury</td><td class="idx-level">3.595%</td><td class="chg-neg">-0.08%</td><td class="chg-pos">+0.56%</td><td class="chg-pos">+0.20%</td><td class="chg-neg">-14.71%</td></tr></tbody></table>
-          <p class="card-body" style="margin-top: 1rem;"><strong>Why it matters:</strong> USD/JPY remains the fastest read on whether Tokyo’s afternoon confidence translates into sustained defence. Treasury yields and the dollar are no longer trading on jobs alone, they are also trading on whether oil keeps acting like a stealth tightening of financial conditions.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card fade-in" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300">
-          <span class="card-tag">COMMODITIES & CRYPTO</span>
-          <h3 class="card-headline">Commodity and digital-asset close</h3>
-          <table class="index-table"><thead><tr><th>Asset</th><th>Price</th><th>Daily</th><th>Weekly</th><th>Monthly</th><th>YTD</th></tr></thead><tbody><tr><td class="idx-name">WTI Crude</td><td class="idx-level">95.42</td><td class="chg-pos">+0.64%</td><td class="chg-neg">-6.40%</td><td class="chg-neg">-2.50%</td><td class="chg-pos">+54.03%</td></tr><tr><td class="idx-name">Brent Crude</td><td class="idx-level">101.29</td><td class="chg-pos">+1.23%</td><td class="chg-neg">-6.36%</td><td class="chg-pos">+5.60%</td><td class="chg-pos">+55.93%</td></tr><tr><td class="idx-name">Gold</td><td class="idx-level">4,730.70</td><td class="chg-pos">+0.66%</td><td class="chg-pos">+2.18%</td><td class="chg-neg">-1.28%</td><td class="chg-pos">+46.92%</td></tr><tr><td class="idx-name">Silver</td><td class="idx-level">80.865</td><td class="chg-pos">+1.46%</td><td class="chg-pos">+6.47%</td><td class="chg-pos">+6.01%</td><td class="chg-pos">+149.68%</td></tr><tr><td class="idx-name">Bitcoin</td><td class="idx-level">80,724.15</td><td class="chg-pos">+0.67%</td><td class="chg-pos">+1.12%</td><td class="chg-pos">+6.60%</td><td class="chg-neg">-22.90%</td></tr><tr><td class="idx-name">Ethereum</td><td class="idx-level">2,328.40</td><td class="chg-pos">+0.93%</td><td class="chg-neg">-0.77%</td><td class="chg-neg">-0.97%</td><td class="chg-neg">-9.84%</td></tr></tbody></table>
-          <p class="card-body" style="margin-top: 1rem;"><strong>Big mover logic:</strong> if crude moves more than 2%, the cleanest explanation is still truce fragility plus shipping and insurance stress. If silver or crypto move sharply, the more useful lens is changing dollar expectations and renewed inflation-hedge demand.</p>
-          <div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
-          </div>
-        </article>
-        <article class="card fade-in" data-image="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"><span class="card-tag">HEALTH SCORE</span><h3 class="card-headline">66/100, a bit firmer than the morning because Japan gained policy clarity and China export data softened the global-growth scare, but still fragile because oil, aviation, and tariff risk remain live.</h3><p class="card-body"><strong>Why 66:</strong> the afternoon improved because Tokyo looks more governable, the yen defence threat became more credible, and China’s export print offered some demand cushion. The score stays well below comfort because the same world still has a shaky truce, higher fuel stress, and Europe under tariff pressure.</p><div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxOWTlQTHZzemk5V1EyNXFIZTNvZVNxS1ZHZFZrR1l5ZmpCLTlnMmFGNGdmS0RrRG5HaHZ4Z1JWR0ZKZ1hQU3lUZjFZRmhJdGphalR6QmtoLTlRdWNPNzdVTDNkT1U0NVpwT0hWWXZJdk11QjNkSUIwUVotNzRkWjI5bTBqZWdBWjM1cUFuVHNDV0RlUUxmMTdTNnZSNW5jZEVHLWUtZkZjU2o2TTlBNFVkRmxtVzM5MS1qZVZwU1dOQkhNeHhEVlluSGh0bkllTjA?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNSjgybFlUbGtvQkkxNUJZeHVsd3ZYMzN5MW9vLWk2TUZtZ1FRTUFsOXZhUEVEZnVuNG00THMzaTRtQWY5UENKb3F0dkc0ODdDQlJCSmhqWUpNMmhIaHBpV0poaVpYWXBHZ1ZwZUZvU2djWm5tYU1nNFJSQ1NFR2t5MFEyRy0?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance <span class="src-arrow">↗</span></a>
-          </div></article></div></section><section class="section" id="predictions"><div class="section-header"><div class="section-icon">🔮</div><h2 class="section-title">Predictions</h2></div><div class="cards">        <article class="card fade-in collapsible" data-image=""><span class="card-tag">TOMORROW</span><h3 class="card-headline">Watch whether the yen’s sudden jump gets followed by actual follow-through from Tokyo, because a one-off scare matters less than proof that officials will keep leaning if USD/JPY tests them again.</h3><div class="tap-hint">Tap to expand</div><p class="card-body"><strong>Why it matters:</strong> markets now believe intervention risk is real. The next step is to learn whether that belief changes positioning for more than a single session.</p><div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVkRrQ0lMMFlTRm9ldlAzTWo3cE9uZnZqdjdDNVdQa2p4SW93Zzhkc05uZ0ktNTFoX3V3TFdDSS1iV29GOU9LaU5JNFRyc0gtVnFWcVE1VGdTaEIwRnJPT2FMbXdVMHU0dlhhLUEzYkFlakYzeUhVRE5kbnVOYTRlZThMTFo1VzdsUTZnTHROWE01bnZYUnNWTHhDQkoxVk1DS000Ry1hbGg?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWM3dGY5YnA3OTZ0YXc5TGxwUHEtTzdwOXNsUWgteVVRY2lsNm1oWUtyMTVWaHdIelBrLW5fa3diV2xlRC1yX2xyNmtmTzNCVXZWRmtmdkZvd1dTSVU1RnZvR2tXUXZxYUw5NW1tYmpvQUJtcE5hV2hKYWY4YWZLM0xRMy1oU3ZjczA2Y2NRNDlKT2JOU2Q2aUZ4LTUzSTBRbzFYNkVoUlNRbzlKQzNqaDNMd1VGeW5kUXJFYXJaNHAtZlY3YWJoaFNYcw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div></article>
-        <article class="card fade-in collapsible" data-image=""><span class="card-tag">WEEK AHEAD</span><h3 class="card-headline">The broader test is whether the oil-and-flight disruption story stays contained or starts cutting into earnings guidance, consumer travel, and inflation expectations across regions.</h3><div class="tap-hint">Tap to expand</div><p class="card-body"><strong>Why it matters:</strong> once higher fuel, insurance, and rerouting costs start showing up in company outlooks, volatility usually stops being headline-based and becomes structural.</p><div class="card-sources">
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWHF3YmR2ZlVMV3V3ME5FZi1tbmxGWExtanZvdzgzdU5CbUNYWWNVYXg4bTRkVml2YWc5UF9WODB4cGYtTDFXNUhUOGhwcXZvMGtRQlpta2xHRHlELUw3VVRFSDRvQi04U3VfYllENUc4YmNSZEtKTjhibmIzSW1GV2VGTQ?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-            <a class="source-link" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPS25ycmRYWlI4dU5pZ3Z5YXdMNUdBMV9KcXBfQUVXU0Y3bWZudlFwelRLdFFIRDBxRWo5WEtGcjlxNFBsQURvMFhnblpsSDJGY0VGSFlkemxBUndnLV80dldpLVd1SUV5VDh4NzhfZmt2VTdZeVI5OXpYcHZ2TTFHb2hQWElnWnJITENaT0ZyUFhNV25aSmZ0WEh1dW1USHVmSzUtMUcwZVBsSXBjZ0lsTlJCOFhCWlJvSW9jMw?oc=5" target="_blank" rel="noopener">Reuters <span class="src-arrow">↗</span></a>
-          </div></article></div></section><section class="section" id="bottomline"><div class="bottom-line"><h3>💡 Bottom Line</h3><p>The key change since morning is that <strong>Japan now looks like it has more policy agency than the rest of the macro tape.</strong> Takaichi’s win, a more believable yen defence posture, and a strategically important Line ownership shift all gave Tokyo fresh afternoon leverage. <strong>Bottom line:</strong> Japan improved on a relative basis, but the world is still being priced by oil, transport disruption, and tariff fragmentation.</p></div></section></main><footer class='footer'><p>CEO Afternoon Briefing · Generated by Sanbot · Sunday, May 10, 2026</p><p style='margin-top: 0.5rem;'>Data sources: Reuters, Yahoo Finance, Google News RSS</p></footer><script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));</script><script>(function(){var warStart=new Date(2026,2,1);var now=new Date();var dayNum=Math.floor((now-warStart)/86400000)+1;var el=document.getElementById('war-day-num');if(el)el.textContent=dayNum;var sixWeek=new Date(2026,4,2);var eightWeek=new Date(2026,4,16);var cdBox=document.getElementById('econ-countdown');if(cdBox){if(now<sixWeek){var daysLeft=Math.ceil((sixWeek-now)/86400000);cdBox.innerHTML='⏱ ECONOMIC DAMAGE WINDOW IN <span class="countdown-num">'+daysLeft+'</span> DAYS';} else if(now<=eightWeek){cdBox.style.background='#B94A48';cdBox.innerHTML='🔴 ECONOMIC DAMAGE WINDOW — <span class="countdown-num" style="color:#fff;">NOW</span>';} else {var weeksPast=Math.floor((now-new Date(2026,2,21))/(7*86400000));cdBox.style.background='#7f1d1d';cdBox.innerHTML='⚫ OIL ELEVATED '+weeksPast+' WEEKS — PAST DAMAGE THRESHOLD';}})();</script><script src='audio-player.js'></script></body></html>
+      </div>
+    </section>
+
+    <section id="global" class="section">
+      <div class="section-head"><div>🌍</div><h2>Global by Continent</h2></div>
+      <div class="cards">
+        <article class="card collapsible" data-image=""><div class="tag">NORTH AMERICA</div><div class="headline">US stocks finished mixed while the dollar firmed, because hopes for a Middle East de-escalation faded after Washington called Iran’s response unacceptable.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> When peace odds fell, oil inflation risk came back immediately. That kept the dollar bid, capped a late-day equity rally, and forced investors back into a “good growth, bad inflation” frame.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMV9DYUJldGFpaFVEczJiSGRvY05xRUwyWm9xZm9BV0VXVXdxZFUzM3c0YmpETzJ6V2lsaWFyRmFWdHhsZHp6dmNTaGRUM2J6dGRiZDc3Yk1KSmRadU9GbG5BNjhlZTVXUWlUZ3RSYmd1a3Q2REkybUdXMElXcFptZnpsZlZ0X0Y0?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">NORTH AMERICA</div><div class="headline">Goldman Sachs pushed its Fed-cut call back to December 2026, because the Iran war is now seen as keeping US inflation hotter for longer through energy and transport costs.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> The bank’s logic is that war-driven oil and freight pressure offset some of the disinflation investors had expected, so the Fed has less room to ease quickly.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNUmowSnVOelhFSkZuUkVCMEN2TDl4NWRidHB2ak5jQkVHcUxRd2RoNW9mMkJlNTNLU0FkeWpvdGtSd0hKV2doZXdZN2NyeVdyOTJXSWVaYmkyeF9rb005d1lPYWZGLXQtRTdObUJFMWw3b1lBUDhVYUZJcEQxclIteTdzNW5PeHhGZUhZNGVjNkVZQ2NGMzZkNWNsb09hS1ZNV2RwamRncDg3STBiMGRVNmxpNkt2S1o3QTQyTW9Qc25oUQ?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">NORTH AMERICA</div><div class="headline">Oil jumped about $4 after Trump rejected Iran’s latest peace response, because traders repriced the odds of supply disruption lasting longer than morning markets had assumed.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Once the ceasefire path looked weaker, energy desks had to add geopolitical premium back into crude, and that fed directly into inflation-sensitive assets worldwide.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZnd6N0Zakang0NXYwR1c5V1M5ZDNWcjRaM1k5RDVidlU0UlpqRUVZcXdLSVMtd3VqYVY3RkVGa0piQVc4eERTRV94TjVIQXlUTE85Z1pwQ055cDZQNy13bmZiOC12ODJhclBzUkJiZXN0TlRXMHpOcTdlUGVrc1BUNkZfTUpSMHN0OWlrZ2ZPQjBKREtSeXZjUE1lRDdlX1JOMDU4SDZwdy0?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image=""><div class="tag">EUROPE</div><div class="headline">European shares slid, because renewed Middle East tension pushed oil higher and reminded investors that Europe remains especially exposed to imported energy shocks.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Higher oil compresses household spending power, hits transport-intensive sectors, and complicates the ECB inflation path all at once.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNTks2bzExSEt4eGVPQUdnRUtncUREdVB0QVlQVWJaWGlkQnVDOU1KcW00ek1VS3pjbFh4WDh6b2dERVBXN0cxZDZYRmpXSEJzOXNWUFVUY0E3ZHpuVkFZMVZtNVdFZGc3UVI0bGNyYVNNMjlIM3lSLURFeC12WDFmeTMwMVdqT291N3lNckFKRUxSTDhUaDlLMEZvZEJJem5pLVdz?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">EUROPE</div><div class="headline">ECB official Kocher signaled another rate move is possible if the inflation outlook does not improve, because energy-driven price risk is making the disinflation path less reliable.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Policymakers cannot declare victory on inflation while oil volatility is still pushing through headline expectations and wage-setting behavior.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcGREY0RXWVJENm1RVThMRHZPSEgwVjEzUEREQnAxSGQtd3Z4SGVKTWF5NGNvVDVVeTBNNG9qOVczMlFzTXhvSFJxR0FyZjlvWXQ0RHIyLTNPVlZ6dmVhaDNKdWtFVnIyY0FlWFZEMF9PMElpeGc3OWp5bHpPNGpQekE2cnh6SVhnSG5sb3d2bTdSMlJxMV84dXpzdDJzRjlpZV9YNm5peDRsUVhVcV95VUNGS0Jqd1B6?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">EUROPE</div><div class="headline">Europe’s battery-paired renewable pipeline is set to grow more than 450% by 2030, because developers are responding to volatile power prices and the need for firmer grids.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Intermittent generation becomes much more valuable when paired with storage, especially after repeated energy shocks turned grid flexibility into a monetizable asset.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxOS2dqMHN1bExPZHNTeWRNWGVEbmMtQ3M3dnkweENlU0NiWV9YMER5VGFkMURmLXF0eHNLRzRER19tdURhSFJCTzF2SGFidEhrbmNkRng5WjhYenFOTDBuMWJpUU40LUdYbHFYLWJkY1pTeE1NOXdzNWZWaEpHbnByMk1mblNpdjBnd0tCU1RicUhWem5GTGtVR1QyY3VVVjhpc0NnYzV2a1JxWmI3c2ZqRHhoOEE3UDBxVG1TRXE2dVlZbHRsNnF5UXpEeEVWbVRES2xnT3Fn?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image=""><div class="tag">ASIA EX-JAPAN</div><div class="headline">China’s factory inflation hit a 45-month high, because the Iran shock lifted energy costs and pushed upstream prices back into the system.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Higher fuel and feedstock prices hit producers first, so the data told markets that imported commodity stress is bleeding into China’s industrial base.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNNHBjRHlkdlRLWGN2eHNKT0pQRC1HSVBCQkpwWFZJMG9ITk1KWWZaMUVCYUpVcTVfcXpYOGFqWlFYSU1PZ0J5czRlMjdaajJoS19nWEEtVS1lN2c2LXF1SHBYYmRtRXR3LXBXUjlWdHN3bW9TWldSVjlqQWFocVV4d3Mtc2xHNDRFTzczd3V1WHM1RnlGb05oZUU2Wm56czNkMVNHZ3MtT0lSTU9qVnc?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">ASIA EX-JAPAN</div><div class="headline">Taiwan said it is confident in US ties but wants no surprises before Trump’s China visit, because Taipei is trying to reduce summit risk ahead of a potentially market-moving great-power meeting.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> When summit diplomacy becomes the market’s focal point, frontline economies try to lock in clarity early to avoid being repriced by ambiguous headlines.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPMjlxWGg5NjllengzeWZpbzJ3aVNrb0Z3cW5XQVh3aEh1WFFFQkRzSzlwQ1huLXJxLUlObl9LVnktMTFGeFFwbFk3MC1mRG9rYUhseG5JRUd6dXVKZUljRU5lajlHQ01KZWwwOERybWNFWEhXNW81ZElJek5lX1VRMmlJQ1pyaG44QmVEenpua2M2NkRSYjdFWm5kVjI?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">ASIA EX-JAPAN</div><div class="headline">ASEAN leaders ended their summit with only a push to fast-track an oil-sharing pact, because governments could agree on emergency energy coordination faster than on wider strategic responses.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> High oil uncertainty creates immediate pressure for practical energy-security measures, even when political consensus on bigger regional questions is weak.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxORUN2eVpZOFVtaGhyRHZCdHNTWVJrMmVzOHVJbzZ0dnUyMVh5UTJlVjM3c0x1b1pPMnp2bWpwdXdhc01LdU5taGxQY0FMVU1hMjV6VjhoM2tvd2Z6bVR3NDAxZDJQLXlJdkNZUFRYdnZPTU9VQXVQak1rblFfZlM5Y2F3T09vazFzOEFDc3J1OVdSUkhEWHVuWlA2emtjNm9PNXRKeWoxQ1MwZDg?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image=""><div class="tag">MIDDLE EAST & AFRICA</div><div class="headline">Trump rejected Iran’s response to the US peace proposal, because Washington judged Tehran’s terms too far from what the White House could sell as a real ceasefire path.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Once the response was labeled unacceptable, markets had to price a longer conflict window, not just another round of bargaining.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTTFIeHh6enp1TW1pNmRpVy1pZ1ZtaVFvNTF2emxOOUg3VXV1RWE3SkFqb3pwY28yS0pBTDF3MjRFSVNRclFhTWtCZlN0SmQ1MDV2YUZJSXJhdXRUdldyM3VZbEkzYnIxUXlvSk1JREJwVURVVGJhcV9vcEU2WnlLcVZKaXZQX0Fac1VEWW1VZjlwdDNNWHp5ZENCNTROaEhsVFRuQ2ZUd0gwTmc?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">MIDDLE EAST & AFRICA</div><div class="headline">Airlines canceled more flights across the region, because carriers no longer trust the conflict corridor to stay operational even when ceasefire headlines appear intermittently.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Route safety, insurance cost, and aircraft repositioning risk all worsened once peace talks wobbled again.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNUW84ZWRCdmZNVm91R1JGMHhPaWQwcDF0blhkczRweHNsM2JiZ1c4WGk2WGc1c2dTS0FnR0hYdzNPNkg3OXVUNGIxMWd1WTQ3cHdHbUpkNFc0Y0kzTllLcWVRTFV4UHF4Z1R3amRWYVBkUmJTd2pRdEJKWUMycXpMS0EtY3FqWHdCVDJKRUFsYWVQSFF5bnpIRW9XdmVuUFI0OUVfcVlFZTBHakM1UXhqdm1ObkVuZw?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">MIDDLE EAST & AFRICA</div><div class="headline">Airtel Africa delayed the mobile-money IPO, because war-driven fuel, funding, and execution risks made a clean listing window harder to defend.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> In volatile macro conditions, management teams usually prefer to preserve valuation rather than launch into a market that may punish frontier-growth stories.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPM0hhZlJhaGFoX0loUkI4eWk3bUdRN0RmV1VwVFZkdF82TFRZako1NkdfaTBYYS1BX3htaU9xcjNKSl9tTEdaRGJSMU1JYmM3S243bHhjbHNoTjBTRXd0eGdlel84bVp6NjRjREtuSjJ3Z1FyNHVERG0za0NCaThlb25FODBTZWZXUFlxOFUtOGFfbHp1U3BGSnMxM0o4VE5OX1c3eWpzdGtYTFNscEl2UkhR?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image=""><div class="tag">LATIN AMERICA</div><div class="headline">LatAm currencies rose as traders balanced Iran escalation against intermittent ceasefire hopes, because the region benefits when commodity support persists but panic does not fully take over.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Latin American assets like firmer commodity prices, but only if the shock does not become so severe that it crushes global risk appetite.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQV3owemx0OTh6ZHh6NkhOV25FWWtTNDlGSlQ0MHJabm5iY1dDLUVBOTlvbzlPcFpiTE9oLXk4YzZmZnk5UjlfMDZ6cFJpOUpiNFZ6dk82UmRnSTFwRlI3cnFFSEg1ZGxZX2F2QVhtVjg1aGw5TnIzSmt1bGNyVHBIa0twMzFWc3JEeTEyV0NkejJZeGtWbS1WQTJ6V05vLTlkRjJqR3NlZWJ3NEJNX09KQ2hvbU5QeVZFSU5MNEVGRQ?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">LATIN AMERICA</div><div class="headline">MercadoLibre said it will invest $11 billion in Brazil this year, because management still sees logistics and fintech penetration compounding fast enough to justify heavier local spending.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> The company is trying to widen its moat while consumer demand and digital payments scale, which turns capex into a competitive weapon rather than just a cost line.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPSGpnVU5vbkRDN0gxckVLaWktWWNqSXVXOVZ0S3VMOHdycXhqa0lHNklRaU9jMXNNS19zSTRRSHZZRmRBelJZN1pSRFZrem1Za25sZnpfd241RHZWdUhTdEwydzFiUmQtbXdaTlNoUWl2U3FEcTJMdW4wZl9fWUhhQzBPbV9nZWNWU2hoZXRETFRBSVN1ajE1OXpuTi1SdE1uRGc?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">LATIN AMERICA</div><div class="headline">EU-Mercosur was framed as a limit on Trump-style hardball diplomacy, because South American governments want more bargaining power by widening trade options instead of relying on a single Washington-centered channel.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> The more tariff and sanctions politics dominate, the more attractive multi-polar trade architecture becomes for commodity exporters.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ0dPTHVTM0NFRXA3c1doc051T2I4aE5QVEt0T19WWkRDbkdmWld1QVh0OWJkdXJITzBmQW5lLUxOdlhvaXV1bUN4VzRmSUlEeHVHY3U0RDlPTUpVNDh6QmtoNURJQTFQOTBTN2RMTXh6S2VibjdjSkczUVZwVkRZSjdWdVVlaXRlMFE1UnBtZjNPb1pXUnUyUTRNc09ScWxkQWRSLWc2ZVF6SzBSYk0tTXFERktFYklhdFpraDFSdw?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+
+        <article class="card collapsible" data-image="https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630"><div class="tag">OCEANIA</div><div class="headline">Australia’s ASX 200 slipped as the global oil shock outweighed domestic calm, because higher energy prices directly threaten transport, consumer, and rate-sensitive sectors.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Australia benefits from commodities, but equity investors still punish sectors facing higher fuel costs and delayed easing expectations.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMV9DYUJldGFpaFVEczJiSGRvY05xRUwyWm9xZm9BV0VXVXdxZFUzM3c0YmpETzJ6V2lsaWFyRmFWdHhsZHp6dmNTaGRUM2J6dGRiZDc3Yk1KSmRadU9GbG5BNjhlZTVXUWlUZ3RSYmd1a3Q2REkybUdXMElXcFptZnpsZlZ0X0Y0?oc=5" target="_blank" rel="noopener">Reuters ↗</a></div></article>
+        <article class="card collapsible" data-image=""><div class="tag">OCEANIA</div><div class="headline">New Zealand’s state-farming push into nature credits highlighted a new regional theme, because land assets are increasingly being monetized for biodiversity value as traditional ag returns look less sufficient.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Policy and investor pressure are both rewarding natural-capital accounting, turning conservation from a compliance topic into a balance-sheet opportunity.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRXdaTmIwRXlKZldpWGRlS3FsTTFXaWstVnhCOHRTUlYzR2o5cWV6dF9oelZSdktreEd0UHFDako3aUdETkRPUkllSngyMUJVQlhjc3l3dE40TGo4ZnJwSFYzanpyaWpWaDNJQllZRW5CamFGRmd1d1ZmT2ZvSG9lTUY1UDNWLXUwWTVtcHc3QThLTERoOXBqc3NiSUhQeTQyM1FNaVloQzdkcUN3QkoyVlM5N2Nlbl9nNGc0MUl0aVVpUQ?oc=5" target="_blank" rel="noopener">U.S. News ↗</a></div></article>
+        <article class="card collapsible" data-image="https://images.ft.com/v3/image/raw/https%3A%2F%2Fasia.nikkei.com%2Fimages%2Ffrontend%2Ffavicons%2F630x630.png?width=630&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto&height=630"><div class="tag">OCEANIA</div><div class="headline">Nikkei Asia said the US-China rare-earths deal remains in effect, which matters for Oceania because mining sentiment steadied once the market stopped assuming an immediate Asia-Pacific supply rupture.</div><div class="hint">Tap to expand</div><div class="body"><strong>Why it happened:</strong> Rare-earth stability removes one layer of industrial stress even while the oil shock keeps the wider macro backdrop fragile.</div><div class="sources"><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxQa1c5bGg4R3VNcGtGWWdDSmdKenlrZjB5bEw1TEZ4SVRJcnpTelRoZXg4Qmx0czhJalE0ZUhWVG83VEZGMjlYbEJxZzVIcEJMdmQzbTFPLWVqZEk0VlFVQlY2WjJBTFBYVEdZdDZJeWFnMVBTRHdDVzdTQS1WeHdBQm5KZnNGYjdPdThkcmNNel9OX2FFZ1JQOXJudmtnWFJ2TE5oTHl4YUoxRzNPdTI5MkRaZGhtejhrRVh0d2FzbGxMMGFKUThUX05nQmpwWjNaZ19hZ2lYdU0tOWRj?oc=5" target="_blank" rel="noopener">Nikkei Asia ↗</a></div></article>
+      </div>
+    </section>
+
+    <section id="markets" class="section">
+      <div class="section-head"><div>📊</div><h2>Markets & Economy</h2></div>
+      <div class="bottom"><strong>Health Score: 64/100.</strong> Better than panic, worse than stable. Japan closed with clearer domestic drivers, but the global tape is still hostage to oil and ceasefire headlines.</div>
+      <div class="market-grid" style="margin-top:1rem">
+        <article class="market-card collapsible" data-image=""><h3>S&P 500</h3><div class="stats">Current 7,398.93<br>Daily +0.84%<br>Weekly +2.33%<br>Monthly +8.41%<br>YTD +7.88%</div><div class="hint">Tap to expand</div><div class="market-note">Held up because growth and AI optimism offset, but did not erase, renewed oil inflation risk.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Nasdaq 100</h3><div class="stats">Current 29,234.99<br>Daily +2.35%<br>Weekly +5.50%<br>Monthly +16.56%<br>YTD +15.98%</div><div class="hint">Tap to expand</div><div class="market-note">A move above 2%, because the AI trade stayed stronger than rate fear into the close.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Dow</h3><div class="stats">Current 49,609.16<br>Daily +0.02%<br>Weekly +0.22%<br>Monthly +2.95%<br>YTD +2.54%</div><div class="hint">Tap to expand</div><div class="market-note">Old-economy cyclicals lagged because higher oil helps energy but pressures transport and consumer names.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Nikkei 225</h3><div class="stats">Current 62,464.23<br>Daily -0.40%<br>Weekly +4.25%<br>Monthly +16.94%<br>YTD +20.51%</div><div class="hint">Tap to expand</div><div class="market-note">Japan slipped because yen-defense expectations and a softer PMI hit exporters.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Stoxx 600</h3><div class="stats">Current 612.14<br>Daily -0.69%<br>Weekly +0.14%<br>Monthly -0.22%<br>YTD +1.72%</div><div class="hint">Tap to expand</div><div class="market-note">Europe underperformed because imported-energy exposure rose with oil.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>CSI 300</h3><div class="stats">Current 4,938.23<br>Daily +1.36%<br>Weekly +2.66%<br>Monthly +11.21%<br>YTD +4.67%</div><div class="hint">Tap to expand</div><div class="market-note">China held firmer because domestic policy support still outweighed the energy shock.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>WTI crude</h3><div class="stats">Current 99.84<br>Daily +4.63%<br>Weekly -6.18%<br>Monthly +3.39%<br>YTD +74.18%</div><div class="hint">Tap to expand</div><div class="market-note">A move above 2%, because Trump rejected Iran’s response and revived supply-disruption fears.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Brent crude</h3><div class="stats">Current 105.42<br>Daily +4.08%<br>Weekly -7.88%<br>Monthly +10.74%<br>YTD +73.53%</div><div class="hint">Tap to expand</div><div class="market-note">A move above 2%, because geopolitical premium was added back after peace odds worsened.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Gold</h3><div class="stats">Current 4,660.40<br>Daily -1.27%<br>Weekly +3.12%<br>Monthly -2.13%<br>YTD +8.02%</div><div class="hint">Tap to expand</div><div class="market-note">Gold eased because the dollar strengthened even as geopolitical anxiety stayed high.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Bitcoin</h3><div class="stats">Current 80,806<br>Daily +0.18%<br>Weekly -0.15%<br>Monthly +9.41%<br>YTD -8.93%</div><div class="hint">Tap to expand</div><div class="market-note">Crypto was relatively quiet because macro traders favored oil, FX, and rates for immediate conflict hedges.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>Dollar Index</h3><div class="stats">Current 98.149<br>Daily +0.32%<br>Weekly -0.33%<br>Monthly -0.51%<br>YTD -0.28%</div><div class="hint">Tap to expand</div><div class="market-note">The dollar firmed because oil-led risk aversion and delayed Fed-cut pricing both helped.</div></article>
+        <article class="market-card collapsible" data-image=""><h3>USD/JPY</h3><div class="stats">Current 157.142<br>Daily +0.20%<br>Weekly +0.19%<br>Monthly -1.24%<br>YTD +0.26%</div><div class="hint">Tap to expand</div><div class="market-note">Dollar-yen stayed elevated, but the monthly pullback shows Japan’s defense campaign is starting to matter.</div></article>
+      </div>
+    </section>
+
+    <section id="predictions" class="section">
+      <div class="section-head"><div>🔮</div><h2>Predictions</h2></div>
+      <div class="cards">
+        <article class="card" data-image=""><div class="tag">TOMORROW</div><div class="headline">What to watch</div><div class="body" style="display:block">Watch whether USD/JPY can stay below recent panic highs, whether Nikkei sellers keep targeting exporters, and whether AI-linked names like SoftBank continue to decouple from consumer-sensitive names. Globally, the immediate macro trigger is any new White House or Tehran language that changes oil’s risk premium again.</div></article>
+        <article class="card" data-image=""><div class="tag">WEEK AHEAD</div><div class="headline">Outlook</div><div class="body" style="display:block">The week now hinges on whether the Iran story evolves into a sustained inflation shock or merely a volatile headline tax. If oil stays around or above the $100 WTI area, markets will keep pushing back Fed and ECB easing expectations. If peace language improves, expect a sharp unwind in oil, airlines, and defensive dollar positioning.</div></article>
+      </div>
+    </section>
+
+    <section id="bottom" class="section">
+      <div class="bottom"><h3>💡 Bottom Line</h3><p>The key change since morning is that <strong>Japan closed with a clearer macro identity.</strong> Yen-defense expectations strengthened, services data softened, and corporate news split cleanly between AI-infrastructure upside and consumer-demand caution. <strong>Bottom line:</strong> Japan is not insulated from the oil-and-Iran shock, but by the close it had more visible domestic drivers than most major markets.</p></div>
+    </section>
+  </main>
+  <footer>
+    <p>CEO Afternoon Briefing · Generated by Sanbot · Monday, May 11, 2026</p>
+    <p>Data sources: Reuters, Nikkei Asia, U.S. News, Yahoo Finance, Google News RSS</p>
+  </footer>
+  <script>document.querySelectorAll('.collapsible').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('expanded')));</script>
+</body>
+</html>
